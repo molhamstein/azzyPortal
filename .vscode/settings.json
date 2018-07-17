@@ -1,0 +1,51 @@
+{
+    "deploy.reloaded": {
+
+        "packages": [
+            {
+                "name": "My project",
+                
+                "deployOnSave": false,
+
+                "files": [
+                    "**/*.*"
+                ],
+
+                "targets": [ "Local On Save azzy" ]
+            }
+        ],
+        "targets": [
+            {
+                "type": "sftp",
+                "name": "BrainSocket/Azzy-DEV",
+                "description": "Azzy Immigration / DEV",
+
+                "host": "104.217.253.15", "port": 22,
+                "user": "hala", "password": "hala_brainsocket",
+
+                "dir": "/home/hala/Azzy-DEV",
+                "modes": 777
+            },
+            {
+                "type": "local",
+                "name": "Local azzy",
+                "description": "A local folder",
+
+                "dir": "E:/codebackups/azzy"
+            },
+            {
+                "type": "local",
+                "name": "Local On Save azzy",
+                "description": "A local folder on save",
+
+                "dir": "E:/codebackups/azzyonsave"
+            }
+        ],
+        "alwaysShowWorkspaceNameInPopups" : true,
+        "alwaysShowWorkspaceSelector" : true,
+        "deployOnSaveButton" : false,
+        "showStatusWhenFinished" : true
+        
+       
+    }
+}
