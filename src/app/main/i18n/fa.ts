@@ -3,6 +3,9 @@ export const locale = {
     data: {
         'ERROR_MESSAGES': {
             'REQUIRED' : 'این فیلد الزامی است'
+        },
+        'NAV':{
+            'CALENDAR':'تقویم'
         }
     }
 };

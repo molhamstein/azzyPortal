@@ -1,0 +1,86 @@
+<div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header mat-accent-bg p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
+      <div class="h2 mt-16">{{'UNPROCESSED_FORMS.TITLE' | translate }}</div>
+    </div>
+
+
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content p-24">
+    <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [headerHeight]="48"
+      [rowHeight]="'auto'" [scrollbarH]="true" [limit]="10">
+
+
+
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Id">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'UNPROCESSED_FORMS.ID' | translate }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="SubmissionDate">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'UNPROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="ClientNumber">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'UNPROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="ClientName">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'UNPROCESSED_FORMS.CLIENT_NAME' | translate }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Status">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'UNPROCESSED_FORMS.STATUS' | translate }}</span>
+        </ng-template>
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <mat-chip-list>
+            <mat-chip color="accent" selected="true">{{row.Status}}</mat-chip>
+          </mat-chip-list>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
+
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>search</mat-icon>
+              <span>{{'UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>check</mat-icon>
+              <span>{{'UNPROCESSED_FORMS.PROCESS' | translate}}</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>cancel</mat-icon>
+              <span>{{'UNPROCESSED_FORMS.REJECT' | translate}}</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>more_horiz</mat-icon>
+              <span>{{'UNPROCESSED_FORMS.MORE_INFO' | translate}}</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>edit</mat-icon>
+              <span>{{'UNPROCESSED_FORMS.EDIT' | translate}}</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>delete</mat-icon>
+              <span>{{'UNPROCESSED_FORMS.DELETE' | translate}}</span>
+            </button>
+          </mat-menu>
+
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>

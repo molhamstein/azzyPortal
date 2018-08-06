@@ -11,7 +11,8 @@ const routes = [
   {
       path     : 'فرم_درخواست_مشاوره',
       component: AdviceFormComponent
-  }
+  },
+  
 ];
 
 @NgModule({

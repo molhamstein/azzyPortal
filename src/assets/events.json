@@ -1,0 +1,79 @@
+[
+    {
+        "startDate": "Fri Jul 27 2018 8:00:00 GMT+0300 (Eastern European Summer Time)",
+        "endDate": "Fri Jul 27 2018 8:30:00 GMT+0300 (Eastern European Summer Time)",
+        "location": "Steed Cafe",
+        "open": false,
+        "consID": "1",
+        "cons":"Johnny Nakazi",
+        "clientID": "",
+        "client":"",
+        "id": "1"
+    },
+    {
+        "startDate": "Fri Jul 27 2018 8:30:00 GMT+0300 (Eastern European Summer Time)",
+        "endDate": "Fri Jul 27 2018 9:00:00 GMT+0300 (Eastern European Summer Time)",
+        "location": "Steed Cafe",
+        "open": false,
+        "consID": "1",
+        "cons":"Johnny Nakazi",
+        "clientID": "",
+        "client":"",
+        "id": "2"
+    },
+	{
+        "startDate": "Fri Jul 27 2018 9:00:00 GMT+0300 (Eastern European Summer Time)",
+        "endDate": "Fri Jul 27 2018 9:30:00 GMT+0300 (Eastern European Summer Time)",
+        "location": "Steed Cafe",
+        "open": false,
+        "consID": "1",
+        "cons":"Johnny Nakazi",
+        "clientID": "",
+        "client":"",
+        "id": "3"
+    },
+	{
+        "startDate": "Fri Jul 27 2018 9:30:00 GMT+0300 (Eastern European Summer Time)",
+        "endDate": "Fri Jul 27 2018 10:00:00 GMT+0300 (Eastern European Summer Time)",
+        "location": "Steed Cafe",
+        "open": false,
+        "consID": "1",
+        "cons":"Johnny Nakazi",
+        "clientID": "",
+        "client":"",
+        "id": "4"
+    },
+	{
+        "startDate": "Fri Jul 27 2018 10:00:00 GMT+0300 (Eastern European Summer Time)",
+        "endDate": "Fri Jul 27 2018 10:30:00 GMT+0300 (Eastern European Summer Time)",
+        "location": "Steed Cafe",
+        "open": true,
+        "consID": "1",
+        "cons":"Johnny Nakazi",
+        "clientID": "5",
+        "client":"Client 5",
+        "id": "5"
+    },
+	{
+        "startDate": "Fri Jul 27 2018 10:30:00 GMT+0300 (Eastern European Summer Time)",
+        "endDate": "Fri Jul 27 2018 11:00:00 GMT+0300 (Eastern European Summer Time)",
+        "location": "Steed Cafe",
+        "open": true,
+        "consID": "1",
+        "cons":"Johnny Nakazi",
+        "clientID": "6",
+        "client":"Client 6",
+        "id": "6"
+    },
+	{
+        "startDate": "Fri Jul 27 2018 11:00:00 GMT+0300 (Eastern European Summer Time)",
+        "endDate": "Fri Jul 27 2018 11:30:00 GMT+0300 (Eastern European Summer Time)",
+        "location": "Steed Cafe",
+        "open": true,
+        "consID": "1",
+        "cons":"Johnny Nakazi",
+        "clientID": "7",
+        "client":"Client 7",
+        "id": "7"
+    }
+]

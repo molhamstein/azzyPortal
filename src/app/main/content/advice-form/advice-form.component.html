@@ -31,7 +31,7 @@
 
 
 
-        <mat-vertical-stepper formArrayName="formArray" [linear]="!!isNonLinear">
+        <mat-horizontal-stepper formArrayName="formArray" [linear]="!!isNonLinear">
 
           <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
             <ng-template matStepLabel>{{ 'ADVICE_FORM.STEP_0.LABEL' | translate }}</ng-template>
@@ -174,7 +174,7 @@
             </mat-accordion>
 
 
-            <div>
+            <div style="float: right;">
               <button mat-button matStepperNext type="button">Next</button>
             </div>
           </mat-step>
@@ -604,7 +604,7 @@
             </div>
           </mat-step>
           
-        </mat-vertical-stepper>
+        </mat-horizontal-stepper>
       </form>
 
 

@@ -23,7 +23,37 @@ export class NavigationModel
                         }
                     }
                 ]
-            }
+            },
+            {
+                'id'   : 'calendar',
+                'title': 'NAV.CALENDAR',
+                'type' : 'item',
+                'icon' : 'today',
+                'url'  : '/calendar'
+            },
+            {
+                'id'      : 'forms',
+                'title'   : 'FORMS.TITLE',
+                'type'    : 'group',
+                'children': [
+                    {
+                        'id'   : 'forms',
+                        'title': 'UNPROCESSED_FORMS.TITLE',
+                        'type' : 'item',
+                        'icon' : 'email',
+                        'url'  : '/unprocessed',
+                        
+                    },
+                    {
+                        'id'   : 'forms',
+                        'title': 'PROCESSED_FORMS.TITLE',
+                        'type' : 'item',
+                        'icon' : 'email',
+                        'url'  : '/processed',
+                        
+                    }
+                ]
+            },
         ];
     }
 }

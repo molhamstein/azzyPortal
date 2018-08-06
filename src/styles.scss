@@ -1,5 +1,13 @@
 // Import Fuse main library
 @import "app/core/scss/core";
+// Import Angular Calendar Styles
+// @import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import "../src/app/angular-calendar/css/angular-calendar.css";
+
+// Import Bootstrap
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'app/main/content/calendar/calendar.component.scss';
+
 
 // by fadi
 [dir=rtl] .nav .nav-item .nav-link .nav-link-icon {

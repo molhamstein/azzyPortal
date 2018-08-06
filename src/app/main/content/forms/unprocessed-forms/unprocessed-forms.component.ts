@@ -1,0 +1,42 @@
+import { Component, OnInit } from '@angular/core';
+import { locale as english } from '../i18n/en';
+import { locale as persian } from '../i18n/fa';
+import { FuseTranslationLoaderService } from '../../../../core/services/translation-loader.service';
+import { TranslateService } from '@ngx-translate/core';
+
+
+
+@Component({
+  selector: 'app-unprocessed-forms',
+  templateUrl: './unprocessed-forms.component.html',
+  styleUrls: ['./unprocessed-forms.component.scss']
+})
+export class UnprocessedFormsComponent implements OnInit {
+  rows = [];
+  constructor(private translationLoader: FuseTranslationLoaderService, private translateService: TranslateService) {
+    this.translationLoader.loadTranslations(english, persian);
+  }
+
+  ngOnInit() {
+    this.rows = [
+      {
+        Id: '12',
+        SubmissionDate: '1232',
+        ClientNumber: '154',
+        ClientName: 'dsad sd sa',
+        Status: 'Unprocessed'
+
+      },
+      {
+        Id: '12',
+        SubmissionDate: '1232',
+        ClientNumber: '154',
+        ClientName: 'dsad sd sa',
+        Status: 'Unprocessed'
+
+      }
+
+    ]
+  }
+
+}

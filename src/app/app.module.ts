@@ -15,6 +15,7 @@ import { FuseSampleModule } from './main/content/sample/sample.module';
 import { AdviceFormModule } from './main/content/advice-form/advice-form.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { AppDirectionService } from './app-direction.service';
+import { MyCalendarModule } from './main/content/calendar/calendar.module';
 
 
 const appRoutes: Routes = [
@@ -37,8 +38,6 @@ const appRoutes: Routes = [
         SharedModule,
         TranslateModule.forRoot(),
         FuseMainModule,
-        FuseSampleModule,
-        AdviceFormModule
     ],
     providers   : [
         FuseSplashScreenService,
