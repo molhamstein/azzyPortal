@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarMonthViewDay } from '../../../angular-calendar';
-import { CalendarEvent } from '../../../angular-calendar';
-import { colors } from './colors';
-import { JsonService } from './json.service';
+import { CalendarMonthViewDay } from '../../../../angular-calendar';
+import { CalendarEvent } from '../../../../angular-calendar';
+import { colors } from '../../calendar/colors';
+import { JsonService } from '../../calendar/json.service';
 import {
   startOfDay,
   endOfDay,
@@ -13,21 +13,21 @@ import {
   isSameMonth,
   addHours
 } from 'date-fns';
-import { TimeSlots } from './TimeSlots'
+import { TimeSlots } from '../../calendar/TimeSlots'
 import { Subject } from 'rxjs';
-import { FuseCalendarEventFormDialogComponent } from './event-form/event-form.component';
+import { FuseCalendarEventFormDialogComponent } from '../../calendar/event-form/event-form.component';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material';
-import { locale as english } from './i18n/en';
-import { locale as farsi } from './i18n/fa';
-import { TranslateService} from '@ngx-translate/core';
-import { FuseTranslationLoaderService } from '../../../core/services/translation-loader.service';
+import { locale as english } from '../../calendar/i18n/en';
+import { locale as farsi } from '../../calendar/i18n/fa';
+import { TranslateService } from '@ngx-translate/core';
+import { FuseTranslationLoaderService } from '../../../../core/services/translation-loader.service';
 
 
 @Component({
-  selector: 'calendar',
-  templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss'],
+  selector: 'client-calendar',
+  templateUrl: './client-calendar.component.html',
+  styleUrls: ['./client-calendar.component.css'],
   styles: [
     `
     .cell-totals {
@@ -37,18 +37,22 @@ import { FuseTranslationLoaderService } from '../../../core/services/translation
     .badge {
       margin-right: 5px;
     }
+    /deep/ .datatable-body-row.active .datatable-row-group {
+      color:white !important;
+
   `
   ]
 })
-export class CalendarComponent implements OnInit {
+export class ClientCalendarComponent implements OnInit {
   refresh: Subject<any> = new Subject();
-
+  rows = [];
+  selected:any;
   dialogRef: any;
   selectedDay: any;
   constructor(private jsonServ: JsonService, public dialog: MatDialog, private translate: TranslateService, private translationLoader: FuseTranslationLoaderService) {
     this.translationLoader.loadTranslations(english, farsi);
-
-   }
+    this.rows = this.events;
+  }
 
   colors = [
     {
@@ -90,7 +94,7 @@ export class CalendarComponent implements OnInit {
   title = 'app';
   view: string = 'month';
   viewDate: Date = new Date();
-  activeDayIsOpen: boolean;
+  activeDayIsOpen: boolean = false;
   events: CalendarEvent[] = [];
 
 
@@ -159,7 +163,7 @@ export class CalendarComponent implements OnInit {
 
       const groups: any = {};
       cell.events.forEach((event: CalendarEvent<{ consID: string, open: boolean }>) => {
-        if (!event.meta.open) {
+        if (event.meta.open) {
           cell.badgeTotal += 1;
           groups[event.meta.consID] = groups[event.meta.consID] || [];
           groups[event.meta.consID].push(event);
@@ -187,22 +191,22 @@ export class CalendarComponent implements OnInit {
   }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
-    this.openEvents = [];
-    events.forEach(element => {
-      if (!element.meta.open)
-        this.openEvents.push(element);
-    });
-    if (isSameMonth(date, this.viewDate)) {
-      if (
-        (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-        events.length === 0
-      ) {
-        this.activeDayIsOpen = false;
-      } else {
-        this.activeDayIsOpen = true;
-        this.viewDate = date;
-      }
-    }
+    // this.openEvents = [];
+    // events.forEach(element => {
+    //   if (!element.meta.open)
+    //     this.openEvents.push(element);
+    // });
+    // if (isSameMonth(date, this.viewDate)) {
+    //   if (
+    //     (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
+    //     events.length === 0
+    //   ) {
+    //     this.activeDayIsOpen = false;
+    //   } else {
+    //     this.activeDayIsOpen = true;
+    //     this.viewDate = date;
+    //   }
+    // }
   }
 
   getColor(cons) {
@@ -238,5 +242,23 @@ export class CalendarComponent implements OnInit {
         this.refresh.next(true);
       });
   }
+
+  getRowClass = (row) => {
+    return {
+      'row-color': row.meta.open
+    };
+  }
+  onSelect({ selected }) {
+    console.log('Select Event', selected, this.selected);
+  }
+
+  onActivate(event) {
+    console.log('Activate Event', event);
+  }
+  checkSelectable(event) {
+    debugger;
+    return event.meta.open == true
+  }
+
 
 }

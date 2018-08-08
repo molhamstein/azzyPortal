@@ -16,11 +16,12 @@ import { FuseThemeOptionsComponent } from '../core/components/theme-options/them
 import { FuseShortcutsModule } from '../core/components/shortcuts/shortcuts.module';
 import { FuseSearchBarModule } from '../core/components/search-bar/search-bar.module';
 import { CalendarModule } from '../angular-calendar';
-import {MyCalendarModule} from './content/calendar/calendar.module';
+import { MyCalendarModule } from './content/calendar/calendar.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { AdviceFormModule } from './content/advice-form/advice-form.module';
 import { FuseSampleModule } from './content/sample/sample.module';
 import { AzzyFormsModule } from './content/forms/forms.module';
+import { MyClientCalendarModule } from './content/client-calendar/client-calendar.module';
 
 @NgModule({
     declarations: [
@@ -35,7 +36,7 @@ import { AzzyFormsModule } from './content/forms/forms.module';
         FuseQuickPanelComponent,
 
     ],
-    imports     : [
+    imports: [
         SharedModule,
         RouterModule,
         FuseNavigationModule,
@@ -45,16 +46,16 @@ import { AzzyFormsModule } from './content/forms/forms.module';
         MyCalendarModule,
         FuseSampleModule,
         AdviceFormModule,
-        AzzyFormsModule
-        
+        AzzyFormsModule,
+        MyClientCalendarModule
+
 
 
     ],
-    exports     : [
+    exports: [
         FuseMainComponent
     ]
 })
 
-export class FuseMainModule
-{
+export class FuseMainModule {
 }

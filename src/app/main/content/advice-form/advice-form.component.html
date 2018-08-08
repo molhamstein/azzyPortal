@@ -36,18 +36,15 @@
           <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
             <ng-template matStepLabel>{{ 'ADVICE_FORM.STEP_0.LABEL' | translate }}</ng-template>
 
-            <mat-accordion class="example-headers-align">
-              <mat-expansion-panel class="" [expanded]="stepsIndex[0] === 0" (opened)="setStep(0,0)" hideToggle="false">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <mat-icon>account_circle</mat-icon>
+            <mat-panel-title style="font-weight: bold">
+                <mat-icon>account_circle</mat-icon>
+                    <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                        {{ 'ADVICE_FORM.APPLICANT' | translate }}
+                      </mat-panel-description>
                   </mat-panel-title>
-                  <mat-panel-description fxFlex="grow" fxLayoutAlign="space-between center">
-                    {{ 'ADVICE_FORM.APPLICANT' | translate }}
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
+                  
 
-                <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
                   <mat-form-field fxFlex="30">
 
@@ -120,26 +117,18 @@
                 </div>
 
 
-                <mat-action-row>
-                  <button mat-button color="primary" (click)="nextStep(0)">Next</button>
-                </mat-action-row>
-              </mat-expansion-panel>
+              
 
 
-
-              <mat-expansion-panel class="" [expanded]="stepsIndex[0] === 1" (opened)="setStep(0,1)" hideToggle="false">
-
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
+                  <mat-panel-title style="font-weight: bold; margin-top: 20px;">
                     <mat-icon>wc</mat-icon>
+                    <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                        {{ 'ADVICE_FORM.SPOUSE' | translate }}
+                      </mat-panel-description>    
                   </mat-panel-title>
-                  <mat-panel-description fxFlex="grow" fxLayoutAlign="space-between center">
-                    {{ 'ADVICE_FORM.SPOUSE' | translate }}
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
+                 
 
-
-                <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
                   <mat-form-field fxFlex="30">
 
                     <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FNAME' | translate }}" formControlName="firstName_SpouseFormCtrl" required>
@@ -165,13 +154,8 @@
                 </div>
 
 
-                <mat-action-row>
-                  <button mat-button color="warn" (click)="prevStep(0)">Previous</button>
-                  <button mat-button color="primary" (click)="nextStep(0)">End</button>
-                </mat-action-row>
-              </mat-expansion-panel>
+                
 
-            </mat-accordion>
 
 
             <div style="float: right;">
