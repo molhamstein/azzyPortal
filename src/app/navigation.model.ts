@@ -7,30 +7,26 @@ export class NavigationModel
         this.model = [
             {
                 'id'      : 'applications',
-                'title'   : 'Applications',
+                'title'   : 'Calendar',
                 'type'    : 'group',
                 'children': [
                     {
-                        'id'   : 'sample',
-                        'title': 'Sample',
+                        'id'   : 'calendar',
+                        'title': 'NAV.CALENDAR',
                         'type' : 'item',
-                        'icon' : 'email',
-                        'url'  : '/sample',
-                        'badge': {
-                            'title': 25,
-                            'bg'   : '#F44336',
-                            'fg'   : '#FFFFFF'
-                        }
-                    }
+                        'icon' : 'today',
+                        'url'  : '/calendar'
+                    },
+                    {
+                        'id'   : 'calendar',
+                        'title': 'Client Calendar',
+                        'type' : 'item',
+                        'icon' : 'today',
+                        'url'  : '/client-calendar'
+                    },
                 ]
             },
-            {
-                'id'   : 'calendar',
-                'title': 'NAV.CALENDAR',
-                'type' : 'item',
-                'icon' : 'today',
-                'url'  : '/calendar'
-            },
+           
             {
                 'id'      : 'forms',
                 'title'   : 'FORMS.TITLE',
