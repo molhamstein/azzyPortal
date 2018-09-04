@@ -11,7 +11,7 @@ export class AppDirectionService {
   ) {
 
     // this.direction = dir.value;
-    this.direction = 'rtl';
+    this.direction = 'ltr';
    }
 
    switchDir(dir: Direction) {

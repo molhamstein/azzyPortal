@@ -47,9 +47,9 @@ export class AppComponent {
         this.translate.addLangs(['en', 'fa']);
 
         // Set the default language
-        this.translate.setDefaultLang('fa');
+        this.translate.setDefaultLang('en');
 
         // Use a language
-        this.translate.use('fa');
+        this.translate.use('en');
     }
 }

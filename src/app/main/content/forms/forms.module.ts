@@ -4,6 +4,7 @@ import { SharedModule } from '../../../core/modules/shared.module';
 import { UnprocessedFormsComponent } from './unprocessed-forms/unprocessed-forms.component';
 import { RouterModule } from '@angular/router';
 import { ProcessedFormsComponent } from './processed-forms/processed-forms.component';
+import { ShowFormComponent } from './show-form/show-form.component';
 
 const routes = [
   {
@@ -13,6 +14,10 @@ const routes = [
   {
     path: 'processed',
     component: ProcessedFormsComponent,
+  },
+  {
+    path: 'show-form',
+    component: ShowFormComponent,
   }
 ];
 
@@ -23,6 +28,6 @@ const routes = [
     RouterModule.forChild(routes),
 
   ],
-  declarations: [UnprocessedFormsComponent, ProcessedFormsComponent]
+  declarations: [UnprocessedFormsComponent, ProcessedFormsComponent, ShowFormComponent]
 })
 export class AzzyFormsModule { }
