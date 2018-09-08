@@ -1,3 +1,4 @@
+import { LoginModule } from './content/login/login.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -47,7 +48,8 @@ import { MyClientCalendarModule } from './content/client-calendar/client-calenda
         FuseSampleModule,
         AdviceFormModule,
         AzzyFormsModule,
-        MyClientCalendarModule
+        MyClientCalendarModule,
+        LoginModule
 
 
 

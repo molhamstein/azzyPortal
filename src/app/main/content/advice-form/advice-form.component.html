@@ -21,7 +21,7 @@
       a non-UI data model (typically retrieved from a server) and a UI-oriented form model that retains the states and values
       of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.
     </p> -->
-
+    <!--{{formGroup.value | json}}-->
     <div fxLayout="column">
 
 
@@ -29,9 +29,7 @@
         [formGroup]="formGroup">
 
 
-
-
-        <mat-horizontal-stepper formArrayName="formArray" [linear]="!!isNonLinear">
+        <mat-horizontal-stepper formArrayName="formArray" [linear]="true">
 
           <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
             <ng-template matStepLabel>{{ 'ADVICE_FORM.STEP_0.LABEL' | translate }}</ng-template>
@@ -46,31 +44,46 @@
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
-              <mat-form-field fxFlex="30">
+              <mat-form-field fxFlex="23">
 
-                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FNAME' | translate }}" formControlName="firstNameFormCtrl" required>
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FNAME' | translate }}" formControlName="nameFarsi" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="30">
+              <mat-form-field fxFlex="23">
 
-                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.LNAME' | translate }}" formControlName="lastNameFormCtrl" required>
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsi" required>
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
+              <mat-form-field fxFlex="23">
+
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.ENAME' | translate }}" formControlName="nameEnglish" required>
+                <mat-icon matSuffix>person</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="23">
+
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglish" required>
+                <mat-icon matSuffix>people</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+
               <mat-form-field fxFlex="30">
                 <!-- <mat-icon matPrefix>today</mat-icon> -->
                 <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ 'ADVICE_FORM.STEP_0.BIRTH_DATE' | translate }}"
-                  formControlName="birthDateFormCtrl" required>
+                  formControlName="dateOfBirthPer" required>
                 <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="30">
-                <mat-select placeholder="{{ 'ADVICE_FORM.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusFormCtrl" required>
+                <mat-select placeholder="{{ 'ADVICE_FORM.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus" required>
                   <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
                     {{ status.viewValue | translate }}
                   </mat-option>
@@ -82,42 +95,52 @@
 
               <mat-form-field fxFlex="30">
                 <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'ADVICE_FORM.STEP_0.CHILDREN_NUM' | translate }}"
-                  formControlName="childrenNumFormCtrl" required>
+                  formControlName="numberOfChildren" >
                 <mat-icon matSuffix>child_care</mat-icon>
-                <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <span fxFlex="30"></span>
+              <!--<span fxFlex="30"></span>-->
 
-              <mat-form-field fxFlex="30">
+              <mat-form-field fxFlex="24">
                 <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
                           placeholder="{{ 'ADVICE_FORM.STEP_0.EMAIL' | translate }}" formControlName="email" required> -->
-                <input matInput type="email" placeholder="{{ 'ADVICE_FORM.STEP_0.EMAIL' | translate }}" formControlName="emailFormCtrl" required>
+                <input matInput type="email" placeholder="{{ 'ADVICE_FORM.STEP_0.EMAIL' | translate }}" formControlName="email" required>
                 <mat-icon matSuffix>email</mat-icon>
 
-                <mat-error *ngIf="formArray?.get([0,'emailFormCtrl']).hasError('email') && !formArray?.get([0,'emailFormCtrl']).hasError('required')">
+                <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
                   Please enter a valid email address
                 </mat-error>
-                <mat-error *ngIf="formArray?.get([0,'emailFormCtrl']).hasError('required')">
+                <mat-error *ngIf="formArray?.get([0,'email']).hasError('required')">
                   {{ 'ERROR_MESSAGES.REQUIRED' |translate }}
                 </mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="30">
+              <mat-form-field fxFlex="24">
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                <input matInput type="tel" placeholder="{{ 'ADVICE_FORM.STEP_0.MOBILE' | translate }}" formControlName="mobileFormCtrl" required>
+                <input matInput type="tel" placeholder="{{ 'ADVICE_FORM.STEP_0.MOBILE' | translate }}" formControlName="mobileNo" required>
                 <mat-icon matSuffix>smartphone</mat-icon>
               </mat-form-field>
 
-              <mat-form-field fxFlex="30">
-                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeFormCtrl">
-                <mat-icon matSuffix>video_call</mat-icon>
+              <mat-form-field fxFlex="24">
+                <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
+                <input matInput type="tel" placeholder="{{ 'ADVICE_FORM.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNo"
+                  >
+                <mat-icon matSuffix>phone</mat-icon>
               </mat-form-field>
 
+              <mat-form-field fxFlex="24">
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeID">
+                <mat-icon matSuffix>video_call</mat-icon>
+              </mat-form-field>
+              <mat-form-field fxFlex="45">
+                <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsi"></textarea>
+                <mat-icon matSuffix>map</mat-icon>
+              </mat-form-field>
+              <mat-form-field fxFlex="45">
+                <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglish"></textarea>
+                <mat-icon matSuffix>map</mat-icon>
+              </mat-form-field>
             </div>
-
-
-
 
 
             <mat-panel-title style="font-weight: bold; margin-top: 20px;">
@@ -129,27 +152,101 @@
 
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
-              <mat-form-field fxFlex="30">
 
-                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FNAME' | translate }}" formControlName="firstName_SpouseFormCtrl" required>
+              <mat-form-field fxFlex="23">
+
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FNAME' | translate }}" formControlName="nameFarsiSp" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="30">
+              <mat-form-field fxFlex="23">
 
-                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.LNAME' | translate }}" formControlName="lastName_SpouseFormCtrl" required>
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp" required>
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="30">
-                <!-- <mat-icon matPrefix>today</mat-icon> -->
-                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="spouseBirthDatePicker" placeholder="{{ 'ADVICE_FORM.STEP_0.BIRTH_DATE' | translate }}"
-                  formControlName="birthDate_SpouseFormCtrl" required>
-                <mat-datepicker-toggle matSuffix [for]="spouseBirthDatePicker"></mat-datepicker-toggle>
-                <mat-datepicker #spouseBirthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
+              <mat-form-field fxFlex="23">
+
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp" required>
+                <mat-icon matSuffix>person</mat-icon>
                 <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="23">
+
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp" required>
+                <mat-icon matSuffix>people</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+
+              <mat-form-field fxFlex="30">
+                <input matInput [min]="minDateSp" [max]="maxDateSp" [matDatepicker]="birthDatePickerSp" placeholder="{{ 'ADVICE_FORM.STEP_0.BIRTH_DATE' | translate }}"
+                  formControlName="dateOfBirthPerSp" required>
+                <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
+                <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="30">
+                <mat-select placeholder="{{ 'ADVICE_FORM.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp" required>
+                  <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
+                    {{ status.viewValue | translate }}
+                  </mat-option>
+                </mat-select>
+
+                <mat-icon matSuffix>wc</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="30">
+                <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'ADVICE_FORM.STEP_0.CHILDREN_NUM' | translate }}"
+                  formControlName="numberOfChildrenSp" >
+                <mat-icon matSuffix>child_care</mat-icon>
+              </mat-form-field>
+
+              <!--<span fxFlex="30"></span>-->
+
+              <mat-form-field fxFlex="24">
+                <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                          placeholder="{{ 'ADVICE_FORM.STEP_0.EMAIL' | translate }}" formControlName="email" required> -->
+                <input matInput type="email" placeholder="{{ 'ADVICE_FORM.STEP_0.EMAIL' | translate }}" formControlName="emailSp" required>
+                <mat-icon matSuffix>email</mat-icon>
+
+                <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="formArray?.get([0,'email']).hasError('required')">
+                  {{ 'ERROR_MESSAGES.REQUIRED' |translate }}
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="24">
+                <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
+                <input matInput type="tel" placeholder="{{ 'ADVICE_FORM.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp" required>
+                <mat-icon matSuffix>smartphone</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="24">
+                <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
+                <input matInput type="tel" placeholder="{{ 'ADVICE_FORM.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNoSp"
+                  >
+                <mat-icon matSuffix>phone</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="24">
+                <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeIDSp">
+                <mat-icon matSuffix>video_call</mat-icon>
+              </mat-form-field>
+              <mat-form-field fxFlex="45">
+                <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsiSp"></textarea>
+                <mat-icon matSuffix>map</mat-icon>
+              </mat-form-field>
+              <mat-form-field fxFlex="45">
+                <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglishSp"></textarea>
+                <mat-icon matSuffix>map</mat-icon>
               </mat-form-field>
             </div>
 
@@ -159,7 +256,7 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperNext type="button">Next</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([0]).invalid">Next</button>
             </div>
           </mat-step>
 
@@ -179,12 +276,10 @@
             </mat-panel-title>
 
 
-
             <div style="padding-top:10px;" fxLayout="column">
-
               <div class="pt-24 pb-24">
                 <label>{{ 'ADVICE_FORM.STEP_1.ENGLISH_LEVEL' | translate }}</label>
-                <mat-radio-group formControlName="englishLevelFormCtrl">
+                <mat-radio-group formControlName="goodEnglish">
                   <mat-radio-button class="mr-24 ml-24" *ngFor="let level of englishLevels" [value]="level.value">
                     {{ level.viewValue | translate }}
                   </mat-radio-button>
@@ -194,21 +289,13 @@
               <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
                 <label>{{ 'ADVICE_FORM.STEP_1.ENGLISH_LEVEL' | translate }}</label>
                 <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-
-                  <input matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[0] }}"
-                    required>
+                  <input matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[0] }}">
                   <mat-icon matPrefix>{{ score.icon }}</mat-icon>
-                  <mat-error>This field is required</mat-error>
                 </mat-form-field>
 
               </div>
 
             </div>
-
-
-
-
-
 
             <mat-panel-title style="font-weight: bold; margin-top: 20px;">
               <mat-icon>wc</mat-icon>
@@ -220,16 +307,9 @@
 
 
             <div style="padding-top:10px;" fxLayout="column">
-
-              <!-- <mat-form-field fxFlex="30">
-      
-                          <input matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FNAME' | translate }}" formControlName="firstNameFormCtrl" required>
-                          <mat-icon matSuffix>person</mat-icon>
-                          <mat-error>This field is required</mat-error>
-                        </mat-form-field> -->
               <div class="pt-24 pb-24">
                 <label>{{ 'ADVICE_FORM.STEP_1.ENGLISH_LEVEL' | translate }}</label>
-                <mat-radio-group formControlName="englishLevel_SpouseFormCtrl">
+                <mat-radio-group formControlName="goodEnglishSp">
                   <mat-radio-button class="mr-24 ml-24" *ngFor="let level of englishLevels" [value]="level.value">
                     {{ level.viewValue | translate }}
                   </mat-radio-button>
@@ -239,43 +319,17 @@
               <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
                 <label>{{ 'ADVICE_FORM.STEP_1.ENGLISH_LEVEL' | translate }}</label>
                 <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-
-                  <input matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[1] }}"
-                    required>
+                  <input matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[1] }}">
                   <mat-icon matPrefix>{{ score.icon }}</mat-icon>
-                  <mat-error>This field is required</mat-error>
                 </mat-form-field>
 
               </div>
 
             </div>
 
-
-
-
-            <!-- <mat-tab-group>
-              <mat-tab label="Tab 1">
-                <ng-template mat-tab-label>
-                  {{ 'ADVICE_FORM.APPLICANT' | translate }}
-                </ng-template>
-              </mat-tab>
-
-              <mat-tab label="Tab 2">
-                  <ng-template mat-tab-label>
-                    {{ 'ADVICE_FORM.SPOUSE' | translate }}
-                  </ng-template>
-                  
-  
-                </mat-tab>
-
-            </mat-tab-group> -->
-
-
-
-
             <div style="float: right;">
               <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button">Next</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([1]).invalid">Next</button>
             </div>
           </mat-step>
 
@@ -288,69 +342,41 @@
 
 
 
-             <mat-panel-title style="font-weight: bold;">
+            <mat-panel-title style="font-weight: bold;">
               <mat-icon>account_circle</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
                 {{ 'ADVICE_FORM.APPLICANT' | translate }}
               </mat-panel-description>
             </mat-panel-title>
 
+            <div *ngFor="let level of eduLevels" style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
+              fxFlex>
 
+              <span fxFlex="5" class="mat-title">{{level.label}}</span>
+              <div fxFlex="15" *ngFor="let oneField of level.fields">
+                <mat-form-field *ngIf="oneField.isInput==true">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}" >
+                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
+                  
+                </mat-form-field>
 
-            <div style="padding-top:10px;" fxLayout="column" formArrayName="degrees">
-              <div fxLayout="column" formGroupName="{{i}}" fxLayout.gt-md="row wrap" *ngFor="let degree of formArray?.get([2, 'degrees'])['controls']; let i = index;"
-                fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
+               
 
-                <span class="mat-title">#{{i+1}}</span>
-                <mat-form-field fxFlex="15">
-                  <mat-select placeholder="{{ 'ADVICE_FORM.STEP_2.DEGREE' | translate }}" formControlName="eduLevelFormCtrl" required>
-                    <mat-option *ngFor="let eduLevel of eduLevels" [value]="eduLevel.value">
-                      {{ eduLevel.viewValue | translate }}
+                <mat-form-field *ngIf="oneField.isInput==false">
+                  <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
+                    <mat-option *ngFor="let year of years" [value]="year">
+                      {{year}}
                     </mat-option>
                   </mat-select>
-                  <mat-icon matSuffix>school</mat-icon>
-                  <mat-error>This field is required</mat-error>
                 </mat-form-field>
-
-                <mat-form-field fxFlex="15">
-                  <input matInput placeholder="{{ 'ADVICE_FORM.STEP_2.FIELD' | translate }}" formControlName="fieldFormCtrl" required>
-                  <mat-icon matSuffix>book</mat-icon>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-                <mat-form-field fxFlex="15">
-                  <input matInput placeholder="{{ 'ADVICE_FORM.STEP_2.UNIVERSITY' | translate }}" formControlName="universityFormCtrl" required>
-                  <mat-icon matSuffix>location_city</mat-icon>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-                <mat-form-field fxFlex="15">
-                  <input matInput placeholder="{{ 'ADVICE_FORM.STEP_2.EDU_PLACE' | translate }}" formControlName="eduPlaceFormCtrl" required>
-                  <mat-icon matSuffix>place</mat-icon>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-
-                <mat-form-field fxFlex="15">
-                  <!-- <mat-icon matPrefix>today</mat-icon> -->
-                  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="gradDatePicker" placeholder="{{ 'ADVICE_FORM.STEP_2.YEAR_GRAD' | translate }}"
-                    formControlName="yearOfGradFormCtrl" required>
-                  <mat-datepicker-toggle matSuffix [for]="gradDatePicker"></mat-datepicker-toggle>
-                  <mat-datepicker #gradDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-
-                <button mat-icon-button color="warn" (click)="removeDegree(i)">
-                  <mat-icon aria-label="remove">clear</mat-icon>
-                </button>
 
               </div>
-              <button mat-icon-button color="warn" [disabled]="formArray?.get([2, 'degrees'])['controls'].length>3" (click)="addDegree()">
-                <mat-icon aria-label="remove">add</mat-icon>
-              </button>
             </div>
 
 
 
 
-             <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
               <mat-icon>wc</mat-icon>
 
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
@@ -359,55 +385,25 @@
             </mat-panel-title>
 
 
+            <div *ngFor="let level of eduLevels" style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
+              fxFlex>
 
-            <div style="padding-top:10px;" fxLayout="column" formArrayName="degreesSpouse">
-              <div fxLayout="column" formGroupName="{{i}}" fxLayout.gt-md="row wrap" *ngFor="let degree of formArray?.get([2, 'degreesSpouse'])['controls']; let i = index;"
-                fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
-
-                <span class="mat-title">#{{i+1}}</span>
-                <mat-form-field fxFlex="15">
-                  <mat-select placeholder="{{ 'ADVICE_FORM.STEP_2.DEGREE' | translate }}" formControlName="eduLevelFormCtrl" required>
-                    <mat-option *ngFor="let eduLevel of eduLevels" [value]="eduLevel.value">
-                      {{ eduLevel.viewValue | translate }}
+              <span fxFlex="5" class="mat-title">{{level.label}}</span>
+              <div fxFlex="15" *ngFor="let oneField of level.fields">
+                <mat-form-field *ngIf="oneField.isInput==true">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}" >
+                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
+                  
+                </mat-form-field>
+                
+                <mat-form-field *ngIf="oneField.isInput==false">
+                  <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
+                    <mat-option *ngFor="let year of years" [value]="year">
+                      {{year}}
                     </mat-option>
                   </mat-select>
-                  <mat-icon matSuffix>school</mat-icon>
-                  <mat-error>This field is required</mat-error>
                 </mat-form-field>
-
-                <mat-form-field fxFlex="15">
-                  <input matInput placeholder="{{ 'ADVICE_FORM.STEP_2.FIELD' | translate }}" formControlName="fieldFormCtrl" required>
-                  <mat-icon matSuffix>book</mat-icon>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-                <mat-form-field fxFlex="15">
-                  <input matInput placeholder="{{ 'ADVICE_FORM.STEP_2.UNIVERSITY' | translate }}" formControlName="universityFormCtrl" required>
-                  <mat-icon matSuffix>location_city</mat-icon>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-                <mat-form-field fxFlex="15">
-                  <input matInput placeholder="{{ 'ADVICE_FORM.STEP_2.EDU_PLACE' | translate }}" formControlName="eduPlaceFormCtrl" required>
-                  <mat-icon matSuffix>place</mat-icon>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-
-                <mat-form-field fxFlex="15">
-                  <!-- <mat-icon matPrefix>today</mat-icon> -->
-                  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="gradDatePicker" placeholder="{{ 'ADVICE_FORM.STEP_2.YEAR_GRAD' | translate }}"
-                    formControlName="yearOfGradFormCtrl" required>
-                  <mat-datepicker-toggle matSuffix [for]="gradDatePicker"></mat-datepicker-toggle>
-                  <mat-datepicker #gradDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
-                  <mat-error>This field is required</mat-error>
-                </mat-form-field>
-
-                <button mat-icon-button color="warn" (click)="removeSpouseDegree(i)">
-                  <mat-icon aria-label="remove">clear</mat-icon>
-                </button>
-
               </div>
-              <button mat-icon-button color="warn" [disabled]="formArray?.get([2, 'degreesSpouse'])['controls'].length>3" (click)="addSpouseDegree()">
-                <mat-icon aria-label="remove">add</mat-icon>
-              </button>
             </div>
 
 
@@ -416,7 +412,7 @@
 
             <div style="float: right;">
               <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button">Next</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([2]).invalid">Next</button>
             </div>
           </mat-step>
 
@@ -426,131 +422,233 @@
               <div>{{ 'ADVICE_FORM.STEP_3.LABEL' | translate }}</div>
             </ng-template>
 
-
-
-           
-                   <mat-panel-title style="font-weight: bold;">
-                    <mat-icon>account_circle</mat-icon>
-                    <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
-                        {{ 'ADVICE_FORM.APPLICANT' | translate }}
-                      </mat-panel-description>
-                  </mat-panel-title>
-                
+            <mat-panel-title style="font-weight: bold;">
+              <mat-icon>account_circle</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'ADVICE_FORM.APPLICANT' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
 
 
 
-                <div style="padding-top:10px;" fxLayout="column" formArrayName="works">
-                  <div fxLayout="column" formGroupName="{{i}}" fxLayout.gt-md="row wrap" *ngFor="let work of formArray?.get([3, 'works'])['controls']; let i = index;"
-                    fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
 
-                    <span class="mat-title">#{{i+1}}</span>
-
-                    <div fxFlex="15">
-                      <mat-checkbox formControlName="ralatedStudyFormCtrl"> {{ work['controls'].ralatedStudyFormCtrl.value ? ('ADVICE_FORM.STEP_3.RELATED_STUDY' | translate) :
-                        ('ADVICE_FORM.STEP_3.UNRELATED_STUDY' | translate)}}</mat-checkbox>
-                    </div>
-                    <div fxFlex="15">
-                      <mat-checkbox formControlName="insuranceFormCtrl"> {{ work['controls'].insuranceFormCtrl.value ? ('ADVICE_FORM.STEP_3.INSURANCE' | translate) : ('ADVICE_FORM.STEP_3.NOINSURANCE'
-                        | translate)}}</mat-checkbox>
-                    </div>
-
-
-                    <mat-form-field fxFlex="40">
-                      <input matInput placeholder="{{ 'ADVICE_FORM.STEP_3.FIELD_ACTIVITY' | translate }}" formControlName="fieldActivityFormCtrl"
-                        required>
-                      <mat-icon matSuffix>class</mat-icon>
-                      <mat-error>This field is required</mat-error>
-                    </mat-form-field>
-
-                    <mat-form-field fxFlex="15">
-                      <!-- <mat-icon matPrefix>today</mat-icon> -->
-                      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="yearDatePicker" placeholder="{{ 'ADVICE_FORM.STEP_2.YEAR_GRAD' | translate }}"
-                        formControlName="yearFormCtrl" required>
-                      <mat-datepicker-toggle matSuffix [for]="yearDatePicker"></mat-datepicker-toggle>
-                      <mat-datepicker #yearDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
-                      <mat-error>This field is required</mat-error>
-                    </mat-form-field>
-
-                    <button mat-icon-button color="warn" (click)="removeWork(i)">
-                      <mat-icon aria-label="remove">clear</mat-icon>
-                    </button>
-
-                  </div>
-                  <button mat-icon-button color="warn" [disabled]="formArray?.get([3, 'works'])['controls'].length>3" (click)="addWork()">
-                    <mat-icon aria-label="remove">add</mat-icon>
-                  </button>
-                </div>
-
-
-              
-
-             
-                   <mat-panel-title style="font-weight: bold; margin-top: 20px;">
-                    <mat-icon>wc</mat-icon>
-                    <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
-                        {{ 'ADVICE_FORM.SPOUSE' | translate }}
-                      </mat-panel-description>
-                  </mat-panel-title>
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+              <div fxFlex="{{oneField.fxFlex}}" *ngFor="let oneField of workExperience">
+                <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==true">
+                  <input matInput type="number" placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}"
+                    >
+                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
                   
+                </mat-form-field>
 
 
-                <div style="padding-top:10px;" fxLayout="column" formArrayName="worksSpouse">
-                  <div fxLayout="column" formGroupName="{{i}}" fxLayout.gt-md="row wrap" *ngFor="let work of formArray?.get([3, 'worksSpouse'])['controls']; let i = index;"
-                    fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
-
-                    <span class="mat-title">#{{i+1}}</span>
-
-                    <div fxFlex="15">
-                      <mat-checkbox formControlName="ralatedStudyFormCtrl"> {{ work['controls'].ralatedStudyFormCtrl.value ? ('ADVICE_FORM.STEP_3.RELATED_STUDY' | translate) :
-                        ('ADVICE_FORM.STEP_3.UNRELATED_STUDY' | translate)}}</mat-checkbox>
-                    </div>
-                    <div fxFlex="15">
-                      <mat-checkbox formControlName="insuranceFormCtrl"> {{ work['controls'].insuranceFormCtrl.value ? ('ADVICE_FORM.STEP_3.INSURANCE' | translate) : ('ADVICE_FORM.STEP_3.NOINSURANCE'
-                        | translate)}}</mat-checkbox>
-                    </div>
+                <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==false">
+                  <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}" ></textarea>
+                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
+                  
+                </mat-form-field>
+              </div>
+            </div>
 
 
-                    <mat-form-field fxFlex="40">
-                      <input matInput placeholder="{{ 'ADVICE_FORM.STEP_3.FIELD_ACTIVITY' | translate }}" formControlName="fieldActivityFormCtrl"
-                        required>
-                      <mat-icon matSuffix>class</mat-icon>
-                      <mat-error>This field is required</mat-error>
-                    </mat-form-field>
-
-                    <mat-form-field fxFlex="15">
-                      <!-- <mat-icon matPrefix>today</mat-icon> -->
-                      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="yearDatePicker" placeholder="{{ 'ADVICE_FORM.STEP_2.YEAR_GRAD' | translate }}"
-                        formControlName="yearFormCtrl" required>
-                      <mat-datepicker-toggle matSuffix [for]="yearDatePicker"></mat-datepicker-toggle>
-                      <mat-datepicker #yearDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
-                      <mat-error>This field is required</mat-error>
-                    </mat-form-field>
-
-                    <button mat-icon-button color="warn" (click)="removeSpouseWork(i)">
-                      <mat-icon aria-label="remove">clear</mat-icon>
-                    </button>
-
-                  </div>
-                  <button mat-icon-button color="warn" [disabled]="formArray?.get([3, 'worksSpouse'])['controls'].length>3" (click)="addSpouseWork()">
-                    <mat-icon aria-label="remove">add</mat-icon>
-                  </button>
-                </div>
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+              <mat-icon>wc</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'ADVICE_FORM.SPOUSE' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
 
 
-            
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+              <div fxFlex="{{oneField.fxFlex}}" *ngFor="let oneField of workExperience">
+                <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==true">
+                  <input matInput type="number" placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}"
+                    >
+                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
+                  
+                </mat-form-field>
+
+
+                <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==false">
+                  <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}" ></textarea>
+                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
+                  
+                </mat-form-field>
+              </div>
+            </div>
+
 
 
             <div style="float: right;">
               <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button">Next</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([3]).invalid">Next</button>
             </div>
           </mat-step>
+
+
+          <mat-step formGroupName="4" [stepControl]="formArray?.get([4])">
+            <ng-template matStepLabel>
+              <div>{{ 'ADVICE_FORM.STEP_4.LABEL' | translate }}</div>
+            </ng-template>
+
+
+
+
+            <mat-panel-title style="font-weight: bold">
+              <mat-icon>account_circle</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'ADVICE_FORM.APPLICANT' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
+
+
+            <div class="pt-24 pb-24">
+              <label>{{ 'ADVICE_FORM.STEP_4.STATUS' | translate }}</label>
+              <mat-radio-group formControlName="militaryStatus">
+                <mat-radio-button class="mr-24 ml-24" *ngFor="let statu of militaryStatus" [value]="statu.value">
+                  {{ statu.viewValue | translate }}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+
+              <div fxFlex="30" *ngFor="let oneField of militaryFields">
+                <mat-form-field style="width: 100%" *ngIf="oneField.isInput">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}" >
+                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
+                  
+                </mat-form-field>
+
+                <mat-form-field style="width: 100%" *ngIf="oneField.isInput==false">
+                  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
+                    formControlName="{{ oneField.value[0] }}" >
+                  <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
+                  <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
+                  
+                </mat-form-field>
+              </div>
+            </div>
+
+
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+              <mat-icon>wc</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'ADVICE_FORM.SPOUSE' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
+
+
+
+            <div class="pt-24 pb-24">
+              <label>{{ 'ADVICE_FORM.STEP_4.STATUS' | translate }}</label>
+              <mat-radio-group formControlName="militaryStatusSp">
+                <mat-radio-button class="mr-24 ml-24" *ngFor="let statu of militaryStatus" [value]="statu.value">
+                  {{ statu.viewValue | translate }}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+
+              <div fxFlex="30" *ngFor="let oneField of militaryFields">
+                <mat-form-field style="width: 100%" *ngIf="oneField.isInput">
+                  <input matInput placeholder="{{ oneField.viewValue }}" formControlName="{{ oneField.value[1] }}" >
+                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
+                  
+                </mat-form-field>
+
+                <mat-form-field style="width: 100%" *ngIf="oneField.isInput==false">
+                  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate  }}"
+                    formControlName="{{ oneField.value[1] }}" >
+                  <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
+                  <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
+                  
+                </mat-form-field>
+              </div>
+            </div>
+
+
+            <div style="float: right;">
+              <button mat-button matStepperPrevious type="button">Back</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([4]).invalid">Next</button>
+            </div>
+          </mat-step>
+
+
+          <mat-step formGroupName="5" [stepControl]="formArray?.get([5])">
+            <ng-template matStepLabel>
+              <div>{{ 'ADVICE_FORM.STEP_5.LABEL' | translate }}</div>
+            </ng-template>
+
+            <mat-panel-title style="font-weight: bold">
+              <mat-icon>account_circle</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'ADVICE_FORM.APPLICANT' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
+
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+
+              <div fxFlex="30" *ngFor="let oneField of australiaFields">
+                <mat-form-field style="width: 100%">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}" >
+                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
+                  
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="pt-24 pb-24">
+              <label>{{ 'ADVICE_FORM.STEP_5.VISATYPE' | translate }}</label>
+              <mat-radio-group formControlName="australiaVisaType">
+                <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">
+                  {{ type.viewValue | translate }}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+
+
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+              <mat-icon>wc</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'ADVICE_FORM.SPOUSE' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
+
+
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+
+              <div fxFlex="30" *ngFor="let oneField of australiaFields">
+                <mat-form-field style="width: 100%">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}" >
+                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
+                  
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="pt-24 pb-24">
+              <label>{{ 'ADVICE_FORM.STEP_5.VISATYPE' | translate }}</label>
+              <mat-radio-group formControlName="australiaVisaTypeSp">
+                <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">
+                  {{ type.viewValue | translate }}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+            <div style="float: right;">
+              <button mat-button matStepperPrevious type="button">Back</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([5]).invalid">Next</button>
+            </div>
+          </mat-step>
+
+
 
           <mat-step>
             <ng-template matStepLabel>Confirm your information</ng-template>
             Everything seems correct.
             <div style="float: right;">
-              <button mat-button>Done</button>
+              <button mat-button (click)="addForm()">Done</button>
             </div>
           </mat-step>
 

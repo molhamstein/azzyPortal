@@ -1,3 +1,6 @@
+import { LoginService } from './core/services/login.service';
+import { CallApiService } from './core/services/call-api.service';
+import { MainService } from './core/services/main.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -43,7 +46,10 @@ const appRoutes: Routes = [
         FuseSplashScreenService,
         FuseConfigService,
         FuseNavigationService,
-        AppDirectionService
+        AppDirectionService,
+        MainService,
+        CallApiService,
+        LoginService
     ],
     bootstrap   : [
         AppComponent
