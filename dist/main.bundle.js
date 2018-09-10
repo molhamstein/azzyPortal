@@ -4263,30 +4263,31 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirmation_message_confirmation_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirmation-message/confirmation-message.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_global_service__ = __webpack_require__("./src/app/core/services/global.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_hammerjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__main_main_module__ = __webpack_require__("./src/app/main/main.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__core_services_splash_screen_service__ = __webpack_require__("./src/app/core/services/splash-screen.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__core_components_navigation_navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_material_dialog__ = __webpack_require__("./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_confirmation_message_confirmation_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirmation-message/confirmation-message.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_global_service__ = __webpack_require__("./src/app/core/services/global.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_hammerjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__main_main_module__ = __webpack_require__("./src/app/main/main.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__core_services_splash_screen_service__ = __webpack_require__("./src/app/core/services/splash-screen.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__core_components_navigation_navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_material_dialog__ = __webpack_require__("./node_modules/@angular/material/esm5/dialog.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4316,40 +4317,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_8__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]
+                __WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_9__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_11__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_12__angular_router__["e" /* RouterModule */].forRoot(appRoutes),
-                __WEBPACK_IMPORTED_MODULE_14__core_modules_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_20__ngx_translate_core__["a" /* TranslateModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_16__main_main_module__["a" /* FuseMainModule */],
-                __WEBPACK_IMPORTED_MODULE_22__angular_material_dialog__["c" /* MatDialogModule */]
+                __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_10__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_12__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_13__angular_router__["e" /* RouterModule */].forRoot(appRoutes),
+                __WEBPACK_IMPORTED_MODULE_15__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_21__ngx_translate_core__["a" /* TranslateModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_17__main_main_module__["a" /* FuseMainModule */],
+                __WEBPACK_IMPORTED_MODULE_23__angular_material_dialog__["c" /* MatDialogModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_17__core_services_splash_screen_service__["a" /* FuseSplashScreenService */],
-                __WEBPACK_IMPORTED_MODULE_18__core_services_config_service__["a" /* FuseConfigService */],
-                __WEBPACK_IMPORTED_MODULE_19__core_components_navigation_navigation_service__["a" /* FuseNavigationService */],
-                __WEBPACK_IMPORTED_MODULE_21__app_direction_service__["a" /* AppDirectionService */],
-                __WEBPACK_IMPORTED_MODULE_6__core_services_main_service__["a" /* MainService */],
-                __WEBPACK_IMPORTED_MODULE_5__core_services_call_api_service__["a" /* CallApiService */],
-                __WEBPACK_IMPORTED_MODULE_4__core_services_login_service__["a" /* LoginService */],
-                __WEBPACK_IMPORTED_MODULE_3__core_services_global_service__["a" /* GlobalService */]
+                __WEBPACK_IMPORTED_MODULE_18__core_services_splash_screen_service__["a" /* FuseSplashScreenService */],
+                __WEBPACK_IMPORTED_MODULE_19__core_services_config_service__["a" /* FuseConfigService */],
+                __WEBPACK_IMPORTED_MODULE_20__core_components_navigation_navigation_service__["a" /* FuseNavigationService */],
+                __WEBPACK_IMPORTED_MODULE_22__app_direction_service__["a" /* AppDirectionService */],
+                __WEBPACK_IMPORTED_MODULE_7__core_services_main_service__["a" /* MainService */],
+                __WEBPACK_IMPORTED_MODULE_6__core_services_call_api_service__["a" /* CallApiService */],
+                __WEBPACK_IMPORTED_MODULE_5__core_services_login_service__["a" /* LoginService */],
+                __WEBPACK_IMPORTED_MODULE_4__core_services_global_service__["a" /* GlobalService */],
+                __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */]
             ],
-            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]]
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -7931,6 +7934,58 @@ var FusePipesModule = (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/services/auth-guard-service.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuardService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthGuardService = (function () {
+    function AuthGuardService(mainServ, router) {
+        this.mainServ = mainServ;
+        this.router = router;
+    }
+    AuthGuardService.prototype.canLoad = function (route) {
+        if (false) {
+            // return true;
+        }
+        // this.authService.setRedirectUrl(url);
+        this.router.navigate(["/login"]);
+        return false;
+    };
+    AuthGuardService.prototype.canActivate = function (route, state) {
+        if (this.mainServ.loginServ.isLogin()) {
+            return true;
+        }
+        // this.authService.setRedirectUrl(url);
+        this.router.navigate(["/login"]);
+        return false;
+    };
+    AuthGuardService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__main_service__["a" /* MainService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */]])
+    ], AuthGuardService);
+    return AuthGuardService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/services/call-api.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8215,13 +8270,12 @@ var FuseConfigService = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8238,16 +8292,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var GlobalService = (function () {
     function GlobalService(router, route, dialog, APIServe) {
         this.router = router;
         this.route = route;
         this.dialog = dialog;
         this.APIServe = APIServe;
-        this.unreadNotBeh = new __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](0);
-        this.notificationBeh = new __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
-        this.filteringBeh = new __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
+        this.unreadNotBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](0);
+        this.notificationBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
+        this.filteringBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
         this.castUnreadNotBeh = this.unreadNotBeh.asObservable();
         this.castNotificationBeh = this.notificationBeh.asObservable();
         this.castFilteringBeh = this.filteringBeh.asObservable();
@@ -8306,7 +8359,7 @@ var GlobalService = (function () {
     };
     GlobalService.prototype.calculatDateAdv = function (date) {
         var time = this.diff_minutes(new Date(), new Date(date));
-        var pipe = new __WEBPACK_IMPORTED_MODULE_6__angular_common__["DatePipe"]('en-US'); // Use your own locale
+        var pipe = new __WEBPACK_IMPORTED_MODULE_5__angular_common__["DatePipe"]('en-US'); // Use your own locale
         if (time < 1)
             return "الأن";
         else if (time < 60)
@@ -8342,15 +8395,15 @@ var GlobalService = (function () {
         // this.errorDialog('حدث خطأ', "هناك مشكلة ما")
     };
     GlobalService.prototype.confirmationMessage = function (message, url, data) {
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], {
-            width: '250px',
-            data: { message: message, url: url, sendData: data }
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            if (result) {
-                alert(result);
-            }
-        });
+        // const dialogRef = this.dialog.open(ConfirmMessageComponent, {
+        //   width: '250px',
+        //   data: { message: message, url: url, sendData: data }
+        // });
+        // dialogRef.afterClosed().subscribe(result => {
+        //   if (result) {
+        //     alert(result);
+        //   }
+        // });
     };
     GlobalService.prototype.convertNumber = function (fromNum) {
         console.log("fromNum");
@@ -8389,8 +8442,8 @@ var GlobalService = (function () {
         return number;
     };
     GlobalService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* Router */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MatDialog */], __WEBPACK_IMPORTED_MODULE_1__call_api_service__["a" /* CallApiService */]])
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */], __WEBPACK_IMPORTED_MODULE_0__call_api_service__["a" /* CallApiService */]])
     ], GlobalService);
     return GlobalService;
 }());
@@ -11505,11 +11558,12 @@ var EditFormComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditFormModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_form_component__ = __webpack_require__("./src/app/main/content/edit-form/edit-form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit_form_component__ = __webpack_require__("./src/app/main/content/edit-form/edit-form.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11521,25 +11575,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     {
         path: 'edit-form/:id',
-        component: __WEBPACK_IMPORTED_MODULE_4__edit_form_component__["a" /* EditFormComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_5__edit_form_component__["a" /* EditFormComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
     },
 ];
 var EditFormModule = (function () {
     function EditFormModule() {
     }
     EditFormModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_3__core_modules_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* RouterModule */].forChild(routes)
+                __WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* RouterModule */].forChild(routes)
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_4__edit_form_component__["a" /* EditFormComponent */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_5__edit_form_component__["a" /* EditFormComponent */]],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_4__edit_form_component__["a" /* EditFormComponent */]
+                __WEBPACK_IMPORTED_MODULE_5__edit_form_component__["a" /* EditFormComponent */]
             ]
         })
     ], EditFormModule);
@@ -12701,14 +12757,15 @@ var ContractedFormsComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AzzyFormsModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contracted_forms_contracted_forms_component__ = __webpack_require__("./src/app/main/content/forms/contracted-forms/contracted-forms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__unprocessed_forms_unprocessed_forms_component__ = __webpack_require__("./src/app/main/content/forms/unprocessed-forms/unprocessed-forms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__processed_forms_processed_forms_component__ = __webpack_require__("./src/app/main/content/forms/processed-forms/processed-forms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__show_form_show_form_component__ = __webpack_require__("./src/app/main/content/forms/show-form/show-form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contracted_forms_contracted_forms_component__ = __webpack_require__("./src/app/main/content/forms/contracted-forms/contracted-forms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__unprocessed_forms_unprocessed_forms_component__ = __webpack_require__("./src/app/main/content/forms/unprocessed-forms/unprocessed-forms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__processed_forms_processed_forms_component__ = __webpack_require__("./src/app/main/content/forms/processed-forms/processed-forms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__show_form_show_form_component__ = __webpack_require__("./src/app/main/content/forms/show-form/show-form.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12723,35 +12780,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     {
         path: 'unprocessed',
-        component: __WEBPACK_IMPORTED_MODULE_4__unprocessed_forms_unprocessed_forms_component__["a" /* UnprocessedFormsComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_5__unprocessed_forms_unprocessed_forms_component__["a" /* UnprocessedFormsComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
     },
     {
         path: 'processed',
-        component: __WEBPACK_IMPORTED_MODULE_6__processed_forms_processed_forms_component__["a" /* ProcessedFormsComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_7__processed_forms_processed_forms_component__["a" /* ProcessedFormsComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
     },
     {
         path: 'contracted',
-        component: __WEBPACK_IMPORTED_MODULE_0__contracted_forms_contracted_forms_component__["a" /* ContractedFormsComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_1__contracted_forms_contracted_forms_component__["a" /* ContractedFormsComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
     },
     {
         path: 'show-form/:id',
-        component: __WEBPACK_IMPORTED_MODULE_7__show_form_show_form_component__["a" /* ShowFormComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_8__show_form_show_form_component__["a" /* ShowFormComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
     }
 ];
 var AzzyFormsModule = (function () {
     function AzzyFormsModule() {
     }
     AzzyFormsModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_3__core_modules_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_router__["e" /* RouterModule */].forChild(routes),
+                __WEBPACK_IMPORTED_MODULE_3__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_router__["e" /* RouterModule */].forChild(routes),
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_4__unprocessed_forms_unprocessed_forms_component__["a" /* UnprocessedFormsComponent */], __WEBPACK_IMPORTED_MODULE_6__processed_forms_processed_forms_component__["a" /* ProcessedFormsComponent */], __WEBPACK_IMPORTED_MODULE_0__contracted_forms_contracted_forms_component__["a" /* ContractedFormsComponent */], __WEBPACK_IMPORTED_MODULE_7__show_form_show_form_component__["a" /* ShowFormComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_5__unprocessed_forms_unprocessed_forms_component__["a" /* UnprocessedFormsComponent */], __WEBPACK_IMPORTED_MODULE_7__processed_forms_processed_forms_component__["a" /* ProcessedFormsComponent */], __WEBPACK_IMPORTED_MODULE_1__contracted_forms_contracted_forms_component__["a" /* ContractedFormsComponent */], __WEBPACK_IMPORTED_MODULE_8__show_form_show_form_component__["a" /* ShowFormComponent */]]
         })
     ], AzzyFormsModule);
     return AzzyFormsModule;
@@ -14586,7 +14648,7 @@ var FuseQuickPanelComponent = (function () {
 /***/ "./src/app/main/toolbar/toolbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar class=\"p-0 mat-elevation-z1\">\r\n\r\n    <mat-progress-bar *ngIf=\"showLoadingBar\" class=\"loading-bar\" color=\"accent\" mode=\"indeterminate\"></mat-progress-bar>\r\n\r\n    <div fxFlex fxFill fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n        <div fxFlex=\"1 0 auto\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"toggle-button-navbar mat-icon-button\"\r\n                    fuseNavbarVertical=\"toggleBar\" fxHide.gt-md>\r\n                <mat-icon>menu</mat-icon>\r\n            </button>\r\n\r\n            <div class=\"toolbar-separator\" fxHide.gt-md></div>\r\n\r\n            <div fxLayout=\"row\" fxLayoutAlign=\"start center\" *ngIf=\"horizontalNav\">\r\n                <div class=\"logo ml-16\">\r\n                    <img class=\"logo-icon\" src=\"assets/images/logos/fuse.svg\">\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"px-8 px-mat-16\">\r\n                <!-- <fuse-shortcuts></fuse-shortcuts> -->\r\n            </div>\r\n\r\n        </div>\r\n\r\n        <div class=\"\" fxFlex=\"0 1 auto\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button [matMenuTriggerFor]=\"userMenu\"\r\n                    class=\"user-button\">\r\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n                    <img class=\"avatar\" src=\"assets/images/avatars/profile.jpg\">\r\n                    <span class=\"username mr-12\" fxHide fxShow.gt-sm>{{userName}}</span>\r\n                    <mat-icon class=\"s-16\" fxHide.xs>keyboard_arrow_down</mat-icon>\r\n                </div>\r\n            </button>\r\n\r\n            <mat-menu #userMenu=\"matMenu\">\r\n\r\n                <button mat-menu-item>\r\n                    <mat-icon>account_circle</mat-icon>\r\n                    <span>My Profile</span>\r\n                </button>\r\n\r\n                <button mat-menu-item class=\"\">\r\n                    <mat-icon>mail</mat-icon>\r\n                    <span>Inbox</span>\r\n                </button>\r\n\r\n                <button mat-menu-item class=\"\">\r\n                    <mat-icon>exit_to_app</mat-icon>\r\n                    <span>Logout</span>\r\n                </button>\r\n\r\n            </mat-menu>\r\n\r\n            <div class=\"toolbar-separator\"></div>\r\n\r\n            <!-- <fuse-search-bar (onInput)=\"search($event)\"></fuse-search-bar> -->\r\n\r\n            <div class=\"toolbar-separator\"></div>\r\n\r\n            <button mat-button fxHide fxShow.gt-xs\r\n                    class=\"language-button\"\r\n                    [matMenuTriggerFor]=\"languageMenu\">\r\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n                    <img class=\"flag mr-8\" [src]=\"'assets/images/flags/'+selectedLanguage.flag+'.png'\">\r\n                    <span class=\"iso text-uppercase\">{{selectedLanguage.id}}</span>\r\n                </div>\r\n            </button>\r\n\r\n            <mat-menu #languageMenu=\"matMenu\">\r\n\r\n                <button mat-menu-item *ngFor=\"let lang of languages\" (click)=\"setLanguage(lang)\">\r\n                    <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n                        <img class=\"flag mr-16\" [src]=\"'assets/images/flags/'+lang.flag+'.png'\">\r\n                        <span class=\"iso\">{{lang.title}}</span>\r\n                    </div>\r\n                </button>\r\n\r\n            </mat-menu>\r\n\r\n            <div class=\"toolbar-separator\" fxHide fxShow.gt-xs></div>\r\n\r\n            <button mat-icon-button\r\n                    class=\"mat-icon-button quick-panel-toggle-button\"\r\n                    fuseMatSidenavToggler=\"quick-panel\"\r\n                    aria-label=\"Toggle quick panel\">\r\n                <mat-icon class=\"icon\">format_list_bulleted</mat-icon>\r\n            </button>\r\n\r\n        </div>\r\n    </div>\r\n</mat-toolbar>\r\n"
+module.exports = "<mat-toolbar class=\"p-0 mat-elevation-z1\">\r\n\r\n    <mat-progress-bar *ngIf=\"showLoadingBar\" class=\"loading-bar\" color=\"accent\" mode=\"indeterminate\"></mat-progress-bar>\r\n\r\n    <div fxFlex fxFill fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n        <div fxFlex=\"1 0 auto\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"toggle-button-navbar mat-icon-button\"\r\n                    fuseNavbarVertical=\"toggleBar\" fxHide.gt-md>\r\n                <mat-icon>menu</mat-icon>\r\n            </button>\r\n\r\n            <div class=\"toolbar-separator\" fxHide.gt-md></div>\r\n\r\n            <div fxLayout=\"row\" fxLayoutAlign=\"start center\" *ngIf=\"horizontalNav\">\r\n                <div class=\"logo ml-16\">\r\n                    <img class=\"logo-icon\" src=\"assets/images/logos/fuse.svg\">\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"px-8 px-mat-16\">\r\n                <!-- <fuse-shortcuts></fuse-shortcuts> -->\r\n            </div>\r\n\r\n        </div>\r\n\r\n        <div class=\"\" fxFlex=\"0 1 auto\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button [matMenuTriggerFor]=\"userMenu\"\r\n                    class=\"user-button\">\r\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n                    <img class=\"avatar\" src=\"assets/images/avatars/profile.jpg\">\r\n                    <span class=\"username mr-12\" fxHide fxShow.gt-sm>{{userName}}</span>\r\n                    <mat-icon class=\"s-16\" fxHide.xs>keyboard_arrow_down</mat-icon>\r\n                </div>\r\n            </button>\r\n\r\n            <mat-menu #userMenu=\"matMenu\">\r\n\r\n                <button mat-menu-item>\r\n                    <mat-icon>account_circle</mat-icon>\r\n                    <span>My Profile</span>\r\n                </button>\r\n\r\n                <button mat-menu-item class=\"\">\r\n                    <mat-icon>mail</mat-icon>\r\n                    <span>Inbox</span>\r\n                </button>\r\n\r\n                <button mat-menu-item class=\"\" (click)=\"logOut()\">\r\n                    <mat-icon>exit_to_app</mat-icon>\r\n                    <span>Logout</span>\r\n                </button>\r\n\r\n            </mat-menu>\r\n\r\n            <div class=\"toolbar-separator\"></div>\r\n\r\n            <!-- <fuse-search-bar (onInput)=\"search($event)\"></fuse-search-bar> -->\r\n\r\n            <div class=\"toolbar-separator\"></div>\r\n\r\n            <button mat-button fxHide fxShow.gt-xs\r\n                    class=\"language-button\"\r\n                    [matMenuTriggerFor]=\"languageMenu\">\r\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n                    <img class=\"flag mr-8\" [src]=\"'assets/images/flags/'+selectedLanguage.flag+'.png'\">\r\n                    <span class=\"iso text-uppercase\">{{selectedLanguage.id}}</span>\r\n                </div>\r\n            </button>\r\n\r\n            <mat-menu #languageMenu=\"matMenu\">\r\n\r\n                <button mat-menu-item *ngFor=\"let lang of languages\" (click)=\"setLanguage(lang)\">\r\n                    <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n                        <img class=\"flag mr-16\" [src]=\"'assets/images/flags/'+lang.flag+'.png'\">\r\n                        <span class=\"iso\">{{lang.title}}</span>\r\n                    </div>\r\n                </button>\r\n\r\n            </mat-menu>\r\n\r\n            <div class=\"toolbar-separator\" fxHide fxShow.gt-xs></div>\r\n\r\n            <button mat-icon-button\r\n                    class=\"mat-icon-button quick-panel-toggle-button\"\r\n                    fuseMatSidenavToggler=\"quick-panel\"\r\n                    aria-label=\"Toggle quick panel\">\r\n                <mat-icon class=\"icon\">format_list_bulleted</mat-icon>\r\n            </button>\r\n\r\n        </div>\r\n    </div>\r\n</mat-toolbar>\r\n"
 
 /***/ }),
 
@@ -14702,6 +14764,9 @@ var FuseToolbarComponent = (function () {
         // Use the selected language for translations
         this.translate.use(lang.id);
         this.appDirection.switchDir(lang.dir);
+    };
+    FuseToolbarComponent.prototype.logOut = function () {
+        this.mainServ.loginServ.logout();
     };
     FuseToolbarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
