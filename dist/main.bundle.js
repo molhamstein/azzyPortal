@@ -4263,31 +4263,32 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_confirmation_message_confirmation_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirmation-message/confirmation-message.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_global_service__ = __webpack_require__("./src/app/core/services/global.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_hammerjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__main_main_module__ = __webpack_require__("./src/app/main/main.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__core_services_splash_screen_service__ = __webpack_require__("./src/app/core/services/splash-screen.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__core_components_navigation_navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_material_dialog__ = __webpack_require__("./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_confirmation_message_confirmation_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirmation-message/confirmation-message.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_global_service__ = __webpack_require__("./src/app/core/services/global.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_hammerjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__main_main_module__ = __webpack_require__("./src/app/main/main.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__core_services_splash_screen_service__ = __webpack_require__("./src/app/core/services/splash-screen.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__core_components_navigation_navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_material_dialog__ = __webpack_require__("./node_modules/@angular/material/esm5/dialog.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4318,41 +4319,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_8__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_9__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]
+                __WEBPACK_IMPORTED_MODULE_17__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_10__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_12__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_13__angular_router__["e" /* RouterModule */].forRoot(appRoutes),
-                __WEBPACK_IMPORTED_MODULE_15__core_modules_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_21__ngx_translate_core__["a" /* TranslateModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_17__main_main_module__["a" /* FuseMainModule */],
-                __WEBPACK_IMPORTED_MODULE_23__angular_material_dialog__["c" /* MatDialogModule */]
+                __WEBPACK_IMPORTED_MODULE_10__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_11__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_13__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_router__["e" /* RouterModule */].forRoot(appRoutes),
+                __WEBPACK_IMPORTED_MODULE_16__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_22__ngx_translate_core__["a" /* TranslateModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_18__main_main_module__["a" /* FuseMainModule */],
+                __WEBPACK_IMPORTED_MODULE_24__angular_material_dialog__["c" /* MatDialogModule */]
             ],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_18__core_services_splash_screen_service__["a" /* FuseSplashScreenService */],
-                __WEBPACK_IMPORTED_MODULE_19__core_services_config_service__["a" /* FuseConfigService */],
-                __WEBPACK_IMPORTED_MODULE_20__core_components_navigation_navigation_service__["a" /* FuseNavigationService */],
-                __WEBPACK_IMPORTED_MODULE_22__app_direction_service__["a" /* AppDirectionService */],
-                __WEBPACK_IMPORTED_MODULE_7__core_services_main_service__["a" /* MainService */],
-                __WEBPACK_IMPORTED_MODULE_6__core_services_call_api_service__["a" /* CallApiService */],
-                __WEBPACK_IMPORTED_MODULE_5__core_services_login_service__["a" /* LoginService */],
-                __WEBPACK_IMPORTED_MODULE_4__core_services_global_service__["a" /* GlobalService */],
-                __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]
+                __WEBPACK_IMPORTED_MODULE_19__core_services_splash_screen_service__["a" /* FuseSplashScreenService */],
+                __WEBPACK_IMPORTED_MODULE_20__core_services_config_service__["a" /* FuseConfigService */],
+                __WEBPACK_IMPORTED_MODULE_21__core_components_navigation_navigation_service__["a" /* FuseNavigationService */],
+                __WEBPACK_IMPORTED_MODULE_23__app_direction_service__["a" /* AppDirectionService */],
+                __WEBPACK_IMPORTED_MODULE_8__core_services_main_service__["a" /* MainService */],
+                __WEBPACK_IMPORTED_MODULE_7__core_services_call_api_service__["a" /* CallApiService */],
+                __WEBPACK_IMPORTED_MODULE_6__core_services_login_service__["a" /* LoginService */],
+                __WEBPACK_IMPORTED_MODULE_5__core_services_global_service__["a" /* GlobalService */],
+                __WEBPACK_IMPORTED_MODULE_1__core_services_auth_guard_service_service__["a" /* AuthGuardService */],
+                __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */]
-            ],
-            entryComponents: [__WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_confirmation_message_confirmation_message_component__["a" /* ConfirmationMessageComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]]
+                __WEBPACK_IMPORTED_MODULE_17__app_component__["a" /* AppComponent */]
+            ]
         })
     ], AppModule);
     return AppModule;
@@ -8265,17 +8268,62 @@ var FuseConfigService = (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/services/dialog-service.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogServiceService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DialogServiceService = (function () {
+    function DialogServiceService(dialog) {
+        this.dialog = dialog;
+    }
+    DialogServiceService.prototype.confirmationMessage = function (message, url, data) {
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], {
+            width: '250px',
+            data: { message: message, url: url, sendData: data }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result) {
+                alert(result);
+            }
+        });
+    };
+    DialogServiceService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */]])
+    ], DialogServiceService);
+    return DialogServiceService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/services/global.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8291,16 +8339,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var GlobalService = (function () {
-    function GlobalService(router, route, dialog, APIServe) {
+    function GlobalService(router, route, APIServe) {
         this.router = router;
         this.route = route;
-        this.dialog = dialog;
         this.APIServe = APIServe;
-        this.unreadNotBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](0);
-        this.notificationBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
-        this.filteringBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
+        this.unreadNotBeh = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](0);
+        this.notificationBeh = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
+        this.filteringBeh = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
         this.castUnreadNotBeh = this.unreadNotBeh.asObservable();
         this.castNotificationBeh = this.notificationBeh.asObservable();
         this.castFilteringBeh = this.filteringBeh.asObservable();
@@ -8359,7 +8405,7 @@ var GlobalService = (function () {
     };
     GlobalService.prototype.calculatDateAdv = function (date) {
         var time = this.diff_minutes(new Date(), new Date(date));
-        var pipe = new __WEBPACK_IMPORTED_MODULE_5__angular_common__["DatePipe"]('en-US'); // Use your own locale
+        var pipe = new __WEBPACK_IMPORTED_MODULE_4__angular_common__["DatePipe"]('en-US'); // Use your own locale
         if (time < 1)
             return "الأن";
         else if (time < 60)
@@ -8393,17 +8439,6 @@ var GlobalService = (function () {
     GlobalService.prototype.somthingError = function () {
         // this.APIServe.setErrorCode(0);
         // this.errorDialog('حدث خطأ', "هناك مشكلة ما")
-    };
-    GlobalService.prototype.confirmationMessage = function (message, url, data) {
-        // const dialogRef = this.dialog.open(ConfirmMessageComponent, {
-        //   width: '250px',
-        //   data: { message: message, url: url, sendData: data }
-        // });
-        // dialogRef.afterClosed().subscribe(result => {
-        //   if (result) {
-        //     alert(result);
-        //   }
-        // });
     };
     GlobalService.prototype.convertNumber = function (fromNum) {
         console.log("fromNum");
@@ -8442,8 +8477,8 @@ var GlobalService = (function () {
         return number;
     };
     GlobalService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */], __WEBPACK_IMPORTED_MODULE_0__call_api_service__["a" /* CallApiService */]])
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_0__call_api_service__["a" /* CallApiService */]])
     ], GlobalService);
     return GlobalService;
 }());
@@ -12640,14 +12675,13 @@ module.exports = ""
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContractedFormsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__i18n_en__ = __webpack_require__("./src/app/main/content/forms/i18n/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__i18n_fa__ = __webpack_require__("./src/app/main/content/forms/i18n/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__i18n_en__ = __webpack_require__("./src/app/main/content/forms/i18n/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__i18n_fa__ = __webpack_require__("./src/app/main/content/forms/i18n/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12657,7 +12691,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -12675,7 +12708,7 @@ var ContractedFormsComponent = (function () {
         this.count = 0;
         this.offset = 0;
         this.limit = 5;
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_4__i18n_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_5__i18n_fa__["a" /* locale */]);
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_3__i18n_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_4__i18n_fa__["a" /* locale */]);
     }
     ContractedFormsComponent.prototype.setPage = function (offset, limit) {
         var _this = this;
@@ -12722,28 +12755,16 @@ var ContractedFormsComponent = (function () {
         }
         this.mainServ.globalServ.goTo(url);
     };
-    ContractedFormsComponent.prototype.changeStatus = function (newStatus, id, name, text) {
-        var _this = this;
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], {
-            width: '500px',
-            data: { textBoxMessage: text }
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            if (result) {
-                _this.mainServ.globalServ.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus, 'textBoxAdmin': result });
-            }
-        });
-    };
     ContractedFormsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
             selector: 'app-contracted-forms',
             template: __webpack_require__("./src/app/main/content/forms/contracted-forms/contracted-forms.component.html"),
             styles: [__webpack_require__("./src/app/main/content/forms/contracted-forms/contracted-forms.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
-            __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["b" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_material__["i" /* MatDialog */]])
     ], ContractedFormsComponent);
     return ContractedFormsComponent;
 }());
@@ -13450,14 +13471,15 @@ module.exports = ""
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UnprocessedFormsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__i18n_en__ = __webpack_require__("./src/app/main/content/forms/i18n/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__i18n_fa__ = __webpack_require__("./src/app/main/content/forms/i18n/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__i18n_en__ = __webpack_require__("./src/app/main/content/forms/i18n/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__i18n_fa__ = __webpack_require__("./src/app/main/content/forms/i18n/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13475,17 +13497,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UnprocessedFormsComponent = (function () {
-    function UnprocessedFormsComponent(translationLoader, translateService, mainServ, dialog) {
+    function UnprocessedFormsComponent(translationLoader, translateService, mainServ, dialogSer, dialog) {
         this.translationLoader = translationLoader;
         this.translateService = translateService;
         this.mainServ = mainServ;
+        this.dialogSer = dialogSer;
         this.dialog = dialog;
         this.rows = [];
         this.count = 0;
         this.offset = 0;
         this.limit = 5;
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_4__i18n_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_5__i18n_fa__["a" /* locale */]);
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_5__i18n_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_6__i18n_fa__["a" /* locale */]);
     }
     UnprocessedFormsComponent.prototype.setPage = function (offset, limit) {
         var _this = this;
@@ -13534,26 +13558,27 @@ var UnprocessedFormsComponent = (function () {
     };
     UnprocessedFormsComponent.prototype.changeStatus = function (newStatus, id, name, text) {
         var _this = this;
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], {
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_1__dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], {
             width: '500px',
             data: { textBoxMessage: text }
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result) {
-                _this.mainServ.globalServ.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus, 'textBoxAdmin': result });
+                _this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus, 'textBoxAdmin': result });
             }
         });
     };
     UnprocessedFormsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
             selector: 'app-unprocessed-forms',
             template: __webpack_require__("./src/app/main/content/forms/unprocessed-forms/unprocessed-forms.component.html"),
             styles: [__webpack_require__("./src/app/main/content/forms/unprocessed-forms/unprocessed-forms.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
-            __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["b" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MatDialog */]])
     ], UnprocessedFormsComponent);
     return UnprocessedFormsComponent;
 }());
