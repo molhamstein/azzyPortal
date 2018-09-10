@@ -1,3 +1,9 @@
+import { ConfirmMessageComponent } from './main/content/dialogs/confirm-message/confirm-message.component';
+import { SetTextBoxAdminComponent } from './main/content/dialogs/set-text-box-admin/set-text-box-admin.component';
+import { ConfirmationMessageComponent } from './main/content/dialogs/confirmation-message/confirmation-message.component';
+import { EditClientFormModule } from './main/content/editClient-form/editClient-form.module';
+import { EditFormModule } from './main/content/edit-form/edit-form.module';
+import { GlobalService } from './core/services/global.service';
 import { LoginService } from './core/services/login.service';
 import { CallApiService } from './core/services/call-api.service';
 import { MainService } from './core/services/main.service';
@@ -19,6 +25,7 @@ import { AdviceFormModule } from './main/content/advice-form/advice-form.module'
 import { TranslateModule } from '@ngx-translate/core';
 import { AppDirectionService } from './app-direction.service';
 import { MyCalendarModule } from './main/content/calendar/calendar.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 const appRoutes: Routes = [
@@ -30,7 +37,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,ConfirmationMessageComponent,SetTextBoxAdminComponent,ConfirmMessageComponent
     ],
     imports     : [
         BrowserModule,
@@ -41,6 +48,7 @@ const appRoutes: Routes = [
         SharedModule,
         TranslateModule.forRoot(),
         FuseMainModule,
+        MatDialogModule
     ],
     providers   : [
         FuseSplashScreenService,
@@ -49,11 +57,13 @@ const appRoutes: Routes = [
         AppDirectionService,
         MainService,
         CallApiService,
-        LoginService
+        LoginService,
+        GlobalService
     ],
     bootstrap   : [
         AppComponent
-    ]
+    ],
+    entryComponents:[ConfirmationMessageComponent,SetTextBoxAdminComponent,ConfirmMessageComponent]
 })
 export class AppModule
 {

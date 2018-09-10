@@ -71,25 +71,24 @@ export const locale = {
             },
             'STEP_5': {
                 'LABEL': 'Relatives in Australia',
-                'CITIZEN': 'Citizen',
-                'PERMANENTRES': 'Permanent Res',
-                'TEMPORARYRES': 'Temporary Res',
-                'STUDENTASSYLUM': 'Student-Assylum',
-                'SIGNIFICANT': 'Significant Current Sickness',
-                'SURGERY': 'Surgery Past Or Future',
-                'RELATION': 'Australia Family Relation',
-                'LIVINGSTATE': 'Australia Living State',
-                'LIVINGCITY': 'Australia Living City',
-                'VISATYPE': 'Australia Visa Type'
+                'CITIZEN':'Citizen',
+                'PERMANENTRES':'Permanent Res',
+                'TEMPORARYRES':'Temporary Res',
+                'STUDENTASSYLUM':'Student-Assylum',
+                'SIGNIFICANT':'Significant Current Sickness',
+                'SURGERY':'Surgery Past Or Future',
+                'RELATION':'Australia Family Relation',
+                'LIVINGSTATE':'Australia Living State',
+                'LIVINGCITY':'Australia Living City',
+                'VISATYPE':'Australia Visa Type'
             },
-            'STEP_6': {
+              'STEP_6': {
                 'LABEL': 'Admin Box',
-                'TBCLIENT': 'text Box Client',
-                'TBADMIN': 'text Box Admin',
-                'TBNOTES': 'text Box Notes'
+                'TBCLIENT': 'Text Box Client',
+                'TBADMIN': 'Text Box Admin',
+                'TBNOTES': 'Text Box Notes'
             }
 
-            
         }
     }
 };

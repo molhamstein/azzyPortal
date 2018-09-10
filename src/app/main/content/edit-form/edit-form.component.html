@@ -22,7 +22,7 @@
       of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.
     </p> -->
     <!--{{formGroup.value | json}}-->
-    <div fxLayout="column">
+    <div fxLayout="column" *ngIf="loder==true">
 
 
       <form class="mat-white-bg mat-elevation-z0 p-24" fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" name="formGroup"
@@ -119,7 +119,6 @@
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
                 <input matInput type="tel" placeholder="{{ 'ADVICE_FORM.STEP_0.MOBILE' | translate }}" formControlName="mobileNo" required>
                 <mat-icon matSuffix>smartphone</mat-icon>
-                <mat-error>This field is required</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
@@ -136,12 +135,10 @@
               <mat-form-field fxFlex="45">
                 <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsi"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
-                <mat-error>This field is required</mat-error>
               </mat-form-field>
               <mat-form-field fxFlex="45">
                 <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglish"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
-                <mat-error>This field is required</mat-error>
               </mat-form-field>
             </div>
 
@@ -230,7 +227,6 @@
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
                 <input matInput type="tel" placeholder="{{ 'ADVICE_FORM.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp" required>
                 <mat-icon matSuffix>smartphone</mat-icon>
-                <mat-error>This field is required</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
@@ -246,12 +242,10 @@
               <mat-form-field fxFlex="45">
                 <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsiSp"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
-                <mat-error>This field is required</mat-error>
               </mat-form-field>
               <mat-form-field fxFlex="45">
                 <textarea matInput placeholder="{{ 'ADVICE_FORM.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglishSp"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
-                <mat-error>This field is required</mat-error>
               </mat-form-field>
             </div>
 
@@ -646,22 +640,38 @@
           </mat-step>
 
 
-
           <mat-step formGroupName="6" [stepControl]="formArray?.get([6])">
-            <ng-template matStepLabel>Confirm your information</ng-template>
+            <ng-template matStepLabel>
+              <div>{{ 'ADVICE_FORM.STEP_6.LABEL' | translate }}</div>
+            </ng-template>
+
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
-              <div fxFlex="100">
+              <div fxFlex="100" *ngFor="let oneField of notesFields">
                 <mat-form-field style="width: 100%">
-                  <textarea matInput placeholder=" {{ 'ADVICE_FORM.STEP_6.TBCLIENT' | translate }}" formControlName="textBoxClient"></textarea>
-                  <mat-icon matSuffix>note</mat-icon>
+                  <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}"></textarea>
+                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                 </mat-form-field>
               </div>
             </div>
+
+
             <div style="float: right;">
-              <button mat-button (click)="addForm()">Done</button>
+              <button mat-button matStepperPrevious type="button">Back</button>
+              <button mat-button matStepperNext type="button">Next</button>
+            </div>
+          </mat-step>
+
+
+
+
+          <mat-step>
+            <ng-template matStepLabel>Confirm your information</ng-template>
+            Everything seems correct.
+            <div style="float: right;">
+              <button mat-button (click)="editForm()">Edit</button>
             </div>
           </mat-step>
 

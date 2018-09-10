@@ -10,11 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
-  selector: 'app-unprocessed-forms',
-  templateUrl: './unprocessed-forms.component.html',
-  styleUrls: ['./unprocessed-forms.component.scss']
+  selector: 'app-contracted-forms',
+  templateUrl: './contracted-forms.component.html',
+  styleUrls: ['./contracted-forms.component.scss']
 })
-export class UnprocessedFormsComponent implements OnInit {
+export class ContractedFormsComponent implements OnInit {
   rows = [];
   count: number = 0;
   offset: number = 0;
@@ -32,7 +32,7 @@ export class UnprocessedFormsComponent implements OnInit {
   setPage(offset, limit) {
 
     // this.mainServ.APIServ.get("ADs?filter[limit]=" + limit + "&filter[skip]=" + offset * limit).subscribe((data: any) => {
-    this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"unprocessed\"},\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
+    this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"contracts\"},\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
 
         this.rows = data;
@@ -59,7 +59,7 @@ export class UnprocessedFormsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.mainServ.APIServ.get("forms/count?where={\"status\":\"unprocessed\"}").subscribe((data: any) => {
+    this.mainServ.APIServ.get("forms/count?where={\"status\":\"contracts\"}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.count = data['count'];
         this.setPage(this.offset, this.limit);

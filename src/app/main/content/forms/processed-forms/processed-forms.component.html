@@ -12,27 +12,27 @@
 
   <!-- CONTENT -->
   <div class="content p-24">
-    <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [headerHeight]="48"
-      [rowHeight]="'auto'" [scrollbarH]="true" [limit]="10">
+
+    <ngx-datatable class="material vertical-scroll" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [rowHeight]="50"
+      [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [externalPaging]="true" [count]="count" [offset]="offset"
+      [limit]="limit" (page)='onPage($event)'>
 
 
-
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Id">
-        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'PROCESSED_FORMS.ID' | translate }}</span>
-        </ng-template>
-      </ngx-datatable-column>
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="ArrivalDate">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="dateOfArr">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'PROCESSED_FORMS.ARRIVAL_DATE' | translate }}</span>
         </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | date: 'hh:mm MM/dd/yyyy'}}
+        </ng-template>
+
       </ngx-datatable-column>
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="ClientNumber">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="mobileNo">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'PROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="ClientName">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="nameEnglish">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'PROCESSED_FORMS.CLIENT_NAME' | translate }}</span>
         </ng-template>
@@ -42,21 +42,43 @@
           <span>{{ 'PROCESSED_FORMS.CONSULTANT' | translate }}</span>
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="ProcessDate">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="dateOfProc">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'PROCESSED_FORMS.PROCESS_DATE' | translate }}</span>
         </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | date: 'hh:mm MM/dd/yyyy'}}
+        </ng-template>
       </ngx-datatable-column>
+
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Status">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'PROCESSED_FORMS.STATUS' | translate }}</span>
+          <span>{{ 'UNPROCESSED_FORMS.STATUS' | translate }}</span>
         </ng-template>
         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          <mat-chip-list>
-            <mat-chip color="accent" selected="true">{{row.Status}}</mat-chip>
+          <!--<mat-chip-list>
+            <mat-chip color="accent" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>-->
+          <mat-chip-list *ngIf="row.status=='more info'">
+            <mat-chip color="accent" selected="true">{{row.status}}</mat-chip>
           </mat-chip-list>
+
+          <mat-chip-list *ngIf="row.status=='not eligible'">
+            <mat-chip style="background-color:#ff6363" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+
+          <mat-chip-list *ngIf="row.status=='contracts'">
+            <mat-chip style="background-color:green" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+
+          <mat-chip-list *ngIf="row.status=='consultation'">
+            <mat-chip style="background-color:#22408e" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+
+
         </ng-template>
       </ngx-datatable-column>
+
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
 
         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
@@ -84,7 +106,7 @@
               <mat-icon>edit</mat-icon>
               <span>{{'PROCESSED_FORMS.EDIT' | translate}}</span>
             </button>
-            <button mat-menu-item>
+            <button mat-menu-item (click)="openDialog()">
               <mat-icon>delete</mat-icon>
               <span>{{'PROCESSED_FORMS.DELETE' | translate}}</span>
             </button>

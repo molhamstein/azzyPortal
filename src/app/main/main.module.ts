@@ -1,3 +1,5 @@
+import { EditClientFormModule } from './content/editClient-form/editClient-form.module';
+import { EditFormModule } from './content/edit-form/edit-form.module';
 import { LoginModule } from './content/login/login.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -47,6 +49,8 @@ import { MyClientCalendarModule } from './content/client-calendar/client-calenda
         MyCalendarModule,
         FuseSampleModule,
         AdviceFormModule,
+        EditFormModule,
+        EditClientFormModule,
         AzzyFormsModule,
         MyClientCalendarModule,
         LoginModule

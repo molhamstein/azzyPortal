@@ -47,6 +47,14 @@ export class NavigationModel
                         'icon' : 'email',
                         'url'  : '/processed',
                         
+                    },
+                    {
+                        'id'   : 'forms',
+                        'title': 'CONTRACTED_FORMS.TITLE',
+                        'type' : 'item',
+                        'icon' : 'email',
+                        'url'  : '/contracted',
+                        
                     }
                 ]
             },

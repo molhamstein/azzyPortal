@@ -1,6 +1,7 @@
+import { ConfirmMessageComponent } from './../../main/content/dialogs/confirm-message/confirm-message.component';
+import { ConfirmationMessageComponent } from './../../main/content/dialogs/confirmation-message/confirmation-message.component';
 import { CallApiService } from './call-api.service';
 import { MatDialog } from '@angular/material';
-// import { ErrorModalComponent } from './../error-modal/error-modal.component';
 import { ActivatedRoute } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
@@ -115,7 +116,7 @@ export class GlobalService {
     else if (this.diff_days(new Date(), new Date(date)) < 7)
       return this.diff_days(new Date(), new Date(date)) + " يوم ";
     else
-      return  pipe.transform(date, 'dd-MM-yyyy');
+      return pipe.transform(date, 'dd-MM-yyyy');
 
 
   }
@@ -144,6 +145,21 @@ export class GlobalService {
   somthingError() {
     // this.APIServe.setErrorCode(0);
     // this.errorDialog('حدث خطأ', "هناك مشكلة ما")
+  }
+
+
+
+  confirmationMessage(message, url, data) {
+    const dialogRef = this.dialog.open(ConfirmMessageComponent, {
+      width: '250px',
+      data: { message: message, url: url, sendData: data }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        alert(result);
+      }
+    });
   }
 
   convertNumber(fromNum) {

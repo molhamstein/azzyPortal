@@ -3,22 +3,31 @@
 // Import Angular Calendar Styles
 // @import "../node_modules/angular-calendar/css/angular-calendar.css";
 @import "../src/app/angular-calendar/css/angular-calendar.css";
-
 // Import Bootstrap
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import 'app/main/content/calendar/calendar.component.scss';
-
-
 // by fadi
 [dir=rtl] .nav .nav-item .nav-link .nav-link-icon {
-    margin-left: 16px;
-    margin-right: 0;
+  margin-left: 16px;
+  margin-right: 0;
 }
+
 [dir=rtl] .mr-16 {
-    margin-left: 16px !important;
-    margin-right: 0 !important;
+  margin-left: 16px !important;
+  margin-right: 0 !important;
 }
+
 [dir=rtl] .mr-8 {
-    margin-left: 8px !important;
-    margin-right: 0 !important;
+  margin-left: 8px !important;
+  margin-right: 0 !important;
+}
+
+.mat-step-icon .mat-icon {
+  color: white !important;
+  font-size: 19px;
+  text-align: center;
+  height: 22px;
+  width: 16px;
+  margin-top: 5px;
+  margin-left: 0px;
 }

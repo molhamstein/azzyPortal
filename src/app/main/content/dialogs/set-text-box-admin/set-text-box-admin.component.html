@@ -1,0 +1,17 @@
+<!--component html goes here -->
+<h1 mat-dialog-title>Text Box Message</h1>
+<div mat-dialog-content>
+  <div style="padding-top:5px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+
+    <mat-form-field fxFlex="100">
+
+      <textarea matInput placeholder="" [(ngModel)]="text"></textarea>
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-error>This field is required</mat-error>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <!--<button mat-button (click)="onNoClick()">No</button>-->
+  <button mat-button (click)="onYesClick()" cdkFocusInitial>Yes</button>
+</div>

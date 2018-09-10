@@ -12,7 +12,7 @@ export class CallApiService {
 
 
 
-  constructor(public http: HttpClient,private loginSer:LoginService) {
+  constructor(public http: HttpClient, private loginSer: LoginService) {
   }
   readonly baseUrl = "http://104.217.253.15:2999/api/"
   private errorCode = 0;
@@ -26,9 +26,11 @@ export class CallApiService {
     return this.errorCode
   }
 
-  get(url) {
-    let auth="";
-    if (this.loginSer.getToken() != null) {
+  get(url, token: string = "") {
+    let auth = "";
+    if (token != "")
+      auth = token
+    else if (this.loginSer.getToken() != null) {
       auth = this.loginSer.getToken();
     }
     let _options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', "Authorization": auth }) };
@@ -40,7 +42,7 @@ export class CallApiService {
       // console.log(response);
       if (this.errorCode == 401 && response['error'].code == "AUTHORIZATION_REQUIRED")
         // this.loginSer.logout()
-      return "E";
+        return "E";
     });
   }
 
@@ -57,9 +59,11 @@ export class CallApiService {
     return JSON.stringify(data);
   }
 
-  post(url, data) {
-      let auth="";
-    if (this.loginSer.getToken() != null) {
+  post(url, data, token: string = "") {
+    let auth = "";
+    if (token != "")
+      auth = token
+    else if (this.loginSer.getToken() != null) {
       auth = this.loginSer.getToken();
     }
     let _options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', "Authorization": auth }) };
@@ -97,10 +101,12 @@ export class CallApiService {
   }
 
 
-  put(url, data) {
+  put(url, data, token: string = "") {
 
-  let auth="";
-    if (this.loginSer.getToken() != null) {
+    let auth = "";
+    if (token != "")
+      auth = token
+    else if (this.loginSer.getToken() != null) {
       auth = this.loginSer.getToken();
     }
 
@@ -114,9 +120,29 @@ export class CallApiService {
     });
   }
 
-  delete(url) {
-    let auth="";
-    if (this.loginSer.getToken() != null) {
+  patch(url, data, token: string = "") {
+
+    let auth = "";
+    if (token != "")
+      auth = token
+    else if (this.loginSer.getToken() != null) {
+      auth = this.loginSer.getToken();
+    }
+
+    let _options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', "Authorization": auth }) };
+
+    return this.http.patch(this.baseUrl + url, data, _options).map((Response: Response) => {
+      return Response;
+    }).catch((Response: Response) => {
+      this.errorCode = Response.status;
+      return "E";
+    });
+  }
+
+  delete(url, token: string = "") {
+    let auth = ""; if (token != "")
+      auth = token
+    else if (this.loginSer.getToken() != null) {
       auth = this.loginSer.getToken();
     }
 
@@ -130,13 +156,15 @@ export class CallApiService {
     });
   }
 
-  uploadImage(url, data, length) {
+  uploadImage(url, data, length, token: string = "") {
     let fd = new FormData();
     for (var index = 0; index < length; index++) {
       fd.append("file", data[index], data[index].name)
     }
-    let auth="";
-    if (this.loginSer.getToken() != null) {
+    let auth = "";
+    if (token != "")
+      auth = token
+    else if (this.loginSer.getToken() != null) {
       auth = this.loginSer.getToken();
     }
 

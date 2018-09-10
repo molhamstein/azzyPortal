@@ -13,10 +13,13 @@ export const locale = {
             'STATUS':'Status',
             'SHOW_FORM':'Show Form',
             'PROCESS':'Process',
+            'NOTELIGIBLE':'Not Eligible',
             'EDIT':'Edit',
             'DELETE':'Delete',
             'MORE_INFO':'More Info',
-            'REJECT':'Reject'
+            'REJECT':'Reject',
+            'CONSULTATION':'Consultation',
+            'CONTRACT':'Contract'
         },
         'PROCESSED_FORMS':{
             'TITLE':'Processed Forms',
@@ -34,6 +37,9 @@ export const locale = {
             'DELETE':'Delete',
             'MORE_INFO':'More Info',
             'REJECT':'Reject'
+        },
+        'CONTRACTED_FORMS':{
+            'TITLE':'Contracted Forms'
         }
     }
 };

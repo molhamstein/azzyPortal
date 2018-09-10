@@ -49,12 +49,10 @@
           <span>{{ 'UNPROCESSED_FORMS.STATUS' | translate }}</span>
         </ng-template>
         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          <mat-chip-list *ngIf="row.status=='sss'">
-            <mat-chip color="accent" selected="true">{{row.status}}</mat-chip>
+          <mat-chip-list *ngIf="row.status=='contracts'">
+            <mat-chip style="background-color:green" selected="true">{{row.status}}</mat-chip>
           </mat-chip-list>
-           <mat-chip-list *ngIf="row.status=='unprocessed'">
-            <mat-chip color="gray" selected="true">{{row.status}}</mat-chip>
-          </mat-chip-list>
+
         </ng-template>
       </ngx-datatable-column>
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">

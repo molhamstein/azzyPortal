@@ -1,3 +1,4 @@
+import { ContractedFormsComponent } from './contracted-forms/contracted-forms.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../../core/modules/shared.module';
@@ -16,7 +17,11 @@ const routes = [
     component: ProcessedFormsComponent,
   },
   {
-    path: 'show-form',
+    path: 'contracted',
+    component: ContractedFormsComponent,
+  },
+  {
+    path: 'show-form/:id',
     component: ShowFormComponent,
   }
 ];
@@ -28,6 +33,6 @@ const routes = [
     RouterModule.forChild(routes),
 
   ],
-  declarations: [UnprocessedFormsComponent, ProcessedFormsComponent, ShowFormComponent]
+  declarations: [UnprocessedFormsComponent, ProcessedFormsComponent,ContractedFormsComponent, ShowFormComponent]
 })
 export class AzzyFormsModule { }

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class MainService {
 
   // constructor(public APIServ:CallApiService,public loginServ:LoginService,public globalServ:GlobalService) { }
-  constructor(public APIServ:CallApiService,public loginServ:LoginService) { }
+  constructor(public APIServ:CallApiService,public loginServ:LoginService,public globalServ:GlobalService) { }
   
 
 }
