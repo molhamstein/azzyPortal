@@ -563,7 +563,7 @@ export class AdviceFormComponent implements OnInit {
 
     // this.addDegree();
     // this.addWork();
-    this.addForm(true)
+    // this.addForm(true)
     console.log(this.formGroup, this.formArray);
 
   }
@@ -630,6 +630,9 @@ export class AdviceFormComponent implements OnInit {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         alert("addedForm")
         // this.mainServ.globalServ.goTo("partner")
+      }else{
+        alert("somethingError");
+        this.mainServ.APIServ.setErrorCode(0);
       }
     })
     console.log(this.sendArray);

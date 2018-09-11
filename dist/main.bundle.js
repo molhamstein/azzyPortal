@@ -9416,7 +9416,7 @@ var AdviceFormComponent = (function () {
         // this.worksSpouseFormArray = this.formArray.get([3, 'worksSpouse']);
         // this.addDegree();
         // this.addWork();
-        this.addForm(true);
+        // this.addForm(true)
         console.log(this.formGroup, this.formArray);
     };
     AdviceFormComponent.prototype.createDegree = function () {
@@ -9482,6 +9482,10 @@ var AdviceFormComponent = (function () {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 alert("addedForm");
                 // this.mainServ.globalServ.goTo("partner")
+            }
+            else {
+                alert("somethingError");
+                _this.mainServ.APIServ.setErrorCode(0);
             }
         });
         console.log(this.sendArray);
@@ -10291,7 +10295,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [{
-        path: 'client-calendar',
+        path: 'client-calendar/:id',
         component: __WEBPACK_IMPORTED_MODULE_9__client_calendar_client_calendar_component__["a" /* ClientCalendarComponent */],
     }];
 var MyClientCalendarModule = (function () {
@@ -10331,7 +10335,7 @@ module.exports = ""
 /***/ "./src/app/main/content/client-calendar/client-calendar/client-calendar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"col-md-7\">\r\n  <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n    <div class=\"cal-cell-top\" style=\"text-align: left;\">\r\n      <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }}</span>\r\n      <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n    </div>\r\n    <div class=\"cell-totals\">\r\n      <span *ngFor=\"let group of day.eventGroups\" class=\"badge badge-{{ group[0] }}\">\r\n        {{ group[1].length }}\r\n      </span>\r\n    </div>\r\n  </ng-template>\r\n  <!-- <ng-template #tt let-events=\"openEvents\" let-eventClicked=\"eventClicked\">\r\n      <div *ngFor=\"let event of openEvents; trackBy:trackByEventId\" [ngClass]=\"event?.cssClass\" mwlDraggable [dropData]=\"{event: event}\"\r\n        [dragAxis]=\"{x: event.draggable, y: event.draggable}\">\r\n        <span class=\"cal-event\" [style.backgroundColor]=\"event.color?.primary\">\r\n        </span>\r\n        <mwl-calendar-event-title [event]=\"event\" [customTemplate]=\"eventTitleTemplate\" view=\"month\" (mwlClick)=\"eventClicked.emit({event: event})\">\r\n        </mwl-calendar-event-title>\r\n      </div>\r\n    </ng-template> -->\r\n  <ng-template #rr let-event=\"event\" let-view=\"view\">\r\n    <span class=\"cal-event-title\" [innerHTML]=\"event.title | calendarEventTitle:view:event\" [style.color]=\"'black'\" ]>\r\n    </span>\r\n  </ng-template>\r\n\r\n  <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar style=\"width:80%;\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n      <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n        <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n          <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <mat-icon class=\"logo-icon\">today</mat-icon>\r\n\r\n            <span class=\"logo-text\">{{ 'CALENDAR.TITLE' | translate}}</span>\r\n\r\n          </div>\r\n\r\n          <!-- TOOLBAR -->\r\n\r\n        </div>\r\n        <!-- / TOOLBAR -->\r\n\r\n        <!-- HEADER BOTTOM -->\r\n        <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"selectedDay = {date:$event}\"\r\n            aria-label=\"Previous\">\r\n            <mat-icon>chevron_left</mat-icon>\r\n          </button>\r\n\r\n          <div class=\"title\" style=\"display: inline-block;\">\r\n            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n          </div>\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"selectedDay = {date:$event}\"\r\n            aria-label=\"Next\">\r\n            <mat-icon>chevron_right</mat-icon>\r\n          </button>\r\n        </div>\r\n        <!-- / HEADER BOTTOM -->\r\n      </div>\r\n\r\n    </div>\r\n    <!-- / HEADER -->\r\n    <!-- <div class=\"cal-open-day-events\" [@collapse]>\r\n        <ng-template [ngTemplateOutlet]=\"customTemplate || defaultTemplate\" [ngTemplateOutletContext]=\"{\r\n            events: events,\r\n            eventClicked: eventClicked\r\n          }\">\r\n        </ng-template>\r\n      </div> -->\r\n    <!-- <div class=\"row text-center col-md-8\" style=\"float: left;\">\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Previous\r\n          </div>\r\n          <div class=\"btn btn-outline-secondary\" mwlCalendarToday [(viewDate)]=\"viewDate\">\r\n            Today\r\n          </div>\r\n          <div class=\"btn btn-primary\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Next\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" (click)=\"view = 'month'\" [class.active]=\"view === 'month'\">\r\n            Month\r\n          </div>\r\n  \r\n          <div class=\"btn btn-primary\" (click)=\"view = 'day'\" [class.active]=\"view === 'day'\">\r\n            Day\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div> -->\r\n    <!-- <div *ngIf=\"events.length > 0\" [ngSwitch]=\"view\" class=\"col-md-8\" style=\"float: left;\">\r\n      <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n        [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\" (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n        (dayClicked)=\"dayClicked($event.day)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-month-view>\r\n      <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n        (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-day-view>\r\n    </div> -->\r\n    <div *ngIf=\"events.length > 0\" class=\"content\" fusePerfectScrollbar>\r\n      <div [ngSwitch]=\"view\">\r\n        <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n          (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\" (dayClicked)=\"dayClicked($event.day)\"\r\n          (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-month-view>\r\n        <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n          (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-day-view>\r\n      </div>\r\n    </div>\r\n    <!-- <div class=\"col-md-3 offset-md-1\" style=\"float: left; text-align: left\">\r\n      <h2>Consultants</h2>\r\n      <div *ngFor=\"let cons of colors\">\r\n        <span style=\"width: 15px; height: 15px;border-radius: 50%;display: inline-block\" class=\"badge-{{cons.cons}}\"></span>\r\n        <h5 style=\"display: inline;\"> {{cons.name}}</h5>\r\n      </div>\r\n    </div> -->\r\n  </div>\r\n</div>\r\n<div *ngIf=\"events.length>0\" class=\"col-md-5\" style=\"margin-top: 200px;\">\r\n  <ngx-datatable class=\"material\" [rows]=\"events\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\" [scrollbarH]=\"true\"\r\n    [limit]=\"10\" [rowClass]=\"getRowClass\" [selectionType]=\"'single'\" (activate)=\"onActivate($event)\" (select)='onSelect($event)'\r\n    [selectCheck]=\"checkSelectable\">\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"start\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>Time</span>\r\n      </ng-template>\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.start | date:'HH:mm'}} - {{row.end | date:'HH:mm'}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>Location</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        {{value}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.open\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>Available</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        <mat-chip-list *ngIf=\"value\">\r\n          <mat-chip color=\"accent\" selected=\"true\">Available</mat-chip>\r\n        </mat-chip-list>\r\n        <mat-chip-list *ngIf=\"!value\">\r\n            <mat-chip color=\"warn\" selected=\"true\">Not Available</mat-chip>\r\n          </mat-chip-list>\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n  </ngx-datatable>\r\n</div>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"col-md-7\">\r\n  <!--<ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n    <div class=\"cal-cell-top\" style=\"text-align: left;\">\r\n      <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }}</span>\r\n      <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n    </div>\r\n    <div class=\"cell-totals\">\r\n      <span *ngFor=\"let group of day.eventGroups\" class=\"badge badge-{{ group[0] }}\">\r\n        {{ group[1].length }}\r\n      </span>\r\n    </div>\r\n  </ng-template>-->\r\n  <!-- <ng-template #tt let-events=\"openEvents\" let-eventClicked=\"eventClicked\">\r\n      <div *ngFor=\"let event of openEvents; trackBy:trackByEventId\" [ngClass]=\"event?.cssClass\" mwlDraggable [dropData]=\"{event: event}\"\r\n        [dragAxis]=\"{x: event.draggable, y: event.draggable}\">\r\n        <span class=\"cal-event\" [style.backgroundColor]=\"event.color?.primary\">\r\n        </span>\r\n        <mwl-calendar-event-title [event]=\"event\" [customTemplate]=\"eventTitleTemplate\" view=\"month\" (mwlClick)=\"eventClicked.emit({event: event})\">\r\n        </mwl-calendar-event-title>\r\n      </div>\r\n    </ng-template> -->\r\n  <!--<ng-template #rr let-event=\"event\" let-view=\"view\">\r\n    <span class=\"cal-event-title\" [innerHTML]=\"event.title | calendarEventTitle:view:event\" [style.color]=\"'black'\" ]>\r\n    </span>\r\n  </ng-template>-->\r\n\r\n  <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar style=\"width:80%;\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n      <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n        <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n          <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <mat-icon class=\"logo-icon\">today</mat-icon>\r\n\r\n            <span class=\"logo-text\">{{ 'CALENDAR.TITLE' | translate}}</span>\r\n\r\n          </div>\r\n\r\n          <!-- TOOLBAR -->\r\n\r\n        </div>\r\n        <!-- / TOOLBAR -->\r\n\r\n        <!-- HEADER BOTTOM -->\r\n        <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (click)=\"changeDayAnas()\" (viewDateChange)=\"selectedDay = {date:$event}\"\r\n            aria-label=\"Previous\">\r\n            <mat-icon>chevron_left</mat-icon>\r\n          </button>\r\n\r\n          <div class=\"title\" style=\"display: inline-block;\">\r\n            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n          </div>\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (click)=\"changeDayAnas()\" (viewDateChange)=\"selectedDay = {date:$event}\"\r\n            aria-label=\"Next\">\r\n            <mat-icon>chevron_right</mat-icon>\r\n          </button>\r\n        </div>\r\n        <!-- / HEADER BOTTOM -->\r\n      </div>\r\n\r\n    </div>\r\n    <!-- / HEADER -->\r\n    <!-- <div class=\"cal-open-day-events\" [@collapse]>\r\n        <ng-template [ngTemplateOutlet]=\"customTemplate || defaultTemplate\" [ngTemplateOutletContext]=\"{\r\n            events: events,\r\n            eventClicked: eventClicked\r\n          }\">\r\n        </ng-template>\r\n      </div> -->\r\n    <!-- <div class=\"row text-center col-md-8\" style=\"float: left;\">\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Previous\r\n          </div>\r\n          <div class=\"btn btn-outline-secondary\" mwlCalendarToday [(viewDate)]=\"viewDate\">\r\n            Today\r\n          </div>\r\n          <div class=\"btn btn-primary\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Next\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" (click)=\"view = 'month'\" [class.active]=\"view === 'month'\">\r\n            Month\r\n          </div>\r\n  \r\n          <div class=\"btn btn-primary\" (click)=\"view = 'day'\" [class.active]=\"view === 'day'\">\r\n            Day\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div> -->\r\n    <!-- <div *ngIf=\"events.length > 0\" [ngSwitch]=\"view\" class=\"col-md-8\" style=\"float: left;\">\r\n      <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n        [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\" (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n        (dayClicked)=\"dayClicked($event.day)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-month-view>\r\n      <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n        (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-day-view>\r\n    </div> -->\r\n    {{viewDate}}\r\n    {{allEvents | json}}\r\n    <div *ngIf=\"events.length > 0\" class=\"content\" fusePerfectScrollbar>\r\n      <div [ngSwitch]=\"view\">\r\n        <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n          (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\" (dayClicked)=\"dayClicked($event.day)\"\r\n          (eventClicked)=\"handleEvent()\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-month-view>\r\n        <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent()\"\r\n          (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-day-view>\r\n      </div>\r\n    </div>\r\n    <!-- <div class=\"col-md-3 offset-md-1\" style=\"float: left; text-align: left\">\r\n      <h2>Consultants</h2>\r\n      <div *ngFor=\"let cons of colors\">\r\n        <span style=\"width: 15px; height: 15px;border-radius: 50%;display: inline-block\" class=\"badge-{{cons.cons}}\"></span>\r\n        <h5 style=\"display: inline;\"> {{cons.name}}</h5>\r\n      </div>\r\n    </div> -->\r\n  </div>\r\n</div>\r\n<!--<div *ngIf=\"events.length>0\" class=\"col-md-5\" style=\"margin-top: 200px;\">\r\n  <ngx-datatable class=\"material\" [rows]=\"events\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\" [scrollbarH]=\"true\"\r\n    [limit]=\"10\" [rowClass]=\"getRowClass\" [selectionType]=\"'single'\" (activate)=\"onActivate($event)\" (select)='onSelect($event)'\r\n    [selectCheck]=\"checkSelectable\">\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"start\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>Time</span>\r\n      </ng-template>\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.start | date:'HH:mm'}} - {{row.end | date:'HH:mm'}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>Location</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        {{value}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.open\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>Available</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        <mat-chip-list *ngIf=\"value\">\r\n          <mat-chip color=\"accent\" selected=\"true\">Available</mat-chip>\r\n        </mat-chip-list>\r\n        <mat-chip-list *ngIf=\"!value\">\r\n            <mat-chip color=\"warn\" selected=\"true\">Not Available</mat-chip>\r\n          </mat-chip-list>\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n  </ngx-datatable>\r\n</div>-->"
 
 /***/ }),
 
@@ -10340,16 +10344,20 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClientCalendarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__calendar_json_service__ = __webpack_require__("./src/app/main/content/calendar/json.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__calendar_event_form_event_form_component__ = __webpack_require__("./src/app/main/content/calendar/event-form/event-form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__calendar_i18n_en__ = __webpack_require__("./src/app/main/content/calendar/i18n/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__calendar_i18n_fa__ = __webpack_require__("./src/app/main/content/calendar/i18n/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__calendar_json_service__ = __webpack_require__("./src/app/main/content/calendar/json.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash_cloneDeep__ = __webpack_require__("./node_modules/lodash/cloneDeep.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash_cloneDeep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_lodash_cloneDeep__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__calendar_event_form_event_form_component__ = __webpack_require__("./src/app/main/content/calendar/event-form/event-form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__calendar_i18n_en__ = __webpack_require__("./src/app/main/content/calendar/i18n/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__calendar_i18n_fa__ = __webpack_require__("./src/app/main/content/calendar/i18n/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10368,13 +10376,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var ClientCalendarComponent = (function () {
-    function ClientCalendarComponent(jsonServ, dialog, translate, translationLoader) {
+    function ClientCalendarComponent(jsonServ, dialog, mainServ, route, translate, translationLoader) {
         this.jsonServ = jsonServ;
         this.dialog = dialog;
+        this.mainServ = mainServ;
+        this.route = route;
         this.translate = translate;
         this.translationLoader = translationLoader;
-        this.refresh = new __WEBPACK_IMPORTED_MODULE_2_rxjs__["Subject"]();
+        this.refresh = new __WEBPACK_IMPORTED_MODULE_5_rxjs__["Subject"]();
         this.rows = [];
         this.colors = [
             {
@@ -10395,63 +10408,26 @@ var ClientCalendarComponent = (function () {
             },
         ];
         this.consultants = [];
+        // ngOnInit(): void {
+        //   var tempEvents;
+        //   this.jsonServ.getJson().subscribe(res => {
+        //     tempEvents = res;
+        //     tempEvents.forEach(element => {
+        //       var x: CalendarEvent = {
+        //         start: new Date(element.startDate),
+        //         end: new Date(element.endDate),
+        //         title: this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
+        //         meta: element,
+        //       };
+        //       this.events.push(x);
+        //     });
+        //   });
+        // }
         this.title = 'app';
         this.view = 'month';
-        this.viewDate = new Date();
+        // viewDate: Date = new Date();
         this.activeDayIsOpen = false;
         this.events = [];
-        // events: CalendarEvent[] = [
-        //   {
-        //     startDate: new Date(2018,6,27,20,0),
-        //     endDate: "2018-07-27T17:34:13.239Z",
-        //     location: "string",
-        //     open: true,
-        //     consID: "string",
-        //     clientID: "string",
-        //     id: "string"
-        //   }
-        //   {
-        //     title: 'Event 1',
-        //     color: colors.yellow,
-        //     start: new Date(2018, 6, 23, 12),
-        //     end: new Date(2018, 6, 23, 12, 30),
-        //     meta: {
-        //       type: 'warning'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 2',
-        //     color: colors.yellow,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'warning'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 3',
-        //     color: colors.blue,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'info'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 4',
-        //     color: colors.red,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'danger'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 5',
-        //     color: colors.red,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'danger'
-        //     }
-        //   }
-        // ];
         this.openEvents = [];
         this.flag = true;
         this.getRowClass = function (row) {
@@ -10459,25 +10435,11 @@ var ClientCalendarComponent = (function () {
                 'row-color': row.meta.open
             };
         };
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_5__calendar_i18n_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_6__calendar_i18n_fa__["a" /* locale */]);
+        this.allEvents = [];
+        this.viewDate = new Date();
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_8__calendar_i18n_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_9__calendar_i18n_fa__["a" /* locale */]);
         this.rows = this.events;
     }
-    ClientCalendarComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        var tempEvents;
-        this.jsonServ.getJson().subscribe(function (res) {
-            tempEvents = res;
-            tempEvents.forEach(function (element) {
-                var x = {
-                    start: new Date(element.startDate),
-                    end: new Date(element.endDate),
-                    title: _this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
-                    meta: element,
-                };
-                _this.events.push(x);
-            });
-        });
-    };
     ClientCalendarComponent.prototype.beforeMonthViewRender = function (_a) {
         var _this = this;
         var body = _a.body;
@@ -10508,25 +10470,6 @@ var ClientCalendarComponent = (function () {
             }
         });
     };
-    ClientCalendarComponent.prototype.dayClicked = function (_a) {
-        var date = _a.date, events = _a.events;
-        // this.openEvents = [];
-        // events.forEach(element => {
-        //   if (!element.meta.open)
-        //     this.openEvents.push(element);
-        // });
-        // if (isSameMonth(date, this.viewDate)) {
-        //   if (
-        //     (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-        //     events.length === 0
-        //   ) {
-        //     this.activeDayIsOpen = false;
-        //   } else {
-        //     this.activeDayIsOpen = true;
-        //     this.viewDate = date;
-        //   }
-        // }
-    };
     ClientCalendarComponent.prototype.getColor = function (cons) {
         for (var index = 0; index < this.colors.length; index++) {
             if (this.colors[index].cons == cons)
@@ -10540,7 +10483,7 @@ var ClientCalendarComponent = (function () {
     };
     ClientCalendarComponent.prototype.addEvent = function () {
         var _this = this;
-        this.dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__calendar_event_form_event_form_component__["a" /* FuseCalendarEventFormDialogComponent */], {
+        this.dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_6__calendar_event_form_event_form_component__["a" /* FuseCalendarEventFormDialogComponent */], {
             panelClass: 'event-form-dialog',
             data: {
                 action: 'new',
@@ -10552,7 +10495,7 @@ var ClientCalendarComponent = (function () {
             if (!response) {
                 return;
             }
-            debugger;
+            // debugger;
             var newEvent = response.getRawValue();
             _this.events.push(newEvent);
             _this.refresh.next(true);
@@ -10566,11 +10509,53 @@ var ClientCalendarComponent = (function () {
         console.log('Activate Event', event);
     };
     ClientCalendarComponent.prototype.checkSelectable = function (event) {
-        debugger;
+        // debugger;
         return event.meta.open == true;
     };
+    ClientCalendarComponent.prototype.changeDayAnas = function () {
+        var _this = this;
+        var from = __WEBPACK_IMPORTED_MODULE_4_lodash_cloneDeep__(this.viewDate);
+        var to = __WEBPACK_IMPORTED_MODULE_4_lodash_cloneDeep__(this.viewDate);
+        from.setDate(1);
+        to.setDate(this.daysInMonth(to.getMonth(), to.getFullYear()));
+        this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                _this.allEvents[_this.viewDate.getMonth() + "-" + _this.viewDate.getFullYear()] = data;
+            }
+            else if (_this.mainServ.APIServ.getErrorCode() == 400) {
+            }
+            else {
+                _this.mainServ.globalServ.somthingError();
+            }
+        });
+    };
+    // 5b977410907af3ddb757500b
+    ClientCalendarComponent.prototype.dayClicked = function (data) {
+        // console.log(a);
+        this.viewDate = data['date'];
+        alert("test");
+    };
+    ClientCalendarComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var id = this.route.snapshot.paramMap.get('id');
+        this.mainServ.APIServ.get("forms/" + id).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                _this.form = data;
+                _this.consId = data['consId'];
+                _this.changeDayAnas();
+            }
+            else if (_this.mainServ.APIServ.getErrorCode() == 400) {
+            }
+            else {
+                _this.mainServ.globalServ.somthingError();
+            }
+        });
+    };
+    ClientCalendarComponent.prototype.daysInMonth = function (month, year) {
+        return new Date(year, month, 0).getDate();
+    };
     ClientCalendarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
             selector: 'client-calendar',
             template: __webpack_require__("./src/app/main/content/client-calendar/client-calendar/client-calendar.component.html"),
             styles: [__webpack_require__("./src/app/main/content/client-calendar/client-calendar/client-calendar.component.css")],
@@ -10578,7 +10563,12 @@ var ClientCalendarComponent = (function () {
                 "\n    .cell-totals {\n      margin: 5px;\n      text-align: center;\n    }\n    .badge {\n      margin-right: 5px;\n    }\n    /deep/ .datatable-body-row.active .datatable-row-group {\n      color:white !important;\n\n  "
             ]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__calendar_json_service__["a" /* JsonService */], __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MatDialog */], __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["b" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_8__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__calendar_json_service__["a" /* JsonService */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["i" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_11__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
     ], ClientCalendarComponent);
     return ClientCalendarComponent;
 }());
@@ -10868,7 +10858,7 @@ var ConfirmationMessageComponent = (function () {
 /***/ "./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<h1 mat-dialog-title>Text Box Message</h1>\n<div mat-dialog-content>\n  <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n\n    <mat-form-field fxFlex=\"100\">\n\n      <textarea matInput placeholder=\"\" [(ngModel)]=\"text\"></textarea>\n      <mat-icon matSuffix>person</mat-icon>\n      <mat-error>This field is required</mat-error>\n    </mat-form-field>\n  </div>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial>Yes</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n<h1 mat-dialog-title>Text Box Message</h1>\n<div mat-dialog-content>\n  <form class=\"\" [formGroup]=\"regiForm\">\n\n    <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n\n      <!--<mat-form-field fxFlex=\"100\">\n\n      <textarea matInput placeholder=\"\" [(ngModel)]=\"text\"></textarea>\n      <mat-icon matSuffix>person</mat-icon>\n      <mat-error>This field is required</mat-error>\n    </mat-form-field>-->\n\n      <!--<mat-form-field class=\"example-full-width\">\n        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" [errorStateMatcher]=\"matcher\">\n        <mat-hint>Errors appear instantly!</mat-hint>\n        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n          Please enter a valid email address\n        </mat-error>\n        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n          Email is <strong>required</strong>\n        </mat-error>\n      </mat-form-field>-->\n      <mat-form-field fxFlex=\"100\" style=\"width: 100%;\">\n\n        <textarea matInput placeholder=\"\" formControlName=\"textBoxAdmin\"></textarea>\n        <mat-icon matSuffix>person</mat-icon>\n        <mat-error>This field is required</mat-error>\n      </mat-form-field>\n\n      <mat-form-field fxFlex=\"100\" *ngIf=\"isWithID\">\n        <mat-select formControlName=\"consId\" required>\n          <mat-option *ngFor=\"let oneClient of clients\" [value]=\"oneClient.id\">\n            {{ oneClient.username }}\n          </mat-option>\n        </mat-select>\n\n        <mat-icon matSuffix>wc</mat-icon>\n        <mat-error>This field is required</mat-error>\n      </mat-form-field>\n\n    </div>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial [disabled]=\"regiForm.invalid\">Yes</button>\n</div>\n"
 
 /***/ }),
 
@@ -10884,9 +10874,10 @@ module.exports = ""
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SetTextBoxAdminComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10902,24 +10893,53 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+
 var SetTextBoxAdminComponent = (function () {
-    function SetTextBoxAdminComponent(dialogRef, data, mainServ) {
+    function SetTextBoxAdminComponent(dialogRef, data, mainServ, _formBuilder) {
         this.dialogRef = dialogRef;
         this.data = data;
         this.mainServ = mainServ;
+        this._formBuilder = _formBuilder;
         this.text = data['textBoxMessage'];
+        this.isWithID = data['isWithID'];
     }
+    SetTextBoxAdminComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.isWithID) {
+            this.regiForm = new __WEBPACK_IMPORTED_MODULE_0__angular_forms__["d" /* FormGroup */]({
+                textBoxAdmin: new __WEBPACK_IMPORTED_MODULE_0__angular_forms__["c" /* FormControl */](this.text),
+                consId: new __WEBPACK_IMPORTED_MODULE_0__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_0__angular_forms__["l" /* Validators */].required)
+            });
+            this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe(function (data) {
+                if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                    _this.clients = data;
+                    // this.loadingIndicator = false;
+                }
+                else if (_this.mainServ.APIServ.getErrorCode() == 400) {
+                }
+                else {
+                    _this.mainServ.globalServ.somthingError();
+                }
+            });
+        }
+        else {
+            this.regiForm = new __WEBPACK_IMPORTED_MODULE_0__angular_forms__["d" /* FormGroup */]({
+                textBoxAdmin: new __WEBPACK_IMPORTED_MODULE_0__angular_forms__["c" /* FormControl */](this.text)
+            });
+        }
+    };
     SetTextBoxAdminComponent.prototype.onYesClick = function () {
-        this.dialogRef.close(this.text);
+        this.dialogRef.close(this.regiForm.value);
     };
     SetTextBoxAdminComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
             selector: 'set-text-box-admin',
             template: __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.html"),
             styles: [__webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.scss")]
         }),
-        __param(1, Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_0__core_services_main_service__["a" /* MainService */]])
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_forms__["b" /* FormBuilder */]])
     ], SetTextBoxAdminComponent);
     return SetTextBoxAdminComponent;
 }());
@@ -13558,13 +13578,15 @@ var UnprocessedFormsComponent = (function () {
     };
     UnprocessedFormsComponent.prototype.changeStatus = function (newStatus, id, name, text) {
         var _this = this;
+        var isWithID = newStatus == "consultation" ? true : false;
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_1__dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], {
             width: '500px',
-            data: { textBoxMessage: text }
+            data: { 'textBoxMessage': text, 'isWithID': isWithID }
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result) {
-                _this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus, 'textBoxAdmin': result });
+                result['status'] = newStatus;
+                _this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, result);
             }
         });
     };
@@ -13886,7 +13908,7 @@ var FuseSampleModule = (function () {
 /***/ "./src/app/main/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar>\r\n\r\n    <div fxLayout=\"row\" fxLayoutAlign=\"center center\" fxLayoutAlign.gt-xs=\"space-between center\" fxFlex>\r\n\r\n        <!-- <a href=\"http://themeforest.net/item/fuse-angularjs-material-design-admin-template/12931855?ref=srcn\"\r\n           target=\"_blank\" mat-button class=\"mat-pink-bg\" fxFlex=\"0 0 auto\" fxLayout=\"row\"\r\n           fxLayoutAlign=\"start center\">\r\n            <mat-icon class=\"s-16 mr-sm-4\">shopping_cart</mat-icon>\r\n            <span>Purchase FUSE (Angular5+)</span>\r\n        </a> -->\r\n\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\" fxHide fxShow.gt-xs>\r\n            <!-- <a mat-button href=\"http://fusetheme.com/angular/docs\" target=\"_blank\">Documentation</a>\r\n            <span>&bull;</span> -->\r\n            <a mat-button href=\"/فرم_درخواست_مشاوره\">Form</a>\r\n            <!-- <span>&bull;</span>\r\n            <a mat-button href=\"http://fusetheme.com/angular/changelog\" target=\"_blank\">Changelog</a> -->\r\n        </div>\r\n\r\n    </div>\r\n\r\n</mat-toolbar>\r\n"
+module.exports = "<mat-toolbar>\r\n\r\n    <div fxLayout=\"row\" fxLayoutAlign=\"center center\" fxLayoutAlign.gt-xs=\"space-between center\" fxFlex>\r\n\r\n        <!-- <a href=\"http://themeforest.net/item/fuse-angularjs-material-design-admin-template/12931855?ref=srcn\"\r\n           target=\"_blank\" mat-button class=\"mat-pink-bg\" fxFlex=\"0 0 auto\" fxLayout=\"row\"\r\n           fxLayoutAlign=\"start center\">\r\n            <mat-icon class=\"s-16 mr-sm-4\">shopping_cart</mat-icon>\r\n            <span>Purchase FUSE (Angular5+)</span>\r\n        </a> -->\r\n\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\" fxHide fxShow.gt-xs>\r\n            <!-- <a mat-button href=\"http://fusetheme.com/angular/docs\" target=\"_blank\">Documentation</a>\r\n            <span>&bull;</span> -->\r\n            <a mat-button (click)=\"changeTo('فرم_درخواست_مشاوره')\" >Form</a>\r\n            <!-- <span>&bull;</span>\r\n            <a mat-button href=\"http://fusetheme.com/angular/changelog\" target=\"_blank\">Changelog</a> -->\r\n        </div>\r\n\r\n    </div>\r\n\r\n</mat-toolbar>\r\n"
 
 /***/ }),
 
@@ -13902,7 +13924,8 @@ module.exports = ":host {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  d
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FuseFooterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13913,18 +13936,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var FuseFooterComponent = (function () {
-    function FuseFooterComponent() {
+    function FuseFooterComponent(mainServ) {
+        this.mainServ = mainServ;
     }
     FuseFooterComponent.prototype.ngOnInit = function () {
     };
+    FuseFooterComponent.prototype.changeTo = function (url) {
+        this.mainServ.globalServ.goTo(url);
+    };
     FuseFooterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'fuse-footer',
             template: __webpack_require__("./src/app/main/footer/footer.component.html"),
             styles: [__webpack_require__("./src/app/main/footer/footer.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__core_services_main_service__["a" /* MainService */]])
     ], FuseFooterComponent);
     return FuseFooterComponent;
 }());

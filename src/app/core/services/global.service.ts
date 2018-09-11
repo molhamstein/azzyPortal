@@ -1,3 +1,4 @@
+import { SetTextBoxAdminComponent } from './../../main/content/dialogs/set-text-box-admin/set-text-box-admin.component';
 import { ConfirmMessageComponent } from './../../main/content/dialogs/confirm-message/confirm-message.component';
 import { ConfirmationMessageComponent } from './../../main/content/dialogs/confirmation-message/confirmation-message.component';
 import { CallApiService } from './call-api.service';
@@ -22,7 +23,7 @@ export class GlobalService {
   castUnreadNotBeh = this.unreadNotBeh.asObservable();
   castNotificationBeh = this.notificationBeh.asObservable();
   castFilteringBeh = this.filteringBeh.asObservable();
-  constructor(private router: Router, private route: ActivatedRoute, public dialog: MatDialog, public APIServe: CallApiService) {
+  constructor(private router: Router, private route: ActivatedRoute,  public APIServe: CallApiService) {
     this.notification = [];
     this.unreadNot = 0;
   }
@@ -149,18 +150,7 @@ export class GlobalService {
 
 
 
-  confirmationMessage(message, url, data) {
-    const dialogRef = this.dialog.open(ConfirmMessageComponent, {
-      width: '250px',
-      data: { message: message, url: url, sendData: data }
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        alert(result);
-      }
-    });
-  }
 
   convertNumber(fromNum) {
     console.log("fromNum");

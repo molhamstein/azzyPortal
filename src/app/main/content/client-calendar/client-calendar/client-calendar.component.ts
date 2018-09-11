@@ -1,8 +1,12 @@
+import { ActivatedRoute } from '@angular/router';
+import { MainService } from './../../../../core/services/main.service';
 import { Component, OnInit } from '@angular/core';
 import { CalendarMonthViewDay } from '../../../../angular-calendar';
 import { CalendarEvent } from '../../../../angular-calendar';
 import { colors } from '../../calendar/colors';
 import { JsonService } from '../../calendar/json.service';
+import * as cloneDeep from 'lodash/cloneDeep';
+
 import {
   startOfDay,
   endOfDay,
@@ -46,12 +50,18 @@ import { FuseTranslationLoaderService } from '../../../../core/services/translat
 export class ClientCalendarComponent implements OnInit {
   refresh: Subject<any> = new Subject();
   rows = [];
-  selected:any;
+  selected: any;
   dialogRef: any;
   selectedDay: any;
-  constructor(private jsonServ: JsonService, public dialog: MatDialog, private translate: TranslateService, private translationLoader: FuseTranslationLoaderService) {
+  constructor(private jsonServ: JsonService,
+    public dialog: MatDialog,
+    private mainServ: MainService,
+    private route: ActivatedRoute,
+    private translate: TranslateService,
+    private translationLoader: FuseTranslationLoaderService) {
     this.translationLoader.loadTranslations(english, farsi);
     this.rows = this.events;
+
   }
 
   colors = [
@@ -73,85 +83,30 @@ export class ClientCalendarComponent implements OnInit {
     },
   ]
   consultants = [];
-  ngOnInit(): void {
+  // ngOnInit(): void {
 
-    var tempEvents;
-    this.jsonServ.getJson().subscribe(res => {
-      tempEvents = res;
-      tempEvents.forEach(element => {
-        var x: CalendarEvent = {
-          start: new Date(element.startDate),
-          end: new Date(element.endDate),
-          title: this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
-          meta: element,
-        };
-        this.events.push(x);
-      });
+  //   var tempEvents;
+  //   this.jsonServ.getJson().subscribe(res => {
+  //     tempEvents = res;
+  //     tempEvents.forEach(element => {
+  //       var x: CalendarEvent = {
+  //         start: new Date(element.startDate),
+  //         end: new Date(element.endDate),
+  //         title: this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
+  //         meta: element,
+  //       };
+  //       this.events.push(x);
+  //     });
 
-    });
+  //   });
 
-  }
+  // }
   title = 'app';
   view: string = 'month';
-  viewDate: Date = new Date();
+  // viewDate: Date = new Date();
   activeDayIsOpen: boolean = false;
   events: CalendarEvent[] = [];
 
-
-
-
-  // events: CalendarEvent[] = [
-  //   {
-  //     startDate: new Date(2018,6,27,20,0),
-  //     endDate: "2018-07-27T17:34:13.239Z",
-  //     location: "string",
-  //     open: true,
-  //     consID: "string",
-  //     clientID: "string",
-  //     id: "string"
-  //   }
-  //   {
-  //     title: 'Event 1',
-  //     color: colors.yellow,
-  //     start: new Date(2018, 6, 23, 12),
-  //     end: new Date(2018, 6, 23, 12, 30),
-  //     meta: {
-  //       type: 'warning'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 2',
-  //     color: colors.yellow,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'warning'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 3',
-  //     color: colors.blue,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'info'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 4',
-  //     color: colors.red,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'danger'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 5',
-  //     color: colors.red,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'danger'
-  //     }
-  //   }
-  // ];
 
   openEvents: CalendarEvent[] = [];
   flag: boolean = true;
@@ -190,24 +145,7 @@ export class ClientCalendarComponent implements OnInit {
 
   }
 
-  dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
-    // this.openEvents = [];
-    // events.forEach(element => {
-    //   if (!element.meta.open)
-    //     this.openEvents.push(element);
-    // });
-    // if (isSameMonth(date, this.viewDate)) {
-    //   if (
-    //     (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-    //     events.length === 0
-    //   ) {
-    //     this.activeDayIsOpen = false;
-    //   } else {
-    //     this.activeDayIsOpen = true;
-    //     this.viewDate = date;
-    //   }
-    // }
-  }
+
 
   getColor(cons) {
     for (let index = 0; index < this.colors.length; index++) {
@@ -236,7 +174,7 @@ export class ClientCalendarComponent implements OnInit {
         if (!response) {
           return;
         }
-        debugger;
+        // debugger;
         const newEvent = response.getRawValue();
         this.events.push(newEvent);
         this.refresh.next(true);
@@ -256,9 +194,62 @@ export class ClientCalendarComponent implements OnInit {
     console.log('Activate Event', event);
   }
   checkSelectable(event) {
-    debugger;
+    // debugger;
     return event.meta.open == true
   }
 
 
+  allEvents=[];
+
+
+  changeDayAnas() {
+    let from = cloneDeep(this.viewDate)
+    let to = cloneDeep(this.viewDate)
+    from.setDate(1);
+    to.setDate(this.daysInMonth(to.getMonth(), to.getFullYear()))
+    this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.allEvents[this.viewDate.getMonth()+"-"+this.viewDate.getFullYear()]=data;
+      }
+      else if (this.mainServ.APIServ.getErrorCode() == 400) {
+
+      }
+      else {
+        this.mainServ.globalServ.somthingError();
+      }
+
+    });
+
+  }
+  // 5b977410907af3ddb757500b
+  dayClicked(data) {
+    // console.log(a);
+    this.viewDate = data['date'];
+    alert("test")
+  }
+  viewDate: Date = new Date();
+  form;
+  consId
+  ngOnInit() {
+    var id = this.route.snapshot.paramMap.get('id');
+
+    this.mainServ.APIServ.get("forms/" + id).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.form = data;
+        this.consId = data['consId'];
+        this.changeDayAnas()
+      }
+      else if (this.mainServ.APIServ.getErrorCode() == 400) {
+
+      }
+      else {
+        this.mainServ.globalServ.somthingError();
+      }
+
+    });
+  }
+
+  daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+  }
 }

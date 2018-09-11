@@ -1,3 +1,4 @@
+import { AuthGuardService } from './../../../core/services/auth-guard-service.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,10 +10,12 @@ import { EditFormComponent } from './edit-form.component';
 
 const routes = [
   {
-      path     : 'edit-form/:id',
-      component: EditFormComponent
+    path: 'edit-form/:id',
+    component: EditFormComponent,
+    canActivate: [AuthGuardService]
+
   },
-  
+
 ];
 
 @NgModule({
@@ -22,7 +25,7 @@ const routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [EditFormComponent],
-  exports     : [
+  exports: [
     EditFormComponent
   ]
 })

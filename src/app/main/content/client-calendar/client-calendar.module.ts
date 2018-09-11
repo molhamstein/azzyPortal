@@ -14,7 +14,7 @@ import { ClientCalendarComponent } from './client-calendar/client-calendar.compo
 
 
 const routes = [{
-  path: 'client-calendar',
+  path: 'client-calendar/:id',
   component: ClientCalendarComponent,
 }];
 

@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="col-md-7">
-  <ng-template #customCellTemplate let-day="day" let-locale="locale">
+  <!--<ng-template #customCellTemplate let-day="day" let-locale="locale">
     <div class="cal-cell-top" style="text-align: left;">
       <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">{{ day.badgeTotal }}</span>
       <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
@@ -10,7 +10,7 @@
         {{ group[1].length }}
       </span>
     </div>
-  </ng-template>
+  </ng-template>-->
   <!-- <ng-template #tt let-events="openEvents" let-eventClicked="eventClicked">
       <div *ngFor="let event of openEvents; trackBy:trackByEventId" [ngClass]="event?.cssClass" mwlDraggable [dropData]="{event: event}"
         [dragAxis]="{x: event.draggable, y: event.draggable}">
@@ -20,10 +20,10 @@
         </mwl-calendar-event-title>
       </div>
     </ng-template> -->
-  <ng-template #rr let-event="event" let-view="view">
+  <!--<ng-template #rr let-event="event" let-view="view">
     <span class="cal-event-title" [innerHTML]="event.title | calendarEventTitle:view:event" [style.color]="'black'" ]>
     </span>
-  </ng-template>
+  </ng-template>-->
 
   <div id="calendar" dir="ltr" class="page-layout simple fullwidth" fusePerfectScrollbar style="width:80%;">
 
@@ -50,7 +50,7 @@
         <!-- HEADER BOTTOM -->
         <div class="header-bottom" fxLayout="row" fxLayoutAlign="center center">
 
-          <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="selectedDay = {date:$event}"
+          <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()" (viewDateChange)="selectedDay = {date:$event}"
             aria-label="Previous">
             <mat-icon>chevron_left</mat-icon>
           </button>
@@ -59,7 +59,7 @@
             {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}
           </div>
 
-          <button mat-button class="mat-icon-button arrow" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="selectedDay = {date:$event}"
+          <button mat-button class="mat-icon-button arrow" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()" (viewDateChange)="selectedDay = {date:$event}"
             aria-label="Next">
             <mat-icon>chevron_right</mat-icon>
           </button>
@@ -114,13 +114,15 @@
         (eventTimesChanged)="eventTimesChanged($event)">
       </mwl-calendar-day-view>
     </div> -->
+    {{viewDate}}
+    {{allEvents | json}}
     <div *ngIf="events.length > 0" class="content" fusePerfectScrollbar>
       <div [ngSwitch]="view">
         <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [cellTemplate]="customCellTemplate"
           (beforeViewRender)="beforeMonthViewRender($event)" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)"
-          (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
+          (eventClicked)="handleEvent()" (eventTimesChanged)="eventTimesChanged($event)">
         </mwl-calendar-month-view>
-        <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
+        <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent()"
           (eventTimesChanged)="eventTimesChanged($event)">
         </mwl-calendar-day-view>
       </div>
@@ -134,7 +136,7 @@
     </div> -->
   </div>
 </div>
-<div *ngIf="events.length>0" class="col-md-5" style="margin-top: 200px;">
+<!--<div *ngIf="events.length>0" class="col-md-5" style="margin-top: 200px;">
   <ngx-datatable class="material" [rows]="events" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'" [scrollbarH]="true"
     [limit]="10" [rowClass]="getRowClass" [selectionType]="'single'" (activate)="onActivate($event)" (select)='onSelect($event)'
     [selectCheck]="checkSelectable">
@@ -168,4 +170,4 @@
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>
-</div>
+</div>-->

@@ -86,18 +86,18 @@ export class ContractedFormsComponent implements OnInit {
     this.mainServ.globalServ.goTo(url)
   }
 
-  changeStatus(newStatus, id, name, text) {
-    const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
-      width: '500px',
-      data: { textBoxMessage: text }
-    });
+  // changeStatus(newStatus, id, name, text) {
+  //   const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
+  //     width: '500px',
+  //     data: { textBoxMessage: text }
+  //   });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.mainServ.globalServ.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus,'textBoxAdmin': result})
-      }
-    });
-  }
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     if (result) {
+  //       this.mainServ.globalServ.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus,'textBoxAdmin': result})
+  //     }
+  //   });
+  // }
 
   // openDialog(status, id,name) {
   //     this.mainServ.globalServ.confirmationMessage('are youe sure you want change '+name+'\'s form to '+status,"forms/" +id,{'status':status})

@@ -1,3 +1,4 @@
+import { AuthGuardService } from './../../../core/services/auth-guard-service.service';
 import { ContractedFormsComponent } from './contracted-forms/contracted-forms.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,18 +12,25 @@ const routes = [
   {
     path: 'unprocessed',
     component: UnprocessedFormsComponent,
-  },
+    canActivate: [AuthGuardService]
+  
+},
   {
     path: 'processed',
     component: ProcessedFormsComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'contracted',
     component: ContractedFormsComponent,
+    canActivate: [AuthGuardService]
+    
   },
   {
     path: 'show-form/:id',
     component: ShowFormComponent,
+    canActivate: [AuthGuardService]
+
   }
 ];
 
@@ -33,6 +41,6 @@ const routes = [
     RouterModule.forChild(routes),
 
   ],
-  declarations: [UnprocessedFormsComponent, ProcessedFormsComponent,ContractedFormsComponent, ShowFormComponent]
+  declarations: [UnprocessedFormsComponent, ProcessedFormsComponent, ContractedFormsComponent, ShowFormComponent]
 })
 export class AzzyFormsModule { }

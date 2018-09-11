@@ -1,19 +1,23 @@
+import { MainService } from './../../core/services/main.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector   : 'fuse-footer',
+    selector: 'fuse-footer',
     templateUrl: './footer.component.html',
-    styleUrls  : ['./footer.component.scss']
+    styleUrls: ['./footer.component.scss']
 })
-export class FuseFooterComponent implements OnInit
-{
+export class FuseFooterComponent implements OnInit {
 
-    constructor()
-    {
+    constructor(
+        private mainServ: MainService
+    ) {
     }
 
-    ngOnInit()
-    {
+    ngOnInit() {
     }
+    changeTo(url) {
+        this.mainServ.globalServ.goTo(url)
+    }
+
 
 }

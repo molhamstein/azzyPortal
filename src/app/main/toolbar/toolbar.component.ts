@@ -111,4 +111,8 @@ export class FuseToolbarComponent {
         this.appDirection.switchDir(lang.dir);
 
     }
+
+    logOut(){
+        this.mainServ.loginServ.logout();
+    }
 }

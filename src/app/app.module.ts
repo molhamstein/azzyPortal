@@ -1,3 +1,5 @@
+import { DialogServiceService } from './core/services/dialog-service.service';
+import { AuthGuardService } from './core/services/auth-guard-service.service';
 import { ConfirmMessageComponent } from './main/content/dialogs/confirm-message/confirm-message.component';
 import { SetTextBoxAdminComponent } from './main/content/dialogs/set-text-box-admin/set-text-box-admin.component';
 import { ConfirmationMessageComponent } from './main/content/dialogs/confirmation-message/confirmation-message.component';
@@ -50,6 +52,8 @@ const appRoutes: Routes = [
         FuseMainModule,
         MatDialogModule
     ],
+    entryComponents:[ConfirmationMessageComponent,SetTextBoxAdminComponent,ConfirmMessageComponent],
+    
     providers   : [
         FuseSplashScreenService,
         FuseConfigService,
@@ -58,12 +62,13 @@ const appRoutes: Routes = [
         MainService,
         CallApiService,
         LoginService,
-        GlobalService
+        GlobalService,
+        AuthGuardService,
+        DialogServiceService
     ],
     bootstrap   : [
         AppComponent
-    ],
-    entryComponents:[ConfirmationMessageComponent,SetTextBoxAdminComponent,ConfirmMessageComponent]
+    ]
 })
 export class AppModule
 {
