@@ -9,7 +9,7 @@ import { AdviceFormComponent } from './advice-form.component';
 
 const routes = [
   {
-      path     : 'فرم_درخواست_مشاوره',
+      path     : 'addForm',
       component: AdviceFormComponent
   },
   

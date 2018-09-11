@@ -9533,7 +9533,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     {
-        path: 'فرم_درخواست_مشاوره',
+        path: 'addForm',
         component: __WEBPACK_IMPORTED_MODULE_4__advice_form_component__["a" /* AdviceFormComponent */]
     },
 ];
@@ -13908,7 +13908,7 @@ var FuseSampleModule = (function () {
 /***/ "./src/app/main/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar>\r\n\r\n    <div fxLayout=\"row\" fxLayoutAlign=\"center center\" fxLayoutAlign.gt-xs=\"space-between center\" fxFlex>\r\n\r\n        <!-- <a href=\"http://themeforest.net/item/fuse-angularjs-material-design-admin-template/12931855?ref=srcn\"\r\n           target=\"_blank\" mat-button class=\"mat-pink-bg\" fxFlex=\"0 0 auto\" fxLayout=\"row\"\r\n           fxLayoutAlign=\"start center\">\r\n            <mat-icon class=\"s-16 mr-sm-4\">shopping_cart</mat-icon>\r\n            <span>Purchase FUSE (Angular5+)</span>\r\n        </a> -->\r\n\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\" fxHide fxShow.gt-xs>\r\n            <!-- <a mat-button href=\"http://fusetheme.com/angular/docs\" target=\"_blank\">Documentation</a>\r\n            <span>&bull;</span> -->\r\n            <button mat-button (click)=\"changeTo('فرم_درخواست_مشاوره')\" >Form</button>\r\n            <!-- <span>&bull;</span>\r\n            <a mat-button href=\"http://fusetheme.com/angular/changelog\" target=\"_blank\">Changelog</a> -->\r\n        </div>\r\n\r\n    </div>\r\n\r\n</mat-toolbar>\r\n"
+module.exports = "<mat-toolbar>\r\n\r\n    <div fxLayout=\"row\" fxLayoutAlign=\"center center\" fxLayoutAlign.gt-xs=\"space-between center\" fxFlex>\r\n\r\n        <!-- <a href=\"http://themeforest.net/item/fuse-angularjs-material-design-admin-template/12931855?ref=srcn\"\r\n           target=\"_blank\" mat-button class=\"mat-pink-bg\" fxFlex=\"0 0 auto\" fxLayout=\"row\"\r\n           fxLayoutAlign=\"start center\">\r\n            <mat-icon class=\"s-16 mr-sm-4\">shopping_cart</mat-icon>\r\n            <span>Purchase FUSE (Angular5+)</span>\r\n        </a> -->\r\n\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\" fxHide fxShow.gt-xs>\r\n            <!-- <a mat-button href=\"http://fusetheme.com/angular/docs\" target=\"_blank\">Documentation</a>\r\n            <span>&bull;</span> -->\r\n            <!--<button mat-button (click)=\"changeTo('فرم_درخواست_مشاوره')\" >Form</button>-->\r\n            <button mat-button (click)=\"changeTo('addForm')\" >Form</button>\r\n            <!-- <span>&bull;</span>\r\n            <a mat-button href=\"http://fusetheme.com/angular/changelog\" target=\"_blank\">Changelog</a> -->\r\n        </div>\r\n\r\n    </div>\r\n\r\n</mat-toolbar>\r\n"
 
 /***/ }),
 
