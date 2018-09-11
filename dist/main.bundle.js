@@ -13944,6 +13944,7 @@ var FuseFooterComponent = (function () {
     FuseFooterComponent.prototype.ngOnInit = function () {
     };
     FuseFooterComponent.prototype.changeTo = function (url) {
+        alert("SSSS");
         this.mainServ.globalServ.goTo(url);
     };
     FuseFooterComponent = __decorate([
