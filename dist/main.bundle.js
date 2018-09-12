@@ -4290,12 +4290,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__angular_material_dialog__ = __webpack_require__("./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -4344,6 +4346,7 @@ var AppModule = (function () {
             ],
             entryComponents: [__WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]],
             providers: [
+                { provide: __WEBPACK_IMPORTED_MODULE_26__angular_common__["LocationStrategy"], useClass: __WEBPACK_IMPORTED_MODULE_26__angular_common__["HashLocationStrategy"] },
                 __WEBPACK_IMPORTED_MODULE_20__core_services_splash_screen_service__["a" /* FuseSplashScreenService */],
                 __WEBPACK_IMPORTED_MODULE_21__core_services_config_service__["a" /* FuseConfigService */],
                 __WEBPACK_IMPORTED_MODULE_22__core_components_navigation_navigation_service__["a" /* FuseNavigationService */],
