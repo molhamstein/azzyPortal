@@ -22,7 +22,7 @@ const routes = [
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forRoot(routes,{useHash: true})
+    RouterModule.forChild(routes)
   ],
   declarations: [EditFormComponent],
   exports: [

@@ -30,7 +30,6 @@ import { AppDirectionService } from './app-direction.service';
 import { MyCalendarModule } from './main/content/calendar/calendar.module';
 import { MatDialogModule } from '@angular/material/dialog';
 
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 const appRoutes: Routes = [
@@ -58,7 +57,6 @@ const appRoutes: Routes = [
     entryComponents:[ViewAppointmentComponent,ResponeFormComponent,SetTextBoxAdminComponent,ConfirmMessageComponent],
     
     providers   : [
-        // {provide: LocationStrategy, useClass: HashLocationStrategy},
         FuseSplashScreenService,
         FuseConfigService,
         FuseNavigationService,

@@ -17,7 +17,7 @@ const routes = [
     ],
     imports     : [
         SharedModule,
-        RouterModule.forRoot(routes,{useHash: true})
+        RouterModule.forChild(routes)
     ]
 })
 
