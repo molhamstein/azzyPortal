@@ -1,3 +1,5 @@
+import { Route, Router } from '@angular/router';
+import { DialogServiceService } from './../../../core/services/dialog-service.service';
 import { MainService } from './../../../core/services/main.service';
 import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
@@ -384,12 +386,14 @@ export class AdviceFormComponent implements OnInit {
     private fuseConfig: FuseConfigService,
     private translationLoader: FuseTranslationLoaderService,
     private _formBuilder: FormBuilder,
+    private dialogSerc: DialogServiceService,
     private mainServ: MainService) {
     this.fuseSettings = this.fuseConfig.settings;
     this.fuseSettings.optionsBtn = 'none';
     this.fuseSettings.layout.navigation = 'none';
     this.fuseSettings.layout.toolbar = 'none';
     this.fuseSettings.layout.footer = 'none';
+
 
     for (var index = 0; index <= 100; index++) {
       this.years.push(1960 + index);
@@ -563,7 +567,7 @@ export class AdviceFormComponent implements OnInit {
 
     // this.addDegree();
     // this.addWork();
-    // this.addForm(true)
+    this.addForm(true)
     console.log(this.formGroup, this.formArray);
 
   }
@@ -629,8 +633,12 @@ export class AdviceFormComponent implements OnInit {
     this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         alert("addedForm")
-        // this.mainServ.globalServ.goTo("partner")
-      }else{
+        this.dialogSerc.responseFormDialog(true, data)
+
+      } else if (this.mainServ.APIServ.getErrorCode() == 422) {
+        this.mainServ.APIServ.setErrorCode(0);
+        this.dialogSerc.responseFormDialog(false)
+      } else {
         alert("somethingError");
         this.mainServ.APIServ.setErrorCode(0);
       }

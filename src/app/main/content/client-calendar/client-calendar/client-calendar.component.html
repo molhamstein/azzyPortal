@@ -50,8 +50,8 @@
         <!-- HEADER BOTTOM -->
         <div class="header-bottom" fxLayout="row" fxLayoutAlign="center center">
 
-          <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()" (viewDateChange)="selectedDay = {date:$event}"
-            aria-label="Previous">
+          <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()"
+            (viewDateChange)="selectedDay = {date:$event}" aria-label="Previous">
             <mat-icon>chevron_left</mat-icon>
           </button>
 
@@ -59,8 +59,8 @@
             {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}
           </div>
 
-          <button mat-button class="mat-icon-button arrow" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()" (viewDateChange)="selectedDay = {date:$event}"
-            aria-label="Next">
+          <button mat-button class="mat-icon-button arrow" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()"
+            (viewDateChange)="selectedDay = {date:$event}" aria-label="Next">
             <mat-icon>chevron_right</mat-icon>
           </button>
         </div>
@@ -114,13 +114,10 @@
         (eventTimesChanged)="eventTimesChanged($event)">
       </mwl-calendar-day-view>
     </div> -->
-    {{viewDate}}
-    {{allEvents | json}}
+    {{viewDate}} {{allEvents}}
     <div *ngIf="events.length > 0" class="content" fusePerfectScrollbar>
       <div [ngSwitch]="view">
-        <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [cellTemplate]="customCellTemplate"
-          (beforeViewRender)="beforeMonthViewRender($event)" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)"
-          (eventClicked)="handleEvent()" (eventTimesChanged)="eventTimesChanged($event)">
+        <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (dayClicked)="dayClicked($event.day)">
         </mwl-calendar-month-view>
         <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent()"
           (eventTimesChanged)="eventTimesChanged($event)">
@@ -136,10 +133,9 @@
     </div> -->
   </div>
 </div>
-<!--<div *ngIf="events.length>0" class="col-md-5" style="margin-top: 200px;">
+<div *ngIf="events.length>0" class="col-md-5" style="margin-top: 200px;">
   <ngx-datatable class="material" [rows]="events" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'" [scrollbarH]="true"
-    [limit]="10" [rowClass]="getRowClass" [selectionType]="'single'" (activate)="onActivate($event)" (select)='onSelect($event)'
-    [selectCheck]="checkSelectable">
+   [rowClass]="">
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="start">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
         <span>Time</span>
@@ -165,9 +161,27 @@
           <mat-chip color="accent" selected="true">Available</mat-chip>
         </mat-chip-list>
         <mat-chip-list *ngIf="!value">
-            <mat-chip color="warn" selected="true">Not Available</mat-chip>
-          </mat-chip-list>
+          <mat-chip color="warn" selected="true">Not Available</mat-chip>
+        </mat-chip-list>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
+
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="viewAppointment(row)">
+              <span>{{'VIEW' | translate}}</span>
+            </button>
+          <button mat-menu-item (click)="useAppointment(row)">
+              <span>{{'USE' | translate}}</span>
+            </button>
+        </mat-menu>
+
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>
-</div>-->
+</div>

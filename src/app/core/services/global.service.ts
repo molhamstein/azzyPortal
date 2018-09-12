@@ -1,6 +1,5 @@
 import { SetTextBoxAdminComponent } from './../../main/content/dialogs/set-text-box-admin/set-text-box-admin.component';
 import { ConfirmMessageComponent } from './../../main/content/dialogs/confirm-message/confirm-message.component';
-import { ConfirmationMessageComponent } from './../../main/content/dialogs/confirmation-message/confirmation-message.component';
 import { CallApiService } from './call-api.service';
 import { MatDialog } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';

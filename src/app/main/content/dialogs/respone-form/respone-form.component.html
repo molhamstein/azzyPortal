@@ -1,0 +1,33 @@
+<!--component html goes here -->
+<!--component html goes here -->
+<div mat-dialog-content>
+  <div *ngIf="isAddedMessage==false">
+    <b>Dear Client</b>
+    <p>this information already exists in our system. If you have previously submitted another form, you cannot submit a new
+      one now. If you are intending to change some details in your previous submission, please refer to the confirmation
+      email you have received previously and access your previous form via provided Link. Otherwise please contact our Offices.
+    </p>
+    <b>Thanks and regards, Azzy Immigration Team</b>
+  </div>
+  <div *ngIf="isAddedMessage==true">
+    <b>Dear {{form.nameEnglish}} {{form.surnameEnglish}}</b>
+    <br>
+    <b>Subject :</b>
+    <p>Confirmation of submitted Information</p>
+    <p>
+      Thank you for sending your information through our application form. Our team is carefully processing all applications and
+      will get back to you as soon as possible, which might take up to 14 working days. Within this time for any change or
+      update of your submitted information, you can access your form by this link:
+      <br>
+      <a href="{{url}}">Link</a>
+      <br> We thank you in advance for being patient.
+
+    </p>
+    <b>Best regards Azzy Immigration</b>
+  </div>
+  <!--{{data | json}}-->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">OK</button>
+  <!--<button mat-button  (click)="onYesClick()" cdkFocusInitial>Yes</button>-->
+</div>

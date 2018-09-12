@@ -90,6 +90,8 @@ export const locale = {
             }
 
             
-        }
+        },
+        'VIEW':'view',
+        'USE':'use'
     }
 };

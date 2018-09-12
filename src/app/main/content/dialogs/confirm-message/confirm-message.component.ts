@@ -11,6 +11,7 @@ export class ConfirmMessageComponent {
     message = "";
     sendData = {};
     url = "";
+    type = "";
     constructor(
         public dialogRef: MatDialogRef<ConfirmMessageComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
@@ -18,7 +19,7 @@ export class ConfirmMessageComponent {
         this.message = data['message'];
         this.sendData = data['sendData'];
         this.url = data['url'];
-
+        this.type = data['type'];
     }
 
 
@@ -28,12 +29,17 @@ export class ConfirmMessageComponent {
     }
 
     onYesClick() {
-        console.log(this.sendData);
-        console.log(this.url);
-        this.mainServ.APIServ.patch(this.url, this.sendData).subscribe((data: any) => {
-            if (this.mainServ.APIServ.getErrorCode() == 0) {
-                this.mainServ.globalServ.reload();
-            }
-        })
+        if (this.type == "patch")
+            this.mainServ.APIServ.patch(this.url, this.sendData).subscribe((data: any) => {
+                if (this.mainServ.APIServ.getErrorCode() == 0) {
+                    this.mainServ.globalServ.reload();
+                }
+            })
+        else if (this.type == "put")
+            this.mainServ.APIServ.put(this.url, this.sendData).subscribe((data: any) => {
+                if (this.mainServ.APIServ.getErrorCode() == 0) {
+                    this.mainServ.globalServ.reload();
+                }
+            })
     }
 }

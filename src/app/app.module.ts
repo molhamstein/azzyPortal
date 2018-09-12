@@ -1,8 +1,9 @@
+import { ResponeFormComponent } from './main/content/dialogs/respone-form/respone-form.component';
+import { ViewAppointmentComponent } from './main/content/dialogs/view-appointment/view-appointment.component';
 import { DialogServiceService } from './core/services/dialog-service.service';
 import { AuthGuardService } from './core/services/auth-guard-service.service';
 import { ConfirmMessageComponent } from './main/content/dialogs/confirm-message/confirm-message.component';
 import { SetTextBoxAdminComponent } from './main/content/dialogs/set-text-box-admin/set-text-box-admin.component';
-import { ConfirmationMessageComponent } from './main/content/dialogs/confirmation-message/confirmation-message.component';
 import { EditClientFormModule } from './main/content/editClient-form/editClient-form.module';
 import { EditFormModule } from './main/content/edit-form/edit-form.module';
 import { GlobalService } from './core/services/global.service';
@@ -29,6 +30,8 @@ import { AppDirectionService } from './app-direction.service';
 import { MyCalendarModule } from './main/content/calendar/calendar.module';
 import { MatDialogModule } from '@angular/material/dialog';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 const appRoutes: Routes = [
     // {
@@ -39,7 +42,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent,ConfirmationMessageComponent,SetTextBoxAdminComponent,ConfirmMessageComponent
+        AppComponent,ResponeFormComponent,SetTextBoxAdminComponent,ConfirmMessageComponent,ViewAppointmentComponent
     ],
     imports     : [
         BrowserModule,
@@ -52,9 +55,10 @@ const appRoutes: Routes = [
         FuseMainModule,
         MatDialogModule
     ],
-    entryComponents:[ConfirmationMessageComponent,SetTextBoxAdminComponent,ConfirmMessageComponent],
+    entryComponents:[ViewAppointmentComponent,ResponeFormComponent,SetTextBoxAdminComponent,ConfirmMessageComponent],
     
     providers   : [
+        {provide: LocationStrategy, useClass: HashLocationStrategy},
         FuseSplashScreenService,
         FuseConfigService,
         FuseNavigationService,

@@ -1,3 +1,6 @@
+import { DialogServiceService } from './../../../../core/services/dialog-service.service';
+import { ViewAppointmentComponent } from './../../dialogs/view-appointment/view-appointment.component';
+import { FuseConfigService } from './../../../../core/services/config.service';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from './../../../../core/services/main.service';
 import { Component, OnInit } from '@angular/core';
@@ -53,14 +56,24 @@ export class ClientCalendarComponent implements OnInit {
   selected: any;
   dialogRef: any;
   selectedDay: any;
+  fuseSettings
   constructor(private jsonServ: JsonService,
     public dialog: MatDialog,
     private mainServ: MainService,
     private route: ActivatedRoute,
     private translate: TranslateService,
-    private translationLoader: FuseTranslationLoaderService) {
+    private fuseConfig: FuseConfigService,
+    private translationLoader: FuseTranslationLoaderService,
+    private dialogSer: DialogServiceService) {
     this.translationLoader.loadTranslations(english, farsi);
-    this.rows = this.events;
+    // this.rows = this.events;
+    this.fuseSettings = this.fuseConfig.settings;
+    this.fuseSettings.optionsBtn = 'none';
+    this.fuseSettings.layout.navigation = 'none';
+    this.fuseSettings.layout.toolbar = 'none';
+    this.fuseSettings.layout.footer = 'none';
+
+    this.fuseConfig.setSettings(this.fuseSettings);
 
   }
 
@@ -181,25 +194,27 @@ export class ClientCalendarComponent implements OnInit {
       });
   }
 
-  getRowClass = (row) => {
-    return {
-      'row-color': row.meta.open
-    };
-  }
-  onSelect({ selected }) {
-    console.log('Select Event', selected, this.selected);
-  }
+  // getRowClass = (row) => {
+  //   return {
+  //     'row-color': row.meta.open
+  //   };
+  // }
+  // onSelect({ selected }) {
+  //   console.log('Select Event', selected, this.selected);
+  // }
 
-  onActivate(event) {
-    console.log('Activate Event', event);
-  }
+  // onActivate(event) {
+  //   console.log('Activate Event', event);
+  // }
   checkSelectable(event) {
     // debugger;
     return event.meta.open == true
   }
 
 
-  allEvents=[];
+
+
+  allEvents = [];
 
 
   changeDayAnas() {
@@ -209,7 +224,34 @@ export class ClientCalendarComponent implements OnInit {
     to.setDate(this.daysInMonth(to.getMonth(), to.getFullYear()))
     this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
-        this.allEvents[this.viewDate.getMonth()+"-"+this.viewDate.getFullYear()]=data;
+        this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()] = data['readCalander'][0];
+        console.log(this.allEvents)
+        // this.events = data['readCalander'][0]['slots']
+        // var tempEvents;
+        // this.jsonServ.getJson().subscribe(res => {
+        //   tempEvents = res;
+        //   tempEvents.forEach(element => {
+        //     var x: CalendarEvent = {
+        //       start: new Date(element.startDate),
+        //       end: new Date(element.endDate),
+        //       title: this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
+        //       meta: element,
+        //     };
+        //     this.events.push(x);
+        //   });
+
+        // });
+
+        data['readCalander'][0]['slots'].forEach(element => {
+          var x: CalendarEvent = {
+            start: new Date(element.startDate),
+            end: new Date(element.endDate),
+            title: this.buildTitle(element.consId, element.clientId, element.location, element.startDate, element.endDate),
+            meta: element,
+          };
+          this.events.push(x);
+        });
+
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
 
@@ -251,5 +293,22 @@ export class ClientCalendarComponent implements OnInit {
 
   daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
+  }
+
+  viewAppointment(appointment) {
+    const dialogRef = this.dialog.open(ViewAppointmentComponent, {
+      width: '500px',
+      data: { 'appointment': appointment }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.useAppointment(appointment)
+      }
+    });
+  }
+
+  useAppointment(appointment) {
+    this.dialogSer.confirmationMessage('are youe sure you want use  appointment at ' + appointment['start'] + 'in ' + appointment['meta']['location'], "forms/selectAp/" +this.form['id'] , {'apId':appointment['meta']['id']},"put")
   }
 }

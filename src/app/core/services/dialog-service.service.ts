@@ -1,3 +1,4 @@
+import { ResponeFormComponent } from './../../main/content/dialogs/respone-form/respone-form.component';
 import { ConfirmMessageComponent } from './../../main/content/dialogs/confirm-message/confirm-message.component';
 import { MatDialog } from '@angular/material';
 import { Injectable } from '@angular/core';
@@ -9,10 +10,24 @@ export class DialogServiceService {
     public dialog: MatDialog,
   ) { }
 
-  confirmationMessage(message, url, data) {
+  confirmationMessage(message, url, data, type: string = "patch") {
     let dialogRef = this.dialog.open(ConfirmMessageComponent, {
       width: '250px',
-      data: { message: message, url: url, sendData: data }
+      data: { message: message, url: url, sendData: data, type: type }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        alert(result);
+      }
+    });
+  }
+
+
+  responseFormDialog(isAddedMessage, data: any = {}) {
+    let dialogRef = this.dialog.open(ResponeFormComponent, {
+      width: '650px',
+      data: { isAddedMessage: isAddedMessage, form: data }
     });
 
     dialogRef.afterClosed().subscribe(result => {

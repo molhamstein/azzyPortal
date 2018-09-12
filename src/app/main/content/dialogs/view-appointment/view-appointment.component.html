@@ -1,0 +1,17 @@
+<!--component html goes here -->
+<!--component html goes here -->
+<!--<h1 mat-dialog-title>Text Box Message</h1>-->
+<div mat-dialog-content>
+ <mat-list>
+  <mat-list-item><b style="margin-right: 10px">{{'FROM' | translate}} : </b><label></label>{{appointment.startDate |date: 'hh:mm MM/dd/yyyy'}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item><b style="margin-right: 10px">{{'TO' | translate}} :</b><label>{{appointment.endDate |date: 'hh:mm MM/dd/yyyy'}}</label></mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item><b style="margin-right: 10px">{{'LOCATION' | translate}} :</b><label>{{appointment.location}}</label></mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="click(null)">{{'DONE' | translate}}</button>
+  <button mat-button (click)="click(true)" >{{'USE' | translate}}</button>
+</div>
