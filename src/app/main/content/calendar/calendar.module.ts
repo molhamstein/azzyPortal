@@ -24,7 +24,7 @@ const routes = [{
     SharedModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes),
+    RouterModule.forRoot(routes,{useHash: true}),
     CalendarModule.forRoot(),
     MaterialModule,
     ReactiveFormsModule,

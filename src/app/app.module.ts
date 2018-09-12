@@ -58,7 +58,7 @@ const appRoutes: Routes = [
     entryComponents:[ViewAppointmentComponent,ResponeFormComponent,SetTextBoxAdminComponent,ConfirmMessageComponent],
     
     providers   : [
-        {provide: LocationStrategy, useClass: HashLocationStrategy},
+        // {provide: LocationStrategy, useClass: HashLocationStrategy},
         FuseSplashScreenService,
         FuseConfigService,
         FuseNavigationService,

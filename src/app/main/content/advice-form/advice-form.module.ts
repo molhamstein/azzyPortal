@@ -19,7 +19,7 @@ const routes = [
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forRoot(routes,{useHash: true})
   ],
   declarations: [AdviceFormComponent],
   exports     : [
