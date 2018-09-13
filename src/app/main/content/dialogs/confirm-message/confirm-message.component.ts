@@ -1,6 +1,10 @@
+import { TranslateService } from '@ngx-translate/core';
+import { FuseTranslationLoaderService } from './../../../../core/services/translation-loader.service';
 import { MainService } from './../../../../core/services/main.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Component, Inject } from '@angular/core';
+import { locale as english } from '../../languageFiles/en';
+import { locale as persian } from '../../languageFiles/fa';
 
 @Component({
     selector: 'confirm-message',
@@ -15,11 +19,15 @@ export class ConfirmMessageComponent {
     constructor(
         public dialogRef: MatDialogRef<ConfirmMessageComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
+        private translate: TranslateService,
+        private translationLoader: FuseTranslationLoaderService,
         private mainServ: MainService) {
         this.message = data['message'];
         this.sendData = data['sendData'];
         this.url = data['url'];
         this.type = data['type'];
+        this.translationLoader.loadTranslations(english, persian);
+
     }
 
 
@@ -41,5 +49,8 @@ export class ConfirmMessageComponent {
                     this.mainServ.globalServ.reload();
                 }
             })
+    }
+    ngOnInit() {
+        this.translate.use('en');
     }
 }

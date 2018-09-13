@@ -22,11 +22,11 @@ import {
 } from 'date-fns';
 import { TimeSlots } from '../../calendar/TimeSlots'
 import { Subject } from 'rxjs';
-import { FuseCalendarEventFormDialogComponent } from '../../calendar/event-form/event-form.component';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material';
-import { locale as english } from '../../calendar/i18n/en';
-import { locale as farsi } from '../../calendar/i18n/fa';
+import { locale as english } from '../../languageFiles/en';
+import { locale as persian } from '../../languageFiles/fa';
+
 import { TranslateService } from '@ngx-translate/core';
 import { FuseTranslationLoaderService } from '../../../../core/services/translation-loader.service';
 
@@ -65,7 +65,7 @@ export class ClientCalendarComponent implements OnInit {
     private fuseConfig: FuseConfigService,
     private translationLoader: FuseTranslationLoaderService,
     private dialogSer: DialogServiceService) {
-    this.translationLoader.loadTranslations(english, farsi);
+    this.translationLoader.loadTranslations(english, persian);
     // this.rows = this.events;
     this.fuseSettings = this.fuseConfig.settings;
     this.fuseSettings.optionsBtn = 'none';
@@ -174,25 +174,7 @@ export class ClientCalendarComponent implements OnInit {
     return cons + ' - ' + client + ': ' + new Date(start).getHours() + ':' + startMin + ' - ' + new Date(end).getHours() + ':' + endMin + ' (' + location + ')';
   }
 
-  addEvent(): void {
-    this.dialogRef = this.dialog.open(FuseCalendarEventFormDialogComponent, {
-      panelClass: 'event-form-dialog',
-      data: {
-        action: 'new',
-        date: new Date()
-      }
-    });
-    this.dialogRef.afterClosed()
-      .subscribe((response: FormGroup) => {
-        if (!response) {
-          return;
-        }
-        // debugger;
-        const newEvent = response.getRawValue();
-        this.events.push(newEvent);
-        this.refresh.next(true);
-      });
-  }
+
 
   // getRowClass = (row) => {
   //   return {

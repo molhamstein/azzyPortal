@@ -3,7 +3,7 @@
   <!-- HEADER -->
   <div class="header mat-accent-bg p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
     <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
-      <div class="h2 mt-16">{{'UNPROCESSED_FORMS.TITLE' | translate }}</div>
+      <div class="h2 mt-16">{{'Form.CONTRACTED_FORMS.TITLE' | translate }}</div>
     </div>
 
 
@@ -21,12 +21,12 @@
 
       <!--<ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Id">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'UNPROCESSED_FORMS.ID' | translate }}</span>
+          <span>{{ 'CONTRACTED_FORMS.ID' | translate }}</span>
         </ng-template>
       </ngx-datatable-column>-->
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="dateOfArr">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'UNPROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>
+          <span>{{ 'Form.CONTRACTED_FORMS.SUBMISSION_DATE' | translate }}</span>
         </ng-template>
 
         <ng-template let-value="value" ngx-datatable-cell-template>
@@ -36,17 +36,17 @@
       </ngx-datatable-column>
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="mobileNo">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'UNPROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>
+          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NUMBER' | translate }}</span>
         </ng-template>
       </ngx-datatable-column>
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="nameEnglish">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'UNPROCESSED_FORMS.CLIENT_NAME' | translate }}</span>
+          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NAME' | translate }}</span>
         </ng-template>
       </ngx-datatable-column>
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Status">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'UNPROCESSED_FORMS.STATUS' | translate }}</span>
+          <span>{{ 'Form.CONTRACTED_FORMS.STATUS' | translate }}</span>
         </ng-template>
         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
           <mat-chip-list *ngIf="row.status=='contracts'">
@@ -64,31 +64,31 @@
           <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="goTo('view',row.id)">
               <mat-icon>search</mat-icon>
-              <span>{{'UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>
+              <span>{{'Form.CONTRACTED_FORMS.SHOW_FORM' | translate}}</span>
             </button>
             <button mat-menu-item (click)="changeStatus('not eligible',row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>cancel</mat-icon>
-              <span>{{'UNPROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>
+              <span>{{'Form.CONTRACTED_FORMS.NOTELIGIBLE' | translate}}</span>
             </button>
             <button mat-menu-item (click)="changeStatus('more info',row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>more_horiz</mat-icon>
-              <span>{{'UNPROCESSED_FORMS.MORE_INFO' | translate}}</span>
+              <span>{{'Form.CONTRACTED_FORMS.MORE_INFO' | translate}}</span>
             </button>
             <button mat-menu-item (click)="changeStatus('consultation',row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>group</mat-icon>
-              <span>{{'UNPROCESSED_FORMS.CONSULTATION' | translate}}</span>
+              <span>{{'Form.CONTRACTED_FORMS.CONSULTATION' | translate}}</span>
             </button>
             <button mat-menu-item (click)="changeStatus('contracts',row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>check</mat-icon>
-              <span>{{'UNPROCESSED_FORMS.CONTRACT' | translate}}</span>
+              <span>{{'Form.CONTRACTED_FORMS.CONTRACT' | translate}}</span>
             </button>
             <button mat-menu-item (click)="goTo('edit',row.id)">
               <mat-icon>edit</mat-icon>
-              <span>{{'UNPROCESSED_FORMS.EDIT' | translate}}</span>
+              <span>{{'Form.CONTRACTED_FORMS.EDIT' | translate}}</span>
             </button>
             <button mat-menu-item>
               <mat-icon>delete</mat-icon>
-              <span>{{'UNPROCESSED_FORMS.DELETE' | translate}}</span>
+              <span>{{'Form.CONTRACTED_FORMS.DELETE' | translate}}</span>
             </button>
           </mat-menu>
 

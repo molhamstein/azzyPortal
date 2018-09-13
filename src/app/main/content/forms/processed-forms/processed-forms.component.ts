@@ -1,8 +1,11 @@
+import { MatDialog } from '@angular/material';
+import { DialogServiceService } from './../../../../core/services/dialog-service.service';
+import { SetTextBoxAdminComponent } from './../../dialogs/set-text-box-admin/set-text-box-admin.component';
 import { MainService } from './../../../../core/services/main.service';
 import { Component, OnInit } from '@angular/core';
 
-import { locale as english } from '../i18n/en';
-import { locale as persian } from '../i18n/fa';
+import { locale as english } from '../../languageFiles/en';
+import { locale as persian } from '../../languageFiles/fa';
 import { FuseTranslationLoaderService } from '../../../../core/services/translation-loader.service';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -17,7 +20,13 @@ export class ProcessedFormsComponent implements OnInit {
   offset: number = 0;
   limit: number = 5;
 
-  constructor(private translationLoader: FuseTranslationLoaderService, private mainServ: MainService, private translateService: TranslateService) {
+  constructor(
+    private translationLoader: FuseTranslationLoaderService,
+    private mainServ: MainService,
+    private translateService: TranslateService,
+    private dialogSer: DialogServiceService,
+    public dialog: MatDialog) {
+
     this.translationLoader.loadTranslations(english, persian);
   }
 
@@ -70,5 +79,33 @@ export class ProcessedFormsComponent implements OnInit {
 
     });
   }
+
+  goTo(pageName, id) {
+    let url = ""
+    if (pageName == 'view') {
+      url = 'show-form/' + id
+    } else if (pageName == 'edit') {
+      url = 'edit-form/' + id
+
+    }
+    this.mainServ.globalServ.goTo(url)
+  }
+
+  changeStatus(newStatus, id, name, text) {
+    var isWithID = newStatus == "consultation" ? true : false;
+
+    const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
+      width: '500px',
+      data: { 'textBoxMessage': text, 'isWithID': isWithID }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        result['status'] = newStatus;
+        this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, result)
+      }
+    });
+  }
+
 
 }

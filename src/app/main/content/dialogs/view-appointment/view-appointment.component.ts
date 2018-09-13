@@ -4,8 +4,8 @@ import { MainService } from './../../../../core/services/main.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Component, Inject } from '@angular/core';
 
-import { locale as english } from './i18n/en';
-import { locale as persian } from './i18n/fa';
+import { locale as english } from '../../languageFiles/en';
+import { locale as persian } from '../../languageFiles/fa';
 
 @Component({
     selector: 'view-appointment',

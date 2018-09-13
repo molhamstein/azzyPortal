@@ -2,8 +2,8 @@ import { SetTextBoxAdminComponent } from './../../dialogs/set-text-box-admin/set
 import { MatDialog } from '@angular/material';
 import { MainService } from './../../../../core/services/main.service';
 import { Component, OnInit } from '@angular/core';
-import { locale as english } from '../i18n/en';
-import { locale as persian } from '../i18n/fa';
+import { locale as english } from '../../languageFiles/en';
+import { locale as persian } from '../../languageFiles/fa';
 import { FuseTranslationLoaderService } from '../../../../core/services/translation-loader.service';
 import { TranslateService } from '@ngx-translate/core';
 

@@ -6,6 +6,7 @@
 // Import Bootstrap
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import 'app/main/content/calendar/calendar.component.scss';
+// @import "~ng-pick-datetime/assets/style/picker.min.css";
 // by fadi
 [dir=rtl] .nav .nav-item .nav-link .nav-link-icon {
   margin-left: 16px;
@@ -30,4 +31,21 @@
   width: 16px;
   margin-top: 5px;
   margin-left: 0px;
+}
+
+.event-form-dialog {
+  .mat-dialog-container {
+    padding: 0;
+    width: 480px;
+  }
+  .dialog-content-wrapper {
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.w-time {
+  min-height: auto !important;
+  height: 400px !important;
 }

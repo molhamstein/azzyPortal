@@ -1,3 +1,5 @@
+import { FuseCalendarEventFormDialogComponent } from './event-form/event-form.component';
+import { AddSlotesComponent } from './../dialogs/add-slotes/add-slotes.component';
 import { Component, OnInit } from '@angular/core';
 import { CalendarMonthViewDay } from '../../../angular-calendar';
 import { CalendarEvent } from '../../../angular-calendar';
@@ -15,12 +17,11 @@ import {
 } from 'date-fns';
 import { TimeSlots } from './TimeSlots'
 import { Subject } from 'rxjs';
-import { FuseCalendarEventFormDialogComponent } from './event-form/event-form.component';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material';
-import { locale as english } from './i18n/en';
-import { locale as farsi } from './i18n/fa';
-import { TranslateService} from '@ngx-translate/core';
+import { locale as english } from '../languageFiles/en';
+import { locale as persian } from '../languageFiles/fa';
+import { TranslateService } from '@ngx-translate/core';
 import { FuseTranslationLoaderService } from '../../../core/services/translation-loader.service';
 
 
@@ -46,9 +47,9 @@ export class CalendarComponent implements OnInit {
   dialogRef: any;
   selectedDay: any;
   constructor(private jsonServ: JsonService, public dialog: MatDialog, private translate: TranslateService, private translationLoader: FuseTranslationLoaderService) {
-    this.translationLoader.loadTranslations(english, farsi);
+    this.translationLoader.loadTranslations(english, persian);
 
-   }
+  }
 
   colors = [
     {
@@ -232,11 +233,27 @@ export class CalendarComponent implements OnInit {
         if (!response) {
           return;
         }
-        debugger;
         const newEvent = response.getRawValue();
         this.events.push(newEvent);
         this.refresh.next(true);
       });
   }
-
+  addEventNew() {
+    this.dialogRef = this.dialog.open(AddSlotesComponent, {
+      panelClass: 'event-form-dialog',
+      data: {
+        action: 'new',
+        date: new Date()
+      }
+    });
+    this.dialogRef.afterClosed()
+      .subscribe((response: FormGroup) => {
+        if (!response) {
+          return;
+        }
+        const newEvent = response.getRawValue();
+        this.events.push(newEvent);
+        this.refresh.next(true);
+      });
+  }
 }

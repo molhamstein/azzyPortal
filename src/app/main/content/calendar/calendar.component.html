@@ -43,7 +43,7 @@
 
             <mat-icon class="logo-icon">today</mat-icon>
 
-            <span class="logo-text">{{ 'CALENDAR.TITLE' | translate}}</span>
+            <span class="logo-text">{{ 'Calender.TITLE' | translate}}</span>
 
           </div>
 
@@ -87,9 +87,12 @@
       </div>
 
       <!-- ADD EVENT BUTTON -->
-      <button mat-fab class="add-event-button mat-warn" (click)="addEvent()" aria-label="Add event">
+      <button mat-fab class="add-event-button mat-warn" (click)="addEventNew()" aria-label="Add event">
         <mat-icon>add</mat-icon>
       </button>
+      <!--<button mat-fab style="right: 100px;" class="add-event-button mat-warn" (click)="addEventNew()" aria-label="Add event">
+        <mat-icon>add</mat-icon>
+      </button>-->
       <!-- / ADD EVENT BUTTON -->
     </div>
     <!-- / HEADER -->

@@ -1,5 +1,5 @@
 <!--component html goes here -->
-<h1 mat-dialog-title>Text Box Message</h1>
+<h1 mat-dialog-title> {{'Dialog.Set_Text_Box.TITLE' | translate}}</h1>
 <div mat-dialog-content>
   <form class="" [formGroup]="regiForm">
 
@@ -45,5 +45,5 @@
 </div>
 <div mat-dialog-actions>
   <!--<button mat-button (click)="onNoClick()">No</button>-->
-  <button mat-button (click)="onYesClick()" cdkFocusInitial [disabled]="regiForm.invalid">Yes</button>
+  <button mat-button (click)="onYesClick()" cdkFocusInitial [disabled]="regiForm.invalid">{{'Dialog.Set_Text_Box.YES' | translate}}</button>
 </div>

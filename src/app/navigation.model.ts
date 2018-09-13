@@ -34,7 +34,7 @@ export class NavigationModel
                 'children': [
                     {
                         'id'   : 'forms',
-                        'title': 'UNPROCESSED_FORMS.TITLE',
+                        'title': 'Form.UNPROCESSED_FORMS.TITLE',
                         'type' : 'item',
                         'icon' : 'email',
                         'url'  : '/unprocessed',
@@ -42,7 +42,7 @@ export class NavigationModel
                     },
                     {
                         'id'   : 'forms',
-                        'title': 'PROCESSED_FORMS.TITLE',
+                        'title': 'Form.PROCESSED_FORMS.TITLE',
                         'type' : 'item',
                         'icon' : 'email',
                         'url'  : '/processed',
@@ -50,7 +50,7 @@ export class NavigationModel
                     },
                     {
                         'id'   : 'forms',
-                        'title': 'CONTRACTED_FORMS.TITLE',
+                        'title': 'Form.CONTRACTED_FORMS.TITLE',
                         'type' : 'item',
                         'icon' : 'email',
                         'url'  : '/contracted',

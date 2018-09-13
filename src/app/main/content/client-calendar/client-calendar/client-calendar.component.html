@@ -38,7 +38,7 @@
 
             <mat-icon class="logo-icon">today</mat-icon>
 
-            <span class="logo-text">{{ 'CALENDAR.TITLE' | translate}}</span>
+            <span class="logo-text">{{ 'Calender.TITLE' | translate}}</span>
 
           </div>
 
@@ -138,7 +138,7 @@
    [rowClass]="">
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="start">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-        <span>Time</span>
+        <span>{{'Calender.TIME' | translate}}</span>
       </ng-template>
       <ng-template let-row="row" let-value="value" ngx-datatable-cell-template style="background-color: aqua">
         {{row.start | date:'HH:mm'}} - {{row.end | date:'HH:mm'}}
@@ -146,7 +146,7 @@
     </ngx-datatable-column>
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="meta.location">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-        <span>Location</span>
+        <span>{{'Calender.LOCATION' | translate}}</span>
       </ng-template>
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{value}}
@@ -154,14 +154,14 @@
     </ngx-datatable-column>
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="meta.open">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-        <span>Available</span>
+        <span>{{'Calender.AVAILABLE' | translate}}</span>
       </ng-template>
       <ng-template let-value="value" ngx-datatable-cell-template>
         <mat-chip-list *ngIf="value">
-          <mat-chip color="accent" selected="true">Available</mat-chip>
+          <mat-chip color="accent" selected="true">{{'Calender.AVAILABLE' | translate}}</mat-chip>
         </mat-chip-list>
         <mat-chip-list *ngIf="!value">
-          <mat-chip color="warn" selected="true">Not Available</mat-chip>
+          <mat-chip color="warn" selected="true">{{'Calender.NOTAVAILABLE' | translate}}</mat-chip>
         </mat-chip-list>
       </ng-template>
     </ngx-datatable-column>
@@ -174,10 +174,10 @@
           </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="viewAppointment(row)">
-              <span>{{'VIEW' | translate}}</span>
+              <span>{{'Calender.VIEW' | translate}}</span>
             </button>
           <button mat-menu-item (click)="useAppointment(row)">
-              <span>{{'USE' | translate}}</span>
+              <span>{{'Calender.USE' | translate}}</span>
             </button>
         </mat-menu>
 

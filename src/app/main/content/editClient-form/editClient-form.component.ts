@@ -5,9 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { FuseTranslationLoaderService } from '../../../core/services/translation-loader.service';
 import { FuseConfigService } from '../../../core/services/config.service';
 
-import { locale as english } from './i18n/en';
-import { locale as persian } from './i18n/fa';
-
+import { locale as english } from '../languageFiles/en';
+import { locale as persian } from '../languageFiles/fa';
 import { AbstractControl, FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { AppDirectionService } from '../../../app-direction.service';
@@ -41,41 +40,41 @@ export class EditClientFormComponent implements OnInit {
   token:string;
   maritalStatusList = [
     {
-      viewValue: 'ADVICE_FORM.STEP_0.MARRIED',
+      viewValue: 'Add_Edit_Form.STEP_0.MARRIED',
       value: 'married'
     },
     // {
-    //   viewValue: 'ADVICE_FORM.STEP_0.SEPARETED',
+    //   viewValue: 'Add_Edit_Form.STEP_0.SEPARETED',
     //   value: 'separated'
     // },
     {
-      viewValue: 'ADVICE_FORM.STEP_0.DEVORCED',
+      viewValue: 'Add_Edit_Form.STEP_0.DEVORCED',
       value: 'divorced'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_0.WIDOWED',
+      viewValue: 'Add_Edit_Form.STEP_0.WIDOWED',
       value: 'widowed'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_0.NEVER_MARRIED',
+      viewValue: 'Add_Edit_Form.STEP_0.NEVER_MARRIED',
       value: 'single'
     },
   ];
   englishLevels = [
     {
-      viewValue: 'ADVICE_FORM.STEP_1.EXCELLENT',
+      viewValue: 'Add_Edit_Form.STEP_1.EXCELLENT',
       value: 'Excellent'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_1.GOOD',
+      viewValue: 'Add_Edit_Form.STEP_1.GOOD',
       value: 'Good'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_1.MEDIUM',
+      viewValue: 'Add_Edit_Form.STEP_1.MEDIUM',
       value: 'Intermediate'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_1.WEAK',
+      viewValue: 'Add_Edit_Form.STEP_1.WEAK',
       value: 'Weak'
     }
 
@@ -116,24 +115,24 @@ export class EditClientFormComponent implements OnInit {
       label: "assoc",
       fields: [
         {
-          viewValue: 'ADVICE_FORM.STEP_2.FIELD',
+          viewValue: 'Add_Edit_Form.STEP_2.FIELD',
           value: ['assocField', 'assocFieldSp'],
           icon: 'book',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.UNIVERSITY',
+          viewValue: 'Add_Edit_Form.STEP_2.UNIVERSITY',
           value: ['assocUniversity', 'assocUniversitySp'],
           icon: 'location_city',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.YEAR_GRAD',
+          viewValue: 'Add_Edit_Form.STEP_2.YEAR_GRAD',
           value: ['assocYearOfGraduation', 'assocYearOfGraduationSp'],
           isInput: false
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.EDU_PLACE',
+          viewValue: 'Add_Edit_Form.STEP_2.EDU_PLACE',
           value: ['assocCityOfUniversity', 'assocCityOfUniversitySp'],
           icon: 'place',
           isInput: true
@@ -144,24 +143,24 @@ export class EditClientFormComponent implements OnInit {
       label: "bac",
       fields: [
         {
-          viewValue: 'ADVICE_FORM.STEP_2.FIELD',
+          viewValue: 'Add_Edit_Form.STEP_2.FIELD',
           value: ['bacField', 'bacFieldSp'],
           icon: 'book',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.UNIVERSITY',
+          viewValue: 'Add_Edit_Form.STEP_2.UNIVERSITY',
           value: ['bacUniversity', 'bacUniversitySp'],
           icon: 'location_city',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.YEAR_GRAD',
+          viewValue: 'Add_Edit_Form.STEP_2.YEAR_GRAD',
           value: ['bacYearOfGraduation', 'bacYearOfGraduationSp'],
           isInput: false
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.EDU_PLACE',
+          viewValue: 'Add_Edit_Form.STEP_2.EDU_PLACE',
           value: ['bacCityOfUniversity', 'bacCityOfUniversitySp'],
           icon: 'place',
           isInput: true
@@ -172,24 +171,24 @@ export class EditClientFormComponent implements OnInit {
       label: "master",
       fields: [
         {
-          viewValue: 'ADVICE_FORM.STEP_2.FIELD',
+          viewValue: 'Add_Edit_Form.STEP_2.FIELD',
           value: ['masterField', 'masterFieldSp'],
           icon: 'book',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.UNIVERSITY',
+          viewValue: 'Add_Edit_Form.STEP_2.UNIVERSITY',
           value: ['masterUniversity', 'masterUniversitySp'],
           icon: 'location_city',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.YEAR_GRAD',
+          viewValue: 'Add_Edit_Form.STEP_2.YEAR_GRAD',
           value: ['masterYearOfGraduation', 'masterYearOfGraduationSp'],
           isInput: false
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.EDU_PLACE',
+          viewValue: 'Add_Edit_Form.STEP_2.EDU_PLACE',
           value: ['masterCityOfUniversity', 'masterCityOfUniversitySp'],
           icon: 'place',
           isInput: true
@@ -200,24 +199,24 @@ export class EditClientFormComponent implements OnInit {
       label: "PHD",
       fields: [
         {
-          viewValue: 'ADVICE_FORM.STEP_2.FIELD',
+          viewValue: 'Add_Edit_Form.STEP_2.FIELD',
           value: ['PHDField', 'PHDFieldSp'],
           icon: 'book',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.UNIVERSITY',
+          viewValue: 'Add_Edit_Form.STEP_2.UNIVERSITY',
           value: ['PHDUniversity', 'PHDUniversitySp'],
           icon: 'location_city',
           isInput: true
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.YEAR_GRAD',
+          viewValue: 'Add_Edit_Form.STEP_2.YEAR_GRAD',
           value: ['PHDYearOfGraduation', 'PHDYearOfGraduationSp'],
           isInput: false
         },
         {
-          viewValue: 'ADVICE_FORM.STEP_2.EDU_PLACE',
+          viewValue: 'Add_Edit_Form.STEP_2.EDU_PLACE',
           value: ['PHDCityOfUniversity', 'PHDCityOfUniversitySp'],
           icon: 'place',
           isInput: true
@@ -228,14 +227,14 @@ export class EditClientFormComponent implements OnInit {
 
   workExperience = [
     {
-      viewValue: 'ADVICE_FORM.STEP_3.FIELDOfWork',
+      viewValue: 'Add_Edit_Form.STEP_3.FIELDOfWork',
       value: ['fieldOfWorking', 'fieldOfWorkingSp'],
       icon: 'book',
       isNumber: false,
       fxFlex: 90
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_3.REDYPAID',
+      viewValue: 'Add_Edit_Form.STEP_3.REDYPAID',
       value: ['relatedEdYearsPaid', 'relatedEdYearsPaidSp'],
       icon: 'book',
       isNumber: true,
@@ -243,21 +242,21 @@ export class EditClientFormComponent implements OnInit {
 
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_3.REDYNPAID',
+      viewValue: 'Add_Edit_Form.STEP_3.REDYNPAID',
       value: ['relatedEdYearsNonPaid', 'relatedEdYearsNonPaidSp'],
       icon: 'calendar_today',
       isNumber: true,
       fxFlex: 23
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_3.NREDYPAID',
+      viewValue: 'Add_Edit_Form.STEP_3.NREDYPAID',
       value: ['nonRelatedEdYearsPaid', 'nonRelatedEdYearsPaidSp'],
       icon: 'book',
       isNumber: true,
       fxFlex: 23
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_3.NREDYNPAID',
+      viewValue: 'Add_Edit_Form.STEP_3.NREDYNPAID',
       value: ['nonRelatedEdYearsNonPaid', 'nonRelatedEdYearsNonPaidSp'],
       icon: 'calendar_today',
       isNumber: true,
@@ -267,29 +266,29 @@ export class EditClientFormComponent implements OnInit {
 
   militaryStatus = [
     {
-      viewValue: 'ADVICE_FORM.STEP_4.FINISHED',
+      viewValue: 'Add_Edit_Form.STEP_4.FINISHED',
       value: 'Finished'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_4.EXEMPTION',
+      viewValue: 'Add_Edit_Form.STEP_4.EXEMPTION',
       value: 'Exemption'
     }
   ]
 
   militaryFields = [
     {
-      viewValue: 'ADVICE_FORM.STEP_4.PLACE',
+      viewValue: 'Add_Edit_Form.STEP_4.PLACE',
       value: ['militaryPlace', 'militaryPlaceSp'],
       icon: 'book',
       isInput: true
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_4.FROM',
+      viewValue: 'Add_Edit_Form.STEP_4.FROM',
       value: ['militaryDurationFrom', 'militaryDurationFromSp'],
       icon: 'book',
       isInput: false
     }, {
-      viewValue: 'ADVICE_FORM.STEP_4.TO',
+      viewValue: 'Add_Edit_Form.STEP_4.TO',
       value: ['militaryDurationTo', 'militaryDurationToSp'],
       icon: 'book',
       isInput: false
@@ -298,46 +297,46 @@ export class EditClientFormComponent implements OnInit {
 
   visaType = [
     {
-      viewValue: 'ADVICE_FORM.STEP_5.CITIZEN',
+      viewValue: 'Add_Edit_Form.STEP_5.CITIZEN',
       value: 'Citizen'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_5.PERMANENTRES',
+      viewValue: 'Add_Edit_Form.STEP_5.PERMANENTRES',
       value: 'Permanent Res.'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_5.TEMPORARYRES',
+      viewValue: 'Add_Edit_Form.STEP_5.TEMPORARYRES',
       value: 'Temporary Res.'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_5.STUDENTASSYLUM',
+      viewValue: 'Add_Edit_Form.STEP_5.STUDENTASSYLUM',
       value: 'Student-Assylum'
     },
   ]
 
   australiaFields = [
     {
-      viewValue: 'ADVICE_FORM.STEP_5.SIGNIFICANT',
+      viewValue: 'Add_Edit_Form.STEP_5.SIGNIFICANT',
       value: ['significantCurrentSickness', 'significantCurrentSicknessSp'],
       icon: 'book'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_5.SURGERY',
+      viewValue: 'Add_Edit_Form.STEP_5.SURGERY',
       value: ['surgeryPastOrFuture', 'surgeryPastOrFutureSp'],
       icon: 'book'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_5.RELATION',
+      viewValue: 'Add_Edit_Form.STEP_5.RELATION',
       value: ['australiaFamilyRelation', 'australiaFamilyRelationSp'],
       icon: 'book'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_5.LIVINGSTATE',
+      viewValue: 'Add_Edit_Form.STEP_5.LIVINGSTATE',
       value: ['australiaLivingState', 'australiaLivingStateSp'],
       icon: 'book'
     },
     {
-      viewValue: 'ADVICE_FORM.STEP_5.LIVINGCITY',
+      viewValue: 'Add_Edit_Form.STEP_5.LIVINGCITY',
       value: ['australiaLivingCity', 'australiaLivingCitySp'],
       icon: 'book'
     },

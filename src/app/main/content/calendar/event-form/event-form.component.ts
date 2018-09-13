@@ -41,7 +41,7 @@ export class FuseCalendarEventFormDialogComponent implements OnInit
         }
 
         this.eventForm = this.createEventForm();
-        debugger;
+        // debugger;
     }
 
     ngOnInit()

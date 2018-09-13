@@ -1,3 +1,4 @@
+import { AddSlotesComponent } from './main/content/dialogs/add-slotes/add-slotes.component';
 import { ResponeFormComponent } from './main/content/dialogs/respone-form/respone-form.component';
 import { ViewAppointmentComponent } from './main/content/dialogs/view-appointment/view-appointment.component';
 import { DialogServiceService } from './core/services/dialog-service.service';
@@ -29,6 +30,11 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AppDirectionService } from './app-direction.service';
 import { MyCalendarModule } from './main/content/calendar/calendar.module';
 import { MatDialogModule } from '@angular/material/dialog';
+// import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { Angular5TimePickerModule } from 'angular5-time-picker';
 
 
 
@@ -41,22 +47,26 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent,ResponeFormComponent,SetTextBoxAdminComponent,ConfirmMessageComponent,ViewAppointmentComponent
+        AppComponent, ResponeFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, ConfirmMessageComponent, ViewAppointmentComponent
     ],
-    imports     : [
+    imports: [
         BrowserModule,
         HttpModule,
         HttpClientModule,
         BrowserAnimationsModule,
         RouterModule.forRoot(appRoutes),
+        Angular5TimePickerModule,
         SharedModule,
         TranslateModule.forRoot(),
         FuseMainModule,
-        MatDialogModule
+        MatDialogModule,
+        // OwlDateTimeModule,
+        // OwlNativeDateTimeModule,
     ],
-    entryComponents:[ViewAppointmentComponent,ResponeFormComponent,SetTextBoxAdminComponent,ConfirmMessageComponent],
-    
-    providers   : [
+    entryComponents: [ViewAppointmentComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent, ConfirmMessageComponent],
+
+    providers: [
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
         FuseSplashScreenService,
         FuseConfigService,
         FuseNavigationService,
@@ -68,10 +78,9 @@ const appRoutes: Routes = [
         AuthGuardService,
         DialogServiceService
     ],
-    bootstrap   : [
+    bootstrap: [
         AppComponent
     ]
 })
-export class AppModule
-{
+export class AppModule {
 }
