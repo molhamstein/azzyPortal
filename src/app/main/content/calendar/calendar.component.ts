@@ -23,6 +23,8 @@ import { locale as english } from '../languageFiles/en';
 import { locale as persian } from '../languageFiles/fa';
 import { TranslateService } from '@ngx-translate/core';
 import { FuseTranslationLoaderService } from '../../../core/services/translation-loader.service';
+import { CallApiService } from '../../../core/services/call-api.service';
+import { MainService } from '../../../core/services/main.service';
 
 
 @Component({
@@ -46,10 +48,17 @@ export class CalendarComponent implements OnInit {
 
   dialogRef: any;
   selectedDay: any;
-  constructor(private jsonServ: JsonService, public dialog: MatDialog, private translate: TranslateService, private translationLoader: FuseTranslationLoaderService) {
+  constructor(
+    private jsonServ: JsonService,
+    public dialog: MatDialog,
+    private translate: TranslateService,
+    private translationLoader: FuseTranslationLoaderService,
+    private callApiService: CallApiService,
+    private mainServ: MainService) {
     this.translationLoader.loadTranslations(english, persian);
 
   }
+  token = "F1xVylCp9enwzWpnobtN0KjeTsa7Iar5l4zebc26HMjfioaN8oGrQsWXQQdFgvxD";
 
   colors = [
     {
@@ -72,22 +81,12 @@ export class CalendarComponent implements OnInit {
   consultants = [];
   ngOnInit(): void {
 
-    var tempEvents;
-    this.jsonServ.getJson().subscribe(res => {
-      tempEvents = res;
-      tempEvents.forEach(element => {
-        var x: CalendarEvent = {
-          start: new Date(element.startDate),
-          end: new Date(element.endDate),
-          title: this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
-          meta: element,
-        };
-        this.events.push(x);
-      });
-
+    this.mainServ.APIServ.get("staffusers?filter[where][type]=consultant").subscribe((res: any) => {
+      this.consultants = res;
     });
-
+   this.getSlots(new Date(),[]);
   }
+
   title = 'app';
   view: string = 'month';
   viewDate: Date = new Date();
@@ -159,12 +158,12 @@ export class CalendarComponent implements OnInit {
       cell.badgeTotal = 0;
 
       const groups: any = {};
-      cell.events.forEach((event: CalendarEvent<{ consID: string, open: boolean }>) => {
+      cell.events.forEach((event: CalendarEvent<{ consId: string, open: boolean }>) => {
         if (!event.meta.open) {
           cell.badgeTotal += 1;
-          groups[event.meta.consID] = groups[event.meta.consID] || [];
-          groups[event.meta.consID].push(event);
-          event.color = this.getColor(event.meta.consID);
+          groups[event.meta.consId] = groups[event.meta.consId] || [];
+          groups[event.meta.consId].push(event);
+          event.color = this.getColor(event.meta.consId);
 
         }
         else {
@@ -177,6 +176,7 @@ export class CalendarComponent implements OnInit {
         for (let index = 0; index < cell['eventGroups'].length; index++) {
           var xx = cell['eventGroups'][index][0]
           style.innerHTML += '.badge-' + xx + '{ background-color:' + this.getColor(xx).primary + '; color: white;}'
+          debugger;
           this.flag = false;
         }
         document.getElementsByTagName('head')[0].appendChild(style);
@@ -207,9 +207,13 @@ export class CalendarComponent implements OnInit {
   }
 
   getColor(cons) {
-    for (let index = 0; index < this.colors.length; index++) {
-      if (this.colors[index].cons == cons)
-        return this.colors[index].color;
+    debugger;
+    for (let index = 0; index < this.consultants.length; index++) {
+      if (this.consultants[index].id == cons) {
+        var x = { primary: '#' + this.consultants[index].primarycolor, secondary: '#' + this.consultants[index].secondarycolor };
+        return x;
+      }
+
     }
   }
 
@@ -255,5 +259,30 @@ export class CalendarComponent implements OnInit {
         this.events.push(newEvent);
         this.refresh.next(true);
       });
+  }
+
+  changeDate(e){
+    this.selectedDay = {date:e};
+    this.getSlots(this.selectedDay.date,[]);
+  }
+
+  getSlots(date,ids){
+    var firstDayofMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+    var lastDayofMonth = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+    this.mainServ.APIServ.get("consTimes/readCalander?dateStart=" + firstDayofMonth + "&dateEnd=" + lastDayofMonth + "&ids="+ ids).subscribe((res: any) => {
+      var tempEvents = res;
+      tempEvents.readCalander.forEach(cons => {
+        cons.slots.forEach(slot => {
+          var x: CalendarEvent = {
+            start: new Date(slot.startDate),
+            end: new Date(slot.endDate),
+            title: this.buildTitle(cons.username, slot.clientId, slot.location, slot.startDate, slot.endDate),
+            meta: slot
+          }
+          this.events.push(x);
+        });
+      });
+      debugger;
+    });
   }
 }

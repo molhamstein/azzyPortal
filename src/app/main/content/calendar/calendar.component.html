@@ -69,7 +69,7 @@
         <!-- HEADER BOTTOM -->
         <div class="header-bottom" fxLayout="row" fxLayoutAlign="center center">
 
-          <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="selectedDay = {date:$event}"
+          <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="changeDate($event)"
             aria-label="Previous">
             <mat-icon>chevron_left</mat-icon>
           </button>
@@ -78,7 +78,7 @@
             {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}
           </div>
 
-          <button mat-button class="mat-icon-button arrow" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="selectedDay = {date:$event}"
+          <button mat-button class="mat-icon-button arrow" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="changeDate($event)"
             aria-label="Next">
             <mat-icon>chevron_right</mat-icon>
           </button>

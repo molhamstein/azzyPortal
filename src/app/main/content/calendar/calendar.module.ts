@@ -12,11 +12,14 @@ import { FuseCalendarEventFormDialogComponent } from './event-form/event-form.co
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../../../core/modules/shared.module';
+import { AuthGuardService } from '../../../core/services/auth-guard-service.service';
 
 
 const routes = [{
   path: 'calendar',
   component: CalendarComponent,
+  canActivate: [AuthGuardService]
+
 }];
 
 @NgModule({
