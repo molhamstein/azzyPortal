@@ -44,60 +44,34 @@
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsi" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsi" required>
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglish" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglish" required>
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-
-              <mat-form-field fxFlex="30">
-                <!-- <mat-icon matPrefix>today</mat-icon> -->
-                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
-                  formControlName="dateOfBirthPer" required>
-                <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
-                <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
-                <mat-error>This field is required</mat-error>
-              </mat-form-field>
-
-              <mat-form-field fxFlex="30">
-                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus" required>
-                  <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
-                    {{ status.viewValue | translate }}
-                  </mat-option>
-                </mat-select>
-
-                <mat-icon matSuffix>wc</mat-icon>
-                <mat-error>This field is required</mat-error>
-              </mat-form-field>
-
-              <mat-form-field fxFlex="30">
-                <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
-                  formControlName="numberOfChildren">
-                <mat-icon matSuffix>child_care</mat-icon>
-              </mat-form-field>
 
               <!--<span fxFlex="30"></span>-->
 
@@ -133,12 +107,42 @@
                 <mat-icon matSuffix>video_call</mat-icon>
               </mat-form-field>
 
-              <mat-form-field fxFlex="45">
+
+
+              <mat-form-field fxFlex="24">
+                <!-- <mat-icon matPrefix>today</mat-icon> -->
+                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
+                  formControlName="dateOfBirthPer" required>
+                <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="24">
+                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus" required>
+                  <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
+                    {{ status.viewValue | translate }}
+                  </mat-option>
+                </mat-select>
+
+                <mat-icon matSuffix>wc</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="24">
+                <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
+                  formControlName="numberOfChildren">
+                <mat-icon matSuffix>child_care</mat-icon>
+              </mat-form-field>
+
+              <div fxFlex="24">
+              </div>
+              <mat-form-field fxFlex="49">
                 <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsi"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
-              <mat-form-field fxFlex="45">
+              <mat-form-field fxFlex="49">
                 <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglish"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
                 <mat-error>This field is required</mat-error>
@@ -156,28 +160,28 @@
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsiSp" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp" required>
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="23">
+              <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp" required>
                 <mat-icon matSuffix>people</mat-icon>
@@ -185,30 +189,6 @@
               </mat-form-field>
 
 
-              <mat-form-field fxFlex="30">
-                <input matInput [min]="minDateSp" [max]="maxDateSp" [matDatepicker]="birthDatePickerSp" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
-                  formControlName="dateOfBirthPerSp" required>
-                <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
-                <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
-                <mat-error>This field is required</mat-error>
-              </mat-form-field>
-
-              <mat-form-field fxFlex="30">
-                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp" required>
-                  <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
-                    {{ status.viewValue | translate }}
-                  </mat-option>
-                </mat-select>
-
-                <mat-icon matSuffix>wc</mat-icon>
-                <mat-error>This field is required</mat-error>
-              </mat-form-field>
-
-              <mat-form-field fxFlex="30">
-                <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
-                  formControlName="numberOfChildrenSp">
-                <mat-icon matSuffix>child_care</mat-icon>
-              </mat-form-field>
 
               <!--<span fxFlex="30"></span>-->
 
@@ -243,12 +223,41 @@
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeIDSp">
                 <mat-icon matSuffix>video_call</mat-icon>
               </mat-form-field>
-              <mat-form-field fxFlex="45">
+
+
+              <mat-form-field fxFlex="24">
+                <input matInput [min]="minDateSp" [max]="maxDateSp" [matDatepicker]="birthDatePickerSp" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
+                  formControlName="dateOfBirthPerSp" required>
+                <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
+                <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="24">
+                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp" required>
+                  <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
+                    {{ status.viewValue | translate }}
+                  </mat-option>
+                </mat-select>
+
+                <mat-icon matSuffix>wc</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="24">
+                <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
+                  formControlName="numberOfChildrenSp">
+                <mat-icon matSuffix>child_care</mat-icon>
+              </mat-form-field>
+
+
+              <div fxFlex="24"></div>
+              <mat-form-field fxFlex="49">
                 <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsiSp"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
-              <mat-form-field fxFlex="45">
+              <mat-form-field fxFlex="49">
                 <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglishSp"></textarea>
                 <mat-icon matSuffix>map</mat-icon>
                 <mat-error>This field is required</mat-error>
@@ -598,6 +607,7 @@
 
                 </mat-form-field>
               </div>
+              <div fxFlex="30"></div>
             </div>
 
             <div class="pt-24 pb-24">
@@ -628,6 +638,7 @@
 
                 </mat-form-field>
               </div>
+              <div fxFlex="30"></div>
             </div>
 
             <div class="pt-24 pb-24">

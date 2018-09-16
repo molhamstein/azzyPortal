@@ -16,7 +16,6 @@ export class FuseFooterComponent implements OnInit {
     ngOnInit() {
     }
     changeTo(url) {
-        alert("SSSS");
         this.mainServ.globalServ.goTo(url)
     }
 

@@ -230,14 +230,14 @@ export class EditFormComponent implements OnInit {
       value: ['fieldOfWorking', 'fieldOfWorkingSp'],
       icon: 'book',
       isNumber: false,
-      fxFlex: 90
+      fxFlex: 96
     },
     {
       viewValue: 'Add_Edit_Form.STEP_3.REDYPAID',
       value: ['relatedEdYearsPaid', 'relatedEdYearsPaidSp'],
       icon: 'book',
       isNumber: true,
-      fxFlex: 23
+      fxFlex: 24
 
     },
     {

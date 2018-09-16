@@ -235,14 +235,14 @@ export class AdviceFormComponent implements OnInit {
       value: ['fieldOfWorking', 'fieldOfWorkingSp'],
       icon: 'book',
       isNumber: false,
-      fxFlex: 90
+      fxFlex: 98
     },
     {
       viewValue: 'Add_Edit_Form.STEP_3.REDYPAID',
       value: ['relatedEdYearsPaid', 'relatedEdYearsPaidSp'],
       icon: 'book',
       isNumber: true,
-      fxFlex: 23
+      fxFlex: 24
 
     },
     {
@@ -567,7 +567,7 @@ export class AdviceFormComponent implements OnInit {
 
     // this.addDegree();
     // this.addWork();
-    this.addForm(true)
+    // this.addForm(true)
     console.log(this.formGroup, this.formArray);
 
   }
