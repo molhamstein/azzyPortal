@@ -42,18 +42,6 @@
           <span>{{ 'User.USERS.USERNAME' | translate }}</span>
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="primarycolor">
-        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-          <span>{{ 'User.USERS.PRIMARYCOLOR' | translate }}</span>
-        </ng-template>
-        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          <div class="circleColor" [ngStyle]="{'background-color':row.primarycolor}"></div>
-          <!--<mat-chip-list *ngIf="row.status=='contracts'">
-            <mat-chip style="background-color:green" selected="true">{{row.status}}</mat-chip>
-          </mat-chip-list>-->
-
-        </ng-template>
-      </ngx-datatable-column>
 
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Status">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
@@ -68,6 +56,20 @@
           </mat-chip-list>
         </ng-template>
       </ngx-datatable-column>
+
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="primarycolor">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'User.USERS.PRIMARYCOLOR' | translate }}</span>
+        </ng-template>
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <div class="circleColor" [ngStyle]="{'background-color':row.primarycolor}"></div>
+          <!--<mat-chip-list *ngIf="row.status=='contracts'">
+            <mat-chip style="background-color:green" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>-->
+
+        </ng-template>
+      </ngx-datatable-column>
+
 
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="secondarycolor">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">

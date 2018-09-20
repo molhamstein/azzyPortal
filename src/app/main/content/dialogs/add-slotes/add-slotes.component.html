@@ -21,13 +21,13 @@
             formControlName="startDate">
           <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #startDatePicker></mat-datepicker>
-          <mat-error>This field is required</mat-error>
+          <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>-->
         <mat-form-field fxFlex="100">
           <input matInput [matDatepicker]="endDatePicker" placeholder="{{ 'Dialog.Add_Slotes.DATE' | translate }}" name="end" formControlName="date">
           <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #endDatePicker ></mat-datepicker>
-          <mat-error>This field is required</mat-error>
+          <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>
         <mat-form-field fxFlex="50">
           <!--<input >-->
@@ -47,7 +47,7 @@
           <input matInput formControlName="endTime" [matTimepicker]="picker" placeholder="{{ 'Dialog.Add_Slotes.ENDTIME' | translate }}">
           <mat-timepicker-toggle matSuffix [for]="picker"></mat-timepicker-toggle>
           <mat-timepicker #picker color="primary"></mat-timepicker>
-          <mat-error>This field is required</mat-error>
+          <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>-->
 
         <mat-form-field class="w-100-p">
@@ -57,12 +57,12 @@
             </mat-option>
           </mat-select>
           <mat-icon matSuffix>person</mat-icon>
-          <mat-error>This field is required</mat-error>
+          <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>
         <mat-form-field class="w-100-p">
           <input matInput name="location" formControlName="location" placeholder="{{ 'Dialog.Add_Slotes.LOCATION' | translate }}" required>
           <mat-icon matSuffix>place</mat-icon>
-          <mat-error>This field is required</mat-error>
+          <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>
       </div>
     </form>

@@ -51,28 +51,28 @@
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsi" required>
                 <mat-icon matSuffix>person</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsi" required>
                 <mat-icon matSuffix>people</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglish" required>
                 <mat-icon matSuffix>person</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglish" required>
                 <mat-icon matSuffix>people</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
 
@@ -85,10 +85,11 @@
                 <mat-icon matSuffix>email</mat-icon>
 
                 <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
-                  Please enter a valid email address
+                  {{ 'Global.ERRORVALIDEMAIL' | translate }}
+
                 </mat-error>
                 <mat-error *ngIf="formArray?.get([0,'email']).hasError('required')">
-                  {{ 'ERROR_MESSAGES.REQUIRED' |translate }}
+                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}
                 </mat-error>
               </mat-form-field>
 
@@ -116,7 +117,7 @@
                   formControlName="dateOfBirthPer" required>
                 <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
@@ -127,7 +128,7 @@
                 </mat-select>
 
                 <mat-icon matSuffix>wc</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
@@ -165,28 +166,28 @@
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsiSp" required>
                 <mat-icon matSuffix>person</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp" required>
                 <mat-icon matSuffix>people</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp" required>
                 <mat-icon matSuffix>person</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
                 <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp" required>
                 <mat-icon matSuffix>people</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
 
@@ -199,10 +200,10 @@
                 <mat-icon matSuffix>email</mat-icon>
 
                 <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
-                  Please enter a valid email address
+                  {{ 'Global.ERRORVALIDEMAIL' | translate }}
                 </mat-error>
                 <mat-error *ngIf="formArray?.get([0,'email']).hasError('required')">
-                  {{ 'ERROR_MESSAGES.REQUIRED' |translate }}
+                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}
                 </mat-error>
               </mat-form-field>
 
@@ -229,7 +230,7 @@
                   formControlName="dateOfBirthPerSp" required>
                 <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
@@ -240,7 +241,7 @@
                 </mat-select>
 
                 <mat-icon matSuffix>wc</mat-icon>
-                <mat-error>This field is required</mat-error>
+                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">

@@ -20,14 +20,18 @@
 
             <input matInput placeholder="{{ 'User.ADDEDITUSER.EMAIL' | translate }}" formControlName="email" required>
             <mat-icon matSuffix>email</mat-icon>
-            <mat-error>This field is required</mat-error>
+            <mat-error *ngIf="editUserForm.hasError('email', 'email') && !editUserForm.hasError('required','email')">
+              {{ 'Global.ERRORVALIDEMAIL' | translate }}
+            </mat-error>
+            <mat-error *ngIf="editUserForm.hasError('required','email')">{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
+
           </mat-form-field>
 
           <mat-form-field fxFlex="24">
 
             <input matInput placeholder="{{ 'User.ADDEDITUSER.USERNAME' | translate }}" formControlName="username" required>
             <mat-icon matSuffix>people</mat-icon>
-            <mat-error>This field is required</mat-error>
+            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
           </mat-form-field>
 
 
@@ -37,7 +41,7 @@
 
             <input matInput type="password" placeholder="{{ 'User.ADDEDITUSER.PASSWORD' | translate }}" formControlName="password" required>
             <mat-icon matSuffix>remove_red_eye</mat-icon>
-            <mat-error>This field is required</mat-error>
+            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
           </mat-form-field>
 
 
@@ -48,7 +52,7 @@
               </mat-option>
             </mat-select>
             <mat-icon matSuffix>people</mat-icon>
-            <mat-error>This field is required</mat-error>
+            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
           </mat-form-field>
 
 

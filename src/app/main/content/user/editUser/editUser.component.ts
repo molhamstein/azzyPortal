@@ -51,7 +51,7 @@ export class editUserComponent implements OnInit {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         // this.form = data;
         this.editUserForm = new FormGroup({
-          email: new FormControl(data['email'], Validators.required),
+          email: new FormControl(data['email'],  [Validators.required, Validators.email]),
           type: new FormControl(data['type'], Validators.required),
           username: new FormControl(data['username'], Validators.required),
           password: new FormControl('', Validators.required),

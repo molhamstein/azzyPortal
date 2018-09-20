@@ -10,7 +10,7 @@ export class NavigationModel {
                 'children': [
                     {
                         'id': 'calendar',
-                        'title': 'NAV.CALENDAR',
+                        'title': 'Nav.CALENDAR',
                         'type': 'item',
                         'icon': 'today',
                         'url': '/calendar'
@@ -24,7 +24,7 @@ export class NavigationModel {
                     },
                     {
                         'id': 'users',
-                        'title': 'Client Calendar',
+                        'title': 'Nav.USERS',
                         'type': 'item',
                         'icon': 'supervised_user_circle',
                         'url': '/users'

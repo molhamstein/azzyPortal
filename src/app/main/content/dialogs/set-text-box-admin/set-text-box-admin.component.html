@@ -9,7 +9,7 @@
 
       <textarea matInput placeholder="" [(ngModel)]="text"></textarea>
       <mat-icon matSuffix>person</mat-icon>
-      <mat-error>This field is required</mat-error>
+      <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
     </mat-form-field>-->
 
       <!--<mat-form-field class="example-full-width">
@@ -26,7 +26,7 @@
 
         <textarea matInput placeholder="" formControlName="textBoxAdmin"></textarea>
         <mat-icon matSuffix>person</mat-icon>
-        <mat-error>This field is required</mat-error>
+        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>
 
       <mat-form-field fxFlex="100" *ngIf="isWithID">
@@ -37,7 +37,7 @@
         </mat-select>
 
         <mat-icon matSuffix>wc</mat-icon>
-        <mat-error>This field is required</mat-error>
+        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>
 
     </div>

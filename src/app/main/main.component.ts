@@ -4,8 +4,8 @@ import { FuseConfigService } from '../core/services/config.service';
 import { FuseTranslationLoaderService } from '../core/services/translation-loader.service';
 import { Platform } from '@angular/cdk/platform';
 import { DOCUMENT } from '@angular/common';
-import { locale as english } from './i18n/en';
-import { locale as persian } from './i18n/fa';
+import { locale as english } from './content/languageFiles/en';
+import { locale as persian } from './content/languageFiles/fa';
 
 @Component({
     selector     : 'fuse-main',

@@ -220,6 +220,14 @@ export const locale = {
                 'EDIT': 'Edit',
                 'PASSWORD': 'Password'
             }
+        },
+        'Nav': {
+            'CALENDAR': 'Calender',
+            'USERS': 'Users'
+        },
+        'Global': {
+            'ERRORFIELDREQUIRED': 'this field is required',
+            'ERRORVALIDEMAIL': 'Please enter a valid email address'
         }
     }
 };
