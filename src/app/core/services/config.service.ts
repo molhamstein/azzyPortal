@@ -4,8 +4,7 @@ import { NavigationStart, Router } from '@angular/router';
 import { Platform } from '@angular/cdk/platform';
 
 @Injectable()
-export class FuseConfigService
-{
+export class FuseConfigService {
     settings: any;
     defaultSettings: any;
     onSettingsChanged: BehaviorSubject<any>;
@@ -17,33 +16,31 @@ export class FuseConfigService
     constructor(
         private router: Router,
         public platform: Platform
-    )
-    {
+    ) {
         // Set the default settings
         // by fadi (optionsBtn)
         this.defaultSettings = {
-            optionsBtn : 'show',
-            layout          : {
-                navigation      : 'left', // 'right', 'left', 'top', 'none'
+            optionsBtn: 'show',
+            layout: {
+                navigation: 'left', // 'right', 'left', 'top', 'none'
                 navigationFolded: false, // true, false
-                toolbar         : 'below', // 'above', 'below', 'none'
-                footer          : 'below', // 'above', 'below', 'none'
-                mode            : 'fullwidth' // 'boxed', 'fullwidth'
+                toolbar: 'below', // 'above', 'below', 'none'
+                footer: 'below', // 'above', 'below', 'none'
+                mode: 'fullwidth' // 'boxed', 'fullwidth'
             },
-            colorClasses    : {
+            colorClasses: {
                 toolbar: 'mat-white-500-bg',
-                navbar : 'mat-fuse-dark-700-bg',
-                footer : 'mat-fuse-dark-900-bg'
+                navbar: 'mat-fuse-dark-700-bg',
+                footer: 'mat-fuse-dark-900-bg'
             },
             customScrollbars: true,
-            routerAnimation : 'fadeIn' // fadeIn, slideUp, slideDown, slideRight, slideLeft
+            routerAnimation: 'fadeIn' // fadeIn, slideUp, slideDown, slideRight, slideLeft
         };
 
         /**
          * Disable Custom Scrollbars if Browser is Mobile
          */
-        if ( this.platform.ANDROID || this.platform.IOS )
-        {
+        if (this.platform.ANDROID || this.platform.IOS) {
             this.defaultSettings.customScrollbars = false;
         }
 
@@ -53,9 +50,8 @@ export class FuseConfigService
         // Reload the default settings on every navigation start
         router.events.subscribe(
             (event) => {
-                if ( event instanceof NavigationStart )
-                {
-                    this.setSettings({layout: this.defaultSettings.layout});
+                if (event instanceof NavigationStart) {
+                    this.setSettings({ layout: this.defaultSettings.layout });
                 }
             }
         );
@@ -68,8 +64,9 @@ export class FuseConfigService
      * Sets settings
      * @param settings
      */
-    setSettings(settings)
-    {
+    setSettings(settings) {
+        if (settings == {})
+            settings = this.defaultSettings;
         // Set the settings from the given object
         this.settings = Object.assign({}, this.settings, settings);
 

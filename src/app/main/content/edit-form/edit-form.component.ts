@@ -399,11 +399,6 @@ export class EditFormComponent implements OnInit {
     private _formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private mainServ: MainService) {
-    this.fuseSettings = this.fuseConfig.settings;
-    this.fuseSettings.optionsBtn = 'none';
-    this.fuseSettings.layout.navigation = 'none';
-    this.fuseSettings.layout.toolbar = 'none';
-    this.fuseSettings.layout.footer = 'none';
 
     for (var index = 0; index <= 100; index++) {
       this.years.push(1960 + index);
@@ -415,8 +410,6 @@ export class EditFormComponent implements OnInit {
         footer: 'none'
       }
     });
-
-    // this.fuseConfig.setSettings(this.fuseSettings);
 
     this.translationLoader.loadTranslations(english, persian);
 
@@ -657,6 +650,10 @@ export class EditFormComponent implements OnInit {
       }
     })
     console.log(this.sendArray);
+  }
+
+  goBack() {
+    this.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
   }
 
 }

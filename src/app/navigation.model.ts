@@ -1,60 +1,65 @@
-export class NavigationModel
-{
+export class NavigationModel {
     public model: any[];
 
-    constructor()
-    {
+    constructor() {
         this.model = [
             {
-                'id'      : 'applications',
-                'title'   : 'Calendar',
-                'type'    : 'group',
+                'id': 'applications',
+                'title': 'Calendar',
+                'type': 'group',
                 'children': [
                     {
-                        'id'   : 'calendar',
+                        'id': 'calendar',
                         'title': 'NAV.CALENDAR',
-                        'type' : 'item',
-                        'icon' : 'today',
-                        'url'  : '/calendar'
+                        'type': 'item',
+                        'icon': 'today',
+                        'url': '/calendar'
                     },
                     {
-                        'id'   : 'calendar',
+                        'id': 'calendar',
                         'title': 'Client Calendar',
-                        'type' : 'item',
-                        'icon' : 'today',
-                        'url'  : '/client-calendar'
+                        'type': 'item',
+                        'icon': 'today',
+                        'url': '/client-calendar'
+                    },
+                    {
+                        'id': 'users',
+                        'title': 'Client Calendar',
+                        'type': 'item',
+                        'icon': 'supervised_user_circle',
+                        'url': '/users'
                     },
                 ]
             },
-           
+
             {
-                'id'      : 'forms',
-                'title'   : 'FORMS.TITLE',
-                'type'    : 'group',
+                'id': 'forms',
+                'title': 'FORMS.TITLE',
+                'type': 'group',
                 'children': [
                     {
-                        'id'   : 'forms',
+                        'id': 'forms',
                         'title': 'Form.UNPROCESSED_FORMS.TITLE',
-                        'type' : 'item',
-                        'icon' : 'email',
-                        'url'  : '/unprocessed',
-                        
+                        'type': 'item',
+                        'icon': 'email',
+                        'url': '/unprocessed',
+
                     },
                     {
-                        'id'   : 'forms',
+                        'id': 'forms',
                         'title': 'Form.PROCESSED_FORMS.TITLE',
-                        'type' : 'item',
-                        'icon' : 'email',
-                        'url'  : '/processed',
-                        
+                        'type': 'item',
+                        'icon': 'email',
+                        'url': '/processed',
+
                     },
                     {
-                        'id'   : 'forms',
+                        'id': 'forms',
                         'title': 'Form.CONTRACTED_FORMS.TITLE',
-                        'type' : 'item',
-                        'icon' : 'email',
-                        'url'  : '/contracted',
-                        
+                        'type': 'item',
+                        'icon': 'email',
+                        'url': '/contracted',
+
                     }
                 ]
             },

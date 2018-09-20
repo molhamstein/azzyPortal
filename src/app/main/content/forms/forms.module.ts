@@ -13,8 +13,8 @@ const routes = [
     path: 'unprocessed',
     component: UnprocessedFormsComponent,
     canActivate: [AuthGuardService]
-  
-},
+
+  },
   {
     path: 'processed',
     component: ProcessedFormsComponent,
@@ -24,7 +24,7 @@ const routes = [
     path: 'contracted',
     component: ContractedFormsComponent,
     canActivate: [AuthGuardService]
-    
+
   },
   {
     path: 'show-form/:id',
@@ -32,6 +32,8 @@ const routes = [
     canActivate: [AuthGuardService]
 
   }
+  , { path: '', redirectTo: '/unprocessed', pathMatch: 'full' },
+
 ];
 
 @NgModule({

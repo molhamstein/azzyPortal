@@ -1,4 +1,3 @@
-import { FuseConfigService } from './../../../../core/services/config.service';
 import { DialogServiceService } from './../../../../core/services/dialog-service.service';
 import { SetTextBoxAdminComponent } from './../../dialogs/set-text-box-admin/set-text-box-admin.component';
 import { MatDialog } from '@angular/material';
@@ -12,26 +11,22 @@ import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
-  selector: 'app-unprocessed-forms',
-  templateUrl: './unprocessed-forms.component.html',
-  styleUrls: ['./unprocessed-forms.component.scss']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
-export class UnprocessedFormsComponent implements OnInit {
+export class usersComponent implements OnInit {
   rows = [];
   count: number = 0;
   offset: number = 0;
   limit: number = 5;
 
-  constructor(
-    private translationLoader: FuseTranslationLoaderService,
-    private translateService: TranslateService,
-    private mainServ: MainService,
-    private dialogSer: DialogServiceService,
-    private fuseConfig: FuseConfigService,
+  constructor(private translationLoader: FuseTranslationLoaderService
+    , private translateService: TranslateService
+    , private mainServ: MainService,
+    private dialogServ:DialogServiceService,
     public dialog: MatDialog) {
     this.translationLoader.loadTranslations(english, persian);
-        this.fuseConfig.setSettings({});
-
   }
 
 
@@ -39,7 +34,7 @@ export class UnprocessedFormsComponent implements OnInit {
   setPage(offset, limit) {
 
     // this.mainServ.APIServ.get("ADs?filter[limit]=" + limit + "&filter[skip]=" + offset * limit).subscribe((data: any) => {
-    this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"unprocessed\"},\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
+    this.mainServ.APIServ.get("staffusers?filter={\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
 
         this.rows = data;
@@ -66,7 +61,7 @@ export class UnprocessedFormsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.mainServ.APIServ.get("forms/count?where={\"status\":\"unprocessed\"}").subscribe((data: any) => {
+    this.mainServ.APIServ.get("staffusers/count").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.count = data['count'];
         this.setPage(this.offset, this.limit);
@@ -87,30 +82,22 @@ export class UnprocessedFormsComponent implements OnInit {
     if (pageName == 'view') {
       url = 'show-form/' + id
     } else if (pageName == 'edit') {
-      url = 'edit-form/' + id
+      url = 'editUser/' + id
 
     }
-    this.mainServ.setBackUrl('unprocessed');
     this.mainServ.globalServ.goTo(url)
   }
 
-  changeStatus(newStatus, id, name, text) {
-    var isWithID = newStatus == "consultation" ? true : false;
-
-    const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
-      width: '500px',
-      data: { 'textBoxMessage': text, 'isWithID': isWithID }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        result['status'] = newStatus;
-        this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, result)
-      }
-    });
+  addUser() {
+    this.mainServ.globalServ.goTo("addUser")
   }
 
-  // openDialog(status, id,name) {
-  //     this.mainServ.globalServ.confirmationMessage('are youe sure you want change '+name+'\'s form to '+status,"forms/" +id,{'status':status})
-  //   }
+  changeStatus(newStatus, id, name) {
+    this.dialogServ.confirmationMessage('are youe sure you want change ' + name + ' user to ' + newStatus, "staffusers/" + id, { 'status': newStatus })
+
+  }
+
+  // openDialog(status, id, name) {
+  //   this.mainServ.globalServ.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + status, "forms/" + id, { 'status': status })
+  // }
 }

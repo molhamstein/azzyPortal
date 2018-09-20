@@ -380,4 +380,8 @@ export class ShowFormComponent implements OnInit {
 
   }
 
+
+  goBack() {
+    this.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
+  }
 }

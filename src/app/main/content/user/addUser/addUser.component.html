@@ -1,0 +1,76 @@
+<div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header mat-accent-bg p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
+      <div class="h2 mt-16">{{'User.ADDUSERS.TITLE' | translate }}</div>
+    </div>
+
+
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content p-24">
+    <form [formGroup]="addUserForm">
+      <div style="width: 100%;">
+        <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+
+          <mat-form-field fxFlex="24">
+
+            <input matInput placeholder="{{ 'User.ADDUSERS.EMAIL' | translate }}" formControlName="email" required>
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error>This field is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="24">
+
+            <input matInput placeholder="{{ 'User.ADDUSERS.USERNAME' | translate }}" formControlName="username" required>
+            <mat-icon matSuffix>people</mat-icon>
+            <mat-error>This field is required</mat-error>
+          </mat-form-field>
+
+
+
+
+          <mat-form-field fxFlex="24">
+
+            <input matInput type="password" placeholder="{{ 'User.ADDUSERS.PASSWORD' | translate }}" formControlName="password" required>
+            <mat-icon matSuffix>remove_red_eye</mat-icon>
+            <mat-error>This field is required</mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field fxFlex="24">
+            <mat-select formControlName="type" placeholder="{{ 'User.ADDUSERS.TYPE' | translate }}" required>
+              <mat-option *ngFor="let oneType of types" [value]="oneType.value">
+                {{ oneType.viewValue | translate}}
+              </mat-option>
+            </mat-select>
+            <mat-icon matSuffix>people</mat-icon>
+            <mat-error>This field is required</mat-error>
+          </mat-form-field>
+
+
+          <!--<div >-->
+
+          <div *ngIf="addUserForm.value.type=='consultant'" fxFlex="32">
+            <h3 style="float: left;"> {{ 'User.ADDUSERS.PRIMARYCOLOR' | translate }}</h3>
+            <div style="width: 25px;height: 25px;border-radius: 50%;margin-left: 200px;" [style.background-color]="primaryColor" [cpPosition]="'bottom'"
+              [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="primaryColor"></div>
+          </div>
+
+          <div fxFlex="32" *ngIf="addUserForm.value.type=='consultant'">
+            <h3 style="float: left;"> {{ 'User.ADDUSERS.SECONDARYCOLOR' | translate }}</h3>
+            <div style="width: 25px;height: 25px;border-radius: 50%;margin-left: 200px;" [style.background-color]="secondryColor" [cpPosition]="'bottom'"
+              [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="secondryColor"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="float: right;">
+        <button mat-button (click)="add()" cdkFocusInitial [disabled]="addUserForm.invalid">{{'User.ADDUSERS.ADD' | translate}}</button>
+      </div>
+    </form>
+  </div>
+</div>

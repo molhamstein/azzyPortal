@@ -1,3 +1,4 @@
+import { FuseConfigService } from './../../../../core/services/config.service';
 import { SetTextBoxAdminComponent } from './../../dialogs/set-text-box-admin/set-text-box-admin.component';
 import { MatDialog } from '@angular/material';
 import { MainService } from './../../../../core/services/main.service';
@@ -23,8 +24,11 @@ export class ContractedFormsComponent implements OnInit {
   constructor(private translationLoader: FuseTranslationLoaderService
     , private translateService: TranslateService
     , private mainServ: MainService,
+    private fuseConfig: FuseConfigService,
     public dialog: MatDialog) {
     this.translationLoader.loadTranslations(english, persian);
+    this.fuseConfig.setSettings({});
+
   }
 
 
@@ -83,6 +87,7 @@ export class ContractedFormsComponent implements OnInit {
       url = 'edit-form/' + id
 
     }
+    this.mainServ.setBackUrl('contracted');
     this.mainServ.globalServ.goTo(url)
   }
 

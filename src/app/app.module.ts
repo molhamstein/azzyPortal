@@ -1,3 +1,4 @@
+import { ColorPickerModule } from 'ngx-color-picker';
 import { AddSlotesComponent } from './main/content/dialogs/add-slotes/add-slotes.component';
 import { ResponeFormComponent } from './main/content/dialogs/respone-form/respone-form.component';
 import { ViewAppointmentComponent } from './main/content/dialogs/view-appointment/view-appointment.component';
@@ -60,6 +61,7 @@ const appRoutes: Routes = [
         TranslateModule.forRoot(),
         FuseMainModule,
         MatDialogModule,
+        ColorPickerModule
         // OwlDateTimeModule,
         // OwlNativeDateTimeModule,
     ],

@@ -48,6 +48,7 @@
     "ngx-color-picker": "5.0.4",
     "ngx-cookie-service": "1.0.9",
     "ngx-material-timepicker": "2.2.3",
+    "ngx-ttitan-color-picker": "2.0.6",
     "perfect-scrollbar": "1.2.0",
     "rxjs": "5.5.2",
     "rxjs-compat": "6.2.2",

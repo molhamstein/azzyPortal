@@ -3,12 +3,15 @@
   <!-- HEADER -->
   <div class="header mat-accent-bg p-24 h-160" fxLayout="row" fxLayoutAlign="start center">
     <div fxLayout="column" fxLayoutAlign="center start">
-      <div class="black-fg" fxLayout="row" fxLayoutAlign="start center">
+      <!--<div class="black-fg" fxLayout="row" fxLayoutAlign="start center">
         <mat-icon class="secondary-text s-16">home</mat-icon>
         <mat-icon class="secondary-text s-16 rtl-mirror">chevron_right</mat-icon>
         <span class="secondary-text">User Interface</span>
+      </div>-->
+
+      <div class="h1 mt-16">
+        <button mat-button (click)="goBack()" cdkFocusInitial>{{'Add_Edit_Form.BACK' | translate}}</button>
       </div>
-      <div class="h1 mt-16">{{ 'Add_Edit_Form.TITLE' | translate }}</div>
     </div>
   </div>
   <!-- / HEADER -->
@@ -634,7 +637,7 @@
                 </mat-form-field>
               </div>
               <div fxFlex="30"></div>
-              
+
             </div>
 
             <div class="pt-24 pb-24">

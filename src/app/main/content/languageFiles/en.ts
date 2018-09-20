@@ -65,6 +65,7 @@ export const locale = {
             'TITLE': 'Advice Form',
             'APPLICANT': 'Applicant for immigration to Australia',
             'SPOUSE': 'Spouse',
+            'BACK': 'Back',
             'STEP_0': {
                 'LABEL': 'Specifications',
                 'ENAME': 'English Name',
@@ -176,11 +177,11 @@ export const locale = {
                 'LOCATION': 'Location',
                 'STARTTIME': 'Start Time',
                 'ENDTIME': 'End Time',
-                'DATE':'Date',
+                'DATE': 'Date',
                 'CONSULRANT': 'consultant',
-                'title':'Appointment Slotes',
-                'SAVE':'Save',
-                'SAVEANDCLOSE':'Save And Close'
+                'title': 'Appointment Slotes',
+                'SAVE': 'Save',
+                'SAVEANDCLOSE': 'Save And Close'
             }
         },
         'AUTH': {
@@ -189,6 +190,34 @@ export const locale = {
                 'FORGETPASSWORD': 'Forgot Password?',
                 'LOGIN': 'Login',
                 'EMAIL': 'Email',
+                'PASSWORD': 'Password'
+            }
+        },
+        'User': {
+            'USERS': {
+                'TITLE': 'Users',
+                'EMAIL': 'Email',
+                'TYPE': 'Type',
+                'USERNAME': 'User Name',
+                'PRIMARYCOLOR': 'Primary Color',
+                'SECONDARYCOLOR': 'Secondary Color',
+                'EDIT': 'Edit',
+                'ACTIVE': 'Active',
+                'DEACTIVE': 'Deactive'
+            },
+            'ADDEDITUSER': {
+                'TITLE': 'Add Users',
+                'EMAIL': 'Email',
+                'TYPE': 'Type',
+                'USERNAME': 'User Name',
+                'CONSUTANT': 'consultant',
+                'MANAGER': 'manager',
+                'SECRETARY': 'secretary',
+                'ADMINSTRATOR': 'adminstrator',
+                'PRIMARYCOLOR': 'Primary Color',
+                'SECONDARYCOLOR': 'Secondary Color',
+                'ADD': 'Add',
+                'EDIT': 'Edit',
                 'PASSWORD': 'Password'
             }
         }

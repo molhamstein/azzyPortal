@@ -1,3 +1,4 @@
+import { FuseConfigService } from './../../../../core/services/config.service';
 import { MatDialog } from '@angular/material';
 import { DialogServiceService } from './../../../../core/services/dialog-service.service';
 import { SetTextBoxAdminComponent } from './../../dialogs/set-text-box-admin/set-text-box-admin.component';
@@ -25,9 +26,11 @@ export class ProcessedFormsComponent implements OnInit {
     private mainServ: MainService,
     private translateService: TranslateService,
     private dialogSer: DialogServiceService,
+    private fuseConfig: FuseConfigService,
     public dialog: MatDialog) {
 
     this.translationLoader.loadTranslations(english, persian);
+    this.fuseConfig.setSettings({});
   }
 
 
@@ -88,6 +91,7 @@ export class ProcessedFormsComponent implements OnInit {
       url = 'edit-form/' + id
 
     }
+    this.mainServ.setBackUrl('processed');
     this.mainServ.globalServ.goTo(url)
   }
 

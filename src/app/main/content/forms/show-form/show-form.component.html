@@ -9,7 +9,9 @@
   <!-- HEADER -->
   <div class="header mat-accent-bg p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
     <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
-      <div class="h2 mt-16">forms</div>
+      <div class="h2 mt-16">
+        <button mat-button (click)="goBack()" cdkFocusInitial >{{'Add_Edit_Form.BACK' | translate}}</button>
+      </div>
     </div>
 
 
