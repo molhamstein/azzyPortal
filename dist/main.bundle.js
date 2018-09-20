@@ -15561,7 +15561,7 @@ var NavigationModel = (function () {
                     },
                     {
                         'id': 'users',
-                        'title': 'Client Calendar',
+                        'title': 'Users',
                         'type': 'item',
                         'icon': 'supervised_user_circle',
                         'url': '/users'
