@@ -37,7 +37,7 @@
           <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NAME' | translate }}</span>
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Consultant">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="consultant.username">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'Form.PROCESSED_FORMS.CONSULTANT' | translate }}</span>
         </ng-template>
@@ -91,33 +91,29 @@
               <span>{{'Form.PROCESSED_FORMS.SHOW_FORM' | translate}}</span>
             </button>
 
-            <button mat-menu-item (click)="changeStatus('unprocessed',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button mat-menu-item (click)="changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>sync</mat-icon>
               <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>
             </button>
-            <button *ngIf="row.status!='not eligible'" mat-menu-item (click)="changeStatus('not eligible',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="row.status!='not eligible'" mat-menu-item (click)="changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>cancel</mat-icon>
               <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>
             </button>
-            <button *ngIf="row.status!='more info'" mat-menu-item (click)="changeStatus('more info',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="row.status!='more info'" mat-menu-item (click)="changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>more_horiz</mat-icon>
               <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>
             </button>
-            <button *ngIf="row.status!='consultation'" mat-menu-item (click)="changeStatus('consultation',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="row.status!='consultation'" mat-menu-item (click)="changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>group</mat-icon>
               <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>
             </button>
-            <button *ngIf="row.status!='contracts'" mat-menu-item (click)="changeStatus('contracts',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="row.status!='contracts'" mat-menu-item (click)="changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>check</mat-icon>
               <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>
             </button>
             <button mat-menu-item (click)="goTo('edit',row.id)">
               <mat-icon>edit</mat-icon>
               <span>{{'Form.PROCESSED_FORMS.EDIT' | translate}}</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon>delete</mat-icon>
-              <span>{{'Form.PROCESSED_FORMS.DELETE' | translate}}</span>
             </button>
           </mat-menu>
 

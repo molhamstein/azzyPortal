@@ -176,7 +176,7 @@ export class CalendarComponent implements OnInit {
         for (let index = 0; index < cell['eventGroups'].length; index++) {
           var xx = cell['eventGroups'][index][0]
           style.innerHTML += '.badge-' + xx + '{ background-color:' + this.getColor(xx).primary + '; color: white;}'
-          debugger;
+          
           this.flag = false;
         }
         document.getElementsByTagName('head')[0].appendChild(style);
@@ -207,7 +207,7 @@ export class CalendarComponent implements OnInit {
   }
 
   getColor(cons) {
-    debugger;
+    
     for (let index = 0; index < this.consultants.length; index++) {
       if (this.consultants[index].id == cons) {
         var x = { primary: '#' + this.consultants[index].primarycolor, secondary: '#' + this.consultants[index].secondarycolor };
@@ -282,7 +282,7 @@ export class CalendarComponent implements OnInit {
           this.events.push(x);
         });
       });
-      debugger;
+      
     });
   }
 }

@@ -57,8 +57,8 @@ export const locale = {
                 'MORE_INFO': 'More Info',
                 'REJECT': 'Reject',
                 'CONSULTATION': 'Consultation',
-                'CONTRACT': 'Contract'
-
+                'CONTRACT': 'Contract',
+                'UNPROCESSED': 'Unprocessed',
             }
         },
         'Add_Edit_Form': {
@@ -131,19 +131,23 @@ export const locale = {
                 'TO': 'To'
             },
             'STEP_5': {
+                'LABEL': 'Health',
+                'SIGNIFICANT': 'Significant Current Sickness',
+                'SURGERY': 'Surgery Past Or Future',
+            },
+            'STEP_6': {
                 'LABEL': 'Relatives in Australia',
                 'CITIZEN': 'Citizen',
                 'PERMANENTRES': 'Permanent Res',
                 'TEMPORARYRES': 'Temporary Res',
                 'STUDENTASSYLUM': 'Student-Assylum',
-                'SIGNIFICANT': 'Significant Current Sickness',
-                'SURGERY': 'Surgery Past Or Future',
+
                 'RELATION': 'Australia Family Relation',
                 'LIVINGSTATE': 'Australia Living State',
                 'LIVINGCITY': 'Australia Living City',
                 'VISATYPE': 'Australia Visa Type'
             },
-            'STEP_6': {
+            'STEP_7': {
                 'LABEL': 'Admin Box',
                 'TBCLIENT': 'text Box Client',
                 'TBADMIN': 'text Box Admin',
@@ -157,6 +161,7 @@ export const locale = {
             'VIEW': 'view',
             'USE': 'Use',
             'TIME': 'Time',
+            'DATE': 'Date',
             'LOCATION': 'Location',
             'AVAILABLE': 'Available',
             'NOTAVAILABLE': 'Not Available',
@@ -168,6 +173,12 @@ export const locale = {
                 'LOCATION': 'location',
                 'DONE': 'Done',
                 'USE': 'Use'
+            },
+            'Reset_Password': {
+                'TITLE': 'Reset Password',
+                'RESET': 'Reset',
+                'NEWPASSWORD': 'New Password',
+                'OLDPASSWORD': 'Old Password',
             },
             'Set_Text_Box': {
                 'TITLE': 'Text Box Message',
@@ -203,7 +214,8 @@ export const locale = {
                 'SECONDARYCOLOR': 'Secondary Color',
                 'EDIT': 'Edit',
                 'ACTIVE': 'Active',
-                'DEACTIVE': 'Deactive'
+                'DEACTIVE': 'Deactive',
+                'EDITPASSWORD': 'Edit Password'
             },
             'ADDEDITUSER': {
                 'TITLE': 'Add Users',

@@ -1,3 +1,4 @@
+import { DialogServiceService } from './../../../../core/services/dialog-service.service';
 import { FuseConfigService } from './../../../../core/services/config.service';
 import { SetTextBoxAdminComponent } from './../../dialogs/set-text-box-admin/set-text-box-admin.component';
 import { MatDialog } from '@angular/material';
@@ -25,6 +26,7 @@ export class ContractedFormsComponent implements OnInit {
     , private translateService: TranslateService
     , private mainServ: MainService,
     private fuseConfig: FuseConfigService,
+    private dialogSer: DialogServiceService,
     public dialog: MatDialog) {
     this.translationLoader.loadTranslations(english, persian);
     this.fuseConfig.setSettings({});
@@ -34,10 +36,13 @@ export class ContractedFormsComponent implements OnInit {
 
 
   setPage(offset, limit) {
+    var urlsArray = ['forms/changeStausToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
+    this.mainServ.loaderSer.display(true);
 
     // this.mainServ.APIServ.get("ADs?filter[limit]=" + limit + "&filter[skip]=" + offset * limit).subscribe((data: any) => {
     this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"contracts\"},\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.mainServ.loaderSer.display(false);
 
         this.rows = data;
         // this.loadingIndicator = false;
@@ -61,11 +66,14 @@ export class ContractedFormsComponent implements OnInit {
     this.setPage(this.offset, this.limit);
   }
 
+  inisilaize() {
+    this.mainServ.loaderSer.display(true);
 
-  ngOnInit() {
     this.mainServ.APIServ.get("forms/count?where={\"status\":\"contracts\"}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.count = data['count'];
+        this.mainServ.loaderSer.display(false);
+
         this.setPage(this.offset, this.limit);
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
@@ -78,6 +86,9 @@ export class ContractedFormsComponent implements OnInit {
     });
   }
 
+  ngOnInit() {
+    this.inisilaize();
+  }
 
   goTo(pageName, id) {
     let url = ""
@@ -91,18 +102,28 @@ export class ContractedFormsComponent implements OnInit {
     this.mainServ.globalServ.goTo(url)
   }
 
-  // changeStatus(newStatus, id, name, text) {
-  //   const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
-  //     width: '500px',
-  //     data: { textBoxMessage: text }
-  //   });
+  changeStatus(newStatus, urlIndex, id, name, text) {
+    var mainThis = this;
+    var isWithID = newStatus == "consultation" ? true : false;
+    var urlsArray = ['forms/changeStausToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     if (result) {
-  //       this.mainServ.globalServ.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus,'textBoxAdmin': result})
-  //     }
-  //   });
-  // }
+    const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
+      width: '500px',
+      data: { 'textBoxMessage': text, 'isWithID': isWithID }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        result['formId'] = id;
+        if (urlIndex == 1)
+          result['statusName'] = newStatus;
+        this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+          mainThis.inisilaize()
+        }, 'put')
+      }
+    });
+  }
+
 
   // openDialog(status, id,name) {
   //     this.mainServ.globalServ.confirmationMessage('are youe sure you want change '+name+'\'s form to '+status,"forms/" +id,{'status':status})

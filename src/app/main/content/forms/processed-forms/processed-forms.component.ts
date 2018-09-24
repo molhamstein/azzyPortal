@@ -37,13 +37,13 @@ export class ProcessedFormsComponent implements OnInit {
 
 
   setPage(offset, limit) {
-
-    // this.mainServ.APIServ.get("ADs?filter[limit]=" + limit + "&filter[skip]=" + offset * limit).subscribe((data: any) => {
-    this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":{\"neq\" : \"unprocessed\"}}, \"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
+    var urlsArray = ['forms/changeStausToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
+    this.mainServ.loaderSer.display(true);
+    this.mainServ.APIServ.get("forms?filter={\"include\": \"consultant\",\"where\":{\"status\":{\"neq\" : \"unprocessed\"}}, \"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.mainServ.loaderSer.display(false);
 
         this.rows = data;
-        // this.loadingIndicator = false;
 
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
@@ -59,18 +59,21 @@ export class ProcessedFormsComponent implements OnInit {
 
   onPage(event) {
     console.log('Page Event', event);
+    this.mainServ.loaderSer.display(true);
+
     this.offset = event.offset;
     this.limit = event.limit;
     this.setPage(this.offset, this.limit);
   }
 
 
-
-  ngOnInit() {
-    // ?filter={\"where\":{\"status\":\"unprocessed\"},\"order\": \"dateOfArr ASC\"}
+  inisilaize() {
+    this.mainServ.loaderSer.display(true);
     this.mainServ.APIServ.get("forms/count?where={\"status\":{\"neq\" : \"unprocessed\"}}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.count = data['count'];
+        this.mainServ.loaderSer.display(false);
+
         this.setPage(this.offset, this.limit);
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
@@ -81,6 +84,11 @@ export class ProcessedFormsComponent implements OnInit {
       }
 
     });
+  }
+
+  ngOnInit() {
+    this.inisilaize();
+
   }
 
   goTo(pageName, id) {
@@ -95,8 +103,10 @@ export class ProcessedFormsComponent implements OnInit {
     this.mainServ.globalServ.goTo(url)
   }
 
-  changeStatus(newStatus, id, name, text) {
+  changeStatus(newStatus, urlIndex, id, name, text) {
+    var mainThis = this;
     var isWithID = newStatus == "consultation" ? true : false;
+    var urlsArray = ['forms/changeStausToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
 
     const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
       width: '500px',
@@ -105,8 +115,13 @@ export class ProcessedFormsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        result['status'] = newStatus;
-        this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, result)
+
+        result['formId'] = id;
+        if (urlIndex == 1)
+          result['statusName'] = newStatus;
+        this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+          mainThis.inisilaize()
+        }, 'put')
       }
     });
   }

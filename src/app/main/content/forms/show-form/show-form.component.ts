@@ -283,26 +283,27 @@ export class ShowFormComponent implements OnInit {
     }
   ]
 
+
   visaType = [
     {
-      viewValue: 'Add_Edit_Form.STEP_5.CITIZEN',
+      viewValue: 'Add_Edit_Form.STEP_6.CITIZEN',
       value: 'Citizen'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.PERMANENTRES',
+      viewValue: 'Add_Edit_Form.STEP_6.PERMANENTRES',
       value: 'Permanent Res.'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.TEMPORARYRES',
+      viewValue: 'Add_Edit_Form.STEP_6.TEMPORARYRES',
       value: 'Temporary Res.'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.STUDENTASSYLUM',
+      viewValue: 'Add_Edit_Form.STEP_6.STUDENTASSYLUM',
       value: 'Student-Assylum'
     },
   ]
 
-  australiaFields = [
+  healthFields = [
     {
       viewValue: 'Add_Edit_Form.STEP_5.SIGNIFICANT',
       value: ['significantCurrentSickness', 'significantCurrentSicknessSp'],
@@ -312,19 +313,22 @@ export class ShowFormComponent implements OnInit {
       viewValue: 'Add_Edit_Form.STEP_5.SURGERY',
       value: ['surgeryPastOrFuture', 'surgeryPastOrFutureSp'],
       icon: 'book'
-    },
+    }
+  ]
+  australiaFields = [
+
     {
-      viewValue: 'Add_Edit_Form.STEP_5.RELATION',
+      viewValue: 'Add_Edit_Form.STEP_6.RELATION',
       value: ['australiaFamilyRelation', 'australiaFamilyRelationSp'],
       icon: 'book'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.LIVINGSTATE',
+      viewValue: 'Add_Edit_Form.STEP_6.LIVINGSTATE',
       value: ['australiaLivingState', 'australiaLivingStateSp'],
       icon: 'book'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.LIVINGCITY',
+      viewValue: 'Add_Edit_Form.STEP_6.LIVINGCITY',
       value: ['australiaLivingCity', 'australiaLivingCitySp'],
       icon: 'book'
     },
@@ -334,17 +338,17 @@ export class ShowFormComponent implements OnInit {
 
   notesFields = [
     {
-      viewValue: 'Add_Edit_Form.STEP_6.TBCLIENT',
+      viewValue: 'Add_Edit_Form.STEP_7.TBCLIENT',
       value: ['textBoxClient'],
       icon: 'note'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_6.TBADMIN',
+      viewValue: 'Add_Edit_Form.STEP_7.TBADMIN',
       value: ['textBoxAdmin'],
       icon: 'note'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_6.TBNOTES',
+      viewValue: 'Add_Edit_Form.STEP_7.TBNOTES',
       value: ['textBoxNotes'],
       icon: 'note'
     },

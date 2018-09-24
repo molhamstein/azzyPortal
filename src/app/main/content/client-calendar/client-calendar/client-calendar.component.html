@@ -1,30 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="col-md-7">
-  <!--<ng-template #customCellTemplate let-day="day" let-locale="locale">
-    <div class="cal-cell-top" style="text-align: left;">
-      <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">{{ day.badgeTotal }}</span>
-      <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
-    </div>
-    <div class="cell-totals">
-      <span *ngFor="let group of day.eventGroups" class="badge badge-{{ group[0] }}">
-        {{ group[1].length }}
-      </span>
-    </div>
-  </ng-template>-->
-  <!-- <ng-template #tt let-events="openEvents" let-eventClicked="eventClicked">
-      <div *ngFor="let event of openEvents; trackBy:trackByEventId" [ngClass]="event?.cssClass" mwlDraggable [dropData]="{event: event}"
-        [dragAxis]="{x: event.draggable, y: event.draggable}">
-        <span class="cal-event" [style.backgroundColor]="event.color?.primary">
-        </span>
-        <mwl-calendar-event-title [event]="event" [customTemplate]="eventTitleTemplate" view="month" (mwlClick)="eventClicked.emit({event: event})">
-        </mwl-calendar-event-title>
-      </div>
-    </ng-template> -->
-  <!--<ng-template #rr let-event="event" let-view="view">
-    <span class="cal-event-title" [innerHTML]="event.title | calendarEventTitle:view:event" [style.color]="'black'" ]>
-    </span>
-  </ng-template>-->
-
   <div id="calendar" dir="ltr" class="page-layout simple fullwidth" fusePerfectScrollbar style="width:80%;">
 
     <!-- HEADER -->
@@ -114,16 +88,22 @@
         (eventTimesChanged)="eventTimesChanged($event)">
       </mwl-calendar-day-view>
     </div> -->
-    {{viewDate}} {{allEvents}}
-    <div *ngIf="events.length > 0" class="content" fusePerfectScrollbar>
+    <div class="content" fusePerfectScrollbar>
       <div [ngSwitch]="view">
-        <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (dayClicked)="dayClicked($event.day)">
-        </mwl-calendar-month-view>
+        <div *ngIf="events.length > 0">
+          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (dayClicked)="dayClicked($event.day)">
+          </mwl-calendar-month-view>
+        </div>
+        <div *ngIf="events.length == 0">
+          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (dayClicked)="dayClicked($event.day)">
+          </mwl-calendar-month-view>
+        </div>
         <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent()"
           (eventTimesChanged)="eventTimesChanged($event)">
         </mwl-calendar-day-view>
       </div>
     </div>
+
     <!-- <div class="col-md-3 offset-md-1" style="float: left; text-align: left">
       <h2>Consultants</h2>
       <div *ngFor="let cons of colors">
@@ -133,9 +113,18 @@
     </div> -->
   </div>
 </div>
-<div *ngIf="events.length>0" class="col-md-5" style="margin-top: 200px;">
-  <ngx-datatable class="material" [rows]="events" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'" [scrollbarH]="true"
-   [rowClass]="">
+
+<div class="col-md-5" style="margin-top: 200px;">
+  <ngx-datatable class="material" [rows]="bodyevents" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'" [scrollbarH]="true"
+    [rowClass]="">
+    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="start">
+      <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+        <span>{{'Calender.DATE' | translate}}</span>
+      </ng-template>
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template style="background-color: aqua">
+        {{row.start | date:'yyyy/MM/dd'}}
+      </ng-template>
+    </ngx-datatable-column>
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="start">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
         <span>{{'Calender.TIME' | translate}}</span>

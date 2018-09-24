@@ -66,29 +66,29 @@
               <mat-icon>search</mat-icon>
               <span>{{'Form.CONTRACTED_FORMS.SHOW_FORM' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('not eligible',row.id,row.nameEnglish , row.textBoxAdmin )">
+             <button mat-menu-item (click)="changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )">
+              <mat-icon>sync</mat-icon>
+              <span>{{'Form.CONTRACTED_FORMS.UNPROCESSED' | translate}}</span>
+            </button>
+            <button mat-menu-item (click)="changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>cancel</mat-icon>
               <span>{{'Form.CONTRACTED_FORMS.NOTELIGIBLE' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('more info',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button mat-menu-item (click)="changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>more_horiz</mat-icon>
               <span>{{'Form.CONTRACTED_FORMS.MORE_INFO' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('consultation',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button mat-menu-item (click)="changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>group</mat-icon>
               <span>{{'Form.CONTRACTED_FORMS.CONSULTATION' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('contracts',row.id,row.nameEnglish , row.textBoxAdmin )">
+            <!--<button mat-menu-item (click)="changeStatus('contracts',row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>check</mat-icon>
               <span>{{'Form.CONTRACTED_FORMS.CONTRACT' | translate}}</span>
-            </button>
+            </button>-->
             <button mat-menu-item (click)="goTo('edit',row.id)">
               <mat-icon>edit</mat-icon>
               <span>{{'Form.CONTRACTED_FORMS.EDIT' | translate}}</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon>delete</mat-icon>
-              <span>{{'Form.CONTRACTED_FORMS.DELETE' | translate}}</span>
             </button>
           </mat-menu>
 

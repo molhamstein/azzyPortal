@@ -1,3 +1,4 @@
+import { ResetPasswordComponent } from './../../dialogs/reset-password/reset-password.component';
 import { DialogServiceService } from './../../../../core/services/dialog-service.service';
 import { SetTextBoxAdminComponent } from './../../dialogs/set-text-box-admin/set-text-box-admin.component';
 import { MatDialog } from '@angular/material';
@@ -24,7 +25,7 @@ export class usersComponent implements OnInit {
   constructor(private translationLoader: FuseTranslationLoaderService
     , private translateService: TranslateService
     , private mainServ: MainService,
-    private dialogServ:DialogServiceService,
+    private dialogServ: DialogServiceService,
     public dialog: MatDialog) {
     this.translationLoader.loadTranslations(english, persian);
   }
@@ -32,10 +33,12 @@ export class usersComponent implements OnInit {
 
 
   setPage(offset, limit) {
+    this.mainServ.loaderSer.display(true);
 
     // this.mainServ.APIServ.get("ADs?filter[limit]=" + limit + "&filter[skip]=" + offset * limit).subscribe((data: any) => {
     this.mainServ.APIServ.get("staffusers?filter={\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.mainServ.loaderSer.display(false);
 
         this.rows = data;
         // this.loadingIndicator = false;
@@ -60,9 +63,11 @@ export class usersComponent implements OnInit {
   }
 
 
-  ngOnInit() {
+  inisilaize() {
+    this.mainServ.loaderSer.display(true);
     this.mainServ.APIServ.get("staffusers/count").subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.mainServ.loaderSer.display(true);
         this.count = data['count'];
         this.setPage(this.offset, this.limit);
       }
@@ -70,10 +75,13 @@ export class usersComponent implements OnInit {
 
       }
       else {
-        // this.mainServ.globalServ.somthingError();
       }
 
     });
+  }
+
+  ngOnInit() {
+    this.inisilaize();
   }
 
 
@@ -93,8 +101,23 @@ export class usersComponent implements OnInit {
   }
 
   changeStatus(newStatus, id, name) {
-    this.dialogServ.confirmationMessage('are youe sure you want change ' + name + ' user to ' + newStatus, "staffusers/" + id, { 'status': newStatus })
+    var mainThis = this;
+    this.dialogServ.confirmationMessage('are youe sure you want change ' + name + ' user to ' + newStatus, "staffusers/" + id, { 'status': newStatus }, false, function () {
+      mainThis.inisilaize()
+    })
 
+  }
+
+  editPassword(userId) {
+    const dialogRef = this.dialog.open(ResetPasswordComponent, {
+      width: '500px',
+      data: { 'userId': userId }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+      }
+    });
   }
 
   // openDialog(status, id, name) {

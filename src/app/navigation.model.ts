@@ -20,7 +20,7 @@ export class NavigationModel {
                         'title': 'Client Calendar',
                         'type': 'item',
                         'icon': 'today',
-                        'url': '/client-calendar'
+                        'url': '/client-calendar/5ba69571166b277017d28b9d'
                     },
                     {
                         'id': 'users',

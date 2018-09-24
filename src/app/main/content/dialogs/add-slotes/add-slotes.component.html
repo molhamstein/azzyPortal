@@ -24,7 +24,7 @@
           <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>-->
         <mat-form-field fxFlex="100">
-          <input matInput [matDatepicker]="endDatePicker" placeholder="{{ 'Dialog.Add_Slotes.DATE' | translate }}" name="end" formControlName="date">
+          <input matInput [matDatepicker]="endDatePicker" (focus)="endDatePicker.open()" placeholder="{{ 'Dialog.Add_Slotes.DATE' | translate }}" name="end" formControlName="date">
           <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #endDatePicker ></mat-datepicker>
           <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>

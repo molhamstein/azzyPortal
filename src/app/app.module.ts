@@ -1,3 +1,5 @@
+import { LoaderServicesService } from './core/services/loader-services.service';
+import { ResetPasswordComponent } from './main/content/dialogs/reset-password/reset-password.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { AddSlotesComponent } from './main/content/dialogs/add-slotes/add-slotes.component';
 import { ResponeFormComponent } from './main/content/dialogs/respone-form/respone-form.component';
@@ -48,7 +50,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent, ResponeFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, ConfirmMessageComponent, ViewAppointmentComponent
+        AppComponent, ResetPasswordComponent,ResponeFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, ConfirmMessageComponent, ViewAppointmentComponent
     ],
     imports: [
         BrowserModule,
@@ -65,7 +67,7 @@ const appRoutes: Routes = [
         // OwlDateTimeModule,
         // OwlNativeDateTimeModule,
     ],
-    entryComponents: [ViewAppointmentComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent, ConfirmMessageComponent],
+    entryComponents: [ViewAppointmentComponent,ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent, ConfirmMessageComponent],
 
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
@@ -78,7 +80,8 @@ const appRoutes: Routes = [
         LoginService,
         GlobalService,
         AuthGuardService,
-        DialogServiceService
+        DialogServiceService,
+        LoaderServicesService
     ],
     bootstrap: [
         AppComponent

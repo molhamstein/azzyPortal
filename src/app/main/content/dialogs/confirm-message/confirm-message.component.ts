@@ -16,6 +16,7 @@ export class ConfirmMessageComponent {
     sendData = {};
     url = "";
     type = "";
+    withReload = true;
     constructor(
         public dialogRef: MatDialogRef<ConfirmMessageComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
@@ -26,6 +27,7 @@ export class ConfirmMessageComponent {
         this.sendData = data['sendData'];
         this.url = data['url'];
         this.type = data['type'];
+        this.withReload = data['withReload'];
         this.translationLoader.loadTranslations(english, persian);
 
     }
@@ -40,13 +42,21 @@ export class ConfirmMessageComponent {
         if (this.type == "patch")
             this.mainServ.APIServ.patch(this.url, this.sendData).subscribe((data: any) => {
                 if (this.mainServ.APIServ.getErrorCode() == 0) {
-                    this.mainServ.globalServ.reload();
+                    if (this.withReload)
+                        this.mainServ.globalServ.reload();
+                    else
+                        this.dialogRef.close(true);
+
                 }
             })
         else if (this.type == "put")
             this.mainServ.APIServ.put(this.url, this.sendData).subscribe((data: any) => {
                 if (this.mainServ.APIServ.getErrorCode() == 0) {
-                    this.mainServ.globalServ.reload();
+                    if (this.withReload)
+                        this.mainServ.globalServ.reload();
+                    else
+                        this.dialogRef.close(true);
+
                 }
             })
     }

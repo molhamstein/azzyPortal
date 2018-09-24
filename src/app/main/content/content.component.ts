@@ -1,3 +1,5 @@
+import { MainService } from './../../core/services/main.service';
+import { LoaderServicesService } from './../../core/services/loader-services.service';
 import { Component, HostBinding, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { fuseAnimations } from '../../core/animations';
@@ -7,15 +9,16 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 
 @Component({
-    selector   : 'fuse-content',
+    selector: 'fuse-content',
     templateUrl: './content.component.html',
-    styleUrls  : ['./content.component.scss'],
-    animations : fuseAnimations
+    styleUrls: ['./content.component.scss'],
+    animations: fuseAnimations
 })
-export class FuseContentComponent implements OnInit, OnDestroy
-{
+export class FuseContentComponent implements OnInit, OnDestroy {
     onSettingsChanged: Subscription;
     fuseSettings: any;
+    showLoader: boolean;
+
 
     @HostBinding('@routerTransitionUp') routeAnimationUp = false;
     @HostBinding('@routerTransitionDown') routeAnimationDown = false;
@@ -26,15 +29,14 @@ export class FuseContentComponent implements OnInit, OnDestroy
     constructor(
         private router: Router,
         private activatedRoute: ActivatedRoute,
-        private fuseConfig: FuseConfigService
-    )
-    {
+        private fuseConfig: FuseConfigService,
+        private mainServ:MainService
+    ) {
         this.router.events
             .filter((event) => event instanceof NavigationEnd)
             .map(() => this.activatedRoute)
             .subscribe((event) => {
-                switch ( this.fuseSettings.routerAnimation )
-                {
+                switch (this.fuseSettings.routerAnimation) {
                     case 'fadeIn':
                         this.routeAnimationFade = !this.routeAnimationFade;
                         break;
@@ -56,19 +58,20 @@ export class FuseContentComponent implements OnInit, OnDestroy
         this.onSettingsChanged =
             this.fuseConfig.onSettingsChanged
                 .subscribe(
-                    (newSettings) => {
-                        this.fuseSettings = newSettings;
-                    }
+                (newSettings) => {
+                    this.fuseSettings = newSettings;
+                }
                 );
     }
 
-    ngOnInit()
-    {
+    ngOnInit() {
+        this.mainServ.loaderSer.status.subscribe((val: boolean) => {
+            this.showLoader = val;
+        });
 
     }
 
-    ngOnDestroy()
-    {
+    ngOnDestroy() {
         this.onSettingsChanged.unsubscribe();
     }
 }

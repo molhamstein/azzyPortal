@@ -110,6 +110,10 @@
               <mat-icon>edit</mat-icon>
               <span>{{'User.USERS.EDIT' | translate}}</span>
             </button>
+            <button mat-menu-item (click)="editPassword(row.id)">
+              <mat-icon>edit</mat-icon>
+              <span>{{'User.USERS.EDITPASSWORD' | translate}}</span>
+            </button>
             <button mat-menu-item *ngIf="row.status!='active'" (click)="changeStatus('active',row.id,row.username)">
               <mat-icon>check</mat-icon>
               <span>{{'User.USERS.ACTIVE' | translate}}</span>

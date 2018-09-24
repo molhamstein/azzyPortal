@@ -57,6 +57,7 @@ export class ClientCalendarComponent implements OnInit {
   dialogRef: any;
   selectedDay: any;
   fuseSettings
+  filterType = "month";
   constructor(private jsonServ: JsonService,
     public dialog: MatDialog,
     private mainServ: MainService,
@@ -96,30 +97,12 @@ export class ClientCalendarComponent implements OnInit {
     },
   ]
   consultants = [];
-  // ngOnInit(): void {
-
-  //   var tempEvents;
-  //   this.jsonServ.getJson().subscribe(res => {
-  //     tempEvents = res;
-  //     tempEvents.forEach(element => {
-  //       var x: CalendarEvent = {
-  //         start: new Date(element.startDate),
-  //         end: new Date(element.endDate),
-  //         title: this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
-  //         meta: element,
-  //       };
-  //       this.events.push(x);
-  //     });
-
-  //   });
-
-  // }
   title = 'app';
   view: string = 'month';
   // viewDate: Date = new Date();
   activeDayIsOpen: boolean = false;
   events: CalendarEvent[] = [];
-
+  bodyevents: CalendarEvent[] = [];
 
   openEvents: CalendarEvent[] = [];
   flag: boolean = true;
@@ -175,21 +158,7 @@ export class ClientCalendarComponent implements OnInit {
   }
 
 
-
-  // getRowClass = (row) => {
-  //   return {
-  //     'row-color': row.meta.open
-  //   };
-  // }
-  // onSelect({ selected }) {
-  //   console.log('Select Event', selected, this.selected);
-  // }
-
-  // onActivate(event) {
-  //   console.log('Activate Event', event);
-  // }
   checkSelectable(event) {
-    // debugger;
     return event.meta.open == true
   }
 
@@ -199,64 +168,66 @@ export class ClientCalendarComponent implements OnInit {
   allEvents = [];
 
 
-  changeDayAnas() {
+  changeDayAnas(isMonth: boolean = true) {
+    this.mainServ.loaderSer.display(true);
+
     let from = cloneDeep(this.viewDate)
     let to = cloneDeep(this.viewDate)
-    from.setDate(1);
-    to.setDate(this.daysInMonth(to.getMonth(), to.getFullYear()))
-    this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to).subscribe((data: any) => {
-      if (this.mainServ.APIServ.getErrorCode() == 0) {
-        this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()] = data['readCalander'][0];
-        console.log(this.allEvents)
-        // this.events = data['readCalander'][0]['slots']
-        // var tempEvents;
-        // this.jsonServ.getJson().subscribe(res => {
-        //   tempEvents = res;
-        //   tempEvents.forEach(element => {
-        //     var x: CalendarEvent = {
-        //       start: new Date(element.startDate),
-        //       end: new Date(element.endDate),
-        //       title: this.buildTitle(element.cons, element.client, element.location, element.startDate, element.endDate),
-        //       meta: element,
-        //     };
-        //     this.events.push(x);
-        //   });
+    if (isMonth) {
+      from.setDate(1);
+      to.setDate(this.daysInMonth(to.getMonth(), to.getFullYear()))
+    }
+    from.setHours(0);
+    to.setHours(23);
 
-        // });
+    if (isMonth)
+      this.events = [];
+    this.bodyevents = [];
+    if (this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()] == null || !isMonth) {
+      this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to).subscribe((data: any) => {
+        if (this.mainServ.APIServ.getErrorCode() == 0) {
+          if (isMonth)
+            this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()] = [];
+          var tempEvents;
+          data['readCalander'][0]['slots'].forEach(element => {
+            var x: CalendarEvent = {
+              start: new Date(element.startDate),
+              end: new Date(element.endDate),
+              title: this.buildTitle(element.consId, element.clientId, element.location, element.startDate, element.endDate),
+              meta: element,
+            };
+            if (isMonth) {
+              this.events.push(x);
+              this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()].push(x);
+            }
+            this.bodyevents.push(x);
+          });
+          this.mainServ.loaderSer.display(false);
 
-        data['readCalander'][0]['slots'].forEach(element => {
-          var x: CalendarEvent = {
-            start: new Date(element.startDate),
-            end: new Date(element.endDate),
-            title: this.buildTitle(element.consId, element.clientId, element.location, element.startDate, element.endDate),
-            meta: element,
-          };
-          this.events.push(x);
-        });
 
-      }
-      else if (this.mainServ.APIServ.getErrorCode() == 400) {
+        }
+        else if (this.mainServ.APIServ.getErrorCode() == 400) {
 
-      }
-      else {
-        this.mainServ.globalServ.somthingError();
-      }
+        }
+        else {
+          this.mainServ.globalServ.somthingError();
+        }
 
-    });
-
+      });
+    } else {
+      this.events = this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()];
+      this.mainServ.loaderSer.display(false);
+    }
   }
-  // 5b977410907af3ddb757500b
   dayClicked(data) {
-    // console.log(a);
     this.viewDate = data['date'];
-    alert("test")
+    this.changeDayAnas(false)
   }
   viewDate: Date = new Date();
   form;
   consId
   ngOnInit() {
     var id = this.route.snapshot.paramMap.get('id');
-
     this.mainServ.APIServ.get("forms/" + id).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.form = data;
@@ -291,6 +262,9 @@ export class ClientCalendarComponent implements OnInit {
   }
 
   useAppointment(appointment) {
-    this.dialogSer.confirmationMessage('are youe sure you want use  appointment at ' + appointment['start'] + 'in ' + appointment['meta']['location'], "forms/selectAp/" +this.form['id'] , {'apId':appointment['meta']['id']},"put")
+    var mainThis = this;
+    this.dialogSer.confirmationMessage('are youe sure you want use  appointment at ' + appointment['start'] + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'] }, false, function () {
+      mainThis.changeDayAnas();
+    }, "put")
   }
 }

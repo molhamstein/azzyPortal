@@ -20,7 +20,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FuseLoginComponent implements OnInit {
     loginForm: FormGroup;
     loginFormErrors: any;
-
+    loader = false;
+    message;
     constructor(
         private fuseConfig: FuseConfigService,
         private formBuilder: FormBuilder,
@@ -74,15 +75,20 @@ export class FuseLoginComponent implements OnInit {
         }
     }
     login() {
-        console.log(this.loginForm.value);
+        this.loader = true;
         this.mainServ.APIServ.post("staffusers/login?include=user", this.loginForm.value).subscribe((data: any) => {
             if (this.mainServ.APIServ.getErrorCode() == 0) {
                 this.mainServ.loginServ.logIn(data, true)
             }
-            else if (this.mainServ.APIServ.getErrorCode() == 400) {
+            else if (this.mainServ.APIServ.getErrorCode() == 401) {
+                this.loader = false;
+                this.mainServ.APIServ.setErrorCode(0);
+                this.message = "Email or Password is wrong";
 
             }
             else {
+                this.loader = false;
+                this.mainServ.APIServ.setErrorCode(0);
                 // this.mainServ.globalServ.somthingError();
             }
 

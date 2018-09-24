@@ -36,8 +36,8 @@ export class EditClientFormComponent implements OnInit {
 
   sendArray = {}
   loder = false;
-  id :string;
-  token:string;
+  id: string;
+  token: string;
   maritalStatusList = [
     {
       viewValue: 'Add_Edit_Form.STEP_0.MARRIED',
@@ -295,26 +295,27 @@ export class EditClientFormComponent implements OnInit {
     }
   ]
 
+
   visaType = [
     {
-      viewValue: 'Add_Edit_Form.STEP_5.CITIZEN',
+      viewValue: 'Add_Edit_Form.STEP_6.CITIZEN',
       value: 'Citizen'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.PERMANENTRES',
+      viewValue: 'Add_Edit_Form.STEP_6.PERMANENTRES',
       value: 'Permanent Res.'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.TEMPORARYRES',
+      viewValue: 'Add_Edit_Form.STEP_6.TEMPORARYRES',
       value: 'Temporary Res.'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.STUDENTASSYLUM',
+      viewValue: 'Add_Edit_Form.STEP_6.STUDENTASSYLUM',
       value: 'Student-Assylum'
     },
   ]
 
-  australiaFields = [
+  healthFields = [
     {
       viewValue: 'Add_Edit_Form.STEP_5.SIGNIFICANT',
       value: ['significantCurrentSickness', 'significantCurrentSicknessSp'],
@@ -324,24 +325,28 @@ export class EditClientFormComponent implements OnInit {
       viewValue: 'Add_Edit_Form.STEP_5.SURGERY',
       value: ['surgeryPastOrFuture', 'surgeryPastOrFutureSp'],
       icon: 'book'
-    },
+    }
+  ]
+  australiaFields = [
+
     {
-      viewValue: 'Add_Edit_Form.STEP_5.RELATION',
+      viewValue: 'Add_Edit_Form.STEP_6.RELATION',
       value: ['australiaFamilyRelation', 'australiaFamilyRelationSp'],
       icon: 'book'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.LIVINGSTATE',
+      viewValue: 'Add_Edit_Form.STEP_6.LIVINGSTATE',
       value: ['australiaLivingState', 'australiaLivingStateSp'],
       icon: 'book'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.LIVINGCITY',
+      viewValue: 'Add_Edit_Form.STEP_6.LIVINGCITY',
       value: ['australiaLivingCity', 'australiaLivingCitySp'],
       icon: 'book'
     },
 
   ]
+
 
 
   steps = [
@@ -435,19 +440,19 @@ export class EditClientFormComponent implements OnInit {
           residentialAddressEnglish: [data['residentialAddressEnglish'], Validators.required],
           residentialAddressFarsi: [data['residentialAddressFarsi'], Validators.required],
 
-          nameFarsiSp: [data['nameFarsiSp'], Validators.required],
-          surnameFarsiSp: [data['surnameFarsiSp'], Validators.required],
-          nameEnglishSp: [data['nameEnglishSp'], Validators.required],
-          surnameEnglishSp: [data['surnameEnglishSp'], Validators.required],
-          emailSp: [data['emailSp'], [Validators.required, Validators.email]],
-          mobileNoSp: [data['mobileNoSp'], Validators.required],
+          nameFarsiSp: [data['nameFarsiSp']],
+          surnameFarsiSp: [data['surnameFarsiSp']],
+          nameEnglishSp: [data['nameEnglishSp']],
+          surnameEnglishSp: [data['surnameEnglishSp']],
+          emailSp: [data['emailSp']],
+          mobileNoSp: [data['mobileNoSp']],
           lLandlinePhoneNoSp: [data['lLandlinePhoneNoSp']],
-          maritalStatusSp: [data['maritalStatusSp'], Validators.required],
+          maritalStatusSp: [data['maritalStatusSp']],
           numberOfChildrenSp: [data['numberOfChildrenSp']],
-          dateOfBirthPerSp: [data['dateOfBirthPerSp'], Validators.required],
+          dateOfBirthPerSp: [data['dateOfBirthPerSp']],
           skypeIDSp: [data['skypeIDSp']],
-          residentialAddressEnglishSp: [data['residentialAddressEnglishSp'], Validators.required],
-          residentialAddressFarsiSp: [data['residentialAddressFarsiSp'], Validators.required]
+          residentialAddressEnglishSp: [data['residentialAddressEnglishSp']],
+          residentialAddressFarsiSp: [data['residentialAddressFarsiSp']]
         }),
         this._formBuilder.group({
           goodEnglish: [data['goodEnglish'], Validators.required],
@@ -456,7 +461,7 @@ export class EditClientFormComponent implements OnInit {
           readingEn: [data['readingEn']],
           speakingEn: [data['speakingEn']],
           overallEn: [data['overallEn']],
-          goodEnglishSp: [data['goodEnglishSp'], Validators.required],
+          goodEnglishSp: [data['goodEnglishSp']],
           writingEnSp: [data['writingEnSp']],
           listeningEnSp: [data['listeningEnSp']],
           readingEnSp: [data['readingEnSp']],
@@ -523,16 +528,21 @@ export class EditClientFormComponent implements OnInit {
         this._formBuilder.group({
           significantCurrentSickness: [data['significantCurrentSickness']],
           surgeryPastOrFuture: [data['surgeryPastOrFuture']],
+          significantCurrentSicknessSp: [data['significantCurrentSicknessSp']],
+          surgeryPastOrFutureSp: [data['surgeryPastOrFutureSp']],
+        }),
+        this._formBuilder.group({
           australiaFamilyRelation: [data['australiaFamilyRelation']],
           australiaLivingState: [data['australiaLivingState']],
           australiaLivingCity: [data['australiaLivingCity']],
           australiaVisaType: [data['australiaVisaType']],
-          significantCurrentSicknessSp: [data['significantCurrentSicknessSp']],
-          surgeryPastOrFutureSp: [data['surgeryPastOrFutureSp']],
           australiaFamilyRelationSp: [data['australiaFamilyRelationSp']],
           australiaLivingStateSp: [data['australiaLivingStateSp']],
           australiaLivingCitySp: [data['australiaLivingCitySp']],
           australiaVisaTypeSp: [data['australiaVisaTypeSp']],
+        }),
+        this._formBuilder.group({
+          textBoxClient: [data['textBoxClient']],
         })
       ])
     });
@@ -543,10 +553,10 @@ export class EditClientFormComponent implements OnInit {
 
     this.appDirection.switchDir('ltr');
 
-    this.id=this.route.snapshot.paramMap.get('id');
-    this.token=this.route.snapshot.paramMap.get('token');
-    
-    this.mainServ.APIServ.get("forms/" + this.id,this.token).subscribe((data: any) => {
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.token = this.route.snapshot.paramMap.get('token');
+
+    this.mainServ.APIServ.get("forms/" + this.id, this.token).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.setFormGroupe(data);
         // this.formData = data;
@@ -632,11 +642,11 @@ export class EditClientFormComponent implements OnInit {
     });
     this.mainServ.APIServ.patch("forms/" + this.id, this.sendArray).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
-      alert("editeForm")
-      // this.mainServ.globalServ.goTo("partner")
-    }
-  })
-  console.log(this.sendArray);
-}
+        alert("editeForm")
+        // this.mainServ.globalServ.goTo("partner")
+      }
+    })
+    console.log(this.sendArray);
+  }
 
 }

@@ -113,7 +113,7 @@
 
               <mat-form-field fxFlex="24">
                 <!-- <mat-icon matPrefix>today</mat-icon> -->
-                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
+                <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
                   formControlName="dateOfBirthPer" required>
                 <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -164,28 +164,28 @@
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsiSp" required>
+                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsiSp">
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp" required>
+                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp" >
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp" required>
+                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp" >
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp" required>
+                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp" >
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -196,21 +196,18 @@
 
               <mat-form-field fxFlex="24">
                 <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
-                          placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required> -->
-                <input matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="emailSp" required>
+                          placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" > -->
+                <input matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="emailSp" >
                 <mat-icon matSuffix>email</mat-icon>
 
-                <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
+                <mat-error *ngIf="formArray?.get([0,'email']).hasError('email')">
                   {{ 'Global.ERRORVALIDEMAIL' | translate }}
-                </mat-error>
-                <mat-error *ngIf="formArray?.get([0,'email']).hasError('required')">
-                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}
                 </mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp" required>
+                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp" >
                 <mat-icon matSuffix>smartphone</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -228,15 +225,15 @@
 
 
               <mat-form-field fxFlex="24">
-                <input matInput [min]="minDateSp" [max]="maxDateSp" [matDatepicker]="birthDatePickerSp" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
-                  formControlName="dateOfBirthPerSp" required>
+                <input matInput [min]="minDateSp" [max]="maxDateSp" (focus)="birthDatePickerSp.open()" [matDatepicker]="birthDatePickerSp"
+                  placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}" formControlName="dateOfBirthPerSp" >
                 <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
-                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp" required>
+                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp" >
                   <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
                     {{ status.viewValue | translate }}
                   </mat-option>
@@ -534,7 +531,7 @@
                 </mat-form-field>
 
                 <mat-form-field style="width: 100%" *ngIf="oneField.isInput==false">
-                  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
+                  <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
                     formControlName="{{ oneField.value[0] }}">
                   <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                   <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -565,13 +562,13 @@
 
               <div fxFlex="30" *ngFor="let oneField of militaryFields">
                 <mat-form-field style="width: 100%" *ngIf="oneField.isInput">
-                  <input matInput placeholder="{{ oneField.viewValue }}" formControlName="{{ oneField.value[1] }}">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                 </mat-form-field>
 
                 <mat-form-field style="width: 100%" *ngIf="oneField.isInput==false">
-                  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate  }}"
+                  <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate  }}"
                     formControlName="{{ oneField.value[1] }}">
                   <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                   <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -587,10 +584,51 @@
             </div>
           </mat-step>
 
-
           <mat-step formGroupName="5" [stepControl]="formArray?.get([5])">
             <ng-template matStepLabel>
               <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>
+            </ng-template>
+
+            <mat-panel-title style="font-weight: bold">
+              <mat-icon>account_circle</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'Add_Edit_Form.APPLICANT' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+              <div fxFlex="30" *ngFor="let oneField of healthFields">
+                <mat-form-field style="width: 100%">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
+                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
+
+                </mat-form-field>
+              </div>
+            </div>
+
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+              <mat-icon>wc</mat-icon>
+              <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
+                {{ 'Add_Edit_Form.SPOUSE' | translate }}
+              </mat-panel-description>
+            </mat-panel-title>
+
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+              <div fxFlex="30" *ngFor="let oneField of healthFields">
+                <mat-form-field style="width: 100%">
+                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
+                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
+                </mat-form-field>
+              </div>
+            </div>
+            <div style="float: right;">
+              <button mat-button matStepperPrevious type="button">Back</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([5]).invalid">Next</button>
+            </div>
+          </mat-step>
+
+          <mat-step formGroupName="6" [stepControl]="formArray?.get([6])">
+            <ng-template matStepLabel>
+              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>
             </ng-template>
 
             <mat-panel-title style="font-weight: bold">
@@ -609,11 +647,11 @@
 
                 </mat-form-field>
               </div>
-              <div fxFlex="30"></div>
+              <!--<div fxFlex="30"></div>-->
             </div>
 
             <div class="pt-24 pb-24">
-              <label>{{ 'Add_Edit_Form.STEP_5.VISATYPE' | translate }}</label>
+              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>
               <mat-radio-group formControlName="australiaVisaType">
                 <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">
                   {{ type.viewValue | translate }}
@@ -640,11 +678,11 @@
 
                 </mat-form-field>
               </div>
-              <div fxFlex="30"></div>
+              <!--<div fxFlex="30"></div>-->
             </div>
 
             <div class="pt-24 pb-24">
-              <label>{{ 'Add_Edit_Form.STEP_5.VISATYPE' | translate }}</label>
+              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>
               <mat-radio-group formControlName="australiaVisaTypeSp">
                 <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">
                   {{ type.viewValue | translate }}
@@ -654,20 +692,20 @@
 
             <div style="float: right;">
               <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([5]).invalid">Next</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([6]).invalid">Next</button>
             </div>
           </mat-step>
 
 
 
-          <mat-step formGroupName="6" [stepControl]="formArray?.get([6])">
+          <mat-step formGroupName="7" [stepControl]="formArray?.get([7])">
             <ng-template matStepLabel>Confirm your information</ng-template>
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
               <div fxFlex="100">
                 <mat-form-field style="width: 100%">
-                  <textarea matInput placeholder=" {{ 'Add_Edit_Form.STEP_6.TBCLIENT' | translate }}" formControlName="textBoxClient"></textarea>
+                  <textarea matInput placeholder=" {{ 'Add_Edit_Form.STEP_7.TBCLIENT' | translate }}" formControlName="textBoxClient"></textarea>
                   <mat-icon matSuffix>note</mat-icon>
 
                 </mat-form-field>

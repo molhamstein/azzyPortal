@@ -1,3 +1,4 @@
+import { MainService } from './core/services/main.service';
 import { Component } from '@angular/core';
 import { FuseSplashScreenService } from './core/services/splash-screen.service';
 import { AppDirectionService } from './app-direction.service';
@@ -17,12 +18,13 @@ export class AppComponent {
      appDirection: Direction;
     /** Subscription to the Directionality change EventEmitter. */
     private _dirChangeSubscription = Subscription.EMPTY;
-
+    loader=this.mainSer.getLodaer();
 
     constructor(
         private fuseSplashScreen: FuseSplashScreenService,
         private translate: TranslateService,
-        private dir: AppDirectionService
+        private dir: AppDirectionService,
+        private mainSer: MainService
     ) {
         this.appDirection = dir.getDir();
         

@@ -10,15 +10,15 @@ export class DialogServiceService {
     public dialog: MatDialog,
   ) { }
 
-  confirmationMessage(message, url, data, type: string = "patch") {
+  confirmationMessage(message, url, data, withReload,callback, type: string = "patch") {
     let dialogRef = this.dialog.open(ConfirmMessageComponent, {
       width: '250px',
-      data: { message: message, url: url, sendData: data, type: type }
+      data: { message: message, url: url, sendData: data, type: type, withReload: withReload }
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        alert(result);
+        callback();
       }
     });
   }

@@ -54,7 +54,7 @@ export class editUserComponent implements OnInit {
           email: new FormControl(data['email'],  [Validators.required, Validators.email]),
           type: new FormControl(data['type'], Validators.required),
           username: new FormControl(data['username'], Validators.required),
-          password: new FormControl('', Validators.required),
+          // password: new FormControl('', Validators.required),
         });
         if (data['type'] == 'consultant') {
           this.primaryColor = data['primarycolor'];
@@ -97,7 +97,7 @@ export class editUserComponent implements OnInit {
       data['primarycolor'] = this.primaryColor;
       data['secondarycolor'] = this.secondryColor;
     }
-    this.mainServ.APIServ.put("staffusers/" + this.id, data).subscribe((data: any) => {
+    this.mainServ.APIServ.patch("staffusers/" + this.id, data).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.mainServ.globalServ.goTo('users')
       }

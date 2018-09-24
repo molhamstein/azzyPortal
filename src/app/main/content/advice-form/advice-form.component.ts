@@ -301,24 +301,24 @@ export class AdviceFormComponent implements OnInit {
 
   visaType = [
     {
-      viewValue: 'Add_Edit_Form.STEP_5.CITIZEN',
+      viewValue: 'Add_Edit_Form.STEP_6.CITIZEN',
       value: 'Citizen'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.PERMANENTRES',
+      viewValue: 'Add_Edit_Form.STEP_6.PERMANENTRES',
       value: 'Permanent Res.'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.TEMPORARYRES',
+      viewValue: 'Add_Edit_Form.STEP_6.TEMPORARYRES',
       value: 'Temporary Res.'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.STUDENTASSYLUM',
+      viewValue: 'Add_Edit_Form.STEP_6.STUDENTASSYLUM',
       value: 'Student-Assylum'
     },
   ]
 
-  australiaFields = [
+  healthFields = [
     {
       viewValue: 'Add_Edit_Form.STEP_5.SIGNIFICANT',
       value: ['significantCurrentSickness', 'significantCurrentSicknessSp'],
@@ -328,19 +328,22 @@ export class AdviceFormComponent implements OnInit {
       viewValue: 'Add_Edit_Form.STEP_5.SURGERY',
       value: ['surgeryPastOrFuture', 'surgeryPastOrFutureSp'],
       icon: 'book'
-    },
+    }
+  ]
+  australiaFields = [
+
     {
-      viewValue: 'Add_Edit_Form.STEP_5.RELATION',
+      viewValue: 'Add_Edit_Form.STEP_6.RELATION',
       value: ['australiaFamilyRelation', 'australiaFamilyRelationSp'],
       icon: 'book'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.LIVINGSTATE',
+      viewValue: 'Add_Edit_Form.STEP_6.LIVINGSTATE',
       value: ['australiaLivingState', 'australiaLivingStateSp'],
       icon: 'book'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_5.LIVINGCITY',
+      viewValue: 'Add_Edit_Form.STEP_6.LIVINGCITY',
       value: ['australiaLivingCity', 'australiaLivingCitySp'],
       icon: 'book'
     },
@@ -454,19 +457,19 @@ export class AdviceFormComponent implements OnInit {
           residentialAddressEnglish: ['', Validators.required],
           residentialAddressFarsi: ['', Validators.required],
 
-          nameFarsiSp: ['', Validators.required],
-          surnameFarsiSp: ['', Validators.required],
-          nameEnglishSp: ['', Validators.required],
-          surnameEnglishSp: ['', Validators.required],
-          emailSp: ['', [Validators.required, Validators.email]],
-          mobileNoSp: ['', Validators.required],
+          nameFarsiSp: [''],
+          surnameFarsiSp: [''],
+          nameEnglishSp: [''],
+          surnameEnglishSp: [''],
+          emailSp: [''],
+          mobileNoSp: [''],
           lLandlinePhoneNoSp: [''],
-          maritalStatusSp: ['', Validators.required],
+          maritalStatusSp: [''],
           numberOfChildrenSp: [''],
-          dateOfBirthPerSp: ['', Validators.required],
+          dateOfBirthPerSp: [''],
           skypeIDSp: [''],
-          residentialAddressEnglishSp: ['', Validators.required],
-          residentialAddressFarsiSp: ['', Validators.required]
+          residentialAddressEnglishSp: [''],
+          residentialAddressFarsiSp: ['']
         }),
         this._formBuilder.group({
           goodEnglish: ['', Validators.required],
@@ -475,7 +478,7 @@ export class AdviceFormComponent implements OnInit {
           readingEn: [''],
           speakingEn: [''],
           overallEn: [''],
-          goodEnglishSp: ['', Validators.required],
+          goodEnglishSp: [''],
           writingEnSp: [''],
           listeningEnSp: [''],
           readingEnSp: [''],
@@ -542,12 +545,14 @@ export class AdviceFormComponent implements OnInit {
         this._formBuilder.group({
           significantCurrentSickness: [''],
           surgeryPastOrFuture: [''],
+          significantCurrentSicknessSp: [''],
+          surgeryPastOrFutureSp: [''],
+        }),
+        this._formBuilder.group({
           australiaFamilyRelation: [''],
           australiaLivingState: [''],
           australiaLivingCity: [''],
           australiaVisaType: [''],
-          significantCurrentSicknessSp: [''],
-          surgeryPastOrFutureSp: [''],
           australiaFamilyRelationSp: [''],
           australiaLivingStateSp: [''],
           australiaLivingCitySp: [''],
@@ -632,9 +637,9 @@ export class AdviceFormComponent implements OnInit {
     });
     this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
-        this.mainServ.APIServ.post("forms/"+data['id']+"/Client/accessTokens", this.sendArray).subscribe((dataAccrssToken: any) => {
+        this.mainServ.APIServ.post("forms/" + data['id'] + "/Client/accessTokens", this.sendArray).subscribe((dataAccrssToken: any) => {
           if (this.mainServ.APIServ.getErrorCode() == 0) {
-            data['token']=dataAccrssToken['id'];
+            data['token'] = dataAccrssToken['id'];
             this.dialogSerc.responseFormDialog(true, data)
           }
         })
