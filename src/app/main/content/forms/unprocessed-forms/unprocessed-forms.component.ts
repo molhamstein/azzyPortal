@@ -123,12 +123,13 @@ export class UnprocessedFormsComponent implements OnInit {
         this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
           mainThis.inisilaize()
 
-        },'put')
+        }, 'put')
       }
     });
   }
 
-  // openDialog(status, id,name) {
-  //     this.mainServ.globalServ.confirmationMessage('are youe sure you want change '+name+'\'s form to '+status,"forms/" +id,{'status':status})
-  //   }
+  isAllowed(role) {
+    return this.mainServ.globalServ.isAllowed(role);
+
+  }
 }

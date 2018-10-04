@@ -42,10 +42,10 @@ export class SetTextBoxAdminComponent {
                 textBoxAdmin: new FormControl(this.text),
                 consId: new FormControl('', Validators.required)
             });
-            this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe((data: any) => {
+            this.mainServ.APIServ.get("staffusers/getConsultant").subscribe((data: any) => {
                 if (this.mainServ.APIServ.getErrorCode() == 0) {
 
-                    this.clients = data;
+                    this.clients = data['getConsultant'];
                     // this.loadingIndicator = false;
 
                 }
@@ -65,6 +65,9 @@ export class SetTextBoxAdminComponent {
         }
     }
     onYesClick() {
+        if (this.isWithID && this.regiForm.value['textBoxAdmin'] == null) {
+            this.regiForm.value['textBoxAdmin'] = ""
+        }
         this.dialogRef.close(this.regiForm.value);
     }
 }

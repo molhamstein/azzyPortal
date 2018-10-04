@@ -352,6 +352,12 @@ export class ShowFormComponent implements OnInit {
       value: ['textBoxNotes'],
       icon: 'note'
     },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.howKnow',
+      value: ['howKnow'],
+      icon: 'note'
+    }
+
   ]
 
   ngOnInit() {
@@ -366,8 +372,9 @@ export class ShowFormComponent implements OnInit {
 
 
     var id = this.route.snapshot.paramMap.get('id');
-
+    this.mainServ.loaderSer.display(true);
     this.mainServ.APIServ.get("forms/" + id).subscribe((data: any) => {
+      this.mainServ.loaderSer.display(false);
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.form = data;
       }

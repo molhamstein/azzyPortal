@@ -1,3 +1,4 @@
+import { MainService } from './../../services/main.service';
 import { Component, Input, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { FuseNavigationService } from './navigation.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -15,13 +16,14 @@ export class FuseNavigationComponent implements OnDestroy
 
     @Input('layout') layout = 'vertical';
 
-    constructor(private fuseNavigationService: FuseNavigationService)
+    constructor(private fuseNavigationService: FuseNavigationService,private mainSer:MainService)
     {
         this.navigationModelChangeSubscription =
             this.fuseNavigationService.onNavigationModelChange
                 .subscribe((navigationModel) => {
                     this.navigationModel = navigationModel;
                 });
+                console.log(this.navigationModel);
     }
 
     ngOnDestroy()

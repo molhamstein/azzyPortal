@@ -171,21 +171,21 @@
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp" >
+                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp">
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp" >
+                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp">
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp" >
+                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp">
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -197,7 +197,7 @@
               <mat-form-field fxFlex="24">
                 <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
                           placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" > -->
-                <input matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="emailSp" >
+                <input matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="emailSp">
                 <mat-icon matSuffix>email</mat-icon>
 
                 <mat-error *ngIf="formArray?.get([0,'email']).hasError('email')">
@@ -207,7 +207,7 @@
 
               <mat-form-field fxFlex="24">
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp" >
+                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp">
                 <mat-icon matSuffix>smartphone</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -226,14 +226,14 @@
 
               <mat-form-field fxFlex="24">
                 <input matInput [min]="minDateSp" [max]="maxDateSp" (focus)="birthDatePickerSp.open()" [matDatepicker]="birthDatePickerSp"
-                  placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}" formControlName="dateOfBirthPerSp" >
+                  placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}" formControlName="dateOfBirthPerSp">
                 <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
-                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp" >
+                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp">
                   <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
                     {{ status.viewValue | translate }}
                   </mat-option>
@@ -709,8 +709,16 @@
                   <mat-icon matSuffix>note</mat-icon>
 
                 </mat-form-field>
+
+                <mat-form-field style="width: 100%">
+                  <textarea matInput placeholder=" {{ 'Add_Edit_Form.STEP_7.howKnow' | translate }}" formControlName="howKnow"></textarea>
+                  <mat-icon matSuffix>note</mat-icon>
+
+                </mat-form-field>
+
               </div>
             </div>
+
             <div style="float: right;">
               <button mat-button (click)="addForm()">Done</button>
             </div>

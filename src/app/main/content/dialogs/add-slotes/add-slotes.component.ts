@@ -7,12 +7,19 @@ import { Component, Inject } from '@angular/core';
 import { locale as english } from '../../languageFiles/en';
 import { locale as persian } from '../../languageFiles/fa';
 
+import * as moment from 'moment'; // add this 1 of 4
+
+import 'moment-timezone';
+
+
 @Component({
     selector: 'add-slotes',
     templateUrl: 'add-slotes.component.html',
     styleUrls: ['add-slotes.component.scss']
 })
 export class AddSlotesComponent {
+    typeUser;
+    consObject = {};
     eventForm: FormGroup;
     consultant = [];
     public dateTime: Date;
@@ -57,27 +64,38 @@ export class AddSlotesComponent {
 
     ngOnInit() {
         this.translate.use('en');
-        this.eventForm = new FormGroup({
-            date: new FormControl('', Validators.required),
-            location: new FormControl('', Validators.required),
-            consId: new FormControl('', Validators.required)
-        });
+        this.typeUser = this.mainServ.loginServ.getType();
+        if (this.typeUser == "consultant") {
+            this.consultant = [{ "type": this.typeUser, "username": this.mainServ.loginServ.getuserName(), "id": this.mainServ.loginServ.getUserId() }]
+            // this.consObject = 
+            this.eventForm = new FormGroup({
+                date: new FormControl('', Validators.required),
+                location: new FormControl('', Validators.required),
+                consId: new FormControl(this.consultant[0]["id"], Validators.required)
+            });
+        }
+        else {
+            this.eventForm = new FormGroup({
+                date: new FormControl('', Validators.required),
+                location: new FormControl('', Validators.required),
+                consId: new FormControl('', Validators.required)
+            });
+            this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe((data: any) => {
+                if (this.mainServ.APIServ.getErrorCode() == 0) {
 
-        this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe((data: any) => {
-            if (this.mainServ.APIServ.getErrorCode() == 0) {
+                    this.consultant = data;
+                    // this.loadingIndicator = false;
 
-                this.consultant = data;
-                // this.loadingIndicator = false;
+                }
+                else if (this.mainServ.APIServ.getErrorCode() == 400) {
 
-            }
-            else if (this.mainServ.APIServ.getErrorCode() == 400) {
+                }
+                else {
+                    this.mainServ.globalServ.somthingError();
+                }
 
-            }
-            else {
-                this.mainServ.globalServ.somthingError();
-            }
-
-        });
+            });
+        }
         this.convertTo24('4:30pm');
     }
 
@@ -104,19 +122,41 @@ export class AddSlotesComponent {
         let stringDate = year + "-" + month + "-" + day
         console.log("stringDate")
         console.log(stringDate)
-        data['startDate'] = new Date(stringDate);
-        data['startDate'].setHours(startDateString['hours']);
-        data['startDate'].setMinutes(startDateString['minutes'])
 
-        data['endDate'] = new Date(stringDate);
-        data['endDate'].setHours(endPickerString['hours']);
-        data['endDate'].setMinutes(endPickerString['minutes'])
+        let time = {};
+
+        time['start'] = new Date(stringDate);
+        time['start'].setHours(startDateString['hours']);
+        time['start'].setMinutes(startDateString['minutes'])
+
+        time['end'] = new Date(stringDate);
+        time['end'].setHours(endPickerString['hours']);
+        time['end'].setMinutes(endPickerString['minutes'])
+
+        // data['startDate'] = new Date(stringDate);
+        // data['startDate'].setHours(startDateString['hours']);
+        // data['startDate'].setMinutes(startDateString['minutes'])
 
 
+        // data['endDate'] = new Date(stringDate);
+        // data['endDate'].setHours(endPickerString['hours']);
+        // data['endDate'].setMinutes(endPickerString['minutes'])
 
+
+        // data['startDate']=
+        var start = stringDate
+            + " " + time['start'].getHours() + ":" + time['start'].getMinutes();
+        console.log(start);
+        data['startDate'] = moment(start).tz('Asia/Tehran');
+
+
+        var end = stringDate
+            + " " + time['end'].getHours() + ":" + time['end'].getMinutes();
+        data['endDate'] = moment(end).tz('Asia/Tehran');
+        console.log(end);
 
         console.log(data);
-        this.mainServ.APIServ.post("consTimes", this.eventForm.value).subscribe((data: any) => {
+        this.mainServ.APIServ.post("consTimes", data).subscribe((data: any) => {
             if (this.mainServ.APIServ.getErrorCode() == 0) {
                 if (isClose)
                     this.dialogRef.close();

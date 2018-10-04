@@ -115,22 +115,42 @@
 </div>
 
 <div class="col-md-5" style="margin-top: 200px;">
+
+  <mat-form-field style="width: 100%;">
+    <mat-select (selectionChange)="changeTimezone($event.value,$event.viewValue)" [(value)]="timezoneSelect" placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}">
+      <!--<ngx-mat-select-search [formControl]="bankFilterCtrl"></ngx-mat-select-search>-->
+      <mat-option *ngFor="let oneTimeZone of timeZoneArray" [value]="oneTimeZone.value">
+        {{ oneTimeZone.viewValue }}
+      </mat-option>
+    </mat-select>
+    <mat-icon matSuffix>time</mat-icon>
+  </mat-form-field>
+  <!--<mat-form-field style="width: 100%;">
+    <mat-select (selectionChange)="changeTimezone($event.value)" [(value)]="timezoneSelect" placeholder="{{ 'Calender.CHOOSETIMEZONE' | translate }}"
+      #singleSelect>
+      <ngx-mat-select-search [formControl]="bankFilterCtrl"></ngx-mat-select-search>
+      <mat-option *ngFor="let oneTimeZone of timeZoneArray | async" [value]="oneTimeZone.value">
+        {{ oneTimeZone.value }}
+      </mat-option>
+    </mat-select>
+-->
+
   <ngx-datatable class="material" [rows]="bodyevents" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'" [scrollbarH]="true"
     [rowClass]="">
-    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="start">
+    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="date">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
         <span>{{'Calender.DATE' | translate}}</span>
       </ng-template>
-      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template style="background-color: aqua">
+      <!--<ng-template let-row="row" let-value="value" ngx-datatable-cell-template style="background-color: aqua">
         {{row.start | date:'yyyy/MM/dd'}}
-      </ng-template>
+      </ng-template>-->
     </ngx-datatable-column>
-    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="start">
+    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="bodyEnd">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
         <span>{{'Calender.TIME' | translate}}</span>
       </ng-template>
       <ng-template let-row="row" let-value="value" ngx-datatable-cell-template style="background-color: aqua">
-        {{row.start | date:'HH:mm'}} - {{row.end | date:'HH:mm'}}
+        {{row.bodyStart}} -- {{row.bodyEnd}}
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="meta.location">

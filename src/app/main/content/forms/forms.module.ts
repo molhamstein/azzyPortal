@@ -32,7 +32,7 @@ const routes = [
     canActivate: [AuthGuardService]
 
   }
-  , { path: '', redirectTo: '/unprocessed', pathMatch: 'full' },
+  , { path: '', redirectTo: '/calendar', pathMatch: 'full' },
 
 ];
 

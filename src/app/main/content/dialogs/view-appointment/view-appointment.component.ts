@@ -25,7 +25,7 @@ export class ViewAppointmentComponent {
 
     this.translationLoader.loadTranslations(english, persian);
 
-        this.appointment = data['appointment']['meta'];
+        this.appointment = data['appointment'];
     }
 
     click(isUse) {

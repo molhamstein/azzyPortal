@@ -3,11 +3,11 @@
 <!--<h1 mat-dialog-title>Text Box Message</h1>-->
 <div mat-dialog-content>
  <mat-list>
-  <mat-list-item><b style="margin-right: 10px">{{'Dialog.View_Appointment.FROM' | translate}} : </b><label></label>{{appointment.startDate |date: 'hh:mm MM/dd/yyyy'}}</mat-list-item>
+  <mat-list-item><b style="margin-right: 10px">{{'Dialog.View_Appointment.FROM' | translate}} : </b><label></label>{{appointment.date}}   {{appointment.bodyStart}}</mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item><b style="margin-right: 10px">{{'Dialog.View_Appointment.TO' | translate}} :</b><label>{{appointment.endDate |date: 'hh:mm MM/dd/yyyy'}}</label></mat-list-item>
+  <mat-list-item><b style="margin-right: 10px">{{'Dialog.View_Appointment.TO' | translate}} :</b><label>{{appointment.date}}   {{appointment.bodyEnd}}</label></mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item><b style="margin-right: 10px">{{'Dialog.View_Appointment.LOCATION' | translate}} :</b><label>{{appointment.location}}</label></mat-list-item>
+  <mat-list-item><b style="margin-right: 10px">{{'Dialog.View_Appointment.LOCATION' | translate}} :</b><label>{{appointment.meta.location}}</label></mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>
 </div>

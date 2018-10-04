@@ -17,6 +17,7 @@ export class ConfirmMessageComponent {
     url = "";
     type = "";
     withReload = true;
+    token;
     constructor(
         public dialogRef: MatDialogRef<ConfirmMessageComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
@@ -27,6 +28,7 @@ export class ConfirmMessageComponent {
         this.sendData = data['sendData'];
         this.url = data['url'];
         this.type = data['type'];
+        this.token = data['token'];
         this.withReload = data['withReload'];
         this.translationLoader.loadTranslations(english, persian);
 
@@ -40,7 +42,7 @@ export class ConfirmMessageComponent {
 
     onYesClick() {
         if (this.type == "patch")
-            this.mainServ.APIServ.patch(this.url, this.sendData).subscribe((data: any) => {
+            this.mainServ.APIServ.patch(this.url, this.sendData, this.token).subscribe((data: any) => {
                 if (this.mainServ.APIServ.getErrorCode() == 0) {
                     if (this.withReload)
                         this.mainServ.globalServ.reload();

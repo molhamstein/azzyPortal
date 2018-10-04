@@ -10,10 +10,10 @@ export class DialogServiceService {
     public dialog: MatDialog,
   ) { }
 
-  confirmationMessage(message, url, data, withReload,callback, type: string = "patch") {
+  confirmationMessage(message, url, data, withReload, callback, type: string = "patch", token: string = "patch") {
     let dialogRef = this.dialog.open(ConfirmMessageComponent, {
       width: '250px',
-      data: { message: message, url: url, sendData: data, type: type, withReload: withReload }
+      data: { message: message, url: url, sendData: data, type: type, withReload: withReload, token: token }
     });
 
     dialogRef.afterClosed().subscribe(result => {

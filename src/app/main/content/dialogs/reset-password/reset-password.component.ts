@@ -38,9 +38,9 @@ export class ResetPasswordComponent {
     }
 
     update() {
-        this.mainServ.APIServ.patch("staffusers/" + this.userId, this.regiForm.value).subscribe((data: any) => {
+        this.mainServ.APIServ.patch("staffusers/change-password", this.regiForm.value).subscribe((data: any) => {
             if (this.mainServ.APIServ.getErrorCode() == 0) {
-                this.dialogRef.close(this.regiForm.value);
+                this.dialogRef.close();
             }
         })
     }

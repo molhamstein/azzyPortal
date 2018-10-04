@@ -13,7 +13,8 @@ export class NavigationModel {
                         'title': 'Nav.CALENDAR',
                         'type': 'item',
                         'icon': 'today',
-                        'url': '/calendar'
+                        'url': '/calendar',
+                        'role': 'ReadCalendar'
                     },
                     {
                         'id': 'calendar',
@@ -27,22 +28,17 @@ export class NavigationModel {
                         'title': 'Nav.USERS',
                         'type': 'item',
                         'icon': 'supervised_user_circle',
-                        'url': '/users'
+                        'url': '/users',
+                        'role': 'UserDefinition'
                     },
-                ]
-            },
-
-            {
-                'id': 'forms',
-                'title': 'FORMS.TITLE',
-                'type': 'group',
-                'children': [
                     {
                         'id': 'forms',
                         'title': 'Form.UNPROCESSED_FORMS.TITLE',
                         'type': 'item',
                         'icon': 'email',
                         'url': '/unprocessed',
+                        'role': 'ReadForms'
+
 
                     },
                     {
@@ -51,6 +47,8 @@ export class NavigationModel {
                         'type': 'item',
                         'icon': 'email',
                         'url': '/processed',
+                        'role': 'ReadForms'
+
 
                     },
                     {
@@ -59,10 +57,21 @@ export class NavigationModel {
                         'type': 'item',
                         'icon': 'email',
                         'url': '/contracted',
+                        'role': 'ReadForms'
+
 
                     }
+
                 ]
             },
+
+            // {
+            //     'id': 'forms',
+            //     'title': 'FORMS.TITLE',
+            //     'type': 'group',
+            //     'children': [
+            //     ]
+            // },
         ];
     }
 }

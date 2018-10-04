@@ -125,7 +125,8 @@ export class ContractedFormsComponent implements OnInit {
   }
 
 
-  // openDialog(status, id,name) {
-  //     this.mainServ.globalServ.confirmationMessage('are youe sure you want change '+name+'\'s form to '+status,"forms/" +id,{'status':status})
-  //   }
+  isAllowed(role) {
+    return this.mainServ.globalServ.isAllowed(role);
+
+  }
 }

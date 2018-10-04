@@ -1,6 +1,9 @@
+import { AddApointmentComponent } from './../dialogs/add-apointment/add-apointment.component';
+import { DeleteAppointmentComponent } from './../dialogs/delete-appointment/delete-appointment.component';
+import { element } from 'protractor';
 import { FuseCalendarEventFormDialogComponent } from './event-form/event-form.component';
 import { AddSlotesComponent } from './../dialogs/add-slotes/add-slotes.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { CalendarMonthViewDay } from '../../../angular-calendar';
 import { CalendarEvent } from '../../../angular-calendar';
 import { colors } from './colors';
@@ -25,6 +28,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { FuseTranslationLoaderService } from '../../../core/services/translation-loader.service';
 import { CallApiService } from '../../../core/services/call-api.service';
 import { MainService } from '../../../core/services/main.service';
+import * as cloneDeep from 'lodash/cloneDeep';
+
 
 
 @Component({
@@ -58,140 +63,81 @@ export class CalendarComponent implements OnInit {
     this.translationLoader.loadTranslations(english, persian);
 
   }
-  token = "F1xVylCp9enwzWpnobtN0KjeTsa7Iar5l4zebc26HMjfioaN8oGrQsWXQQdFgvxD";
-
-  colors = [
-    {
-      cons: 1,
-      name: "Johnny Nakazi",
-      color: {
-        primary: "#4286f4",
-        secondary: "white"
-      },
-    },
-    {
-      cons: 20,
-      name: "Molham Mahmoud",
-      color: {
-        primary: "#f44d41",
-        secondary: "white"
-      },
-    },
-  ]
   consultants = [];
   ngOnInit(): void {
+    if (this.mainServ.loginServ.getType() == "consultant") {
+      this.consultants[0] = this.mainServ.loginServ.getUserId();
+    }
+    this.getSlots(new Date(), this.consultants);
 
-    this.mainServ.APIServ.get("staffusers?filter[where][type]=consultant").subscribe((res: any) => {
-      this.consultants = res;
-    });
-   this.getSlots(new Date(),[]);
   }
 
   title = 'app';
   view: string = 'month';
   viewDate: Date = new Date();
   activeDayIsOpen: boolean;
-  events: CalendarEvent[] = [];
+  events = [];
+  eventsForDay = []
+  monthEvent: CalendarEvent[] = [];
+  dayEvent: CalendarEvent[] = [];
 
 
 
-
-  // events: CalendarEvent[] = [
-  //   {
-  //     startDate: new Date(2018,6,27,20,0),
-  //     endDate: "2018-07-27T17:34:13.239Z",
-  //     location: "string",
-  //     open: true,
-  //     consID: "string",
-  //     clientID: "string",
-  //     id: "string"
-  //   }
-  //   {
-  //     title: 'Event 1',
-  //     color: colors.yellow,
-  //     start: new Date(2018, 6, 23, 12),
-  //     end: new Date(2018, 6, 23, 12, 30),
-  //     meta: {
-  //       type: 'warning'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 2',
-  //     color: colors.yellow,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'warning'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 3',
-  //     color: colors.blue,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'info'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 4',
-  //     color: colors.red,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'danger'
-  //     }
-  //   },
-  //   {
-  //     title: 'Event 5',
-  //     color: colors.red,
-  //     start: new Date(),
-  //     meta: {
-  //       type: 'danger'
-  //     }
-  //   }
-  // ];
 
   openEvents: CalendarEvent[] = [];
   flag: boolean = true;
-  beforeMonthViewRender({ body }: { body: CalendarMonthViewDay[] }): void {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    body.forEach(cell => {
-      cell.badgeTotal = 0;
 
-      const groups: any = {};
-      cell.events.forEach((event: CalendarEvent<{ consId: string, open: boolean }>) => {
-        if (!event.meta.open) {
-          cell.badgeTotal += 1;
-          groups[event.meta.consId] = groups[event.meta.consId] || [];
-          groups[event.meta.consId].push(event);
-          event.color = this.getColor(event.meta.consId);
+  @Input()
+  eventTemplate: TemplateRef<any>;
 
-        }
-        else {
-          event.color = { primary: "#cccccc", secondary: "black" };
-        }
+  handleEvent(action: string, event: CalendarEvent): void {
+    if (event['meta'] != null) {
+      if (event['meta'].open == false) {
+        this.openDeleteApo(event)
+      }
+      else {
+        this.openAddApo(event);
+      }
+    }
+  }
 
-      });
-      cell['eventGroups'] = Object.entries(groups);
-      if (cell['eventGroups'].length > 0 && this.flag) {
-        for (let index = 0; index < cell['eventGroups'].length; index++) {
-          var xx = cell['eventGroups'][index][0]
-          style.innerHTML += '.badge-' + xx + '{ background-color:' + this.getColor(xx).primary + '; color: white;}'
-          
-          this.flag = false;
-        }
-        document.getElementsByTagName('head')[0].appendChild(style);
 
+  openAddApo(data) {
+    this.dialogRef = this.dialog.open(AddApointmentComponent, {
+      width: '400px',
+      data: {
+        appointment: data
       }
     });
+    this.dialogRef.afterClosed()
+      .subscribe(result => {
+        this.changeView(this.view);
+      });
+  }
 
-
+  openDeleteApo(data) {
+    this.dialogRef = this.dialog.open(DeleteAppointmentComponent, {
+      // panelClass: 'event-form-dialog',
+      width: '400px',
+      data: {
+        appointment: data
+      }
+    });
+    this.dialogRef.afterClosed()
+      .subscribe(result => {
+        this.changeView(this.view);
+      });
   }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     this.openEvents = [];
+    // console.log(events);
+    console.log(date);
+    this.selectedDay = { 'date': date }
+    this.viewDate = date;
     events.forEach(element => {
-      if (!element.meta.open)
-        this.openEvents.push(element);
+      // if (!element.meta.open)
+      this.openEvents.push(element);
     });
     if (isSameMonth(date, this.viewDate)) {
       if (
@@ -207,41 +153,141 @@ export class CalendarComponent implements OnInit {
   }
 
   getColor(cons) {
-    
+
     for (let index = 0; index < this.consultants.length; index++) {
       if (this.consultants[index].id == cons) {
-        var x = { primary: '#' + this.consultants[index].primarycolor, secondary: '#' + this.consultants[index].secondarycolor };
+        var x = { primary: this.consultants[index].primarycolor, secondary: this.consultants[index].secondarycolor };
         return x;
       }
 
     }
   }
 
-  buildTitle(cons, client, location, start, end) {
-    var startMin = (new Date(start).getMinutes() < 10 ? '0' : '') + new Date(start).getMinutes();
-    var endMin = (new Date(end).getMinutes() < 10 ? '0' : '') + new Date(end).getMinutes();
+  buildTitle(cons, slote) {
+    var startMin = (new Date(slote.startDate).getMinutes() < 10 ? '0' : '') + new Date(slote.startDate).getMinutes();
+    var endMin = (new Date(slote.endDate).getMinutes() < 10 ? '0' : '') + new Date(slote.endDate).getMinutes();
 
-    return cons + ' - ' + client + ': ' + new Date(start).getHours() + ':' + startMin + ' - ' + new Date(end).getHours() + ':' + endMin + ' (' + location + ')';
+    if (slote.open == false) {
+      return cons.username + ' - ' + "with " + slote.forms.nameEnglish + " " + slote.forms.surnameEnglish + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
+
+    } else {
+      return cons.username + ' - ' + "free" + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
+
+    }
+
   }
 
-  addEvent(): void {
-    this.dialogRef = this.dialog.open(FuseCalendarEventFormDialogComponent, {
-      panelClass: 'event-form-dialog',
-      data: {
-        action: 'new',
-        date: new Date()
+
+
+  changeDate(e) {
+    this.selectedDay = { date: e };
+    this.viewDate = e
+    this.getSlots(this.viewDate, []);
+  }
+
+
+  changeView(newView) {
+    console.log(this.viewDate)
+    this.view = newView
+    this.getSlots(this.viewDate, this.consultants);
+  }
+
+
+  preperData() {
+    this.dayEvent = []
+    this.eventsForDay.forEach(element => {
+      var slotCons = element;
+      if (slotCons.length != 0) {
+        for (var houre = 0; houre < 24; houre++) {
+          for (var min = 0; min < 2; min++) {
+            this.dayEvent.push(this.isAvailbleDate(slotCons, houre, min * 30))
+          }
+        }
       }
     });
-    this.dialogRef.afterClosed()
-      .subscribe((response: FormGroup) => {
-        if (!response) {
-          return;
-        }
-        const newEvent = response.getRawValue();
-        this.events.push(newEvent);
-        this.refresh.next(true);
-      });
+    console.log(this.dayEvent);
   }
+
+
+  isAvailbleDate(items, houre, min) {
+    let newItem;
+    items.find(item => {
+      if (item.start.getHours() == houre && item.start.getMinutes() == min) {
+        newItem = item;
+      }
+    })
+    if (newItem != null) {
+      return newItem
+    } else {
+      let start = cloneDeep(items[0].start)
+      start.setHours(houre);
+      start.setMinutes(min);
+      let end = cloneDeep(start);
+      end.setTime(start.getTime() + (30 * 60 * 1000));
+      return { 'start': start, 'end': end, 'title': "Space Time", 'color': { 'primary': items[0].color.primary + "52", 'secondary': items[0].color.secondary + "52" } };
+    }
+  }
+  getSlots(date, ids) {
+    this.mainServ.loaderSer.display(true);
+    this.monthEvent = []
+    this.events = []
+    this.eventsForDay = [];
+    var index = 0
+    if (this.view == "month") {
+      var firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
+      var lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+    } else {
+      var firstDate = new Date(date);
+      var lastDate = new Date(date);
+      firstDate.setHours(0);
+      lastDate.setHours(23);
+    }
+    this.mainServ.APIServ.get("consTimes/readCalander?dateStart=" + firstDate + "&dateEnd=" + lastDate + "&ids=" + ids).subscribe((res: any) => {
+      this.mainServ.loaderSer.display(false);
+
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        var tempEvents = res;
+        tempEvents.readCalander.forEach(cons => {
+          index++;
+          cons.slots.forEach(slot => {
+            if (slot.open)
+              var x: CalendarEvent = {
+                start: new Date(slot.startDate),
+                end: new Date(slot.endDate),
+                color: { primary: cons.primarycolor, secondary: cons.secondarycolor },
+                title: this.buildTitle(cons, slot),
+                meta: slot
+              }
+            else {
+              var x: CalendarEvent = {
+                start: new Date(slot.startDate),
+                end: new Date(slot.endDate),
+                color: { primary: cons.secondarycolor, secondary: cons.primarycolor },
+                title: this.buildTitle(cons, slot),
+                meta: slot
+              }
+            }
+            // if (slot.open == false) {
+              this.monthEvent.push(x);
+              if (this.events[index] == null) {
+                this.events[index] = [];
+              }
+              this.events[index].push(x);
+            // }
+            if (this.eventsForDay[index] == null) {
+              this.eventsForDay[index] = [];
+            }
+            this.eventsForDay[index].push(x);
+            if (this.view != "month") {
+
+              this.preperData()
+            }
+          });
+        });
+      }
+    });
+  }
+
   addEventNew() {
     this.dialogRef = this.dialog.open(AddSlotesComponent, {
       panelClass: 'event-form-dialog',
@@ -260,29 +306,8 @@ export class CalendarComponent implements OnInit {
         this.refresh.next(true);
       });
   }
+  isAllowed(role) {
+    return this.mainServ.globalServ.isAllowed(role);
 
-  changeDate(e){
-    this.selectedDay = {date:e};
-    this.getSlots(this.selectedDay.date,[]);
-  }
-
-  getSlots(date,ids){
-    var firstDayofMonth = new Date(date.getFullYear(), date.getMonth(), 1);
-    var lastDayofMonth = new Date(date.getFullYear(), date.getMonth() + 1, 1);
-    this.mainServ.APIServ.get("consTimes/readCalander?dateStart=" + firstDayofMonth + "&dateEnd=" + lastDayofMonth + "&ids="+ ids).subscribe((res: any) => {
-      var tempEvents = res;
-      tempEvents.readCalander.forEach(cons => {
-        cons.slots.forEach(slot => {
-          var x: CalendarEvent = {
-            start: new Date(slot.startDate),
-            end: new Date(slot.endDate),
-            title: this.buildTitle(cons.username, slot.clientId, slot.location, slot.startDate, slot.endDate),
-            meta: slot
-          }
-          this.events.push(x);
-        });
-      });
-      
-    });
   }
 }

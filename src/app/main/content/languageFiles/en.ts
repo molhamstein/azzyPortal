@@ -67,7 +67,7 @@ export const locale = {
             'SPOUSE': 'Spouse',
             'BACK': 'Back',
             'STEP_0': {
-                'LABEL': 'Specifications',
+                'LABEL': 'Info',
                 'ENAME': 'English Name',
                 'ESNAME': 'English Sur Name',
                 'FNAME': 'Farsi Name',
@@ -88,7 +88,7 @@ export const locale = {
                 'EADDRESS': 'English Address',
             },
             'STEP_1': {
-                'LABEL': 'English language level',
+                'LABEL': 'English',
                 'ENGLISH_LEVEL': 'How familiar are you in English?',
                 'EXCELLENT': 'Excellent',
                 'GOOD': 'Good',
@@ -97,7 +97,7 @@ export const locale = {
                 'EN_SCORE': 'Enter the IELTS / TOEFL score'
             },
             'STEP_2': {
-                'LABEL': 'Level of Education',
+                'LABEL': 'Education',
                 'DEGREE': 'Degree',
                 'ASSISTANT': 'Assistant',
                 'UNDER_GRAD': 'Undergraduate',
@@ -109,7 +109,7 @@ export const locale = {
                 'YEAR_GRAD': 'Year of Graduation'
             },
             'STEP_3': {
-                'LABEL': 'Work experience',
+                'LABEL': 'Work',
                 'FIELDOfWork': 'field Of Working',
                 "REDYPAID": "Relateded Years Paid",
                 "REDYNPAID": "Relateded Years Non Paid",
@@ -122,7 +122,7 @@ export const locale = {
                 'YEAR': 'year'
             },
             'STEP_4': {
-                'LABEL': 'Military Service',
+                'LABEL': 'Military',
                 'STATUS': 'Status',
                 'FINISHED': 'Finished',
                 'EXEMPTION': 'Exemption',
@@ -136,7 +136,7 @@ export const locale = {
                 'SURGERY': 'Surgery Past Or Future',
             },
             'STEP_6': {
-                'LABEL': 'Relatives in Australia',
+                'LABEL': 'Relatives In Ausralia',
                 'CITIZEN': 'Citizen',
                 'PERMANENTRES': 'Permanent Res',
                 'TEMPORARYRES': 'Temporary Res',
@@ -148,10 +148,29 @@ export const locale = {
                 'VISATYPE': 'Australia Visa Type'
             },
             'STEP_7': {
-                'LABEL': 'Admin Box',
+                'LABEL': 'Admin',
                 'TBCLIENT': 'text Box Client',
                 'TBADMIN': 'text Box Admin',
-                'TBNOTES': 'text Box Notes'
+                'TBNOTES': 'text Box Notes',
+                'MAINAPPLICATION': 'Main Applicant',
+                'APPLICANT': 'Applicant',
+                'SPOUSE': 'Spouse',
+                'TOTALPOINTS': 'Total Points',
+                'DEPENDANT': 'Dependant',
+                'OCCUPATIONTOBEASSESSED': 'Occupation to be assessed',
+                'YEAROFWORKEXPERIENCE': 'Years of Work Experience',
+                'ASSESSMENTORGANIZATION': 'Assessment Organization',
+                'PROFESSIONALINSTALLMENTA': 'Professional Fee / Installments',
+                'PROFESSIONALTOTAL': 'Professional Fee / Total',
+                'PFEDUCATION': 'Points from Education',
+                'PFEXPERIENCE': 'Points from Work Experience',
+                'PFSPOUSE': 'Points from Spouse',
+                'PFENGLISH': 'Points from English Test',
+                'PFNAATI': 'Points from NAATI Test',
+                'PFSTATE': 'Points from State Sponsorship',
+                'PFFAMILY': 'Points from Family Sponsorship',
+                'TOTALPOINT': 'Total Points',
+                'howKnow': 'How did you know about us?'
             }
 
 
@@ -165,6 +184,7 @@ export const locale = {
             'LOCATION': 'Location',
             'AVAILABLE': 'Available',
             'NOTAVAILABLE': 'Not Available',
+            'CHOOSETIMEZONE': 'Choose Time Zone'
         },
         'Dialog': {
             'View_Appointment': {
@@ -222,10 +242,11 @@ export const locale = {
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
                 'USERNAME': 'User Name',
-                'CONSUTANT': 'consultant',
-                'MANAGER': 'manager',
-                'SECRETARY': 'secretary',
-                'ADMINSTRATOR': 'adminstrator',
+                'CONSUTANT': 'Consultant',
+                'MANAGER': 'Manager',
+                'SECRETARY': 'Secretary',
+                'ADMINSTRATOR': 'Adminstrator',
+                'RECEPTION': 'Reception',
                 'PRIMARYCOLOR': 'Primary Color',
                 'SECONDARYCOLOR': 'Secondary Color',
                 'ADD': 'Add',

@@ -1,3 +1,4 @@
+import { DialogServiceService } from './../../../core/services/dialog-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from './../../../core/services/main.service';
 import { element } from 'protractor';
@@ -25,6 +26,8 @@ export class EditFormComponent implements OnInit {
   formErrors: any;
   formGroup: FormGroup;
 
+  total;
+  totalSp;
   fuseSettings: any;
   isNonLinear = false;
   isNonEditable = false;
@@ -378,6 +381,120 @@ export class EditFormComponent implements OnInit {
       value: ['textBoxNotes'],
       icon: 'note'
     },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.howKnow',
+      value: ['howKnow'],
+      icon: 'note'
+    },
+
+  ]
+
+  mainApplicantValue = [
+    {
+      'value': 'applicant',
+      'viewValue': 'Add_Edit_Form.STEP_7.APPLICANT'
+    },
+    {
+      'value': 'spouse',
+      'viewValue': 'Add_Edit_Form.STEP_7.SPOUSE'
+    }
+  ]
+
+  extNotesFields = [
+    // {
+    //   viewValue: 'Add_Edit_Form.STEP_7.MAINAPPLICATION',
+    //   value: ['mainApplicant'],
+    //   icon: 'note',
+    //   type: 'choose',
+    //   arrayValue: [{
+    //     'value': 'ssss',
+    //     'viewValue': 'eeeee'
+    //   }]
+    // },
+    // {
+    //   viewValue: 'Add_Edit_Form.STEP_7.DEPENDANT',
+    //   value: ['dependant', 'dependantSp'],
+    //   icon: 'note',
+    //   type: 'choose',
+    //   arrayValue: [
+    //     {
+    //       'value': 'ssss',
+    //       'viewValue': 'eeeee'
+    //     }
+    //   ]
+    // },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.OCCUPATIONTOBEASSESSED',
+      value: ['occupationToBeAssessed', 'occupationToBeAssessedSp'],
+      icon: 'note',
+      type: 'input',
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.YEAROFWORKEXPERIENCE',
+      value: ['yearsOfWorkExperience', 'yearsOfWorkExperienceSp'],
+      icon: 'note',
+      type: 'number'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.ASSESSMENTORGANIZATION',
+      value: ['assessmentOrganization', 'assessmentOrganizationSp'],
+      icon: 'note',
+      type: 'input'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PROFESSIONALINSTALLMENTA',
+      value: ['professionalInstallments', 'professionalInstallmentsSp'],
+      icon: 'note',
+      type: 'number'
+    },
+  ]
+
+
+  pintsFields = [
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFEDUCATION',
+      value: ['pointsFromEducation', 'pointsFromEducationSp'],
+      icon: 'note',
+      type: 'number'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFEXPERIENCE',
+      value: ['pointsFromWorkExperience', 'pointsFromWorkExperienceSp'],
+      icon: 'note',
+      type: 'number'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFSPOUSE',
+      value: ['pointsFromSpouse', 'pointsFromSpouseSp'],
+      icon: 'note',
+      type: 'number'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFENGLISH',
+      value: ['pointsFromEnglishTest', 'pointsFromEnglishTestSp'],
+      icon: 'note',
+      type: 'number'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFNAATI',
+      value: ['pointsFromNAATITest', 'pointsFromNAATITestSp'],
+      icon: 'note',
+      type: 'number'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFSTATE',
+      value: ['pointsFromStateSponsorship', 'pointsFromStateSponsorshipSp'],
+      icon: 'note',
+      type: 'number'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFFAMILY',
+      value: ['pointsFromFamilySponsorship', 'pointsFromFamilySponsorshipSp'],
+      icon: 'note',
+      type: 'number'
+    },
+
+
   ]
 
   setStep(pindex: number, index: number) {
@@ -403,6 +520,7 @@ export class EditFormComponent implements OnInit {
     private translationLoader: FuseTranslationLoaderService,
     private _formBuilder: FormBuilder,
     private route: ActivatedRoute,
+    private dialogSer: DialogServiceService,
     private mainServ: MainService) {
 
     for (var index = 0; index <= 100; index++) {
@@ -556,22 +674,57 @@ export class EditFormComponent implements OnInit {
           textBoxClient: [data['textBoxClient']],
           textBoxAdmin: [data['textBoxAdmin']],
           textBoxNotes: [data['textBoxNotes']],
+          howKnow: [data['howKnow']],
+          mainApplicant: [data['mainApplicant']],
+          // mainApplicantSp: [data['mainApplicantSp']],
+          // dependant: [data['dependant']],
+          // dependantSp: [data['dependantSp']],
+          occupationToBeAssessed: [data['occupationToBeAssessed']],
+          occupationToBeAssessedSp: [data['occupationToBeAssessedSp']],
+          yearsOfWorkExperience: [data['yearsOfWorkExperience']],
+          yearsOfWorkExperienceSp: [data['yearsOfWorkExperienceSp']],
+          assessmentOrganization: [data['assessmentOrganization']],
+          assessmentOrganizationSp: [data['assessmentOrganizationSp']],
+          professionalInstallments: [data['professionalInstallments']],
+          professionalInstallmentsSp: [data['professionalInstallmentsSp']],
+          professionalTotal: [data['professionalTotal']],
+          pointsFromEducation: [data['pointsFromEducation']],
+          pointsFromEducationSp: [data['pointsFromEducationSp']],
+          pointsFromWorkExperience: [data['pointsFromWorkExperience']],
+          pointsFromWorkExperienceSp: [data['pointsFromWorkExperienceSp']],
+          pointsFromSpouse: [data['pointsFromSpouse']],
+          pointsFromSpouseSp: [data['pointsFromSpouseSp']],
+          pointsFromEnglishTest: [data['pointsFromEnglishTest']],
+          pointsFromEnglishTestSp: [data['pointsFromEnglishTestSp']],
+          pointsFromNAATITest: [data['pointsFromNAATITest']],
+          pointsFromNAATITestSp: [data['pointsFromNAATITestSp']],
+          pointsFromStateSponsorship: [data['pointsFromStateSponsorship']],
+          pointsFromStateSponsorshipSp: [data['pointsFromStateSponsorshipSp']],
+          pointsFromFamilySponsorship: [data['pointsFromFamilySponsorship']],
+          pointsFromFamilySponsorshipSp: [data['pointsFromFamilySponsorshipSp']],
+          totalPoints: [data['totalPoints']],
+          totalPointsSp: [data['totalPointsSp']]
         })
       ])
     });
   }
 
+
   ngOnInit() {
     this.translate.use('en');
 
     this.appDirection.switchDir('ltr');
-
+    this.mainServ.loaderSer.display(true);
     var id = this.route.snapshot.paramMap.get('id');
     this.mainServ.APIServ.get("forms/" + id).subscribe((data: any) => {
+      this.mainServ.loaderSer.display(false);
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.setFormGroupe(data);
         this.formData = data;
         this.loder = true;
+        this.total = data['totalPoints'];
+        this.totalSp = data['totalPointsSp'];
+
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
 
@@ -597,65 +750,51 @@ export class EditFormComponent implements OnInit {
 
   }
 
-  // createDegree(): FormGroup {
-  //   return this._formBuilder.group({
-  //     eduLevel: [data['nameFarsi'], Validators.required],
-  //     field: [data['nameFarsi'], Validators.required],
-  //     university: [data['nameFarsi'], Validators.required],
-  //     eduPlace: [data['nameFarsi'], Validators.required],
-  //     yearOfGrad: [data['nameFarsi'], Validators.required],
-  //   });
-  // }
-  // createWork(): FormGroup {
-  //   return this._formBuilder.group({
-  //     ralatedStudy: [data['nameFarsi'], Validators.required],
-  //     fieldActivity: [data['nameFarsi'], Validators.required],
-  //     insurance: [data['nameFarsi'], Validators.required],
-  //     year: [data['nameFarsi'], Validators.required],
-  //   });
-  // }
+  changeTotal() {
+    this.total = this.formGroup.value['formArray'][7]['pointsFromEducation'] +
+      this.formGroup.value['formArray'][7]['pointsFromWorkExperience'] +
+      this.formGroup.value['formArray'][7]['pointsFromSpouse'] +
+      this.formGroup.value['formArray'][7]['pointsFromEnglishTest'] +
+      this.formGroup.value['formArray'][7]['pointsFromNAATITest'] +
+      this.formGroup.value['formArray'][7]['pointsFromStateSponsorship'] +
+      this.formGroup.value['formArray'][7]['pointsFromFamilySponsorship']
+  }
 
-  // addDegree(): void {
-  //   (this.formArray.get([2, 'degrees']) as FormArray).push(this.createDegree());
-  // }
-  // addSpouseDegree(): void {
-  //   (this.formArray.get([2, 'degreesSpouse']) as FormArray).push(this.createDegree());
-  // }
-  // addWork(): void {
-  //   (this.formArray.get([3, 'works']) as FormArray).push(this.createWork());
-  // }
-  // addSpouseWork(): void {
-  //   (this.formArray.get([3, 'worksSpouse']) as FormArray).push(this.createWork());
-  // }
-  // removeDegree(index: number): void {
-  //   (this.formArray.get([2, 'degrees']) as FormArray).removeAt(index);
-  // }
-  // removeSpouseDegree(index: number): void {
-  //   (this.formArray.get([2, 'degreesSpouse']) as FormArray).removeAt(index);
-  // }
-  // removeWork(index: number): void {
-  //   (this.formArray.get([3, 'works']) as FormArray).removeAt(index);
-  // }
-  // removeSpouseWork(index: number): void {
-  //   (this.formArray.get([3, 'worksSpouse']) as FormArray).removeAt(index);
-  // }
+  changeTotalSp() {
+    this.totalSp = this.formGroup.value['formArray'][7]['pointsFromEducationSp'] +
+      this.formGroup.value['formArray'][7]['pointsFromWorkExperienceSp'] +
+      this.formGroup.value['formArray'][7]['pointsFromSpouseSp'] +
+      this.formGroup.value['formArray'][7]['pointsFromEnglishTestSp'] +
+      this.formGroup.value['formArray'][7]['pointsFromNAATITestSp'] +
+      this.formGroup.value['formArray'][7]['pointsFromStateSponsorshipSp'] +
+      this.formGroup.value['formArray'][7]['pointsFromFamilySponsorshipSp']
+  }
 
   editForm() {
     var customArray = { "formArray": [{ "nameFarsi": "anas", "surnameFarsi": "alazmeh", "nameEnglish": "anas", "surnameEnglish": "alazmeh", "email": "world.of.anas.95@gmail.com", "mobileNo": "222222222", "lLandlinePhoneNo": "3213213123", "maritalStatus": "married", "numberOfChildren": 0, "dateOfBirthPer": "1995-06-24T21:00:00.000Z", "skypeID": "313113113", "residentialAddressEnglish": "Damas", "residentialAddressFarsi": "damas", "nameFarsiSp": "test", "surnameFarsiSp": "test2", "nameEnglishSp": "test", "surnameEnglishSp": "Test2", "emailSp": "a33@a.com", "mobileNoSp": "1111111", "lLandlinePhoneNoSp": "3211312", "maritalStatusSp": "married", "numberOfChildrenSp": 0, "dateOfBirthPerSp": "1993-11-10T22:00:00.000Z", "skypeIDSp": "22131", "residentialAddressEnglishSp": "Damas", "residentialAddressFarsiSp": "damas" }, { "goodEnglish": "Excellent", "writingEn": 10, "listeningEn": 20, "readingEn": 30, "speakingEn": 40, "overallEn": 50, "goodEnglishSp": "Good", "writingEnSp": 50, "listeningEnSp": 40, "readingEnSp": 30, "speakingEnSp": 50, "overallEnSp": 70 }, { "assocField": "assoc", "assocUniversity": "adasd", "assocCityOfUniversity": "asdad", "assocYearOfGraduation": "1993", "bacField": "bac", "bacUniversity": "asdas", "bacCityOfUniversity": "asdasd", "bacYearOfGraduation": "1992", "masterField": "master", "masterUniversity": "asdasd", "masterCityOfUniversity": "qwqeq", "masterYearOfGraduation": "1995", "PHDField": "PHD", "PHDUniversity": "qweqwe", "PHDCityOfUniversity": "qweqe", "PHDYearOfGraduation": "1993", "assocFieldSp": "assocSp", "assocUniversitySp": "zxczc", "assocCityOfUniversitySp": "zxczxc", "assocYearOfGraduationSp": "2000", "bacFieldSp": "bacSp", "bacUniversitySp": "asad", "bacCityOfUniversitySp": "xzczxc", "bacYearOfGraduationSp": "1999", "masterFieldSp": "masterSp", "masterUniversitySp": "qwqwq", "masterCityOfUniversitySp": "wewww", "masterYearOfGraduationSp": "1993", "PHDFieldSp": "PHDSp", "PHDUniversitySp": "dsssssss", "PHDCityOfUniversitySp": "fddddddd", "PHDYearOfGraduationSp": "1993" }, { "fieldOfWorking": "Fieeeeeeeeeeeld", "relatedEdYearsPaid": 20, "relatedEdYearsNonPaid": 30, "nonRelatedEdYearsPaid": 40, "nonRelatedEdYearsNonPaid": 50, "fieldOfWorkingSp": "sadas", "relatedEdYearsPaidSp": 10, "relatedEdYearsNonPaidSp": 20, "nonRelatedEdYearsPaidSp": 30, "nonRelatedEdYearsNonPaidSp": 50 }, { "militaryStatus": "Exemption", "militaryPlace": "dams", "militaryDurationFrom": "1993-01-03T22:00:00.000Z", "militaryDurationTo": "1993-12-17T22:00:00.000Z", "militaryStatusSp": "Finished", "militaryPlaceSp": "Damas", "militaryDurationFromSp": "1993-04-08T21:00:00.000Z", "militaryDurationToSp": "1993-09-18T21:00:00.000Z" }, { "significantCurrentSickness": "qwe", "surgeryPastOrFuture": "asd", "australiaFamilyRelation": "zxc", "australiaLivingState": "qwe1", "australiaLivingCity": "asd2", "australiaVisaType": "Citizen", "significantCurrentSicknessSp": "fghf", "surgeryPastOrFutureSp": "dfdgdg", "australiaFamilyRelationSp": "cvbcb", "australiaLivingStateSp": "sdfs", "australiaLivingCitySp": "cccccc", "australiaVisaTypeSp": "Temporary Res." }] }
-
+    var mainThis = this;
     this.sendArray = {}
     var key;
+    this.formGroup.value['formArray'][7].totalPoints = this.total
+    this.formGroup.value['formArray'][7].totalPointsSp = this.totalSp
     this.formGroup.value['formArray'].forEach(element => {
       for (key in element) {
         if (element[key] != "" && element[key] != null)
           this.sendArray[key] = element[key];
       }
     });
-    this.mainServ.APIServ.patch("forms/" + this.formData['id'], this.sendArray).subscribe((data: any) => {
-      if (this.mainServ.APIServ.getErrorCode() == 0) {
-        alert("editeForm")
-      }
-    })
+
+    this.dialogSer.confirmationMessage('are youe sure you want edit the form ', "forms/" + this.formData['id'], this.sendArray, false, function () {
+      // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
+      mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
+    }, 'patch')
+
+
+    // this.mainServ.APIServ.patch("forms/" + this.formData['id'], this.sendArray).subscribe((data: any) => {
+    //   if (this.mainServ.APIServ.getErrorCode() == 0) {
+    //     alert("editeForm")
+    //   }
+    // })
     console.log(this.sendArray);
   }
 

@@ -14,6 +14,7 @@ export class LoginService {
   userId;
   token;
   userName
+  type
   constructor(private cookieService: CookieService, private router: Router) {
     if (this.cookieService.get('isRemember') == "true") {
       this.isLogIn = this.isLoginCook();
@@ -34,6 +35,7 @@ export class LoginService {
   init() {
     if (this.isRemember) {
       this.userId = this.cookieService.get("userId");
+      this.type = this.cookieService.get("type");
       this.token = this.cookieService.get("token");
       this.userName = this.cookieService.get("userName");
     } else {
@@ -60,10 +62,13 @@ export class LoginService {
     return this.userName;
   }
 
+  getType() {
+    return this.type;
+  }
 
   logIn(data, rememberPass: boolean = true) {
-    this.isRemember=rememberPass;
-    this.isLogIn=true;
+    this.isRemember = rememberPass;
+    this.isLogIn = true;
     if (rememberPass) {
       this.cookieService.set('isRemember', "true");
       this.logInCook(data);
@@ -121,12 +126,13 @@ export class LoginService {
   logInCook(data) {
     this.cookieService.set('userId', data.userId);
     this.cookieService.set('token', data.id);
+    this.cookieService.set('type', data.user.type);
     this.cookieService.set('userName', data.user.username);
     if (data.user != null)
       this.cookieService.set('dalalAvatar', data.user.avatar);
     // }
     // location.href="advertising";
-      this.router.navigateByUrl('/').then(() => this.router.navigateByUrl('/'));
+    this.router.navigateByUrl('/').then(() => this.router.navigateByUrl('/'));
   }
 
 
@@ -161,7 +167,7 @@ export class LoginService {
     sessionStorage.setItem('dalalId', data.id);
     if (data.user != null)
       sessionStorage.setItem('dalalAvatar', data.user.avatar);
-    location.reload();
+    // location.reload();
   }
 
 

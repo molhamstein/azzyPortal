@@ -1,3 +1,5 @@
+import { AddApointmentComponent } from './main/content/dialogs/add-apointment/add-apointment.component';
+import { DeleteAppointmentComponent } from './main/content/dialogs/delete-appointment/delete-appointment.component';
 import { LoaderServicesService } from './core/services/loader-services.service';
 import { ResetPasswordComponent } from './main/content/dialogs/reset-password/reset-password.component';
 import { ColorPickerModule } from 'ngx-color-picker';
@@ -38,6 +40,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { Angular5TimePickerModule } from 'angular5-time-picker';
+import {MomentTimezoneModule} from 'angular-moment-timezone';
+
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 
 
@@ -50,7 +55,8 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent, ResetPasswordComponent,ResponeFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, ConfirmMessageComponent, ViewAppointmentComponent
+        AppComponent, ResetPasswordComponent,ResponeFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, ConfirmMessageComponent, ViewAppointmentComponent,
+        DeleteAppointmentComponent,AddApointmentComponent
     ],
     imports: [
         BrowserModule,
@@ -63,11 +69,13 @@ const appRoutes: Routes = [
         TranslateModule.forRoot(),
         FuseMainModule,
         MatDialogModule,
-        ColorPickerModule
+        ColorPickerModule,
+        MomentTimezoneModule
         // OwlDateTimeModule,
         // OwlNativeDateTimeModule,
     ],
-    entryComponents: [ViewAppointmentComponent,ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent, ConfirmMessageComponent],
+    entryComponents: [ViewAppointmentComponent,ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent, 
+    ConfirmMessageComponent,DeleteAppointmentComponent,AddApointmentComponent],
 
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

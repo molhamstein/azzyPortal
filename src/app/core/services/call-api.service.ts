@@ -16,6 +16,7 @@ export class CallApiService {
   }
   readonly baseUrl = "http://104.217.253.15:2999/api/"
   private errorCode = 0;
+  private code = "";
 
 
   public setErrorCode(errorCode) {
@@ -24,6 +25,15 @@ export class CallApiService {
 
   public getErrorCode() {
     return this.errorCode
+  }
+
+
+  public setCode(code) {
+    this.code = code;
+  }
+
+  public getCode() {
+    return this.code
   }
 
   get(url, token: string = "") {
@@ -39,6 +49,7 @@ export class CallApiService {
       return Response;
     }).catch((response: Response) => {
       this.errorCode = response['error'].statusCode;
+      this.code = response['error'].code
       // console.log(response);
       if (this.errorCode == 401 && response['error'].code == "AUTHORIZATION_REQUIRED")
         // this.loginSer.logout()
@@ -72,6 +83,7 @@ export class CallApiService {
       return Response;
     }).catch((Response: Response) => {
       this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
       return "E";
     });
   }
@@ -84,6 +96,8 @@ export class CallApiService {
       return Response;
     }).catch((Response: Response) => {
       this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
+
       return "E";
     });
   }
@@ -96,6 +110,8 @@ export class CallApiService {
       return Response;
     }).catch((Response: Response) => {
       this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
+
       return "E";
     });
   }
@@ -116,6 +132,8 @@ export class CallApiService {
       return Response;
     }).catch((Response: Response) => {
       this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
+
       return "E";
     });
   }
@@ -135,6 +153,8 @@ export class CallApiService {
       return Response;
     }).catch((Response: Response) => {
       this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
+
       return "E";
     });
   }
@@ -152,6 +172,8 @@ export class CallApiService {
       return Response;
     }).catch((Response: Response) => {
       this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
+
       return "E";
     });
   }
@@ -174,6 +196,8 @@ export class CallApiService {
       return Response;
     }).catch((Response: Response) => {
       this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
+
       return "E";
     });
   }

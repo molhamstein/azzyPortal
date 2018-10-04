@@ -1,20 +1,23 @@
+import { MainService } from './../../../../services/main.service';
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
 @Component({
-    selector   : 'fuse-nav-vertical-item',
+    selector: 'fuse-nav-vertical-item',
     templateUrl: './nav-vertical-item.component.html',
-    styleUrls  : ['./nav-vertical-item.component.scss']
+    styleUrls: ['./nav-vertical-item.component.scss']
 })
-export class FuseNavVerticalItemComponent implements OnInit
-{
+export class FuseNavVerticalItemComponent implements OnInit {
     @HostBinding('class') classes = 'nav-item';
     @Input() item: any;
 
-    constructor()
-    {
+    constructor(private mainSer: MainService) {
     }
 
-    ngOnInit()
-    {
+    ngOnInit() {
+    }
+
+    isAllowed(role) {
+        return this.mainSer.globalServ.isAllowed(role);
+
     }
 }

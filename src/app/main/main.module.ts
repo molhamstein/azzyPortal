@@ -1,7 +1,11 @@
+import { LockModule } from './content/lock/lock.module';
+import { cancelAppointmentModule } from './content/cancel-appointment/cancel-appointment.module';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { AzzyUserModule } from './content/user/user.module';
 import { EditClientFormModule } from './content/editClient-form/editClient-form.module';
 import { EditFormModule } from './content/edit-form/edit-form.module';
 import { LoginModule } from './content/login/login.module';
+
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -41,6 +45,7 @@ import { MyClientCalendarModule } from './content/client-calendar/client-calenda
 
     ],
     imports: [
+        NgxMatSelectSearchModule,
         SharedModule,
         RouterModule,
         FuseNavigationModule,
@@ -50,12 +55,15 @@ import { MyClientCalendarModule } from './content/client-calendar/client-calenda
         MyCalendarModule,
         FuseSampleModule,
         AdviceFormModule,
+        cancelAppointmentModule,
         EditFormModule,
         EditClientFormModule,
         AzzyFormsModule,
         AzzyUserModule,
         MyClientCalendarModule,
-        LoginModule
+        LoginModule,
+        LockModule
+        
 
 
 

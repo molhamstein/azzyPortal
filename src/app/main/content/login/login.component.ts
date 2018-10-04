@@ -82,9 +82,13 @@ export class FuseLoginComponent implements OnInit {
             }
             else if (this.mainServ.APIServ.getErrorCode() == 401) {
                 this.loader = false;
+                if (this.mainServ.APIServ.getCode() == "LOGIN_FAILED_EMAIL_NOT_VERIFIED") {
+                    this.message = "Check You Email And Verified";
+                }
+                else if (this.mainServ.APIServ.getCode() == "LOGIN_FAILED") {
+                    this.message = "Email or Password is wrong";
+                }
                 this.mainServ.APIServ.setErrorCode(0);
-                this.message = "Email or Password is wrong";
-
             }
             else {
                 this.loader = false;

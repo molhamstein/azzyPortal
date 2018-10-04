@@ -4268,39 +4268,42 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_loader_services_service__ = __webpack_require__("./src/app/core/services/loader-services.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_reset_password_reset_password_component__ = __webpack_require__("./src/app/main/content/dialogs/reset-password/reset-password.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_color_picker__ = __webpack_require__("./node_modules/ngx-color-picker/dist/ngx-color-picker.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_slotes_add_slotes_component__ = __webpack_require__("./src/app/main/content/dialogs/add-slotes/add-slotes.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_respone_form_respone_form_component__ = __webpack_require__("./src/app/main/content/dialogs/respone-form/respone-form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_view_appointment_view_appointment_component__ = __webpack_require__("./src/app/main/content/dialogs/view-appointment/view-appointment.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_services_global_service__ = __webpack_require__("./src/app/core/services/global.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_services_login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_hammerjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__main_main_module__ = __webpack_require__("./src/app/main/main.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__core_services_splash_screen_service__ = __webpack_require__("./src/app/core/services/splash-screen.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__core_components_navigation_navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_material_dialog__ = __webpack_require__("./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_angular5_time_picker__ = __webpack_require__("./node_modules/angular5-time-picker/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_add_apointment_add_apointment_component__ = __webpack_require__("./src/app/main/content/dialogs/add-apointment/add-apointment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_delete_appointment_delete_appointment_component__ = __webpack_require__("./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_loader_services_service__ = __webpack_require__("./src/app/core/services/loader-services.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_reset_password_reset_password_component__ = __webpack_require__("./src/app/main/content/dialogs/reset-password/reset-password.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_color_picker__ = __webpack_require__("./node_modules/ngx-color-picker/dist/ngx-color-picker.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_add_slotes_add_slotes_component__ = __webpack_require__("./src/app/main/content/dialogs/add-slotes/add-slotes.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_respone_form_respone_form_component__ = __webpack_require__("./src/app/main/content/dialogs/respone-form/respone-form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__main_content_dialogs_view_appointment_view_appointment_component__ = __webpack_require__("./src/app/main/content/dialogs/view-appointment/view-appointment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_confirm_message_confirm_message_component__ = __webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__ = __webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__core_services_global_service__ = __webpack_require__("./src/app/core/services/global.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_services_login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_hammerjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__main_main_module__ = __webpack_require__("./src/app/main/main.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__core_services_splash_screen_service__ = __webpack_require__("./src/app/core/services/splash-screen.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__core_components_navigation_navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_material_dialog__ = __webpack_require__("./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_angular5_time_picker__ = __webpack_require__("./node_modules/angular5-time-picker/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_angular_moment_timezone__ = __webpack_require__("./node_modules/angular-moment-timezone/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4337,7 +4340,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 // import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
 
 
 var appRoutes = [];
@@ -4345,42 +4351,45 @@ var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_14__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_16__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_11__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_7__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_15__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_16__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_19__angular_router__["e" /* RouterModule */].forRoot(appRoutes),
-                __WEBPACK_IMPORTED_MODULE_31_angular5_time_picker__["a" /* Angular5TimePickerModule */],
-                __WEBPACK_IMPORTED_MODULE_21__core_modules_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_27__ngx_translate_core__["a" /* TranslateModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_23__main_main_module__["a" /* FuseMainModule */],
-                __WEBPACK_IMPORTED_MODULE_29__angular_material_dialog__["c" /* MatDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ngx_color_picker__["a" /* ColorPickerModule */]
+                __WEBPACK_IMPORTED_MODULE_17__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_18__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_19__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_router__["e" /* RouterModule */].forRoot(appRoutes),
+                __WEBPACK_IMPORTED_MODULE_33_angular5_time_picker__["a" /* Angular5TimePickerModule */],
+                __WEBPACK_IMPORTED_MODULE_23__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_29__ngx_translate_core__["a" /* TranslateModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_25__main_main_module__["a" /* FuseMainModule */],
+                __WEBPACK_IMPORTED_MODULE_31__angular_material_dialog__["c" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_4_ngx_color_picker__["a" /* ColorPickerModule */],
+                __WEBPACK_IMPORTED_MODULE_34_angular_moment_timezone__["a" /* MomentTimezoneModule */]
                 // OwlDateTimeModule,
                 // OwlNativeDateTimeModule,
             ],
-            entryComponents: [__WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_7__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_11__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */]],
             providers: [
-                { provide: __WEBPACK_IMPORTED_MODULE_30__angular_common__["LocationStrategy"], useClass: __WEBPACK_IMPORTED_MODULE_30__angular_common__["HashLocationStrategy"] },
-                __WEBPACK_IMPORTED_MODULE_24__core_services_splash_screen_service__["a" /* FuseSplashScreenService */],
-                __WEBPACK_IMPORTED_MODULE_25__core_services_config_service__["a" /* FuseConfigService */],
-                __WEBPACK_IMPORTED_MODULE_26__core_components_navigation_navigation_service__["a" /* FuseNavigationService */],
-                __WEBPACK_IMPORTED_MODULE_28__app_direction_service__["a" /* AppDirectionService */],
-                __WEBPACK_IMPORTED_MODULE_13__core_services_main_service__["a" /* MainService */],
-                __WEBPACK_IMPORTED_MODULE_12__core_services_call_api_service__["a" /* CallApiService */],
-                __WEBPACK_IMPORTED_MODULE_11__core_services_login_service__["a" /* LoginService */],
-                __WEBPACK_IMPORTED_MODULE_10__core_services_global_service__["a" /* GlobalService */],
-                __WEBPACK_IMPORTED_MODULE_7__core_services_auth_guard_service_service__["a" /* AuthGuardService */],
-                __WEBPACK_IMPORTED_MODULE_6__core_services_dialog_service_service__["a" /* DialogServiceService */],
-                __WEBPACK_IMPORTED_MODULE_0__core_services_loader_services_service__["a" /* LoaderServicesService */]
+                { provide: __WEBPACK_IMPORTED_MODULE_32__angular_common__["LocationStrategy"], useClass: __WEBPACK_IMPORTED_MODULE_32__angular_common__["HashLocationStrategy"] },
+                __WEBPACK_IMPORTED_MODULE_26__core_services_splash_screen_service__["a" /* FuseSplashScreenService */],
+                __WEBPACK_IMPORTED_MODULE_27__core_services_config_service__["a" /* FuseConfigService */],
+                __WEBPACK_IMPORTED_MODULE_28__core_components_navigation_navigation_service__["a" /* FuseNavigationService */],
+                __WEBPACK_IMPORTED_MODULE_30__app_direction_service__["a" /* AppDirectionService */],
+                __WEBPACK_IMPORTED_MODULE_15__core_services_main_service__["a" /* MainService */],
+                __WEBPACK_IMPORTED_MODULE_14__core_services_call_api_service__["a" /* CallApiService */],
+                __WEBPACK_IMPORTED_MODULE_13__core_services_login_service__["a" /* LoginService */],
+                __WEBPACK_IMPORTED_MODULE_12__core_services_global_service__["a" /* GlobalService */],
+                __WEBPACK_IMPORTED_MODULE_9__core_services_auth_guard_service_service__["a" /* AuthGuardService */],
+                __WEBPACK_IMPORTED_MODULE_8__core_services_dialog_service_service__["a" /* DialogServiceService */],
+                __WEBPACK_IMPORTED_MODULE_2__core_services_loader_services_service__["a" /* LoaderServicesService */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__app_component__["a" /* AppComponent */]
             ]
         })
     ], AppModule);
@@ -5327,7 +5336,7 @@ var FuseNavHorizontalItemComponent = (function () {
 /***/ "./src/app/core/components/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"main-navigation\" class=\"nav\"\r\n     [ngClass]=\"{'horizontal':layout === 'horizontal', 'vertical':layout === 'vertical'}\">\r\n\r\n    <!-- Vertical Navigation Layout -->\r\n    <ng-container *ngIf=\"layout === 'vertical'\">\r\n\r\n        <ng-container *ngFor=\"let item of navigationModel\">\r\n\r\n            <fuse-nav-vertical-group style=\"width:100%\" *ngIf=\"item.type=='group'\" [item]=\"item\"></fuse-nav-vertical-group>\r\n            <fuse-nav-vertical-collapse *ngIf=\"item.type=='collapse'\" [item]=\"item\"></fuse-nav-vertical-collapse>\r\n            <fuse-nav-vertical-item style=\"width:100%;\" *ngIf=\"item.type=='item'\" [item]=\"item\"></fuse-nav-vertical-item>\r\n\r\n        </ng-container>\r\n\r\n    </ng-container>\r\n    <!-- / Vertical Navigation Layout -->\r\n\r\n    <!-- Horizontal Navigation Layout -->\r\n    <ng-container *ngIf=\"layout === 'horizontal'\">\r\n\r\n        <ng-container *ngFor=\"let item of navigationModel\">\r\n\r\n            <fuse-nav-horizontal-collapse *ngIf=\"item.type=='group'\" [item]=\"item\"></fuse-nav-horizontal-collapse>\r\n            <fuse-nav-horizontal-collapse *ngIf=\"item.type=='collapse'\" [item]=\"item\"></fuse-nav-horizontal-collapse>\r\n            <fuse-nav-horizontal-item *ngIf=\"item.type=='item'\" [item]=\"item\"></fuse-nav-horizontal-item>\r\n\r\n        </ng-container>\r\n\r\n    </ng-container>\r\n    <!-- / Horizontal Navigation Layout -->\r\n\r\n</div>\r\n"
+module.exports = "<div id=\"main-navigation\" class=\"nav\" [ngClass]=\"{'horizontal':layout === 'horizontal', 'vertical':layout === 'vertical'}\">\r\n\r\n  <!-- Vertical Navigation Layout -->\r\n  <ng-container *ngIf=\"layout === 'vertical'\">\r\n\r\n    <ng-container *ngFor=\"let item of navigationModel\">\r\n\r\n      <fuse-nav-vertical-group style=\"width:100%\" *ngIf=\"item.type=='group'\" [item]=\"item\"></fuse-nav-vertical-group>\r\n      <fuse-nav-vertical-collapse *ngIf=\"item.type=='collapse'\" [item]=\"item\"></fuse-nav-vertical-collapse>\r\n      <fuse-nav-vertical-item style=\"width:100%;\" *ngIf=\"item.type=='item' && isAllowed(item.role)==true\" [item]=\"item\"></fuse-nav-vertical-item>\r\n\r\n    </ng-container>\r\n\r\n  </ng-container>\r\n  <!-- / Vertical Navigation Layout -->\r\n\r\n  <!-- Horizontal Navigation Layout -->\r\n  <ng-container *ngIf=\"layout === 'horizontal'\">\r\n\r\n    <ng-container *ngFor=\"let item of navigationModel\">\r\n\r\n      <fuse-nav-horizontal-collapse *ngIf=\"item.type=='group'\" [item]=\"item\"></fuse-nav-horizontal-collapse>\r\n      <fuse-nav-horizontal-collapse *ngIf=\"item.type=='collapse'\" [item]=\"item\"></fuse-nav-horizontal-collapse>\r\n      <fuse-nav-horizontal-item *ngIf=\"item.type=='item'\" [item]=\"item\"></fuse-nav-horizontal-item>\r\n\r\n    </ng-container>\r\n\r\n  </ng-container>\r\n  <!-- / Horizontal Navigation Layout -->\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -5343,8 +5352,9 @@ module.exports = "/**\n * Applies styles for users in high contrast mode. Note t
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FuseNavigationComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_service__ = __webpack_require__("./src/app/core/components/navigation/navigation.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5356,32 +5366,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var FuseNavigationComponent = (function () {
-    function FuseNavigationComponent(fuseNavigationService) {
+    function FuseNavigationComponent(fuseNavigationService, mainSer) {
         var _this = this;
         this.fuseNavigationService = fuseNavigationService;
+        this.mainSer = mainSer;
         this.layout = 'vertical';
         this.navigationModelChangeSubscription =
             this.fuseNavigationService.onNavigationModelChange
                 .subscribe(function (navigationModel) {
                 _this.navigationModel = navigationModel;
             });
+        console.log(this.navigationModel);
     }
     FuseNavigationComponent.prototype.ngOnDestroy = function () {
         this.navigationModelChangeSubscription.unsubscribe();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('layout'),
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])('layout'),
         __metadata("design:type", Object)
     ], FuseNavigationComponent.prototype, "layout", void 0);
     FuseNavigationComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'fuse-navigation',
             template: __webpack_require__("./src/app/core/components/navigation/navigation.component.html"),
             styles: [__webpack_require__("./src/app/core/components/navigation/navigation.component.scss")],
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
+            encapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].None
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__navigation_service__["a" /* FuseNavigationService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__navigation_service__["a" /* FuseNavigationService */], __WEBPACK_IMPORTED_MODULE_0__services_main_service__["a" /* MainService */]])
     ], FuseNavigationComponent);
     return FuseNavigationComponent;
 }());
@@ -5859,7 +5872,7 @@ var FuseNavVerticalGroupComponent = (function () {
 /***/ "./src/app/core/components/navigation/vertical/nav-item/nav-vertical-item.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a class=\"nav-link\" *ngIf=\"item.url\" [routerLink]=\"[item.url]\" routerLinkActive=\"active\"\r\n   [routerLinkActiveOptions]=\"{exact: item.exactMatch || false}\" matRipple>\r\n    <mat-icon class=\"nav-link-icon\" *ngIf=\"item.icon\">{{item.icon}}</mat-icon>\r\n    <span class=\"nav-link-title\">{{item.title | translate}}</span>\r\n    <span class=\"nav-link-badge\" *ngIf=\"item.badge\"\r\n          [ngStyle]=\"{'background-color': item.badge.bg,'color': item.badge.fg}\">\r\n        {{item.badge.title}}\r\n    </span>\r\n</a>\r\n\r\n<span class=\"nav-link\" *ngIf=\"item.function\" (click)=\"item.function()\" matRipple>\r\n    <mat-icon class=\"nav-link-icon\" *ngIf=\"item.icon\">{{item.icon}}</mat-icon>\r\n    <span class=\"nav-link-title\">{{item.title}}</span>\r\n    <span class=\"nav-link-badge\" *ngIf=\"item.badge\"\r\n          [ngStyle]=\"{'background-color': item.badge.bg,'color': item.badge.fg}\">\r\n        {{item.badge.title}}\r\n    </span>\r\n</span>\r\n"
+module.exports = "<a class=\"nav-link\" *ngIf=\"item.url && isAllowed(item.role)\"   [routerLink]=\"[item.url]\" routerLinkActive=\"active\"\r\n   [routerLinkActiveOptions]=\"{exact: item.exactMatch || false}\" matRipple>\r\n    <mat-icon class=\"nav-link-icon\" *ngIf=\"item.icon\">{{item.icon}}</mat-icon>\r\n    <span class=\"nav-link-title\">{{item.title | translate}}</span>\r\n    <span class=\"nav-link-badge\" *ngIf=\"item.badge\"\r\n          [ngStyle]=\"{'background-color': item.badge.bg,'color': item.badge.fg}\">\r\n        {{item.badge.title}}\r\n    </span>\r\n</a>\r\n\r\n<span class=\"nav-link\" *ngIf=\"item.function\" (click)=\"item.function()\" matRipple>\r\n    <mat-icon class=\"nav-link-icon\" *ngIf=\"item.icon\">{{item.icon}}</mat-icon>\r\n    <span class=\"nav-link-title\">{{item.title}}</span>\r\n    <span class=\"nav-link-badge\" *ngIf=\"item.badge\"\r\n          [ngStyle]=\"{'background-color': item.badge.bg,'color': item.badge.fg}\">\r\n        {{item.badge.title}}\r\n    </span>\r\n</span>\r\n"
 
 /***/ }),
 
@@ -5875,7 +5888,8 @@ module.exports = ".folded:not(.folded-open) :host .nav-link > .nav-link-title,\n
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FuseNavVerticalItemComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5886,27 +5900,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var FuseNavVerticalItemComponent = (function () {
-    function FuseNavVerticalItemComponent() {
+    function FuseNavVerticalItemComponent(mainSer) {
+        this.mainSer = mainSer;
         this.classes = 'nav-item';
     }
     FuseNavVerticalItemComponent.prototype.ngOnInit = function () {
     };
+    FuseNavVerticalItemComponent.prototype.isAllowed = function (role) {
+        return this.mainSer.globalServ.isAllowed(role);
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"])('class'),
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["HostBinding"])('class'),
         __metadata("design:type", Object)
     ], FuseNavVerticalItemComponent.prototype, "classes", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], FuseNavVerticalItemComponent.prototype, "item", void 0);
     FuseNavVerticalItemComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'fuse-nav-vertical-item',
             template: __webpack_require__("./src/app/core/components/navigation/vertical/nav-item/nav-vertical-item.component.html"),
             styles: [__webpack_require__("./src/app/core/components/navigation/vertical/nav-item/nav-vertical-item.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__services_main_service__["a" /* MainService */]])
     ], FuseNavVerticalItemComponent);
     return FuseNavVerticalItemComponent;
 }());
@@ -6526,7 +6545,7 @@ var FuseMatSidenavHelperDirective = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__fuse_mat_sidenav_helper_service__["a" /* FuseMatSidenavHelperService */],
             __WEBPACK_IMPORTED_MODULE_3__services_match_media_service__["a" /* FuseMatchMedia */],
             __WEBPACK_IMPORTED_MODULE_2__angular_flex_layout__["b" /* ObservableMedia */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatSidenav */]])
+            __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSidenav */]])
     ], FuseMatSidenavHelperDirective);
     return FuseMatSidenavHelperDirective;
 }());
@@ -7565,17 +7584,17 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatProgressSpinnerModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatRadioModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatStepperModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_cdk_table__["m" /* CdkTableModule */]
             ],
             exports: [
@@ -7599,17 +7618,17 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatProgressSpinnerModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatRadioModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatStepperModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_cdk_table__["m" /* CdkTableModule */]
             ]
         })
@@ -7989,18 +8008,30 @@ var AuthGuardService = (function () {
         this.router = router;
     }
     AuthGuardService.prototype.canLoad = function (route) {
-        if (false) {
-            // return true;
+        // let path = route.url[0]
+        if (this.mainServ.loginServ.isLogin()) {
+            if (this.mainServ.globalServ.isAllowedPage("user") == false) {
+                this.router.navigate(["/login"]);
+                return false;
+            }
+            else {
+                return true;
+            }
         }
-        // this.authService.setRedirectUrl(url);
         this.router.navigate(["/login"]);
         return false;
     };
     AuthGuardService.prototype.canActivate = function (route, state) {
+        var path = route.url[0];
         if (this.mainServ.loginServ.isLogin()) {
-            return true;
+            if (this.mainServ.globalServ.isAllowedPage(path) == false) {
+                this.router.navigate(["/Permision"]);
+                return false;
+            }
+            else {
+                return true;
+            }
         }
-        // this.authService.setRedirectUrl(url);
         this.router.navigate(["/login"]);
         return false;
     };
@@ -8046,12 +8077,19 @@ var CallApiService = (function () {
         this.loginSer = loginSer;
         this.baseUrl = "http://104.217.253.15:2999/api/";
         this.errorCode = 0;
+        this.code = "";
     }
     CallApiService.prototype.setErrorCode = function (errorCode) {
         this.errorCode = errorCode;
     };
     CallApiService.prototype.getErrorCode = function () {
         return this.errorCode;
+    };
+    CallApiService.prototype.setCode = function (code) {
+        this.code = code;
+    };
+    CallApiService.prototype.getCode = function () {
+        return this.code;
     };
     CallApiService.prototype.get = function (url, token) {
         var _this = this;
@@ -8067,6 +8105,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (response) {
             _this.errorCode = response['error'].statusCode;
+            _this.code = response['error'].code;
             // console.log(response);
             if (_this.errorCode == 401 && response['error'].code == "AUTHORIZATION_REQUIRED")
                 // this.loginSer.logout()
@@ -8099,6 +8138,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (Response) {
             _this.errorCode = Response.status;
+            _this.code = Response['error'].error.code;
             return "E";
         });
     };
@@ -8109,6 +8149,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (Response) {
             _this.errorCode = Response.status;
+            _this.code = Response['error'].error.code;
             return "E";
         });
     };
@@ -8119,6 +8160,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (Response) {
             _this.errorCode = Response.status;
+            _this.code = Response['error'].error.code;
             return "E";
         });
     };
@@ -8136,6 +8178,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (Response) {
             _this.errorCode = Response.status;
+            _this.code = Response['error'].error.code;
             return "E";
         });
     };
@@ -8153,6 +8196,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (Response) {
             _this.errorCode = Response.status;
+            _this.code = Response['error'].error.code;
             return "E";
         });
     };
@@ -8170,6 +8214,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (Response) {
             _this.errorCode = Response.status;
+            _this.code = Response['error'].error.code;
             return "E";
         });
     };
@@ -8191,6 +8236,7 @@ var CallApiService = (function () {
             return Response;
         }).catch(function (Response) {
             _this.errorCode = Response.status;
+            _this.code = Response['error'].error.code;
             return "E";
         });
     };
@@ -8322,11 +8368,12 @@ var DialogServiceService = (function () {
     function DialogServiceService(dialog) {
         this.dialog = dialog;
     }
-    DialogServiceService.prototype.confirmationMessage = function (message, url, data, withReload, callback, type) {
+    DialogServiceService.prototype.confirmationMessage = function (message, url, data, withReload, callback, type, token) {
         if (type === void 0) { type = "patch"; }
+        if (token === void 0) { token = "patch"; }
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], {
             width: '250px',
-            data: { message: message, url: url, sendData: data, type: type, withReload: withReload }
+            data: { message: message, url: url, sendData: data, type: type, withReload: withReload, token: token }
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result) {
@@ -8362,11 +8409,12 @@ var DialogServiceService = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8382,19 +8430,108 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var GlobalService = (function () {
-    function GlobalService(router, route, APIServe) {
+    function GlobalService(router, route, APIServe, logInSer) {
         this.router = router;
         this.route = route;
         this.APIServe = APIServe;
-        this.unreadNotBeh = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](0);
-        this.notificationBeh = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
-        this.filteringBeh = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
+        this.logInSer = logInSer;
+        this.unreadNotBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](0);
+        this.notificationBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
+        this.filteringBeh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
         this.castUnreadNotBeh = this.unreadNotBeh.asObservable();
         this.castNotificationBeh = this.notificationBeh.asObservable();
         this.castFilteringBeh = this.filteringBeh.asObservable();
+        this.roles = [];
+        this.pagesRole = [];
         this.notification = [];
         this.unreadNot = 0;
+        this.roles['manager'] = [];
+        this.roles['manager']["ReadCalendar"] = true;
+        this.roles['manager']["ReadForms"] = true;
+        this.roles['manager']["WriteCalendar"] = true;
+        this.roles['manager']["WriteForms"] = true;
+        this.roles['manager']["Open/BlockCalendar"] = true;
+        this.roles['manager']["UserDefinition"] = true;
+        this.roles['consultant'] = [];
+        this.roles['consultant']["ReadCalendar"] = true;
+        this.roles['consultant']["ReadForms"] = true;
+        this.roles['consultant']["WriteCalendar"] = true;
+        this.roles['consultant']["WriteForms"] = true;
+        this.roles['consultant']["Open/BlockCalendar"] = true;
+        this.roles['consultant']["UserDefinition"] = false;
+        this.roles['adminstrator'] = [];
+        this.roles['adminstrator']["ReadCalendar"] = true;
+        this.roles['adminstrator']["ReadForms"] = true;
+        this.roles['adminstrator']["WriteCalendar"] = true;
+        this.roles['adminstrator']["WriteForms"] = true;
+        this.roles['adminstrator']["Open/BlockCalendar"] = false;
+        this.roles['adminstrator']["UserDefinition"] = false;
+        this.roles['secretary'] = [];
+        this.roles['secretary']["ReadCalendar"] = true;
+        this.roles['secretary']["ReadForms"] = true;
+        this.roles['secretary']["WriteCalendar"] = false;
+        this.roles['secretary']["WriteForms"] = false;
+        this.roles['secretary']["Open/BlockCalendar"] = false;
+        this.roles['secretary']["UserDefinition"] = false;
+        this.roles['reception'] = [];
+        this.roles['reception']["ReadCalendar"] = true;
+        this.roles['reception']["ReadForms"] = false;
+        this.roles['reception']["WriteCalendar"] = false;
+        this.roles['reception']["WriteForms"] = false;
+        this.roles['reception']["Open/BlockCalendar"] = false;
+        this.roles['reception']["UserDefinition"] = false;
+        this.pagesRole['manager'] = [];
+        this.pagesRole['manager']['processed'] = true;
+        this.pagesRole['manager']['unprocessed'] = true;
+        this.pagesRole['manager']['contracted'] = true;
+        this.pagesRole['manager']['show-form'] = true;
+        this.pagesRole['manager']['edit-form'] = true;
+        this.pagesRole['manager']['users'] = true;
+        this.pagesRole['manager']['addUser'] = true;
+        this.pagesRole['manager']['editUser'] = true;
+        this.pagesRole['manager']['calendar'] = true;
+        this.pagesRole['adminstrator'] = [];
+        this.pagesRole['adminstrator']['processed'] = true;
+        this.pagesRole['adminstrator']['unprocessed'] = true;
+        this.pagesRole['adminstrator']['contracted'] = true;
+        this.pagesRole['adminstrator']['show-form'] = true;
+        this.pagesRole['adminstrator']['edit-form'] = true;
+        this.pagesRole['adminstrator']['users'] = false;
+        this.pagesRole['adminstrator']['addUser'] = false;
+        this.pagesRole['adminstrator']['editUser'] = false;
+        this.pagesRole['adminstrator']['calendar'] = true;
+        this.pagesRole['consultant'] = [];
+        this.pagesRole['consultant']['processed'] = true;
+        this.pagesRole['consultant']['unprocessed'] = true;
+        this.pagesRole['consultant']['contracted'] = true;
+        this.pagesRole['consultant']['show-form'] = true;
+        this.pagesRole['consultant']['edit-form'] = true;
+        this.pagesRole['consultant']['users'] = false;
+        this.pagesRole['consultant']['addUser'] = false;
+        this.pagesRole['consultant']['editUser'] = false;
+        this.pagesRole['consultant']['calendar'] = true;
+        this.pagesRole['reception'] = [];
+        this.pagesRole['reception']['processed'] = false;
+        this.pagesRole['reception']['unprocessed'] = false;
+        this.pagesRole['reception']['contracted'] = false;
+        this.pagesRole['reception']['show-form'] = false;
+        this.pagesRole['reception']['edit-form'] = false;
+        this.pagesRole['reception']['users'] = false;
+        this.pagesRole['reception']['addUser'] = false;
+        this.pagesRole['reception']['editUser'] = false;
+        this.pagesRole['reception']['calendar'] = true;
+        this.pagesRole['secretary'] = [];
+        this.pagesRole['secretary']['processed'] = true;
+        this.pagesRole['secretary']['unprocessed'] = true;
+        this.pagesRole['secretary']['contracted'] = true;
+        this.pagesRole['secretary']['show-form'] = true;
+        this.pagesRole['secretary']['edit-form'] = false;
+        this.pagesRole['secretary']['users'] = false;
+        this.pagesRole['secretary']['addUser'] = false;
+        this.pagesRole['secretary']['editUser'] = false;
+        this.pagesRole['secretary']['calendar'] = true;
     }
     GlobalService.prototype.goTo2 = function (id) {
         var _this = this;
@@ -8448,7 +8585,7 @@ var GlobalService = (function () {
     };
     GlobalService.prototype.calculatDateAdv = function (date) {
         var time = this.diff_minutes(new Date(), new Date(date));
-        var pipe = new __WEBPACK_IMPORTED_MODULE_4__angular_common__["DatePipe"]('en-US'); // Use your own locale
+        var pipe = new __WEBPACK_IMPORTED_MODULE_5__angular_common__["DatePipe"]('en-US'); // Use your own locale
         if (time < 1)
             return "الأن";
         else if (time < 60)
@@ -8519,9 +8656,22 @@ var GlobalService = (function () {
         console.log(number);
         return number;
     };
+    GlobalService.prototype.isAllowed = function (role) {
+        var typeUser = this.logInSer.getType();
+        if (typeUser == null)
+            return false;
+        return this.roles[typeUser][role];
+    };
+    GlobalService.prototype.isAllowedPage = function (page) {
+        // return true
+        var typeUser = this.logInSer.getType();
+        if (typeUser == null)
+            return false;
+        return this.pagesRole[typeUser][page];
+    };
     GlobalService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_0__call_api_service__["a" /* CallApiService */]])
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__call_api_service__["a" /* CallApiService */], __WEBPACK_IMPORTED_MODULE_0__login_service__["a" /* LoginService */]])
     ], GlobalService);
     return GlobalService;
 }());
@@ -8610,6 +8760,7 @@ var LoginService = (function () {
     LoginService.prototype.init = function () {
         if (this.isRemember) {
             this.userId = this.cookieService.get("userId");
+            this.type = this.cookieService.get("type");
             this.token = this.cookieService.get("token");
             this.userName = this.cookieService.get("userName");
         }
@@ -8631,6 +8782,9 @@ var LoginService = (function () {
     };
     LoginService.prototype.getuserName = function () {
         return this.userName;
+    };
+    LoginService.prototype.getType = function () {
+        return this.type;
     };
     LoginService.prototype.logIn = function (data, rememberPass) {
         if (rememberPass === void 0) { rememberPass = true; }
@@ -8686,6 +8840,7 @@ var LoginService = (function () {
         var _this = this;
         this.cookieService.set('userId', data.userId);
         this.cookieService.set('token', data.id);
+        this.cookieService.set('type', data.user.type);
         this.cookieService.set('userName', data.user.username);
         if (data.user != null)
             this.cookieService.set('dalalAvatar', data.user.avatar);
@@ -8714,7 +8869,7 @@ var LoginService = (function () {
         sessionStorage.setItem('dalalId', data.id);
         if (data.user != null)
             sessionStorage.setItem('dalalAvatar', data.user.avatar);
-        location.reload();
+        // location.reload();
     };
     LoginService.prototype.logoutSet = function () {
         sessionStorage.removeItem('dalalUserId');
@@ -8966,7 +9121,7 @@ var FuseTranslationLoaderService = (function () {
 /***/ "./src/app/main/content/advice-form/advice-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <div class=\"black-fg\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <mat-icon class=\"secondary-text s-16\">home</mat-icon>\r\n        <mat-icon class=\"secondary-text s-16 rtl-mirror\">chevron_right</mat-icon>\r\n        <span class=\"secondary-text\">User Interface</span>\r\n      </div>\r\n      <div class=\"h1 mt-16\">{{ 'Add_Edit_Form.TITLE' | translate }}</div>\r\n    </div>\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <!-- <p class=\"mb-32\">\r\n      Angular reactive forms facilitate a reactive style of programming that favors explicit management of the data flowing between\r\n      a non-UI data model (typically retrieved from a server) and a UI-oriented form model that retains the states and values\r\n      of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.\r\n    </p> -->\r\n    <!--{{formGroup.value | json}}-->\r\n    <div fxLayout=\"column\">\r\n\r\n\r\n      <form class=\"mat-white-bg mat-elevation-z0 p-24\" fxLayout=\"column\" fxLayoutAlign=\"start\" fxFlex=\"1 0 auto\" name=\"formGroup\"\r\n        [formGroup]=\"formGroup\">\r\n\r\n\r\n        <mat-horizontal-stepper formArrayName=\"formArray\" [linear]=\"true\">\r\n\r\n          <mat-step formGroupName=\"0\" [stepControl]=\"formArray?.get([0])\">\r\n            <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsi\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsi\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglish\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglish\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNo\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNo\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeID\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <mat-icon matPrefix>today</mat-icon> -->\r\n                <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\"\r\n                  formControlName=\"dateOfBirthPer\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatus\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildren\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <div fxFlex=\"24\">\r\n              </div>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsi\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglish\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex=\"1 0 auto\">\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsiSp\">\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsiSp\" >\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglishSp\" >\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglishSp\" >\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" > -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"emailSp\" >\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNoSp\" >\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNoSp\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeIDSp\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput [min]=\"minDateSp\" [max]=\"maxDateSp\" (focus)=\"birthDatePickerSp.open()\" [matDatepicker]=\"birthDatePickerSp\"\r\n                  placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\" formControlName=\"dateOfBirthPerSp\" >\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePickerSp\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePickerSp startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatusSp\" >\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildrenSp\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <div fxFlex=\"24\"></div>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsiSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglishSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([0]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"1\" [stepControl]=\"formArray?.get([1])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglish\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[0] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglishSp\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[1] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([1]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"2\" [stepControl]=\"formArray?.get([2])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_2.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([2]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"3\" [stepControl]=\"formArray?.get([3])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([3]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"4\" [stepControl]=\"formArray?.get([4])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_4.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatus\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate }}\"\r\n                    formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatusSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate  }}\"\r\n                    formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([4]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"5\" [stepControl]=\"formArray?.get([5])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([5]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"6\" [stepControl]=\"formArray?.get([6])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaType\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaTypeSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([6]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n          <mat-step formGroupName=\"7\" [stepControl]=\"formArray?.get([7])\">\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"100\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\" {{ 'Add_Edit_Form.STEP_7.TBCLIENT' | translate }}\" formControlName=\"textBoxClient\"></textarea>\r\n                  <mat-icon matSuffix>note</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"addForm()\">Done</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n        </mat-horizontal-stepper>\r\n      </form>\r\n\r\n\r\n      <!-- <div class=\"form-errors-model mat-white-bg p-24 mat-elevation-z4\">\r\n\r\n              <div class=\"h2 mb-24\">Reactive Form Errors Model</div>\r\n\r\n              <pre><code>{{formErrors | json}}</code></pre>\r\n          </div> -->\r\n\r\n    </div>\r\n\r\n\r\n\r\n\r\n  </div>\r\n  <!-- / CONTENT -->\r\n\r\n</div>\r\n"
+module.exports = "<div id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <div class=\"black-fg\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <mat-icon class=\"secondary-text s-16\">home</mat-icon>\r\n        <mat-icon class=\"secondary-text s-16 rtl-mirror\">chevron_right</mat-icon>\r\n        <span class=\"secondary-text\">User Interface</span>\r\n      </div>\r\n      <div class=\"h1 mt-16\">{{ 'Add_Edit_Form.TITLE' | translate }}</div>\r\n    </div>\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <!-- <p class=\"mb-32\">\r\n      Angular reactive forms facilitate a reactive style of programming that favors explicit management of the data flowing between\r\n      a non-UI data model (typically retrieved from a server) and a UI-oriented form model that retains the states and values\r\n      of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.\r\n    </p> -->\r\n    <!--{{formGroup.value | json}}-->\r\n    <div fxLayout=\"column\">\r\n\r\n\r\n      <form class=\"mat-white-bg mat-elevation-z0 p-24\" fxLayout=\"column\" fxLayoutAlign=\"start\" fxFlex=\"1 0 auto\" name=\"formGroup\"\r\n        [formGroup]=\"formGroup\">\r\n\r\n\r\n        <mat-horizontal-stepper formArrayName=\"formArray\" [linear]=\"true\">\r\n\r\n          <mat-step formGroupName=\"0\" [stepControl]=\"formArray?.get([0])\">\r\n            <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsi\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsi\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglish\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglish\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNo\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNo\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeID\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <mat-icon matPrefix>today</mat-icon> -->\r\n                <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\"\r\n                  formControlName=\"dateOfBirthPer\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatus\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildren\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <div fxFlex=\"24\">\r\n              </div>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsi\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglish\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex=\"1 0 auto\">\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsiSp\">\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsiSp\">\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglishSp\">\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglishSp\">\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" > -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"emailSp\">\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNoSp\">\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNoSp\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeIDSp\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput [min]=\"minDateSp\" [max]=\"maxDateSp\" (focus)=\"birthDatePickerSp.open()\" [matDatepicker]=\"birthDatePickerSp\"\r\n                  placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\" formControlName=\"dateOfBirthPerSp\">\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePickerSp\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePickerSp startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatusSp\">\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildrenSp\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <div fxFlex=\"24\"></div>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsiSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglishSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([0]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"1\" [stepControl]=\"formArray?.get([1])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglish\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[0] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglishSp\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[1] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([1]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"2\" [stepControl]=\"formArray?.get([2])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_2.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([2]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"3\" [stepControl]=\"formArray?.get([3])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([3]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"4\" [stepControl]=\"formArray?.get([4])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_4.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatus\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate }}\"\r\n                    formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatusSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate  }}\"\r\n                    formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([4]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"5\" [stepControl]=\"formArray?.get([5])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([5]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"6\" [stepControl]=\"formArray?.get([6])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaType\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaTypeSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([6]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n          <mat-step formGroupName=\"7\" [stepControl]=\"formArray?.get([7])\">\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"100\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\" {{ 'Add_Edit_Form.STEP_7.TBCLIENT' | translate }}\" formControlName=\"textBoxClient\"></textarea>\r\n                  <mat-icon matSuffix>note</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\" {{ 'Add_Edit_Form.STEP_7.howKnow' | translate }}\" formControlName=\"howKnow\"></textarea>\r\n                  <mat-icon matSuffix>note</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n              </div>\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"addForm()\">Done</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n        </mat-horizontal-stepper>\r\n      </form>\r\n\r\n\r\n      <!-- <div class=\"form-errors-model mat-white-bg p-24 mat-elevation-z4\">\r\n\r\n              <div class=\"h2 mb-24\">Reactive Form Errors Model</div>\r\n\r\n              <pre><code>{{formErrors | json}}</code></pre>\r\n          </div> -->\r\n\r\n    </div>\r\n\r\n\r\n\r\n\r\n  </div>\r\n  <!-- / CONTENT -->\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -9510,6 +9665,7 @@ var AdviceFormComponent = (function () {
                 }),
                 this._formBuilder.group({
                     textBoxClient: [''],
+                    howKnow: [''],
                 })
             ])
         });
@@ -9675,14 +9831,14 @@ var AdviceFormModule = (function () {
 /***/ "./src/app/main/content/calendar/calendar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<style>\r\n  .stripes {\r\n    background-image: repeating-linear-gradient(45deg, #ccc, #ccc 30px, #dbdbdb 30px, #dbdbdb 60px);\r\n  }\r\n</style>\r\n<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"col-md-12\">\r\n  <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n    <div class=\"cal-cell-top\" style=\"text-align: left;\">\r\n      <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }}</span>\r\n      <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n    </div>\r\n    <div class=\"cell-totals\">\r\n      <span *ngFor=\"let group of day.eventGroups\" class=\"badge badge-{{ group[0] }}\">\r\n        {{ group[1].length }}\r\n      </span>\r\n    </div>\r\n  </ng-template>\r\n  <ng-template #tt let-events=\"openEvents\" let-eventClicked=\"eventClicked\">\r\n    <div *ngFor=\"let event of openEvents; trackBy:trackByEventId\" [ngClass]=\"event?.cssClass\" mwlDraggable [dropData]=\"{event: event}\"\r\n      [dragAxis]=\"{x: event.draggable, y: event.draggable}\">\r\n      <span class=\"cal-event\" [style.backgroundColor]=\"event.color?.primary\">\r\n      </span>\r\n      <mwl-calendar-event-title [event]=\"event\" [customTemplate]=\"eventTitleTemplate\" view=\"month\" (mwlClick)=\"eventClicked.emit({event: event})\">\r\n      </mwl-calendar-event-title>\r\n    </div>\r\n  </ng-template>\r\n  <ng-template #rr let-event=\"event\" let-view=\"view\">\r\n    <span class=\"cal-event-title\" [innerHTML]=\"event.title | calendarEventTitle:view:event\" [style.color]=\"'black'\" ]>\r\n    </span>\r\n  </ng-template>\r\n\r\n  <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n      <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n        <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n          <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <mat-icon class=\"logo-icon\">today</mat-icon>\r\n\r\n            <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span>\r\n\r\n          </div>\r\n\r\n          <!-- TOOLBAR -->\r\n          <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"mat-icon-button\" mwlCalendarToday [(viewDate)]=\"viewDate\" (viewDateChange)=\"selectedDay = {date:$event}\"\r\n              aria-label=\"Today\" matTooltip=\"Today\">\r\n              <!--(click)=\"selectedDay = viewDate\"-->\r\n              <mat-icon>today</mat-icon>\r\n            </button>\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"view='day'\" aria-label=\"Day\" matTooltip=\"Day\">\r\n              <mat-icon>view_day</mat-icon>\r\n            </button>\r\n\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"view='month'\" aria-label=\"Month\" matTooltip=\"Month\">\r\n              <mat-icon>view_module</mat-icon>\r\n            </button>\r\n          </div>\r\n        </div>\r\n        <!-- / TOOLBAR -->\r\n\r\n        <!-- HEADER BOTTOM -->\r\n        <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"changeDate($event)\"\r\n            aria-label=\"Previous\">\r\n            <mat-icon>chevron_left</mat-icon>\r\n          </button>\r\n\r\n          <div class=\"title\" style=\"display: inline-block;\">\r\n            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n          </div>\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"changeDate($event)\"\r\n            aria-label=\"Next\">\r\n            <mat-icon>chevron_right</mat-icon>\r\n          </button>\r\n        </div>\r\n        <!-- / HEADER BOTTOM -->\r\n      </div>\r\n\r\n      <!-- ADD EVENT BUTTON -->\r\n      <button mat-fab class=\"add-event-button mat-warn\" (click)=\"addEventNew()\" aria-label=\"Add event\">\r\n        <mat-icon>add</mat-icon>\r\n      </button>\r\n      <!--<button mat-fab style=\"right: 100px;\" class=\"add-event-button mat-warn\" (click)=\"addEventNew()\" aria-label=\"Add event\">\r\n        <mat-icon>add</mat-icon>\r\n      </button>-->\r\n      <!-- / ADD EVENT BUTTON -->\r\n    </div>\r\n    <!-- / HEADER -->\r\n    <!-- <div class=\"cal-open-day-events\" [@collapse]>\r\n      <ng-template [ngTemplateOutlet]=\"customTemplate || defaultTemplate\" [ngTemplateOutletContext]=\"{\r\n          events: events,\r\n          eventClicked: eventClicked\r\n        }\">\r\n      </ng-template>\r\n    </div> -->\r\n    <!-- <div class=\"row text-center col-md-8\" style=\"float: left;\">\r\n    <div class=\"col-md-4\">\r\n      <div class=\"btn-group\">\r\n        <div class=\"btn btn-primary\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n          Previous\r\n        </div>\r\n        <div class=\"btn btn-outline-secondary\" mwlCalendarToday [(viewDate)]=\"viewDate\">\r\n          Today\r\n        </div>\r\n        <div class=\"btn btn-primary\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n          Next\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <div class=\"btn-group\">\r\n        <div class=\"btn btn-primary\" (click)=\"view = 'month'\" [class.active]=\"view === 'month'\">\r\n          Month\r\n        </div>\r\n\r\n        <div class=\"btn btn-primary\" (click)=\"view = 'day'\" [class.active]=\"view === 'day'\">\r\n          Day\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> -->\r\n    <!-- <div *ngIf=\"events.length > 0\" [ngSwitch]=\"view\" class=\"col-md-8\" style=\"float: left;\">\r\n    <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n      [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\" (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n      (dayClicked)=\"dayClicked($event.day)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n    </mwl-calendar-month-view>\r\n    <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n      (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n    </mwl-calendar-day-view>\r\n  </div> -->\r\n    <div *ngIf=\"events.length > 0\" class=\"content\" fusePerfectScrollbar>\r\n      <div [ngSwitch]=\"view\">\r\n        <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n          [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\" (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n          (dayClicked)=\"dayClicked($event.day)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-month-view>\r\n        <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n          (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-day-view>\r\n      </div>\r\n    </div>\r\n    <!-- <div class=\"col-md-3 offset-md-1\" style=\"float: left; text-align: left\">\r\n    <h2>Consultants</h2>\r\n    <div *ngFor=\"let cons of colors\">\r\n      <span style=\"width: 15px; height: 15px;border-radius: 50%;display: inline-block\" class=\"badge-{{cons.cons}}\"></span>\r\n      <h5 style=\"display: inline;\"> {{cons.name}}</h5>\r\n    </div>\r\n  </div> -->\r\n  </div>\r\n</div>"
+module.exports = "<style>\r\n  .stripes {\r\n    background-image: repeating-linear-gradient(45deg, #ccc, #ccc 30px, #dbdbdb 30px, #dbdbdb 60px);\r\n  }\r\n\r\n</style>\r\n<div class=\"col-md-12\">\r\n  <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n    <div class=\"cal-cell-top\" style=\"text-align: left;\">\r\n      <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }}</span>\r\n      <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n    </div>\r\n    <div class=\"cell-totals\">\r\n      <span *ngFor=\"let group of day.eventGroups\" class=\"badge badge-{{ group[0] }}\">\r\n        {{ group[1].length }}\r\n      </span>\r\n    </div>\r\n  </ng-template>\r\n  <ng-template #tt let-events=\"openEvents\" let-eventClicked=\"eventClicked\">\r\n    <div *ngFor=\"let event of openEvents; trackBy:trackByEventId\" [ngClass]=\"event?.cssClass\" mwlDraggable [dropData]=\"{event: event}\"\r\n      [dragAxis]=\"{x: event.draggable, y: event.draggable}\">\r\n      <span class=\"cal-event\" [style.backgroundColor]=\"event.color.primary\">\r\n      </span>\r\n      <mwl-calendar-event-title [event]=\"event\" [customTemplate]=\"eventTitleTemplate\" view=\"month\" (mwlClick)=\"eventClicked.emit({event: event})\">\r\n      </mwl-calendar-event-title>\r\n    </div>\r\n  </ng-template>\r\n  <ng-template #rr let-event=\"event\" let-view=\"view\">\r\n    <span class=\"cal-event-title\" [innerHTML]=\"event.title | calendarEventTitle:view:event\" [style.color]=\"'black'\" ]>\r\n    </span>\r\n  </ng-template>\r\n\r\n  <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n    <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n      <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n        <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n          <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <mat-icon class=\"logo-icon\">today</mat-icon>\r\n\r\n            <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span>\r\n\r\n          </div>\r\n\r\n          <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"mat-icon-button\" mwlCalendarToday [(viewDate)]=\"viewDate\" (viewDateChange)=\"selectedDay = {date:$event}\"\r\n              aria-label=\"Today\" matTooltip=\"Today\">\r\n              <mat-icon>today</mat-icon>\r\n            </button>\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('day')\" aria-label=\"Day\" matTooltip=\"Day\">\r\n              <mat-icon>view_day</mat-icon>\r\n            </button>\r\n\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('month')\" aria-label=\"Month\" matTooltip=\"Month\">\r\n              <mat-icon>view_module</mat-icon>\r\n            </button>\r\n          </div>\r\n        </div>\r\n        <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"changeDate($event)\"\r\n            aria-label=\"Previous\">\r\n            <mat-icon>chevron_left</mat-icon>\r\n          </button>\r\n\r\n          <div class=\"title\" style=\"display: inline-block;\">\r\n            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n          </div>\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"changeDate($event)\"\r\n            aria-label=\"Next\">\r\n            <mat-icon>chevron_right</mat-icon>\r\n          </button>\r\n        </div>\r\n      </div>\r\n\r\n      <button *ngIf=\"isAllowed('Open/BlockCalendar')\" mat-fab class=\"add-event-button mat-warn\" (click)=\"addEventNew()\" aria-label=\"Add event\">\r\n        <mat-icon>add</mat-icon>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"content\" fusePerfectScrollbar>\r\n      <div [ngSwitch]=\"view\">\r\n        <!--<mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n          [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\" (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n          (dayClicked)=\"dayClicked($event.day)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-month-view>-->\r\n        <div *ngIf=\"monthEvent.length > 0\">\r\n          <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\" [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\"\r\n            [eventTitleTemplate]=\"rr\" (eventTimesChanged)=\"eventTimesChanged($event)\" [activeDayIsOpen]=\"activeDayIsOpen\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n            (dayClicked)=\"dayClicked($event.day)\">\r\n          </mwl-calendar-month-view>\r\n        </div>\r\n\r\n        <div *ngIf=\"monthEvent.length == 0\">\r\n          <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\" [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\"\r\n            [eventTitleTemplate]=\"rr\" (eventTimesChanged)=\"eventTimesChanged($event)\" [activeDayIsOpen]=\"activeDayIsOpen\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n            (dayClicked)=\"dayClicked($event.day)\">\r\n          </mwl-calendar-month-view>\r\n        </div>\r\n        <div *ngIf=\"dayEvent.length > 0\">\r\n          <mwl-calendar-day-view *ngSwitchCase=\"'day'\"   [tooltipPlacement]=\"'right'\" [viewDate]=\"viewDate\"\r\n            [events]=\"dayEvent\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked',\r\n            $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n          </mwl-calendar-day-view>\r\n        </div>\r\n        <div *ngIf=\"dayEvent.length == 0\">\r\n          <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"dayEvent\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n            (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n          </mwl-calendar-day-view>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/main/content/calendar/calendar.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n.cal-month-view .cal-header {\n  text-align: center;\n  font-weight: bolder; }\n.cal-month-view .cal-cell-row:hover {\n  background-color: #fafafa; }\n.cal-month-view .cal-header .cal-cell {\n  padding: 5px 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: block;\n  white-space: nowrap; }\n.cal-month-view .cal-cell-row .cal-cell:hover,\n.cal-month-view .cal-cell.cal-has-events.cal-open {\n  background-color: #ededed; }\n.cal-month-view .cal-days {\n  border: 1px solid #e1e1e1;\n  border-bottom: 0; }\n.cal-month-view .cal-cell-top {\n  min-height: 78px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1; }\n.cal-month-view .cal-cell-row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n.cal-month-view .cal-cell {\n  float: left;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n.cal-month-view .cal-day-cell {\n  min-height: 100px; }\n.cal-month-view .cal-day-cell:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-month-view .cal-days .cal-cell-row {\n  border-bottom: 1px solid #e1e1e1; }\n.cal-month-view .cal-day-badge {\n  margin-top: 18px;\n  margin-left: 10px;\n  background-color: #b94a48;\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 1;\n  color: white;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  border-radius: 10px; }\n.cal-month-view .cal-day-number {\n  font-size: 1.2em;\n  font-weight: 400;\n  opacity: 0.5;\n  margin-top: 15px;\n  margin-right: 15px;\n  float: right;\n  margin-bottom: 10px; }\n.cal-month-view .cal-events {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin: 3px;\n  line-height: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n.cal-month-view .cal-event {\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  display: inline-block;\n  margin: 2px;\n  background-color: #1e90ff;\n  border-color: #D1E8FF;\n  color: #fff; }\n.cal-month-view .cal-event-title:link {\n  color: currentColor; }\n.cal-month-view .cal-day-cell.cal-in-month.cal-has-events {\n  cursor: pointer; }\n.cal-month-view .cal-day-cell.cal-out-month .cal-day-number {\n  opacity: 0.1;\n  cursor: default; }\n.cal-month-view .cal-day-cell.cal-weekend .cal-day-number {\n  color: darkred; }\n.cal-month-view .cal-day-cell.cal-today {\n  background-color: #e8fde7; }\n.cal-month-view .cal-day-cell.cal-today .cal-day-number {\n  font-size: 1.9em; }\n.cal-month-view .cal-day-cell.cal-drag-over {\n  background-color: #e0e0e0 !important; }\n.cal-month-view .cal-open-day-events {\n  padding: 15px;\n  color: white;\n  background-color: #555;\n  -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n          box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5); }\n.cal-month-view .cal-open-day-events .cal-event {\n  position: relative;\n  top: 2px; }\n.cal-month-view .cal-out-month .cal-day-badge,\n.cal-month-view .cal-out-month .cal-event {\n  opacity: 0.3; }\n.cal-week-view .cal-day-headers {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 3px;\n  border: 1px solid #e1e1e1;\n  margin-left: 2px;\n  margin-right: 2px; }\n.cal-week-view .cal-day-headers .cal-header {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n  padding: 5px; }\n.cal-week-view .cal-day-headers .cal-header:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-week-view .cal-day-headers .cal-header:hover,\n.cal-week-view .cal-day-headers .cal-drag-over {\n  background-color: #ededed; }\n.cal-week-view .cal-day-headers span {\n  font-weight: 400;\n  opacity: 0.5; }\n.cal-week-view .cal-events-row {\n  position: relative;\n  height: 33px; }\n.cal-week-view .cal-event-container {\n  display: inline-block;\n  position: absolute; }\n.cal-week-view .cal-event {\n  padding: 0 10px;\n  font-size: 12px;\n  margin-left: 2px;\n  margin-right: 2px;\n  height: 30px;\n  line-height: 30px;\n  background-color: #D1E8FF;\n  border: 1px solid #1e90ff;\n  color: #1e90ff; }\n.cal-week-view .cal-event-title:link {\n  color: currentColor; }\n.cal-week-view .cal-draggable {\n  cursor: move; }\n.cal-week-view .cal-starts-within-week .cal-event {\n  border-top-left-radius: 5px;\n  border-bottom-left-radius: 5px; }\n.cal-week-view .cal-ends-within-week .cal-event {\n  border-top-right-radius: 5px;\n  border-bottom-right-radius: 5px; }\n.cal-week-view .cal-header.cal-today {\n  background-color: #e8fde7; }\n.cal-week-view .cal-header.cal-weekend span {\n  color: #8b0000; }\n.cal-week-view .cal-event,\n.cal-week-view .cal-header {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n.cal-day-view {\n  /* stylelint-disable-next-line selector-type-no-unknown */ }\n.cal-day-view .cal-hour-rows {\n    width: 100%;\n    border: solid 1px #e1e1e1;\n    overflow-x: scroll;\n    position: relative; }\n.cal-day-view .cal-hour:nth-child(odd) {\n    background-color: #fafafa; }\n.cal-day-view mwl-calendar-day-view-hour-segment,\n  .cal-day-view .cal-hour-segment {\n    display: block; }\n.cal-day-view .cal-hour-segment::after {\n    content: '\\00a0'; }\n.cal-day-view .cal-hour:not(:last-child) .cal-hour-segment,\n  .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {\n    border-bottom: thin dashed #e1e1e1; }\n.cal-day-view .cal-time {\n    font-weight: bold;\n    padding-top: 5px;\n    width: 70px;\n    text-align: center; }\n.cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {\n    display: none; }\n.cal-day-view .cal-hour-segment:hover,\n  .cal-day-view .cal-drag-over .cal-hour-segment {\n    background-color: #ededed; }\n.cal-day-view .cal-event-container {\n    position: absolute; }\n.cal-day-view .cal-event {\n    padding: 5px;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    background-color: #D1E8FF;\n    border: 1px solid #1e90ff;\n    color: #1e90ff;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none; }\n.cal-day-view .cal-event-title:link {\n    color: currentColor; }\n.cal-day-view .cal-draggable {\n    cursor: move; }\n.cal-day-view .cal-starts-within-day .cal-event {\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px; }\n.cal-day-view .cal-ends-within-day .cal-event {\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px; }\n.cal-day-view .cal-all-day-event {\n    padding: 8px;\n    border: solid 1px; }\n.cal-tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  font-size: 11px;\n  word-wrap: break-word;\n  opacity: 0.9; }\n.cal-tooltip.cal-tooltip-top {\n  padding: 5px 0;\n  margin-top: -3px; }\n.cal-tooltip.cal-tooltip-top .cal-tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000; }\n.cal-tooltip.cal-tooltip-right {\n  padding: 0 5px;\n  margin-left: 3px; }\n.cal-tooltip.cal-tooltip-right .cal-tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000; }\n.cal-tooltip.cal-tooltip-bottom {\n  padding: 5px 0;\n  margin-top: 3px; }\n.cal-tooltip.cal-tooltip-bottom .cal-tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000; }\n.cal-tooltip.cal-tooltip-left {\n  padding: 0 5px;\n  margin-left: -3px; }\n.cal-tooltip.cal-tooltip-left .cal-tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000; }\n.cal-tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #fff;\n  text-align: center;\n  background-color: #000;\n  border-radius: 0.25rem; }\n.cal-tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid; }\n.cal-month-view .cal-header .cal-cell {\n  font-weight: 500; }\n@media screen and (min-width: 1280px) and (max-width: 1919px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 150px; } }\n@media screen and (min-width: 1920px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 200px; } }\n.cal-month-view .cal-day-cell.cal-open {\n  -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n          box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events {\n  background: #455A64;\n  -webkit-box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n          box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n.cal-month-view .cal-open-day-events > div {\n    padding: 0 16px;\n    margin: 8px 16px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: start;\n    background-color: white;\n    -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n    -webkit-transition: -webkit-box-shadow 300ms ease;\n    transition: -webkit-box-shadow 300ms ease;\n    transition: box-shadow 300ms ease;\n    transition: box-shadow 300ms ease, -webkit-box-shadow 300ms ease; }\n.cal-month-view .cal-open-day-events > div:first-of-type {\n      margin-top: 16px; }\n.cal-month-view .cal-open-day-events > div:last-of-type {\n      margin-bottom: 16px; }\n.cal-month-view .cal-open-day-events > div:hover {\n      -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events > div .cal-event {\n      top: 0;\n      margin: 0; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title .cal-event-title {\n        display: block;\n        padding: 21px 24px;\n        line-height: 1;\n        text-decoration: none;\n        color: black !important; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-week-view .cal-header > b {\n  font-weight: 500; }\n.cal-week-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-week-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      line-height: 1;\n      text-decoration: none;\n      color: black; }\n.cal-week-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-day-view .cal-time {\n  font-weight: 500; }\n.cal-day-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row; }\n.cal-day-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      height: 26px;\n      line-height: 26px;\n      text-decoration: none;\n      color: black; }\n.cal-day-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 4px; }\n#calendar {\n  background: #FFFFFF;\n  overflow-x: hidden;\n  overflow-y: auto; }\n#calendar .header {\n    height: 200px;\n    min-height: 200px;\n    max-height: 200px;\n    position: relative;\n    background-size: 100% auto;\n    background-position: 0 50%;\n    background-repeat: no-repeat;\n    background-color: #FAFAFA;\n    color: #FFFFFF; }\n@media screen and (max-width: 599px) {\n      #calendar .header {\n        height: 164px;\n        min-height: 164px;\n        max-height: 164px; } }\n#calendar .header:before {\n      content: '';\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      z-index: 1;\n      background: rgba(0, 0, 0, 0.45); }\n#calendar .header.Jan {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/january.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Feb {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/february.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Mar {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/march.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Apr {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/april.jpg\");\n      background-position: 0 48%; }\n#calendar .header.May {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/may.jpg\");\n      background-position: 0 47%; }\n#calendar .header.Jun {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/june.jpg\");\n      background-position: 0 48%; }\n#calendar .header.Jul {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/july.jpg\");\n      background-position: 0 3%; }\n#calendar .header.Aug {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/august.jpg\");\n      background-position: 0 61%; }\n#calendar .header.Sep {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/september.jpg\");\n      background-position: 0 58%; }\n#calendar .header.Oct {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/october.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Nov {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/november.jpg\");\n      background-position: 0 46%; }\n#calendar .header.Dec {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/december.jpg\");\n      background-position: 0 43%; }\n#calendar .header .header-content {\n      height: 100%; }\n#calendar .header .header-content .header-top {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-top .logo .logo-icon {\n          margin-right: 16px; }\n#calendar .header .header-content .header-top .logo .logo-text {\n          font-size: 24px; }\n#calendar .header .header-content .header-bottom {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-bottom .title {\n          font-size: 20px;\n          min-width: 160px;\n          text-align: center;\n          font-weight: 500; }\n#calendar .header .add-event-button {\n      position: absolute;\n      right: 18px;\n      bottom: -32px;\n      z-index: 10; }\n#calendar .header mat-icon {\n      color: #FFFFFF; }\n#calendar .content {\n    padding: 24px; }\n"
+module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n.cal-month-view .cal-header {\n  text-align: center;\n  font-weight: bolder; }\n.cal-month-view .cal-cell-row:hover {\n  background-color: #fafafa; }\n.cal-month-view .cal-header .cal-cell {\n  padding: 5px 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: block;\n  white-space: nowrap; }\n.cal-month-view .cal-cell-row .cal-cell:hover,\n.cal-month-view .cal-cell.cal-has-events.cal-open {\n  background-color: #ededed; }\n.cal-month-view .cal-days {\n  border: 1px solid #e1e1e1;\n  border-bottom: 0; }\n.cal-month-view .cal-cell-top {\n  min-height: 78px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1; }\n.cal-month-view .cal-cell-row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n.cal-month-view .cal-cell {\n  float: left;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n.cal-month-view .cal-day-cell {\n  min-height: 100px; }\n.cal-month-view .cal-day-cell:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-month-view .cal-days .cal-cell-row {\n  border-bottom: 1px solid #e1e1e1; }\n.cal-month-view .cal-day-badge {\n  margin-top: 18px;\n  margin-left: 10px;\n  background-color: #b94a48;\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 1;\n  color: white;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  border-radius: 10px; }\n.cal-month-view .cal-day-number {\n  font-size: 1.2em;\n  font-weight: 400;\n  opacity: 0.5;\n  margin-top: 15px;\n  margin-right: 15px;\n  float: right;\n  margin-bottom: 10px; }\n.cal-month-view .cal-events {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin: 3px;\n  line-height: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n.cal-month-view .cal-event {\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  display: inline-block;\n  margin: 2px;\n  background-color: #1e90ff;\n  border-color: #D1E8FF;\n  color: #fff; }\n.cal-month-view .cal-event-title:link {\n  color: currentColor; }\n.cal-month-view .cal-day-cell.cal-in-month.cal-has-events {\n  cursor: pointer; }\n.cal-month-view .cal-day-cell.cal-out-month .cal-day-number {\n  opacity: 0.1;\n  cursor: default; }\n.cal-month-view .cal-day-cell.cal-weekend .cal-day-number {\n  color: darkred; }\n.cal-month-view .cal-day-cell.cal-today {\n  background-color: #e8fde7; }\n.cal-month-view .cal-day-cell.cal-today .cal-day-number {\n  font-size: 1.9em; }\n.cal-month-view .cal-day-cell.cal-drag-over {\n  background-color: #e0e0e0 !important; }\n.cal-month-view .cal-open-day-events {\n  padding: 15px;\n  color: white;\n  background-color: #555;\n  -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n          box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5); }\n.cal-month-view .cal-open-day-events .cal-event {\n  position: relative;\n  top: 2px; }\n.cal-month-view .cal-out-month .cal-day-badge,\n.cal-month-view .cal-out-month .cal-event {\n  opacity: 0.3; }\n.cal-week-view .cal-day-headers {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 3px;\n  border: 1px solid #e1e1e1;\n  margin-left: 2px;\n  margin-right: 2px; }\n.cal-week-view .cal-day-headers .cal-header {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n  padding: 5px; }\n.cal-week-view .cal-day-headers .cal-header:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-week-view .cal-day-headers .cal-header:hover,\n.cal-week-view .cal-day-headers .cal-drag-over {\n  background-color: #ededed; }\n.cal-week-view .cal-day-headers span {\n  font-weight: 400;\n  opacity: 0.5; }\n.cal-week-view .cal-events-row {\n  position: relative;\n  height: 33px; }\n.cal-week-view .cal-event-container {\n  display: inline-block;\n  position: absolute; }\n.cal-week-view .cal-event {\n  padding: 0 10px;\n  font-size: 12px;\n  margin-left: 2px;\n  margin-right: 2px;\n  height: 30px;\n  line-height: 30px;\n  background-color: #D1E8FF;\n  border: 1px solid #1e90ff;\n  color: #1e90ff; }\n.cal-week-view .cal-event-title:link {\n  color: currentColor; }\n.cal-week-view .cal-draggable {\n  cursor: move; }\n.cal-week-view .cal-starts-within-week .cal-event {\n  border-top-left-radius: 5px;\n  border-bottom-left-radius: 5px; }\n.cal-week-view .cal-ends-within-week .cal-event {\n  border-top-right-radius: 5px;\n  border-bottom-right-radius: 5px; }\n.cal-week-view .cal-header.cal-today {\n  background-color: #e8fde7; }\n.cal-week-view .cal-header.cal-weekend span {\n  color: #8b0000; }\n.cal-week-view .cal-event,\n.cal-week-view .cal-header {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n.cal-day-view {\n  /* stylelint-disable-next-line selector-type-no-unknown */ }\n.cal-day-view .cal-hour-rows {\n    width: 100%;\n    border: solid 1px #e1e1e1;\n    overflow-x: scroll;\n    position: relative; }\n.cal-day-view .cal-hour:nth-child(odd) {\n    background-color: #fafafa; }\n.cal-day-view mwl-calendar-day-view-hour-segment,\n  .cal-day-view .cal-hour-segment {\n    display: block; }\n.cal-day-view .cal-hour-segment::after {\n    content: '\\00a0'; }\n.cal-day-view .cal-hour:not(:last-child) .cal-hour-segment,\n  .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {\n    border-bottom: thin dashed #e1e1e1; }\n.cal-day-view .cal-time {\n    font-weight: bold;\n    padding-top: 5px;\n    width: 70px;\n    text-align: center; }\n.cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {\n    display: none; }\n.cal-day-view .cal-hour-segment:hover,\n  .cal-day-view .cal-drag-over .cal-hour-segment {\n    background-color: #ededed; }\n.cal-day-view .cal-event-container {\n    position: absolute; }\n.cal-day-view .cal-event {\n    padding: 5px;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    background-color: #D1E8FF;\n    border: 1px solid #1e90ff;\n    color: #1e90ff;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none; }\n.cal-day-view .cal-event-title:link {\n    color: currentColor; }\n.cal-day-view .cal-draggable {\n    cursor: move; }\n.cal-day-view .cal-starts-within-day .cal-event {\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px; }\n.cal-day-view .cal-ends-within-day .cal-event {\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px; }\n.cal-day-view .cal-all-day-event {\n    padding: 8px;\n    border: solid 1px; }\n.cal-tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  font-size: 11px;\n  word-wrap: break-word;\n  opacity: 0.9; }\n.cal-tooltip.cal-tooltip-top {\n  padding: 5px 0;\n  margin-top: -3px; }\n.cal-tooltip.cal-tooltip-top .cal-tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000; }\n.cal-tooltip.cal-tooltip-right {\n  padding: 0 5px;\n  margin-left: 3px; }\n.cal-tooltip.cal-tooltip-right .cal-tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000; }\n.cal-tooltip.cal-tooltip-bottom {\n  padding: 5px 0;\n  margin-top: 3px; }\n.cal-tooltip.cal-tooltip-bottom .cal-tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000; }\n.cal-tooltip.cal-tooltip-left {\n  padding: 0 5px;\n  margin-left: -3px; }\n.cal-tooltip.cal-tooltip-left .cal-tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000; }\n.cal-tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #fff;\n  text-align: center;\n  background-color: #000;\n  border-radius: 0.25rem; }\n.cal-tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid; }\n.cal-month-view .cal-header .cal-cell {\n  font-weight: 500; }\n@media screen and (min-width: 1280px) and (max-width: 1919px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 150px; } }\n@media screen and (min-width: 1920px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 200px; } }\n.cal-month-view .cal-day-cell.cal-open {\n  -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n          box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events {\n  background: #455A64;\n  -webkit-box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n          box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n.cal-month-view .cal-open-day-events > div {\n    padding: 0 16px;\n    margin: 8px 16px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: start;\n    background-color: white;\n    -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n    -webkit-transition: -webkit-box-shadow 300ms ease;\n    transition: -webkit-box-shadow 300ms ease;\n    transition: box-shadow 300ms ease;\n    transition: box-shadow 300ms ease, -webkit-box-shadow 300ms ease; }\n.cal-month-view .cal-open-day-events > div:first-of-type {\n      margin-top: 16px; }\n.cal-month-view .cal-open-day-events > div:last-of-type {\n      margin-bottom: 16px; }\n.cal-month-view .cal-open-day-events > div:hover {\n      -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events > div .cal-event {\n      top: 0;\n      margin: 0; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title .cal-event-title {\n        display: block;\n        padding: 21px 24px;\n        line-height: 1;\n        text-decoration: none;\n        color: black !important; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-week-view .cal-header > b {\n  font-weight: 500; }\n.cal-week-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-week-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      line-height: 1;\n      text-decoration: none;\n      color: black; }\n.cal-week-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-day-view .cal-time {\n  font-weight: 500; }\n.cal-day-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row; }\n.cal-day-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      height: 26px;\n      line-height: 26px;\n      text-decoration: none;\n      color: black; }\n.cal-day-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 4px; }\n#calendar {\n  background: #FFFFFF;\n  overflow-x: hidden;\n  overflow-y: auto; }\n#calendar .header {\n    height: 200px;\n    min-height: 200px;\n    max-height: 200px;\n    position: relative;\n    background-size: 100% auto;\n    background-position: 0 50%;\n    background-repeat: no-repeat;\n    background-color: #FAFAFA;\n    color: #FFFFFF; }\n@media screen and (max-width: 599px) {\n      #calendar .header {\n        height: 164px;\n        min-height: 164px;\n        max-height: 164px; } }\n#calendar .header:before {\n      content: '';\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      z-index: 1;\n      background: rgba(0, 0, 0, 0.45); }\n#calendar .header.Jan {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/january.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Feb {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/february.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Mar {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/march.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Apr {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/april.jpg\");\n      background-position: 0 48%; }\n#calendar .header.May {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/may.jpg\");\n      background-position: 0 47%; }\n#calendar .header.Jun {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/june.jpg\");\n      background-position: 0 48%; }\n#calendar .header.Jul {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/july.jpg\");\n      background-position: 0 3%; }\n#calendar .header.Aug {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/august.jpg\");\n      background-position: 0 61%; }\n#calendar .header.Sep {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/september.jpg\");\n      background-position: 0 58%; }\n#calendar .header.Oct {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/october.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Nov {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/november.jpg\");\n      background-position: 0 46%; }\n#calendar .header.Dec {\n      background-image: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/december.jpg\");\n      background-position: 0 43%; }\n#calendar .header .header-content {\n      height: 100%; }\n#calendar .header .header-content .header-top {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-top .logo .logo-icon {\n          margin-right: 16px; }\n#calendar .header .header-content .header-top .logo .logo-text {\n          font-size: 24px; }\n#calendar .header .header-content .header-bottom {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-bottom .title {\n          font-size: 20px;\n          min-width: 160px;\n          text-align: center;\n          font-weight: 500; }\n#calendar .header .add-event-button {\n      position: absolute;\n      right: 18px;\n      bottom: -32px;\n      z-index: 10; }\n#calendar .header mat-icon {\n      color: #FFFFFF; }\n#calendar .content {\n    padding: 24px; }\n.cal-day-view .cal-starts-within-day .cal-event {\n  width: -webkit-fit-content !important;\n  width: -moz-fit-content !important;\n  width: fit-content !important;\n  min-width: 200px; }\n.cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {\n  line-height: 14px; }\n"
 
 /***/ }),
 
@@ -9691,21 +9847,24 @@ module.exports = "/**\n * Applies styles for users in high contrast mode. Note t
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_form_event_form_component__ = __webpack_require__("./src/app/main/content/calendar/event-form/event-form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dialogs_add_slotes_add_slotes_component__ = __webpack_require__("./src/app/main/content/dialogs/add-slotes/add-slotes.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__json_service__ = __webpack_require__("./src/app/main/content/calendar/json.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns__ = __webpack_require__("./node_modules/date-fns/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_date_fns__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dialogs_add_apointment_add_apointment_component__ = __webpack_require__("./src/app/main/content/dialogs/add-apointment/add-apointment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dialogs_delete_appointment_delete_appointment_component__ = __webpack_require__("./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dialogs_add_slotes_add_slotes_component__ = __webpack_require__("./src/app/main/content/dialogs/add-slotes/add-slotes.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__json_service__ = __webpack_require__("./src/app/main/content/calendar/json.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns__ = __webpack_require__("./node_modules/date-fns/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_date_fns__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__core_services_call_api_service__ = __webpack_require__("./src/app/core/services/call-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_lodash_cloneDeep__ = __webpack_require__("./node_modules/lodash/cloneDeep.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_lodash_cloneDeep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_lodash_cloneDeep__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9728,6 +9887,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var CalendarComponent = (function () {
     function CalendarComponent(jsonServ, dialog, translate, translationLoader, callApiService, mainServ) {
         this.jsonServ = jsonServ;
@@ -9736,134 +9897,76 @@ var CalendarComponent = (function () {
         this.translationLoader = translationLoader;
         this.callApiService = callApiService;
         this.mainServ = mainServ;
-        this.refresh = new __WEBPACK_IMPORTED_MODULE_5_rxjs__["Subject"]();
-        this.token = "F1xVylCp9enwzWpnobtN0KjeTsa7Iar5l4zebc26HMjfioaN8oGrQsWXQQdFgvxD";
-        this.colors = [
-            {
-                cons: 1,
-                name: "Johnny Nakazi",
-                color: {
-                    primary: "#4286f4",
-                    secondary: "white"
-                },
-            },
-            {
-                cons: 20,
-                name: "Molham Mahmoud",
-                color: {
-                    primary: "#f44d41",
-                    secondary: "white"
-                },
-            },
-        ];
+        this.refresh = new __WEBPACK_IMPORTED_MODULE_6_rxjs__["Subject"]();
         this.consultants = [];
         this.title = 'app';
         this.view = 'month';
         this.viewDate = new Date();
         this.events = [];
-        // events: CalendarEvent[] = [
-        //   {
-        //     startDate: new Date(2018,6,27,20,0),
-        //     endDate: "2018-07-27T17:34:13.239Z",
-        //     location: "string",
-        //     open: true,
-        //     consID: "string",
-        //     clientID: "string",
-        //     id: "string"
-        //   }
-        //   {
-        //     title: 'Event 1',
-        //     color: colors.yellow,
-        //     start: new Date(2018, 6, 23, 12),
-        //     end: new Date(2018, 6, 23, 12, 30),
-        //     meta: {
-        //       type: 'warning'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 2',
-        //     color: colors.yellow,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'warning'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 3',
-        //     color: colors.blue,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'info'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 4',
-        //     color: colors.red,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'danger'
-        //     }
-        //   },
-        //   {
-        //     title: 'Event 5',
-        //     color: colors.red,
-        //     start: new Date(),
-        //     meta: {
-        //       type: 'danger'
-        //     }
-        //   }
-        // ];
+        this.eventsForDay = [];
+        this.monthEvent = [];
+        this.dayEvent = [];
         this.openEvents = [];
         this.flag = true;
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_7__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_8__languageFiles_fa__["a" /* locale */]);
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_8__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_9__languageFiles_fa__["a" /* locale */]);
     }
     CalendarComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.mainServ.APIServ.get("staffusers?filter[where][type]=consultant").subscribe(function (res) {
-            _this.consultants = res;
-        });
-        this.getSlots(new Date(), []);
+        if (this.mainServ.loginServ.getType() == "consultant") {
+            this.consultants[0] = this.mainServ.loginServ.getUserId();
+        }
+        this.getSlots(new Date(), this.consultants);
     };
-    CalendarComponent.prototype.beforeMonthViewRender = function (_a) {
-        var _this = this;
-        var body = _a.body;
-        var style = document.createElement('style');
-        style.type = 'text/css';
-        body.forEach(function (cell) {
-            cell.badgeTotal = 0;
-            var groups = {};
-            cell.events.forEach(function (event) {
-                if (!event.meta.open) {
-                    cell.badgeTotal += 1;
-                    groups[event.meta.consId] = groups[event.meta.consId] || [];
-                    groups[event.meta.consId].push(event);
-                    event.color = _this.getColor(event.meta.consId);
-                }
-                else {
-                    event.color = { primary: "#cccccc", secondary: "black" };
-                }
-            });
-            cell['eventGroups'] = Object.entries(groups);
-            if (cell['eventGroups'].length > 0 && _this.flag) {
-                for (var index = 0; index < cell['eventGroups'].length; index++) {
-                    var xx = cell['eventGroups'][index][0];
-                    style.innerHTML += '.badge-' + xx + '{ background-color:' + _this.getColor(xx).primary + '; color: white;}';
-                    _this.flag = false;
-                }
-                document.getElementsByTagName('head')[0].appendChild(style);
+    CalendarComponent.prototype.handleEvent = function (action, event) {
+        if (event['meta'] != null) {
+            if (event['meta'].open == false) {
+                this.openDeleteApo(event);
             }
+            else {
+                this.openAddApo(event);
+            }
+        }
+    };
+    CalendarComponent.prototype.openAddApo = function (data) {
+        var _this = this;
+        this.dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], {
+            width: '400px',
+            data: {
+                appointment: data
+            }
+        });
+        this.dialogRef.afterClosed()
+            .subscribe(function (result) {
+            _this.changeView(_this.view);
+        });
+    };
+    CalendarComponent.prototype.openDeleteApo = function (data) {
+        var _this = this;
+        this.dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_1__dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], {
+            // panelClass: 'event-form-dialog',
+            width: '400px',
+            data: {
+                appointment: data
+            }
+        });
+        this.dialogRef.afterClosed()
+            .subscribe(function (result) {
+            _this.changeView(_this.view);
         });
     };
     CalendarComponent.prototype.dayClicked = function (_a) {
         var _this = this;
         var date = _a.date, events = _a.events;
         this.openEvents = [];
+        // console.log(events);
+        console.log(date);
+        this.selectedDay = { 'date': date };
+        this.viewDate = date;
         events.forEach(function (element) {
-            if (!element.meta.open)
-                _this.openEvents.push(element);
+            // if (!element.meta.open)
+            _this.openEvents.push(element);
         });
-        if (Object(__WEBPACK_IMPORTED_MODULE_4_date_fns__["isSameMonth"])(date, this.viewDate)) {
-            if ((Object(__WEBPACK_IMPORTED_MODULE_4_date_fns__["isSameDay"])(this.viewDate, date) && this.activeDayIsOpen === true) ||
+        if (Object(__WEBPACK_IMPORTED_MODULE_5_date_fns__["isSameMonth"])(date, this.viewDate)) {
+            if ((Object(__WEBPACK_IMPORTED_MODULE_5_date_fns__["isSameDay"])(this.viewDate, date) && this.activeDayIsOpen === true) ||
                 events.length === 0) {
                 this.activeDayIsOpen = false;
             }
@@ -9876,38 +9979,128 @@ var CalendarComponent = (function () {
     CalendarComponent.prototype.getColor = function (cons) {
         for (var index = 0; index < this.consultants.length; index++) {
             if (this.consultants[index].id == cons) {
-                var x = { primary: '#' + this.consultants[index].primarycolor, secondary: '#' + this.consultants[index].secondarycolor };
+                var x = { primary: this.consultants[index].primarycolor, secondary: this.consultants[index].secondarycolor };
                 return x;
             }
         }
     };
-    CalendarComponent.prototype.buildTitle = function (cons, client, location, start, end) {
-        var startMin = (new Date(start).getMinutes() < 10 ? '0' : '') + new Date(start).getMinutes();
-        var endMin = (new Date(end).getMinutes() < 10 ? '0' : '') + new Date(end).getMinutes();
-        return cons + ' - ' + client + ': ' + new Date(start).getHours() + ':' + startMin + ' - ' + new Date(end).getHours() + ':' + endMin + ' (' + location + ')';
+    CalendarComponent.prototype.buildTitle = function (cons, slote) {
+        var startMin = (new Date(slote.startDate).getMinutes() < 10 ? '0' : '') + new Date(slote.startDate).getMinutes();
+        var endMin = (new Date(slote.endDate).getMinutes() < 10 ? '0' : '') + new Date(slote.endDate).getMinutes();
+        if (slote.open == false) {
+            return cons.username + ' - ' + "with " + slote.forms.nameEnglish + " " + slote.forms.surnameEnglish + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
+        }
+        else {
+            return cons.username + ' - ' + "free" + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
+        }
     };
-    CalendarComponent.prototype.addEvent = function () {
+    CalendarComponent.prototype.changeDate = function (e) {
+        this.selectedDay = { date: e };
+        this.viewDate = e;
+        this.getSlots(this.viewDate, []);
+    };
+    CalendarComponent.prototype.changeView = function (newView) {
+        console.log(this.viewDate);
+        this.view = newView;
+        this.getSlots(this.viewDate, this.consultants);
+    };
+    CalendarComponent.prototype.preperData = function () {
         var _this = this;
-        this.dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__event_form_event_form_component__["a" /* FuseCalendarEventFormDialogComponent */], {
-            panelClass: 'event-form-dialog',
-            data: {
-                action: 'new',
-                date: new Date()
+        this.dayEvent = [];
+        this.eventsForDay.forEach(function (element) {
+            var slotCons = element;
+            if (slotCons.length != 0) {
+                for (var houre = 0; houre < 24; houre++) {
+                    for (var min = 0; min < 2; min++) {
+                        _this.dayEvent.push(_this.isAvailbleDate(slotCons, houre, min * 30));
+                    }
+                }
             }
         });
-        this.dialogRef.afterClosed()
-            .subscribe(function (response) {
-            if (!response) {
-                return;
+        console.log(this.dayEvent);
+    };
+    CalendarComponent.prototype.isAvailbleDate = function (items, houre, min) {
+        var newItem;
+        items.find(function (item) {
+            if (item.start.getHours() == houre && item.start.getMinutes() == min) {
+                newItem = item;
             }
-            var newEvent = response.getRawValue();
-            _this.events.push(newEvent);
-            _this.refresh.next(true);
+        });
+        if (newItem != null) {
+            return newItem;
+        }
+        else {
+            var start = __WEBPACK_IMPORTED_MODULE_14_lodash_cloneDeep__(items[0].start);
+            start.setHours(houre);
+            start.setMinutes(min);
+            var end = __WEBPACK_IMPORTED_MODULE_14_lodash_cloneDeep__(start);
+            end.setTime(start.getTime() + (30 * 60 * 1000));
+            return { 'start': start, 'end': end, 'title': "Space Time", 'color': { 'primary': items[0].color.primary + "52", 'secondary': items[0].color.secondary + "52" } };
+        }
+    };
+    CalendarComponent.prototype.getSlots = function (date, ids) {
+        var _this = this;
+        this.mainServ.loaderSer.display(true);
+        this.monthEvent = [];
+        this.events = [];
+        this.eventsForDay = [];
+        var index = 0;
+        if (this.view == "month") {
+            var firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
+            var lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+        }
+        else {
+            var firstDate = new Date(date);
+            var lastDate = new Date(date);
+            firstDate.setHours(0);
+            lastDate.setHours(23);
+        }
+        this.mainServ.APIServ.get("consTimes/readCalander?dateStart=" + firstDate + "&dateEnd=" + lastDate + "&ids=" + ids).subscribe(function (res) {
+            _this.mainServ.loaderSer.display(false);
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                var tempEvents = res;
+                tempEvents.readCalander.forEach(function (cons) {
+                    index++;
+                    cons.slots.forEach(function (slot) {
+                        if (slot.open)
+                            var x = {
+                                start: new Date(slot.startDate),
+                                end: new Date(slot.endDate),
+                                color: { primary: cons.primarycolor, secondary: cons.secondarycolor },
+                                title: _this.buildTitle(cons, slot),
+                                meta: slot
+                            };
+                        else {
+                            var x = {
+                                start: new Date(slot.startDate),
+                                end: new Date(slot.endDate),
+                                color: { primary: cons.secondarycolor, secondary: cons.primarycolor },
+                                title: _this.buildTitle(cons, slot),
+                                meta: slot
+                            };
+                        }
+                        // if (slot.open == false) {
+                        _this.monthEvent.push(x);
+                        if (_this.events[index] == null) {
+                            _this.events[index] = [];
+                        }
+                        _this.events[index].push(x);
+                        // }
+                        if (_this.eventsForDay[index] == null) {
+                            _this.eventsForDay[index] = [];
+                        }
+                        _this.eventsForDay[index].push(x);
+                        if (_this.view != "month") {
+                            _this.preperData();
+                        }
+                    });
+                });
+            }
         });
     };
     CalendarComponent.prototype.addEventNew = function () {
         var _this = this;
-        this.dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_1__dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], {
+        this.dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_2__dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], {
             panelClass: 'event-form-dialog',
             data: {
                 action: 'new',
@@ -9924,31 +10117,15 @@ var CalendarComponent = (function () {
             _this.refresh.next(true);
         });
     };
-    CalendarComponent.prototype.changeDate = function (e) {
-        this.selectedDay = { date: e };
-        this.getSlots(this.selectedDay.date, []);
+    CalendarComponent.prototype.isAllowed = function (role) {
+        return this.mainServ.globalServ.isAllowed(role);
     };
-    CalendarComponent.prototype.getSlots = function (date, ids) {
-        var _this = this;
-        var firstDayofMonth = new Date(date.getFullYear(), date.getMonth(), 1);
-        var lastDayofMonth = new Date(date.getFullYear(), date.getMonth() + 1, 1);
-        this.mainServ.APIServ.get("consTimes/readCalander?dateStart=" + firstDayofMonth + "&dateEnd=" + lastDayofMonth + "&ids=" + ids).subscribe(function (res) {
-            var tempEvents = res;
-            tempEvents.readCalander.forEach(function (cons) {
-                cons.slots.forEach(function (slot) {
-                    var x = {
-                        start: new Date(slot.startDate),
-                        end: new Date(slot.endDate),
-                        title: _this.buildTitle(cons.username, slot.clientId, slot.location, slot.startDate, slot.endDate),
-                        meta: slot
-                    };
-                    _this.events.push(x);
-                });
-            });
-        });
-    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Input"])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__angular_core__["TemplateRef"])
+    ], CalendarComponent.prototype, "eventTemplate", void 0);
     CalendarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
             selector: 'calendar',
             template: __webpack_require__("./src/app/main/content/calendar/calendar.component.html"),
             styles: [__webpack_require__("./src/app/main/content/calendar/calendar.component.scss")],
@@ -9956,12 +10133,12 @@ var CalendarComponent = (function () {
                 "\n    .cell-totals {\n      margin: 5px;\n      text-align: center;\n    }\n    .badge {\n      margin-right: 5px;\n    }\n  "
             ]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__json_service__["a" /* JsonService */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["i" /* MatDialog */],
-            __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__["b" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_10__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
-            __WEBPACK_IMPORTED_MODULE_11__core_services_call_api_service__["a" /* CallApiService */],
-            __WEBPACK_IMPORTED_MODULE_12__core_services_main_service__["a" /* MainService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__json_service__["a" /* JsonService */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["i" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_11__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_12__core_services_call_api_service__["a" /* CallApiService */],
+            __WEBPACK_IMPORTED_MODULE_13__core_services_main_service__["a" /* MainService */]])
     ], CalendarComponent);
     return CalendarComponent;
 }());
@@ -10220,6 +10397,162 @@ var JsonService = (function () {
 
 /***/ }),
 
+/***/ "./src/app/main/content/cancel-appointment/cancel-appointment.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div style=\"width: 100%;\" fxLayout=\"column\" fxLayoutAlign=\"center start\" *ngIf=\"isCanseld==false\">\r\n      <label style=\"width: 100%;text-align: center\"> Click on The buttom to cansel your appointment</label>\r\n      <div class=\"h1 mt-16\" style=\"margin: 0px auto;\">\r\n        <button mat-button (click)=\"cansel()\" cdkFocusInitial>{{'Add_Edit_Form.BACK' | translate}}</button>\r\n      </div>\r\n    </div>\r\n    <div style=\"width: 100%;\" fxLayout=\"column\" fxLayoutAlign=\"center start\" *ngIf=\"isCanseld==true\">\r\n      <label style=\"width: 100%;text-align: center\">Your Appintment is canseld</label>\r\n    </div>\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <!-- / CONTENT -->\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/main/content/cancel-appointment/cancel-appointment.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/main/content/cancel-appointment/cancel-appointment.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cancelAppointmentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var cancelAppointmentComponent = (function () {
+    function cancelAppointmentComponent(translate, appDirection, fuseConfig, translationLoader, _formBuilder, route, dialogSer, mainServ) {
+        this.translate = translate;
+        this.appDirection = appDirection;
+        this.fuseConfig = fuseConfig;
+        this.translationLoader = translationLoader;
+        this._formBuilder = _formBuilder;
+        this.route = route;
+        this.dialogSer = dialogSer;
+        this.mainServ = mainServ;
+        this.isCanseld = false;
+        this.fuseConfig.setSettings({
+            layout: {
+                navigation: 'none',
+                toolbar: 'none',
+                footer: 'none'
+            }
+        });
+    }
+    cancelAppointmentComponent.prototype.ngOnInit = function () {
+        window.open('', '_self').close();
+        this.translate.use('en');
+        this.appDirection.switchDir('ltr');
+        // this.mainServ.loaderSer.display(true);
+        this.id = this.route.snapshot.paramMap.get('id');
+        this.token = this.route.snapshot.paramMap.get('token');
+    };
+    cancelAppointmentComponent.prototype.cansel = function () {
+        var mainThis = this;
+        this.dialogSer.confirmationMessage('are youe sure you want delete your appointment', "forms/cancelAp/" + this.id, {}, false, function () {
+            // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
+            // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
+            mainThis.isCanseld = true;
+        }, 'patch');
+    };
+    cancelAppointmentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'app-cancel-appointment',
+            template: __webpack_require__("./src/app/main/content/cancel-appointment/cancel-appointment.component.html"),
+            styles: [__webpack_require__("./src/app/main/content/cancel-appointment/cancel-appointment.component.scss")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_8__app_direction_service__["a" /* AppDirectionService */],
+            __WEBPACK_IMPORTED_MODULE_5__core_services_config_service__["a" /* FuseConfigService */],
+            __WEBPACK_IMPORTED_MODULE_4__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */],
+            __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */]])
+    ], cancelAppointmentComponent);
+    return cancelAppointmentComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main/content/cancel-appointment/cancel-appointment.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cancelAppointmentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__ = __webpack_require__("./src/app/main/content/cancel-appointment/cancel-appointment.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var routes = [
+    {
+        path: 'cancel-appointment/:id',
+        component: __WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__["a" /* cancelAppointmentComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
+    },
+];
+var cancelAppointmentModule = (function () {
+    function cancelAppointmentModule() {
+    }
+    cancelAppointmentModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* RouterModule */].forChild(routes)
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__["a" /* cancelAppointmentComponent */]],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__["a" /* cancelAppointmentComponent */]
+            ]
+        })
+    ], cancelAppointmentModule);
+    return cancelAppointmentModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/main/content/client-calendar/client-calendar.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10252,7 +10585,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [{
-        path: 'client-calendar/:id',
+        path: 'client-calendar/:id/:token',
         component: __WEBPACK_IMPORTED_MODULE_9__client_calendar_client_calendar_component__["a" /* ClientCalendarComponent */],
     }];
 var MyClientCalendarModule = (function () {
@@ -10292,7 +10625,7 @@ module.exports = ""
 /***/ "./src/app/main/content/client-calendar/client-calendar/client-calendar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-7\">\r\n  <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar style=\"width:80%;\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n      <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n        <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n          <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <mat-icon class=\"logo-icon\">today</mat-icon>\r\n\r\n            <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span>\r\n\r\n          </div>\r\n\r\n          <!-- TOOLBAR -->\r\n\r\n        </div>\r\n        <!-- / TOOLBAR -->\r\n\r\n        <!-- HEADER BOTTOM -->\r\n        <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (click)=\"changeDayAnas()\"\r\n            (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Previous\">\r\n            <mat-icon>chevron_left</mat-icon>\r\n          </button>\r\n\r\n          <div class=\"title\" style=\"display: inline-block;\">\r\n            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n          </div>\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (click)=\"changeDayAnas()\"\r\n            (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Next\">\r\n            <mat-icon>chevron_right</mat-icon>\r\n          </button>\r\n        </div>\r\n        <!-- / HEADER BOTTOM -->\r\n      </div>\r\n\r\n    </div>\r\n    <!-- / HEADER -->\r\n    <!-- <div class=\"cal-open-day-events\" [@collapse]>\r\n        <ng-template [ngTemplateOutlet]=\"customTemplate || defaultTemplate\" [ngTemplateOutletContext]=\"{\r\n            events: events,\r\n            eventClicked: eventClicked\r\n          }\">\r\n        </ng-template>\r\n      </div> -->\r\n    <!-- <div class=\"row text-center col-md-8\" style=\"float: left;\">\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Previous\r\n          </div>\r\n          <div class=\"btn btn-outline-secondary\" mwlCalendarToday [(viewDate)]=\"viewDate\">\r\n            Today\r\n          </div>\r\n          <div class=\"btn btn-primary\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Next\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" (click)=\"view = 'month'\" [class.active]=\"view === 'month'\">\r\n            Month\r\n          </div>\r\n  \r\n          <div class=\"btn btn-primary\" (click)=\"view = 'day'\" [class.active]=\"view === 'day'\">\r\n            Day\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div> -->\r\n    <!-- <div *ngIf=\"events.length > 0\" [ngSwitch]=\"view\" class=\"col-md-8\" style=\"float: left;\">\r\n      <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n        [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\" (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n        (dayClicked)=\"dayClicked($event.day)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-month-view>\r\n      <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n        (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-day-view>\r\n    </div> -->\r\n    <div class=\"content\" fusePerfectScrollbar>\r\n      <div [ngSwitch]=\"view\">\r\n        <div *ngIf=\"events.length > 0\">\r\n          <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (dayClicked)=\"dayClicked($event.day)\">\r\n          </mwl-calendar-month-view>\r\n        </div>\r\n        <div *ngIf=\"events.length == 0\">\r\n          <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (dayClicked)=\"dayClicked($event.day)\">\r\n          </mwl-calendar-month-view>\r\n        </div>\r\n        <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent()\"\r\n          (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-day-view>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- <div class=\"col-md-3 offset-md-1\" style=\"float: left; text-align: left\">\r\n      <h2>Consultants</h2>\r\n      <div *ngFor=\"let cons of colors\">\r\n        <span style=\"width: 15px; height: 15px;border-radius: 50%;display: inline-block\" class=\"badge-{{cons.cons}}\"></span>\r\n        <h5 style=\"display: inline;\"> {{cons.name}}</h5>\r\n      </div>\r\n    </div> -->\r\n  </div>\r\n</div>\r\n\r\n<div class=\"col-md-5\" style=\"margin-top: 200px;\">\r\n  <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\" [scrollbarH]=\"true\"\r\n    [rowClass]=\"\">\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"start\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.DATE' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.start | date:'yyyy/MM/dd'}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"start\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.TIME' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.start | date:'HH:mm'}} - {{row.end | date:'HH:mm'}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.LOCATION' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        {{value}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.open\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.AVAILABLE' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        <mat-chip-list *ngIf=\"value\">\r\n          <mat-chip color=\"accent\" selected=\"true\">{{'Calender.AVAILABLE' | translate}}</mat-chip>\r\n        </mat-chip-list>\r\n        <mat-chip-list *ngIf=\"!value\">\r\n          <mat-chip color=\"warn\" selected=\"true\">{{'Calender.NOTAVAILABLE' | translate}}</mat-chip>\r\n        </mat-chip-list>\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n        <mat-menu #menu=\"matMenu\">\r\n          <button mat-menu-item (click)=\"viewAppointment(row)\">\r\n              <span>{{'Calender.VIEW' | translate}}</span>\r\n            </button>\r\n          <button mat-menu-item (click)=\"useAppointment(row)\">\r\n              <span>{{'Calender.USE' | translate}}</span>\r\n            </button>\r\n        </mat-menu>\r\n\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n  </ngx-datatable>\r\n</div>\r\n"
+module.exports = "<div class=\"col-md-7\">\r\n  <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar style=\"width:80%;\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n      <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n        <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n          <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <mat-icon class=\"logo-icon\">today</mat-icon>\r\n\r\n            <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span>\r\n\r\n          </div>\r\n\r\n          <!-- TOOLBAR -->\r\n\r\n        </div>\r\n        <!-- / TOOLBAR -->\r\n\r\n        <!-- HEADER BOTTOM -->\r\n        <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (click)=\"changeDayAnas()\"\r\n            (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Previous\">\r\n            <mat-icon>chevron_left</mat-icon>\r\n          </button>\r\n\r\n          <div class=\"title\" style=\"display: inline-block;\">\r\n            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n          </div>\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (click)=\"changeDayAnas()\"\r\n            (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Next\">\r\n            <mat-icon>chevron_right</mat-icon>\r\n          </button>\r\n        </div>\r\n        <!-- / HEADER BOTTOM -->\r\n      </div>\r\n\r\n    </div>\r\n    <!-- / HEADER -->\r\n    <!-- <div class=\"cal-open-day-events\" [@collapse]>\r\n        <ng-template [ngTemplateOutlet]=\"customTemplate || defaultTemplate\" [ngTemplateOutletContext]=\"{\r\n            events: events,\r\n            eventClicked: eventClicked\r\n          }\">\r\n        </ng-template>\r\n      </div> -->\r\n    <!-- <div class=\"row text-center col-md-8\" style=\"float: left;\">\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Previous\r\n          </div>\r\n          <div class=\"btn btn-outline-secondary\" mwlCalendarToday [(viewDate)]=\"viewDate\">\r\n            Today\r\n          </div>\r\n          <div class=\"btn btn-primary\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"activeDayIsOpen = false\">\r\n            Next\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <div class=\"btn-group\">\r\n          <div class=\"btn btn-primary\" (click)=\"view = 'month'\" [class.active]=\"view === 'month'\">\r\n            Month\r\n          </div>\r\n  \r\n          <div class=\"btn btn-primary\" (click)=\"view = 'day'\" [class.active]=\"view === 'day'\">\r\n            Day\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div> -->\r\n    <!-- <div *ngIf=\"events.length > 0\" [ngSwitch]=\"view\" class=\"col-md-8\" style=\"float: left;\">\r\n      <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [cellTemplate]=\"customCellTemplate\"\r\n        [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\" (beforeViewRender)=\"beforeMonthViewRender($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n        (dayClicked)=\"dayClicked($event.day)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-month-view>\r\n      <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n        (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n      </mwl-calendar-day-view>\r\n    </div> -->\r\n    <div class=\"content\" fusePerfectScrollbar>\r\n      <div [ngSwitch]=\"view\">\r\n        <div *ngIf=\"events.length > 0\">\r\n          <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (dayClicked)=\"dayClicked($event.day)\">\r\n          </mwl-calendar-month-view>\r\n        </div>\r\n        <div *ngIf=\"events.length == 0\">\r\n          <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (dayClicked)=\"dayClicked($event.day)\">\r\n          </mwl-calendar-month-view>\r\n        </div>\r\n        <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent()\"\r\n          (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n        </mwl-calendar-day-view>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- <div class=\"col-md-3 offset-md-1\" style=\"float: left; text-align: left\">\r\n      <h2>Consultants</h2>\r\n      <div *ngFor=\"let cons of colors\">\r\n        <span style=\"width: 15px; height: 15px;border-radius: 50%;display: inline-block\" class=\"badge-{{cons.cons}}\"></span>\r\n        <h5 style=\"display: inline;\"> {{cons.name}}</h5>\r\n      </div>\r\n    </div> -->\r\n  </div>\r\n</div>\r\n\r\n<div class=\"col-md-5\" style=\"margin-top: 200px;\">\r\n\r\n  <mat-form-field style=\"width: 100%;\">\r\n    <mat-select (selectionChange)=\"changeTimezone($event.value,$event.viewValue)\" [(value)]=\"timezoneSelect\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\">\r\n      <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n      <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n        {{ oneTimeZone.viewValue }}\r\n      </mat-option>\r\n    </mat-select>\r\n    <mat-icon matSuffix>time</mat-icon>\r\n  </mat-form-field>\r\n  <!--<mat-form-field style=\"width: 100%;\">\r\n    <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\" placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\"\r\n      #singleSelect>\r\n      <ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>\r\n      <mat-option *ngFor=\"let oneTimeZone of timeZoneArray | async\" [value]=\"oneTimeZone.value\">\r\n        {{ oneTimeZone.value }}\r\n      </mat-option>\r\n    </mat-select>\r\n-->\r\n\r\n  <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\" [scrollbarH]=\"true\"\r\n    [rowClass]=\"\">\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"date\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.DATE' | translate}}</span>\r\n      </ng-template>\r\n      <!--<ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.start | date:'yyyy/MM/dd'}}\r\n      </ng-template>-->\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"bodyEnd\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.TIME' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.bodyStart}} -- {{row.bodyEnd}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.LOCATION' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        {{value}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.open\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.AVAILABLE' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        <mat-chip-list *ngIf=\"value\">\r\n          <mat-chip color=\"accent\" selected=\"true\">{{'Calender.AVAILABLE' | translate}}</mat-chip>\r\n        </mat-chip-list>\r\n        <mat-chip-list *ngIf=\"!value\">\r\n          <mat-chip color=\"warn\" selected=\"true\">{{'Calender.NOTAVAILABLE' | translate}}</mat-chip>\r\n        </mat-chip-list>\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n        <mat-menu #menu=\"matMenu\">\r\n          <button mat-menu-item (click)=\"viewAppointment(row)\">\r\n              <span>{{'Calender.VIEW' | translate}}</span>\r\n            </button>\r\n          <button mat-menu-item (click)=\"useAppointment(row)\">\r\n              <span>{{'Calender.USE' | translate}}</span>\r\n            </button>\r\n        </mat-menu>\r\n\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n  </ngx-datatable>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -10310,13 +10643,17 @@ module.exports = "<div class=\"col-md-7\">\r\n  <div id=\"calendar\" dir=\"ltr\"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__calendar_json_service__ = __webpack_require__("./src/app/main/content/calendar/json.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_cloneDeep__ = __webpack_require__("./node_modules/lodash/cloneDeep.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_cloneDeep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_lodash_cloneDeep__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_moment__ = __webpack_require__("./node_modules/moment/moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_moment_timezone__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10334,6 +10671,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+ // add this 1 of 4
+
 
 
 
@@ -10350,27 +10689,9 @@ var ClientCalendarComponent = (function () {
         this.fuseConfig = fuseConfig;
         this.translationLoader = translationLoader;
         this.dialogSer = dialogSer;
-        this.refresh = new __WEBPACK_IMPORTED_MODULE_8_rxjs__["Subject"]();
+        this.refresh = new __WEBPACK_IMPORTED_MODULE_10_rxjs__["Subject"]();
         this.rows = [];
         this.filterType = "month";
-        this.colors = [
-            {
-                cons: 1,
-                name: "Johnny Nakazi",
-                color: {
-                    primary: "#4286f4",
-                    secondary: "white"
-                },
-            },
-            {
-                cons: 20,
-                name: "Molham Mahmoud",
-                color: {
-                    primary: "#f44d41",
-                    secondary: "white"
-                },
-            },
-        ];
         this.consultants = [];
         this.title = 'app';
         this.view = 'month';
@@ -10381,9 +10702,540 @@ var ClientCalendarComponent = (function () {
         this.openEvents = [];
         this.flag = true;
         this.allEvents = [];
+        this.timeZoneArray = [
+            { "viewValue": "Abidjan", "value": "Africa/Abidjan" },
+            { "viewValue": "Accra", "value": "Africa/Accra" },
+            { "viewValue": "Addis_Ababa", "value": "Africa/Addis_Ababa" },
+            { "viewValue": "Asmara", "value": "Africa/Asmara" },
+            { "viewValue": "Asmera", "value": "Africa/Asmera" },
+            { "viewValue": "Bamako", "value": "Africa/Bamako" },
+            { "viewValue": "Bangui", "value": "Africa/Bangui" },
+            { "viewValue": "Banjul", "value": "Africa/Banjul" },
+            { "viewValue": "Bissau", "value": "Africa/Bissau" },
+            { "viewValue": "Blantyre", "value": "Africa/Blantyre" },
+            { "viewValue": "Brazzaville", "value": "Africa/Brazzaville" },
+            { "viewValue": "Bujumbura", "value": "Africa/Bujumbura" },
+            { "viewValue": "Cairo", "value": "Africa/Cairo" },
+            { "viewValue": "Casablanca", "value": "Africa/Casablanca" },
+            { "viewValue": "Ceuta", "value": "Africa/Ceuta" },
+            { "viewValue": "Conakry", "value": "Africa/Conakry" },
+            { "viewValue": "Dakar", "value": "Africa/Dakar" },
+            { "viewValue": "Dar_es_Salaam", "value": "Africa/Dar_es_Salaam" },
+            { "viewValue": "Djibouti", "value": "Africa/Djibouti" },
+            { "viewValue": "Douala", "value": "Africa/Douala" },
+            { "viewValue": "El_Aaiun", "value": "Africa/El_Aaiun" },
+            { "viewValue": "Freetown", "value": "Africa/Freetown" },
+            { "viewValue": "Gaborone", "value": "Africa/Gaborone" },
+            { "viewValue": "Harare", "value": "Africa/Harare" },
+            { "viewValue": "Johannesburg", "value": "Africa/Johannesburg" },
+            { "viewValue": "Juba", "value": "Africa/Juba" },
+            { "viewValue": "Kampala", "value": "Africa/Kampala" },
+            { "viewValue": "Khartoum", "value": "Africa/Khartoum" },
+            { "viewValue": "Kigali", "value": "Africa/Kigali" },
+            { "viewValue": "Kinshasa", "value": "Africa/Kinshasa" },
+            { "viewValue": "Lagos", "value": "Africa/Lagos" },
+            { "viewValue": "Libreville", "value": "Africa/Libreville" },
+            { "viewValue": "Lome", "value": "Africa/Lome" },
+            { "viewValue": "Luanda", "value": "Africa/Luanda" },
+            { "viewValue": "Lubumbashi", "value": "Africa/Lubumbashi" },
+            { "viewValue": "Lusaka", "value": "Africa/Lusaka" },
+            { "viewValue": "Malabo", "value": "Africa/Malabo" },
+            { "viewValue": "Maputo", "value": "Africa/Maputo" },
+            { "viewValue": "Maseru", "value": "Africa/Maseru" },
+            { "viewValue": "Mbabane", "value": "Africa/Mbabane" },
+            { "viewValue": "Mogadishu", "value": "Africa/Mogadishu" },
+            { "viewValue": "Monrovia", "value": "Africa/Monrovia" },
+            { "viewValue": "Nairobi", "value": "Africa/Nairobi" },
+            { "viewValue": "Ndjamena", "value": "Africa/Ndjamena" },
+            { "viewValue": "Niamey", "value": "Africa/Niamey" },
+            { "viewValue": "Nouakchott", "value": "Africa/Nouakchott" },
+            { "viewValue": "Ouagadougou", "value": "Africa/Ouagadougou" },
+            { "viewValue": "Novo", "value": "Africa/Porto-Novo" },
+            { "viewValue": "Sao_Tome", "value": "Africa/Sao_Tome" },
+            { "viewValue": "Timbuktu", "value": "Africa/Timbuktu" },
+            { "viewValue": "Tripoli", "value": "Africa/Tripoli" },
+            { "viewValue": "Tunis", "value": "Africa/Tunis" },
+            { "viewValue": "Windhoek", "value": "Africa/Windhoek" },
+            { "viewValue": "Adak", "value": "America/Adak" },
+            { "viewValue": "Anchorage", "value": "America/Anchorage" },
+            { "viewValue": "Anguilla", "value": "America/Anguilla" },
+            { "viewValue": "Antigua", "value": "America/Antigua" },
+            { "viewValue": "Araguaina", "value": "America/Araguaina" },
+            { "viewValue": "Buenos_Aires", "value": "America/Argentina/Buenos_Aires" },
+            { "viewValue": "Catamarca", "value": "America/Argentina/Catamarca" },
+            { "viewValue": "ComodRivadavia", "value": "America/Argentina/ComodRivadavia" },
+            { "viewValue": "Cordoba", "value": "America/Argentina/Cordoba" },
+            { "viewValue": "Jujuy", "value": "America/Argentina/Jujuy" },
+            { "viewValue": "La_Rioja", "value": "America/Argentina/La_Rioja" },
+            { "viewValue": "Mendoza", "value": "America/Argentina/Mendoza" },
+            { "viewValue": "Rio_Gallegos", "value": "America/Argentina/Rio_Gallegos" },
+            { "viewValue": "Salta", "value": "America/Argentina/Salta" },
+            { "viewValue": "San_Juan", "value": "America/Argentina/San_Juan" },
+            { "viewValue": "San_Luis", "value": "America/Argentina/San_Luis" },
+            { "viewValue": "Tucuman", "value": "America/Argentina/Tucuman" },
+            { "viewValue": "Ushuaia", "value": "America/Argentina/Ushuaia" },
+            { "viewValue": "Aruba", "value": "America/Aruba" },
+            { "viewValue": "Asuncion", "value": "America/Asuncion" },
+            { "viewValue": "Atikokan", "value": "America/Atikokan" },
+            { "viewValue": "Atka", "value": "America/Atka" },
+            { "viewValue": "Bahia", "value": "America/Bahia" },
+            { "viewValue": "Bahia_Banderas", "value": "America/Bahia_Banderas" },
+            { "viewValue": "Barbados", "value": "America/Barbados" },
+            { "viewValue": "Belem", "value": "America/Belem" },
+            { "viewValue": "Belize", "value": "America/Belize" },
+            { "viewValue": "Sablon", "value": "America/Blanc-Sablon" },
+            { "viewValue": "Boa_Vista", "value": "America/Boa_Vista" },
+            { "viewValue": "Bogota", "value": "America/Bogota" },
+            { "viewValue": "Boise", "value": "America/Boise" },
+            { "viewValue": "Buenos_Aires", "value": "America/Buenos_Aires" },
+            { "viewValue": "Cambridge_Bay", "value": "America/Cambridge_Bay" },
+            { "viewValue": "Campo_Grande", "value": "America/Campo_Grande" },
+            { "viewValue": "Cancun", "value": "America/Cancun" },
+            { "viewValue": "Caracas", "value": "America/Caracas" },
+            { "viewValue": "Catamarca", "value": "America/Catamarca" },
+            { "viewValue": "Cayenne", "value": "America/Cayenne" },
+            { "viewValue": "Cayman", "value": "America/Cayman" },
+            { "viewValue": "Chicago", "value": "America/Chicago" },
+            { "viewValue": "Chihuahua", "value": "America/Chihuahua" },
+            { "viewValue": "Coral_Harbour", "value": "America/Coral_Harbour" },
+            { "viewValue": "Cordoba", "value": "America/Cordoba" },
+            { "viewValue": "Costa_Rica", "value": "America/Costa_Rica" },
+            { "viewValue": "Creston", "value": "America/Creston" },
+            { "viewValue": "Cuiaba", "value": "America/Cuiaba" },
+            { "viewValue": "Curacao", "value": "America/Curacao" },
+            { "viewValue": "Danmarkshavn", "value": "America/Danmarkshavn" },
+            { "viewValue": "Dawson", "value": "America/Dawson" },
+            { "viewValue": "Dawson_Creek", "value": "America/Dawson_Creek" },
+            { "viewValue": "Denver", "value": "America/Denver" },
+            { "viewValue": "Detroit", "value": "America/Detroit" },
+            { "viewValue": "Dominica", "value": "America/Dominica" },
+            { "viewValue": "Edmonton", "value": "America/Edmonton" },
+            { "viewValue": "Eirunepe", "value": "America/Eirunepe" },
+            { "viewValue": "El_Salvador", "value": "America/El_Salvador" },
+            { "viewValue": "Ensenada", "value": "America/Ensenada" },
+            { "viewValue": "Fort_Nelson", "value": "America/Fort_Nelson" },
+            { "viewValue": "Fort_Wayne", "value": "America/Fort_Wayne" },
+            { "viewValue": "Fortaleza", "value": "America/Fortaleza" },
+            { "viewValue": "Glace_Bay", "value": "America/Glace_Bay" },
+            { "viewValue": "Godthab", "value": "America/Godthab" },
+            { "viewValue": "Goose_Bay", "value": "America/Goose_Bay" },
+            { "viewValue": "Grand_Turk", "value": "America/Grand_Turk" },
+            { "viewValue": "Grenada", "value": "America/Grenada" },
+            { "viewValue": "Guadeloupe", "value": "America/Guadeloupe" },
+            { "viewValue": "Guatemala", "value": "America/Guatemala" },
+            { "viewValue": "Guayaquil", "value": "America/Guayaquil" },
+            { "viewValue": "Guyana", "value": "America/Guyana" },
+            { "viewValue": "Halifax", "value": "America/Halifax" },
+            { "viewValue": "Havana", "value": "America/Havana" },
+            { "viewValue": "Hermosillo", "value": "America/Hermosillo" },
+            { "viewValue": "Indianapolis", "value": "America/Indiana/Indianapolis" },
+            { "viewValue": "Knox", "value": "America/Indiana/Knox" },
+            { "viewValue": "Marengo", "value": "America/Indiana/Marengo" },
+            { "viewValue": "Petersburg", "value": "America/Indiana/Petersburg" },
+            { "viewValue": "Tell_City", "value": "America/Indiana/Tell_City" },
+            { "viewValue": "Vevay", "value": "America/Indiana/Vevay" },
+            { "viewValue": "Vincennes", "value": "America/Indiana/Vincennes" },
+            { "viewValue": "Winamac", "value": "America/Indiana/Winamac" },
+            { "viewValue": "Indianapolis", "value": "America/Indianapolis" },
+            { "viewValue": "Inuvik", "value": "America/Inuvik" },
+            { "viewValue": "Iqaluit", "value": "America/Iqaluit" },
+            { "viewValue": "Jamaica", "value": "America/Jamaica" },
+            { "viewValue": "Jujuy", "value": "America/Jujuy" },
+            { "viewValue": "Juneau", "value": "America/Juneau" },
+            { "viewValue": "Louisville", "value": "America/Kentucky/Louisville" },
+            { "viewValue": "Monticello", "value": "America/Kentucky/Monticello" },
+            { "viewValue": "Knox_IN", "value": "America/Knox_IN" },
+            { "viewValue": "Kralendijk", "value": "America/Kralendijk" },
+            { "viewValue": "La_Paz", "value": "America/La_Paz" },
+            { "viewValue": "Lima", "value": "America/Lima" },
+            { "viewValue": "Los_Angeles", "value": "America/Los_Angeles" },
+            { "viewValue": "Louisville", "value": "America/Louisville" },
+            { "viewValue": "Lower_Princes", "value": "America/Lower_Princes" },
+            { "viewValue": "Maceio", "value": "America/Maceio" },
+            { "viewValue": "Managua", "value": "America/Managua" },
+            { "viewValue": "Manaus", "value": "America/Manaus" },
+            { "viewValue": "Marigot", "value": "America/Marigot" },
+            { "viewValue": "Martinique", "value": "America/Martinique" },
+            { "viewValue": "Matamoros", "value": "America/Matamoros" },
+            { "viewValue": "Mazatlan", "value": "America/Mazatlan" },
+            { "viewValue": "Mendoza", "value": "America/Mendoza" },
+            { "viewValue": "Menominee", "value": "America/Menominee" },
+            { "viewValue": "Merida", "value": "America/Merida" },
+            { "viewValue": "Metlakatla", "value": "America/Metlakatla" },
+            { "viewValue": "Mexico_City", "value": "America/Mexico_City" },
+            { "viewValue": "Miquelon", "value": "America/Miquelon" },
+            { "viewValue": "Moncton", "value": "America/Moncton" },
+            { "viewValue": "Monterrey", "value": "America/Monterrey" },
+            { "viewValue": "Montevideo", "value": "America/Montevideo" },
+            { "viewValue": "Montreal", "value": "America/Montreal" },
+            { "viewValue": "Montserrat", "value": "America/Montserrat" },
+            { "viewValue": "Nassau", "value": "America/Nassau" },
+            { "viewValue": "New_York", "value": "America/New_York" },
+            { "viewValue": "Nipigon", "value": "America/Nipigon" },
+            { "viewValue": "Nome", "value": "America/Nome" },
+            { "viewValue": "Noronha", "value": "America/Noronha" },
+            { "viewValue": "Beulah", "value": "America/North_Dakota/Beulah" },
+            { "viewValue": "Center", "value": "America/North_Dakota/Center" },
+            { "viewValue": "New_Salem", "value": "America/North_Dakota/New_Salem" },
+            { "viewValue": "Ojinaga", "value": "America/Ojinaga" },
+            { "viewValue": "Panama", "value": "America/Panama" },
+            { "viewValue": "Pangnirtung", "value": "America/Pangnirtung" },
+            { "viewValue": "Paramaribo", "value": "America/Paramaribo" },
+            { "viewValue": "Phoenix", "value": "America/Phoenix" },
+            { "viewValue": "Prince", "value": "America/Port-au-Prince" },
+            { "viewValue": "Port_of_Spain", "value": "America/Port_of_Spain" },
+            { "viewValue": "Porto_Acre", "value": "America/Porto_Acre" },
+            { "viewValue": "Porto_Velho", "value": "America/Porto_Velho" },
+            { "viewValue": "Puerto_Rico", "value": "America/Puerto_Rico" },
+            { "viewValue": "Punta_Arenas", "value": "America/Punta_Arenas" },
+            { "viewValue": "Rainy_River", "value": "America/Rainy_River" },
+            { "viewValue": "Rankin_Inlet", "value": "America/Rankin_Inlet" },
+            { "viewValue": "Recife", "value": "America/Recife" },
+            { "viewValue": "Regina", "value": "America/Regina" },
+            { "viewValue": "Resolute", "value": "America/Resolute" },
+            { "viewValue": "Rio_Branco", "value": "America/Rio_Branco" },
+            { "viewValue": "Rosario", "value": "America/Rosario" },
+            { "viewValue": "Santa_Isabel", "value": "America/Santa_Isabel" },
+            { "viewValue": "Santarem", "value": "America/Santarem" },
+            { "viewValue": "Santiago", "value": "America/Santiago" },
+            { "viewValue": "Santo_Domingo", "value": "America/Santo_Domingo" },
+            { "viewValue": "Sao_Paulo", "value": "America/Sao_Paulo" },
+            { "viewValue": "Scoresbysund", "value": "America/Scoresbysund" },
+            { "viewValue": "Shiprock", "value": "America/Shiprock" },
+            { "viewValue": "Sitka", "value": "America/Sitka" },
+            { "viewValue": "St_Barthelemy", "value": "America/St_Barthelemy" },
+            { "viewValue": "St_Johns", "value": "America/St_Johns" },
+            { "viewValue": "St_Kitts", "value": "America/St_Kitts" },
+            { "viewValue": "St_Lucia", "value": "America/St_Lucia" },
+            { "viewValue": "St_Thomas", "value": "America/St_Thomas" },
+            { "viewValue": "St_Vincent", "value": "America/St_Vincent" },
+            { "viewValue": "Swift_Current", "value": "America/Swift_Current" },
+            { "viewValue": "Tegucigalpa", "value": "America/Tegucigalpa" },
+            { "viewValue": "Thule", "value": "America/Thule" },
+            { "viewValue": "Thunder_Bay", "value": "America/Thunder_Bay" },
+            { "viewValue": "Tijuana", "value": "America/Tijuana" },
+            { "viewValue": "Toronto", "value": "America/Toronto" },
+            { "viewValue": "Tortola", "value": "America/Tortola" },
+            { "viewValue": "Vancouver", "value": "America/Vancouver" },
+            { "viewValue": "Virgin", "value": "America/Virgin" },
+            { "viewValue": "Whitehorse", "value": "America/Whitehorse" },
+            { "viewValue": "Winnipeg", "value": "America/Winnipeg" },
+            { "viewValue": "Yakutat", "value": "America/Yakutat" },
+            { "viewValue": "Yellowknife", "value": "America/Yellowknife" },
+            { "viewValue": "Casey", "value": "Antarctica/Casey" },
+            { "viewValue": "Davis", "value": "Antarctica/Davis" },
+            { "viewValue": "DumontDUrville", "value": "Antarctica/DumontDUrville" },
+            { "viewValue": "Macquarie", "value": "Antarctica/Macquarie" },
+            { "viewValue": "Mawson", "value": "Antarctica/Mawson" },
+            { "viewValue": "McMurdo", "value": "Antarctica/McMurdo" },
+            { "viewValue": "Palmer", "value": "Antarctica/Palmer" },
+            { "viewValue": "Rothera", "value": "Antarctica/Rothera" },
+            { "viewValue": "South_Pole", "value": "Antarctica/South_Pole" },
+            { "viewValue": "Syowa", "value": "Antarctica/Syowa" },
+            { "viewValue": "Troll", "value": "Antarctica/Troll" },
+            { "viewValue": "Vostok", "value": "Antarctica/Vostok" },
+            { "viewValue": "Longyearbyen", "value": "Arctic/Longyearbyen" },
+            { "viewValue": "Aden", "value": "Asia/Aden" },
+            { "viewValue": "Almaty", "value": "Asia/Almaty" },
+            { "viewValue": "Amman", "value": "Asia/Amman" },
+            { "viewValue": "Anadyr", "value": "Asia/Anadyr" },
+            { "viewValue": "Aqtau", "value": "Asia/Aqtau" },
+            { "viewValue": "Aqtobe", "value": "Asia/Aqtobe" },
+            { "viewValue": "Ashgabat", "value": "Asia/Ashgabat" },
+            { "viewValue": "Ashkhabad", "value": "Asia/Ashkhabad" },
+            { "viewValue": "Atyrau", "value": "Asia/Atyrau" },
+            { "viewValue": "Baghdad", "value": "Asia/Baghdad" },
+            { "viewValue": "Bahrain", "value": "Asia/Bahrain" },
+            { "viewValue": "Baku", "value": "Asia/Baku" },
+            { "viewValue": "Bangkok", "value": "Asia/Bangkok" },
+            { "viewValue": "Barnaul", "value": "Asia/Barnaul" },
+            { "viewValue": "Beirut", "value": "Asia/Beirut" },
+            { "viewValue": "Bishkek", "value": "Asia/Bishkek" },
+            { "viewValue": "Brunei", "value": "Asia/Brunei" },
+            { "viewValue": "Calcutta", "value": "Asia/Calcutta" },
+            { "viewValue": "Chita", "value": "Asia/Chita" },
+            { "viewValue": "Choibalsan", "value": "Asia/Choibalsan" },
+            { "viewValue": "Chongqing", "value": "Asia/Chongqing" },
+            { "viewValue": "Chungking", "value": "Asia/Chungking" },
+            { "viewValue": "Colombo", "value": "Asia/Colombo" },
+            { "viewValue": "Dacca", "value": "Asia/Dacca" },
+            { "viewValue": "Damascus", "value": "Asia/Damascus" },
+            { "viewValue": "Dhaka", "value": "Asia/Dhaka" },
+            { "viewValue": "Dili", "value": "Asia/Dili" },
+            { "viewValue": "Dubai", "value": "Asia/Dubai" },
+            { "viewValue": "Dushanbe", "value": "Asia/Dushanbe" },
+            { "viewValue": "Famagusta", "value": "Asia/Famagusta" },
+            { "viewValue": "Gaza", "value": "Asia/Gaza" },
+            { "viewValue": "Harbin", "value": "Asia/Harbin" },
+            { "viewValue": "Hebron", "value": "Asia/Hebron" },
+            { "viewValue": "Ho_Chi_Minh", "value": "Asia/Ho_Chi_Minh" },
+            { "viewValue": "Hong_Kong", "value": "Asia/Hong_Kong" },
+            { "viewValue": "Hovd", "value": "Asia/Hovd" },
+            { "viewValue": "Irkutsk", "value": "Asia/Irkutsk" },
+            { "viewValue": "Istanbul", "value": "Asia/Istanbul" },
+            { "viewValue": "Jakarta", "value": "Asia/Jakarta" },
+            { "viewValue": "Jayapura", "value": "Asia/Jayapura" },
+            { "viewValue": "Jerusalem", "value": "Asia/Jerusalem" },
+            { "viewValue": "Kabul", "value": "Asia/Kabul" },
+            { "viewValue": "Kamchatka", "value": "Asia/Kamchatka" },
+            { "viewValue": "Karachi", "value": "Asia/Karachi" },
+            { "viewValue": "Kashgar", "value": "Asia/Kashgar" },
+            { "viewValue": "Kathmandu", "value": "Asia/Kathmandu" },
+            { "viewValue": "Katmandu", "value": "Asia/Katmandu" },
+            { "viewValue": "Khandyga", "value": "Asia/Khandyga" },
+            { "viewValue": "Kolkata", "value": "Asia/Kolkata" },
+            { "viewValue": "Krasnoyarsk", "value": "Asia/Krasnoyarsk" },
+            { "viewValue": "Kuala_Lumpur", "value": "Asia/Kuala_Lumpur" },
+            { "viewValue": "Kuching", "value": "Asia/Kuching" },
+            { "viewValue": "Kuwait", "value": "Asia/Kuwait" },
+            { "viewValue": "Macao", "value": "Asia/Macao" },
+            { "viewValue": "Macau", "value": "Asia/Macau" },
+            { "viewValue": "Magadan", "value": "Asia/Magadan" },
+            { "viewValue": "Makassar", "value": "Asia/Makassar" },
+            { "viewValue": "Manila", "value": "Asia/Manila" },
+            { "viewValue": "Muscat", "value": "Asia/Muscat" },
+            { "viewValue": "Nicosia", "value": "Asia/Nicosia" },
+            { "viewValue": "Novokuznetsk", "value": "Asia/Novokuznetsk" },
+            { "viewValue": "Novosibirsk", "value": "Asia/Novosibirsk" },
+            { "viewValue": "Omsk", "value": "Asia/Omsk" },
+            { "viewValue": "Oral", "value": "Asia/Oral" },
+            { "viewValue": "Phnom_Penh", "value": "Asia/Phnom_Penh" },
+            { "viewValue": "Pontianak", "value": "Asia/Pontianak" },
+            { "viewValue": "Pyongyang", "value": "Asia/Pyongyang" },
+            { "viewValue": "Qatar", "value": "Asia/Qatar" },
+            { "viewValue": "Qyzylorda", "value": "Asia/Qyzylorda" },
+            { "viewValue": "Rangoon", "value": "Asia/Rangoon" },
+            { "viewValue": "Riyadh", "value": "Asia/Riyadh" },
+            { "viewValue": "Saigon", "value": "Asia/Saigon" },
+            { "viewValue": "Sakhalin", "value": "Asia/Sakhalin" },
+            { "viewValue": "Samarkand", "value": "Asia/Samarkand" },
+            { "viewValue": "Seoul", "value": "Asia/Seoul" },
+            { "viewValue": "Shanghai", "value": "Asia/Shanghai" },
+            { "viewValue": "Singapore", "value": "Asia/Singapore" },
+            { "viewValue": "Srednekolymsk", "value": "Asia/Srednekolymsk" },
+            { "viewValue": "Taipei", "value": "Asia/Taipei" },
+            { "viewValue": "Tashkent", "value": "Asia/Tashkent" },
+            { "viewValue": "Tbilisi", "value": "Asia/Tbilisi" },
+            { "viewValue": "Tehran", "value": "Asia/Tehran" },
+            { "viewValue": "Tel_Aviv", "value": "Asia/Tel_Aviv" },
+            { "viewValue": "Thimbu", "value": "Asia/Thimbu" },
+            { "viewValue": "Thimphu", "value": "Asia/Thimphu" },
+            { "viewValue": "Tokyo", "value": "Asia/Tokyo" },
+            { "viewValue": "Tomsk", "value": "Asia/Tomsk" },
+            { "viewValue": "Ujung_Pandang", "value": "Asia/Ujung_Pandang" },
+            { "viewValue": "Ulaanbaatar", "value": "Asia/Ulaanbaatar" },
+            { "viewValue": "Ulan_Bator", "value": "Asia/Ulan_Bator" },
+            { "viewValue": "Urumqi", "value": "Asia/Urumqi" },
+            { "viewValue": "Nera", "value": "Asia/Ust-Nera" },
+            { "viewValue": "Vientiane", "value": "Asia/Vientiane" },
+            { "viewValue": "Vladivostok", "value": "Asia/Vladivostok" },
+            { "viewValue": "Yakutsk", "value": "Asia/Yakutsk" },
+            { "viewValue": "Yangon", "value": "Asia/Yangon" },
+            { "viewValue": "Yekaterinburg", "value": "Asia/Yekaterinburg" },
+            { "viewValue": "Yerevan", "value": "Asia/Yerevan" },
+            { "viewValue": "Azores", "value": "Atlantic/Azores" },
+            { "viewValue": "Bermuda", "value": "Atlantic/Bermuda" },
+            { "viewValue": "Canary", "value": "Atlantic/Canary" },
+            { "viewValue": "Cape_Verde", "value": "Atlantic/Cape_Verde" },
+            { "viewValue": "Faeroe", "value": "Atlantic/Faeroe" },
+            { "viewValue": "Faroe", "value": "Atlantic/Faroe" },
+            { "viewValue": "Jan_Mayen", "value": "Atlantic/Jan_Mayen" },
+            { "viewValue": "Madeira", "value": "Atlantic/Madeira" },
+            { "viewValue": "Reykjavik", "value": "Atlantic/Reykjavik" },
+            { "viewValue": "South_Georgia", "value": "Atlantic/South_Georgia" },
+            { "viewValue": "St_Helena", "value": "Atlantic/St_Helena" },
+            { "viewValue": "Stanley", "value": "Atlantic/Stanley" },
+            { "viewValue": "ACT", "value": "Australia/ACT" },
+            { "viewValue": "Adelaide", "value": "Australia/Adelaide" },
+            { "viewValue": "Brisbane", "value": "Australia/Brisbane" },
+            { "viewValue": "Broken_Hill", "value": "Australia/Broken_Hill" },
+            { "viewValue": "Canberra", "value": "Australia/Canberra" },
+            { "viewValue": "Currie", "value": "Australia/Currie" },
+            { "viewValue": "Darwin", "value": "Australia/Darwin" },
+            { "viewValue": "Eucla", "value": "Australia/Eucla" },
+            { "viewValue": "Hobart", "value": "Australia/Hobart" },
+            { "viewValue": "LHI", "value": "Australia/LHI" },
+            { "viewValue": "Lindeman", "value": "Australia/Lindeman" },
+            { "viewValue": "Lord_Howe", "value": "Australia/Lord_Howe" },
+            { "viewValue": "Melbourne", "value": "Australia/Melbourne" },
+            { "viewValue": "NSW", "value": "Australia/NSW" },
+            { "viewValue": "North", "value": "Australia/North" },
+            { "viewValue": "Perth", "value": "Australia/Perth" },
+            { "viewValue": "Queensland", "value": "Australia/Queensland" },
+            { "viewValue": "South", "value": "Australia/South" },
+            { "viewValue": "Sydney", "value": "Australia/Sydney" },
+            { "viewValue": "Tasmania", "value": "Australia/Tasmania" },
+            { "viewValue": "Victoria", "value": "Australia/Victoria" },
+            { "viewValue": "West", "value": "Australia/West" },
+            { "viewValue": "Yancowinna", "value": "Australia/Yancowinna" },
+            { "viewValue": "Acre", "value": "Brazil/Acre" },
+            { "viewValue": "DeNoronha", "value": "Brazil/DeNoronha" },
+            { "viewValue": "East", "value": "Brazil/East" },
+            { "viewValue": "West", "value": "Brazil/West" },
+            { "viewValue": "CET", "value": "CET" },
+            { "viewValue": "CST6CDT", "value": "CST6CDT" },
+            { "viewValue": "Atlantic", "value": "Canada/Atlantic" },
+            { "viewValue": "Central", "value": "Canada/Central" },
+            { "viewValue": "Eastern", "value": "Canada/Eastern" },
+            { "viewValue": "Mountain", "value": "Canada/Mountain" },
+            { "viewValue": "Newfoundland", "value": "Canada/Newfoundland" },
+            { "viewValue": "Pacific", "value": "Canada/Pacific" },
+            { "viewValue": "Saskatchewan", "value": "Canada/Saskatchewan" },
+            { "viewValue": "Yukon", "value": "Canada/Yukon" },
+            { "viewValue": "Continental", "value": "Chile/Continental" },
+            { "viewValue": "EasterIsland", "value": "Chile/EasterIsland" },
+            { "viewValue": "Cuba", "value": "Cuba" },
+            { "viewValue": "EET", "value": "EET" },
+            { "viewValue": "EST", "value": "EST" },
+            { "viewValue": "EST5EDT", "value": "EST5EDT" },
+            { "viewValue": "Egypt", "value": "Egypt" },
+            { "viewValue": "Eire", "value": "Eire" },
+            { "viewValue": "Amsterdam", "value": "Europe/Amsterdam" },
+            { "viewValue": "Andorra", "value": "Europe/Andorra" },
+            { "viewValue": "Astrakhan", "value": "Europe/Astrakhan" },
+            { "viewValue": "Athens", "value": "Europe/Athens" },
+            { "viewValue": "Belfast", "value": "Europe/Belfast" },
+            { "viewValue": "Belgrade", "value": "Europe/Belgrade" },
+            { "viewValue": "Berlin", "value": "Europe/Berlin" },
+            { "viewValue": "Bratislava", "value": "Europe/Bratislava" },
+            { "viewValue": "Brussels", "value": "Europe/Brussels" },
+            { "viewValue": "Bucharest", "value": "Europe/Bucharest" },
+            { "viewValue": "Budapest", "value": "Europe/Budapest" },
+            { "viewValue": "Busingen", "value": "Europe/Busingen" },
+            { "viewValue": "Chisinau", "value": "Europe/Chisinau" },
+            { "viewValue": "Copenhagen", "value": "Europe/Copenhagen" },
+            { "viewValue": "Dublin", "value": "Europe/Dublin" },
+            { "viewValue": "Gibraltar", "value": "Europe/Gibraltar" },
+            { "viewValue": "Guernsey", "value": "Europe/Guernsey" },
+            { "viewValue": "Helsinki", "value": "Europe/Helsinki" },
+            { "viewValue": "Isle_of_Man", "value": "Europe/Isle_of_Man" },
+            { "viewValue": "Istanbul", "value": "Europe/Istanbul" },
+            { "viewValue": "Jersey", "value": "Europe/Jersey" },
+            { "viewValue": "Kaliningrad", "value": "Europe/Kaliningrad" },
+            { "viewValue": "Kiev", "value": "Europe/Kiev" },
+            { "viewValue": "Kirov", "value": "Europe/Kirov" },
+            { "viewValue": "Lisbon", "value": "Europe/Lisbon" },
+            { "viewValue": "Ljubljana", "value": "Europe/Ljubljana" },
+            { "viewValue": "London", "value": "Europe/London" },
+            { "viewValue": "Luxembourg", "value": "Europe/Luxembourg" },
+            { "viewValue": "Madrid", "value": "Europe/Madrid" },
+            { "viewValue": "Malta", "value": "Europe/Malta" },
+            { "viewValue": "Mariehamn", "value": "Europe/Mariehamn" },
+            { "viewValue": "Minsk", "value": "Europe/Minsk" },
+            { "viewValue": "Monaco", "value": "Europe/Monaco" },
+            { "viewValue": "Moscow", "value": "Europe/Moscow" },
+            { "viewValue": "Nicosia", "value": "Europe/Nicosia" },
+            { "viewValue": "Oslo", "value": "Europe/Oslo" },
+            { "viewValue": "Paris", "value": "Europe/Paris" },
+            { "viewValue": "Podgorica", "value": "Europe/Podgorica" },
+            { "viewValue": "Prague", "value": "Europe/Prague" },
+            { "viewValue": "Riga", "value": "Europe/Riga" },
+            { "viewValue": "Rome", "value": "Europe/Rome" },
+            { "viewValue": "Samara", "value": "Europe/Samara" },
+            { "viewValue": "San_Marino", "value": "Europe/San_Marino" },
+            { "viewValue": "Sarajevo", "value": "Europe/Sarajevo" },
+            { "viewValue": "Saratov", "value": "Europe/Saratov" },
+            { "viewValue": "Simferopol", "value": "Europe/Simferopol" },
+            { "viewValue": "Skopje", "value": "Europe/Skopje" },
+            { "viewValue": "Sofia", "value": "Europe/Sofia" },
+            { "viewValue": "Stockholm", "value": "Europe/Stockholm" },
+            { "viewValue": "Tallinn", "value": "Europe/Tallinn" },
+            { "viewValue": "Tirane", "value": "Europe/Tirane" },
+            { "viewValue": "Tiraspol", "value": "Europe/Tiraspol" },
+            { "viewValue": "Ulyanovsk", "value": "Europe/Ulyanovsk" },
+            { "viewValue": "Uzhgorod", "value": "Europe/Uzhgorod" },
+            { "viewValue": "Vaduz", "value": "Europe/Vaduz" },
+            { "viewValue": "Vatican", "value": "Europe/Vatican" },
+            { "viewValue": "Vienna", "value": "Europe/Vienna" },
+            { "viewValue": "Vilnius", "value": "Europe/Vilnius" },
+            { "viewValue": "Volgograd", "value": "Europe/Volgograd" },
+            { "viewValue": "Warsaw", "value": "Europe/Warsaw" },
+            { "viewValue": "Zagreb", "value": "Europe/Zagreb" },
+            { "viewValue": "Zaporozhye", "value": "Europe/Zaporozhye" },
+            { "viewValue": "Zurich", "value": "Europe/Zurich" },
+            { "viewValue": "Iceland", "value": "Iceland" },
+            { "viewValue": "Antananarivo", "value": "Indian/Antananarivo" },
+            { "viewValue": "Chagos", "value": "Indian/Chagos" },
+            { "viewValue": "Christmas", "value": "Indian/Christmas" },
+            { "viewValue": "Cocos", "value": "Indian/Cocos" },
+            { "viewValue": "Comoro", "value": "Indian/Comoro" },
+            { "viewValue": "Kerguelen", "value": "Indian/Kerguelen" },
+            { "viewValue": "Mahe", "value": "Indian/Mahe" },
+            { "viewValue": "Maldives", "value": "Indian/Maldives" },
+            { "viewValue": "Mauritius", "value": "Indian/Mauritius" },
+            { "viewValue": "Mayotte", "value": "Indian/Mayotte" },
+            { "viewValue": "Reunion", "value": "Indian/Reunion" },
+            { "viewValue": "Iran", "value": "Iran" },
+            { "viewValue": "Jamaica", "value": "Jamaica" },
+            { "viewValue": "Japan", "value": "Japan" },
+            { "viewValue": "Kwajalein", "value": "Kwajalein" },
+            { "viewValue": "Libya", "value": "Libya" },
+            { "viewValue": "MET", "value": "MET" },
+            { "viewValue": "MST", "value": "MST" },
+            { "viewValue": "MST7MDT", "value": "MST7MDT" },
+            { "viewValue": "BajaNorte", "value": "Mexico/BajaNorte" },
+            { "viewValue": "BajaSur", "value": "Mexico/BajaSur" },
+            { "viewValue": "General", "value": "Mexico/General" },
+            { "viewValue": "NZ", "value": "NZ" },
+            { "viewValue": "CHAT", "value": "NZ-CHAT" },
+            { "viewValue": "Navajo", "value": "Navajo" },
+            { "viewValue": "PRC", "value": "PRC" },
+            { "viewValue": "PST8PDT", "value": "PST8PDT" },
+            { "viewValue": "Apia", "value": "Pacific/Apia" },
+            { "viewValue": "Auckland", "value": "Pacific/Auckland" },
+            { "viewValue": "Bougainville", "value": "Pacific/Bougainville" },
+            { "viewValue": "Chatham", "value": "Pacific/Chatham" },
+            { "viewValue": "Chuuk", "value": "Pacific/Chuuk" },
+            { "viewValue": "Easter", "value": "Pacific/Easter" },
+            { "viewValue": "Efate", "value": "Pacific/Efate" },
+            { "viewValue": "Enderbury", "value": "Pacific/Enderbury" },
+            { "viewValue": "Fakaofo", "value": "Pacific/Fakaofo" },
+            { "viewValue": "Fiji", "value": "Pacific/Fiji" },
+            { "viewValue": "Funafuti", "value": "Pacific/Funafuti" },
+            { "viewValue": "Galapagos", "value": "Pacific/Galapagos" },
+            { "viewValue": "Gambier", "value": "Pacific/Gambier" },
+            { "viewValue": "Guadalcanal", "value": "Pacific/Guadalcanal" },
+            { "viewValue": "Guam", "value": "Pacific/Guam" },
+            { "viewValue": "Honolulu", "value": "Pacific/Honolulu" },
+            { "viewValue": "Johnston", "value": "Pacific/Johnston" },
+            { "viewValue": "Kiritimati", "value": "Pacific/Kiritimati" },
+            { "viewValue": "Kosrae", "value": "Pacific/Kosrae" },
+            { "viewValue": "Kwajalein", "value": "Pacific/Kwajalein" },
+            { "viewValue": "Majuro", "value": "Pacific/Majuro" },
+            { "viewValue": "Marquesas", "value": "Pacific/Marquesas" },
+            { "viewValue": "Midway", "value": "Pacific/Midway" },
+            { "viewValue": "Nauru", "value": "Pacific/Nauru" },
+            { "viewValue": "Niue", "value": "Pacific/Niue" },
+            { "viewValue": "Norfolk", "value": "Pacific/Norfolk" },
+            { "viewValue": "Noumea", "value": "Pacific/Noumea" },
+            { "viewValue": "Pago_Pago", "value": "Pacific/Pago_Pago" },
+            { "viewValue": "Palau", "value": "Pacific/Palau" },
+            { "viewValue": "Pitcairn", "value": "Pacific/Pitcairn" },
+            { "viewValue": "Pohnpei", "value": "Pacific/Pohnpei" },
+            { "viewValue": "Ponape", "value": "Pacific/Ponape" },
+            { "viewValue": "Port_Moresby", "value": "Pacific/Port_Moresby" },
+            { "viewValue": "Rarotonga", "value": "Pacific/Rarotonga" },
+            { "viewValue": "Saipan", "value": "Pacific/Saipan" },
+            { "viewValue": "Samoa", "value": "Pacific/Samoa" },
+            { "viewValue": "Tahiti", "value": "Pacific/Tahiti" },
+            { "viewValue": "Tarawa", "value": "Pacific/Tarawa" },
+            { "viewValue": "Tongatapu", "value": "Pacific/Tongatapu" },
+            { "viewValue": "Truk", "value": "Pacific/Truk" },
+            { "viewValue": "Wake", "value": "Pacific/Wake" },
+            { "viewValue": "Wallis", "value": "Pacific/Wallis" },
+            { "viewValue": "Yap", "value": "Pacific/Yap" },
+            { "viewValue": "Poland", "value": "Poland" },
+            { "viewValue": "Portugal", "value": "Portugal" },
+            { "viewValue": "ROC", "value": "ROC" },
+            { "viewValue": "ROK", "value": "ROK" },
+            { "viewValue": "Singapore", "value": "Singapore" },
+            { "viewValue": "Turkey", "value": "Turkey" }
+        ];
+        this.timezoneSelect = "Asia/Tehran";
+        this.timePlace = "Tehran";
         this.viewDate = new Date();
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_10__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_11__languageFiles_fa__["a" /* locale */]);
-        // this.rows = this.events;
+        this.jun = __WEBPACK_IMPORTED_MODULE_8_moment__("2015-5-2 4:30"); // creating obj.
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_12__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_13__languageFiles_fa__["a" /* locale */]);
         this.fuseSettings = this.fuseConfig.settings;
         this.fuseSettings.optionsBtn = 'none';
         this.fuseSettings.layout.navigation = 'none';
@@ -10391,42 +11243,6 @@ var ClientCalendarComponent = (function () {
         this.fuseSettings.layout.footer = 'none';
         this.fuseConfig.setSettings(this.fuseSettings);
     }
-    ClientCalendarComponent.prototype.beforeMonthViewRender = function (_a) {
-        var _this = this;
-        var body = _a.body;
-        var style = document.createElement('style');
-        style.type = 'text/css';
-        body.forEach(function (cell) {
-            cell.badgeTotal = 0;
-            var groups = {};
-            cell.events.forEach(function (event) {
-                if (event.meta.open) {
-                    cell.badgeTotal += 1;
-                    groups[event.meta.consID] = groups[event.meta.consID] || [];
-                    groups[event.meta.consID].push(event);
-                    event.color = _this.getColor(event.meta.consID);
-                }
-                else {
-                    event.color = { primary: "#cccccc", secondary: "black" };
-                }
-            });
-            cell['eventGroups'] = Object.entries(groups);
-            if (cell['eventGroups'].length > 0 && _this.flag) {
-                for (var index = 0; index < cell['eventGroups'].length; index++) {
-                    var xx = cell['eventGroups'][index][0];
-                    style.innerHTML += '.badge-' + xx + '{ background-color:' + _this.getColor(xx).primary + '; color: white;}';
-                    _this.flag = false;
-                }
-                document.getElementsByTagName('head')[0].appendChild(style);
-            }
-        });
-    };
-    ClientCalendarComponent.prototype.getColor = function (cons) {
-        for (var index = 0; index < this.colors.length; index++) {
-            if (this.colors[index].cons == cons)
-                return this.colors[index].color;
-        }
-    };
     ClientCalendarComponent.prototype.buildTitle = function (cons, client, location, start, end) {
         var startMin = (new Date(start).getMinutes() < 10 ? '0' : '') + new Date(start).getMinutes();
         var endMin = (new Date(end).getMinutes() < 10 ? '0' : '') + new Date(end).getMinutes();
@@ -10451,7 +11267,7 @@ var ClientCalendarComponent = (function () {
             this.events = [];
         this.bodyevents = [];
         if (this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()] == null || !isMonth) {
-            this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to).subscribe(function (data) {
+            this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to, this.token).subscribe(function (data) {
                 if (_this.mainServ.APIServ.getErrorCode() == 0) {
                     if (isMonth)
                         _this.allEvents[_this.viewDate.getMonth() + "-" + _this.viewDate.getFullYear()] = [];
@@ -10467,6 +11283,13 @@ var ClientCalendarComponent = (function () {
                             _this.events.push(x);
                             _this.allEvents[_this.viewDate.getMonth() + "-" + _this.viewDate.getFullYear()].push(x);
                         }
+                        x['date'] = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate();
+                        var dateStartString = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate()
+                            + " " + x['start'].getHours() + ":" + x['start'].getMinutes();
+                        x['bodyStart'] = __WEBPACK_IMPORTED_MODULE_8_moment__(dateStartString).tz('Asia/Tehran').format('hh : mm');
+                        var dateEndString = x['end'].getFullYear() + "-" + x['end'].getMonth() + "-" + x['end'].getDate()
+                            + " " + x['end'].getHours() + ":" + x['end'].getMinutes();
+                        x['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_8_moment__(dateEndString).tz('Asia/Tehran').format('hh : mm');
                         _this.bodyevents.push(x);
                     });
                     _this.mainServ.loaderSer.display(false);
@@ -10480,6 +11303,16 @@ var ClientCalendarComponent = (function () {
         }
         else {
             this.events = this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()];
+            this.events.forEach(function (x) {
+                x['date'] = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate();
+                var dateStartString = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate()
+                    + " " + x['start'].getHours() + ":" + x['start'].getMinutes();
+                x['bodyStart'] = __WEBPACK_IMPORTED_MODULE_8_moment__(dateStartString).tz('Asia/Tehran').format('hh : mm');
+                var dateEndString = x['end'].getFullYear() + "-" + x['end'].getMonth() + "-" + x['end'].getDate()
+                    + " " + x['end'].getHours() + ":" + x['end'].getMinutes();
+                x['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_8_moment__(dateEndString).tz('Asia/Tehran').format('hh : mm');
+                _this.bodyevents.push(x);
+            });
             this.mainServ.loaderSer.display(false);
         }
     };
@@ -10489,11 +11322,15 @@ var ClientCalendarComponent = (function () {
     };
     ClientCalendarComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.jun.tz('Asia/Tehran').format('yyyy - MM - dd hh : mm : ss a z');
+        console.log(this.jun);
+        console.log(__WEBPACK_IMPORTED_MODULE_8_moment__["tz"].names()); // for all time zone.
         var id = this.route.snapshot.paramMap.get('id');
-        this.mainServ.APIServ.get("forms/" + id).subscribe(function (data) {
+        this.token = this.route.snapshot.paramMap.get('token');
+        this.mainServ.APIServ.get("forms/getClientForm/" + id, this.token).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                _this.form = data;
-                _this.consId = data['consId'];
+                _this.form = data['getClientForm'];
+                _this.consId = _this.form['consId'];
                 _this.changeDayAnas();
             }
             else if (_this.mainServ.APIServ.getErrorCode() == 400) {
@@ -10520,9 +11357,22 @@ var ClientCalendarComponent = (function () {
     };
     ClientCalendarComponent.prototype.useAppointment = function (appointment) {
         var mainThis = this;
-        this.dialogSer.confirmationMessage('are youe sure you want use  appointment at ' + appointment['start'] + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'] }, false, function () {
-            mainThis.changeDayAnas();
+        this.dialogSer.confirmationMessage('are youe sure you want use the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'] }, false, function () {
+            mainThis.mainServ.globalServ.reload();
         }, "put");
+    };
+    ClientCalendarComponent.prototype.changeTimezone = function (timezone, timePlace) {
+        this.timePlace = timezone;
+        for (var index = 0; index < this.bodyevents.length; index++) {
+            var element = this.bodyevents[index];
+            var dateStartString = element['start'].getFullYear() + "-" + element['start'].getMonth() + "-" + element['start'].getDate()
+                + " " + element['start'].getHours() + ":" + element['start'].getMinutes();
+            this.bodyevents[index]['bodyStart'] = __WEBPACK_IMPORTED_MODULE_8_moment__(dateStartString).tz(timezone).format('HH : mm');
+            var dateEndString = element['end'].getFullYear() + "-" + element['end'].getMonth() + "-" + element['end'].getDate()
+                + " " + element['end'].getHours() + ":" + element['end'].getMinutes();
+            element['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_8_moment__(dateEndString).tz(timezone).format('HH : mm');
+        }
+        ;
     };
     ClientCalendarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
@@ -10534,12 +11384,12 @@ var ClientCalendarComponent = (function () {
             ]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__calendar_json_service__["a" /* JsonService */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["i" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_11__angular_material__["i" /* MatDialog */],
             __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_12__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_2__core_services_config_service__["a" /* FuseConfigService */],
-            __WEBPACK_IMPORTED_MODULE_13__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_15__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */]])
     ], ClientCalendarComponent);
     return ClientCalendarComponent;
@@ -10559,7 +11409,7 @@ module.exports = "<router-outlet>\r\n\r\n\r\n  <div class=\"spinner-wrapper-sec\
 /***/ "./src/app/main/content/content.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  z-index: 1; }\n\n.spinner-wrapper-sec {\n  background-color: rgba(128, 128, 128, 0.0784314);\n  z-index: 10000000;\n  display: block;\n  position: absolute;\n  width: 100%;\n  padding-top: 22%;\n  /* min-height: 100%; */\n  height: 100%; }\n\n.spinner-wrapper-sec .spinner {\n  position: absolute;\n  overflow: hidden;\n  left: 50%;\n  margin-left: -50px;\n  -webkit-animation: outer-rotate 2.91667s linear infinite;\n          animation: outer-rotate 2.91667s linear infinite; }\n\n.spinner-wrapper-sec .spinner .inner {\n  width: 100px;\n  height: 100px;\n  position: relative;\n  -webkit-animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n          animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n\n.spinner-wrapper-sec .spinner .inner .gap {\n  position: absolute;\n  left: 49px;\n  right: 49px;\n  top: 0;\n  bottom: 0;\n  border-top: 10px solid;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box; }\n\n.spinner-wrapper-sec .spinner .inner .left,\n.spinner-wrapper-sec .spinner .inner .right {\n  position: absolute;\n  top: 0;\n  height: 100px;\n  width: 50px;\n  overflow: hidden; }\n\n.spinner-wrapper-sec .spinner .inner .left .half-circle,\n.spinner-wrapper-sec .spinner .inner .right .half-circle {\n  position: absolute;\n  top: 0;\n  width: 100px;\n  height: 100px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border: 10px solid #4285F4;\n  border-bottom-color: transparent;\n  border-radius: 50%; }\n\n.spinner-wrapper-sec .spinner .inner .left {\n  left: 0; }\n\n.spinner-wrapper-sec .spinner .inner .left .half-circle {\n  left: 0;\n  border-right-color: transparent;\n  animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n\n.spinner-wrapper-sec .spinner .inner .right {\n  right: 0; }\n\n.spinner-wrapper-sec .spinner .inner .right .half-circle {\n  right: 0;\n  border-left-color: transparent;\n  animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n\n@-webkit-keyframes outer-rotate {\n  0% {\n    -webkit-transform: rotate(0deg) scale(0.5);\n            transform: rotate(0deg) scale(0.5); }\n  100% {\n    -webkit-transform: rotate(360deg) scale(0.5);\n            transform: rotate(360deg) scale(0.5); } }\n\n@keyframes outer-rotate {\n  0% {\n    -webkit-transform: rotate(0deg) scale(0.5);\n            transform: rotate(0deg) scale(0.5); }\n  100% {\n    -webkit-transform: rotate(360deg) scale(0.5);\n            transform: rotate(360deg) scale(0.5); } }\n\n@-webkit-keyframes left-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(130deg);\n            transform: rotate(130deg); }\n  50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg); } }\n\n@keyframes left-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(130deg);\n            transform: rotate(130deg); }\n  50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg); } }\n\n@-webkit-keyframes right-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(-130deg);\n            transform: rotate(-130deg); }\n  50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg); } }\n\n@keyframes right-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(-130deg);\n            transform: rotate(-130deg); }\n  50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg); } }\n\n@-webkit-keyframes sporadic-rotate {\n  12.5% {\n    -webkit-transform: rotate(135deg);\n            transform: rotate(135deg); }\n  25% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); }\n  37.5% {\n    -webkit-transform: rotate(405deg);\n            transform: rotate(405deg); }\n  50% {\n    -webkit-transform: rotate(540deg);\n            transform: rotate(540deg); }\n  62.5% {\n    -webkit-transform: rotate(675deg);\n            transform: rotate(675deg); }\n  75% {\n    -webkit-transform: rotate(810deg);\n            transform: rotate(810deg); }\n  87.5% {\n    -webkit-transform: rotate(945deg);\n            transform: rotate(945deg); }\n  100% {\n    -webkit-transform: rotate(1080deg);\n            transform: rotate(1080deg); } }\n\n@keyframes sporadic-rotate {\n  12.5% {\n    -webkit-transform: rotate(135deg);\n            transform: rotate(135deg); }\n  25% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); }\n  37.5% {\n    -webkit-transform: rotate(405deg);\n            transform: rotate(405deg); }\n  50% {\n    -webkit-transform: rotate(540deg);\n            transform: rotate(540deg); }\n  62.5% {\n    -webkit-transform: rotate(675deg);\n            transform: rotate(675deg); }\n  75% {\n    -webkit-transform: rotate(810deg);\n            transform: rotate(810deg); }\n  87.5% {\n    -webkit-transform: rotate(945deg);\n            transform: rotate(945deg); }\n  100% {\n    -webkit-transform: rotate(1080deg);\n            transform: rotate(1080deg); } }\n"
+module.exports = ":host {\n  z-index: 1; }\n\n.spinner-wrapper-sec {\n  background-color: rgba(128, 128, 128, 0.0784314);\n  z-index: 9999999999999999999999999;\n  display: block;\n  position: absolute;\n  width: 100%;\n  padding-top: 22%;\n  /* min-height: 100%; */\n  height: 100%; }\n\n.spinner-wrapper-sec .spinner {\n  position: absolute;\n  overflow: hidden;\n  left: 50%;\n  margin-left: -50px;\n  -webkit-animation: outer-rotate 2.91667s linear infinite;\n          animation: outer-rotate 2.91667s linear infinite; }\n\n.spinner-wrapper-sec .spinner .inner {\n  width: 100px;\n  height: 100px;\n  position: relative;\n  -webkit-animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n          animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n\n.spinner-wrapper-sec .spinner .inner .gap {\n  position: absolute;\n  left: 49px;\n  right: 49px;\n  top: 0;\n  bottom: 0;\n  border-top: 10px solid;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box; }\n\n.spinner-wrapper-sec .spinner .inner .left,\n.spinner-wrapper-sec .spinner .inner .right {\n  position: absolute;\n  top: 0;\n  height: 100px;\n  width: 50px;\n  overflow: hidden; }\n\n.spinner-wrapper-sec .spinner .inner .left .half-circle,\n.spinner-wrapper-sec .spinner .inner .right .half-circle {\n  position: absolute;\n  top: 0;\n  width: 100px;\n  height: 100px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border: 10px solid #4285F4;\n  border-bottom-color: transparent;\n  border-radius: 50%; }\n\n.spinner-wrapper-sec .spinner .inner .left {\n  left: 0; }\n\n.spinner-wrapper-sec .spinner .inner .left .half-circle {\n  left: 0;\n  border-right-color: transparent;\n  animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n\n.spinner-wrapper-sec .spinner .inner .right {\n  right: 0; }\n\n.spinner-wrapper-sec .spinner .inner .right .half-circle {\n  right: 0;\n  border-left-color: transparent;\n  animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n\n@-webkit-keyframes outer-rotate {\n  0% {\n    -webkit-transform: rotate(0deg) scale(0.5);\n            transform: rotate(0deg) scale(0.5); }\n  100% {\n    -webkit-transform: rotate(360deg) scale(0.5);\n            transform: rotate(360deg) scale(0.5); } }\n\n@keyframes outer-rotate {\n  0% {\n    -webkit-transform: rotate(0deg) scale(0.5);\n            transform: rotate(0deg) scale(0.5); }\n  100% {\n    -webkit-transform: rotate(360deg) scale(0.5);\n            transform: rotate(360deg) scale(0.5); } }\n\n@-webkit-keyframes left-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(130deg);\n            transform: rotate(130deg); }\n  50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg); } }\n\n@keyframes left-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(130deg);\n            transform: rotate(130deg); }\n  50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg); } }\n\n@-webkit-keyframes right-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(-130deg);\n            transform: rotate(-130deg); }\n  50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg); } }\n\n@keyframes right-wobble {\n  0%,\n  100% {\n    -webkit-transform: rotate(-130deg);\n            transform: rotate(-130deg); }\n  50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg); } }\n\n@-webkit-keyframes sporadic-rotate {\n  12.5% {\n    -webkit-transform: rotate(135deg);\n            transform: rotate(135deg); }\n  25% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); }\n  37.5% {\n    -webkit-transform: rotate(405deg);\n            transform: rotate(405deg); }\n  50% {\n    -webkit-transform: rotate(540deg);\n            transform: rotate(540deg); }\n  62.5% {\n    -webkit-transform: rotate(675deg);\n            transform: rotate(675deg); }\n  75% {\n    -webkit-transform: rotate(810deg);\n            transform: rotate(810deg); }\n  87.5% {\n    -webkit-transform: rotate(945deg);\n            transform: rotate(945deg); }\n  100% {\n    -webkit-transform: rotate(1080deg);\n            transform: rotate(1080deg); } }\n\n@keyframes sporadic-rotate {\n  12.5% {\n    -webkit-transform: rotate(135deg);\n            transform: rotate(135deg); }\n  25% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); }\n  37.5% {\n    -webkit-transform: rotate(405deg);\n            transform: rotate(405deg); }\n  50% {\n    -webkit-transform: rotate(540deg);\n            transform: rotate(540deg); }\n  62.5% {\n    -webkit-transform: rotate(675deg);\n            transform: rotate(675deg); }\n  75% {\n    -webkit-transform: rotate(810deg);\n            transform: rotate(810deg); }\n  87.5% {\n    -webkit-transform: rotate(945deg);\n            transform: rotate(945deg); }\n  100% {\n    -webkit-transform: rotate(1080deg);\n            transform: rotate(1080deg); } }\n"
 
 /***/ }),
 
@@ -10679,6 +11529,118 @@ var FuseContentComponent = (function () {
 
 /***/ }),
 
+/***/ "./src/app/main/content/dialogs/add-apointment/add-apointment.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<div mat-dialog-content>\n  <form class=\"example-form\" style=\"width: 100%\">\n    <mat-form-field class=\"example-full-width\" style=\"width: 100%\">\n      <input type=\"text\" placeholder=\" choose form\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n      <mat-autocomplete #auto=\"matAutocomplete\">\n        <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option.id\">\n          {{option.nameFarsi}}\n\n\n          <!--<mat-chip-list *ngIf=\"option.appointmentId!=null\">\n            <mat-chip color=\"gray\" selected=\"true\">yes</mat-chip>\n          </mat-chip-list>\n          <mat-chip-list *ngIf=\"option.appointmentId==null\">\n            <mat-chip color=\"gray\" selected=\"true\">yes</mat-chip>\n          </mat-chip-list>-->\n\n        </mat-option>\n      </mat-autocomplete>\n    </mat-form-field>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"close()\">Cansel</button>\n  <button mat-button (click)=\"save()\">add</button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/add-apointment/add-apointment.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/add-apointment/add-apointment.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddApointmentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+
+var AddApointmentComponent = (function () {
+    function AddApointmentComponent(dialogRef, data, mainServ, _formBuilder, translate, translationLoader) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.mainServ = mainServ;
+        this._formBuilder = _formBuilder;
+        this.translate = translate;
+        this.translationLoader = translationLoader;
+        this.myControl = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormControl */]();
+        this.options = ['One', 'Two', 'Three'];
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_7__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_8__languageFiles_fa__["a" /* locale */]);
+        this.appointment = data['appointment'];
+    }
+    AddApointmentComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"consultation\"}}").subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                _this.options = data;
+                _this.filteredOptions = _this.myControl.valueChanges
+                    .pipe(Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators__["startWith"])(''), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators__["map"])(function (value) { return _this._filter(value); }));
+            }
+            else if (_this.mainServ.APIServ.getErrorCode() == 400) {
+            }
+            else {
+                _this.mainServ.globalServ.somthingError();
+            }
+        });
+    };
+    AddApointmentComponent.prototype._filter = function (value) {
+        var filterValue = value.toLowerCase();
+        return this.options.filter(function (option) { return option['nameFarsi'].toLowerCase().includes(filterValue); });
+    };
+    AddApointmentComponent.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    AddApointmentComponent.prototype.save = function () {
+        var _this = this;
+        console.log;
+        this.mainServ.APIServ.put("forms/selectAp/" + this.myControl.value, { 'apId': this.appointment['meta']['id'] }).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                _this.dialogRef.close();
+            }
+        });
+    };
+    AddApointmentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'add-apointment',
+            template: __webpack_require__("./src/app/main/content/dialogs/add-apointment/add-apointment.component.html"),
+            styles: [__webpack_require__("./src/app/main/content/dialogs/add-apointment/add-apointment.component.scss")]
+        }),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
+    ], AddApointmentComponent);
+    return AddApointmentComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/main/content/dialogs/add-slotes/add-slotes.component.html":
 /***/ (function(module, exports) {
 
@@ -10706,6 +11668,10 @@ module.exports = ""
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_moment__ = __webpack_require__("./node_modules/moment/moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_moment_timezone__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10726,6 +11692,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+ // add this 1 of 4
+
 var AddSlotesComponent = (function () {
     function AddSlotesComponent(dialogRef, data, mainServ, _formBuilder, translate, translationLoader) {
         this.dialogRef = dialogRef;
@@ -10734,6 +11702,7 @@ var AddSlotesComponent = (function () {
         this._formBuilder = _formBuilder;
         this.translate = translate;
         this.translationLoader = translationLoader;
+        this.consObject = {};
         this.consultant = [];
         this.exportTime = { hour: 7, minute: 15, format: 24 };
         // startTime;
@@ -10767,22 +11736,34 @@ var AddSlotesComponent = (function () {
     AddSlotesComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.translate.use('en');
-        this.eventForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormGroup */]({
-            date: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required),
-            location: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required),
-            consId: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required)
-        });
-        this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe(function (data) {
-            if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                _this.consultant = data;
-                // this.loadingIndicator = false;
-            }
-            else if (_this.mainServ.APIServ.getErrorCode() == 400) {
-            }
-            else {
-                _this.mainServ.globalServ.somthingError();
-            }
-        });
+        this.typeUser = this.mainServ.loginServ.getType();
+        if (this.typeUser == "consultant") {
+            this.consultant = [{ "type": this.typeUser, "username": this.mainServ.loginServ.getuserName(), "id": this.mainServ.loginServ.getUserId() }];
+            // this.consObject = 
+            this.eventForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormGroup */]({
+                date: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required),
+                location: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required),
+                consId: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */](this.consultant[0]["id"], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required)
+            });
+        }
+        else {
+            this.eventForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormGroup */]({
+                date: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required),
+                location: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required),
+                consId: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required)
+            });
+            this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe(function (data) {
+                if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                    _this.consultant = data;
+                    // this.loadingIndicator = false;
+                }
+                else if (_this.mainServ.APIServ.getErrorCode() == 400) {
+                }
+                else {
+                    _this.mainServ.globalServ.somthingError();
+                }
+            });
+        }
         this.convertTo24('4:30pm');
     };
     AddSlotesComponent.prototype.save = function (isClose, startPicker, endPicker) {
@@ -10804,14 +11785,30 @@ var AddSlotesComponent = (function () {
         var stringDate = year + "-" + month + "-" + day;
         console.log("stringDate");
         console.log(stringDate);
-        data['startDate'] = new Date(stringDate);
-        data['startDate'].setHours(startDateString['hours']);
-        data['startDate'].setMinutes(startDateString['minutes']);
-        data['endDate'] = new Date(stringDate);
-        data['endDate'].setHours(endPickerString['hours']);
-        data['endDate'].setMinutes(endPickerString['minutes']);
+        var time = {};
+        time['start'] = new Date(stringDate);
+        time['start'].setHours(startDateString['hours']);
+        time['start'].setMinutes(startDateString['minutes']);
+        time['end'] = new Date(stringDate);
+        time['end'].setHours(endPickerString['hours']);
+        time['end'].setMinutes(endPickerString['minutes']);
+        // data['startDate'] = new Date(stringDate);
+        // data['startDate'].setHours(startDateString['hours']);
+        // data['startDate'].setMinutes(startDateString['minutes'])
+        // data['endDate'] = new Date(stringDate);
+        // data['endDate'].setHours(endPickerString['hours']);
+        // data['endDate'].setMinutes(endPickerString['minutes'])
+        // data['startDate']=
+        var start = stringDate
+            + " " + time['start'].getHours() + ":" + time['start'].getMinutes();
+        console.log(start);
+        data['startDate'] = __WEBPACK_IMPORTED_MODULE_8_moment__(start).tz('Asia/Tehran');
+        var end = stringDate
+            + " " + time['end'].getHours() + ":" + time['end'].getMinutes();
+        data['endDate'] = __WEBPACK_IMPORTED_MODULE_8_moment__(end).tz('Asia/Tehran');
+        console.log(end);
         console.log(data);
-        this.mainServ.APIServ.post("consTimes", this.eventForm.value).subscribe(function (data) {
+        this.mainServ.APIServ.post("consTimes", data).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 if (isClose)
                     _this.dialogRef.close();
@@ -10909,6 +11906,7 @@ var ConfirmMessageComponent = (function () {
         this.sendData = data['sendData'];
         this.url = data['url'];
         this.type = data['type'];
+        this.token = data['token'];
         this.withReload = data['withReload'];
         this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_5__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_6__languageFiles_fa__["a" /* locale */]);
     }
@@ -10918,7 +11916,7 @@ var ConfirmMessageComponent = (function () {
     ConfirmMessageComponent.prototype.onYesClick = function () {
         var _this = this;
         if (this.type == "patch")
-            this.mainServ.APIServ.patch(this.url, this.sendData).subscribe(function (data) {
+            this.mainServ.APIServ.patch(this.url, this.sendData, this.token).subscribe(function (data) {
                 if (_this.mainServ.APIServ.getErrorCode() == 0) {
                     if (_this.withReload)
                         _this.mainServ.globalServ.reload();
@@ -10951,6 +11949,96 @@ var ConfirmMessageComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */]])
     ], ConfirmMessageComponent);
     return ConfirmMessageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<div mat-dialog-content>\n  <p>are you sure you want delete this appointment</p>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"close()\">No</button>\n  <button mat-button  (click)=\"onYesClick()\" cdkFocusInitial>Yes</button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeleteAppointmentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+var DeleteAppointmentComponent = (function () {
+    function DeleteAppointmentComponent(dialogRef, data, mainServ, _formBuilder, translate, translationLoader) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.mainServ = mainServ;
+        this._formBuilder = _formBuilder;
+        this.translate = translate;
+        this.translationLoader = translationLoader;
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_6__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__["a" /* locale */]);
+        this.appointment = data['appointment'];
+    }
+    DeleteAppointmentComponent.prototype.onYesClick = function () {
+        var _this = this;
+        this.mainServ.loaderSer.display(true);
+        this.mainServ.APIServ.put("forms/cancelAp/" + this.appointment['meta'].id, {}).subscribe(function (data) {
+            _this.mainServ.loaderSer.display(false);
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                _this.dialogRef.close();
+            }
+        });
+    };
+    DeleteAppointmentComponent.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    DeleteAppointmentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
+            selector: 'delete-appointment',
+            template: __webpack_require__("./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.html"),
+            styles: [__webpack_require__("./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.scss")]
+        }),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
+    ], DeleteAppointmentComponent);
+    return DeleteAppointmentComponent;
 }());
 
 
@@ -11024,9 +12112,9 @@ var ResetPasswordComponent = (function () {
     };
     ResetPasswordComponent.prototype.update = function () {
         var _this = this;
-        this.mainServ.APIServ.patch("staffusers/" + this.userId, this.regiForm.value).subscribe(function (data) {
+        this.mainServ.APIServ.patch("staffusers/change-password", this.regiForm.value).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                _this.dialogRef.close(_this.regiForm.value);
+                _this.dialogRef.close();
             }
         });
     };
@@ -11054,7 +12142,7 @@ var ResetPasswordComponent = (function () {
 /***/ "./src/app/main/content/dialogs/respone-form/respone-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<div mat-dialog-content>\n  <div *ngIf=\"isAddedMessage==false\">\n    <b>Dear Client</b>\n    <p>this information already exists in our system. If you have previously submitted another form, you cannot submit a new\n      one now. If you are intending to change some details in your previous submission, please refer to the confirmation\n      email you have received previously and access your previous form via provided Link. Otherwise please contact our Offices.\n    </p>\n    <b>Thanks and regards, Azzy Immigration Team</b>\n  </div>\n  <div *ngIf=\"isAddedMessage==true\">\n    <b style=\"float:  left;\">Dear {{form.nameEnglish}} {{form.surnameEnglish}}</b><p>Client Number : </p><b> {{form.mobileNo}}</b>\n    <br>\n    <b style=\"float:  left;\">Subject :</b>\n    <p>Confirmation of submitted Information</p>\n    <p>\n      Thank you for sending your information through our application form. Our team is carefully processing all applications and\n      will get back to you as soon as possible, which might take up to 14 working days. Within this time for any change or\n      update of your submitted information, you can access your form by this link:\n      <br>\n      <a href=\"{{url}}\">Link</a>\n      <br> We thank you in advance for being patient.\n\n    </p>\n    <b>Best regards Azzy Immigration</b>\n  </div>\n  <!--{{data | json}}-->\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">OK</button>\n  <!--<button mat-button  (click)=\"onYesClick()\" cdkFocusInitial>Yes</button>-->\n</div>\n"
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<div mat-dialog-content>\n  <div *ngIf=\"isAddedMessage==false\">\n    <b>Dear Client</b>\n    <p>this information already exists in our system. If you have previously submitted another form, you cannot submit a new\n      one now. If you are intending to change some details in your previous submission, please refer to the confirmation\n      email you have received previously and access your previous form via provided Link. Otherwise please contact our Offices.\n    </p>\n    <b>Thanks and regards, Azzy Immigration Team</b>\n  </div>\n  <div *ngIf=\"isAddedMessage==true\">\n    <b style=\"float:  left;\">Dear {{form.nameEnglish}} {{form.surnameEnglish}}</b>\n    <br>\n    <p>Client Number : </p><p> {{form.mobileNo}}</p>\n\n    <b style=\"float:  left;\">Subject :</b>\n    <p>Confirmation of submitted Information</p>\n    <p>\n      Thank you for sending your information through our application form. Our team is carefully processing all applications and\n      will get back to you as soon as possible, which might take up to 14 working days. Within this time for any change or\n      update of your submitted information, you can access your form by this link:\n      <br>\n      <a href=\"{{url}}\">Link</a>\n      <br> We thank you in advance for being patient.\n\n    </p>\n    <b>Best regards Azzy Immigration</b>\n  </div>\n  <!--{{data | json}}-->\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">OK</button>\n  <!--<button mat-button  (click)=\"onYesClick()\" cdkFocusInitial>Yes</button>-->\n</div>\n"
 
 /***/ }),
 
@@ -11126,7 +12214,7 @@ var ResponeFormComponent = (function () {
 /***/ "./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<h1 mat-dialog-title> {{'Dialog.Set_Text_Box.TITLE' | translate}}</h1>\n<div mat-dialog-content>\n  <form class=\"\" [formGroup]=\"regiForm\">\n\n    <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n\n      <!--<mat-form-field fxFlex=\"100\">\n\n      <textarea matInput placeholder=\"\" [(ngModel)]=\"text\"></textarea>\n      <mat-icon matSuffix>person</mat-icon>\n      <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n    </mat-form-field>-->\n\n      <!--<mat-form-field class=\"example-full-width\">\n        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" [errorStateMatcher]=\"matcher\">\n        <mat-hint>Errors appear instantly!</mat-hint>\n        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n          Please enter a valid email address\n        </mat-error>\n        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n          Email is <strong>required</strong>\n        </mat-error>\n      </mat-form-field>-->\n      <mat-form-field fxFlex=\"100\" style=\"width: 100%;\">\n\n        <textarea matInput placeholder=\"\" formControlName=\"textBoxAdmin\"></textarea>\n        <mat-icon matSuffix>person</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n      <mat-form-field fxFlex=\"100\" *ngIf=\"isWithID\">\n        <mat-select formControlName=\"consId\" required>\n          <mat-option *ngFor=\"let oneClient of clients\" [value]=\"oneClient.id\">\n            {{ oneClient.username }}\n          </mat-option>\n        </mat-select>\n\n        <mat-icon matSuffix>wc</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n    </div>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial [disabled]=\"regiForm.invalid\">{{'Dialog.Set_Text_Box.YES' | translate}}</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n<h1 mat-dialog-title> {{'Dialog.Set_Text_Box.TITLE' | translate}}</h1>\n<div mat-dialog-content>\n  <form class=\"\" [formGroup]=\"regiForm\">\n\n    <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n\n      <!--<mat-form-field fxFlex=\"100\">\n\n      <textarea matInput placeholder=\"\" [(ngModel)]=\"text\"></textarea>\n      <mat-icon matSuffix>person</mat-icon>\n      <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n    </mat-form-field>-->\n\n      <!--<mat-form-field class=\"example-full-width\">\n        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" [errorStateMatcher]=\"matcher\">\n        <mat-hint>Errors appear instantly!</mat-hint>\n        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n          Please enter a valid email address\n        </mat-error>\n        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n          Email is <strong>required</strong>\n        </mat-error>\n      </mat-form-field>-->\n      <mat-form-field fxFlex=\"100\" style=\"width: 100%;\">\n\n        <textarea matInput placeholder=\"\" formControlName=\"textBoxAdmin\"></textarea>\n        <mat-icon matSuffix>person</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n      <mat-form-field fxFlex=\"100\" *ngIf=\"isWithID\">\n        <mat-select formControlName=\"consId\" required>\n          <mat-option *ngFor=\"let oneClient of clients\" [value]=\"oneClient.id\">\n            {{ oneClient.username }}\n          </mat-option>\n        </mat-select>\n\n        <mat-icon matSuffix>wc</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n    </div>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial [disabled]=\"regiForm.invalid\">{{'Dialog.Set_Text_Box.YES' | translate}}</button>\n</div>\n"
 
 /***/ }),
 
@@ -11190,9 +12278,9 @@ var SetTextBoxAdminComponent = (function () {
                 textBoxAdmin: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */](this.text),
                 consId: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required)
             });
-            this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe(function (data) {
+            this.mainServ.APIServ.get("staffusers/getConsultant").subscribe(function (data) {
                 if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                    _this.clients = data;
+                    _this.clients = data['getConsultant'];
                     // this.loadingIndicator = false;
                 }
                 else if (_this.mainServ.APIServ.getErrorCode() == 400) {
@@ -11209,6 +12297,9 @@ var SetTextBoxAdminComponent = (function () {
         }
     };
     SetTextBoxAdminComponent.prototype.onYesClick = function () {
+        if (this.isWithID && this.regiForm.value['textBoxAdmin'] == null) {
+            this.regiForm.value['textBoxAdmin'] = "";
+        }
         this.dialogRef.close(this.regiForm.value);
     };
     SetTextBoxAdminComponent = __decorate([
@@ -11233,7 +12324,7 @@ var SetTextBoxAdminComponent = (function () {
 /***/ "./src/app/main/content/dialogs/view-appointment/view-appointment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<!--<h1 mat-dialog-title>Text Box Message</h1>-->\n<div mat-dialog-content>\n <mat-list>\n  <mat-list-item><b style=\"margin-right: 10px\">{{'Dialog.View_Appointment.FROM' | translate}} : </b><label></label>{{appointment.startDate |date: 'hh:mm MM/dd/yyyy'}}</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item><b style=\"margin-right: 10px\">{{'Dialog.View_Appointment.TO' | translate}} :</b><label>{{appointment.endDate |date: 'hh:mm MM/dd/yyyy'}}</label></mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item><b style=\"margin-right: 10px\">{{'Dialog.View_Appointment.LOCATION' | translate}} :</b><label>{{appointment.location}}</label></mat-list-item>\n  <mat-divider></mat-divider>\n</mat-list>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"click(null)\">{{'Dialog.View_Appointment.DONE' | translate}}</button>\n  <button mat-button (click)=\"click(true)\" >{{'Dialog.View_Appointment.USE' | translate}}</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<!--<h1 mat-dialog-title>Text Box Message</h1>-->\n<div mat-dialog-content>\n <mat-list>\n  <mat-list-item><b style=\"margin-right: 10px\">{{'Dialog.View_Appointment.FROM' | translate}} : </b><label></label>{{appointment.date}}   {{appointment.bodyStart}}</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item><b style=\"margin-right: 10px\">{{'Dialog.View_Appointment.TO' | translate}} :</b><label>{{appointment.date}}   {{appointment.bodyEnd}}</label></mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item><b style=\"margin-right: 10px\">{{'Dialog.View_Appointment.LOCATION' | translate}} :</b><label>{{appointment.meta.location}}</label></mat-list-item>\n  <mat-divider></mat-divider>\n</mat-list>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"click(null)\">{{'Dialog.View_Appointment.DONE' | translate}}</button>\n  <button mat-button (click)=\"click(true)\" >{{'Dialog.View_Appointment.USE' | translate}}</button>\n</div>\n"
 
 /***/ }),
 
@@ -11283,7 +12374,7 @@ var ViewAppointmentComponent = (function () {
         this.translationLoader = translationLoader;
         this.mainServ = mainServ;
         this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_5__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_6__languageFiles_fa__["a" /* locale */]);
-        this.appointment = data['appointment']['meta'];
+        this.appointment = data['appointment'];
     }
     ViewAppointmentComponent.prototype.click = function (isUse) {
         this.dialogRef.close(isUse);
@@ -11312,7 +12403,7 @@ var ViewAppointmentComponent = (function () {
 /***/ "./src/app/main/content/edit-form/edit-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <!--<div class=\"black-fg\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <mat-icon class=\"secondary-text s-16\">home</mat-icon>\r\n        <mat-icon class=\"secondary-text s-16 rtl-mirror\">chevron_right</mat-icon>\r\n        <span class=\"secondary-text\">User Interface</span>\r\n      </div>-->\r\n\r\n      <div class=\"h1 mt-16\">\r\n        <button mat-button (click)=\"goBack()\" cdkFocusInitial>{{'Add_Edit_Form.BACK' | translate}}</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <!-- <p class=\"mb-32\">\r\n      Angular reactive forms facilitate a reactive style of programming that favors explicit management of the data flowing between\r\n      a non-UI data model (typically retrieved from a server) and a UI-oriented form model that retains the states and values\r\n      of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.\r\n    </p> -->\r\n    <!--{{formGroup.value | json}}-->\r\n    <div fxLayout=\"column\" *ngIf=\"loder==true\">\r\n\r\n\r\n      <form class=\"mat-white-bg mat-elevation-z0 p-24\" fxLayout=\"column\" fxLayoutAlign=\"start\" fxFlex=\"1 0 auto\" name=\"formGroup\"\r\n        [formGroup]=\"formGroup\">\r\n\r\n\r\n        <mat-horizontal-stepper formArrayName=\"formArray\" [linear]=\"true\">\r\n\r\n          <mat-step formGroupName=\"0\" [stepControl]=\"formArray?.get([0])\">\r\n            <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsi\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsi\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglish\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglish\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNo\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNo\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeID\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <mat-icon matPrefix>today</mat-icon> -->\r\n                <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\"\r\n                  formControlName=\"dateOfBirthPer\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatus\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildren\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <div fxFlex=\"24\"></div>\r\n\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsi\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglish\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex=\"1 0 auto\">\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsiSp\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsiSp\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglishSp\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglishSp\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"emailSp\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNoSp\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNoSp\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeIDSp\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput [min]=\"minDateSp\" [max]=\"maxDateSp\"   (focus)=\"birthDatePickerSp.open()\" [matDatepicker]=\"birthDatePickerSp\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\"\r\n                  formControlName=\"dateOfBirthPerSp\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePickerSp\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePickerSp startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatusSp\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildrenSp\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <div fxFlex=\"24\"></div>\r\n\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsiSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglishSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([0]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"1\" [stepControl]=\"formArray?.get([1])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglish\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[0] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglishSp\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[1] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([1]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"2\" [stepControl]=\"formArray?.get([2])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_2.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([2]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"3\" [stepControl]=\"formArray?.get([3])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([3]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"4\" [stepControl]=\"formArray?.get([4])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_4.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatus\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\"  (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate }}\"\r\n                    formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatusSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\"  (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate  }}\"\r\n                    formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([4]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"5\" [stepControl]=\"formArray?.get([5])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([5]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"6\" [stepControl]=\"formArray?.get([6])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaType\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaTypeSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([6]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"7\" [stepControl]=\"formArray?.get([7])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"100\" *ngFor=\"let oneField of notesFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\"></textarea>\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n\r\n          <mat-step>\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n            Everything seems correct.\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"editForm()\">Edit</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n        </mat-horizontal-stepper>\r\n      </form>\r\n\r\n\r\n      <!-- <div class=\"form-errors-model mat-white-bg p-24 mat-elevation-z4\">\r\n\r\n              <div class=\"h2 mb-24\">Reactive Form Errors Model</div>\r\n\r\n              <pre><code>{{formErrors | json}}</code></pre>\r\n          </div> -->\r\n\r\n    </div>\r\n\r\n\r\n\r\n\r\n  </div>\r\n  <!-- / CONTENT -->\r\n\r\n</div>\r\n"
+module.exports = "<div id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <!--<div class=\"black-fg\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <mat-icon class=\"secondary-text s-16\">home</mat-icon>\r\n        <mat-icon class=\"secondary-text s-16 rtl-mirror\">chevron_right</mat-icon>\r\n        <span class=\"secondary-text\">User Interface</span>\r\n      </div>-->\r\n\r\n      <div class=\"h1 mt-16\">\r\n        <button mat-button (click)=\"goBack()\" cdkFocusInitial>{{'Add_Edit_Form.BACK' | translate}}</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <!-- <p class=\"mb-32\">\r\n      Angular reactive forms facilitate a reactive style of programming that favors explicit management of the data flowing between\r\n      a non-UI data model (typically retrieved from a server) and a UI-oriented form model that retains the states and values\r\n      of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.\r\n    </p> -->\r\n    <!--{{formGroup.value | json}}-->\r\n    <div fxLayout=\"column\" *ngIf=\"loder==true\">\r\n\r\n\r\n      <form style=\"padding: 0px !important;\" class=\"mat-white-bg mat-elevation-z0 p-24\" fxLayout=\"column\" fxLayoutAlign=\"start\"\r\n        fxFlex=\"1 0 auto\" name=\"formGroup\" [formGroup]=\"formGroup\">\r\n\r\n\r\n        <mat-horizontal-stepper formArrayName=\"formArray\" [linear]=\"true\">\r\n\r\n          <mat-step formGroupName=\"0\" [stepControl]=\"formArray?.get([0])\">\r\n            <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsi\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsi\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglish\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglish\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNo\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNo\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeID\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <mat-icon matPrefix>today</mat-icon> -->\r\n                <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\"\r\n                  formControlName=\"dateOfBirthPer\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatus\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildren\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <div fxFlex=\"24\"></div>\r\n\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsi\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglish\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex=\"1 0 auto\">\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsiSp\">\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsiSp\">\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglishSp\">\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglishSp\">\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"emailSp\">\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNoSp\">\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNoSp\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeIDSp\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput [min]=\"minDateSp\" [max]=\"maxDateSp\" (focus)=\"birthDatePickerSp.open()\" [matDatepicker]=\"birthDatePickerSp\"\r\n                  placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\" formControlName=\"dateOfBirthPerSp\">\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePickerSp\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePickerSp startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatusSp\">\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildrenSp\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <div fxFlex=\"24\"></div>\r\n\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsiSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglishSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([0]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"1\" [stepControl]=\"formArray?.get([1])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglish\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[0] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglishSp\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[1] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([1]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"2\" [stepControl]=\"formArray?.get([2])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_2.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([2]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"3\" [stepControl]=\"formArray?.get([3])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([3]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"4\" [stepControl]=\"formArray?.get([4])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_4.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatus\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate }}\"\r\n                    formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatusSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate  }}\"\r\n                    formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([4]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"5\" [stepControl]=\"formArray?.get([5])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([5]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"6\" [stepControl]=\"formArray?.get([6])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaType\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaTypeSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([6]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"7\" [stepControl]=\"formArray?.get([7])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_7.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"97\" *ngFor=\"let oneField of notesFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\"></textarea>\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <mat-form-field fxFlex=\"97\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_7.MAINAPPLICATION' | translate }}\" formControlName=\"mainApplicant\">\r\n                  <mat-option *ngFor=\"let status of mainApplicantValue\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n              </mat-form-field>\r\n            </div>\r\n            <!--<ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>-->\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div *ngFor=\"let oneField of extNotesFields\" fxFlex=\"22\">\r\n                <mat-form-field *ngIf=\"oneField.type=='input'\" style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='number'\" style=\"width: 100%\">\r\n                  <input type=\"number\" matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='choose'\" style=\"width: 100%\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                    <mat-option *ngFor=\"let status of oneField.arrayValue\" [value]=\"status.value\">\r\n                      <!--{{ status.viewValue | translate }}-->\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div *ngFor=\"let oneField of pintsFields\" fxFlex=\"22\">\r\n                <mat-form-field *ngIf=\"oneField.type=='input'\" style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='number'\" style=\"width: 100%\">\r\n                  <input type=\"number\" (keyup)=\"changeTotal($event)\" matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='choose'\" style=\"width: 100%\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                    <mat-option *ngFor=\"let status of oneField.arrayValue\" [value]=\"status.value\">\r\n                      <!--{{ status.viewValue | translate }}-->\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n              <div fxFlex=\"22\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input disabled type=\"number\" matInput placeholder=\"{{  'Add_Edit_Form.STEP_7.TOTALPOINTS'| translate }}\" [ngModelOptions]=\"{standalone: true}\"\r\n                    [(ngModel)]=\"total\">\r\n                  <!--<mat-icon matSuffix>{{ oneField.icon }}</mat-icon>-->\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div *ngFor=\"let oneField of extNotesFields\" fxFlex=\"22\">\r\n                <mat-form-field *ngIf=\"oneField.type=='input'\" style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='number'\" style=\"width: 100%\">\r\n                  <input type=\"number\" matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='choose'\" style=\"width: 100%\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                    <mat-option *ngFor=\"let status of oneField.arrayValue\" [value]=\"status.value\">\r\n                      <!--{{ status.viewValue | translate }}-->\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div *ngFor=\"let oneField of pintsFields\" fxFlex=\"22\">\r\n                <mat-form-field *ngIf=\"oneField.type=='input'\" style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='number'\" style=\"width: 100%\">\r\n                  <input type=\"number\" (keyup)=\"changeTotalSp($event)\" matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.type=='choose'\" style=\"width: 100%\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                    <mat-option *ngFor=\"let status of oneField.arrayValue\" [value]=\"status.value\">\r\n                      <!--{{ status.viewValue | translate }}-->\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n              <div fxFlex=\"22\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input disabled type=\"number\" matInput placeholder=\"{{  'Add_Edit_Form.STEP_7.TOTALPOINTS'| translate }}\" [ngModelOptions]=\"{standalone: true}\"\r\n                    [(ngModel)]=\"totalSp\">\r\n                  <!--<mat-icon matSuffix>{{ oneField.icon }}</mat-icon>-->\r\n                </mat-form-field>\r\n              </div>\r\n\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button (click)=\"editForm()\" type=\"button\">Edit</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n\r\n          <!--<mat-step>\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n            Everything seems correct.\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"editForm()\">Edit</button>\r\n            </div>\r\n          </mat-step>-->\r\n\r\n        </mat-horizontal-stepper>\r\n      </form>\r\n\r\n\r\n      <!-- <div class=\"form-errors-model mat-white-bg p-24 mat-elevation-z4\">\r\n\r\n              <div class=\"h2 mb-24\">Reactive Form Errors Model</div>\r\n\r\n              <pre><code>{{formErrors | json}}</code></pre>\r\n          </div> -->\r\n\r\n    </div>\r\n\r\n\r\n\r\n\r\n  </div>\r\n  <!-- / CONTENT -->\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -11328,16 +12419,17 @@ module.exports = ""
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditFormComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11357,14 +12449,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var EditFormComponent = (function () {
-    function EditFormComponent(translate, appDirection, fuseConfig, translationLoader, _formBuilder, route, mainServ) {
+    function EditFormComponent(translate, appDirection, fuseConfig, translationLoader, _formBuilder, route, dialogSer, mainServ) {
         this.translate = translate;
         this.appDirection = appDirection;
         this.fuseConfig = fuseConfig;
         this.translationLoader = translationLoader;
         this._formBuilder = _formBuilder;
         this.route = route;
+        this.dialogSer = dialogSer;
         this.mainServ = mainServ;
         this.startDate = new Date(1993, 1, 1);
         this.isNonLinear = false;
@@ -11698,6 +12792,113 @@ var EditFormComponent = (function () {
                 value: ['textBoxNotes'],
                 icon: 'note'
             },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.howKnow',
+                value: ['howKnow'],
+                icon: 'note'
+            },
+        ];
+        this.mainApplicantValue = [
+            {
+                'value': 'applicant',
+                'viewValue': 'Add_Edit_Form.STEP_7.APPLICANT'
+            },
+            {
+                'value': 'spouse',
+                'viewValue': 'Add_Edit_Form.STEP_7.SPOUSE'
+            }
+        ];
+        this.extNotesFields = [
+            // {
+            //   viewValue: 'Add_Edit_Form.STEP_7.MAINAPPLICATION',
+            //   value: ['mainApplicant'],
+            //   icon: 'note',
+            //   type: 'choose',
+            //   arrayValue: [{
+            //     'value': 'ssss',
+            //     'viewValue': 'eeeee'
+            //   }]
+            // },
+            // {
+            //   viewValue: 'Add_Edit_Form.STEP_7.DEPENDANT',
+            //   value: ['dependant', 'dependantSp'],
+            //   icon: 'note',
+            //   type: 'choose',
+            //   arrayValue: [
+            //     {
+            //       'value': 'ssss',
+            //       'viewValue': 'eeeee'
+            //     }
+            //   ]
+            // },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.OCCUPATIONTOBEASSESSED',
+                value: ['occupationToBeAssessed', 'occupationToBeAssessedSp'],
+                icon: 'note',
+                type: 'input',
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.YEAROFWORKEXPERIENCE',
+                value: ['yearsOfWorkExperience', 'yearsOfWorkExperienceSp'],
+                icon: 'note',
+                type: 'number'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.ASSESSMENTORGANIZATION',
+                value: ['assessmentOrganization', 'assessmentOrganizationSp'],
+                icon: 'note',
+                type: 'input'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PROFESSIONALINSTALLMENTA',
+                value: ['professionalInstallments', 'professionalInstallmentsSp'],
+                icon: 'note',
+                type: 'number'
+            },
+        ];
+        this.pintsFields = [
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PFEDUCATION',
+                value: ['pointsFromEducation', 'pointsFromEducationSp'],
+                icon: 'note',
+                type: 'number'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PFEXPERIENCE',
+                value: ['pointsFromWorkExperience', 'pointsFromWorkExperienceSp'],
+                icon: 'note',
+                type: 'number'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PFSPOUSE',
+                value: ['pointsFromSpouse', 'pointsFromSpouseSp'],
+                icon: 'note',
+                type: 'number'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PFENGLISH',
+                value: ['pointsFromEnglishTest', 'pointsFromEnglishTestSp'],
+                icon: 'note',
+                type: 'number'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PFNAATI',
+                value: ['pointsFromNAATITest', 'pointsFromNAATITestSp'],
+                icon: 'note',
+                type: 'number'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PFSTATE',
+                value: ['pointsFromStateSponsorship', 'pointsFromStateSponsorshipSp'],
+                icon: 'note',
+                type: 'number'
+            },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.PFFAMILY',
+                value: ['pointsFromFamilySponsorship', 'pointsFromFamilySponsorshipSp'],
+                icon: 'note',
+                type: 'number'
+            },
         ];
         for (var index = 0; index <= 100; index++) {
             this.years.push(1960 + index);
@@ -11709,7 +12910,7 @@ var EditFormComponent = (function () {
                 footer: 'none'
             }
         });
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_5__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_6__languageFiles_fa__["a" /* locale */]);
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_6__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__["a" /* locale */]);
         this.formErrors = {
             company: {},
             firstName: {},
@@ -11740,19 +12941,19 @@ var EditFormComponent = (function () {
         this.formGroup = this._formBuilder.group({
             formArray: this._formBuilder.array([
                 this._formBuilder.group({
-                    nameFarsi: [data['nameFarsi'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    surnameFarsi: [data['surnameFarsi'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    nameEnglish: [data['nameEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    surnameEnglish: [data['surnameEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    email: [data['email'], [__WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].email]],
-                    mobileNo: [data['mobileNo'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    nameFarsi: [data['nameFarsi'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    surnameFarsi: [data['surnameFarsi'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    nameEnglish: [data['nameEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    surnameEnglish: [data['surnameEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    email: [data['email'], [__WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].email]],
+                    mobileNo: [data['mobileNo'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     lLandlinePhoneNo: [data['lLandlinePhoneNo']],
-                    maritalStatus: [data['maritalStatus'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    maritalStatus: [data['maritalStatus'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     numberOfChildren: [data['numberOfChildren']],
-                    dateOfBirthPer: [data['dateOfBirthPer'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    dateOfBirthPer: [data['dateOfBirthPer'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     skypeID: [data['skypeID']],
-                    residentialAddressEnglish: [data['residentialAddressEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    residentialAddressFarsi: [data['residentialAddressFarsi'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    residentialAddressEnglish: [data['residentialAddressEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    residentialAddressFarsi: [data['residentialAddressFarsi'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     nameFarsiSp: [data['nameFarsiSp']],
                     surnameFarsiSp: [data['surnameFarsiSp']],
                     nameEnglishSp: [data['nameEnglishSp']],
@@ -11768,7 +12969,7 @@ var EditFormComponent = (function () {
                     residentialAddressFarsiSp: [data['residentialAddressFarsiSp']]
                 }),
                 this._formBuilder.group({
-                    goodEnglish: [data['goodEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    goodEnglish: [data['goodEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     writingEn: [data['writingEn']],
                     listeningEn: [data['listeningEn']],
                     readingEn: [data['readingEn']],
@@ -11857,6 +13058,36 @@ var EditFormComponent = (function () {
                     textBoxClient: [data['textBoxClient']],
                     textBoxAdmin: [data['textBoxAdmin']],
                     textBoxNotes: [data['textBoxNotes']],
+                    howKnow: [data['howKnow']],
+                    mainApplicant: [data['mainApplicant']],
+                    // mainApplicantSp: [data['mainApplicantSp']],
+                    // dependant: [data['dependant']],
+                    // dependantSp: [data['dependantSp']],
+                    occupationToBeAssessed: [data['occupationToBeAssessed']],
+                    occupationToBeAssessedSp: [data['occupationToBeAssessedSp']],
+                    yearsOfWorkExperience: [data['yearsOfWorkExperience']],
+                    yearsOfWorkExperienceSp: [data['yearsOfWorkExperienceSp']],
+                    assessmentOrganization: [data['assessmentOrganization']],
+                    assessmentOrganizationSp: [data['assessmentOrganizationSp']],
+                    professionalInstallments: [data['professionalInstallments']],
+                    professionalInstallmentsSp: [data['professionalInstallmentsSp']],
+                    professionalTotal: [data['professionalTotal']],
+                    pointsFromEducation: [data['pointsFromEducation']],
+                    pointsFromEducationSp: [data['pointsFromEducationSp']],
+                    pointsFromWorkExperience: [data['pointsFromWorkExperience']],
+                    pointsFromWorkExperienceSp: [data['pointsFromWorkExperienceSp']],
+                    pointsFromSpouse: [data['pointsFromSpouse']],
+                    pointsFromSpouseSp: [data['pointsFromSpouseSp']],
+                    pointsFromEnglishTest: [data['pointsFromEnglishTest']],
+                    pointsFromEnglishTestSp: [data['pointsFromEnglishTestSp']],
+                    pointsFromNAATITest: [data['pointsFromNAATITest']],
+                    pointsFromNAATITestSp: [data['pointsFromNAATITestSp']],
+                    pointsFromStateSponsorship: [data['pointsFromStateSponsorship']],
+                    pointsFromStateSponsorshipSp: [data['pointsFromStateSponsorshipSp']],
+                    pointsFromFamilySponsorship: [data['pointsFromFamilySponsorship']],
+                    pointsFromFamilySponsorshipSp: [data['pointsFromFamilySponsorshipSp']],
+                    totalPoints: [data['totalPoints']],
+                    totalPointsSp: [data['totalPointsSp']]
                 })
             ])
         });
@@ -11865,12 +13096,16 @@ var EditFormComponent = (function () {
         var _this = this;
         this.translate.use('en');
         this.appDirection.switchDir('ltr');
+        this.mainServ.loaderSer.display(true);
         var id = this.route.snapshot.paramMap.get('id');
         this.mainServ.APIServ.get("forms/" + id).subscribe(function (data) {
+            _this.mainServ.loaderSer.display(false);
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 _this.setFormGroupe(data);
                 _this.formData = data;
                 _this.loder = true;
+                _this.total = data['totalPoints'];
+                _this.totalSp = data['totalPointsSp'];
             }
             else if (_this.mainServ.APIServ.getErrorCode() == 400) {
             }
@@ -11887,81 +13122,66 @@ var EditFormComponent = (function () {
         // this.addForm()
         // console.log(this.formGroup, this.formArray);
     };
-    // createDegree(): FormGroup {
-    //   return this._formBuilder.group({
-    //     eduLevel: [data['nameFarsi'], Validators.required],
-    //     field: [data['nameFarsi'], Validators.required],
-    //     university: [data['nameFarsi'], Validators.required],
-    //     eduPlace: [data['nameFarsi'], Validators.required],
-    //     yearOfGrad: [data['nameFarsi'], Validators.required],
-    //   });
-    // }
-    // createWork(): FormGroup {
-    //   return this._formBuilder.group({
-    //     ralatedStudy: [data['nameFarsi'], Validators.required],
-    //     fieldActivity: [data['nameFarsi'], Validators.required],
-    //     insurance: [data['nameFarsi'], Validators.required],
-    //     year: [data['nameFarsi'], Validators.required],
-    //   });
-    // }
-    // addDegree(): void {
-    //   (this.formArray.get([2, 'degrees']) as FormArray).push(this.createDegree());
-    // }
-    // addSpouseDegree(): void {
-    //   (this.formArray.get([2, 'degreesSpouse']) as FormArray).push(this.createDegree());
-    // }
-    // addWork(): void {
-    //   (this.formArray.get([3, 'works']) as FormArray).push(this.createWork());
-    // }
-    // addSpouseWork(): void {
-    //   (this.formArray.get([3, 'worksSpouse']) as FormArray).push(this.createWork());
-    // }
-    // removeDegree(index: number): void {
-    //   (this.formArray.get([2, 'degrees']) as FormArray).removeAt(index);
-    // }
-    // removeSpouseDegree(index: number): void {
-    //   (this.formArray.get([2, 'degreesSpouse']) as FormArray).removeAt(index);
-    // }
-    // removeWork(index: number): void {
-    //   (this.formArray.get([3, 'works']) as FormArray).removeAt(index);
-    // }
-    // removeSpouseWork(index: number): void {
-    //   (this.formArray.get([3, 'worksSpouse']) as FormArray).removeAt(index);
-    // }
+    EditFormComponent.prototype.changeTotal = function () {
+        this.total = this.formGroup.value['formArray'][7]['pointsFromEducation'] +
+            this.formGroup.value['formArray'][7]['pointsFromWorkExperience'] +
+            this.formGroup.value['formArray'][7]['pointsFromSpouse'] +
+            this.formGroup.value['formArray'][7]['pointsFromEnglishTest'] +
+            this.formGroup.value['formArray'][7]['pointsFromNAATITest'] +
+            this.formGroup.value['formArray'][7]['pointsFromStateSponsorship'] +
+            this.formGroup.value['formArray'][7]['pointsFromFamilySponsorship'];
+    };
+    EditFormComponent.prototype.changeTotalSp = function () {
+        this.totalSp = this.formGroup.value['formArray'][7]['pointsFromEducationSp'] +
+            this.formGroup.value['formArray'][7]['pointsFromWorkExperienceSp'] +
+            this.formGroup.value['formArray'][7]['pointsFromSpouseSp'] +
+            this.formGroup.value['formArray'][7]['pointsFromEnglishTestSp'] +
+            this.formGroup.value['formArray'][7]['pointsFromNAATITestSp'] +
+            this.formGroup.value['formArray'][7]['pointsFromStateSponsorshipSp'] +
+            this.formGroup.value['formArray'][7]['pointsFromFamilySponsorshipSp'];
+    };
     EditFormComponent.prototype.editForm = function () {
         var _this = this;
         var customArray = { "formArray": [{ "nameFarsi": "anas", "surnameFarsi": "alazmeh", "nameEnglish": "anas", "surnameEnglish": "alazmeh", "email": "world.of.anas.95@gmail.com", "mobileNo": "222222222", "lLandlinePhoneNo": "3213213123", "maritalStatus": "married", "numberOfChildren": 0, "dateOfBirthPer": "1995-06-24T21:00:00.000Z", "skypeID": "313113113", "residentialAddressEnglish": "Damas", "residentialAddressFarsi": "damas", "nameFarsiSp": "test", "surnameFarsiSp": "test2", "nameEnglishSp": "test", "surnameEnglishSp": "Test2", "emailSp": "a33@a.com", "mobileNoSp": "1111111", "lLandlinePhoneNoSp": "3211312", "maritalStatusSp": "married", "numberOfChildrenSp": 0, "dateOfBirthPerSp": "1993-11-10T22:00:00.000Z", "skypeIDSp": "22131", "residentialAddressEnglishSp": "Damas", "residentialAddressFarsiSp": "damas" }, { "goodEnglish": "Excellent", "writingEn": 10, "listeningEn": 20, "readingEn": 30, "speakingEn": 40, "overallEn": 50, "goodEnglishSp": "Good", "writingEnSp": 50, "listeningEnSp": 40, "readingEnSp": 30, "speakingEnSp": 50, "overallEnSp": 70 }, { "assocField": "assoc", "assocUniversity": "adasd", "assocCityOfUniversity": "asdad", "assocYearOfGraduation": "1993", "bacField": "bac", "bacUniversity": "asdas", "bacCityOfUniversity": "asdasd", "bacYearOfGraduation": "1992", "masterField": "master", "masterUniversity": "asdasd", "masterCityOfUniversity": "qwqeq", "masterYearOfGraduation": "1995", "PHDField": "PHD", "PHDUniversity": "qweqwe", "PHDCityOfUniversity": "qweqe", "PHDYearOfGraduation": "1993", "assocFieldSp": "assocSp", "assocUniversitySp": "zxczc", "assocCityOfUniversitySp": "zxczxc", "assocYearOfGraduationSp": "2000", "bacFieldSp": "bacSp", "bacUniversitySp": "asad", "bacCityOfUniversitySp": "xzczxc", "bacYearOfGraduationSp": "1999", "masterFieldSp": "masterSp", "masterUniversitySp": "qwqwq", "masterCityOfUniversitySp": "wewww", "masterYearOfGraduationSp": "1993", "PHDFieldSp": "PHDSp", "PHDUniversitySp": "dsssssss", "PHDCityOfUniversitySp": "fddddddd", "PHDYearOfGraduationSp": "1993" }, { "fieldOfWorking": "Fieeeeeeeeeeeld", "relatedEdYearsPaid": 20, "relatedEdYearsNonPaid": 30, "nonRelatedEdYearsPaid": 40, "nonRelatedEdYearsNonPaid": 50, "fieldOfWorkingSp": "sadas", "relatedEdYearsPaidSp": 10, "relatedEdYearsNonPaidSp": 20, "nonRelatedEdYearsPaidSp": 30, "nonRelatedEdYearsNonPaidSp": 50 }, { "militaryStatus": "Exemption", "militaryPlace": "dams", "militaryDurationFrom": "1993-01-03T22:00:00.000Z", "militaryDurationTo": "1993-12-17T22:00:00.000Z", "militaryStatusSp": "Finished", "militaryPlaceSp": "Damas", "militaryDurationFromSp": "1993-04-08T21:00:00.000Z", "militaryDurationToSp": "1993-09-18T21:00:00.000Z" }, { "significantCurrentSickness": "qwe", "surgeryPastOrFuture": "asd", "australiaFamilyRelation": "zxc", "australiaLivingState": "qwe1", "australiaLivingCity": "asd2", "australiaVisaType": "Citizen", "significantCurrentSicknessSp": "fghf", "surgeryPastOrFutureSp": "dfdgdg", "australiaFamilyRelationSp": "cvbcb", "australiaLivingStateSp": "sdfs", "australiaLivingCitySp": "cccccc", "australiaVisaTypeSp": "Temporary Res." }] };
+        var mainThis = this;
         this.sendArray = {};
         var key;
+        this.formGroup.value['formArray'][7].totalPoints = this.total;
+        this.formGroup.value['formArray'][7].totalPointsSp = this.totalSp;
         this.formGroup.value['formArray'].forEach(function (element) {
             for (key in element) {
                 if (element[key] != "" && element[key] != null)
                     _this.sendArray[key] = element[key];
             }
         });
-        this.mainServ.APIServ.patch("forms/" + this.formData['id'], this.sendArray).subscribe(function (data) {
-            if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                alert("editeForm");
-            }
-        });
+        this.dialogSer.confirmationMessage('are youe sure you want edit the form ', "forms/" + this.formData['id'], this.sendArray, false, function () {
+            // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
+            mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl());
+        }, 'patch');
+        // this.mainServ.APIServ.patch("forms/" + this.formData['id'], this.sendArray).subscribe((data: any) => {
+        //   if (this.mainServ.APIServ.getErrorCode() == 0) {
+        //     alert("editeForm")
+        //   }
+        // })
         console.log(this.sendArray);
     };
     EditFormComponent.prototype.goBack = function () {
         this.mainServ.globalServ.goTo(this.mainServ.getBackUrl());
     };
     EditFormComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
             selector: 'app-edit-form',
             template: __webpack_require__("./src/app/main/content/edit-form/edit-form.component.html"),
             styles: [__webpack_require__("./src/app/main/content/edit-form/edit-form.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["b" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_9__app_direction_service__["a" /* AppDirectionService */],
-            __WEBPACK_IMPORTED_MODULE_4__core_services_config_service__["a" /* FuseConfigService */],
-            __WEBPACK_IMPORTED_MODULE_3__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["b" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__["a" /* MainService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_10__app_direction_service__["a" /* AppDirectionService */],
+            __WEBPACK_IMPORTED_MODULE_5__core_services_config_service__["a" /* FuseConfigService */],
+            __WEBPACK_IMPORTED_MODULE_4__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */],
+            __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */]])
     ], EditFormComponent);
     return EditFormComponent;
 }());
@@ -12026,7 +13246,7 @@ var EditFormModule = (function () {
 /***/ "./src/app/main/content/editClient-form/editClient-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <div class=\"black-fg\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <mat-icon class=\"secondary-text s-16\">home</mat-icon>\r\n        <mat-icon class=\"secondary-text s-16 rtl-mirror\">chevron_right</mat-icon>\r\n        <span class=\"secondary-text\">User Interface</span>\r\n      </div>\r\n      <div class=\"h1 mt-16\">{{ 'Add_Edit_Form.TITLE' | translate }}</div>\r\n    </div>\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <!-- <p class=\"mb-32\">\r\n      Angular reactive forms facilitate a reactive style of programming that favors explicit management of the data flowing between\r\n      a non-UI data model (typically retrieved from a server) and a UI-oriented form model that retains the states and values\r\n      of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.\r\n    </p> -->\r\n    <!--{{formGroup.value | json}}-->\r\n    <div fxLayout=\"column\" *ngIf=\"loder==true\">\r\n\r\n\r\n      <form class=\"mat-white-bg mat-elevation-z0 p-24\" fxLayout=\"column\" fxLayoutAlign=\"start\" fxFlex=\"1 0 auto\" name=\"formGroup\"\r\n        [formGroup]=\"formGroup\">\r\n\r\n\r\n        <mat-horizontal-stepper formArrayName=\"formArray\" [linear]=\"true\">\r\n\r\n          <mat-step formGroupName=\"0\" [stepControl]=\"formArray?.get([0])\">\r\n            <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsi\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsi\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglish\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglish\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNo\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNo\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeID\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <mat-icon matPrefix>today</mat-icon> -->\r\n                <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\"\r\n                  formControlName=\"dateOfBirthPer\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatus\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildren\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n              <div fxFlex=\"24\"></div>\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsi\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglish\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex=\"1 0 auto\">\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsiSp\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsiSp\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglishSp\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglishSp\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"emailSp\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNoSp\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNoSp\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeIDSp\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput [min]=\"minDateSp\" [max]=\"maxDateSp\" (focus)=\"birthDatePickerSp.open()\" [matDatepicker]=\"birthDatePickerSp\"\r\n                  placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\" formControlName=\"dateOfBirthPerSp\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePickerSp\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePickerSp startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatusSp\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildrenSp\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <div fxFlex=\"24\"></div>\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsiSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglishSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([0]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"1\" [stepControl]=\"formArray?.get([1])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglish\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[0] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglishSp\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[1] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([1]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"2\" [stepControl]=\"formArray?.get([2])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_2.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([2]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"3\" [stepControl]=\"formArray?.get([3])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([3]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"4\" [stepControl]=\"formArray?.get([4])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_4.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatus\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate }}\"\r\n                    formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatusSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate  }}\"\r\n                    formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([4]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"5\" [stepControl]=\"formArray?.get([5])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([5]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"6\" [stepControl]=\"formArray?.get([6])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaType\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaTypeSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([6]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n          <mat-step formGroupName=\"7\" [stepControl]=\"formArray?.get([7])\">\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"100\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\" {{ 'Add_Edit_Form.STEP_7.TBCLIENT' | translate }}\" formControlName=\"textBoxClient\"></textarea>\r\n                  <mat-icon matSuffix>note</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"editForm()\">Done</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n          <mat-step>\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n            Everything seems correct.\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"editForm()\">Edit</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n        </mat-horizontal-stepper>\r\n      </form>\r\n\r\n\r\n      <!-- <div class=\"form-errors-model mat-white-bg p-24 mat-elevation-z4\">\r\n\r\n              <div class=\"h2 mb-24\">Reactive Form Errors Model</div>\r\n\r\n              <pre><code>{{formErrors | json}}</code></pre>\r\n          </div> -->\r\n\r\n    </div>\r\n\r\n\r\n\r\n\r\n  </div>\r\n  <!-- / CONTENT -->\r\n\r\n</div>\r\n"
+module.exports = "<div id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <div class=\"black-fg\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <mat-icon class=\"secondary-text s-16\">home</mat-icon>\r\n        <mat-icon class=\"secondary-text s-16 rtl-mirror\">chevron_right</mat-icon>\r\n        <span class=\"secondary-text\">User Interface</span>\r\n      </div>\r\n      <div class=\"h1 mt-16\">{{ 'Add_Edit_Form.TITLE' | translate }}</div>\r\n    </div>\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <!-- <p class=\"mb-32\">\r\n      Angular reactive forms facilitate a reactive style of programming that favors explicit management of the data flowing between\r\n      a non-UI data model (typically retrieved from a server) and a UI-oriented form model that retains the states and values\r\n      of the HTML controls on screen. Reactive forms offer the ease of using reactive patterns, testing, and validation.\r\n    </p> -->\r\n    <!--{{formGroup.value | json}}-->\r\n    <div fxLayout=\"column\" *ngIf=\"loder==true\">\r\n\r\n\r\n      <form class=\"mat-white-bg mat-elevation-z0 p-24\" fxLayout=\"column\" fxLayoutAlign=\"start\" fxFlex=\"1 0 auto\" name=\"formGroup\"\r\n        [formGroup]=\"formGroup\">\r\n\r\n\r\n        <mat-horizontal-stepper formArrayName=\"formArray\" [linear]=\"true\">\r\n\r\n          <mat-step formGroupName=\"0\" [stepControl]=\"formArray?.get([0])\">\r\n            <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsi\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsi\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglish\" required>\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglish\" required>\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNo\" required>\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNo\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeID\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <mat-icon matPrefix>today</mat-icon> -->\r\n                <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\"\r\n                  formControlName=\"dateOfBirthPer\" required>\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatus\" required>\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildren\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n              <div fxFlex=\"24\"></div>\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsi\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglish\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex=\"1 0 auto\">\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}\" formControlName=\"nameFarsiSp\">\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}\" formControlName=\"surnameFarsiSp\">\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}\" formControlName=\"nameEnglishSp\">\r\n                <mat-icon matSuffix>person</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}\" formControlName=\"surnameEnglishSp\">\r\n                <mat-icon matSuffix>people</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n\r\n              <!--<span fxFlex=\"30\"></span>-->\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- <input matInput type=\"email\" pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\"\r\n                          placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"email\" required> -->\r\n                <input matInput type=\"email\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}\" formControlName=\"emailSp\">\r\n                <mat-icon matSuffix>email</mat-icon>\r\n\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n                </mat-error>\r\n                <mat-error *ngIf=\"formArray?.get([0,'email']).hasError('required')\">\r\n                  {{ 'Global.ERRORFIELDREQUIRED' | translate }}\r\n                </mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}\" formControlName=\"mobileNoSp\">\r\n                <mat-icon matSuffix>smartphone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <!-- pattern=\"^(0|\\+[1-9]{1,5})9[0-9]{9}$\" -->\r\n                <input matInput type=\"tel\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}\" formControlName=\"lLandlinePhoneNoSp\">\r\n                <mat-icon matSuffix>phone</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}\" formControlName=\"skypeIDSp\">\r\n                <mat-icon matSuffix>video_call</mat-icon>\r\n              </mat-form-field>\r\n\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput [min]=\"minDateSp\" [max]=\"maxDateSp\" (focus)=\"birthDatePickerSp.open()\" [matDatepicker]=\"birthDatePickerSp\"\r\n                  placeholder=\"{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}\" formControlName=\"dateOfBirthPerSp\">\r\n                <mat-datepicker-toggle matSuffix [for]=\"birthDatePickerSp\"></mat-datepicker-toggle>\r\n                <mat-datepicker #birthDatePickerSp startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <mat-select placeholder=\"{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}\" formControlName=\"maritalStatusSp\">\r\n                  <mat-option *ngFor=\"let status of maritalStatusList\" [value]=\"status.value\">\r\n                    {{ status.viewValue | translate }}\r\n                  </mat-option>\r\n                </mat-select>\r\n\r\n                <mat-icon matSuffix>wc</mat-icon>\r\n                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n              </mat-form-field>\r\n\r\n              <mat-form-field fxFlex=\"24\">\r\n                <input matInput type=\"number\" min=\"0\" max=\"30\" pattern=\"[0-9]\" placeholder=\"{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}\"\r\n                  formControlName=\"numberOfChildrenSp\">\r\n                <mat-icon matSuffix>child_care</mat-icon>\r\n              </mat-form-field>\r\n\r\n              <div fxFlex=\"24\"></div>\r\n\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}\" formControlName=\"residentialAddressFarsiSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n              <mat-form-field fxFlex=\"49\">\r\n                <textarea matInput placeholder=\"{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}\" formControlName=\"residentialAddressEnglishSp\"></textarea>\r\n                <mat-icon matSuffix>map</mat-icon>\r\n              </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([0]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"1\" [stepControl]=\"formArray?.get([1])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglish\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[0] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\">\r\n              <div class=\"pt-24 pb-24\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-radio-group formControlName=\"goodEnglishSp\">\r\n                  <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let level of englishLevels\" [value]=\"level.value\">\r\n                    {{ level.viewValue | translate }}\r\n                  </mat-radio-button>\r\n                </mat-radio-group>\r\n              </div>\r\n              <mat-divider></mat-divider>\r\n              <div fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-between center\" fxFlex=\"1 0 auto\">\r\n                <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>\r\n                <mat-form-field fxFlex=\"12\" floatPlaceholder=\"never\" *ngFor=\"let score of englishScores\">\r\n                  <input matInput type=\"number\" min=\"0\" max=\"999\" pattern=\"^[0-9]{1,3}$\" placeholder=\"{{ score.viewValue }}\" formControlName=\"{{ score.value[1] }}\">\r\n                  <mat-icon matPrefix>{{ score.icon }}</mat-icon>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([1]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"2\" [stepControl]=\"formArray?.get([2])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_2.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div *ngFor=\"let level of eduLevels\" style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\"\r\n              fxFlex>\r\n\r\n              <span fxFlex=\"5\" class=\"mat-title\">{{level.label}}</span>\r\n              <div fxFlex=\"15\" *ngFor=\"let oneField of level.fields\">\r\n                <mat-form-field *ngIf=\"oneField.isInput==true\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field *ngIf=\"oneField.isInput==false\">\r\n                  <mat-select placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                    <mat-option *ngFor=\"let year of years\" [value]=\"year\">\r\n                      {{year}}\r\n                    </mat-option>\r\n                  </mat-select>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([2]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"3\" [stepControl]=\"formArray?.get([3])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold;\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[0]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"{{oneField.fxFlex}}\" *ngFor=\"let oneField of workExperience\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==true\">\r\n                  <input matInput type=\"number\" placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\">\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isNumber==false\">\r\n                  <textarea matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{oneField.value[1]}}\"></textarea>\r\n                  <mat-icon matSuffix>{{oneField.icon}}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([3]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n          <mat-step formGroupName=\"4\" [stepControl]=\"formArray?.get([4])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_4.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatus\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate }}\"\r\n                    formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>\r\n              <mat-radio-group formControlName=\"militaryStatusSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let statu of militaryStatus\" [value]=\"statu.value\">\r\n                  {{ statu.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of militaryFields\">\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n\r\n                <mat-form-field style=\"width: 100%\" *ngIf=\"oneField.isInput==false\">\r\n                  <input matInput [min]=\"minDate\" [max]=\"maxDate\" (focus)=\"birthDatePicker.open()\" [matDatepicker]=\"birthDatePicker\" placeholder=\"{{ oneField.viewValue | translate  }}\"\r\n                    formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"birthDatePicker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #birthDatePicker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([4]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"5\" [stepControl]=\"formArray?.get([5])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of healthFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n                </mat-form-field>\r\n              </div>\r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([5]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n          <mat-step formGroupName=\"6\" [stepControl]=\"formArray?.get([6])\">\r\n            <ng-template matStepLabel>\r\n              <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>\r\n            </ng-template>\r\n\r\n            <mat-panel-title style=\"font-weight: bold\">\r\n              <mat-icon>account_circle</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.APPLICANT' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[0] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaType\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n\r\n\r\n            <mat-panel-title style=\"font-weight: bold; margin-top: 20px;\">\r\n              <mat-icon>wc</mat-icon>\r\n              <mat-panel-description style=\"padding-left:5px;\" fxFlex=\"grow\" fxLayoutAlign=\"space-between center\">\r\n                {{ 'Add_Edit_Form.SPOUSE' | translate }}\r\n              </mat-panel-description>\r\n            </mat-panel-title>\r\n\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"30\" *ngFor=\"let oneField of australiaFields\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <input matInput placeholder=\"{{ oneField.viewValue | translate }}\" formControlName=\"{{ oneField.value[1] }}\">\r\n                  <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n              <!--<div fxFlex=\"30\"></div>-->\r\n            </div>\r\n\r\n            <div class=\"pt-24 pb-24\">\r\n              <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>\r\n              <mat-radio-group formControlName=\"australiaVisaTypeSp\">\r\n                <mat-radio-button class=\"mr-24 ml-24\" *ngFor=\"let type of visaType\" [value]=\"type.value\">\r\n                  {{ type.viewValue | translate }}\r\n                </mat-radio-button>\r\n              </mat-radio-group>\r\n            </div>\r\n\r\n            <div style=\"float: right;\">\r\n              <button mat-button matStepperPrevious type=\"button\">Back</button>\r\n              <button mat-button matStepperNext type=\"button\" [disabled]=\"formArray?.get([6]).invalid\">Next</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n          <mat-step formGroupName=\"7\" [stepControl]=\"formArray?.get([7])\">\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n\r\n            <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n\r\n              <div fxFlex=\"100\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\" {{ 'Add_Edit_Form.STEP_7.TBCLIENT' | translate }}\" formControlName=\"textBoxClient\"></textarea>\r\n                  <mat-icon matSuffix>note</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n\r\n\r\n              <div fxFlex=\"100\">\r\n                <mat-form-field style=\"width: 100%\">\r\n                  <textarea matInput placeholder=\" {{ 'Add_Edit_Form.STEP_7.howKnow' | translate }}\" formControlName=\"howKnow\"></textarea>\r\n                  <mat-icon matSuffix>note</mat-icon>\r\n\r\n                </mat-form-field>\r\n              </div>\r\n\r\n              \r\n            </div>\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"editForm()\">Done</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n\r\n\r\n          <mat-step>\r\n            <ng-template matStepLabel>Confirm your information</ng-template>\r\n            Everything seems correct.\r\n            <div style=\"float: right;\">\r\n              <button mat-button (click)=\"editForm()\">Edit</button>\r\n            </div>\r\n          </mat-step>\r\n\r\n        </mat-horizontal-stepper>\r\n      </form>\r\n\r\n\r\n      <!-- <div class=\"form-errors-model mat-white-bg p-24 mat-elevation-z4\">\r\n\r\n              <div class=\"h2 mb-24\">Reactive Form Errors Model</div>\r\n\r\n              <pre><code>{{formErrors | json}}</code></pre>\r\n          </div> -->\r\n\r\n    </div>\r\n\r\n\r\n\r\n\r\n  </div>\r\n  <!-- / CONTENT -->\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -12042,16 +13262,17 @@ module.exports = ""
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditClientFormComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12071,14 +13292,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var EditClientFormComponent = (function () {
-    function EditClientFormComponent(translate, appDirection, fuseConfig, translationLoader, _formBuilder, route, mainServ) {
+    function EditClientFormComponent(translate, appDirection, fuseConfig, translationLoader, _formBuilder, route, dialogSer, mainServ) {
         this.translate = translate;
         this.appDirection = appDirection;
         this.fuseConfig = fuseConfig;
         this.translationLoader = translationLoader;
         this._formBuilder = _formBuilder;
         this.route = route;
+        this.dialogSer = dialogSer;
         this.mainServ = mainServ;
         this.startDate = new Date(1993, 1, 1);
         this.isNonLinear = false;
@@ -12412,7 +13635,7 @@ var EditClientFormComponent = (function () {
             }
         });
         // this.fuseConfig.setSettings(this.fuseSettings);
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_5__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_6__languageFiles_fa__["a" /* locale */]);
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_6__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__["a" /* locale */]);
         this.formErrors = {
             company: {},
             firstName: {},
@@ -12443,19 +13666,19 @@ var EditClientFormComponent = (function () {
         this.formGroup = this._formBuilder.group({
             formArray: this._formBuilder.array([
                 this._formBuilder.group({
-                    nameFarsi: [data['nameFarsi'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    surnameFarsi: [data['surnameFarsi'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    nameEnglish: [data['nameEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    surnameEnglish: [data['surnameEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    email: [data['email'], [__WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].email]],
-                    mobileNo: [data['mobileNo'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    nameFarsi: [data['nameFarsi'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    surnameFarsi: [data['surnameFarsi'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    nameEnglish: [data['nameEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    surnameEnglish: [data['surnameEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    email: [data['email'], [__WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].email]],
+                    mobileNo: [data['mobileNo'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     lLandlinePhoneNo: [data['lLandlinePhoneNo']],
-                    maritalStatus: [data['maritalStatus'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    maritalStatus: [data['maritalStatus'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     numberOfChildren: [data['numberOfChildren']],
-                    dateOfBirthPer: [data['dateOfBirthPer'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    dateOfBirthPer: [data['dateOfBirthPer'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     skypeID: [data['skypeID']],
-                    residentialAddressEnglish: [data['residentialAddressEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
-                    residentialAddressFarsi: [data['residentialAddressFarsi'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    residentialAddressEnglish: [data['residentialAddressEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
+                    residentialAddressFarsi: [data['residentialAddressFarsi'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     nameFarsiSp: [data['nameFarsiSp']],
                     surnameFarsiSp: [data['surnameFarsiSp']],
                     nameEnglishSp: [data['nameEnglishSp']],
@@ -12471,7 +13694,7 @@ var EditClientFormComponent = (function () {
                     residentialAddressFarsiSp: [data['residentialAddressFarsiSp']]
                 }),
                 this._formBuilder.group({
-                    goodEnglish: [data['goodEnglish'], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["l" /* Validators */].required],
+                    goodEnglish: [data['goodEnglish'], __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required],
                     writingEn: [data['writingEn']],
                     listeningEn: [data['listeningEn']],
                     readingEn: [data['readingEn']],
@@ -12558,6 +13781,7 @@ var EditClientFormComponent = (function () {
                 }),
                 this._formBuilder.group({
                     textBoxClient: [data['textBoxClient']],
+                    howKnow: [data['howKnow']],
                 })
             ])
         });
@@ -12568,9 +13792,11 @@ var EditClientFormComponent = (function () {
         this.appDirection.switchDir('ltr');
         this.id = this.route.snapshot.paramMap.get('id');
         this.token = this.route.snapshot.paramMap.get('token');
-        this.mainServ.APIServ.get("forms/" + this.id, this.token).subscribe(function (data) {
+        this.mainServ.loaderSer.display(true);
+        this.mainServ.APIServ.get("forms/getClientForm/" + this.id, this.token).subscribe(function (data) {
+            _this.mainServ.loaderSer.display(false);
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                _this.setFormGroupe(data);
+                _this.setFormGroupe(data['getClientForm']);
                 // this.formData = data;
                 _this.loder = true;
             }
@@ -12633,34 +13859,42 @@ var EditClientFormComponent = (function () {
     EditClientFormComponent.prototype.editForm = function () {
         var _this = this;
         var customArray = { "formArray": [{ "nameFarsi": "anas", "surnameFarsi": "alazmeh", "nameEnglish": "anas", "surnameEnglish": "alazmeh", "email": "world.of.anas.95@gmail.com", "mobileNo": "222222222", "lLandlinePhoneNo": "3213213123", "maritalStatus": "married", "numberOfChildren": 0, "dateOfBirthPer": "1995-06-24T21:00:00.000Z", "skypeID": "313113113", "residentialAddressEnglish": "Damas", "residentialAddressFarsi": "damas", "nameFarsiSp": "test", "surnameFarsiSp": "test2", "nameEnglishSp": "test", "surnameEnglishSp": "Test2", "emailSp": "a33@a.com", "mobileNoSp": "1111111", "lLandlinePhoneNoSp": "3211312", "maritalStatusSp": "married", "numberOfChildrenSp": 0, "dateOfBirthPerSp": "1993-11-10T22:00:00.000Z", "skypeIDSp": "22131", "residentialAddressEnglishSp": "Damas", "residentialAddressFarsiSp": "damas" }, { "goodEnglish": "Excellent", "writingEn": 10, "listeningEn": 20, "readingEn": 30, "speakingEn": 40, "overallEn": 50, "goodEnglishSp": "Good", "writingEnSp": 50, "listeningEnSp": 40, "readingEnSp": 30, "speakingEnSp": 50, "overallEnSp": 70 }, { "assocField": "assoc", "assocUniversity": "adasd", "assocCityOfUniversity": "asdad", "assocYearOfGraduation": "1993", "bacField": "bac", "bacUniversity": "asdas", "bacCityOfUniversity": "asdasd", "bacYearOfGraduation": "1992", "masterField": "master", "masterUniversity": "asdasd", "masterCityOfUniversity": "qwqeq", "masterYearOfGraduation": "1995", "PHDField": "PHD", "PHDUniversity": "qweqwe", "PHDCityOfUniversity": "qweqe", "PHDYearOfGraduation": "1993", "assocFieldSp": "assocSp", "assocUniversitySp": "zxczc", "assocCityOfUniversitySp": "zxczxc", "assocYearOfGraduationSp": "2000", "bacFieldSp": "bacSp", "bacUniversitySp": "asad", "bacCityOfUniversitySp": "xzczxc", "bacYearOfGraduationSp": "1999", "masterFieldSp": "masterSp", "masterUniversitySp": "qwqwq", "masterCityOfUniversitySp": "wewww", "masterYearOfGraduationSp": "1993", "PHDFieldSp": "PHDSp", "PHDUniversitySp": "dsssssss", "PHDCityOfUniversitySp": "fddddddd", "PHDYearOfGraduationSp": "1993" }, { "fieldOfWorking": "Fieeeeeeeeeeeld", "relatedEdYearsPaid": 20, "relatedEdYearsNonPaid": 30, "nonRelatedEdYearsPaid": 40, "nonRelatedEdYearsNonPaid": 50, "fieldOfWorkingSp": "sadas", "relatedEdYearsPaidSp": 10, "relatedEdYearsNonPaidSp": 20, "nonRelatedEdYearsPaidSp": 30, "nonRelatedEdYearsNonPaidSp": 50 }, { "militaryStatus": "Exemption", "militaryPlace": "dams", "militaryDurationFrom": "1993-01-03T22:00:00.000Z", "militaryDurationTo": "1993-12-17T22:00:00.000Z", "militaryStatusSp": "Finished", "militaryPlaceSp": "Damas", "militaryDurationFromSp": "1993-04-08T21:00:00.000Z", "militaryDurationToSp": "1993-09-18T21:00:00.000Z" }, { "significantCurrentSickness": "qwe", "surgeryPastOrFuture": "asd", "australiaFamilyRelation": "zxc", "australiaLivingState": "qwe1", "australiaLivingCity": "asd2", "australiaVisaType": "Citizen", "significantCurrentSicknessSp": "fghf", "surgeryPastOrFutureSp": "dfdgdg", "australiaFamilyRelationSp": "cvbcb", "australiaLivingStateSp": "sdfs", "australiaLivingCitySp": "cccccc", "australiaVisaTypeSp": "Temporary Res." }] };
+        var mainThis = this;
         this.sendArray = {};
         var key;
         this.formGroup.value['formArray'].forEach(function (element) {
             for (key in element) {
-                _this.sendArray[key] = element[key];
+                if (element[key] != "" && element[key] != null)
+                    _this.sendArray[key] = element[key];
             }
         });
-        this.mainServ.APIServ.patch("forms/" + this.id, this.sendArray).subscribe(function (data) {
-            if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                alert("editeForm");
-                // this.mainServ.globalServ.goTo("partner")
-            }
-        });
-        console.log(this.sendArray);
+        this.dialogSer.confirmationMessage('are youe sure you want edit the form ', "forms/" + this.id, this.sendArray, false, function () {
+            // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
+            // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
+            alert("edit Form");
+        }, 'patch', this.token);
+        // this.mainServ.APIServ.patch("forms/" + this.id, this.sendArray).subscribe((data: any) => {
+        //   if (this.mainServ.APIServ.getErrorCode() == 0) {
+        //     alert("editeForm")
+        //     // this.mainServ.globalServ.goTo("partner")
+        //   }
+        // })
+        // console.log(this.sendArray);
     };
     EditClientFormComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
             selector: 'app-editClient-form',
             template: __webpack_require__("./src/app/main/content/editClient-form/editClient-form.component.html"),
             styles: [__webpack_require__("./src/app/main/content/editClient-form/editClient-form.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["b" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_9__app_direction_service__["a" /* AppDirectionService */],
-            __WEBPACK_IMPORTED_MODULE_4__core_services_config_service__["a" /* FuseConfigService */],
-            __WEBPACK_IMPORTED_MODULE_3__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["b" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__["a" /* MainService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_10__app_direction_service__["a" /* AppDirectionService */],
+            __WEBPACK_IMPORTED_MODULE_5__core_services_config_service__["a" /* FuseConfigService */],
+            __WEBPACK_IMPORTED_MODULE_4__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */],
+            __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */]])
     ], EditClientFormComponent);
     return EditClientFormComponent;
 }());
@@ -12722,7 +13956,7 @@ var EditClientFormModule = (function () {
 /***/ "./src/app/main/content/forms/contracted-forms/contracted-forms.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.CONTRACTED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\" [rowHeight]=\"50\"\r\n      [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n      [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'CONTRACTED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"mobileNo\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n             <button mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <!--<button mat-menu-item (click)=\"changeStatus('contracts',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>-->\r\n            <button mat-menu-item (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.CONTRACTED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\" [rowHeight]=\"50\"\r\n      [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n      [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'CONTRACTED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"mobileNo\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n             <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item  *ngIf=\"isAllowed('WriteForms')\" (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -12856,6 +14090,9 @@ var ContractedFormsComponent = (function () {
             }
         });
     };
+    ContractedFormsComponent.prototype.isAllowed = function (role) {
+        return this.mainServ.globalServ.isAllowed(role);
+    };
     ContractedFormsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
             selector: 'app-contracted-forms',
@@ -12926,7 +14163,7 @@ var routes = [
         component: __WEBPACK_IMPORTED_MODULE_8__show_form_show_form_component__["a" /* ShowFormComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
     },
-    { path: '', redirectTo: '/unprocessed', pathMatch: 'full' },
+    { path: '', redirectTo: '/calendar', pathMatch: 'full' },
 ];
 var AzzyFormsModule = (function () {
     function AzzyFormsModule() {
@@ -12951,7 +14188,7 @@ var AzzyFormsModule = (function () {
 /***/ "./src/app/main/content/forms/processed-forms/processed-forms.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.PROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\" [rowHeight]=\"50\"\r\n      [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n      [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.ARRIVAL_DATE' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"mobileNo\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"consultant.username\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CONSULTANT' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfProc\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.PROCESS_DATE' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <!--<mat-chip-list>\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>-->\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='not eligible'\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info'\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation'\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts'\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.PROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\" [rowHeight]=\"50\"\r\n      [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n      [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.ARRIVAL_DATE' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"mobileNo\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"consultant.username\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CONSULTANT' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfProc\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.PROCESS_DATE' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <!--<mat-chip-list>\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>-->\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button *ngIf=\"isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='not eligible' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"isAllowed('WriteForms')\" mat-menu-item (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -13083,6 +14320,9 @@ var ProcessedFormsComponent = (function () {
                 }, 'put');
             }
         });
+    };
+    ProcessedFormsComponent.prototype.isAllowed = function (role) {
+        return this.mainServ.globalServ.isAllowed(role);
     };
     ProcessedFormsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
@@ -13460,6 +14700,11 @@ var ShowFormComponent = (function () {
                 value: ['textBoxNotes'],
                 icon: 'note'
             },
+            {
+                viewValue: 'Add_Edit_Form.STEP_7.howKnow',
+                value: ['howKnow'],
+                icon: 'note'
+            }
         ];
         this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_4__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_5__languageFiles_fa__["a" /* locale */]);
         this.fuseConfig.setSettings({
@@ -13479,7 +14724,9 @@ var ShowFormComponent = (function () {
             this.years.push(1960 + index);
         }
         var id = this.route.snapshot.paramMap.get('id');
+        this.mainServ.loaderSer.display(true);
         this.mainServ.APIServ.get("forms/" + id).subscribe(function (data) {
+            _this.mainServ.loaderSer.display(false);
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 _this.form = data;
             }
@@ -13516,7 +14763,7 @@ var ShowFormComponent = (function () {
 /***/ "./src/app/main/content/forms/unprocessed-forms/unprocessed-forms.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.UNPROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\" [rowHeight]=\"50\"\r\n      [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n      [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"mobileNo\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='sss'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-160\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.UNPROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\" [rowHeight]=\"50\"\r\n      [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n      [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"mobileNo\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='sss'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -13649,6 +14896,9 @@ var UnprocessedFormsComponent = (function () {
             }
         });
     };
+    UnprocessedFormsComponent.prototype.isAllowed = function (role) {
+        return this.mainServ.globalServ.isAllowed(role);
+    };
     UnprocessedFormsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
             selector: 'app-unprocessed-forms',
@@ -13743,7 +14993,7 @@ var locale = {
             'SPOUSE': 'Spouse',
             'BACK': 'Back',
             'STEP_0': {
-                'LABEL': 'Specifications',
+                'LABEL': 'Info',
                 'ENAME': 'English Name',
                 'ESNAME': 'English Sur Name',
                 'FNAME': 'Farsi Name',
@@ -13764,7 +15014,7 @@ var locale = {
                 'EADDRESS': 'English Address',
             },
             'STEP_1': {
-                'LABEL': 'English language level',
+                'LABEL': 'English',
                 'ENGLISH_LEVEL': 'How familiar are you in English?',
                 'EXCELLENT': 'Excellent',
                 'GOOD': 'Good',
@@ -13773,7 +15023,7 @@ var locale = {
                 'EN_SCORE': 'Enter the IELTS / TOEFL score'
             },
             'STEP_2': {
-                'LABEL': 'Level of Education',
+                'LABEL': 'Education',
                 'DEGREE': 'Degree',
                 'ASSISTANT': 'Assistant',
                 'UNDER_GRAD': 'Undergraduate',
@@ -13785,7 +15035,7 @@ var locale = {
                 'YEAR_GRAD': 'Year of Graduation'
             },
             'STEP_3': {
-                'LABEL': 'Work experience',
+                'LABEL': 'Work',
                 'FIELDOfWork': 'field Of Working',
                 "REDYPAID": "Relateded Years Paid",
                 "REDYNPAID": "Relateded Years Non Paid",
@@ -13798,7 +15048,7 @@ var locale = {
                 'YEAR': 'year'
             },
             'STEP_4': {
-                'LABEL': 'Military Service',
+                'LABEL': 'Military',
                 'STATUS': 'Status',
                 'FINISHED': 'Finished',
                 'EXEMPTION': 'Exemption',
@@ -13812,7 +15062,7 @@ var locale = {
                 'SURGERY': 'Surgery Past Or Future',
             },
             'STEP_6': {
-                'LABEL': 'Relatives in Australia',
+                'LABEL': 'Relatives In Ausralia',
                 'CITIZEN': 'Citizen',
                 'PERMANENTRES': 'Permanent Res',
                 'TEMPORARYRES': 'Temporary Res',
@@ -13823,10 +15073,29 @@ var locale = {
                 'VISATYPE': 'Australia Visa Type'
             },
             'STEP_7': {
-                'LABEL': 'Admin Box',
+                'LABEL': 'Admin',
                 'TBCLIENT': 'text Box Client',
                 'TBADMIN': 'text Box Admin',
-                'TBNOTES': 'text Box Notes'
+                'TBNOTES': 'text Box Notes',
+                'MAINAPPLICATION': 'Main Applicant',
+                'APPLICANT': 'Applicant',
+                'SPOUSE': 'Spouse',
+                'TOTALPOINTS': 'Total Points',
+                'DEPENDANT': 'Dependant',
+                'OCCUPATIONTOBEASSESSED': 'Occupation to be assessed',
+                'YEAROFWORKEXPERIENCE': 'Years of Work Experience',
+                'ASSESSMENTORGANIZATION': 'Assessment Organization',
+                'PROFESSIONALINSTALLMENTA': 'Professional Fee / Installments',
+                'PROFESSIONALTOTAL': 'Professional Fee / Total',
+                'PFEDUCATION': 'Points from Education',
+                'PFEXPERIENCE': 'Points from Work Experience',
+                'PFSPOUSE': 'Points from Spouse',
+                'PFENGLISH': 'Points from English Test',
+                'PFNAATI': 'Points from NAATI Test',
+                'PFSTATE': 'Points from State Sponsorship',
+                'PFFAMILY': 'Points from Family Sponsorship',
+                'TOTALPOINT': 'Total Points',
+                'howKnow': 'How did you know about us?'
             }
         },
         'Calender': {
@@ -13838,6 +15107,7 @@ var locale = {
             'LOCATION': 'Location',
             'AVAILABLE': 'Available',
             'NOTAVAILABLE': 'Not Available',
+            'CHOOSETIMEZONE': 'Choose Time Zone'
         },
         'Dialog': {
             'View_Appointment': {
@@ -13895,10 +15165,11 @@ var locale = {
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
                 'USERNAME': 'User Name',
-                'CONSUTANT': 'consultant',
-                'MANAGER': 'manager',
-                'SECRETARY': 'secretary',
-                'ADMINSTRATOR': 'adminstrator',
+                'CONSUTANT': 'Consultant',
+                'MANAGER': 'Manager',
+                'SECRETARY': 'Secretary',
+                'ADMINSTRATOR': 'Adminstrator',
+                'RECEPTION': 'Reception',
                 'PRIMARYCOLOR': 'Primary Color',
                 'SECONDARYCOLOR': 'Secondary Color',
                 'ADD': 'Add',
@@ -14073,10 +15344,154 @@ var locale = {
 
 /***/ }),
 
+/***/ "./src/app/main/content/lock/lock.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"lock\" fxLayout=\"column\" fusePerfectScrollbar>\n\n    <div id=\"lock-form-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n        <div id=\"lock-form\" *fuseIfOnDom [@animate]=\"{value:'*',params:{duration:'300ms',y:'100px'}}\">\n\n            <div class=\"lock-form-header\" fxLayout=\"column\" fxLayoutAlign=\"center center\"\n                 fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"start center\">\n\n                <div class=\"avatar-container\">\n                    <img class=\"avatar big\" src=\"assets/images/avatars/katherine.jpg\">\n                    <mat-icon class=\"s-36\">lock</mat-icon>\n                </div>\n\n                <div>\n                    <div class=\"title\">YOUR SESSION IS LOCKED</div>\n                    <div class=\"subtitle\">\n                        Due to inactivity, your session is locked. Enter your password to continue.\n                    </div>\n                </div>\n\n            </div>\n\n            <form name=\"lockForm\" [formGroup]=\"lockForm\" novalidate>\n\n                <mat-form-field>\n                    <input matInput placeholder=\"Username\" formControlName=\"username\">\n                </mat-form-field>\n\n                <mat-form-field>\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\n                    <mat-error *ngIf=\"lockFormErrors.password.required\">\n                        Password is required\n                    </mat-error>\n                </mat-form-field>\n\n                <button mat-raised-button class=\"submit-button\" color=\"accent\"\n                        aria-label=\"UNLOCK\" [disabled]=\"lockForm.invalid\">\n                    UNLOCK\n                </button>\n\n            </form>\n\n            <div class=\"message\">\n                <a class=\"link\" [routerLink]=\"'/pages/auth/login'\">Are you not Katherine?</a>\n            </div>\n\n        </div>\n\n    </div>\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/main/content/lock/lock.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n:host #lock {\n  width: 100%;\n  overflow: auto;\n  background: url(\"http://104.217.253.15/azzyPortal/dist/assets/images/backgrounds/march.jpg\") no-repeat;\n  background-size: cover; }\n:host #lock #lock-form-wrapper {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 0 auto;\n            flex: 1 0 auto;\n    padding: 32px; }\n@media screen and (max-width: 599px) {\n      :host #lock #lock-form-wrapper {\n        padding: 16px; } }\n:host #lock #lock-form-wrapper #lock-form {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      width: 420px;\n      max-width: 420px;\n      padding: 48px 32px 32px 32px;\n      background: #FFFFFF;\n      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n@media screen and (max-width: 599px) {\n        :host #lock #lock-form-wrapper #lock-form {\n          padding: 24px;\n          width: 100%; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-flex: 1;\n            -ms-flex: 1 0 auto;\n                flex: 1 0 auto; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container {\n          position: relative;\n          margin-right: 16px; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container .avatar {\n            margin: 0; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container {\n              margin-right: 0; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container mat-icon {\n            position: absolute;\n            bottom: 0;\n            right: 0;\n            color: #f44336; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .title {\n          font-size: 20px;\n          margin-bottom: 8px; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .title {\n              margin-top: 16px;\n              text-align: center; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .subtitle {\n          color: rgba(0, 0, 0, 0.54); }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .subtitle {\n              text-align: center; } }\n:host #lock #lock-form-wrapper #lock-form form {\n        width: 100%;\n        margin: 32px 0 0 0; }\n:host #lock #lock-form-wrapper #lock-form form mat-form-field {\n          width: 100%; }\n:host #lock #lock-form-wrapper #lock-form form .submit-button {\n          width: 220px;\n          margin: 16px auto;\n          display: block; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form form .submit-button {\n              width: 90%; } }\n:host #lock #lock-form-wrapper #lock-form .message {\n        font-weight: 500;\n        text-align: center; }\n"
+
+/***/ }),
+
+/***/ "./src/app/main/content/lock/lock.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FuseLockComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_animations__ = __webpack_require__("./src/app/core/animations.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var FuseLockComponent = (function () {
+    function FuseLockComponent(fuseConfig, formBuilder) {
+        this.fuseConfig = fuseConfig;
+        this.formBuilder = formBuilder;
+        this.fuseConfig.setSettings({
+            layout: {
+                navigation: 'none',
+                toolbar: 'none',
+                footer: 'none'
+            }
+        });
+        this.lockFormErrors = {
+            username: {},
+            password: {}
+        };
+    }
+    FuseLockComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.lockForm = this.formBuilder.group({
+            username: [
+                {
+                    value: 'Katherine',
+                    disabled: true
+                }, __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required
+            ],
+            password: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["l" /* Validators */].required]
+        });
+        this.lockForm.valueChanges.subscribe(function () {
+            _this.onLockFormValuesChanged();
+        });
+    };
+    FuseLockComponent.prototype.onLockFormValuesChanged = function () {
+        for (var field in this.lockFormErrors) {
+            if (this.lockFormErrors.hasOwnProperty(field)) {
+                continue;
+            }
+            // Clear previous errors
+            this.lockFormErrors[field] = {};
+            // Get the control
+            var control = this.lockForm.get(field);
+            if (control && control.dirty && !control.valid) {
+                this.lockFormErrors[field] = control.errors;
+            }
+        }
+    };
+    FuseLockComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'fuse-lock',
+            template: __webpack_require__("./src/app/main/content/lock/lock.component.html"),
+            styles: [__webpack_require__("./src/app/main/content/lock/lock.component.scss")],
+            animations: __WEBPACK_IMPORTED_MODULE_1__core_animations__["a" /* fuseAnimations */]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__core_services_config_service__["a" /* FuseConfigService */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */]])
+    ], FuseLockComponent);
+    return FuseLockComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main/content/lock/lock.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LockModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lock_component__ = __webpack_require__("./src/app/main/content/lock/lock.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var routes = [
+    {
+        path: 'Permision',
+        component: __WEBPACK_IMPORTED_MODULE_0__lock_component__["a" /* FuseLockComponent */]
+    }
+];
+var LockModule = (function () {
+    function LockModule() {
+    }
+    LockModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_0__lock_component__["a" /* FuseLockComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* RouterModule */].forChild(routes)
+            ]
+        })
+    ], LockModule);
+    return LockModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/main/content/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"login\" fxLayout=\"column\" fusePerfectScrollbar>\n\n  <div id=\"login-form-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n    <div id=\"login-form\" *fuseIfOnDom [@animate]=\"{value:'*',params:{duration:'300ms',y:'100px'}}\">\n\n      <div class=\"logo\">\n        <img src=\"assets/images/logos/azzy-grey.png\">\n      </div>\n\n      <div class=\"title\">{{'AUTH.Login.TITLE' | translate}}</div>\n      <label for=\"name\" style=\"color: red\">{{message}}</label>\n      <form name=\"loginForm\" [formGroup]=\"loginForm\" novalidate>\n\n        <mat-form-field>\n          <input matInput placeholder=\"{{'AUTH.Login.EMAIL' | translate}} \" (focus)=\"message='';\"  formControlName=\"email\">\n          <mat-error *ngIf=\"loginFormErrors.email.required\">\n            Email is required\n          </mat-error>\n          <mat-error *ngIf=\"!loginFormErrors.email.required && loginFormErrors.email.email\">\n            Please enter a valid email address\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"password\" placeholder=\"{{'AUTH.Login.PASSWORD' | translate}} \" (focus)=\"message='';\"  formControlName=\"password\">\n          <mat-error *ngIf=\"loginFormErrors.password.required\">\n            Password is required\n          </mat-error>\n        </mat-form-field>\n\n        <div class=\"remember-forgot-password\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"space-between center\">\n          <!--<mat-checkbox class=\"remember-me\" aria-label=\"Remember Me\">\n                        Remember Me\n                    </mat-checkbox>-->\n\n          <!--<a class=\"forgot-password\" [routerLink]=\"'/forgot-password'\">\n                        {{'AUTH.Login.FORGETPASSWORD' | translate}} \n                    </a>-->\n        </div>\n\n        <button mat-raised-button color=\"accent\" class=\"submit-button\" aria-label=\"LOG IN\" [disabled]=\"loginForm.invalid\" (click)=\"login()\">\n                     {{'AUTH.Login.LOGIN' | translate}}\n                </button>\n\n      </form>\n\n      <!--<div class=\"separator\">\n                <span class=\"text\">OR</span>\n            </div>-->\n\n      <!--<button mat-raised-button class=\"google\">\n                Log in with Google\n            </button>\n\n            <button mat-raised-button class=\"facebook\">\n                Log in with Facebook\n            </button>\n\n            <div class=\"register\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n                <span class=\"text\">Don't have an account?</span>\n                <a class=\"link\" [routerLink]=\"'/pages/auth/register'\">Create an account</a>\n            </div>-->\n\n    </div>\n\n  </div>\n\n\n  <div class=\"spinner-wrapper\" [style.display]=\"loader ? 'block' : (!loader ? 'none' : null)\">\n    <div class=\"spinner\">\n      <div class=\"inner\">\n        <div class=\"gap\"></div>\n        <div class=\"left\">\n          <div class=\"half-circle\"></div>\n        </div>\n        <div class=\"right\">\n          <div class=\"half-circle\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div id=\"login\" fxLayout=\"column\" fusePerfectScrollbar>\n\n  <div id=\"login-form-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n    <div id=\"login-form\" *fuseIfOnDom [@animate]=\"{value:'*',params:{duration:'300ms',y:'100px'}}\">\n\n      <div class=\"logo\">\n        <img src=\"assets/images/logos/azzy-grey.png\">\n      </div>\n\n      <div class=\"title\">{{'AUTH.Login.TITLE' | translate}}</div>\n      <label for=\"name\" style=\"color: red\">{{message}}</label>\n      <form name=\"loginForm\" [formGroup]=\"loginForm\" novalidate>\n\n        <mat-form-field>\n          <input matInput placeholder=\"{{'AUTH.Login.EMAIL' | translate}} \" (keyup)=\"message='';\"  formControlName=\"email\">\n          <mat-error *ngIf=\"loginFormErrors.email.required\">\n            Email is required\n          </mat-error>\n          <mat-error *ngIf=\"!loginFormErrors.email.required && loginFormErrors.email.email\">\n            Please enter a valid email address\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"password\" placeholder=\"{{'AUTH.Login.PASSWORD' | translate}} \" (keyup)=\"message='';\"  formControlName=\"password\">\n          <mat-error *ngIf=\"loginFormErrors.password.required\">\n            Password is required\n          </mat-error>\n        </mat-form-field>\n\n        <div class=\"remember-forgot-password\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"space-between center\">\n          <!--<mat-checkbox class=\"remember-me\" aria-label=\"Remember Me\">\n                        Remember Me\n                    </mat-checkbox>-->\n\n          <!--<a class=\"forgot-password\" [routerLink]=\"'/forgot-password'\">\n                        {{'AUTH.Login.FORGETPASSWORD' | translate}} \n                    </a>-->\n        </div>\n\n        <button mat-raised-button color=\"accent\" class=\"submit-button\" aria-label=\"LOG IN\" [disabled]=\"loginForm.invalid\" (click)=\"login()\">\n                     {{'AUTH.Login.LOGIN' | translate}}\n                </button>\n\n      </form>\n\n      <!--<div class=\"separator\">\n                <span class=\"text\">OR</span>\n            </div>-->\n\n      <!--<button mat-raised-button class=\"google\">\n                Log in with Google\n            </button>\n\n            <button mat-raised-button class=\"facebook\">\n                Log in with Facebook\n            </button>\n\n            <div class=\"register\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n                <span class=\"text\">Don't have an account?</span>\n                <a class=\"link\" [routerLink]=\"'/pages/auth/register'\">Create an account</a>\n            </div>-->\n\n    </div>\n\n  </div>\n\n\n  <div class=\"spinner-wrapper\" [style.display]=\"loader ? 'block' : (!loader ? 'none' : null)\">\n    <div class=\"spinner\">\n      <div class=\"inner\">\n        <div class=\"gap\"></div>\n        <div class=\"left\">\n          <div class=\"half-circle\"></div>\n        </div>\n        <div class=\"right\">\n          <div class=\"half-circle\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -14174,8 +15589,13 @@ var FuseLoginComponent = (function () {
             }
             else if (_this.mainServ.APIServ.getErrorCode() == 401) {
                 _this.loader = false;
+                if (_this.mainServ.APIServ.getCode() == "LOGIN_FAILED_EMAIL_NOT_VERIFIED") {
+                    _this.message = "Check You Email And Verified";
+                }
+                else if (_this.mainServ.APIServ.getCode() == "LOGIN_FAILED") {
+                    _this.message = "Email or Password is wrong";
+                }
                 _this.mainServ.APIServ.setErrorCode(0);
-                _this.message = "Email or Password is wrong";
             }
             else {
                 _this.loader = false;
@@ -14466,6 +15886,10 @@ var addUserComponent = (function () {
                 "viewValue": 'User.ADDEDITUSER.SECRETARY'
             },
             {
+                "value": 'reception',
+                "viewValue": 'User.ADDEDITUSER.RECEPTION'
+            },
+            {
                 "value": 'adminstrator',
                 "viewValue": 'User.ADDEDITUSER.ADMINSTRATOR'
             }
@@ -14742,6 +16166,8 @@ module.exports = ""
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_moment_timezone__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14751,6 +16177,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -15024,31 +16451,34 @@ var FuseMainComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FuseMainModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__content_user_user_module__ = __webpack_require__("./src/app/main/content/user/user.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__content_editClient_form_editClient_form_module__ = __webpack_require__("./src/app/main/content/editClient-form/editClient-form.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__content_edit_form_edit_form_module__ = __webpack_require__("./src/app/main/content/edit-form/edit-form.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__content_login_login_module__ = __webpack_require__("./src/app/main/content/login/login.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__main_component__ = __webpack_require__("./src/app/main/main.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__content_content_component__ = __webpack_require__("./src/app/main/content/content.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__footer_footer_component__ = __webpack_require__("./src/app/main/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__navbar_vertical_navbar_vertical_component__ = __webpack_require__("./src/app/main/navbar/vertical/navbar-vertical.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__toolbar_toolbar_component__ = __webpack_require__("./src/app/main/toolbar/toolbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__core_components_navigation_navigation_module__ = __webpack_require__("./src/app/core/components/navigation/navigation.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__navbar_vertical_navbar_vertical_toggle_directive__ = __webpack_require__("./src/app/main/navbar/vertical/navbar-vertical-toggle.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__navbar_horizontal_navbar_horizontal_component__ = __webpack_require__("./src/app/main/navbar/horizontal/navbar-horizontal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__quick_panel_quick_panel_component__ = __webpack_require__("./src/app/main/quick-panel/quick-panel.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__core_components_theme_options_theme_options_component__ = __webpack_require__("./src/app/core/components/theme-options/theme-options.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__core_components_shortcuts_shortcuts_module__ = __webpack_require__("./src/app/core/components/shortcuts/shortcuts.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__core_components_search_bar_search_bar_module__ = __webpack_require__("./src/app/core/components/search-bar/search-bar.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_calendar__ = __webpack_require__("./src/app/angular-calendar/esm5/angular-calendar.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__content_calendar_calendar_module__ = __webpack_require__("./src/app/main/content/calendar/calendar.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__content_advice_form_advice_form_module__ = __webpack_require__("./src/app/main/content/advice-form/advice-form.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__content_sample_sample_module__ = __webpack_require__("./src/app/main/content/sample/sample.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__content_forms_forms_module__ = __webpack_require__("./src/app/main/content/forms/forms.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__content_client_calendar_client_calendar_module__ = __webpack_require__("./src/app/main/content/client-calendar/client-calendar.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__content_lock_lock_module__ = __webpack_require__("./src/app/main/content/lock/lock.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__content_cancel_appointment_cancel_appointment_module__ = __webpack_require__("./src/app/main/content/cancel-appointment/cancel-appointment.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_mat_select_search__ = __webpack_require__("./node_modules/ngx-mat-select-search/esm5/ngx-mat-select-search.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__content_user_user_module__ = __webpack_require__("./src/app/main/content/user/user.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__content_editClient_form_editClient_form_module__ = __webpack_require__("./src/app/main/content/editClient-form/editClient-form.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__content_edit_form_edit_form_module__ = __webpack_require__("./src/app/main/content/edit-form/edit-form.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__content_login_login_module__ = __webpack_require__("./src/app/main/content/login/login.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__main_component__ = __webpack_require__("./src/app/main/main.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__content_content_component__ = __webpack_require__("./src/app/main/content/content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__("./src/app/main/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__navbar_vertical_navbar_vertical_component__ = __webpack_require__("./src/app/main/navbar/vertical/navbar-vertical.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__toolbar_toolbar_component__ = __webpack_require__("./src/app/main/toolbar/toolbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__core_components_navigation_navigation_module__ = __webpack_require__("./src/app/core/components/navigation/navigation.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__navbar_vertical_navbar_vertical_toggle_directive__ = __webpack_require__("./src/app/main/navbar/vertical/navbar-vertical-toggle.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__navbar_horizontal_navbar_horizontal_component__ = __webpack_require__("./src/app/main/navbar/horizontal/navbar-horizontal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__quick_panel_quick_panel_component__ = __webpack_require__("./src/app/main/quick-panel/quick-panel.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__core_components_theme_options_theme_options_component__ = __webpack_require__("./src/app/core/components/theme-options/theme-options.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__core_components_shortcuts_shortcuts_module__ = __webpack_require__("./src/app/core/components/shortcuts/shortcuts.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__core_components_search_bar_search_bar_module__ = __webpack_require__("./src/app/core/components/search-bar/search-bar.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_calendar__ = __webpack_require__("./src/app/angular-calendar/esm5/angular-calendar.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__content_calendar_calendar_module__ = __webpack_require__("./src/app/main/content/calendar/calendar.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__content_advice_form_advice_form_module__ = __webpack_require__("./src/app/main/content/advice-form/advice-form.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__content_sample_sample_module__ = __webpack_require__("./src/app/main/content/sample/sample.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__content_forms_forms_module__ = __webpack_require__("./src/app/main/content/forms/forms.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__content_client_calendar_client_calendar_module__ = __webpack_require__("./src/app/main/content/client-calendar/client-calendar.module.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -15080,41 +16510,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var FuseMainModule = (function () {
     function FuseMainModule() {
     }
     FuseMainModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_8__content_content_component__["a" /* FuseContentComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__footer_footer_component__["a" /* FuseFooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__main_component__["a" /* FuseMainComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__navbar_vertical_navbar_vertical_component__["a" /* FuseNavbarVerticalComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__navbar_horizontal_navbar_horizontal_component__["a" /* FuseNavbarHorizontalComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__toolbar_toolbar_component__["a" /* FuseToolbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__navbar_vertical_navbar_vertical_toggle_directive__["a" /* FuseNavbarVerticalToggleDirective */],
-                __WEBPACK_IMPORTED_MODULE_16__core_components_theme_options_theme_options_component__["a" /* FuseThemeOptionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__quick_panel_quick_panel_component__["a" /* FuseQuickPanelComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__content_content_component__["a" /* FuseContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__["a" /* FuseFooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__main_component__["a" /* FuseMainComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__navbar_vertical_navbar_vertical_component__["a" /* FuseNavbarVerticalComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__navbar_horizontal_navbar_horizontal_component__["a" /* FuseNavbarHorizontalComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__toolbar_toolbar_component__["a" /* FuseToolbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__navbar_vertical_navbar_vertical_toggle_directive__["a" /* FuseNavbarVerticalToggleDirective */],
+                __WEBPACK_IMPORTED_MODULE_19__core_components_theme_options_theme_options_component__["a" /* FuseThemeOptionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__quick_panel_quick_panel_component__["a" /* FuseQuickPanelComponent */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_6__core_modules_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_router__["e" /* RouterModule */],
-                __WEBPACK_IMPORTED_MODULE_12__core_components_navigation_navigation_module__["a" /* FuseNavigationModule */],
-                __WEBPACK_IMPORTED_MODULE_17__core_components_shortcuts_shortcuts_module__["a" /* FuseShortcutsModule */],
-                __WEBPACK_IMPORTED_MODULE_18__core_components_search_bar_search_bar_module__["a" /* FuseSearchBarModule */],
-                __WEBPACK_IMPORTED_MODULE_19__angular_calendar__["a" /* CalendarModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_20__content_calendar_calendar_module__["a" /* MyCalendarModule */],
-                __WEBPACK_IMPORTED_MODULE_22__content_sample_sample_module__["a" /* FuseSampleModule */],
-                __WEBPACK_IMPORTED_MODULE_21__content_advice_form_advice_form_module__["a" /* AdviceFormModule */],
-                __WEBPACK_IMPORTED_MODULE_2__content_edit_form_edit_form_module__["a" /* EditFormModule */],
-                __WEBPACK_IMPORTED_MODULE_1__content_editClient_form_editClient_form_module__["a" /* EditClientFormModule */],
-                __WEBPACK_IMPORTED_MODULE_23__content_forms_forms_module__["a" /* AzzyFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_0__content_user_user_module__["a" /* AzzyUserModule */],
-                __WEBPACK_IMPORTED_MODULE_24__content_client_calendar_client_calendar_module__["a" /* MyClientCalendarModule */],
-                __WEBPACK_IMPORTED_MODULE_3__content_login_login_module__["a" /* LoginModule */]
+                __WEBPACK_IMPORTED_MODULE_2_ngx_mat_select_search__["a" /* NgxMatSelectSearchModule */],
+                __WEBPACK_IMPORTED_MODULE_9__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_router__["e" /* RouterModule */],
+                __WEBPACK_IMPORTED_MODULE_15__core_components_navigation_navigation_module__["a" /* FuseNavigationModule */],
+                __WEBPACK_IMPORTED_MODULE_20__core_components_shortcuts_shortcuts_module__["a" /* FuseShortcutsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__core_components_search_bar_search_bar_module__["a" /* FuseSearchBarModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_calendar__["a" /* CalendarModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_23__content_calendar_calendar_module__["a" /* MyCalendarModule */],
+                __WEBPACK_IMPORTED_MODULE_25__content_sample_sample_module__["a" /* FuseSampleModule */],
+                __WEBPACK_IMPORTED_MODULE_24__content_advice_form_advice_form_module__["a" /* AdviceFormModule */],
+                __WEBPACK_IMPORTED_MODULE_1__content_cancel_appointment_cancel_appointment_module__["a" /* cancelAppointmentModule */],
+                __WEBPACK_IMPORTED_MODULE_5__content_edit_form_edit_form_module__["a" /* EditFormModule */],
+                __WEBPACK_IMPORTED_MODULE_4__content_editClient_form_editClient_form_module__["a" /* EditClientFormModule */],
+                __WEBPACK_IMPORTED_MODULE_26__content_forms_forms_module__["a" /* AzzyFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__content_user_user_module__["a" /* AzzyUserModule */],
+                __WEBPACK_IMPORTED_MODULE_27__content_client_calendar_client_calendar_module__["a" /* MyClientCalendarModule */],
+                __WEBPACK_IMPORTED_MODULE_6__content_login_login_module__["a" /* LoginModule */],
+                __WEBPACK_IMPORTED_MODULE_0__content_lock_lock_module__["a" /* LockModule */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_7__main_component__["a" /* FuseMainComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__main_component__["a" /* FuseMainComponent */]
             ]
         })
     ], FuseMainModule);
@@ -15778,7 +17214,8 @@ var NavigationModel = (function () {
                         'title': 'Nav.CALENDAR',
                         'type': 'item',
                         'icon': 'today',
-                        'url': '/calendar'
+                        'url': '/calendar',
+                        'role': 'ReadCalendar'
                     },
                     {
                         'id': 'calendar',
@@ -15792,21 +17229,16 @@ var NavigationModel = (function () {
                         'title': 'Nav.USERS',
                         'type': 'item',
                         'icon': 'supervised_user_circle',
-                        'url': '/users'
+                        'url': '/users',
+                        'role': 'UserDefinition'
                     },
-                ]
-            },
-            {
-                'id': 'forms',
-                'title': 'FORMS.TITLE',
-                'type': 'group',
-                'children': [
                     {
                         'id': 'forms',
                         'title': 'Form.UNPROCESSED_FORMS.TITLE',
                         'type': 'item',
                         'icon': 'email',
                         'url': '/unprocessed',
+                        'role': 'ReadForms'
                     },
                     {
                         'id': 'forms',
@@ -15814,6 +17246,7 @@ var NavigationModel = (function () {
                         'type': 'item',
                         'icon': 'email',
                         'url': '/processed',
+                        'role': 'ReadForms'
                     },
                     {
                         'id': 'forms',
@@ -15821,6 +17254,7 @@ var NavigationModel = (function () {
                         'type': 'item',
                         'icon': 'email',
                         'url': '/contracted',
+                        'role': 'ReadForms'
                     }
                 ]
             },

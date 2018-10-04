@@ -28,7 +28,6 @@
         <mat-icon matSuffix>person</mat-icon>
         <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>
-
       <mat-form-field fxFlex="100" *ngIf="isWithID">
         <mat-select formControlName="consId" required>
           <mat-option *ngFor="let oneClient of clients" [value]="oneClient.id">

@@ -127,4 +127,8 @@ export class ProcessedFormsComponent implements OnInit {
   }
 
 
+  isAllowed(role) {
+    return this.mainServ.globalServ.isAllowed(role);
+
+  }
 }

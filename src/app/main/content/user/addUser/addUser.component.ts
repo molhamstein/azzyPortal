@@ -56,6 +56,10 @@ export class addUserComponent implements OnInit {
         "viewValue": 'User.ADDEDITUSER.SECRETARY'
       },
       {
+        "value": 'reception',
+        "viewValue": 'User.ADDEDITUSER.RECEPTION'
+      },
+      {
         "value": 'adminstrator',
         "viewValue": 'User.ADDEDITUSER.ADMINSTRATOR'
       }

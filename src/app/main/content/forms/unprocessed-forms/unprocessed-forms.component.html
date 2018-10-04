@@ -68,23 +68,23 @@
               <mat-icon>search</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>cancel</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>more_horiz</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.MORE_INFO' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>group</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.CONSULTATION' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>check</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.CONTRACT' | translate}}</span>
             </button>
-            <button mat-menu-item (click)="goTo('edit',row.id)">
+            <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="goTo('edit',row.id)">
               <mat-icon>edit</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>
             </button>

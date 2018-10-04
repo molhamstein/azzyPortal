@@ -2,8 +2,8 @@
   .stripes {
     background-image: repeating-linear-gradient(45deg, #ccc, #ccc 30px, #dbdbdb 30px, #dbdbdb 60px);
   }
+
 </style>
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="col-md-12">
   <ng-template #customCellTemplate let-day="day" let-locale="locale">
     <div class="cal-cell-top" style="text-align: left;">
@@ -19,7 +19,7 @@
   <ng-template #tt let-events="openEvents" let-eventClicked="eventClicked">
     <div *ngFor="let event of openEvents; trackBy:trackByEventId" [ngClass]="event?.cssClass" mwlDraggable [dropData]="{event: event}"
       [dragAxis]="{x: event.draggable, y: event.draggable}">
-      <span class="cal-event" [style.backgroundColor]="event.color?.primary">
+      <span class="cal-event" [style.backgroundColor]="event.color.primary">
       </span>
       <mwl-calendar-event-title [event]="event" [customTemplate]="eventTitleTemplate" view="month" (mwlClick)="eventClicked.emit({event: event})">
       </mwl-calendar-event-title>
@@ -32,7 +32,6 @@
 
   <div id="calendar" dir="ltr" class="page-layout simple fullwidth" fusePerfectScrollbar>
 
-    <!-- HEADER -->
     <div class="header p-16 p-sm-24" [ngClass]="viewDate | date:'MMM'">
 
       <div class="header-content" fxLayout="column" fxLayoutAlign="space-between">
@@ -47,26 +46,21 @@
 
           </div>
 
-          <!-- TOOLBAR -->
           <div class="toolbar" fxLayout="row" fxLayoutAlign="start center">
 
             <button mat-button class="mat-icon-button" mwlCalendarToday [(viewDate)]="viewDate" (viewDateChange)="selectedDay = {date:$event}"
               aria-label="Today" matTooltip="Today">
-              <!--(click)="selectedDay = viewDate"-->
               <mat-icon>today</mat-icon>
             </button>
-            <button mat-button class="mat-icon-button" (click)="view='day'" aria-label="Day" matTooltip="Day">
+            <button mat-button class="mat-icon-button" (click)="changeView('day')" aria-label="Day" matTooltip="Day">
               <mat-icon>view_day</mat-icon>
             </button>
 
-            <button mat-button class="mat-icon-button" (click)="view='month'" aria-label="Month" matTooltip="Month">
+            <button mat-button class="mat-icon-button" (click)="changeView('month')" aria-label="Month" matTooltip="Month">
               <mat-icon>view_module</mat-icon>
             </button>
           </div>
         </div>
-        <!-- / TOOLBAR -->
-
-        <!-- HEADER BOTTOM -->
         <div class="header-bottom" fxLayout="row" fxLayoutAlign="center center">
 
           <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="changeDate($event)"
@@ -83,81 +77,44 @@
             <mat-icon>chevron_right</mat-icon>
           </button>
         </div>
-        <!-- / HEADER BOTTOM -->
       </div>
 
-      <!-- ADD EVENT BUTTON -->
-      <button mat-fab class="add-event-button mat-warn" (click)="addEventNew()" aria-label="Add event">
+      <button *ngIf="isAllowed('Open/BlockCalendar')" mat-fab class="add-event-button mat-warn" (click)="addEventNew()" aria-label="Add event">
         <mat-icon>add</mat-icon>
       </button>
-      <!--<button mat-fab style="right: 100px;" class="add-event-button mat-warn" (click)="addEventNew()" aria-label="Add event">
-        <mat-icon>add</mat-icon>
-      </button>-->
-      <!-- / ADD EVENT BUTTON -->
     </div>
-    <!-- / HEADER -->
-    <!-- <div class="cal-open-day-events" [@collapse]>
-      <ng-template [ngTemplateOutlet]="customTemplate || defaultTemplate" [ngTemplateOutletContext]="{
-          events: events,
-          eventClicked: eventClicked
-        }">
-      </ng-template>
-    </div> -->
-    <!-- <div class="row text-center col-md-8" style="float: left;">
-    <div class="col-md-4">
-      <div class="btn-group">
-        <div class="btn btn-primary" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="activeDayIsOpen = false">
-          Previous
-        </div>
-        <div class="btn btn-outline-secondary" mwlCalendarToday [(viewDate)]="viewDate">
-          Today
-        </div>
-        <div class="btn btn-primary" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="activeDayIsOpen = false">
-          Next
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
-    </div>
-    <div class="col-md-4">
-      <div class="btn-group">
-        <div class="btn btn-primary" (click)="view = 'month'" [class.active]="view === 'month'">
-          Month
-        </div>
 
-        <div class="btn btn-primary" (click)="view = 'day'" [class.active]="view === 'day'">
-          Day
-        </div>
-      </div>
-    </div>
-  </div> -->
-    <!-- <div *ngIf="events.length > 0" [ngSwitch]="view" class="col-md-8" style="float: left;">
-    <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [cellTemplate]="customCellTemplate"
-      [openDayEventsTemplate]="tt" [eventTitleTemplate]="rr" (beforeViewRender)="beforeMonthViewRender($event)" [activeDayIsOpen]="activeDayIsOpen"
-      (dayClicked)="dayClicked($event.day)" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
-    </mwl-calendar-month-view>
-    <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
-      (eventTimesChanged)="eventTimesChanged($event)">
-    </mwl-calendar-day-view>
-  </div> -->
-    <div *ngIf="events.length > 0" class="content" fusePerfectScrollbar>
+    <div class="content" fusePerfectScrollbar>
       <div [ngSwitch]="view">
-        <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [cellTemplate]="customCellTemplate"
+        <!--<mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [cellTemplate]="customCellTemplate"
           [openDayEventsTemplate]="tt" [eventTitleTemplate]="rr" (beforeViewRender)="beforeMonthViewRender($event)" [activeDayIsOpen]="activeDayIsOpen"
           (dayClicked)="dayClicked($event.day)" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
-        </mwl-calendar-month-view>
-        <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
-          (eventTimesChanged)="eventTimesChanged($event)">
-        </mwl-calendar-day-view>
+        </mwl-calendar-month-view>-->
+        <div *ngIf="monthEvent.length > 0">
+          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent" [refresh]="refresh" [openDayEventsTemplate]="tt"
+            [eventTitleTemplate]="rr" (eventTimesChanged)="eventTimesChanged($event)" [activeDayIsOpen]="activeDayIsOpen" (eventClicked)="handleEvent('Clicked', $event.event)"
+            (dayClicked)="dayClicked($event.day)">
+          </mwl-calendar-month-view>
+        </div>
+
+        <div *ngIf="monthEvent.length == 0">
+          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent" [refresh]="refresh" [openDayEventsTemplate]="tt"
+            [eventTitleTemplate]="rr" (eventTimesChanged)="eventTimesChanged($event)" [activeDayIsOpen]="activeDayIsOpen" (eventClicked)="handleEvent('Clicked', $event.event)"
+            (dayClicked)="dayClicked($event.day)">
+          </mwl-calendar-month-view>
+        </div>
+        <div *ngIf="dayEvent.length > 0">
+          <mwl-calendar-day-view *ngSwitchCase="'day'"   [tooltipPlacement]="'right'" [viewDate]="viewDate"
+            [events]="dayEvent" [refresh]="refresh" (eventClicked)="handleEvent('Clicked',
+            $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
+          </mwl-calendar-day-view>
+        </div>
+        <div *ngIf="dayEvent.length == 0">
+          <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="dayEvent" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
+            (eventTimesChanged)="eventTimesChanged($event)">
+          </mwl-calendar-day-view>
+        </div>
       </div>
     </div>
-    <!-- <div class="col-md-3 offset-md-1" style="float: left; text-align: left">
-    <h2>Consultants</h2>
-    <div *ngFor="let cons of colors">
-      <span style="width: 15px; height: 15px;border-radius: 50%;display: inline-block" class="badge-{{cons.cons}}"></span>
-      <h5 style="display: inline;"> {{cons.name}}</h5>
-    </div>
-  </div> -->
   </div>
 </div>
