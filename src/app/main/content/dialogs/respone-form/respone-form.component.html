@@ -12,7 +12,8 @@
   <div *ngIf="isAddedMessage==true">
     <b style="float:  left;">Dear {{form.nameEnglish}} {{form.surnameEnglish}}</b>
     <br>
-    <p>Client Number : </p><p> {{form.mobileNo}}</p>
+    <p style="float: left;">Client Number : </p>
+    <p> {{form.lLandlinePhoneNo}}</p>
 
     <b style="float:  left;">Subject :</b>
     <p>Confirmation of submitted Information</p>
@@ -22,12 +23,31 @@
       update of your submitted information, you can access your form by this link:
       <br>
       <a href="{{url}}">Link</a>
-      <br> We thank you in advance for being patient.
+      <br> thank you for your patience .
 
     </p>
     <b>Best regards Azzy Immigration</b>
+
+    <br>
+
+
+
+
+    <b style="float:  right;">موضوع :</b>
+    <p style="float:  right;" >رسید دریافت مشخصات مشتری شماره{{form.lLandlinePhoneNo}}</p>
+    <br>
+    <p style="float: left;">،مشتری گرامى {{form.nameFarsi}} {{form.surnameFarsi}</p>
+    
+    <p>
+      با کمال تشکراز ارسال مشخصات تان از طریق فرم درخواست مشاوره آنلاین آزی ایمیگریشن، به اطلاع شما میرساند، تیم اجرایی آزی ایمیگریشن
+      در نهایت دقت نسبت به بررسی مشخصات شما اقدام نموده و در اسرع وقت شما را در جریان نتیجه این بررسی قرار خواهد داد که ممکن
+      است تا 14روز کاری به طول انجامد. در طی این مدت انتظار، شما میتوانید از طریق لینک زیر به فرم خود دسترسی داشته و اطلاعات
+      آن را به روز نمایید.
+    </p>
+    <b>ارادتمند شما، تیم آزی ایمیگریشن</b>
+
   </div>
-  <!--{{data | json}}-->
+
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">OK</button>

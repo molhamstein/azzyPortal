@@ -16,6 +16,7 @@ export const locale = {
                 'PROCESS': 'Process',
                 'NOTELIGIBLE': 'Not Eligible',
                 'EDIT': 'Edit',
+                'EMAIL': "Email",
                 'DELETE': 'Delete',
                 'MORE_INFO': 'More Info',
                 'REJECT': 'Reject',
@@ -32,6 +33,7 @@ export const locale = {
                 'CLIENT_NAME': 'Client Name',
                 'CLIENT_NUMBER': 'Clinet Number',
                 'STATUS': 'Status',
+                'EMAIL': "Email",
                 'UNPROCESSED': 'Unprocessed',
                 'SHOW_FORM': 'Show Form',
                 'PROCESS': 'Process',
@@ -51,6 +53,7 @@ export const locale = {
                 'TITLE': 'Contracted Forms',
                 'SHOW_FORM': 'Show Form',
                 'PROCESS': 'Process',
+                'EMAIL': "Email",
                 'NOTELIGIBLE': 'Not Eligible',
                 'EDIT': 'Edit',
                 'DELETE': 'Delete',
@@ -62,10 +65,18 @@ export const locale = {
             }
         },
         'Add_Edit_Form': {
-            'TITLE': 'Advice Form',
+            'TITLE': 'Consultation Request Form for Skill Migration to Australia',
             'APPLICANT': 'Applicant for immigration to Australia',
             'SPOUSE': 'Spouse',
             'BACK': 'Back',
+            'FORM': 'Form',
+            "PAYMENTSTITLE": "Instalments",
+            "PAYMENTS": {
+                "ADDPAID": "Add Paid",
+                "DELETEPAID": "Delete Paid",
+                "NOTE": 'Note',
+                "VALUE": 'Value',
+            },
             'STEP_0': {
                 'LABEL': 'Info',
                 'ENAME': 'English Name',
@@ -202,7 +213,8 @@ export const locale = {
             },
             'Set_Text_Box': {
                 'TITLE': 'Text Box Message',
-                'YES': 'Yes'
+                'OK': 'Ok',
+                'MESSAGETOCLIENT': "Message to Client"
             },
             'Add_Slotes': {
                 'LOCATION': 'Location',

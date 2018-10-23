@@ -24,7 +24,7 @@
       </mat-form-field>-->
       <mat-form-field fxFlex="100" style="width: 100%;">
 
-        <textarea matInput placeholder="" formControlName="textBoxAdmin"></textarea>
+        <textarea matInput placeholder="{{ 'Dialog.Set_Text_Box.MESSAGETOCLIENT' | translate }}"  formControlName="textBoxAdmin"></textarea>
         <mat-icon matSuffix>person</mat-icon>
         <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>
@@ -44,5 +44,5 @@
 </div>
 <div mat-dialog-actions>
   <!--<button mat-button (click)="onNoClick()">No</button>-->
-  <button mat-button (click)="onYesClick()" cdkFocusInitial [disabled]="regiForm.invalid">{{'Dialog.Set_Text_Box.YES' | translate}}</button>
+  <button mat-button (click)="onYesClick()" cdkFocusInitial [disabled]="regiForm.invalid">{{'Dialog.Set_Text_Box.OK' | translate}}</button>
 </div>

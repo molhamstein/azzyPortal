@@ -2,14 +2,14 @@ import { DialogServiceService } from './../../../core/services/dialog-service.se
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from './../../../core/services/main.service';
 import { element } from 'protractor';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FuseTranslationLoaderService } from '../../../core/services/translation-loader.service';
 import { FuseConfigService } from '../../../core/services/config.service';
 
 import { locale as english } from '../languageFiles/en';
 import { locale as persian } from '../languageFiles/fa';
 
-import { AbstractControl, FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { AppDirectionService } from '../../../app-direction.service';
 
@@ -40,6 +40,7 @@ export class EditFormComponent implements OnInit {
 
   sendArray = {}
   loder = false;
+  allPayments;
   maritalStatusList = [
     {
       viewValue: 'Add_Edit_Form.STEP_0.MARRIED',
@@ -512,7 +513,7 @@ export class EditFormComponent implements OnInit {
   /** Returns a FormArray with the name 'formArray'. */
   get formArray(): AbstractControl | null { return this.formGroup.get('formArray'); }
 
-
+  feeForm
   constructor(
     private translate: TranslateService,
     private appDirection: AppDirectionService,
@@ -529,9 +530,15 @@ export class EditFormComponent implements OnInit {
     this.fuseConfig.setSettings({
       layout: {
         navigation: 'none',
-        toolbar: 'none',
+        toolbar: 'below',
         footer: 'none'
       }
+    });
+
+
+    this.feeForm = new FormGroup({
+      title: new FormControl(""),
+      value: new FormControl()
     });
 
     this.translationLoader.loadTranslations(english, persian);
@@ -724,6 +731,17 @@ export class EditFormComponent implements OnInit {
         this.loder = true;
         this.total = data['totalPoints'];
         this.totalSp = data['totalPointsSp'];
+        this.mainServ.loaderSer.display(true);
+        this.mainServ.APIServ.get("forms/" + id + "/fees").subscribe((data: any) => {
+          this.mainServ.loaderSer.display(false);
+          if (this.mainServ.APIServ.getErrorCode() == 0) {
+            this.allPayments = data;
+            this.allPayments.forEach(element => {
+              this.totalInstallments += element.value
+            });
+          }
+        })
+
 
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
@@ -784,7 +802,7 @@ export class EditFormComponent implements OnInit {
       }
     });
 
-    this.dialogSer.confirmationMessage('are youe sure you want edit the form ', "forms/" + this.formData['id'], this.sendArray, false, function () {
+    this.dialogSer.confirmationMessage('are you sure you want edit the form ', "forms/" + this.formData['id'], this.sendArray, false, function () {
       // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
       mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
     }, 'patch')
@@ -800,6 +818,53 @@ export class EditFormComponent implements OnInit {
 
   goBack() {
     this.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
+  }
+
+
+  @ViewChild('f') myNgForm;
+
+  reset() {
+    this.myNgForm.resetForm();
+  }
+  totalInstallments = 0;
+  addPaid() {
+    this.mainServ.loaderSer.display(true);
+    var sendData = this.feeForm.value;
+    sendData['formId'] = this.formData['id'];
+    this.mainServ.APIServ.post("fees", sendData).subscribe((data: any) => {
+      this.mainServ.loaderSer.display(false);
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.allPayments.push(data);
+        this.reset();
+        this.totalInstallments = 0;
+        this.allPayments.forEach(element => {
+          this.totalInstallments += element.value
+        });
+      }
+      else {
+        this.mainServ.globalServ.somthingError();
+      }
+
+    });
+  }
+
+  delPaid(id, index) {
+    this.mainServ.loaderSer.display(true);
+    this.mainServ.APIServ.delete("fees/" + id).subscribe((data: any) => {
+      this.mainServ.loaderSer.display(false);
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.allPayments.splice(index, 1);
+        this.totalInstallments = 0;
+        this.allPayments.forEach(element => {
+          this.totalInstallments += element.value
+        });
+      }
+      else {
+        this.mainServ.globalServ.somthingError();
+      }
+
+    });
+
   }
 
 }

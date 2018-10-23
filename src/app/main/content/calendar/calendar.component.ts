@@ -129,28 +129,27 @@ export class CalendarComponent implements OnInit {
       });
   }
 
-  dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
-    this.openEvents = [];
-    // console.log(events);
-    console.log(date);
-    this.selectedDay = { 'date': date }
-    this.viewDate = date;
-    events.forEach(element => {
-      // if (!element.meta.open)
-      this.openEvents.push(element);
-    });
-    if (isSameMonth(date, this.viewDate)) {
-      if (
-        (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-        events.length === 0
-      ) {
-        this.activeDayIsOpen = false;
-      } else {
-        this.activeDayIsOpen = true;
-        this.viewDate = date;
-      }
-    }
-  }
+  // dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
+  //   this.openEvents = [];
+  //   console.log("events");
+  //   console.log(date);
+  //   this.selectedDay = { 'date': date }
+  //   this.viewDate = date;
+  //   events.forEach(element => {
+  //     this.openEvents.push(element);
+  //   });
+  //   if (isSameMonth(date, this.viewDate)) {
+  //     if (
+  //       (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
+  //       events.length === 0
+  //     ) {
+  //       this.activeDayIsOpen = false;
+  //     } else {
+  //       this.activeDayIsOpen = true;
+  //       this.viewDate = date;
+  //     }
+  //   }
+  // }
 
   getColor(cons) {
 

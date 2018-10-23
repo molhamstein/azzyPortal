@@ -123,12 +123,12 @@ export class editUserComponent implements OnInit {
 
   //   dialogRef.afterClosed().subscribe(result => {
   //     if (result) {
-  //       this.mainServ.globalServ.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus,'textBoxAdmin': result})
+  //       this.mainServ.globalServ.confirmationMessage('are you sure you want change ' + name + '\'s form to ' + newStatus, "forms/" + id, { 'status': newStatus,'textBoxAdmin': result})
   //     }
   //   });
   // }
 
   // openDialog(status, id,name) {
-  //     this.mainServ.globalServ.confirmationMessage('are youe sure you want change '+name+'\'s form to '+status,"forms/" +id,{'status':status})
+  //     this.mainServ.globalServ.confirmationMessage('are you sure you want change '+name+'\'s form to '+status,"forms/" +id,{'status':status})
   //   }
 }

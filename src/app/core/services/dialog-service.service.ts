@@ -32,7 +32,6 @@ export class DialogServiceService {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        alert(result);
       }
     });
   }

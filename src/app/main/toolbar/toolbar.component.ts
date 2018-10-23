@@ -78,7 +78,7 @@ export class FuseToolbarComponent {
             // }
         ];
 
-        this.selectedLanguage = this.languages[0];
+        this.selectedLanguage = this.languages[1];
 
         router.events.subscribe(
             (event) => {

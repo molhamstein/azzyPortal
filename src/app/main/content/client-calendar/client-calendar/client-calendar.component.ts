@@ -784,7 +784,7 @@ export class ClientCalendarComponent implements OnInit {
 
   useAppointment(appointment) {
     var mainThis = this;
-    this.dialogSer.confirmationMessage('are youe sure you want use the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'] }, false, function () {
+    this.dialogSer.confirmationMessage('are you sure you want use the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'] }, false, function () {
       mainThis.mainServ.globalServ.reload();
     }, "put")
   }

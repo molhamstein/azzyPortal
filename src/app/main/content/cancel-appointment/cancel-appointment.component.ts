@@ -59,7 +59,7 @@ export class cancelAppointmentComponent implements OnInit {
     var mainThis = this;
 
 
-    this.dialogSer.confirmationMessage('are youe sure you want delete your appointment', "forms/cancelAp/" + this.id, {}, false, function () {
+    this.dialogSer.confirmationMessage('are you sure you want delete your appointment', "forms/cancelAp/" + this.id, {}, false, function () {
       // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
       // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
       mainThis.isCanseld = true;

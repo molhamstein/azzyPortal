@@ -105,7 +105,7 @@ export class UnprocessedFormsComponent implements OnInit {
   }
 
   changeStatus(newStatus, urlIndex, id, name, text) {
-    var urlsArray = ['forms/changeStausToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
+    var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
     var mainThis = this;
 
     var isWithID = newStatus == "consultation" ? true : false;
@@ -120,7 +120,7 @@ export class UnprocessedFormsComponent implements OnInit {
         result['formId'] = id;
         if (urlIndex == 1)
           result['statusName'] = newStatus;
-        this.dialogSer.confirmationMessage('are youe sure you want change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+        this.dialogSer.confirmationMessage('are you sure you want change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
           mainThis.inisilaize()
 
         }, 'put')

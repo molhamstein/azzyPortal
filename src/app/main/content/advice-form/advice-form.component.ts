@@ -1,3 +1,5 @@
+import { ConfirmAddFormComponent } from './../dialogs/confirm-add-form/confirm-add-form.component';
+import { MatDialog } from '@angular/material';
 import { Route, Router } from '@angular/router';
 import { DialogServiceService } from './../../../core/services/dialog-service.service';
 import { MainService } from './../../../core/services/main.service';
@@ -390,11 +392,12 @@ export class AdviceFormComponent implements OnInit {
     private translationLoader: FuseTranslationLoaderService,
     private _formBuilder: FormBuilder,
     private dialogSerc: DialogServiceService,
+    private dialog: MatDialog,
     private mainServ: MainService) {
     this.fuseSettings = this.fuseConfig.settings;
     this.fuseSettings.optionsBtn = 'none';
     this.fuseSettings.layout.navigation = 'none';
-    this.fuseSettings.layout.toolbar = 'none';
+    // this.fuseSettings.layout.toolbar = 'none';
     this.fuseSettings.layout.footer = 'none';
 
 
@@ -561,7 +564,7 @@ export class AdviceFormComponent implements OnInit {
         this._formBuilder.group({
           textBoxClient: [''],
           howKnow: [''],
-          
+
         })
       ])
     });
@@ -637,23 +640,34 @@ export class AdviceFormComponent implements OnInit {
           this.sendArray[key] = element[key];
       }
     });
-    this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
-      if (this.mainServ.APIServ.getErrorCode() == 0) {
-        this.mainServ.APIServ.post("forms/" + data['id'] + "/Client/accessTokens", this.sendArray).subscribe((dataAccrssToken: any) => {
+
+    // this.dialogSerc.confirmationMessage("are you sure you wan't add the form","forms",this.sendArray,false,)
+    let dialogRef = this.dialog.open(ConfirmAddFormComponent, {
+      width: '250px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result == true) {
+        this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
           if (this.mainServ.APIServ.getErrorCode() == 0) {
-            data['token'] = dataAccrssToken['id'];
-            this.dialogSerc.responseFormDialog(true, data)
+            this.mainServ.APIServ.post("forms/" + data['id'] + "/Client/accessTokens", this.sendArray).subscribe((dataAccrssToken: any) => {
+              if (this.mainServ.APIServ.getErrorCode() == 0) {
+                data['token'] = dataAccrssToken['id'];
+                this.dialogSerc.responseFormDialog(true, data)
+              }
+            })
+          } else if (this.mainServ.APIServ.getErrorCode() == 422) {
+            this.mainServ.APIServ.setErrorCode(0);
+            this.dialogSerc.responseFormDialog(false)
+          } else {
+            alert("somethingError");
+            this.mainServ.APIServ.setErrorCode(0);
           }
         })
-      } else if (this.mainServ.APIServ.getErrorCode() == 422) {
-        this.mainServ.APIServ.setErrorCode(0);
-        this.dialogSerc.responseFormDialog(false)
-      } else {
-        alert("somethingError");
-        this.mainServ.APIServ.setErrorCode(0);
+
       }
-    })
-    console.log(this.sendArray);
+    });
+
   }
 
 }

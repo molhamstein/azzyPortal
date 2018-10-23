@@ -401,7 +401,7 @@ export class EditClientFormComponent implements OnInit {
     this.fuseConfig.setSettings({
       layout: {
         navigation: 'none',
-        toolbar: 'none',
+        // toolbar: 'none',
         footer: 'none'
       }
     });
@@ -646,10 +646,10 @@ export class EditClientFormComponent implements OnInit {
       }
     });
 
-    this.dialogSer.confirmationMessage('are youe sure you want edit the form ', "forms/" + this.id, this.sendArray, false, function () {
+    this.dialogSer.confirmationMessage('are you sure you want edit the form ', "forms/" + this.id, this.sendArray, false, function () {
       // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
       // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
-      alert("edit Form");
+      mainThis.mainServ.globalServ.errorDialog("update","Form has be updated فرم به روز شده است")
     }, 'patch',this.token)
 
 
