@@ -1,3 +1,4 @@
+import { viewEventComponent } from './main/content/dialogs/view-event/view-event.component';
 import { ConfirmAddFormComponent } from './main/content/dialogs/confirm-add-form/confirm-add-form.component';
 import { AddApointmentComponent } from './main/content/dialogs/add-apointment/add-apointment.component';
 import { DeleteAppointmentComponent } from './main/content/dialogs/delete-appointment/delete-appointment.component';
@@ -57,7 +58,7 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent, ResetPasswordComponent,ResponeFormComponent,ConfirmAddFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, ConfirmMessageComponent, ViewAppointmentComponent,
-        DeleteAppointmentComponent,AddApointmentComponent
+        DeleteAppointmentComponent,AddApointmentComponent,viewEventComponent
     ],
     imports: [
         BrowserModule,
@@ -76,7 +77,7 @@ const appRoutes: Routes = [
         // OwlNativeDateTimeModule,
     ],
     entryComponents: [ViewAppointmentComponent,ConfirmAddFormComponent,ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent, 
-    ConfirmMessageComponent,DeleteAppointmentComponent,AddApointmentComponent],
+    ConfirmMessageComponent,DeleteAppointmentComponent,AddApointmentComponent,viewEventComponent],
 
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

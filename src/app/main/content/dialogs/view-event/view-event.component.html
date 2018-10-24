@@ -1,0 +1,15 @@
+<!--component html goes here -->
+<!--component html goes here -->
+
+<h1 mat-dialog-title> Appointments in {{events[0].start | date: 'dd/MM/yyyy'}}</h1>
+<div mat-dialog-content>
+ <div class="card"  *ngFor="let oneEvent of events ">
+  <span class="color" [ngStyle]="{'background-color':oneEvent.color.primary }"></span>
+  <label class="title">{{oneEvent.title}}</label>
+ </div>
+</div>
+<div mat-dialog-actions style="margin-top: 10px">
+  <button (click)="close()">Done</button>
+    <!--<button>Cancel</button>-->
+
+</div>

@@ -225,6 +225,17 @@ export const locale = {
                 'title': 'Appointment Slotes',
                 'SAVE': 'Save',
                 'SAVEANDCLOSE': 'Save And Close'
+            },
+            'Add_Appointment': {
+                "TITLE": "Add Appointment",
+                "CANSEL": "Cansel",
+                "ADD": "Add"
+            },
+            'Cansel_Appointment': {
+                "TITLE": "Cansel Appointment",
+                "NO": "No",
+                "YES": "Yes",
+                "CONFIRM":"are you sure you want delete this appointment"
             }
         },
         'AUTH': {

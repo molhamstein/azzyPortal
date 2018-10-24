@@ -93,14 +93,14 @@
         <div *ngIf="monthEvent.length > 0">
           <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent" [refresh]="refresh" [openDayEventsTemplate]="tt"
             [eventTitleTemplate]="rr" (eventTimesChanged)="eventTimesChanged($event)" (eventClicked)="handleEvent('Clicked', $event.event)"
-          >
+            (dayClicked)="dayClicked($event.day)">
           </mwl-calendar-month-view>
         </div>
 
         <div *ngIf="monthEvent.length == 0">
           <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent" [refresh]="refresh" [openDayEventsTemplate]="tt"
             [eventTitleTemplate]="rr" (eventTimesChanged)="eventTimesChanged($event)" [activeDayIsOpen]="activeDayIsOpen" (eventClicked)="handleEvent('Clicked', $event.event)"
-           >
+            (dayClicked)="dayClicked($event.day)">
           </mwl-calendar-month-view>
         </div>
         <div *ngIf="dayEvent.length > 0">

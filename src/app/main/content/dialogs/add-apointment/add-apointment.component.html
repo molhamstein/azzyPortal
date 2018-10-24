@@ -1,5 +1,7 @@
 <!--component html goes here -->
 <!--component html goes here -->
+<h3 mat-dialog-title> {{'Dialog.Add_Appointment.TITLE' | translate}}</h3>
+
 <div mat-dialog-content>
   <form class="example-form" style="width: 100%">
     <mat-form-field class="example-full-width" style="width: 100%">
@@ -22,6 +24,6 @@
   </form>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="close()">Cansel</button>
-  <button mat-button (click)="save()">add</button>
+  <button mat-button (click)="close()">{{'Dialog.Add_Appointment.CANSEL' | translate}}</button>
+  <button mat-button (click)="save()">{{'Dialog.Add_Appointment.ADD' | translate}}</button>
 </div>

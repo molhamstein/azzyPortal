@@ -1,3 +1,4 @@
+import { viewEventComponent } from './../dialogs/view-event/view-event.component';
 import { AddApointmentComponent } from './../dialogs/add-apointment/add-apointment.component';
 import { DeleteAppointmentComponent } from './../dialogs/delete-appointment/delete-appointment.component';
 import { element } from 'protractor';
@@ -77,7 +78,9 @@ export class CalendarComponent implements OnInit {
   viewDate: Date = new Date();
   activeDayIsOpen: boolean;
   events = [];
+  newEvent = [];
   eventsForDay = []
+  newEventsMonth = [];
   monthEvent: CalendarEvent[] = [];
   dayEvent: CalendarEvent[] = [];
 
@@ -91,14 +94,15 @@ export class CalendarComponent implements OnInit {
   eventTemplate: TemplateRef<any>;
 
   handleEvent(action: string, event: CalendarEvent): void {
-    if (event['meta'] != null) {
-      if (event['meta'].open == false) {
-        this.openDeleteApo(event)
+    if (this.view != "month")
+      if (event['meta'] != null) {
+        if (event['meta'].open == false) {
+          this.openDeleteApo(event)
+        }
+        else {
+          this.openAddApo(event);
+        }
       }
-      else {
-        this.openAddApo(event);
-      }
-    }
   }
 
 
@@ -129,27 +133,41 @@ export class CalendarComponent implements OnInit {
       });
   }
 
-  // dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
-  //   this.openEvents = [];
-  //   console.log("events");
-  //   console.log(date);
-  //   this.selectedDay = { 'date': date }
-  //   this.viewDate = date;
-  //   events.forEach(element => {
-  //     this.openEvents.push(element);
-  //   });
-  //   if (isSameMonth(date, this.viewDate)) {
-  //     if (
-  //       (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-  //       events.length === 0
-  //     ) {
-  //       this.activeDayIsOpen = false;
-  //     } else {
-  //       this.activeDayIsOpen = true;
-  //       this.viewDate = date;
-  //     }
-  //   }
-  // }
+  dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
+    // this.openEvents = [];
+    // console.log("events");
+    // console.log(date);
+    this.selectedDay = { 'date': date }
+    this.viewDate = date;
+    // events.forEach(element => {
+    //   this.openEvents.push(element);
+    // });
+    // if (isSameMonth(date, this.viewDate)) {
+    //   if (
+    //     (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
+    //     events.length === 0
+    //   ) {
+    //     this.activeDayIsOpen = false;
+    //   } else {
+    //     this.activeDayIsOpen = true;
+    //     this.viewDate = date;
+    //   }
+    // }
+    console.log(this.newEventsMonth[date.getDate()]);
+    if (this.newEventsMonth[date.getDate()] != null || this.newEventsMonth[date.getDate()].length != 0) {
+      this.dialogRef = this.dialog.open(viewEventComponent, {
+        // panelClass: 'event-form-dialog',
+        width: '600px',
+        data: {
+          events: this.newEventsMonth[date.getDate()]
+        }
+      });
+      this.dialogRef.afterClosed()
+        .subscribe(result => {
+        });
+
+    }
+  }
 
   getColor(cons) {
 
@@ -231,6 +249,7 @@ export class CalendarComponent implements OnInit {
     this.monthEvent = []
     this.events = []
     this.eventsForDay = [];
+    this.newEventsMonth = [];
     var index = 0
     if (this.view == "month") {
       var firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
@@ -266,12 +285,18 @@ export class CalendarComponent implements OnInit {
                 meta: slot
               }
             }
+            // console.log(this.isAddToMonthEvent(x));
             // if (slot.open == false) {
+            if (this.newEventsMonth[x['start'].getDate()] == null || this.isAddToMonthEvent(x)) {
               this.monthEvent.push(x);
-              if (this.events[index] == null) {
-                this.events[index] = [];
-              }
-              this.events[index].push(x);
+            }
+            if (this.newEventsMonth[x['start'].getDate()] == null)
+              this.newEventsMonth[x['start'].getDate()] = []
+            this.newEventsMonth[x['start'].getDate()].push(x);
+            if (this.events[index] == null) {
+              this.events[index] = [];
+            }
+            this.events[index].push(x);
             // }
             if (this.eventsForDay[index] == null) {
               this.eventsForDay[index] = [];
@@ -285,6 +310,19 @@ export class CalendarComponent implements OnInit {
         });
       }
     });
+  }
+
+  isAddToMonthEvent(slot) {
+    // if()
+    for (var index = 0; index < this.newEventsMonth[slot['start'].getDate()].length; index++) {
+      var element = this.newEventsMonth[slot['start'].getDate()][index];
+      if (element.meta.consId == slot.meta.consId) {
+        console.log("Fallllllssssseeee")
+        return false;
+      }
+    };
+    console.log("Trueeeeeeeeeeeeeeeeeeeeeeeee")
+    return true;
   }
 
   addEventNew() {
