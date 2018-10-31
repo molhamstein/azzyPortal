@@ -288,7 +288,9 @@ export class CalendarComponent implements OnInit {
             // console.log(this.isAddToMonthEvent(x));
             // if (slot.open == false) {
             if (this.newEventsMonth[x['start'].getDate()] == null || this.isAddToMonthEvent(x)) {
-              this.monthEvent.push(x);
+              var tempX=x;
+              tempX['title']="";
+              this.monthEvent.push(tempX);
             }
             if (this.newEventsMonth[x['start'].getDate()] == null)
               this.newEventsMonth[x['start'].getDate()] = []
@@ -317,7 +319,6 @@ export class CalendarComponent implements OnInit {
     for (var index = 0; index < this.newEventsMonth[slot['start'].getDate()].length; index++) {
       var element = this.newEventsMonth[slot['start'].getDate()][index];
       if (element.meta.consId == slot.meta.consId) {
-        console.log("Fallllllssssseeee")
         return false;
       }
     };
