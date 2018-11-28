@@ -24,6 +24,7 @@ export class ResponeFormComponent {
             var baseURl = window.location.href.substring(0, window.location.href.indexOf("/addForm"))
             this.url = baseURl + "/edit-client/" + this.form['id'] + "/" + this.form['token']
         }
+        console.log(this.form)
     }
 
 

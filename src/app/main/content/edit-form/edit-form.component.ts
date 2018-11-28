@@ -115,7 +115,7 @@ export class EditFormComponent implements OnInit {
 
   eduLevels = [
     {
-      label: "assoc",
+      label: "Associate Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -143,7 +143,7 @@ export class EditFormComponent implements OnInit {
       ]
     },
     {
-      label: "bac",
+      label: "Bachelor Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -171,7 +171,7 @@ export class EditFormComponent implements OnInit {
       ]
     },
     {
-      label: "master",
+      label: "Master Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -199,7 +199,7 @@ export class EditFormComponent implements OnInit {
       ]
     },
     {
-      label: "PHD",
+      label: "PHDDegree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -283,18 +283,27 @@ export class EditFormComponent implements OnInit {
       viewValue: 'Add_Edit_Form.STEP_4.PLACE',
       value: ['militaryPlace', 'militaryPlaceSp'],
       icon: 'book',
-      isInput: true
+      type: 'input',
+      width:30
     },
     {
       viewValue: 'Add_Edit_Form.STEP_4.FROM',
       value: ['militaryDurationFrom', 'militaryDurationFromSp'],
       icon: 'book',
-      isInput: false
+      type: 'date',
+      width:30      
     }, {
       viewValue: 'Add_Edit_Form.STEP_4.TO',
       value: ['militaryDurationTo', 'militaryDurationToSp'],
       icon: 'book',
-      isInput: false
+      type: 'date',
+      width:30      
+    }, {
+      viewValue: 'Add_Edit_Form.STEP_4.EXEMPTIONREASON',
+      value: ['exemptionReason', 'exemptionReasonSp'],
+      icon: 'book',
+      type: 'textarea',
+      width:97      
     }
   ]
 
@@ -655,10 +664,12 @@ export class EditFormComponent implements OnInit {
           militaryPlace: [data['militaryPlace']],
           militaryDurationFrom: [data['militaryDurationFrom']],
           militaryDurationTo: [data['militaryDurationTo']],
+          exemptionReason: [data['exemptionReason']],
           militaryStatusSp: [data['militaryStatusSp']],
           militaryPlaceSp: [data['militaryPlaceSp']],
           militaryDurationFromSp: [data['militaryDurationFromSp']],
           militaryDurationToSp: [data['militaryDurationToSp']],
+          exemptionReasonSp: [data['exemptionReasonSp']],
         }),
         this._formBuilder.group({
           significantCurrentSickness: [data['significantCurrentSickness']],
@@ -802,7 +813,7 @@ export class EditFormComponent implements OnInit {
       }
     });
 
-    this.dialogSer.confirmationMessage('are you sure you want edit the form ', "forms/" + this.formData['id'], this.sendArray, false, function () {
+    this.dialogSer.confirmationMessage('Do you want to edit the form ', "forms/" + this.formData['id'], this.sendArray, false, function () {
       // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
       mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
     }, 'patch')

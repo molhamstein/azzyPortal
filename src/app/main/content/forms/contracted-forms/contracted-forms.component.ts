@@ -117,11 +117,24 @@ export class ContractedFormsComponent implements OnInit {
         result['formId'] = id;
         if (urlIndex == 1)
           result['statusName'] = newStatus;
-        this.dialogSer.confirmationMessage('are you sure you want change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+        this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
           mainThis.inisilaize()
         }, 'put')
       }
     });
+  }
+
+
+
+  downloadCont(id) {
+    this.mainServ.APIServ.get("forms/getContractPdf/" + id).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        console.log(data['getContractPdf'].url);
+        var win = window.open(data['getContractPdf'].url, '_blank');
+        win.focus();  
+      }
+    })
+
   }
 
 

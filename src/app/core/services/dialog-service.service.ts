@@ -25,8 +25,12 @@ export class DialogServiceService {
 
 
   responseFormDialog(isAddedMessage, data: any = {}) {
+    var className = "custom-modalbox"
+    if (isAddedMessage == false)
+      className = "false-custom-modalbox"
     let dialogRef = this.dialog.open(ResponeFormComponent, {
       width: '650px',
+      panelClass: 'className',
       data: { isAddedMessage: isAddedMessage, form: data }
     });
 

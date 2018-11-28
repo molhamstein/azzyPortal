@@ -118,7 +118,7 @@ export class AdviceFormComponent implements OnInit {
 
   eduLevels = [
     {
-      label: "assoc",
+      label: "Associate Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -146,7 +146,7 @@ export class AdviceFormComponent implements OnInit {
       ]
     },
     {
-      label: "bac",
+      label: "Bachelor Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -174,7 +174,7 @@ export class AdviceFormComponent implements OnInit {
       ]
     },
     {
-      label: "master",
+      label: "Master Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -202,7 +202,7 @@ export class AdviceFormComponent implements OnInit {
       ]
     },
     {
-      label: "PHD",
+      label: "PHDDegree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -286,18 +286,27 @@ export class AdviceFormComponent implements OnInit {
       viewValue: 'Add_Edit_Form.STEP_4.PLACE',
       value: ['militaryPlace', 'militaryPlaceSp'],
       icon: 'book',
-      isInput: true
+      type: 'input',
+      width: 30
     },
     {
       viewValue: 'Add_Edit_Form.STEP_4.FROM',
       value: ['militaryDurationFrom', 'militaryDurationFromSp'],
       icon: 'book',
-      isInput: false
+      type: 'date',
+      width: 30
     }, {
       viewValue: 'Add_Edit_Form.STEP_4.TO',
       value: ['militaryDurationTo', 'militaryDurationToSp'],
       icon: 'book',
-      isInput: false
+      type: 'date',
+      width: 30
+    }, {
+      viewValue: 'Add_Edit_Form.STEP_4.EXEMPTIONREASON',
+      value: ['exemptionReason', 'exemptionReasonSp'],
+      icon: 'book',
+      type: 'textarea',
+      width: 97
     }
   ]
 
@@ -540,10 +549,13 @@ export class AdviceFormComponent implements OnInit {
           militaryPlace: [''],
           militaryDurationFrom: [''],
           militaryDurationTo: [''],
+          exemptionReason: [''],
           militaryStatusSp: [''],
           militaryPlaceSp: [''],
           militaryDurationFromSp: [''],
           militaryDurationToSp: [''],
+          exemptionReasonSp: [''],
+
         }),
         this._formBuilder.group({
           significantCurrentSickness: [''],
@@ -650,12 +662,7 @@ export class AdviceFormComponent implements OnInit {
       if (result == true) {
         this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
           if (this.mainServ.APIServ.getErrorCode() == 0) {
-            this.mainServ.APIServ.post("forms/" + data['id'] + "/Client/accessTokens", this.sendArray).subscribe((dataAccrssToken: any) => {
-              if (this.mainServ.APIServ.getErrorCode() == 0) {
-                data['token'] = dataAccrssToken['id'];
-                this.dialogSerc.responseFormDialog(true, data)
-              }
-            })
+            this.dialogSerc.responseFormDialog(true, data)
           } else if (this.mainServ.APIServ.getErrorCode() == 422) {
             this.mainServ.APIServ.setErrorCode(0);
             this.dialogSerc.responseFormDialog(false)

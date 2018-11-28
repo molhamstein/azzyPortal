@@ -36,7 +36,7 @@
         </ng-template>
       </ngx-datatable-column>
 
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="lLandlinePhoneNo">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Client.clientNumber">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>
         </ng-template>

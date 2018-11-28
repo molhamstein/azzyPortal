@@ -11,9 +11,12 @@
     <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
       <div class="h2 mt-16">
         <button mat-button (click)="goBack()" cdkFocusInitial>{{'Add_Edit_Form.BACK' | translate}}</button>
+        <div *ngIf="form.Client" style="display: grid;padding-left: 24px;">
+          <label>{{form.nameEnglish}} {{form.surnameEnglish}} </label>
+          <label>{{form.Client.clientNumber}}</label>
+        </div>
       </div>
     </div>
-
 
   </div>
   <!-- / HEADER -->
@@ -236,15 +239,21 @@
 
           <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
-            <div fxFlex="30" *ngFor="let oneField of militaryFields">
-              <mat-form-field style="width: 100%" *ngIf="oneField.isInput">
-                <input disabled matInput placeholder="{{ oneField.viewValue | translate }}" [(ngModel)]="form[oneField.value[0]]">
+            <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
+              <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
+                <input matInput placeholder="{{ oneField.viewValue | translate }}" [(ngModel)]="form[oneField.value[0]]">
+                <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
+
+              </mat-form-field>
+              <mat-form-field style="width: 100%" *ngIf="oneField.type=='textarea'">
+                <textarea matInput placeholder="{{ oneField.viewValue | translate }}" [(ngModel)]="form[oneField.value[0]]"></textarea>
                 <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
               </mat-form-field>
 
-              <mat-form-field style="width: 100%" *ngIf="oneField.isInput==false">
-                <input disabled matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
+
+              <mat-form-field style="width: 100%" *ngIf="oneField.type=='date'">
+                <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
                   [(ngModel)]="form[oneField.value[0]]">
                 <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -535,22 +544,29 @@
           </mat-panel-title>
 
           <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+            <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
+              <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
+                <input matInput placeholder="{{ oneField.viewValue | translate }}" [(ngModel)]="form[oneField.value[1]]">
+                <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
-            <div fxFlex="30" *ngFor="let oneField of militaryFields">
-              <mat-form-field style="width: 100%" *ngIf="oneField.isInput">
-                <input disabled matInput placeholder="{{ oneField.viewValue | translate }}" [(ngModel)]="form[oneField.value[1]]">
+              </mat-form-field>
+              <mat-form-field style="width: 100%" *ngIf="oneField.type=='textarea'">
+                <textarea matInput placeholder="{{ oneField.viewValue | translate }}" [(ngModel)]="form[oneField.value[1]]"></textarea>
                 <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
               </mat-form-field>
 
-              <mat-form-field style="width: 100%" *ngIf="oneField.isInput==false">
-                <input disabled matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
+
+              <mat-form-field style="width: 100%" *ngIf="oneField.type=='date'">
+                <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
                   [(ngModel)]="form[oneField.value[1]]">
                 <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
 
               </mat-form-field>
             </div>
+
+
           </div>
 
           <mat-panel-title style="font-weight: bold; margin-top: 20px;">

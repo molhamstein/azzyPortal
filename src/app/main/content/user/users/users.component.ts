@@ -107,7 +107,7 @@ export class usersComponent implements OnInit {
 
   changeStatus(newStatus, id, name) {
     var mainThis = this;
-    this.dialogServ.confirmationMessage('are you sure you want change ' + name + ' user to ' + newStatus, "staffusers/" + id, { 'status': newStatus }, false, function () {
+    this.dialogServ.confirmationMessage('Do you want to change ' + name + ' user to ' + newStatus, "staffusers/" + id, { 'status': newStatus }, false, function () {
       mainThis.inisilaize()
     })
 

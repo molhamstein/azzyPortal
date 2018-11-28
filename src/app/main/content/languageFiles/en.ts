@@ -139,7 +139,8 @@ export const locale = {
                 'EXEMPTION': 'Exemption',
                 'PLACE': 'Place',
                 'FROM': 'From',
-                'TO': 'To'
+                'TO': 'To',
+                'EXEMPTIONREASON': 'Exemption Reason'
             },
             'STEP_5': {
                 'LABEL': 'Health',
@@ -147,7 +148,7 @@ export const locale = {
                 'SURGERY': 'Surgery Past Or Future',
             },
             'STEP_6': {
-                'LABEL': 'Relatives In Ausralia',
+                'LABEL': 'Relatives In Australia',
                 'CITIZEN': 'Citizen',
                 'PERMANENTRES': 'Permanent Res',
                 'TEMPORARYRES': 'Temporary Res',
@@ -235,7 +236,7 @@ export const locale = {
                 "TITLE": "Cansel Appointment",
                 "NO": "No",
                 "YES": "Yes",
-                "CONFIRM":"are you sure you want delete this appointment"
+                "CONFIRM":"Do you want to delete this appointment"
             }
         },
         'AUTH': {
