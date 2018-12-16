@@ -67,8 +67,9 @@ export class AddApointmentComponent {
         this.dialogRef.close();
     }
     save() {
-        console.log
-        this.mainServ.APIServ.put("forms/selectAp/" + this.myControl.value, { 'apId': this.appointment['meta']['id'] }).subscribe((data: any) => {
+        var user = this.options.filter(option => option['mobileNo'].includes(this.myControl.value))[0];
+
+        this.mainServ.APIServ.put("forms/selectAp/" + user['id'], { 'apId': this.appointment['meta']['id'] }).subscribe((data: any) => {
             if (this.mainServ.APIServ.getErrorCode() == 0) {
 
 

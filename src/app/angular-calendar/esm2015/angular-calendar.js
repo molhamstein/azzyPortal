@@ -2490,7 +2490,7 @@ CalendarDayViewComponent.decorators = [
             (dragEnd)="eventDragged(dayEvent, $event.y)"
             [style.marginTop.px]="dayEvent.top"
             [style.height.px]="dayEvent.height"
-            [style.marginLeft.px]="dayEvent.left + 70"
+            [style.marginLeft.px]="dayEvent.event.left + 70"
             [style.width.px]="dayEvent.width - 1">
             <mwl-calendar-day-view-event
               [dayEvent]="dayEvent"

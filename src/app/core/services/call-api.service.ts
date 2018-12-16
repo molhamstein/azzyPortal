@@ -16,6 +16,7 @@ export class CallApiService {
   }
   // readonly baseUrl = "http://104.217.253.15:2999/api/"
   readonly baseUrl = "http://178.62.233.91:3000/api/"
+  // readonly baseUrl = "http://192.168.1.9:3000/api/"
   private errorCode = 0;
   private code = "";
 

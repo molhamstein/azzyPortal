@@ -212,21 +212,23 @@ export class CalendarComponent implements OnInit {
 
   preperData() {
     this.dayEvent = []
+    var index = 0;
     this.eventsForDay.forEach(element => {
       var slotCons = element;
       if (slotCons.length != 0) {
         for (var houre = 0; houre < 24; houre++) {
           for (var min = 0; min < 2; min++) {
-            this.dayEvent.push(this.isAvailbleDate(slotCons, houre, min * 30))
+            this.dayEvent.push(this.isAvailbleDate(slotCons, houre, min * 30, index))
           }
         }
+        index++;
       }
     });
     console.log(this.dayEvent);
   }
 
 
-  isAvailbleDate(items, houre, min) {
+  isAvailbleDate(items, houre, min, index) {
     let newItem;
     items.find(item => {
       if (item.start.getHours() == houre && item.start.getMinutes() == min) {
@@ -234,6 +236,7 @@ export class CalendarComponent implements OnInit {
       }
     })
     if (newItem != null) {
+      newItem.left = index * 312;
       return newItem
     } else {
       let start = cloneDeep(items[0].start)
@@ -241,7 +244,7 @@ export class CalendarComponent implements OnInit {
       start.setMinutes(min);
       let end = cloneDeep(start);
       end.setTime(start.getTime() + (30 * 60 * 1000));
-      return { 'start': start, 'end': end, 'title': "Space Time", 'color': { 'primary': items[0].color.primary + "52", 'secondary': items[0].color.secondary + "52" } };
+      return { 'start': start, 'end': end, 'left': index * 312, 'title': "Space Time", 'color': { 'primary': items[0].color.primary + "52", 'secondary': items[0].color.secondary + "52" } };
     }
   }
   getSlots(date, ids) {
@@ -288,8 +291,8 @@ export class CalendarComponent implements OnInit {
             // console.log(this.isAddToMonthEvent(x));
             // if (slot.open == false) {
             if (this.newEventsMonth[x['start'].getDate()] == null || this.isAddToMonthEvent(x)) {
-              var tempX=x;
-              tempX['title']="";
+              var tempX = Object.assign({}, x);
+              tempX['title'] = "";
               this.monthEvent.push(tempX);
             }
             if (this.newEventsMonth[x['start'].getDate()] == null)

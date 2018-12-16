@@ -30,7 +30,7 @@ export class DeleteAppointmentComponent {
 
     onYesClick() {
         this.mainServ.loaderSer.display(true);
-        this.mainServ.APIServ.put("forms/cancelAp/" + this.appointment['meta'].id, {}).subscribe((data: any) => {
+        this.mainServ.APIServ.put("forms/cancelAp/" + this.appointment['meta'].forms.id, {}).subscribe((data: any) => {
             this.mainServ.loaderSer.display(false);
             if (this.mainServ.APIServ.getErrorCode() == 0) {
                 this.dialogRef.close();
