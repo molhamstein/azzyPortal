@@ -28,7 +28,7 @@
     <div fxLayout="column">
 
 
-      <form class="mat-white-bg mat-elevation-z0 p-24" fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" name="formGroup"
+      <form class="mat-white-bg mat-elevation-z0 p-24" (keydown.enter)="$event.preventDefault()" fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" name="formGroup"
         [formGroup]="formGroup">
 
 

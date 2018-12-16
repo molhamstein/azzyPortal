@@ -30,7 +30,7 @@
         <div fxLayout="column" *ngIf="loder==true">
 
 
-          <form style="padding: 0px !important;" class="mat-white-bg mat-elevation-z0 p-24" fxLayout="column" fxLayoutAlign="start"
+          <form style="padding: 0px !important;" (keydown.enter)="$event.preventDefault()" class="mat-white-bg mat-elevation-z0 p-24" fxLayout="column" fxLayoutAlign="start"
             fxFlex="1 0 auto" name="formGroup" [formGroup]="formGroup">
 
 
@@ -898,7 +898,7 @@
         <div style="background-color: white;">
           <h2 class="title">Installments included in the contract</h2>
 
-          <form class="" [formGroup]="feeForm" #f="ngForm">
+          <form class=""  [formGroup]="feeForm" #f="ngForm">
 
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
