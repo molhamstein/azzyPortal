@@ -392,7 +392,7 @@ export class EditFormComponent implements OnInit {
       icon: 'note'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_7.howKnow',
+      viewValue: 'Add_Edit_Form.STEP_7.ANYINFO',
       value: ['howKnow'],
       icon: 'note'
     },

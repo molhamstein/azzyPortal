@@ -182,7 +182,7 @@ export const locale = {
                 'PFSTATE': 'Points from State Sponsorship',
                 'PFFAMILY': 'Points from Family Sponsorship',
                 'TOTALPOINT': 'Total Points',
-                'howKnow': 'How did you know about us?',
+                'ANYINFO': 'Any Information You Want To Add',
                 'DONE': "Done",
                 'EDIT': "Edit",
                 'BACK':"Back",
