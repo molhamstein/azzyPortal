@@ -117,7 +117,7 @@
 <div class="col-md-5" style="margin-top: 200px;">
 
   <mat-form-field style="width: 100%;">
-    <mat-select (selectionChange)="changeTimezone($event.value,$event.viewValue)" [(value)]="timezoneSelect" placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}">
+    <mat-select (selectionChange)="changeTimezone($event.value,$event.viewValue)" [(value)]="timezoneSelect" placeholder="{{ 'Calender.CHOOSETIMEZONE' | translate }}">
       <!--<ngx-mat-select-search [formControl]="bankFilterCtrl"></ngx-mat-select-search>-->
       <mat-option *ngFor="let oneTimeZone of timeZoneArray" [value]="oneTimeZone.value">
         {{ oneTimeZone.viewValue }}

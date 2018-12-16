@@ -86,7 +86,7 @@ export const locale = {
                 'EMAIL': 'Email',
                 'MOBILE': 'Mobile',
                 'PHONE': 'Line Phone',
-                'MARITAL_STATUS': 'Time Zone',
+                'MARITAL_STATUS': 'marital status',
                 'CHILDREN_NUM': 'Number of Children',
                 'BIRTH_DATE': 'Date of Birth',
                 'SKYPE_ID': 'Skype ID',
