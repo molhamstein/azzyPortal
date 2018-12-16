@@ -182,7 +182,14 @@ export const locale = {
                 'PFSTATE': 'Points from State Sponsorship',
                 'PFFAMILY': 'Points from Family Sponsorship',
                 'TOTALPOINT': 'Total Points',
-                'howKnow': 'How did you know about us?'
+                'howKnow': 'How did you know about us?',
+                'DONE': "Done",
+                'EDIT': "Edit",
+                'BACK':"Back",
+                'NEXT':"Next"
+            },
+            'STEP_8': {
+                'LABEL': 'Confirm Your Information',
             }
 
 
@@ -236,7 +243,7 @@ export const locale = {
                 "TITLE": "Cansel Appointment",
                 "NO": "No",
                 "YES": "Yes",
-                "CONFIRM":"Do you want to delete this appointment"
+                "CONFIRM": "Do you want to delete this appointment"
             }
         },
         'AUTH': {

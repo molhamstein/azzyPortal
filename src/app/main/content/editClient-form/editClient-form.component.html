@@ -263,7 +263,7 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([0]).invalid">Next</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -335,8 +335,8 @@
             </div>
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([1]).invalid">Next</button>
+              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -418,8 +418,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([2]).invalid">Next</button>
+              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -485,8 +485,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([3]).invalid">Next</button>
+              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -585,8 +585,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([4]).invalid">Next</button>
+              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -627,8 +627,8 @@
               </div>
             </div>
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([5]).invalid">Next</button>
+              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -697,16 +697,17 @@
             </div>
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([6]).invalid">Next</button>
+              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
 
 
           <mat-step formGroupName="7" [stepControl]="formArray?.get([7])">
-            <ng-template matStepLabel>Confirm your information</ng-template>
-
+            <ng-template matStepLabel>
+              <div>{{ 'Add_Edit_Form.STEP_8.LABEL' | translate }}</div>
+            </ng-template>
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
               <div fxFlex="100">
@@ -729,19 +730,13 @@
 
             </div>
             <div style="float: right;">
-              <button mat-button (click)="editForm()">Done</button>
+              <button mat-button (click)="editForm()">{{ 'Add_Edit_Form.STEP_7.EDIT' | translate }}</button>
             </div>
           </mat-step>
 
 
 
-          <mat-step>
-            <ng-template matStepLabel>Confirm your information</ng-template>
-            Everything seems correct.
-            <div style="float: right;">
-              <button mat-button (click)="editForm()">Edit</button>
-            </div>
-          </mat-step>
+
 
         </mat-horizontal-stepper>
       </form>
