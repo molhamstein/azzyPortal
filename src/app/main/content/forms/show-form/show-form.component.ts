@@ -193,7 +193,7 @@ export class ShowFormComponent implements OnInit {
       ]
     },
     {
-      label: "PHDDegree",
+      label: "PHD Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -348,7 +348,7 @@ export class ShowFormComponent implements OnInit {
 
   notesFields = [
     {
-      viewValue: 'Add_Edit_Form.STEP_7.TBCLIENT',
+      viewValue: 'Add_Edit_Form.STEP_7.ANYINFO',
       value: ['textBoxClient'],
       icon: 'note'
     },
@@ -363,7 +363,7 @@ export class ShowFormComponent implements OnInit {
       icon: 'note'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_7.ANYINFO',
+      viewValue: 'Add_Edit_Form.STEP_7.HOWKNOWUS',
       value: ['howKnow'],
       icon: 'note'
     }

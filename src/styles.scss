@@ -50,13 +50,16 @@
   height: 400px !important;
 }
 
-
-.circleColor{
+.circleColor {
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
 
-.mat-step-label{
+.mat-step-label {
   font-size: 12px !important;
+}
+
+.subLabel {
+  padding: 15px 0px;
 }

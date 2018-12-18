@@ -28,14 +28,15 @@
     <div fxLayout="column">
 
 
-      <form class="mat-white-bg mat-elevation-z0 p-24" (keydown.enter)="$event.preventDefault()" fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" name="formGroup"
-        [formGroup]="formGroup">
+      <form class="mat-white-bg mat-elevation-z0 p-24" (keydown.enter)="$event.preventDefault()" fxLayout="column" fxLayoutAlign="start"
+        fxFlex="1 0 auto" name="formGroup" [formGroup]="formGroup">
 
 
         <mat-horizontal-stepper formArrayName="formArray" [linear]="true">
 
           <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
             <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_0.SUBLABEL' | translate }}</label>
 
             <mat-panel-title style="font-weight: bold">
               <mat-icon>account_circle</mat-icon>
@@ -281,6 +282,7 @@
               <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>
             </ng-template>
 
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_1.SUBLABEL' | translate }}</label>
 
 
 
@@ -356,6 +358,7 @@
             </ng-template>
 
 
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_2.SUBLABEL' | translate }}</label>
 
 
             <mat-panel-title style="font-weight: bold;">
@@ -437,6 +440,7 @@
             <ng-template matStepLabel>
               <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>
             </ng-template>
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_3.SUBLABEL' | translate }}</label>
 
             <mat-panel-title style="font-weight: bold;">
               <mat-icon>account_circle</mat-icon>
@@ -506,6 +510,7 @@
             </ng-template>
 
 
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_4.SUBLABEL' | translate }}</label>
 
 
             <mat-panel-title style="font-weight: bold">
@@ -604,6 +609,8 @@
               <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>
             </ng-template>
 
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_5.SUBLABEL' | translate }}</label>
+
             <mat-panel-title style="font-weight: bold">
               <mat-icon>account_circle</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
@@ -645,6 +652,8 @@
             <ng-template matStepLabel>
               <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>
             </ng-template>
+
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_6.SUBLABEL' | translate }}</label>
 
             <mat-panel-title style="font-weight: bold">
               <mat-icon>account_circle</mat-icon>
@@ -717,17 +726,21 @@
             <ng-template matStepLabel>
               <div>{{ 'Add_Edit_Form.STEP_8.LABEL' | translate }}</div>
             </ng-template>
+
+            <label class="subLabel">{{ 'Add_Edit_Form.STEP_8.SUBLABEL' | translate }}</label>
+
+
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
               <div fxFlex="100">
                 <mat-form-field style="width: 100%">
-                  <textarea matInput placeholder=" {{ 'Add_Edit_Form.STEP_7.TBCLIENT' | translate }}" formControlName="textBoxClient"></textarea>
+                  <textarea matInput placeholder=" {{ 'Add_Edit_Form.STEP_7.ANYINFO' | translate }}" formControlName="textBoxClient"></textarea>
                   <mat-icon matSuffix>note</mat-icon>
 
                 </mat-form-field>
 
                 <mat-form-field style="width: 100%">
-                  <textarea matInput placeholder=" {{ 'Add_Edit_Form.STEP_7.ANYINFO' | translate }}" formControlName="howKnow"></textarea>
+                  <textarea matInput placeholder=" {{ 'Add_Edit_Form.STEP_7.HOWKNOWUS' | translate }}" formControlName="howKnow"></textarea>
                   <mat-icon matSuffix>note</mat-icon>
 
                 </mat-form-field>

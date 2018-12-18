@@ -30,14 +30,15 @@
         <div fxLayout="column" *ngIf="loder==true">
 
 
-          <form style="padding: 0px !important;" (keydown.enter)="$event.preventDefault()" class="mat-white-bg mat-elevation-z0 p-24" fxLayout="column" fxLayoutAlign="start"
-            fxFlex="1 0 auto" name="formGroup" [formGroup]="formGroup">
+          <form style="padding: 0px !important;" (keydown.enter)="$event.preventDefault()" class="mat-white-bg mat-elevation-z0 p-24"
+            fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" name="formGroup" [formGroup]="formGroup">
 
 
             <mat-horizontal-stepper formArrayName="formArray" [linear]="true">
 
               <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
                 <ng-template matStepLabel>{{ 'Add_Edit_Form.STEP_0.LABEL' | translate }}</ng-template>
+                <label class="subLabel">{{ 'Add_Edit_Form.STEP_0.SUBLABEL' | translate }}</label>
 
                 <mat-panel-title style="font-weight: bold">
                   <mat-icon>account_circle</mat-icon>
@@ -280,6 +281,7 @@
                   <div>{{ 'Add_Edit_Form.STEP_1.LABEL' | translate }}</div>
                 </ng-template>
 
+                <label class="subLabel">{{ 'Add_Edit_Form.STEP_1.SUBLABEL' | translate }}</label>
 
 
 
@@ -354,6 +356,7 @@
                   <div>{{ 'Add_Edit_Form.STEP_2.LABEL' | translate }}</div>
                 </ng-template>
 
+                <label class="subLabel">{{ 'Add_Edit_Form.STEP_2.SUBLABEL' | translate }}</label>
 
 
 
@@ -436,6 +439,7 @@
                 <ng-template matStepLabel>
                   <div>{{ 'Add_Edit_Form.STEP_3.LABEL' | translate }}</div>
                 </ng-template>
+                <label class="subLabel">{{ 'Add_Edit_Form.STEP_3.SUBLABEL' | translate }}</label>
 
                 <mat-panel-title style="font-weight: bold;">
                   <mat-icon>account_circle</mat-icon>
@@ -503,6 +507,7 @@
                 <ng-template matStepLabel>
                   <div>{{ 'Add_Edit_Form.STEP_4.LABEL' | translate }}</div>
                 </ng-template>
+                <label class="subLabel">{{ 'Add_Edit_Form.STEP_4.SUBLABEL' | translate }}</label>
 
 
 
@@ -603,6 +608,7 @@
                 <ng-template matStepLabel>
                   <div>{{ 'Add_Edit_Form.STEP_5.LABEL' | translate }}</div>
                 </ng-template>
+                <label class="subLabel">{{ 'Add_Edit_Form.STEP_5.SUBLABEL' | translate }}</label>
 
                 <mat-panel-title style="font-weight: bold">
                   <mat-icon>account_circle</mat-icon>
@@ -645,6 +651,7 @@
                 <ng-template matStepLabel>
                   <div>{{ 'Add_Edit_Form.STEP_6.LABEL' | translate }}</div>
                 </ng-template>
+                <label class="subLabel">{{ 'Add_Edit_Form.STEP_6.SUBLABEL' | translate }}</label>
 
                 <mat-panel-title style="font-weight: bold">
                   <mat-icon>account_circle</mat-icon>
@@ -863,7 +870,7 @@
 
                 <div style="float: right;">
                   <button mat-button matStepperPrevious type="button">{{ 'Add_Edit_Form.STEP_7.BACK' | translate }}</button>
-                  
+
                   <button mat-button (click)="editForm()" type="button">{{ 'Add_Edit_Form.STEP_7.EDIT' | translate }}</button>
                 </div>
               </mat-step>
@@ -898,7 +905,7 @@
         <div style="background-color: white;">
           <h2 class="title">Installments included in the contract</h2>
 
-          <form class=""  [formGroup]="feeForm" #f="ngForm">
+          <form class="" [formGroup]="feeForm" #f="ngForm">
 
 
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>

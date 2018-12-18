@@ -197,7 +197,7 @@ export class EditClientFormComponent implements OnInit {
       ]
     },
     {
-      label: "PHDDegree",
+      label: "PHD Degree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',

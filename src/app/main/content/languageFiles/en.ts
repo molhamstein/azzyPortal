@@ -79,6 +79,7 @@ export const locale = {
             },
             'STEP_0': {
                 'LABEL': 'Info',
+                'SUBLABEL': 'Personal Information about Applicant and Spouse',
                 'ENAME': 'English Name',
                 'ESNAME': 'English Sur Name',
                 'FNAME': 'Farsi Name',
@@ -100,6 +101,7 @@ export const locale = {
             },
             'STEP_1': {
                 'LABEL': 'English',
+                'SUBLABEL': 'Please define the level of your English knowledge',
                 'ENGLISH_LEVEL': 'How familiar are you in English?',
                 'EXCELLENT': 'Excellent',
                 'GOOD': 'Good',
@@ -109,6 +111,7 @@ export const locale = {
             },
             'STEP_2': {
                 'LABEL': 'Education',
+                'SUBLABEL': 'Please list your educational background',
                 'DEGREE': 'Degree',
                 'ASSISTANT': 'Assistant',
                 'UNDER_GRAD': 'Undergraduate',
@@ -121,6 +124,7 @@ export const locale = {
             },
             'STEP_3': {
                 'LABEL': 'Work',
+                'SUBLABEL': 'Please let us know your work experience',
                 'FIELDOfWork': 'field Of Working',
                 "REDYPAID": "Relateded Years Paid",
                 "REDYNPAID": "Relateded Years Non Paid",
@@ -134,6 +138,7 @@ export const locale = {
             },
             'STEP_4': {
                 'LABEL': 'Military',
+                'SUBLABEL': 'please define the status of your military service, if applicable',
                 'STATUS': 'Status',
                 'FINISHED': 'Finished',
                 'EXEMPTION': 'Exemption',
@@ -144,11 +149,13 @@ export const locale = {
             },
             'STEP_5': {
                 'LABEL': 'Health',
+                'SUBLABEL': 'Please define your medical and health status',
                 'SIGNIFICANT': 'Significant Current Sickness',
                 'SURGERY': 'Surgery Past Or Future',
             },
             'STEP_6': {
                 'LABEL': 'Relatives In Australia',
+                'SUBLABEL': 'Please let us know if you have any relatives living in Australia',
                 'CITIZEN': 'Citizen',
                 'PERMANENTRES': 'Permanent Res',
                 'TEMPORARYRES': 'Temporary Res',
@@ -161,7 +168,6 @@ export const locale = {
             },
             'STEP_7': {
                 'LABEL': 'Admin',
-                'TBCLIENT': 'text Box Client',
                 'TBADMIN': 'text Box Admin',
                 'TBNOTES': 'text Box Notes',
                 'MAINAPPLICATION': 'Main Applicant',
@@ -183,12 +189,15 @@ export const locale = {
                 'PFFAMILY': 'Points from Family Sponsorship',
                 'TOTALPOINT': 'Total Points',
                 'ANYINFO': 'Any Information You Want To Add',
+                'HOWKNOWUS': 'How did you know about us',
                 'DONE': "Done",
                 'EDIT': "Edit",
-                'BACK':"Back",
-                'NEXT':"Next"
+                'BACK': "Back",
+                'NEXT': "Next"
             },
             'STEP_8': {
+                'SUBLABEL': 'Please check all the data you have entered and click the Done Button for submission.',
+                'SUBLABEL2': 'Please check all the data you have entered and click the Edit Button for modification.',
                 'LABEL': 'Confirm Your Information',
             }
 
