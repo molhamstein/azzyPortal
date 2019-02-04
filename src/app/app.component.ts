@@ -57,18 +57,16 @@ export class AppComponent {
 
         var lang = this.getParameterByName('lang', null)
 
-        if (lang == undefined) {
+        if (lang == undefined || lang == "") {
             lang = this.mainSer.loginServ.getlang();
-            if (lang != null) {
+            if (lang != null && lang != "") {
                 this.translate.use(lang);
                 if (lang == "fa")
                     this.dir.switchDir("rtl");
-                // else
-                //     this.dir.switchDir("rtl");
-
             }
-            else
+            else {
                 this.mainSer.loginServ.setLang("en")
+            }
         } else {
             if (lang == "fa")
                 this.dir.switchDir("rtl");
