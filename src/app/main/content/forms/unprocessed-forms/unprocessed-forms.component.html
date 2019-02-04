@@ -1,11 +1,22 @@
 <div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
 
   <!-- HEADER -->
-  <div class="header mat-accent-bg p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+  <div class="header mat-accent-bg p-24 h-100" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row"
+    fxLayoutAlign.gt-xs="space-between center">
     <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
       <div class="h2 mt-16">{{'Form.UNPROCESSED_FORMS.TITLE' | translate }}</div>
     </div>
 
+    <div style="width: 350;padding-top: 20px;" class="search">
+      <button mat-button class="clear" (click)="clear()" type="button">{{'Form.FORMS.CLEAR' | translate}}</button>
+      <button mat-button class="search" (click)="search()" type="button">{{'Form.FORMS.SEARCH' | translate}}</button>
+      <mat-form-field>
+
+        <input matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="searchKey" placeholder="{{ 'Form.FORMS.SEARCH' | translate }}">
+        <mat-icon matSuffix>search</mat-icon>
+        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
+      </mat-form-field>
+    </div>
 
   </div>
   <!-- / HEADER -->
@@ -14,9 +25,9 @@
   <div class="content p-24">
 
 
-    <ngx-datatable class="material vertical-scroll" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [rowHeight]="50"
-      [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [externalPaging]="true" [count]="count" [offset]="offset"
-      [limit]="limit" (page)='onPage($event)'>
+    <ngx-datatable class="material vertical-scroll" [rows]="rows" [columnMode]="'force'" [headerHeight]="50"
+      [rowHeight]="50" [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [externalPaging]="true" [count]="count"
+      [offset]="offset" [limit]="limit" (page)='onPage($event)'>
 
 
       <!--<ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Id">
@@ -40,7 +51,7 @@
         </ng-template>
       </ngx-datatable-column>
 
-       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Client.clientNumber">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Client.clientNumber">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>
         </ng-template>
@@ -52,24 +63,36 @@
         </ng-template>
 
         <ng-template let-row="row" ngx-datatable-cell-template>
-         {{row.nameEnglish}} {{row.surnameEnglish}}
+          {{row.nameEnglish}} {{row.surnameEnglish}}
         </ng-template>
 
       </ngx-datatable-column>
-      
+
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Status">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>
         </ng-template>
         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          <mat-chip-list *ngIf="row.status=='sss'">
-            <mat-chip color="accent" selected="true">{{row.status}}</mat-chip>
-          </mat-chip-list>
           <mat-chip-list *ngIf="row.status=='unprocessed'">
             <mat-chip color="gray" selected="true">{{row.status}}</mat-chip>
           </mat-chip-list>
+          <mat-chip-list *ngIf="row.status=='more info'">
+            <mat-chip color="accent" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+          <mat-chip-list *ngIf="row.status=='not eligible'">
+            <mat-chip style="background-color:#ff6363" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+
+          <mat-chip-list *ngIf="row.status=='contracts'">
+            <mat-chip style="background-color:green" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+
+          <mat-chip-list *ngIf="row.status=='consultation'">
+            <mat-chip style="background-color:#22408e" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
         </ng-template>
       </ngx-datatable-column>
+      
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
 
         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
@@ -81,22 +104,28 @@
               <mat-icon>search</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>
             </button>
-            <button *ngIf="isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )">
+
+            <button *ngIf="row.status!='not eligible' && isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>cancel</mat-icon>
-              <span>{{'Form.UNPROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>
+              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>
             </button>
-            <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="row.status!='more info' && isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>more_horiz</mat-icon>
-              <span>{{'Form.UNPROCESSED_FORMS.MORE_INFO' | translate}}</span>
+              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>
             </button>
-            <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="row.status!='consultation' && isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>group</mat-icon>
-              <span>{{'Form.UNPROCESSED_FORMS.CONSULTATION' | translate}}</span>
+              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>
             </button>
-            <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )">
+            <button *ngIf="row.status!='contracts' && isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )">
               <mat-icon>check</mat-icon>
-              <span>{{'Form.UNPROCESSED_FORMS.CONTRACT' | translate}}</span>
+              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>
             </button>
+            <button *ngIf="row.status!='unprocessed' && isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )">
+              <mat-icon>sync</mat-icon>
+              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>
+            </button>
+
             <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="goTo('edit',row.id)">
               <mat-icon>edit</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>

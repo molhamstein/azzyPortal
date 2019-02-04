@@ -564,9 +564,9 @@ export class EditClientFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.translate.use('en');
+    // this.translate.use('en');
 
-    this.appDirection.switchDir('ltr');
+    // this.appDirection.switchDir('ltr');
 
     this.id = this.route.snapshot.paramMap.get('id');
     this.token = this.route.snapshot.paramMap.get('token');

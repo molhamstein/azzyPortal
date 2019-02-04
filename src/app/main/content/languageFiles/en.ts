@@ -3,7 +3,9 @@ export const locale = {
     data: {
         'Form': {
             'FORMS': {
-                'TITLE': 'Forms'
+                'TITLE': 'Forms',
+                'SEARCH': "Search",
+                'CLEAR': "Clear"
             },
             'UNPROCESSED_FORMS': {
                 'TITLE': 'Unprocessed Forms',
@@ -41,8 +43,8 @@ export const locale = {
                 'DELETE': 'Delete',
                 'MORE_INFO': 'More Info',
                 'NOTELIGIBLE': 'Not Eligible',
-                'REJECT': 'Reject',
                 'CONSULTATION': 'Consultation',
+                'REJECT': 'Reject',
                 'CONTRACT': 'Contract'
             },
             'CONTRACTED_FORMS': {
@@ -72,6 +74,8 @@ export const locale = {
             'FORM': 'Form',
             "PAYMENTSTITLE": "Instalments",
             "PAYMENTS": {
+                "INSTALLMENTSLABEL": "Installments included in the contract",
+                "SAVETEMPLATE": "Save Template",
                 "ADDPAID": "Add Paid",
                 "DELETEPAID": "Delete Paid",
                 "NOTE": 'Note',
@@ -282,7 +286,7 @@ export const locale = {
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
                 'USERNAME': 'User Name',
-                'CONSUTANT': 'Consultant',
+                'CONSULTANT': 'Consultant',
                 'MANAGER': 'Manager',
                 'SECRETARY': 'Secretary',
                 'ADMINSTRATOR': 'Adminstrator',

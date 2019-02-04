@@ -35,7 +35,7 @@ export class SetTextBoxAdminComponent {
 
     }
     ngOnInit() {
-        this.translate.use('en');
+        // this.translate.use('en');
 
         if (this.isWithID) {
             this.regiForm = new FormGroup({

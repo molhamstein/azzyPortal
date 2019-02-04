@@ -63,6 +63,6 @@ export class ConfirmMessageComponent {
             })
     }
     ngOnInit() {
-        this.translate.use('en');
+        // this.translate.use('en');
     }
 }

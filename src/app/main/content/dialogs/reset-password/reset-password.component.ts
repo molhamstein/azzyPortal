@@ -29,7 +29,7 @@ export class ResetPasswordComponent {
 
     }
     ngOnInit() {
-        this.translate.use('en');
+        // this.translate.use('en');
 
         this.regiForm = new FormGroup({
             newPassword: new FormControl('', Validators.required),

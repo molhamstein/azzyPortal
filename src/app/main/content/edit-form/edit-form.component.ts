@@ -41,6 +41,7 @@ export class EditFormComponent implements OnInit {
   sendArray = {}
   loder = false;
   allPayments;
+  preAllPayments;
   maritalStatusList = [
     {
       viewValue: 'Add_Edit_Form.STEP_0.MARRIED',
@@ -284,26 +285,26 @@ export class EditFormComponent implements OnInit {
       value: ['militaryPlace', 'militaryPlaceSp'],
       icon: 'book',
       type: 'input',
-      width:30
+      width: 30
     },
     {
       viewValue: 'Add_Edit_Form.STEP_4.FROM',
       value: ['militaryDurationFrom', 'militaryDurationFromSp'],
       icon: 'book',
       type: 'date',
-      width:30      
+      width: 30
     }, {
       viewValue: 'Add_Edit_Form.STEP_4.TO',
       value: ['militaryDurationTo', 'militaryDurationToSp'],
       icon: 'book',
       type: 'date',
-      width:30      
+      width: 30
     }, {
       viewValue: 'Add_Edit_Form.STEP_4.EXEMPTIONREASON',
       value: ['exemptionReason', 'exemptionReasonSp'],
       icon: 'book',
       type: 'textarea',
-      width:97      
+      width: 97
     }
   ]
 
@@ -729,9 +730,9 @@ export class EditFormComponent implements OnInit {
 
 
   ngOnInit() {
-    this.translate.use('en');
+    // this.translate.use('en');
 
-    this.appDirection.switchDir('ltr');
+    // this.appDirection.switchDir('ltr');
     this.mainServ.loaderSer.display(true);
     var id = this.route.snapshot.paramMap.get('id');
     this.mainServ.APIServ.get("forms/" + id).subscribe((data: any) => {
@@ -747,6 +748,13 @@ export class EditFormComponent implements OnInit {
           this.mainServ.loaderSer.display(false);
           if (this.mainServ.APIServ.getErrorCode() == 0) {
             this.allPayments = data;
+            if (this.allPayments.length == 0) {
+              console.log("from cocckies")
+              this.preAllPayments = this.mainServ.loginServ.getBills();
+              if (this.preAllPayments != "")
+                this.preAllPayments = JSON.parse(this.preAllPayments);
+              console.log(JSON.stringify(this.preAllPayments));
+            }
             this.allPayments.forEach(element => {
               this.totalInstallments += element.value
             });
@@ -838,6 +846,36 @@ export class EditFormComponent implements OnInit {
     this.myNgForm.resetForm();
   }
   totalInstallments = 0;
+
+
+  saveTemplate() {
+    var tempPayments = []
+    this.allPayments.forEach(element => {
+      tempPayments.push({ "value": element.value, "title": element.title });
+    });
+
+    this.mainServ.loginServ.setBills(JSON.stringify(tempPayments));
+  }
+  submitPaid(index) {
+    this.mainServ.loaderSer.display(true);
+    var sendData = this.preAllPayments[index];
+    sendData['formId'] = this.formData['id'];
+    this.mainServ.APIServ.post("fees", sendData).subscribe((data: any) => {
+      this.mainServ.loaderSer.display(false);
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.allPayments.push(data);
+        this.preAllPayments.splice(index, 1);
+        this.totalInstallments = 0;
+        this.allPayments.forEach(element => {
+          this.totalInstallments += element.value
+        });
+      }
+      else {
+        this.mainServ.globalServ.somthingError();
+      }
+
+    });
+  }
   addPaid() {
     this.mainServ.loaderSer.display(true);
     var sendData = this.feeForm.value;
@@ -857,6 +895,11 @@ export class EditFormComponent implements OnInit {
       }
 
     });
+  }
+
+  canselPaid(index) {
+    this.preAllPayments.splice(index, 1);
+
   }
 
   delPaid(id, index) {

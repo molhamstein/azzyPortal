@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { MainService } from './core/services/main.service';
 import { Component } from '@angular/core';
 import { FuseSplashScreenService } from './core/services/splash-screen.service';
@@ -15,19 +16,20 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
 
     /** Whether the widget is in RTL mode or not. */
-     appDirection: Direction;
+    appDirection: Direction;
     /** Subscription to the Directionality change EventEmitter. */
     private _dirChangeSubscription = Subscription.EMPTY;
-    loader=this.mainSer.getLodaer();
+    loader = this.mainSer.getLodaer();
 
     constructor(
         private fuseSplashScreen: FuseSplashScreenService,
         private translate: TranslateService,
         private dir: AppDirectionService,
-        private mainSer: MainService
+        private mainSer: MainService,
+        private route: ActivatedRoute
     ) {
         this.appDirection = dir.getDir();
-        
+
         // this._dirChangeSubscription = dir.change.subscribe(() => {
         //     // this.flipDirection();
         //     // 
@@ -43,7 +45,7 @@ export class AppComponent {
             console.log('dir changed');
         });
 
-        
+
 
         // Add languages
         this.translate.addLangs(['en', 'fa']);
@@ -52,6 +54,41 @@ export class AppComponent {
         this.translate.setDefaultLang('en');
 
         // Use a language
-        this.translate.use('en');
+
+        var lang = this.getParameterByName('lang', null)
+
+        if (lang == undefined) {
+            lang = this.mainSer.loginServ.getlang();
+            if (lang != null) {
+                this.translate.use(lang);
+                if (lang == "fa")
+                    this.dir.switchDir("rtl");
+                // else
+                //     this.dir.switchDir("rtl");
+
+            }
+            else
+                this.mainSer.loginServ.setLang("en")
+        } else {
+            if (lang == "fa")
+                this.dir.switchDir("rtl");
+            // else
+            //     this.dir.switchDir("rtl");
+
+            this.mainSer.loginServ.setLang(lang)
+            this.translate.use(lang);
+        }
+
+
+    }
+
+    getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 }

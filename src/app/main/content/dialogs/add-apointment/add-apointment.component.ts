@@ -37,13 +37,14 @@ export class AddApointmentComponent {
     options: string[] = ['One', 'Two', 'Three'];
     filteredOptions: Observable<string[]>;
     ngOnInit() {
-        this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"consultation\"}}").subscribe((data: any) => {
+        var filter = { "where": { "status": "consultation", "appointmentId": " " } }
+        this.mainServ.APIServ.get("forms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
             if (this.mainServ.APIServ.getErrorCode() == 0) {
                 this.options = data;
                 this.filteredOptions = this.myControl.valueChanges
                     .pipe(
-                    startWith(''),
-                    map(value => this._filter(value))
+                        startWith(''),
+                        map(value => this._filter(value))
                     );
             }
             else if (this.mainServ.APIServ.getErrorCode() == 400) {

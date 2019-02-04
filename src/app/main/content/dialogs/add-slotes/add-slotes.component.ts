@@ -63,7 +63,7 @@ export class AddSlotesComponent {
     }
 
     ngOnInit() {
-        this.translate.use('en');
+        // this.translate.use('en');
         this.typeUser = this.mainServ.loginServ.getType();
         if (this.typeUser == "consultant") {
             this.consultant = [{ "type": this.typeUser, "username": this.mainServ.loginServ.getuserName(), "id": this.mainServ.loginServ.getUserId() }]

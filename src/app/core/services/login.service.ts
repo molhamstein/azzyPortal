@@ -15,6 +15,8 @@ export class LoginService {
   token;
   userName
   type
+  lang
+  bills
   constructor(private cookieService: CookieService, private router: Router) {
     if (this.cookieService.get('isRemember') == "true") {
       this.isLogIn = this.isLoginCook();
@@ -38,10 +40,16 @@ export class LoginService {
       this.type = this.cookieService.get("type");
       this.token = this.cookieService.get("token");
       this.userName = this.cookieService.get("userName");
+      this.lang = this.cookieService.get("lang");
+      this.bills = this.cookieService.get("bills");
+
     } else {
       this.userId = sessionStorage.getItem("userId");
       this.token = sessionStorage.getItem("token");
       this.userName = sessionStorage.getItem("userName");
+      this.lang = sessionStorage.getItem("lang");
+      this.bills = sessionStorage.getItem("bills");
+
     }
   }
 
@@ -62,9 +70,21 @@ export class LoginService {
     return this.userName;
   }
 
+  getBills() {
+    if (this.bills == null)
+      return []
+    return this.bills;
+  }
+
   getType() {
     return this.type;
   }
+
+  getlang() {
+    return this.lang;
+  }
+
+
 
   logIn(data, rememberPass: boolean = true) {
     this.isRemember = rememberPass;
@@ -112,6 +132,44 @@ export class LoginService {
     }
   }
 
+
+  setBills(bills) {
+    this.bills = bills;
+    if (this.isRemember) {
+      this.setBillsCook(bills);
+    }
+    else {
+      this.setBillsSet(bills);
+    }
+  }
+
+  setBillsCook(bills) {
+    this.cookieService.set('bills', bills);
+  }
+
+  setBillsSet(bills) {
+    sessionStorage.setItem('bills', bills);
+  }
+
+
+  setLang(newLang) {
+    this.lang = newLang;
+    if (this.isRemember) {
+      this.setLangCook(newLang);
+    }
+    else {
+      this.setLangSet(newLang);
+    }
+  }
+
+
+  setLangCook(newLang) {
+    this.cookieService.set('lang', newLang);
+  }
+
+  setLangSet(newLang) {
+    sessionStorage.setItem('lang', newLang);
+  }
 
 
   isLoginCook() {

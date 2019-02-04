@@ -135,8 +135,6 @@ export class CalendarComponent implements OnInit {
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     // this.openEvents = [];
-    // console.log("events");
-    // console.log(date);
     this.selectedDay = { 'date': date }
     this.viewDate = date;
     // events.forEach(element => {
@@ -153,7 +151,6 @@ export class CalendarComponent implements OnInit {
     //     this.viewDate = date;
     //   }
     // }
-    console.log(this.newEventsMonth[date.getDate()]);
     if (this.newEventsMonth[date.getDate()] != null || this.newEventsMonth[date.getDate()].length != 0) {
       this.dialogRef = this.dialog.open(viewEventComponent, {
         // panelClass: 'event-form-dialog',
@@ -185,8 +182,15 @@ export class CalendarComponent implements OnInit {
     var endMin = (new Date(slote.endDate).getMinutes() < 10 ? '0' : '') + new Date(slote.endDate).getMinutes();
 
     if (slote.open == false) {
-      return cons.username + ' - ' + "with " + slote.forms.nameEnglish + " " + slote.forms.surnameEnglish + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
-
+      if (slote.forms == null) {
+        console.log("slote")
+        console.log(slote)
+        return "";
+      } else {
+        console.log("true slote")
+        console.log(slote)
+        return cons.username + ' - ' + "with " + slote.forms.nameEnglish + " " + slote.forms.surnameEnglish + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
+      }
     } else {
       return cons.username + ' - ' + "free" + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
 
@@ -204,7 +208,6 @@ export class CalendarComponent implements OnInit {
 
 
   changeView(newView) {
-    console.log(this.viewDate)
     this.view = newView
     this.getSlots(this.viewDate, this.consultants);
   }
@@ -224,7 +227,6 @@ export class CalendarComponent implements OnInit {
         index++;
       }
     });
-    console.log(this.dayEvent);
   }
 
 
@@ -288,13 +290,19 @@ export class CalendarComponent implements OnInit {
                 meta: slot
               }
             }
-            // console.log(this.isAddToMonthEvent(x));
-            // if (slot.open == false) {
+
             if (this.newEventsMonth[x['start'].getDate()] == null || this.isAddToMonthEvent(x)) {
               var tempX = Object.assign({}, x);
               tempX['title'] = "";
+              if (slot.open == false)
+                tempX['color'] = { primary: cons.primarycolor, secondary: cons.secondarycolor };
               this.monthEvent.push(tempX);
             }
+            console.log("this.monthEvent")
+            console.log(this.monthEvent)
+
+            // console.log("this.newEventsMonth");
+            // console.log(this.newEventsMonth);
             if (this.newEventsMonth[x['start'].getDate()] == null)
               this.newEventsMonth[x['start'].getDate()] = []
             this.newEventsMonth[x['start'].getDate()].push(x);
@@ -321,11 +329,11 @@ export class CalendarComponent implements OnInit {
     // if()
     for (var index = 0; index < this.newEventsMonth[slot['start'].getDate()].length; index++) {
       var element = this.newEventsMonth[slot['start'].getDate()][index];
+      // console.log(element.meta.consId);
       if (element.meta.consId == slot.meta.consId) {
         return false;
       }
     };
-    console.log("Trueeeeeeeeeeeeeeeeeeeeeeeee")
     return true;
   }
 

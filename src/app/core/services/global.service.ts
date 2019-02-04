@@ -230,7 +230,7 @@ export class GlobalService {
   }
 
   goTo(newURL) {
-    this.router.navigate([newURL]);
+    this.router.navigate([newURL], { queryParams: { lang: this.logInSer.getlang() } });
   }
   reload() {
     location.reload();

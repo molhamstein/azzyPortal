@@ -23,6 +23,7 @@ export class UnprocessedFormsComponent implements OnInit {
   offset: number = 0;
   limit: number = 5;
 
+  isSearchMode = false;
   constructor(
     private translationLoader: FuseTranslationLoaderService,
     private translateService: TranslateService,
@@ -39,9 +40,25 @@ export class UnprocessedFormsComponent implements OnInit {
 
   setPage(offset, limit) {
     this.mainServ.loaderSer.display(true);
+    var filter;
+    if (this.isSearchMode == false)
+      filter = {
+        "where": { "status": "unprocessed" },
+        "order": "dateOfArr DESC",
+        "limit": limit,
+        "skip": offset * limit
+      }
+    else
+      filter =
+        {
+          "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+          "order": "dateOfArr DESC",
+          "limit": limit,
+          "skip": offset * limit
+        }
 
     // this.mainServ.APIServ.get("ADs?filter[limit]=" + limit + "&filter[skip]=" + offset * limit).subscribe((data: any) => {
-    this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"unprocessed\"},\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
+    this.mainServ.APIServ.get("forms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
       this.mainServ.loaderSer.display(false);
 
       if (this.mainServ.APIServ.getErrorCode() == 0) {
@@ -60,6 +77,18 @@ export class UnprocessedFormsComponent implements OnInit {
     });
   }
 
+  searchKey = "";
+  search() {
+    this.isSearchMode = true;
+    this.inisilaize()
+  }
+
+  clear() {
+    this.isSearchMode = false;
+    this.searchKey=""
+    this.inisilaize()
+
+  }
 
   onPage(event) {
     console.log('Page Event', event);
@@ -69,8 +98,16 @@ export class UnprocessedFormsComponent implements OnInit {
   }
 
   inisilaize() {
+    this.count = 0;
+    this.offset = 0;
+    var where
+    if (this.isSearchMode == false)
+      where = { "status": "unprocessed" }
+    else
+      where = { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] }
+
     this.mainServ.loaderSer.display(true);
-    this.mainServ.APIServ.get("forms/count?where={\"status\":\"unprocessed\"}").subscribe((data: any) => {
+    this.mainServ.APIServ.get("forms/count?where=" + JSON.stringify(where)).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.count = data['count'];
         this.mainServ.loaderSer.display(false);

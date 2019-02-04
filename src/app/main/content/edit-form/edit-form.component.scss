@@ -7,10 +7,24 @@
   border-radius: 50%;
 }
 
-.title {
-  text-align: center;
-  padding: 20px 15px;
-  margin: 0px;
+.mainHeader {
+  width: 100%;
+  display: inline-block;
+  padding-right: 5%;
+
+  .title {
+    padding: 20px 15px;
+    margin: 0px;
+    padding-left: 21%;
+    float: left;
+    width: fit-content;
+  }
+
+  button {
+    background-color: #2094c8;
+    color: white;
+    margin-top: 15px;
+  }
 }
 
 .myHr {

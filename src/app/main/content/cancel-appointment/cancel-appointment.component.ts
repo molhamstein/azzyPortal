@@ -45,9 +45,9 @@ export class cancelAppointmentComponent implements OnInit {
   id
   ngOnInit() {
     window.open('', '_self').close()
-    this.translate.use('en');
+    // this.translate.use('en');
 
-    this.appDirection.switchDir('ltr');
+    // this.appDirection.switchDir('ltr');
     // this.mainServ.loaderSer.display(true);
     this.id = this.route.snapshot.paramMap.get('id');
     this.token = this.route.snapshot.paramMap.get('token');

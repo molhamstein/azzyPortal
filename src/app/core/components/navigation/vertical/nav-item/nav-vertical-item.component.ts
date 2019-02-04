@@ -20,4 +20,8 @@ export class FuseNavVerticalItemComponent implements OnInit {
         return this.mainSer.globalServ.isAllowed(role);
 
     }
+
+    goto(url){
+        this.mainSer.globalServ.goTo(url);
+    }
 }

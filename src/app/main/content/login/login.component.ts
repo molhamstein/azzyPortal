@@ -46,7 +46,7 @@ export class FuseLoginComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.translate.use('en');
+        // this.translate.use('en');
         this.loginForm = this.formBuilder.group({
             email: ['', [Validators.required, Validators.email]],
             password: ['', Validators.required]

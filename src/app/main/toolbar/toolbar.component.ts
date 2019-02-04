@@ -77,9 +77,12 @@ export class FuseToolbarComponent {
             //     'flag' : 'tr'
             // }
         ];
+        if (this.mainServ.loginServ.getlang() == "en")
+            this.selectedLanguage = this.languages[1];
+        else
+            this.selectedLanguage = this.languages[0];
 
-        this.selectedLanguage = this.languages[1];
-
+        console.log(this.languages);
         router.events.subscribe(
             (event) => {
                 if (event instanceof NavigationStart) {
@@ -103,16 +106,38 @@ export class FuseToolbarComponent {
 
     setLanguage(lang) {
         // Set the selected language for toolbar
+
         this.selectedLanguage = lang;
 
         // Use the selected language for translations
         this.translate.use(lang.id);
-
+        console.log("lang")
+        console.log(lang)
         this.appDirection.switchDir(lang.dir);
+        console.log(window.location.href);  // whatever your current location href is
+        var templang = window.location.href
+        if (templang.includes("lang=fa")) {
+            console.log("includes(lang=fa)")
+            templang = templang.replace("lang=fa", "lang=" + lang.id);
+        } else if (templang.includes("lang=en")) {
+            console.log("includes(lang=en)")
+            templang = templang.replace("lang=en", "lang=" + lang.id);
+        } else {
+            console.log("dosent include any thing")
+            templang = templang += "?lang=" + lang.id
+        }
+        if (templang.includes("http://localhost:4200"))
+            templang = templang.replace("http://localhost:4200", "");
+        else if (templang.includes("https://jawlatcom.com/portal"))
+            templang = templang.replace("https://jawlatcom.com/portal", "");
+        console.log(templang);
+        window.history.replaceState({}, templang, templang);
+        console.log(window.location.href);  // oh, hey, it replaced the path with /foo
 
+        this.mainServ.loginServ.setLang(lang.id)
     }
 
-    logOut(){
+    logOut() {
         this.mainServ.loginServ.logout();
     }
 }

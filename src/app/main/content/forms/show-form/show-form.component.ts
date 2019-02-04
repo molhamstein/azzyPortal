@@ -371,9 +371,9 @@ export class ShowFormComponent implements OnInit {
   ]
 
   ngOnInit() {
-    this.translate.use('en');
+    // this.translate.use('en');
 
-    this.appDirection.switchDir('ltr');
+    // this.appDirection.switchDir('ltr');
     this.form.FirstName = "Johnny";
 
     for (var index = 0; index <= 100; index++) {

@@ -73,7 +73,7 @@ export class editUserComponent implements OnInit {
     this.types = [
       {
         "value": 'consultant',
-        "viewValue": 'User.ADDEDITUSER.CONSUTANT'
+        "viewValue": 'User.ADDEDITUSER.CONSULTANT'
       },
       {
         "value": 'manager',

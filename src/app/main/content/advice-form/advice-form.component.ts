@@ -432,9 +432,9 @@ export class AdviceFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.translate.use('en');
+    // this.translate.use('en');
 
-    this.appDirection.switchDir('ltr');
+    // this.appDirection.switchDir('ltr');
 
     //   this.form = this.formBuilder.group({
     //     company   : [

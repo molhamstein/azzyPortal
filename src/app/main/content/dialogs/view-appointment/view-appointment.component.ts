@@ -33,6 +33,6 @@ export class ViewAppointmentComponent {
     }
 
     ngOnInit() {
-        this.translate.use('en');
+        // this.translate.use('en');
     }
 }

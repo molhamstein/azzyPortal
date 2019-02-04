@@ -22,6 +22,8 @@ export class ContractedFormsComponent implements OnInit {
   offset: number = 0;
   limit: number = 5;
 
+  isSearchMode = false;
+
   constructor(private translationLoader: FuseTranslationLoaderService
     , private translateService: TranslateService
     , private mainServ: MainService,
@@ -39,8 +41,26 @@ export class ContractedFormsComponent implements OnInit {
     var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
     this.mainServ.loaderSer.display(true);
 
+    var filter;
+    if (this.isSearchMode == false)
+      filter = {
+        "where": { "status": "contracts" },
+        "order": "dateOfArr DESC",
+        "limit": limit,
+        "skip": offset * limit
+      }
+    else
+      filter =
+        {
+          "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+          "order": "dateOfArr DESC",
+          "limit": limit,
+          "skip": offset * limit
+        }
+
+
     // this.mainServ.APIServ.get("ADs?filter[limit]=" + limit + "&filter[skip]=" + offset * limit).subscribe((data: any) => {
-    this.mainServ.APIServ.get("forms?filter={\"where\":{\"status\":\"contracts\"},\"order\": \"dateOfArr DESC\",\"limit\":" + limit + ",\"skip\":" + offset * limit + "}").subscribe((data: any) => {
+    this.mainServ.APIServ.get("forms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.mainServ.loaderSer.display(false);
 
@@ -58,6 +78,19 @@ export class ContractedFormsComponent implements OnInit {
     });
   }
 
+  searchKey = "";
+  search() {
+    this.isSearchMode = true;
+    this.inisilaize()
+  }
+
+  clear() {
+    this.isSearchMode = false;
+    this.searchKey = ""
+    this.inisilaize()
+
+  }
+
 
   onPage(event) {
     console.log('Page Event', event);
@@ -69,7 +102,15 @@ export class ContractedFormsComponent implements OnInit {
   inisilaize() {
     this.mainServ.loaderSer.display(true);
 
-    this.mainServ.APIServ.get("forms/count?where={\"status\":\"contracts\"}").subscribe((data: any) => {
+    this.count = 0;
+    this.offset = 0;
+    var where
+    if (this.isSearchMode == false)
+      where = { "status": "contracts" }
+    else
+      where = { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] }
+
+    this.mainServ.APIServ.get("forms/count?where=" + JSON.stringify(where)).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.count = data['count'];
         this.mainServ.loaderSer.display(false);
@@ -131,7 +172,7 @@ export class ContractedFormsComponent implements OnInit {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         console.log(data['getContractPdf'].url);
         var win = window.open(data['getContractPdf'].url, '_blank');
-        win.focus();  
+        win.focus();
       }
     })
 
