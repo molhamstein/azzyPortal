@@ -660,6 +660,7 @@ export class AdviceFormComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result == true) {
+        this.sendArray['timeZone'] = this.timezone()
         this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
           if (this.mainServ.APIServ.getErrorCode() == 0) {
             this.dialogSerc.responseFormDialog(true, data)
@@ -676,5 +677,11 @@ export class AdviceFormComponent implements OnInit {
     });
 
   }
-
+  timezone() {
+    var offset = new Date().getTimezoneOffset();
+    var minutes = Math.abs(offset);
+    var hours = Math.floor(minutes / 60);
+    var prefix = offset < 0 ? "+" : "-";
+    return prefix + hours;
+  }
 }

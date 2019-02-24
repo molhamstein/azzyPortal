@@ -8119,7 +8119,7 @@ var CallApiService = (function () {
         // readonly baseUrl = "http://104.217.253.15:2999/api/"
         // readonly baseUrl = "http://178.62.233.91:3000/api/"
         this.baseUrl = "http://azzyimmigration.com:3000/api/";
-        // readonly baseUrl = "http://192.168.1.9:3000/api/"
+        // readonly baseUrl = "http://localhost:3000/api/"
         this.errorCode = 0;
         this.code = "";
     }
@@ -9848,6 +9848,7 @@ var AdviceFormComponent = (function () {
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result == true) {
+                _this.sendArray['timeZone'] = _this.timezone();
                 _this.mainServ.APIServ.post("forms", _this.sendArray).subscribe(function (data) {
                     if (_this.mainServ.APIServ.getErrorCode() == 0) {
                         _this.dialogSerc.responseFormDialog(true, data);
@@ -9863,6 +9864,13 @@ var AdviceFormComponent = (function () {
                 });
             }
         });
+    };
+    AdviceFormComponent.prototype.timezone = function () {
+        var offset = new Date().getTimezoneOffset();
+        var minutes = Math.abs(offset);
+        var hours = Math.floor(minutes / 60);
+        var prefix = offset < 0 ? "+" : "-";
+        return prefix + hours;
     };
     AdviceFormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
@@ -10060,7 +10068,10 @@ var CalendarComponent = (function () {
         });
         this.dialogRef.afterClosed()
             .subscribe(function (result) {
-            _this.changeView(_this.view);
+            if (result['isVisit'] == true)
+                _this.mainServ.globalServ.goTo('show-form/' + result["id"]);
+            else
+                _this.changeView(_this.view);
         });
     };
     CalendarComponent.prototype.dayClicked = function (_a) {
@@ -12178,7 +12189,7 @@ var ConfirmMessageComponent = (function () {
 /***/ "./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<h3 mat-dialog-title> {{'Dialog.Cansel_Appointment.TITLE' | translate}}</h3>\n\n<div mat-dialog-content>\n  <p>{{'Dialog.Cansel_Appointment.CONFIRM' | translate}}</p>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"close()\">{{'Dialog.Cansel_Appointment.NO' | translate}}</button>\n  <button mat-button  (click)=\"onYesClick()\" cdkFocusInitial>{{'Dialog.Cansel_Appointment.YES' | translate}}</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<h3 mat-dialog-title> {{'Dialog.Cansel_Appointment.TITLE' | translate}}</h3>\n\n<div mat-dialog-content>\n  <p>{{'Dialog.Cansel_Appointment.CONFIRM' | translate}}</p>\n</div>\n<div mat-dialog-actions style=\"position: relative;\">\n  <button mat-button (click)=\"close()\">{{'Dialog.Cansel_Appointment.NO' | translate}}</button>\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial>{{'Dialog.Cansel_Appointment.YES' | translate}}</button>\n  <button mat-button (click)=\"visitForm()\" style=\"float: right;position: absolute;right: 0px;bottom: 11px;\"\n    cdkFocusInitial>{{'Dialog.Cansel_Appointment.SHOWFORM'\n    | translate}}</button>\n</div>\n"
 
 /***/ }),
 
@@ -12245,6 +12256,9 @@ var DeleteAppointmentComponent = (function () {
     };
     DeleteAppointmentComponent.prototype.close = function () {
         this.dialogRef.close();
+    };
+    DeleteAppointmentComponent.prototype.visitForm = function () {
+        this.dialogRef.close({ "isVisit": true, "id": this.appointment['meta'].forms.id });
     };
     DeleteAppointmentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
@@ -14379,14 +14393,14 @@ var EditClientFormModule = (function () {
 /***/ "./src/app/main/content/forms/contracted-forms/contracted-forms.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\"\r\n    fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.CONTRACTED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n    <div style=\"width: 350;padding-top: 20px;\" class=\"search\">\r\n      <button mat-button class=\"clear\" (click)=\"clear()\" type=\"button\">{{'Form.FORMS.CLEAR' | translate}}</button>\r\n      <button mat-button class=\"search\" (click)=\"search()\" type=\"button\">{{'Form.FORMS.SEARCH' | translate}}</button>\r\n      <mat-form-field>\r\n\r\n        <input matInput [ngModelOptions]=\"{standalone: true}\" (keyup.enter)=\"search()\" [(ngModel)]=\"searchKey\" placeholder=\"{{ 'Form.FORMS.SEARCH' | translate }}\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n      </mat-form-field>\r\n    </div>\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\"\r\n      [rowHeight]=\"50\" [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\"\r\n      [offset]=\"offset\" [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'CONTRACTED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'dd/MM/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Client.clientNumber\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-row=\"row\" ngx-datatable-cell-template>\r\n          {{row.nameEnglish}} {{row.surnameEnglish}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button *ngIf=\"row.status=='contracts'\" mat-icon-button (click)=\"downloadCont(row.id)\">\r\n            <mat-icon>cloud_download</mat-icon>\r\n          </button>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button *ngIf=\"row.status!='not eligible' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='unprocessed' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\"\r\n    fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.CONTRACTED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n    <div style=\"width: 350;padding-top: 20px;\" class=\"search\">\r\n      <button mat-button class=\"search\" *ngIf=\"rows.length>0\" (click)=\"export()\" type=\"button\">\r\n        <mat-icon matSuffix>cloud_download</mat-icon>\r\n      </button>\r\n\r\n      <button mat-button class=\"clear\" (click)=\"clear()\" type=\"button\">\r\n        <mat-icon matSuffix>clear</mat-icon>\r\n      </button>\r\n      <button mat-button class=\"search\" (click)=\"search()\" type=\"button\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n      </button>\r\n      <mat-form-field>\r\n\r\n        <input matInput [ngModelOptions]=\"{standalone: true}\" (keyup.enter)=\"search()\" [(ngModel)]=\"searchKey\"\r\n          placeholder=\"{{ 'Form.FORMS.SEARCH' | translate }}\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n      </mat-form-field>\r\n    </div>\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\"\r\n      [rowHeight]=\"50\" [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\"\r\n      [offset]=\"offset\" [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'CONTRACTED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'dd/MM/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Client.clientNumber\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.CONTRACTED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-row=\"row\" ngx-datatable-cell-template>\r\n          {{row.nameEnglish}} {{row.surnameEnglish}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button *ngIf=\"row.status=='contracts'\" mat-icon-button (click)=\"downloadCont(row.id)\">\r\n            <mat-icon>cloud_download</mat-icon>\r\n          </button>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button *ngIf=\"row.status!='not eligible' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='unprocessed' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/main/content/forms/contracted-forms/contracted-forms.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".search .search {\n  margin: 0px 10px;\n  background-color: rgba(137, 201, 220, 0.321569); }\n\n.search .clear {\n  margin: 0px 10px;\n  background-color: rgba(137, 201, 220, 0.321569); }\n"
 
 /***/ }),
 
@@ -14441,6 +14455,27 @@ var ContractedFormsComponent = (function () {
         this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_6__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__["a" /* locale */]);
         this.fuseConfig.setSettings({});
     }
+    ContractedFormsComponent.prototype.export = function () {
+        var _this = this;
+        var filter = {};
+        if (this.isSearchMode == false)
+            filter = {
+                "where": { "status": "contracts" },
+                "order": "dateOfArr DESC"
+            };
+        else
+            filter =
+                {
+                    "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+                    "order": "dateOfArr DESC",
+                };
+        this.mainServ.APIServ.get("forms/exportForms?filter=" + JSON.stringify(filter)).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                var win = window.open(data.path, '_blank');
+                win.focus();
+            }
+        });
+    };
     ContractedFormsComponent.prototype.setPage = function (offset, limit) {
         var _this = this;
         var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts'];
@@ -14655,14 +14690,14 @@ var AzzyFormsModule = (function () {
 /***/ "./src/app/main/content/forms/processed-forms/processed-forms.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\"\r\n    fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.PROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n    <div style=\"width: 350;padding-top: 20px;\" class=\"search\">\r\n      <button mat-button class=\"clear\" (click)=\"clear()\" type=\"button\">{{'Form.FORMS.CLEAR' | translate}}</button>\r\n      <button mat-button class=\"search\" (click)=\"search()\" type=\"button\">{{'Form.FORMS.SEARCH' | translate}}</button>\r\n      <mat-form-field>\r\n\r\n        <input matInput [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"searchKey\" placeholder=\"{{ 'Form.FORMS.SEARCH' | translate }}\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n      </mat-form-field>\r\n    </div>\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\"\r\n      [rowHeight]=\"50\" [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\"\r\n      [offset]=\"offset\" [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'dd/MM/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Client.clientNumber\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-row=\"row\" ngx-datatable-cell-template>\r\n          {{row.nameEnglish}} {{row.surnameEnglish}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"consultant.username\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CONSULTANT' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfProc\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.PROCESS_DATE' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button *ngIf=\"row.status!='not eligible' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='unprocessed' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\"\r\n    fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.PROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n    <div style=\"width: 350;padding-top: 20px;\" class=\"search\">\r\n      <button mat-button class=\"search\" *ngIf=\"rows.length>0\" (click)=\"export()\" type=\"button\">\r\n        <mat-icon matSuffix>cloud_download</mat-icon>\r\n      </button>\r\n\r\n      <button mat-button class=\"clear\" (click)=\"clear()\" type=\"button\">\r\n        <mat-icon matSuffix>clear</mat-icon>\r\n      </button>\r\n      <button mat-button class=\"search\" (click)=\"search()\" type=\"button\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n      </button>\r\n      <mat-form-field>\r\n\r\n        <input matInput [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"searchKey\" placeholder=\"{{ 'Form.FORMS.SEARCH' | translate }}\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n      </mat-form-field>\r\n    </div>\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\"\r\n      [rowHeight]=\"50\" [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\"\r\n      [offset]=\"offset\" [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'dd/MM/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Client.clientNumber\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-row=\"row\" ngx-datatable-cell-template>\r\n          {{row.nameEnglish}} {{row.surnameEnglish}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"consultant.username\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.CONSULTANT' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfProc\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.PROCESSED_FORMS.PROCESS_DATE' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'hh:mm MM/dd/yyyy'}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button *ngIf=\"row.status!='not eligible' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='unprocessed' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/main/content/forms/processed-forms/processed-forms.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".search .search {\n  margin: 0px 10px;\n  background-color: rgba(137, 201, 220, 0.321569); }\n\n.search .clear {\n  margin: 0px 10px;\n  background-color: rgba(137, 201, 220, 0.321569); }\n"
 
 /***/ }),
 
@@ -14759,6 +14794,27 @@ var ProcessedFormsComponent = (function () {
         this.offset = event.offset;
         this.limit = event.limit;
         this.setPage(this.offset, this.limit);
+    };
+    ProcessedFormsComponent.prototype.export = function () {
+        var _this = this;
+        var filter = {};
+        if (this.isSearchMode == false)
+            filter = {
+                "where": { "and": [{ "status": { "neq": "unprocessed" } }, { "status": { "neq": "contracts" } }] },
+                "order": "dateOfArr DESC"
+            };
+        else
+            filter =
+                {
+                    "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+                    "order": "dateOfArr DESC",
+                };
+        this.mainServ.APIServ.get("forms/exportForms?filter=" + JSON.stringify(filter)).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                var win = window.open(data.path, '_blank');
+                win.focus();
+            }
+        });
     };
     ProcessedFormsComponent.prototype.inisilaize = function () {
         var _this = this;
@@ -15268,7 +15324,7 @@ var ShowFormComponent = (function () {
 /***/ "./src/app/main/content/forms/unprocessed-forms/unprocessed-forms.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\"\r\n    fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.UNPROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n    <div style=\"width: 350;padding-top: 20px;\" class=\"search\">\r\n      <button mat-button class=\"clear\" (click)=\"clear()\" type=\"button\">{{'Form.FORMS.CLEAR' | translate}}</button>\r\n      <button mat-button class=\"search\" (click)=\"search()\" type=\"button\">{{'Form.FORMS.SEARCH' | translate}}</button>\r\n      <mat-form-field>\r\n\r\n        <input matInput [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"searchKey\" placeholder=\"{{ 'Form.FORMS.SEARCH' | translate }}\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n      </mat-form-field>\r\n    </div>\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\"\r\n      [rowHeight]=\"50\" [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\"\r\n      [offset]=\"offset\" [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'dd/MM/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Client.clientNumber\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-row=\"row\" ngx-datatable-cell-template>\r\n          {{row.nameEnglish}} {{row.surnameEnglish}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      \r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button *ngIf=\"row.status!='not eligible' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='unprocessed' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\"\r\n    fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'Form.UNPROCESSED_FORMS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n    <div style=\"width: 350;padding-top: 20px;\" class=\"search\">\r\n      <button mat-button class=\"search\" *ngIf=\"rows.length>0\" (click)=\"export()\" type=\"button\">\r\n        <mat-icon matSuffix>cloud_download</mat-icon>\r\n      </button>\r\n\r\n      <button mat-button class=\"clear\" (click)=\"clear()\" type=\"button\">\r\n        <mat-icon matSuffix>clear</mat-icon>\r\n      </button>\r\n      <button mat-button class=\"search\" (click)=\"search()\" type=\"button\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n      </button>\r\n\r\n      <mat-form-field>\r\n\r\n        <input matInput [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"searchKey\" placeholder=\"{{ 'Form.FORMS.SEARCH' | translate }}\">\r\n        <mat-icon matSuffix>search</mat-icon>\r\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n      </mat-form-field>\r\n    </div>\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\"\r\n      [rowHeight]=\"50\" [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\"\r\n      [offset]=\"offset\" [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"dateOfArr\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.SUBMISSION_DATE' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value | date: 'dd/MM/yyyy'}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Client.clientNumber\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NUMBER' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"nameEnglish\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NAME' | translate }}</span>\r\n        </ng-template>\r\n\r\n        <ng-template let-row=\"row\" ngx-datatable-cell-template>\r\n          {{row.nameEnglish}} {{row.surnameEnglish}}\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='unprocessed'\">\r\n            <mat-chip color=\"gray\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='more info'\">\r\n            <mat-chip color=\"accent\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='not eligible'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n\r\n          <mat-chip-list *ngIf=\"row.status=='consultation'\">\r\n            <mat-chip style=\"background-color:#22408e\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n\r\n            <button *ngIf=\"row.status!='not eligible' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('not eligible',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='more info' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('more info',1,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='consultation' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('consultation',2,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='contracts' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('contracts',3,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>\r\n            <button *ngIf=\"row.status!='unprocessed' && isAllowed('WriteForms')\" mat-menu-item (click)=\"changeStatus('unprocessed',0,row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>sync</mat-icon>\r\n              <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>\r\n            </button>\r\n\r\n            <button mat-menu-item *ngIf=\"isAllowed('WriteForms')\" (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -15363,6 +15419,27 @@ var UnprocessedFormsComponent = (function () {
             }
         });
     };
+    UnprocessedFormsComponent.prototype.export = function () {
+        var _this = this;
+        var filter = {};
+        if (this.isSearchMode == false)
+            filter = {
+                "where": { "status": "unprocessed" },
+                "order": "dateOfArr DESC"
+            };
+        else
+            filter =
+                {
+                    "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+                    "order": "dateOfArr DESC",
+                };
+        this.mainServ.APIServ.get("forms/exportForms?filter=" + JSON.stringify(filter)).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                var win = window.open(data.path, '_blank');
+                win.focus();
+            }
+        });
+    };
     UnprocessedFormsComponent.prototype.search = function () {
         this.isSearchMode = true;
         this.inisilaize();
@@ -15415,14 +15492,31 @@ var UnprocessedFormsComponent = (function () {
         this.mainServ.setBackUrl('unprocessed');
         this.mainServ.globalServ.goTo(url);
     };
+    UnprocessedFormsComponent.prototype.timezone = function () {
+        var offset = new Date().getTimezoneOffset();
+        var minutes = Math.abs(offset);
+        var hours = Math.floor(minutes / 60);
+        var prefix = offset < 0 ? "+" : "-";
+        return prefix + hours;
+    };
+    UnprocessedFormsComponent.prototype.testDate = function () {
+        var date = new Date();
+        this.mainServ.APIServ.get("forms/testDate?timeZone=" + this.timezone()).subscribe(function (data) {
+        });
+    };
     UnprocessedFormsComponent.prototype.changeStatus = function (newStatus, urlIndex, id, name, text) {
         var _this = this;
         var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts'];
         var mainThis = this;
         var isWithID = newStatus == "consultation" ? true : false;
+        var tempText = "";
+        if (text == null)
+            tempText = "";
+        else
+            tempText = text;
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_2__dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], {
             width: '500px',
-            data: { 'textBoxMessage': text, 'isWithID': isWithID }
+            data: { 'textBoxMessage': tempText, 'isWithID': isWithID }
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result) {
@@ -15469,15 +15563,14 @@ var locale = {
         'Form': {
             'FORMS': {
                 'TITLE': 'Forms',
-                'SEARCH': "Search",
-                'CLEAR': "Clear"
+                "SEARCH": "Search"
             },
             'UNPROCESSED_FORMS': {
                 'TITLE': 'Unprocessed Forms',
                 'ID': 'Id',
-                'SUBMISSION_DATE': 'Submision Date',
+                'SUBMISSION_DATE': 'Submission Date',
                 'CLIENT_NAME': 'Client Name',
-                'CLIENT_NUMBER': 'Clinet Number',
+                'CLIENT_NUMBER': 'Client Number',
                 'STATUS': 'Status',
                 'SHOW_FORM': 'Show Form',
                 'PROCESS': 'Process',
@@ -15493,12 +15586,12 @@ var locale = {
             'PROCESSED_FORMS': {
                 'TITLE': 'Processed Forms',
                 'ID': 'Id',
-                'SUBMISSION_DATE': 'Submision Date',
+                'SUBMISSION_DATE': 'Submission Date',
                 'CONSULTANT': 'Consultant',
                 'ARRIVAL_DATE': 'Date Of Arrival',
                 'PROCESS_DATE': 'Date of Processing',
                 'CLIENT_NAME': 'Client Name',
-                'CLIENT_NUMBER': 'Clinet Number',
+                'CLIENT_NUMBER': 'Client Number',
                 'STATUS': 'Status',
                 'EMAIL': "Email",
                 'UNPROCESSED': 'Unprocessed',
@@ -15508,14 +15601,14 @@ var locale = {
                 'DELETE': 'Delete',
                 'MORE_INFO': 'More Info',
                 'NOTELIGIBLE': 'Not Eligible',
-                'CONSULTATION': 'Consultation',
                 'REJECT': 'Reject',
+                'CONSULTATION': 'Consultation',
                 'CONTRACT': 'Contract'
             },
             'CONTRACTED_FORMS': {
-                'SUBMISSION_DATE': 'Submision Date',
+                'SUBMISSION_DATE': 'Submission Date',
                 'CLIENT_NAME': 'Client Name',
-                'CLIENT_NUMBER': 'Clinet Number',
+                'CLIENT_NUMBER': 'Client Number',
                 'STATUS': 'Status',
                 'TITLE': 'Contracted Forms',
                 'SHOW_FORM': 'Show Form',
@@ -15550,9 +15643,9 @@ var locale = {
                 'LABEL': 'Info',
                 'SUBLABEL': 'Personal Information about Applicant and Spouse',
                 'ENAME': 'English Name',
-                'ESNAME': 'English Sur Name',
+                'ESNAME': 'English Surname',
                 'FNAME': 'Farsi Name',
-                'FSNAME': 'Farsi Sur Name',
+                'FSNAME': 'Farsi Surname',
                 'EMAIL': 'Email',
                 'MOBILE': 'Mobile',
                 'PHONE': 'Line Phone',
@@ -15571,12 +15664,12 @@ var locale = {
             'STEP_1': {
                 'LABEL': 'English',
                 'SUBLABEL': 'Please define the level of your English knowledge',
-                'ENGLISH_LEVEL': 'How familiar are you in English?',
+                'ENGLISH_LEVEL': 'How familiar are you with English?',
                 'EXCELLENT': 'Excellent',
                 'GOOD': 'Good',
                 'MEDIUM': 'Medium',
                 'WEAK': 'Weak',
-                'EN_SCORE': 'Enter the IELTS / TOEFL score'
+                'EN_SCORE': 'Enter the IELTS / PTE / TOEFL score'
             },
             'STEP_2': {
                 'LABEL': 'Education',
@@ -15586,15 +15679,15 @@ var locale = {
                 'UNDER_GRAD': 'Undergraduate',
                 'MASTER': 'Master',
                 'DOC': 'Doctoral',
-                'FIELD': 'field',
-                'UNIVERSITY': 'University name',
+                'FIELD': 'Field',
+                'UNIVERSITY': 'University Name',
                 'EDU_PLACE': 'Education Place',
                 'YEAR_GRAD': 'Year of Graduation'
             },
             'STEP_3': {
                 'LABEL': 'Work',
                 'SUBLABEL': 'Please let us know your work experience',
-                'FIELDOfWork': 'field Of Working',
+                'FIELDOfWork': 'Field Of Work',
                 "REDYPAID": "Relateded Years Paid",
                 "REDYNPAID": "Relateded Years Non Paid",
                 "NREDYPAID": "Non Relateded Years Paid",
@@ -15607,8 +15700,8 @@ var locale = {
             },
             'STEP_4': {
                 'LABEL': 'Military',
-                'SUBLABEL': 'please define the status of your military service, if applicable',
-                'STATUS': 'Status',
+                'SUBLABEL': 'Please define the status of your military service, if applicable',
+                'STATUS': 'Status:',
                 'FINISHED': 'Finished',
                 'EXEMPTION': 'Exemption',
                 'PLACE': 'Place',
@@ -15620,7 +15713,7 @@ var locale = {
                 'LABEL': 'Health',
                 'SUBLABEL': 'Please define your medical and health status',
                 'SIGNIFICANT': 'Significant Current Sickness',
-                'SURGERY': 'Surgery Past Or Future',
+                'SURGERY': 'Surgery in the Past or Future',
             },
             'STEP_6': {
                 'LABEL': 'Relatives In Australia',
@@ -15629,15 +15722,15 @@ var locale = {
                 'PERMANENTRES': 'Permanent Res',
                 'TEMPORARYRES': 'Temporary Res',
                 'STUDENTASSYLUM': 'Student-Assylum',
-                'RELATION': 'Australia Family Relation',
-                'LIVINGSTATE': 'Australia Living State',
-                'LIVINGCITY': 'Australia Living City',
-                'VISATYPE': 'Australia Visa Type'
+                'RELATION': 'Your Relative\'s relation to you',
+                'LIVINGSTATE': 'Australian State your relative is living',
+                'LIVINGCITY': 'Australian City your relative is living',
+                'VISATYPE': 'Australian Visa Type'
             },
             'STEP_7': {
                 'LABEL': 'Admin',
-                'TBADMIN': 'text Box Admin',
-                'TBNOTES': 'text Box Notes',
+                'TBADMIN': 'Message to Client via Email',
+                'TBNOTES': 'Internal Notes, not visible for Client',
                 'MAINAPPLICATION': 'Main Applicant',
                 'APPLICANT': 'Applicant',
                 'SPOUSE': 'Spouse',
@@ -15646,7 +15739,7 @@ var locale = {
                 'OCCUPATIONTOBEASSESSED': 'Occupation to be assessed',
                 'YEAROFWORKEXPERIENCE': 'Years of Work Experience',
                 'ASSESSMENTORGANIZATION': 'Assessment Organization',
-                'PROFESSIONALINSTALLMENTA': 'Professional Fee / Installments',
+                'PROFESSIONALINSTALLMENTA': 'Professional Fee / Instalments',
                 'PROFESSIONALTOTAL': 'Professional Fee / Total',
                 'PFEDUCATION': 'Points from Education',
                 'PFEXPERIENCE': 'Points from Work Experience',
@@ -15656,8 +15749,8 @@ var locale = {
                 'PFSTATE': 'Points from State Sponsorship',
                 'PFFAMILY': 'Points from Family Sponsorship',
                 'TOTALPOINT': 'Total Points',
-                'ANYINFO': 'Any Information You Want To Add',
-                'HOWKNOWUS': 'How did you know about us',
+                'ANYINFO': 'Any useful information you want to add?',
+                'HOWKNOWUS': 'How did you know about us?',
                 'DONE': "Done",
                 'EDIT': "Edit",
                 'BACK': "Back",
@@ -15671,7 +15764,7 @@ var locale = {
         },
         'Calender': {
             'TITLE': 'Calendar',
-            'VIEW': 'view',
+            'VIEW': 'View',
             'USE': 'Use',
             'TIME': 'Time',
             'DATE': 'Date',
@@ -15682,9 +15775,9 @@ var locale = {
         },
         'Dialog': {
             'View_Appointment': {
-                'FROM': 'from',
-                'TO': 'to',
-                'LOCATION': 'location',
+                'FROM': 'From',
+                'TO': 'To',
+                'LOCATION': 'Location',
                 'DONE': 'Done',
                 'USE': 'Use'
             },
@@ -15704,21 +15797,22 @@ var locale = {
                 'STARTTIME': 'Start Time',
                 'ENDTIME': 'End Time',
                 'DATE': 'Date',
-                'CONSULRANT': 'consultant',
-                'title': 'Appointment Slotes',
+                'CONSULRANT': 'Consultant',
+                'title': 'Appointment Slots',
                 'SAVE': 'Save',
-                'SAVEANDCLOSE': 'Save And Close'
+                'SAVEANDCLOSE': 'Save and Close'
             },
             'Add_Appointment': {
                 "TITLE": "Add Appointment",
-                "CANSEL": "Cansel",
+                "CANSEL": "Cancel",
                 "ADD": "Add"
             },
             'Cansel_Appointment': {
-                "TITLE": "Cansel Appointment",
+                "TITLE": "Cancel Appointment",
+                "SHOWFORM": "Show Form",
                 "NO": "No",
                 "YES": "Yes",
-                "CONFIRM": "Do you want to delete this appointment"
+                "CONFIRM": "Do you want to delete this appointment?"
             }
         },
         'AUTH': {
@@ -15735,7 +15829,7 @@ var locale = {
                 'TITLE': 'Users',
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
-                'USERNAME': 'User Name',
+                'USERNAME': 'Username',
                 'PRIMARYCOLOR': 'Primary Color',
                 'SECONDARYCOLOR': 'Secondary Color',
                 'EDIT': 'Edit',
@@ -15747,8 +15841,8 @@ var locale = {
                 'TITLE': 'Add Users',
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
-                'USERNAME': 'User Name',
-                'CONSULTANT': 'Consultant',
+                'USERNAME': 'Username',
+                'CONSUTANT': 'Consultant',
                 'MANAGER': 'Manager',
                 'SECRETARY': 'Secretary',
                 'ADMINSTRATOR': 'Adminstrator',
@@ -15761,11 +15855,11 @@ var locale = {
             }
         },
         'Nav': {
-            'CALENDAR': 'Calender',
+            'CALENDAR': 'Calendar',
             'USERS': 'Users'
         },
         'Global': {
-            'ERRORFIELDREQUIRED': 'this field is required',
+            'ERRORFIELDREQUIRED': 'This field is required',
             'ERRORVALIDEMAIL': 'Please enter a valid email address'
         }
     }
@@ -15785,8 +15879,7 @@ var locale = {
         'Form': {
             'FORMS': {
                 'TITLE': 'فرم ها',
-                'SEARCH': "Search",
-                'CLEAR': "Clear"
+                'SEARCH': "جستجو",
             },
             'UNPROCESSED_FORMS': {
                 'TITLE': 'فرم پردازش نشده',
@@ -15797,14 +15890,14 @@ var locale = {
                 'STATUS': 'وضعیت',
                 'SHOW_FORM': 'نمایش فرم',
                 'PROCESS': 'فرم فرآیند',
-                'NOTELIGIBLE': 'Not Eligible',
+                'NOTELIGIBLE': 'فاقد شرایط',
                 'EDIT': 'ویرایش',
                 'EMAIL': 'ایمیل',
                 'DELETE': 'حذف',
                 'MORE_INFO': 'اطلاعات بیشتر',
-                'REJECT': 'رد کنید',
-                'CONSULTATION': 'Consultation',
-                'CONTRACT': 'Contract'
+                'REJECT': 'مردود',
+                'CONSULTATION': 'مشاوره',
+                'CONTRACT': 'قرارداد'
             },
             'PROCESSED_FORMS': {
                 'TITLE': 'فرم های پردازش شده',
@@ -15816,50 +15909,51 @@ var locale = {
                 'CLIENT_NUMBER': 'شماره مشتری',
                 'STATUS': 'وضعیت',
                 'EMAIL': 'ایمیل',
-                'UNPROCESSED': 'Unprocessed',
+                'UNPROCESSED': 'پردازش نشده',
                 'SHOW_FORM': 'نمایش فرم',
                 'PROCESS': 'فرم فرآیند',
                 'EDIT': 'ویرایش',
                 'DELETE': 'حذف',
                 'MORE_INFO': 'اطلاعات بیشتر',
-                'NOTELIGIBLE': 'Not Eligible',
-                'REJECT': 'Reject',
+                'NOTELIGIBLE': 'فاقد شرایط',
+                'REJECT': 'مردود',
                 'CONSULTANT': 'مشاور',
-                'CONSULTATION': 'Consultation',
-                'CONTRACT': 'Contract'
+                'CONSULTATION': 'مشاوره',
+                'CONTRACT': 'قرارداد'
             },
             'CONTRACTED_FORMS': {
                 'SUBMISSION_DATE': 'تاریخ ارسال',
                 'CLIENT_NAME': 'نام مشتری',
                 'CLIENT_NUMBER': 'شماره مشتری',
                 'STATUS': 'وضعیت',
-                'TITLE': 'Contracted Forms',
+                'TITLE': 'قراردادها',
                 'SHOW_FORM': 'نمایش فرم',
-                'PROCESS': 'فرم فرآیند',
+                'PROCESS': 'بررسی',
                 'EMAIL': 'ایمیل',
-                'NOTELIGIBLE': 'Not Eligible',
+                'NOTELIGIBLE': 'فاقد شرایط',
                 'EDIT': 'ویرایش',
                 'DELETE': 'حذف',
                 'MORE_INFO': 'اطلاعات بیشتر',
-                'REJECT': 'Reject',
-                'CONTRACT': 'Contract',
-                'CONSULTATION': 'Consultation',
-                'UNPROCESSED': 'Unprocessed',
+                'REJECT': 'مردود',
+                'CONTRACT': 'قرارداد',
+                'CONSULTATION': 'مشاوره',
+                'UNPROCESSED': 'بررسی نشده',
             }
         },
         'Add_Edit_Form': {
             'TITLE': 'فرم درخواست مشاوره',
             'APPLICANT': 'متقاضی مهاجرت به کشور استرالیا',
             'SPOUSE': 'همسر',
-            'BACK': 'Back',
-            'FORM': 'Form',
-            "PAYMENTSTITLE": "Instalments",
+            'BACK': 'صفحه قبل',
+            'FORM': 'فرم',
+            "PAYMENTSTITLE": "شرایط پرداخت",
             "PAYMENTS": {
-                "INSTALLMENTSLABEL": "Installments included in the contract",
-                "ADDPAID": "Add Paid",
-                "DELETEPAID": "Delete Paid",
-                "NOTE": 'Note',
-                "VALUE": 'Value',
+                "INSTALLMENTSLABEL": "شرایط پرداخت قید شده در قرارداد",
+                "SAVETEMPLATE": "حفظ متن",
+                "ADDPAID": "افزایش مبلغ",
+                "DELETEPAID": "حذف مبلغ",
+                "NOTE": 'توضیحات',
+                "VALUE": 'مبلغ',
             },
             'STEP_0': {
                 'LABEL': 'مشخصات',
@@ -15870,29 +15964,29 @@ var locale = {
                 'MARITAL_STATUS': 'وضعیت تاهل',
                 'CHILDREN_NUM': 'تعداد فرزندان',
                 'BIRTH_DATE': 'تاریخ تولد',
-                'SKYPE_ID': 'Skype ID',
+                'SKYPE_ID': 'نام کاربری اسکایپ',
                 'MARRIED': 'متاهل',
-                'SEPARETED': 'جدا از هم',
-                'DEVORCED': 'جدا شده',
+                'SEPARETED': ' متارکه کرده',
+                'DEVORCED': 'طلاق گرفته',
                 'WIDOWED': 'بیوه',
-                'NEVER_MARRIED': 'هرگز ازدواج نکرد',
-                'SUBLABEL': 'Personal Information about Applicant and Spouse',
-                'ENAME': 'English Name',
-                'ESNAME': 'English Sur Name',
-                'FSNAME': 'Farsi Sur Name',
-                'PHONE': 'Line Phone',
-                'FADDRESS': 'Farsi Address',
-                'EADDRESS': 'English Address',
+                'NEVER_MARRIED': 'هرگز ازدواج نکرده',
+                'SUBLABEL': 'اطلاعات فردی متقاضی و همسر',
+                'ENAME': 'نام با حروف انگلیسی',
+                'ESNAME': 'نام خانوادگی با حروف انگلیسی',
+                'FSNAME': 'نام خانوادگی',
+                'PHONE': 'تلفن ثابت',
+                'FADDRESS': 'نشانی منزل',
+                'EADDRESS': 'نشانی منزل با حروف انگلیسی',
             },
             'STEP_1': {
                 'LABEL': 'سطح زبان انگلیسی',
-                'ENGLISH_LEVEL': 'به زبان انگلیسی چقدر آشنایی دارید؟',
+                'ENGLISH_LEVEL': 'با زبان انگلیسی چقدر آشنایی دارید؟',
                 'EXCELLENT': 'عالی',
                 'GOOD': 'خوب',
                 'MEDIUM': 'متوسط',
-                'EN_SCORE': 'نمره آیلتس/تافل را وارد کنید',
-                'SUBLABEL': 'Please define the level of your English knowledge',
-                'WEAK': 'Weak',
+                'EN_SCORE': 'نمره آیلتس/تافل/پی تی ای خود را وارد کنید',
+                'SUBLABEL': 'لطفا سطح زبان انگلیسی خود را مشخص نمایید',
+                'WEAK': 'ضعیف',
             },
             'STEP_2': {
                 'LABEL': 'سطح تحصیلات',
@@ -15905,7 +15999,7 @@ var locale = {
                 'UNIVERSITY': 'نام دانشگاه',
                 'EDU_PLACE': 'واحد دانشگاهی',
                 'YEAR_GRAD': 'سال فارغ التحصیلی',
-                'SUBLABEL': 'Please list your educational background',
+                'SUBLABEL': 'لطفا سوابق تحصیلات عالی خود را مشخص نمایید',
             },
             'STEP_3': {
                 'LABEL': 'میزان سابقه کاری',
@@ -15915,175 +16009,176 @@ var locale = {
                 'NOINSURANCE': 'بدون بیمه',
                 'FIELD_ACTIVITY': 'زمینه فعالیت',
                 'YEAR': 'سال',
-                'SUBLABEL': 'Please let us know your work experience',
-                'FIELDOfWork': 'field Of Working',
-                "REDYPAID": "Relateded Years Paid",
-                "REDYNPAID": "Relateded Years Non Paid",
-                "NREDYPAID": "Non Relateded Years Paid",
-                "NREDYNPAID": "Non Relateded Years Non Paid"
+                'SUBLABEL': 'لطفا سوابق کاری خود را مشخص نمایید',
+                'FIELDOfWork': 'زمینه کاری',
+                "REDYPAID": "مرتبط با رشته تحصیلی و با دریافت دستمزد",
+                "REDYNPAID": "مرتبط با رشته تحصیلی و بدون دریافت دستمزد",
+                "NREDYPAID": "غیر مرتبط با رشته تحصیلی و با دریافت دستمزد",
+                "NREDYNPAID": "غیر مرتبط با رشته تحصیلی و بدون دریافت دستمزد"
             },
             'STEP_4': {
-                'LABEL': 'Military',
-                'SUBLABEL': 'please define the status of your military service, if applicable',
-                'STATUS': 'Status',
-                'FINISHED': 'Finished',
-                'EXEMPTION': 'Exemption',
-                'PLACE': 'Place',
-                'FROM': 'From',
-                'TO': 'To',
-                'EXEMPTIONREASON': 'Exemption Reason'
+                'LABEL': 'خدمت نظام وظیفه',
+                'SUBLABEL': 'در صورت مشمول بودن، وضعیت خدمت نظام وظیفه خود را مشخص نمایید',
+                'STATUS': 'وضعیت',
+                'FINISHED': 'دارای پایان خدمت',
+                'EXEMPTION': 'معافیت',
+                'PLACE': 'محل خدمت',
+                'FROM': 'از تاریخ',
+                'TO': 'تا تاریخ',
+                'EXEMPTIONREASON': 'در صورت معافیت دلیل آن را بفرمایید'
             },
             'STEP_5': {
-                'LABEL': 'Health',
-                'SUBLABEL': 'Please define your medical and health status',
-                'SIGNIFICANT': 'Significant Current Sickness',
-                'SURGERY': 'Surgery Past Or Future',
+                'LABEL': 'وضعیت سلامت',
+                'SUBLABEL': 'لطفا وضعیت سلامتی و پزشکی خود را مشخص نمایید',
+                'SIGNIFICANT': 'بیماری های مهم فعلی',
+                'SURGERY': 'عمل جراحی در گذشته یا آینده',
             },
             'STEP_6': {
-                'LABEL': 'Relatives In Australia',
-                'SUBLABEL': 'Please let us know if you have any relatives living in Australia',
-                'CITIZEN': 'Citizen',
-                'PERMANENTRES': 'Permanent Res',
-                'TEMPORARYRES': 'Temporary Res',
-                'STUDENTASSYLUM': 'Student-Assylum',
-                'RELATION': 'Australia Family Relation',
-                'LIVINGSTATE': 'Australia Living State',
-                'LIVINGCITY': 'Australia Living City',
-                'VISATYPE': 'Australia Visa Type'
+                'LABEL': 'فامیل در استرالیا',
+                'SUBLABEL': 'آیا از اقوام شما یا همسرتان کسی در استرالیا زندگی میکند؟',
+                'CITIZEN': 'تبعه استرالیا',
+                'PERMANENTRES': 'دارای اقامت دائم',
+                'TEMPORARYRES': 'دارای اقامت موقت',
+                'STUDENTASSYLUM': ' دانشجو یا پناهنده',
+                'RELATION': 'نسبت ایشان با شما',
+                'LIVINGSTATE': 'ایالت محل زندگی ایشان در استرالیا',
+                'LIVINGCITY': 'شهر محل زندگی ایشان در استرالیا',
+                'VISATYPE': 'نوع ویزای ایشان'
             },
             'STEP_7': {
-                'LABEL': 'Admin',
-                'TBADMIN': 'text Box Admin',
-                'TBNOTES': 'text Box Notes',
-                'MAINAPPLICATION': 'Main Applicant',
-                'APPLICANT': 'Applicant',
-                'SPOUSE': 'Spouse',
-                'TOTALPOINTS': 'Total Points',
-                'DEPENDANT': 'Dependant',
-                'OCCUPATIONTOBEASSESSED': 'Occupation to be assessed',
-                'YEAROFWORKEXPERIENCE': 'Years of Work Experience',
-                'ASSESSMENTORGANIZATION': 'Assessment Organization',
-                'PROFESSIONALINSTALLMENTA': 'Professional Fee / Installments',
-                'PROFESSIONALTOTAL': 'Professional Fee / Total',
-                'PFEDUCATION': 'Points from Education',
-                'PFEXPERIENCE': 'Points from Work Experience',
-                'PFSPOUSE': 'Points from Spouse',
-                'PFENGLISH': 'Points from English Test',
-                'PFNAATI': 'Points from NAATI Test',
-                'PFSTATE': 'Points from State Sponsorship',
-                'PFFAMILY': 'Points from Family Sponsorship',
-                'TOTALPOINT': 'Total Points',
-                'ANYINFO': 'Any Information You Want To Add',
-                'HOWKNOWUS': 'How did you know about us',
-                'DONE': "Done",
-                'EDIT': "Edit",
-                'BACK': "Back",
-                'NEXT': "Next"
+                'LABEL': 'کاربر',
+                'TBADMIN': 'مطلب ارسالی از کاربر برای متقاضی در متن ایمیل',
+                'TBNOTES': 'توضیحات داخلی در مورد متقاضی',
+                'MAINAPPLICATION': 'متقاضی اصلی پرونده',
+                'APPLICANT': 'متقاضی',
+                'SPOUSE': 'همسر',
+                'TOTALPOINTS': 'جمع امتیازات',
+                'DEPENDANT': 'متقاضی همراه',
+                'OCCUPATIONTOBEASSESSED': 'شغل مورد ارزیابی',
+                'YEAROFWORKEXPERIENCE': 'سالهای قابل ارائه برای سابقه کار',
+                'ASSESSMENTORGANIZATION': 'سازمان ارزیابی',
+                'PROFESSIONALINSTALLMENTA': 'مبلغ حق الوکاله و شرایط پرداخت',
+                'PROFESSIONALTOTAL': 'جمع کل حق الوکاله',
+                'PFEDUCATION': 'امتیاز سوابق تحصیلی',
+                'PFEXPERIENCE': 'امتیاز سابقه کار',
+                'PFSPOUSE': 'امتیاز همسر',
+                'PFENGLISH': 'امتیاز نمره زبان',
+                'PFNAATI': 'امتیاز امتحان ناتی',
+                'PFSTATE': 'امتیاز اسپانسور ایالتی',
+                'PFFAMILY': 'امتیاز اسپانسور فامیلی',
+                'TOTALPOINT': 'جمع کل امتیازات',
+                'ANYINFO': 'آیا مطلب مهم دیگری هست که اضافه کنید؟',
+                'HOWKNOWUS': 'با دفتر ما از چه طریقی آشنا شده اید؟',
+                'DONE': "ارسال",
+                'EDIT': "ویرایش",
+                'BACK': "قبلی",
+                'NEXT': "بعدی"
             },
             'STEP_8': {
-                'SUBLABEL': 'Please check all the data you have entered and click the Done Button for submission.',
-                'SUBLABEL2': 'Please check all the data you have entered and click the Edit Button for modification.',
-                'LABEL': 'Confirm Your Information',
+                'SUBLABEL': 'لطفا از صحت همه اطلاعاتی که ارائه داده اید مطمئن شده و دکمه "ارسال" را کلیک کنید.',
+                'SUBLABEL2': 'لطفا از صحت همه اطلاعاتی که ارائه داده اید مطمئن شده و دکمه "ویرایش" را کلیک کنید.',
+                'LABEL': 'لطفا صحت اطلاعات را تایید نمایید ',
             }
         },
         'Calender': {
             'TITLE': 'تقويم',
-            'VIEW': 'view',
-            'USE': 'Use',
-            'TIME': 'Time',
-            'DATE': 'Date',
-            'LOCATION': 'Location',
-            'AVAILABLE': 'Available',
-            'NOTAVAILABLE': 'Not Available',
-            'CHOOSETIMEZONE': 'Choose Time Zone'
+            'VIEW': 'نمایش',
+            'USE': 'انتخاب',
+            'TIME': 'زمان',
+            'DATE': 'تاریخ',
+            'LOCATION': 'انتخاب محل',
+            'AVAILABLE': 'موجود',
+            'NOTAVAILABLE': 'نا موجود',
+            'CHOOSETIMEZONE': 'انتخاب ساعت رسمی'
         },
         'Dialog': {
             'View_Appointment': {
-                'FROM': 'from',
-                'TO': 'to',
-                'LOCATION': 'location',
-                'DONE': 'Done',
-                'USE': 'Use'
+                'FROM': 'از',
+                'TO': 'تا',
+                'LOCATION': 'محل',
+                'DONE': 'ارسال',
+                'USE': 'انتخاب'
             },
             'Reset_Password': {
-                'TITLE': 'Reset Password',
-                'RESET': 'Reset',
-                'NEWPASSWORD': 'New Password',
-                'OLDPASSWORD': 'Old Password',
+                'TITLE': 'تغییر رمز',
+                'RESET': 'ریست',
+                'NEWPASSWORD': 'رمز جدید',
+                'OLDPASSWORD': 'رمز قدیم',
             },
             'Set_Text_Box': {
-                'TITLE': 'Text Box Message',
-                'OK': 'Ok',
-                'MESSAGETOCLIENT': "Message to Client"
+                'TITLE': 'پیغام',
+                'OK': 'تایید',
+                'MESSAGETOCLIENT': "پیغام ارسالی به متقاضی"
             },
             'Add_Slotes': {
-                'LOCATION': 'Location',
-                'STARTTIME': 'Start Time',
-                'ENDTIME': 'End Time',
-                'DATE': 'Date',
-                'CONSULRANT': 'consultant',
-                'title': 'Appointment Slotes',
-                'SAVE': 'Save',
-                'SAVEANDCLOSE': 'Save And Close'
+                'LOCATION': 'انتخاب محل',
+                'STARTTIME': 'زمان شروع',
+                'ENDTIME': 'زمان پایان',
+                'DATE': 'تاریخ',
+                'CONSULRANT': 'مشاور',
+                'title': 'وقتهای مشاوره',
+                'SAVE': 'تایید',
+                'SAVEANDCLOSE': 'تایید و خروج'
             },
             'Add_Appointment': {
-                "TITLE": "Add Appointment",
-                "CANSEL": "Cansel",
-                "ADD": "Add"
+                "TITLE": "ایجاد وقت مشاوره",
+                "CANSEL": "انصراف",
+                "ADD": "ایجاد"
             },
             'Cansel_Appointment': {
-                "TITLE": "Cansel Appointment",
-                "NO": "No",
-                "YES": "Yes",
-                "CONFIRM": "Do you want to delete this appointment"
+                "TITLE": "حذف وقت مشاوره",
+                "NO": "خیر",
+                'SHOWFORM': 'نمایش فرم',
+                "YES": "بلی",
+                "CONFIRM": "آیا می خواهید این وقت را حذف کنید؟"
             }
         },
         'AUTH': {
             'Login': {
-                'TITLE': 'LOGIN TO YOUR ACCOUNT',
-                'FORGETPASSWORD': 'Forgot Password?',
-                'LOGIN': 'Login',
+                'TITLE': 'به پرونده خود وارد شوید',
+                'FORGETPASSWORD': 'رمزتان را فراموش کرده اید؟',
+                'LOGIN': 'ورود',
                 'EMAIL': 'ایمیل',
-                'PASSWORD': 'Password'
+                'PASSWORD': 'رمز'
             }
         },
         'User': {
             'USERS': {
-                'TITLE': 'Users',
+                'TITLE': 'کاربران',
                 'EMAIL': 'ایمیل',
-                'TYPE': 'Type',
-                'USERNAME': 'User Name',
-                'PRIMARYCOLOR': 'Primary Color',
-                'SECONDARYCOLOR': 'Secondary Color',
+                'TYPE': 'نوع',
+                'USERNAME': 'نام کاربری',
+                'PRIMARYCOLOR': 'رنگ اولیه',
+                'SECONDARYCOLOR': 'رنگ ثانویه',
                 'EDIT': 'ویرایش',
-                'ACTIVE': 'Active',
-                'DEACTIVE': 'Deactive',
-                'EDITPASSWORD': 'Edit Password'
+                'ACTIVE': 'فعال',
+                'DEACTIVE': 'غیر فعال',
+                'EDITPASSWORD': 'تغییر رمز'
             },
             'ADDEDITUSER': {
-                'TITLE': 'Add Users',
+                'TITLE': 'ایجاد کاربر جدید',
                 'EMAIL': 'ایمیل',
-                'TYPE': 'Type',
-                'USERNAME': 'User Name',
+                'TYPE': 'نوع',
+                'USERNAME': 'نام کاربری',
                 'CONSULTANT': 'مشاور',
-                'MANAGER': 'Manager',
-                'SECRETARY': 'Secretary',
-                'ADMINSTRATOR': 'Adminstrator',
-                'RECEPTION': 'Reception',
-                'PRIMARYCOLOR': 'Primary Color',
-                'SECONDARYCOLOR': 'Secondary Color',
-                'ADD': 'Add',
+                'MANAGER': 'مدیر',
+                'SECRETARY': 'منشی',
+                'ADMINSTRATOR': 'کاربر',
+                'RECEPTION': 'پذیرش',
+                'PRIMARYCOLOR': 'رنگ اولیه',
+                'SECONDARYCOLOR': 'رنگ ثانویه',
+                'ADD': 'ایجاد',
                 'EDIT': 'ویرایش',
-                'PASSWORD': 'Password'
+                'PASSWORD': 'رمز'
             }
         },
         'Nav': {
-            'CALENDAR': 'Calender',
-            'USERS': 'Users'
+            'CALENDAR': 'تقویم',
+            'USERS': 'کاربران'
         },
         'Global': {
-            'ERRORFIELDREQUIRED': 'this field is required',
-            'ERRORVALIDEMAIL': 'Please enter a valid email address'
+            'ERRORFIELDREQUIRED': 'درج اطلاعات در این محل الزامی است',
+            'ERRORVALIDEMAIL': 'لطفا آدرس ایمیل معتبر وارد نمایید'
         }
     }
 };

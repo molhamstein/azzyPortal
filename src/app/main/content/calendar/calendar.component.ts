@@ -129,7 +129,10 @@ export class CalendarComponent implements OnInit {
     });
     this.dialogRef.afterClosed()
       .subscribe(result => {
-        this.changeView(this.view);
+        if (result['isVisit'] == true)
+          this.mainServ.globalServ.goTo('show-form/' + result["id"])
+        else
+          this.changeView(this.view);
       });
   }
 

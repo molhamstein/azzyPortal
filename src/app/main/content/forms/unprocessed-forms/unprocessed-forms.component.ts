@@ -77,6 +77,29 @@ export class UnprocessedFormsComponent implements OnInit {
     });
   }
 
+  export() {
+    var filter = {};
+    if (this.isSearchMode == false)
+      filter = {
+        "where": { "status": "unprocessed" },
+        "order": "dateOfArr DESC"
+      }
+    else
+      filter =
+        {
+          "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+          "order": "dateOfArr DESC",
+        }
+
+    this.mainServ.APIServ.get("forms/exportForms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) { 
+        var win = window.open(data.path, '_blank');
+        win.focus();
+
+      }
+    })
+  }
+
   searchKey = "";
   search() {
     this.isSearchMode = true;
@@ -85,7 +108,7 @@ export class UnprocessedFormsComponent implements OnInit {
 
   clear() {
     this.isSearchMode = false;
-    this.searchKey=""
+    this.searchKey = ""
     this.inisilaize()
 
   }
@@ -141,15 +164,34 @@ export class UnprocessedFormsComponent implements OnInit {
     this.mainServ.globalServ.goTo(url)
   }
 
+  timezone() {
+    var offset = new Date().getTimezoneOffset();
+    var minutes = Math.abs(offset);
+    var hours = Math.floor(minutes / 60);
+    var prefix = offset < 0 ? "+" : "-";
+    return prefix + hours;
+  }
+
+  testDate() {
+    var date = new Date();
+    this.mainServ.APIServ.get("forms/testDate?timeZone=" + this.timezone()).subscribe((data: any) => {
+
+    })
+  }
+
   changeStatus(newStatus, urlIndex, id, name, text) {
     var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
     var mainThis = this;
 
     var isWithID = newStatus == "consultation" ? true : false;
-
+    var tempText = ""
+    if (text == null)
+      tempText = "";
+    else
+      tempText = text
     const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
       width: '500px',
-      data: { 'textBoxMessage': text, 'isWithID': isWithID }
+      data: { 'textBoxMessage': tempText, 'isWithID': isWithID }
     });
 
     dialogRef.afterClosed().subscribe(result => {

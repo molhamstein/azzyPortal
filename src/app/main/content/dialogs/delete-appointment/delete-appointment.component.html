@@ -5,7 +5,10 @@
 <div mat-dialog-content>
   <p>{{'Dialog.Cansel_Appointment.CONFIRM' | translate}}</p>
 </div>
-<div mat-dialog-actions>
+<div mat-dialog-actions style="position: relative;">
   <button mat-button (click)="close()">{{'Dialog.Cansel_Appointment.NO' | translate}}</button>
-  <button mat-button  (click)="onYesClick()" cdkFocusInitial>{{'Dialog.Cansel_Appointment.YES' | translate}}</button>
+  <button mat-button (click)="onYesClick()" cdkFocusInitial>{{'Dialog.Cansel_Appointment.YES' | translate}}</button>
+  <button mat-button (click)="visitForm()" style="float: right;position: absolute;right: 0px;bottom: 11px;"
+    cdkFocusInitial>{{'Dialog.Cansel_Appointment.SHOWFORM'
+    | translate}}</button>
 </div>

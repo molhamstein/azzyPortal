@@ -41,4 +41,9 @@ export class DeleteAppointmentComponent {
     close() {
         this.dialogRef.close();
     }
+
+    visitForm() {
+        this.dialogRef.close({ "isVisit": true, "id": this.appointment['meta'].forms.id });
+
+    }
 }

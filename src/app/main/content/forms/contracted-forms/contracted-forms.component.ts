@@ -36,6 +36,29 @@ export class ContractedFormsComponent implements OnInit {
   }
 
 
+  export() {
+    var filter = {};
+    if (this.isSearchMode == false)
+      filter = {
+        "where": { "status": "contracts" },
+        "order": "dateOfArr DESC"
+      }
+    else
+      filter =
+        {
+          "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+          "order": "dateOfArr DESC",
+        }
+
+    this.mainServ.APIServ.get("forms/exportForms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        var win = window.open(data.path, '_blank');
+        win.focus();
+
+      }
+    })
+  }
+
 
   setPage(offset, limit) {
     var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']

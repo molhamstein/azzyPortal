@@ -8,8 +8,16 @@
     </div>
 
     <div style="width: 350;padding-top: 20px;" class="search">
-      <button mat-button class="clear" (click)="clear()" type="button">{{'Form.FORMS.CLEAR' | translate}}</button>
-      <button mat-button class="search" (click)="search()" type="button">{{'Form.FORMS.SEARCH' | translate}}</button>
+      <button mat-button class="search" *ngIf="rows.length>0" (click)="export()" type="button">
+        <mat-icon matSuffix>cloud_download</mat-icon>
+      </button>
+
+      <button mat-button class="clear" (click)="clear()" type="button">
+        <mat-icon matSuffix>clear</mat-icon>
+      </button>
+      <button mat-button class="search" (click)="search()" type="button">
+        <mat-icon matSuffix>search</mat-icon>
+      </button>
       <mat-form-field>
 
         <input matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="searchKey" placeholder="{{ 'Form.FORMS.SEARCH' | translate }}">

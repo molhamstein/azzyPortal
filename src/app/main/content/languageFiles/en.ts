@@ -4,15 +4,14 @@ export const locale = {
         'Form': {
             'FORMS': {
                 'TITLE': 'Forms',
-                'SEARCH': "Search",
-                'CLEAR': "Clear"
+                "SEARCH": "Search"
             },
             'UNPROCESSED_FORMS': {
                 'TITLE': 'Unprocessed Forms',
                 'ID': 'Id',
-                'SUBMISSION_DATE': 'Submision Date',
+                'SUBMISSION_DATE': 'Submission Date',
                 'CLIENT_NAME': 'Client Name',
-                'CLIENT_NUMBER': 'Clinet Number',
+                'CLIENT_NUMBER': 'Client Number',
                 'STATUS': 'Status',
                 'SHOW_FORM': 'Show Form',
                 'PROCESS': 'Process',
@@ -28,12 +27,12 @@ export const locale = {
             'PROCESSED_FORMS': {
                 'TITLE': 'Processed Forms',
                 'ID': 'Id',
-                'SUBMISSION_DATE': 'Submision Date',
+                'SUBMISSION_DATE': 'Submission Date',
                 'CONSULTANT': 'Consultant',
                 'ARRIVAL_DATE': 'Date Of Arrival',
                 'PROCESS_DATE': 'Date of Processing',
                 'CLIENT_NAME': 'Client Name',
-                'CLIENT_NUMBER': 'Clinet Number',
+                'CLIENT_NUMBER': 'Client Number',
                 'STATUS': 'Status',
                 'EMAIL': "Email",
                 'UNPROCESSED': 'Unprocessed',
@@ -43,14 +42,14 @@ export const locale = {
                 'DELETE': 'Delete',
                 'MORE_INFO': 'More Info',
                 'NOTELIGIBLE': 'Not Eligible',
-                'CONSULTATION': 'Consultation',
                 'REJECT': 'Reject',
+                'CONSULTATION': 'Consultation',
                 'CONTRACT': 'Contract'
             },
             'CONTRACTED_FORMS': {
-                'SUBMISSION_DATE': 'Submision Date',
+                'SUBMISSION_DATE': 'Submission Date',
                 'CLIENT_NAME': 'Client Name',
-                'CLIENT_NUMBER': 'Clinet Number',
+                'CLIENT_NUMBER': 'Client Number',
                 'STATUS': 'Status',
                 'TITLE': 'Contracted Forms',
                 'SHOW_FORM': 'Show Form',
@@ -85,9 +84,9 @@ export const locale = {
                 'LABEL': 'Info',
                 'SUBLABEL': 'Personal Information about Applicant and Spouse',
                 'ENAME': 'English Name',
-                'ESNAME': 'English Sur Name',
+                'ESNAME': 'English Surname',
                 'FNAME': 'Farsi Name',
-                'FSNAME': 'Farsi Sur Name',
+                'FSNAME': 'Farsi Surname',
                 'EMAIL': 'Email',
                 'MOBILE': 'Mobile',
                 'PHONE': 'Line Phone',
@@ -106,12 +105,12 @@ export const locale = {
             'STEP_1': {
                 'LABEL': 'English',
                 'SUBLABEL': 'Please define the level of your English knowledge',
-                'ENGLISH_LEVEL': 'How familiar are you in English?',
+                'ENGLISH_LEVEL': 'How familiar are you with English?',
                 'EXCELLENT': 'Excellent',
                 'GOOD': 'Good',
                 'MEDIUM': 'Medium',
                 'WEAK': 'Weak',
-                'EN_SCORE': 'Enter the IELTS / TOEFL score'
+                'EN_SCORE': 'Enter the IELTS / PTE / TOEFL score'
             },
             'STEP_2': {
                 'LABEL': 'Education',
@@ -121,15 +120,15 @@ export const locale = {
                 'UNDER_GRAD': 'Undergraduate',
                 'MASTER': 'Master',
                 'DOC': 'Doctoral',
-                'FIELD': 'field',
-                'UNIVERSITY': 'University name',
+                'FIELD': 'Field',
+                'UNIVERSITY': 'University Name',
                 'EDU_PLACE': 'Education Place',
                 'YEAR_GRAD': 'Year of Graduation'
             },
             'STEP_3': {
                 'LABEL': 'Work',
                 'SUBLABEL': 'Please let us know your work experience',
-                'FIELDOfWork': 'field Of Working',
+                'FIELDOfWork': 'Field Of Work',
                 "REDYPAID": "Relateded Years Paid",
                 "REDYNPAID": "Relateded Years Non Paid",
                 "NREDYPAID": "Non Relateded Years Paid",
@@ -142,8 +141,8 @@ export const locale = {
             },
             'STEP_4': {
                 'LABEL': 'Military',
-                'SUBLABEL': 'please define the status of your military service, if applicable',
-                'STATUS': 'Status',
+                'SUBLABEL': 'Please define the status of your military service, if applicable',
+                'STATUS': 'Status:',
                 'FINISHED': 'Finished',
                 'EXEMPTION': 'Exemption',
                 'PLACE': 'Place',
@@ -155,7 +154,7 @@ export const locale = {
                 'LABEL': 'Health',
                 'SUBLABEL': 'Please define your medical and health status',
                 'SIGNIFICANT': 'Significant Current Sickness',
-                'SURGERY': 'Surgery Past Or Future',
+                'SURGERY': 'Surgery in the Past or Future',
             },
             'STEP_6': {
                 'LABEL': 'Relatives In Australia',
@@ -165,15 +164,15 @@ export const locale = {
                 'TEMPORARYRES': 'Temporary Res',
                 'STUDENTASSYLUM': 'Student-Assylum',
 
-                'RELATION': 'Australia Family Relation',
-                'LIVINGSTATE': 'Australia Living State',
-                'LIVINGCITY': 'Australia Living City',
-                'VISATYPE': 'Australia Visa Type'
+                'RELATION': 'Your Relative\'s relation to you',
+                'LIVINGSTATE': 'Australian State your relative is living',
+                'LIVINGCITY': 'Australian City your relative is living',
+                'VISATYPE': 'Australian Visa Type'
             },
             'STEP_7': {
                 'LABEL': 'Admin',
-                'TBADMIN': 'text Box Admin',
-                'TBNOTES': 'text Box Notes',
+                'TBADMIN': 'Message to Client via Email',
+                'TBNOTES': 'Internal Notes, not visible for Client',
                 'MAINAPPLICATION': 'Main Applicant',
                 'APPLICANT': 'Applicant',
                 'SPOUSE': 'Spouse',
@@ -182,7 +181,7 @@ export const locale = {
                 'OCCUPATIONTOBEASSESSED': 'Occupation to be assessed',
                 'YEAROFWORKEXPERIENCE': 'Years of Work Experience',
                 'ASSESSMENTORGANIZATION': 'Assessment Organization',
-                'PROFESSIONALINSTALLMENTA': 'Professional Fee / Installments',
+                'PROFESSIONALINSTALLMENTA': 'Professional Fee / Instalments',
                 'PROFESSIONALTOTAL': 'Professional Fee / Total',
                 'PFEDUCATION': 'Points from Education',
                 'PFEXPERIENCE': 'Points from Work Experience',
@@ -192,8 +191,8 @@ export const locale = {
                 'PFSTATE': 'Points from State Sponsorship',
                 'PFFAMILY': 'Points from Family Sponsorship',
                 'TOTALPOINT': 'Total Points',
-                'ANYINFO': 'Any Information You Want To Add',
-                'HOWKNOWUS': 'How did you know about us',
+                'ANYINFO': 'Any useful information you want to add?',
+                'HOWKNOWUS': 'How did you know about us?',
                 'DONE': "Done",
                 'EDIT': "Edit",
                 'BACK': "Back",
@@ -209,7 +208,7 @@ export const locale = {
         },
         'Calender': {
             'TITLE': 'Calendar',
-            'VIEW': 'view',
+            'VIEW': 'View',
             'USE': 'Use',
             'TIME': 'Time',
             'DATE': 'Date',
@@ -220,9 +219,9 @@ export const locale = {
         },
         'Dialog': {
             'View_Appointment': {
-                'FROM': 'from',
-                'TO': 'to',
-                'LOCATION': 'location',
+                'FROM': 'From',
+                'TO': 'To',
+                'LOCATION': 'Location',
                 'DONE': 'Done',
                 'USE': 'Use'
             },
@@ -242,21 +241,22 @@ export const locale = {
                 'STARTTIME': 'Start Time',
                 'ENDTIME': 'End Time',
                 'DATE': 'Date',
-                'CONSULRANT': 'consultant',
-                'title': 'Appointment Slotes',
+                'CONSULRANT': 'Consultant',
+                'title': 'Appointment Slots',
                 'SAVE': 'Save',
-                'SAVEANDCLOSE': 'Save And Close'
+                'SAVEANDCLOSE': 'Save and Close'
             },
             'Add_Appointment': {
                 "TITLE": "Add Appointment",
-                "CANSEL": "Cansel",
+                "CANSEL": "Cancel",
                 "ADD": "Add"
             },
             'Cansel_Appointment': {
-                "TITLE": "Cansel Appointment",
+                "TITLE": "Cancel Appointment",
+                "SHOWFORM": "Show Form",
                 "NO": "No",
                 "YES": "Yes",
-                "CONFIRM": "Do you want to delete this appointment"
+                "CONFIRM": "Do you want to delete this appointment?"
             }
         },
         'AUTH': {
@@ -273,7 +273,7 @@ export const locale = {
                 'TITLE': 'Users',
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
-                'USERNAME': 'User Name',
+                'USERNAME': 'Username',
                 'PRIMARYCOLOR': 'Primary Color',
                 'SECONDARYCOLOR': 'Secondary Color',
                 'EDIT': 'Edit',
@@ -285,8 +285,8 @@ export const locale = {
                 'TITLE': 'Add Users',
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
-                'USERNAME': 'User Name',
-                'CONSULTANT': 'Consultant',
+                'USERNAME': 'Username',
+                'CONSUTANT': 'Consultant',
                 'MANAGER': 'Manager',
                 'SECRETARY': 'Secretary',
                 'ADMINSTRATOR': 'Adminstrator',
@@ -299,11 +299,11 @@ export const locale = {
             }
         },
         'Nav': {
-            'CALENDAR': 'Calender',
+            'CALENDAR': 'Calendar',
             'USERS': 'Users'
         },
         'Global': {
-            'ERRORFIELDREQUIRED': 'this field is required',
+            'ERRORFIELDREQUIRED': 'This field is required',
             'ERRORVALIDEMAIL': 'Please enter a valid email address'
         }
     }

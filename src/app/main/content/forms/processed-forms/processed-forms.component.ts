@@ -78,7 +78,7 @@ export class ProcessedFormsComponent implements OnInit {
 
   clear() {
     this.isSearchMode = false;
-    this.searchKey=""
+    this.searchKey = ""
     this.inisilaize()
 
   }
@@ -91,6 +91,29 @@ export class ProcessedFormsComponent implements OnInit {
     this.offset = event.offset;
     this.limit = event.limit;
     this.setPage(this.offset, this.limit);
+  }
+
+  export() {
+    var filter = {};
+    if (this.isSearchMode == false)
+      filter = {
+        "where": { "and": [{ "status": { "neq": "unprocessed" } }, { "status": { "neq": "contracts" } }] },
+        "order": "dateOfArr DESC"
+      }
+    else
+      filter =
+        {
+          "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+          "order": "dateOfArr DESC",
+        }
+
+    this.mainServ.APIServ.get("forms/exportForms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        var win = window.open(data.path, '_blank');
+        win.focus();
+
+      }
+    })
   }
 
 
