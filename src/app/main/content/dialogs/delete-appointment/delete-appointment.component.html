@@ -3,11 +3,11 @@
 <h3 mat-dialog-title> {{'Dialog.Cansel_Appointment.TITLE' | translate}}</h3>
 
 <div mat-dialog-content>
-  <p>{{'Dialog.Cansel_Appointment.CONFIRM' | translate}}</p>
+  <p>{{'Dialog.Cansel_Appointment.CONFIRM' | translate}}{{appointment['meta'].forms.nameEnglish}} {{appointment['meta'].forms.surnameEnglish}}</p>
 </div>
 <div mat-dialog-actions style="position: relative;">
-  <button mat-button (click)="close()">{{'Dialog.Cansel_Appointment.NO' | translate}}</button>
-  <button mat-button (click)="onYesClick()" cdkFocusInitial>{{'Dialog.Cansel_Appointment.YES' | translate}}</button>
+  <button mat-button (click)="close()">{{'Dialog.Cansel_Appointment.CANCEL' | translate}}</button>
+  <button mat-button (click)="onYesClick()" cdkFocusInitial>{{'Dialog.Cansel_Appointment.DELETE' | translate}}</button>
   <button mat-button (click)="visitForm()" style="float: right;position: absolute;right: 0px;bottom: 11px;"
     cdkFocusInitial>{{'Dialog.Cansel_Appointment.SHOWFORM'
     | translate}}</button>

@@ -1,7 +1,8 @@
 <div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
 
   <!-- HEADER -->
-  <div class="header mat-accent-bg p-24 h-100" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+  <div class="header mat-accent-bg p-24 h-100" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row"
+    fxLayoutAlign.gt-xs="space-between center">
     <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
       <div class="h2 mt-16">{{'User.USERS.TITLE' | translate }}</div>
     </div>
@@ -12,13 +13,14 @@
 
   <!-- CONTENT -->
   <div class="content p-24">
+    <div style="width: 100%;height: 45px;">
+      <button mat-button style="float: right;background-color: #37abe0;color: white;" type="button" (click)="addUser()">Add
+        User</button>
+    </div>
 
-    <button mat-button type="button" (click)="addUser()">Add User</button>
-
-
-    <ngx-datatable class="material vertical-scroll" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [rowHeight]="50"
-      [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [externalPaging]="true" [count]="count" [offset]="offset"
-      [limit]="limit" (page)='onPage($event)'>
+    <ngx-datatable class="material vertical-scroll" [rows]="rows" [columnMode]="'force'" [headerHeight]="50"
+      [rowHeight]="50" [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [externalPaging]="true" [count]="count"
+      [offset]="offset" [limit]="limit" (page)='onPage($event)'>
 
 
       <!--<ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Id">

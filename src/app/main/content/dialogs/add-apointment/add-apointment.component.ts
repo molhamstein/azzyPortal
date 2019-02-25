@@ -37,7 +37,7 @@ export class AddApointmentComponent {
     options: string[] = ['One', 'Two', 'Three'];
     filteredOptions: Observable<string[]>;
     ngOnInit() {
-        var filter = { "where": { "status": "consultation", "appointmentId": " " } }
+        var filter = { "where": { "status": "consultation", "or": [{ "appointmentId": " " }, { "appointmentId": null }] } }
         this.mainServ.APIServ.get("forms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
             if (this.mainServ.APIServ.getErrorCode() == 0) {
                 this.options = data;

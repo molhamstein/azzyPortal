@@ -668,7 +668,7 @@ export class AdviceFormComponent implements OnInit {
             this.mainServ.APIServ.setErrorCode(0);
             this.dialogSerc.responseFormDialog(false)
           } else {
-            alert("somethingError");
+            // alert("somethingError");
             this.mainServ.APIServ.setErrorCode(0);
           }
         })

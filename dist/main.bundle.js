@@ -9858,7 +9858,7 @@ var AdviceFormComponent = (function () {
                         _this.dialogSerc.responseFormDialog(false);
                     }
                     else {
-                        alert("somethingError");
+                        // alert("somethingError");
                         _this.mainServ.APIServ.setErrorCode(0);
                     }
                 });
@@ -10068,10 +10068,11 @@ var CalendarComponent = (function () {
         });
         this.dialogRef.afterClosed()
             .subscribe(function (result) {
-            if (result['isVisit'] == true)
+            if (result != null && result['isVisit'] == true)
                 _this.mainServ.globalServ.goTo('show-form/' + result["id"]);
-            else
-                _this.changeView(_this.view);
+            else {
+                _this.getSlots(_this.viewDate, _this.consultants);
+            }
         });
     };
     CalendarComponent.prototype.dayClicked = function (_a) {
@@ -10274,12 +10275,10 @@ var CalendarComponent = (function () {
         });
         this.dialogRef.afterClosed()
             .subscribe(function (response) {
-            if (!response) {
-                return;
-            }
-            var newEvent = response.getRawValue();
-            _this.events.push(newEvent);
-            _this.refresh.next(true);
+            _this.getSlots(_this.viewDate, _this.consultants);
+            // const newEvent = response.getRawValue();
+            // this.events.push(newEvent);
+            // this.refresh.next(true);
         });
     };
     CalendarComponent.prototype.isAllowed = function (role) {
@@ -11448,7 +11447,7 @@ var ClientCalendarComponent = (function () {
                             _this.events.push(x);
                             _this.allEvents[_this.viewDate.getMonth() + "-" + _this.viewDate.getFullYear()].push(x);
                         }
-                        x['date'] = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate();
+                        x['date'] = x['start'].getFullYear() + "-" + (x['start'].getMonth() + 1) + "-" + x['start'].getDate();
                         var dateStartString = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate()
                             + " " + x['start'].getHours() + ":" + x['start'].getMinutes();
                         x['bodyStart'] = __WEBPACK_IMPORTED_MODULE_8_moment__(dateStartString).tz('Asia/Tehran').format('hh : mm');
@@ -11758,7 +11757,7 @@ var AddApointmentComponent = (function () {
     }
     AddApointmentComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var filter = { "where": { "status": "consultation", "appointmentId": " " } };
+        var filter = { "where": { "status": "consultation", "or": [{ "appointmentId": " " }, { "appointmentId": null }] } };
         this.mainServ.APIServ.get("forms?filter=" + JSON.stringify(filter)).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 _this.options = data;
@@ -12189,7 +12188,7 @@ var ConfirmMessageComponent = (function () {
 /***/ "./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<h3 mat-dialog-title> {{'Dialog.Cansel_Appointment.TITLE' | translate}}</h3>\n\n<div mat-dialog-content>\n  <p>{{'Dialog.Cansel_Appointment.CONFIRM' | translate}}</p>\n</div>\n<div mat-dialog-actions style=\"position: relative;\">\n  <button mat-button (click)=\"close()\">{{'Dialog.Cansel_Appointment.NO' | translate}}</button>\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial>{{'Dialog.Cansel_Appointment.YES' | translate}}</button>\n  <button mat-button (click)=\"visitForm()\" style=\"float: right;position: absolute;right: 0px;bottom: 11px;\"\n    cdkFocusInitial>{{'Dialog.Cansel_Appointment.SHOWFORM'\n    | translate}}</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<h3 mat-dialog-title> {{'Dialog.Cansel_Appointment.TITLE' | translate}}</h3>\n\n<div mat-dialog-content>\n  <p>{{'Dialog.Cansel_Appointment.CONFIRM' | translate}}{{appointment['meta'].forms.nameEnglish}} {{appointment['meta'].forms.surnameEnglish}}</p>\n</div>\n<div mat-dialog-actions style=\"position: relative;\">\n  <button mat-button (click)=\"close()\">{{'Dialog.Cansel_Appointment.CANCEL' | translate}}</button>\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial>{{'Dialog.Cansel_Appointment.DELETE' | translate}}</button>\n  <button mat-button (click)=\"visitForm()\" style=\"float: right;position: absolute;right: 0px;bottom: 11px;\"\n    cdkFocusInitial>{{'Dialog.Cansel_Appointment.SHOWFORM'\n    | translate}}</button>\n</div>\n"
 
 /***/ }),
 
@@ -12205,14 +12204,15 @@ module.exports = ""
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeleteAppointmentComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12233,26 +12233,31 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+
 var DeleteAppointmentComponent = (function () {
-    function DeleteAppointmentComponent(dialogRef, data, mainServ, _formBuilder, translate, translationLoader) {
+    function DeleteAppointmentComponent(dialogSer, dialogRef, data, mainServ, _formBuilder, translate, translationLoader) {
+        this.dialogSer = dialogSer;
         this.dialogRef = dialogRef;
         this.data = data;
         this.mainServ = mainServ;
         this._formBuilder = _formBuilder;
         this.translate = translate;
         this.translationLoader = translationLoader;
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_6__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__["a" /* locale */]);
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_7__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_8__languageFiles_fa__["a" /* locale */]);
         this.appointment = data['appointment'];
     }
     DeleteAppointmentComponent.prototype.onYesClick = function () {
-        var _this = this;
-        this.mainServ.loaderSer.display(true);
-        this.mainServ.APIServ.put("forms/cancelAp/" + this.appointment['meta'].forms.id, {}).subscribe(function (data) {
-            _this.mainServ.loaderSer.display(false);
-            if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                _this.dialogRef.close();
-            }
-        });
+        var mainthis = this;
+        this.dialogSer.confirmationMessage('Do you want to delete this appointment', "forms/cancelAp/" + this.appointment['meta'].forms.id, {}, false, function () {
+            mainthis.dialogRef.close();
+        }, 'put');
+        // this.mainServ.loaderSer.display(true);
+        // this.mainServ.APIServ.put("forms/cancelAp/" + this.appointment['meta'].forms.id, {}).subscribe((data: any) => {
+        //     this.mainServ.loaderSer.display(false);
+        //     if (this.mainServ.APIServ.getErrorCode() == 0) {
+        //         this.dialogRef.close();
+        //     }
+        // })
     };
     DeleteAppointmentComponent.prototype.close = function () {
         this.dialogRef.close();
@@ -12261,16 +12266,17 @@ var DeleteAppointmentComponent = (function () {
         this.dialogRef.close({ "isVisit": true, "id": this.appointment['meta'].forms.id });
     };
     DeleteAppointmentComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["Component"])({
             selector: 'delete-appointment',
             template: __webpack_require__("./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.html"),
             styles: [__webpack_require__("./src/app/main/content/dialogs/delete-appointment/delete-appointment.component.scss")]
         }),
-        __param(1, Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
+        __param(2, Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_5__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_material__["k" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_1__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
     ], DeleteAppointmentComponent);
     return DeleteAppointmentComponent;
 }());
@@ -15808,11 +15814,11 @@ var locale = {
                 "ADD": "Add"
             },
             'Cansel_Appointment': {
-                "TITLE": "Cancel Appointment",
+                "TITLE": "What to do",
                 "SHOWFORM": "Show Form",
-                "NO": "No",
-                "YES": "Yes",
-                "CONFIRM": "Do you want to delete this appointment?"
+                "CANCEL": "Cancel",
+                "DELETE": "Delete Appointment",
+                "CONFIRM": "the appointment for "
             }
         },
         'AUTH': {
@@ -15842,7 +15848,7 @@ var locale = {
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
                 'USERNAME': 'Username',
-                'CONSUTANT': 'Consultant',
+                'CONSULTANT': 'Consultant',
                 'MANAGER': 'Manager',
                 'SECRETARY': 'Secretary',
                 'ADMINSTRATOR': 'Adminstrator',
@@ -16983,7 +16989,7 @@ var AzzyUserModule = (function () {
 /***/ "./src/app/main/content/user/users/users.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'User.USERS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n\r\n    <button mat-button type=\"button\" (click)=\"addUser()\">Add User</button>\r\n\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\" [rowHeight]=\"50\"\r\n      [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n      [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'CONTRACTED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"type\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.TYPE' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"username\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.USERNAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='active'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='deactive'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"primarycolor\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.PRIMARYCOLOR' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <div class=\"circleColor\" [ngStyle]=\"{'background-color':row.primarycolor}\"></div>\r\n          <!--<mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>-->\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"secondarycolor\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.SECONDARYCOLOR' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <div class=\"circleColor\" [ngStyle]=\"{'background-color':row.secondarycolor}\"></div>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <!--<button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('not eligible',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('more info',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('consultation',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('contracts',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>-->\r\n            <button mat-menu-item (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'User.USERS.EDIT' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"editPassword(row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'User.USERS.EDITPASSWORD' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"row.status!='active'\" (click)=\"changeStatus('active',row.id,row.username)\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'User.USERS.ACTIVE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"row.status!='deactive'\" (click)=\"changeStatus('deactive',row.id,row.username)\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'User.USERS.DEACTIVE' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\"\r\n    fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'User.USERS.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n    <div style=\"width: 100%;height: 45px;\">\r\n      <button mat-button style=\"float: right;background-color: #37abe0;color: white;\" type=\"button\" (click)=\"addUser()\">Add\r\n        User</button>\r\n    </div>\r\n\r\n    <ngx-datatable class=\"material vertical-scroll\" [rows]=\"rows\" [columnMode]=\"'force'\" [headerHeight]=\"50\"\r\n      [rowHeight]=\"50\" [footerHeight]=\"50\" [scrollbarV]=\"false\" [scrollbarH]=\"true\" [externalPaging]=\"true\" [count]=\"count\"\r\n      [offset]=\"offset\" [limit]=\"limit\" (page)='onPage($event)'>\r\n\r\n\r\n      <!--<ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Id\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'CONTRACTED_FORMS.ID' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>-->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"email\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.EMAIL' | translate }}</span>\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"type\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.TYPE' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"username\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.USERNAME' | translate }}</span>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"Status\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'Form.UNPROCESSED_FORMS.STATUS' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <mat-chip-list *ngIf=\"row.status=='active'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n          <mat-chip-list *ngIf=\"row.status=='deactive'\">\r\n            <mat-chip style=\"background-color:#ff6363\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"primarycolor\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.PRIMARYCOLOR' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <div class=\"circleColor\" [ngStyle]=\"{'background-color':row.primarycolor}\"></div>\r\n          <!--<mat-chip-list *ngIf=\"row.status=='contracts'\">\r\n            <mat-chip style=\"background-color:green\" selected=\"true\">{{row.status}}</mat-chip>\r\n          </mat-chip-list>-->\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"secondarycolor\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{ 'User.USERS.SECONDARYCOLOR' | translate }}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <div class=\"circleColor\" [ngStyle]=\"{'background-color':row.secondarycolor}\"></div>\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <!--<button mat-menu-item (click)=\"goTo('view',row.id)\">\r\n              <mat-icon>search</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.SHOW_FORM' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('not eligible',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.NOTELIGIBLE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('more info',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.MORE_INFO' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('consultation',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>group</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.CONSULTATION' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"changeStatus('contracts',row.id,row.nameEnglish , row.textBoxAdmin )\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'Form.CONTRACTED_FORMS.CONTRACT' | translate}}</span>\r\n            </button>-->\r\n            <button mat-menu-item (click)=\"goTo('edit',row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'User.USERS.EDIT' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item (click)=\"editPassword(row.id)\">\r\n              <mat-icon>edit</mat-icon>\r\n              <span>{{'User.USERS.EDITPASSWORD' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"row.status!='active'\" (click)=\"changeStatus('active',row.id,row.username)\">\r\n              <mat-icon>check</mat-icon>\r\n              <span>{{'User.USERS.ACTIVE' | translate}}</span>\r\n            </button>\r\n            <button mat-menu-item *ngIf=\"row.status!='deactive'\" (click)=\"changeStatus('deactive',row.id,row.username)\">\r\n              <mat-icon>cancel</mat-icon>\r\n              <span>{{'User.USERS.DEACTIVE' | translate}}</span>\r\n            </button>\r\n          </mat-menu>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n    </ngx-datatable>\r\n  </div>\r\n"
 
 /***/ }),
 

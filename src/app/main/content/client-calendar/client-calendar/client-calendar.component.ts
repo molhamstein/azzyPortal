@@ -665,7 +665,7 @@ export class ClientCalendarComponent implements OnInit {
       this.events = [];
     this.bodyevents = [];
     if (this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()] == null || !isMonth) {
-      this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to,this.token).subscribe((data: any) => {
+      this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + from + "&dateEnd=" + to, this.token).subscribe((data: any) => {
         if (this.mainServ.APIServ.getErrorCode() == 0) {
           if (isMonth)
             this.allEvents[this.viewDate.getMonth() + "-" + this.viewDate.getFullYear()] = [];
@@ -683,7 +683,7 @@ export class ClientCalendarComponent implements OnInit {
             }
 
 
-            x['date'] = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate();
+            x['date'] = x['start'].getFullYear() + "-" + (x['start'].getMonth() + 1) + "-" + x['start'].getDate();
 
             var dateStartString = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate()
               + " " + x['start'].getHours() + ":" + x['start'].getMinutes();
@@ -735,7 +735,7 @@ export class ClientCalendarComponent implements OnInit {
     this.changeDayAnas(false)
   }
 
-  
+
   viewDate: Date = new Date();
   form;
   consId
@@ -749,7 +749,7 @@ export class ClientCalendarComponent implements OnInit {
 
     var id = this.route.snapshot.paramMap.get('id');
     this.token = this.route.snapshot.paramMap.get('token');
-    this.mainServ.APIServ.get("forms/getClientForm/" + id,this.token).subscribe((data: any) => {
+    this.mainServ.APIServ.get("forms/getClientForm/" + id, this.token).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.form = data['getClientForm'];
         this.consId = this.form['consId'];

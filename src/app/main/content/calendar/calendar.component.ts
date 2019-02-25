@@ -129,10 +129,11 @@ export class CalendarComponent implements OnInit {
     });
     this.dialogRef.afterClosed()
       .subscribe(result => {
-        if (result['isVisit'] == true)
+        if (result != null && result['isVisit'] == true)
           this.mainServ.globalServ.goTo('show-form/' + result["id"])
-        else
-          this.changeView(this.view);
+        else {
+          this.getSlots(this.viewDate, this.consultants);
+        }
       });
   }
 
@@ -350,14 +351,13 @@ export class CalendarComponent implements OnInit {
     });
     this.dialogRef.afterClosed()
       .subscribe((response: FormGroup) => {
-        if (!response) {
-          return;
-        }
-        const newEvent = response.getRawValue();
-        this.events.push(newEvent);
-        this.refresh.next(true);
+        this.getSlots(this.viewDate, this.consultants);
+        // const newEvent = response.getRawValue();
+        // this.events.push(newEvent);
+        // this.refresh.next(true);
       });
   }
+
   isAllowed(role) {
     return this.mainServ.globalServ.isAllowed(role);
 

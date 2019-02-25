@@ -252,11 +252,11 @@ export const locale = {
                 "ADD": "Add"
             },
             'Cansel_Appointment': {
-                "TITLE": "Cancel Appointment",
+                "TITLE": "What to do",
                 "SHOWFORM": "Show Form",
-                "NO": "No",
-                "YES": "Yes",
-                "CONFIRM": "Do you want to delete this appointment?"
+                "CANCEL": "Cancel",
+                "DELETE": "Delete Appointment",
+                "CONFIRM": "the appointment for "
             }
         },
         'AUTH': {
@@ -286,7 +286,7 @@ export const locale = {
                 'EMAIL': 'Email',
                 'TYPE': 'Type',
                 'USERNAME': 'Username',
-                'CONSUTANT': 'Consultant',
+                'CONSULTANT': 'Consultant',
                 'MANAGER': 'Manager',
                 'SECRETARY': 'Secretary',
                 'ADMINSTRATOR': 'Adminstrator',
