@@ -87,27 +87,27 @@ export class AdviceFormComponent implements OnInit {
   ];
   englishScores = [
     {
-      viewValue: 'ًWriting',
+      viewValue: 'Add_Edit_Form.STEP_1.Writing',
       value: ['writingEn', 'writingEnSp'],
       icon: 'edit'
     },
     {
-      viewValue: 'Listening',
+      viewValue: 'Add_Edit_Form.STEP_1.Listening',
       value: ['listeningEn', 'listeningEnSp'],
       icon: 'hearing'
     },
     {
-      viewValue: 'Reading',
+      viewValue: 'Add_Edit_Form.STEP_1.Reading',
       value: ['readingEn', 'readingEnSp'],
       icon: 'local_library'
     },
     {
-      viewValue: 'Speaking',
+      viewValue: 'Add_Edit_Form.STEP_1.Speaking',
       value: ['speakingEn', 'speakingEnSp'],
       icon: 'record_voice_over'
     },
     {
-      viewValue: 'Overall',
+      viewValue: 'Add_Edit_Form.STEP_1.Overall',
       value: ['overallEn', 'overallEnSp'],
       icon: 'done_all'
     }
@@ -118,7 +118,7 @@ export class AdviceFormComponent implements OnInit {
 
   eduLevels = [
     {
-      label: "Associate Degree",
+      label: "Add_Edit_Form.STEP_2.AssociateDegree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -146,7 +146,7 @@ export class AdviceFormComponent implements OnInit {
       ]
     },
     {
-      label: "Bachelor Degree",
+      label: "Add_Edit_Form.STEP_2.BachelorDegree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -174,7 +174,7 @@ export class AdviceFormComponent implements OnInit {
       ]
     },
     {
-      label: "Master Degree",
+      label: "Add_Edit_Form.STEP_2.MasterDegree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',
@@ -202,7 +202,7 @@ export class AdviceFormComponent implements OnInit {
       ]
     },
     {
-      label: "PHD Degree",
+      label: "Add_Edit_Form.STEP_2.PHDDegree",
       fields: [
         {
           viewValue: 'Add_Edit_Form.STEP_2.FIELD',

@@ -103,6 +103,11 @@ export const locale = {
                 'EADDRESS': 'English Address',
             },
             'STEP_1': {
+                "Writing":"Writing",
+                "Listening":"Listening",
+                "Reading":"Reading",
+                "Speaking":"Speaking",
+                "Overall":"Overall",
                 'LABEL': 'English',
                 'SUBLABEL': 'Please define the level of your English knowledge',
                 'ENGLISH_LEVEL': 'How familiar are you with English?',
@@ -113,6 +118,10 @@ export const locale = {
                 'EN_SCORE': 'Enter the IELTS / PTE / TOEFL score'
             },
             'STEP_2': {
+                "AssociateDegree":"Associate Degree",
+                "BachelorDegree":"Bachelor Degree",
+                "MasterDegree":"Master Degree",
+                "PHDDegree":"PHD Degree",
                 'LABEL': 'Education',
                 'SUBLABEL': 'Please list your educational background',
                 'DEGREE': 'Degree',
@@ -232,6 +241,7 @@ export const locale = {
                 'OLDPASSWORD': 'Old Password',
             },
             'Set_Text_Box': {
+                'FEE':"Fee",
                 'TITLE': 'Text Box Message',
                 'OK': 'Ok',
                 'MESSAGETOCLIENT': "Message to Client"

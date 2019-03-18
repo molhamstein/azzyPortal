@@ -40,7 +40,8 @@ export class SetTextBoxAdminComponent {
         if (this.isWithID) {
             this.regiForm = new FormGroup({
                 textBoxAdmin: new FormControl(this.text),
-                consId: new FormControl('', Validators.required)
+                consId: new FormControl('', Validators.required),
+                fee: new FormControl(0, Validators.required),
             });
             this.mainServ.APIServ.get("staffusers/getConsultant").subscribe((data: any) => {
                 if (this.mainServ.APIServ.getErrorCode() == 0) {

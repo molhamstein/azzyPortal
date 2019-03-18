@@ -163,25 +163,36 @@ export class ProcessedFormsComponent implements OnInit {
 
   changeStatus(newStatus, urlIndex, id, name, text) {
     var mainThis = this;
-    var isWithID = newStatus == "consultation" ? true : false;
     var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
+    if (urlIndex != 0) {
 
-    const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
-      width: '500px',
-      data: { 'textBoxMessage': text, 'isWithID': isWithID }
-    });
+      var isWithID = newStatus == "consultation" ? true : false;
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
+      const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
+        width: '500px',
+        data: { 'textBoxMessage': text, 'isWithID': isWithID }
+      });
 
-        result['formId'] = id;
-        if (urlIndex == 1)
-          result['statusName'] = newStatus;
-        this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
-          mainThis.inisilaize()
-        }, 'put')
-      }
-    });
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+
+          result['formId'] = id;
+          if (urlIndex == 1)
+            result['statusName'] = newStatus;
+          this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+            mainThis.inisilaize()
+          }, 'put')
+        }
+      });
+    }
+    else {
+      var result = {};
+      result['formId'] = id
+      this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+        mainThis.inisilaize()
+
+      }, 'put')
+    }
   }
 
 

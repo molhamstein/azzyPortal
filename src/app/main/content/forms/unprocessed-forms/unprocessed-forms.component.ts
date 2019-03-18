@@ -92,7 +92,7 @@ export class UnprocessedFormsComponent implements OnInit {
         }
 
     this.mainServ.APIServ.get("forms/exportForms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
-      if (this.mainServ.APIServ.getErrorCode() == 0) { 
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
         var win = window.open(data.path, '_blank');
         win.focus();
 
@@ -182,29 +182,38 @@ export class UnprocessedFormsComponent implements OnInit {
   changeStatus(newStatus, urlIndex, id, name, text) {
     var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
     var mainThis = this;
+    if (urlIndex != 0) {
+      var isWithID = newStatus == "consultation" ? true : false;
+      var tempText = ""
+      if (text == null)
+        tempText = "";
+      else
+        tempText = text
+      const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
+        width: '500px',
+        data: { 'textBoxMessage': tempText, 'isWithID': isWithID }
+      });
 
-    var isWithID = newStatus == "consultation" ? true : false;
-    var tempText = ""
-    if (text == null)
-      tempText = "";
-    else
-      tempText = text
-    const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
-      width: '500px',
-      data: { 'textBoxMessage': tempText, 'isWithID': isWithID }
-    });
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          result['formId'] = id;
+          if (urlIndex == 1)
+            result['statusName'] = newStatus;
+          this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+            mainThis.inisilaize()
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        result['formId'] = id;
-        if (urlIndex == 1)
-          result['statusName'] = newStatus;
-        this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
-          mainThis.inisilaize()
+          }, 'put')
+        }
+      });
+    }
+    else {
+      var result = {};
+      result['formId'] = id
+      this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], result, false, function () {
+        mainThis.inisilaize()
 
-        }, 'put')
-      }
-    });
+      }, 'put')
+    }
   }
 
   isAllowed(role) {
