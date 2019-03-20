@@ -90,6 +90,8 @@ export const locale = {
                 'CHILDREN_NUM': 'تعداد فرزندان',
                 'BIRTH_DATE': 'تاریخ تولد',
                 'SKYPE_ID': 'نام کاربری اسکایپ',
+                "WITHPARTNER":"با همسر",
+                "WITHOUTPARTNER":"بدون همسر",
                 'MARRIED': 'متاهل',
                 'SEPARETED': ' متارکه کرده',
                 'DEVORCED': 'طلاق گرفته',

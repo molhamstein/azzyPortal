@@ -34,6 +34,7 @@ export class GlobalService {
     this.roles['manager']["WriteForms"] = true
     this.roles['manager']["Open/BlockCalendar"] = true
     this.roles['manager']["UserDefinition"] = true
+    this.roles['manager']["export"] = true
 
 
     this.roles['consultant'] = []

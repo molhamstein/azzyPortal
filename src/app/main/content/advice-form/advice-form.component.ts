@@ -15,6 +15,7 @@ import { AbstractControl, FormBuilder, FormGroup, FormArray, Validators } from '
 import { TranslateService } from '@ngx-translate/core';
 import { AppDirectionService } from '../../../app-direction.service';
 
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-advice-form',
@@ -44,27 +45,35 @@ export class AdviceFormComponent implements OnInit {
   maxDateSp = new Date();
   sendArray = {}
 
+
+  hasPartner = false;
+
+  educationSpChecked=[true,false,false,false]
+  educationChecked=[true,false,false,false]
+
+
+  scrollToUp() {
+
+    $('*').animate({ scrollTop: 0 }, 'slow'); // Scroll individual element 100 pixels down
+
+  }
+
+  changeMaritalStatus(event) {
+
+    if (event.value == "withPartner")
+      this.hasPartner = true
+    else
+      this.hasPartner = false
+  }
   maritalStatusList = [
     {
-      viewValue: 'Add_Edit_Form.STEP_0.MARRIED',
-      value: 'married'
-    },
-    // {
-    //   viewValue: 'Add_Edit_Form.STEP_0.SEPARETED',
-    //   value: 'separated'
-    // },
-    {
-      viewValue: 'Add_Edit_Form.STEP_0.DEVORCED',
-      value: 'divorced'
+      viewValue: 'Add_Edit_Form.STEP_0.WITHPARTNER',
+      value: 'withPartner'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_0.WIDOWED',
-      value: 'widowed'
-    },
-    {
-      viewValue: 'Add_Edit_Form.STEP_0.NEVER_MARRIED',
-      value: 'single'
-    },
+      viewValue: 'Add_Edit_Form.STEP_0.WITHOUTPARTNER',
+      value: 'withOutPartner'
+    }
   ];
   englishLevels = [
     {

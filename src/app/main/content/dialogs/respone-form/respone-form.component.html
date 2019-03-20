@@ -2,7 +2,7 @@
 <!--component html goes here -->
 <mat-toolbar matDialogTitle class="mat-accent m-0">
   <div style="padding-top: 7px;" fxFlex fxLayout="row" fxLayoutAlign="space-between center">
-    <span class="title dialog-title"  *ngIf="isAddedMessage==true">{{form.nameEnglish}} {{form.surnameEnglish}}</span>
+    <span class="title dialog-title" *ngIf="isAddedMessage==true">{{form.nameEnglish}} {{form.surnameEnglish}}</span>
     <span class="title dialog-title" *ngIf="isAddedMessage==false">Error</span>
   </div>
 </mat-toolbar>
@@ -10,11 +10,25 @@
 <div mat-dialog-content style="max-height: fit-con;padding: 10px;margin: 0px;">
   <div *ngIf="isAddedMessage==false">
     <b>Dear Client</b>
-    <p>this information already exists in our system. If you have previously submitted another form, you cannot submit a new
-      one now. If you are intending to change some details in your previous submission, please refer to the confirmation
-      email you have received previously and access your previous form via provided Link. Otherwise please contact our Offices.
+    <p>this information already exists in our system. If you have previously submitted another form, you cannot submit
+      a new
+      one now. If you are intending to change some details in your previous submission, please refer to the
+      confirmation
+      email you have received previously and access your previous form via provided Link. Otherwise please contact our
+      Offices.
     </p>
     <b>Thanks and regards, Azzy Immigration Team</b>
+
+    <br>
+
+    <b style="text-align: right;float: right;">مشتری گرامی </b>
+    <p style="text-align: right;float: right;">اطلاعات وارد شده از قبل در سیستم موجود است. اگر قبلا فرم پر کرده اید
+      قادر به ارسال فرم دیگری نخواهید بود. اگر
+      قصد دارید اطلاعات فرم قبلی خود را ویرایش نمایید لطفا از طریق لینک ارسال شده در ایمیل تاییدیه وارد فرم قبلی شوید.
+      در غیر این صورت لطفا با شماره های دفاتر ما تماس حاصل فرمایید.
+    </p>
+    <b style="text-align: right;float: right;">با تشکر، تیم آزی ایمیگریشن</b>
+
   </div>
   <div *ngIf="isAddedMessage==true">
     <b style="float:  left;">Dear {{form.nameEnglish}} {{form.surnameEnglish}}</b>
@@ -30,8 +44,10 @@
     <p>{{form.clientNumber}}</p>
 
     <p>
-      Thank you for sending your information through our application form. Our team is carefully processing all applications and
-      will get back to you as soon as possible, which might take up to 14 working days. Within this time for any change or
+      Thank you for sending your information through our application form. Our team is carefully processing all
+      applications and
+      will get back to you as soon as possible, which might take up to 14 working days. Within this time for any change
+      or
       update of your submitted information, you can access your form by this link:
       <br>
       <a href="{{url}}">Link</a>
@@ -44,7 +60,7 @@
 
 
 
-    <b style="float:  right;">مشتری گرامى   {{form.nameFarsi}} {{form.surnameFarsi}} </b>
+    <b style="float:  right;">مشتری گرامى {{form.nameFarsi}} {{form.surnameFarsi}} </b>
     <br>
     <b style="float:  right;">: موضوع </b>
     <p style="text-align: right;margin: 0;">رسید دریافت</p>
@@ -54,8 +70,10 @@
 
 
     <p style="text-align: right;">
-      با کمال تشکراز ارسال مشخصات تان از طریق فرم درخواست مشاوره آنلاین آزی ایمیگریشن، به اطلاع شما میرساند، تیم اجرایی آزی ایمیگریشن
-      در نهایت دقت نسبت به بررسی مشخصات شما اقدام نموده و در اسرع وقت شما را در جریان نتیجه این بررسی قرار خواهد داد که ممکن
+      با کمال تشکراز ارسال مشخصات تان از طریق فرم درخواست مشاوره آنلاین آزی ایمیگریشن، به اطلاع شما میرساند، تیم اجرایی
+      آزی ایمیگریشن
+      در نهایت دقت نسبت به بررسی مشخصات شما اقدام نموده و در اسرع وقت شما را در جریان نتیجه این بررسی قرار خواهد داد که
+      ممکن
       است تا 14روز کاری به طول انجامد. در طی این مدت انتظار، شما میتوانید از طریق <a href="{{url}}">لینک</a> زیر به
       فرم خود دسترسی داشته و اطلاعات آن را به روز نمایید.
     </p>

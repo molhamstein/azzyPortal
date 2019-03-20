@@ -51,7 +51,19 @@ export class UnprocessedFormsComponent implements OnInit {
     else
       filter =
         {
-          "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+          "where":
+          {
+            "or": [
+              { "email": { options: "i", "like": this.searchKey } },
+              { "nameEnglish": { "like": this.searchKey, options: "i" } },
+              { "nameFarsi": { "like": this.searchKey, options: "i" } },
+              { "surnameEnglish": { "like": this.searchKey, options: "i" } },
+              { "surnameFarsi": { "like": this.searchKey, options: "i" } },
+              { "nameEnglishSp": { "like": this.searchKey, options: "i" } },
+              { "nameFarsiSp": { "like": this.searchKey, options: "i" } },
+              { "surnameEnglishSp": { "like": this.searchKey, options: "i" } },
+              { "surnameFarsiSp": { "like": this.searchKey, options: "i" } }]
+          },
           "order": "dateOfArr DESC",
           "limit": limit,
           "skip": offset * limit
@@ -87,7 +99,19 @@ export class UnprocessedFormsComponent implements OnInit {
     else
       filter =
         {
-          "where": { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] },
+          "where": {
+            "or": [
+              { "email": { options: "i", "like": this.searchKey } },
+              { "nameEnglish": { "like": this.searchKey, options: "i" } },
+              { "nameFarsi": { "like": this.searchKey, options: "i" } },
+              { "surnameEnglish": { "like": this.searchKey, options: "i" } },
+              { "surnameFarsi": { "like": this.searchKey, options: "i" } },
+              { "nameEnglishSp": { "like": this.searchKey, options: "i" } },
+              { "nameFarsiSp": { "like": this.searchKey, options: "i" } },
+              { "surnameEnglishSp": { "like": this.searchKey, options: "i" } },
+              { "surnameFarsiSp": { "like": this.searchKey, options: "i" } }
+            ]
+          },
           "order": "dateOfArr DESC",
         }
 
@@ -127,7 +151,19 @@ export class UnprocessedFormsComponent implements OnInit {
     if (this.isSearchMode == false)
       where = { "status": "unprocessed" }
     else
-      where = { "or": [{ "nameEnglish": { "like": this.searchKey } }, { "nameFarsi": { "like": this.searchKey } }, { "surnameEnglish": { "like": this.searchKey } }, { "surnameFarsi": { "like": this.searchKey } },] }
+      where = {
+        "or":
+          [
+            { "email": { options: "i", "like": this.searchKey } },
+            { "nameEnglish": { "like": this.searchKey, options: "i" } },
+            { "nameFarsi": { "like": this.searchKey, options: "i" } },
+            { "surnameEnglish": { "like": this.searchKey, options: "i" } },
+            { "surnameFarsi": { "like": this.searchKey, options: "i" } },
+            { "nameEnglishSp": { "like": this.searchKey, options: "i" } },
+            { "nameFarsiSp": { "like": this.searchKey, options: "i" } },
+            { "surnameEnglishSp": { "like": this.searchKey, options: "i" } },
+            { "surnameFarsiSp": { "like": this.searchKey, options: "i" } }]
+      }
 
     this.mainServ.loaderSer.display(true);
     this.mainServ.APIServ.get("forms/count?where=" + JSON.stringify(where)).subscribe((data: any) => {

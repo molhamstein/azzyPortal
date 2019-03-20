@@ -94,6 +94,8 @@ export const locale = {
                 'CHILDREN_NUM': 'Number of Children',
                 'BIRTH_DATE': 'Date of Birth',
                 'SKYPE_ID': 'Skype ID',
+                "WITHPARTNER":"With Partner",
+                "WITHOUTPARTNER":"With Out Partner",
                 'MARRIED': 'Married',
                 'SEPARETED': 'Separated',
                 'DEVORCED': 'Divorced',

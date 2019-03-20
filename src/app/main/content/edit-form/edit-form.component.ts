@@ -38,6 +38,21 @@ export class EditFormComponent implements OnInit {
   minDateSp = new Date(1900, 0, 1);
   maxDateSp = new Date();
 
+  hasPartner = false;
+
+  scrollToUp() {
+
+    $('*').animate({ scrollTop: 0 }, 'slow'); // Scroll individual element 100 pixels down
+
+  }
+  changeMaritalStatus(event) {
+
+    if (event.value == "withPartner")
+      this.hasPartner = true
+    else
+      this.hasPartner = false
+  }
+
   sendArray = {}
   loder = false;
   allPayments;
@@ -740,6 +755,11 @@ export class EditFormComponent implements OnInit {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.setFormGroupe(data);
         this.formData = data;
+        if (data['maritalStatus'] == "withPartner")
+          this.hasPartner = true
+        else
+          this.hasPartner = false
+
         this.loder = true;
         this.total = data['totalPoints'];
         this.totalSp = data['totalPointsSp'];
