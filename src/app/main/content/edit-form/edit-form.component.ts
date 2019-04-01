@@ -59,25 +59,13 @@ export class EditFormComponent implements OnInit {
   preAllPayments;
   maritalStatusList = [
     {
-      viewValue: 'Add_Edit_Form.STEP_0.MARRIED',
-      value: 'married'
-    },
-    // {
-    //   viewValue: 'Add_Edit_Form.STEP_0.SEPARETED',
-    //   value: 'separated'
-    // },
-    {
-      viewValue: 'Add_Edit_Form.STEP_0.DEVORCED',
-      value: 'divorced'
+      viewValue: 'Add_Edit_Form.STEP_0.WITHPARTNER',
+      value: 'withPartner'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_0.WIDOWED',
-      value: 'widowed'
-    },
-    {
-      viewValue: 'Add_Edit_Form.STEP_0.NEVER_MARRIED',
-      value: 'single'
-    },
+      viewValue: 'Add_Edit_Form.STEP_0.WITHOUTPARTNER',
+      value: 'withOutPartner'
+    }
   ];
   englishLevels = [
     {

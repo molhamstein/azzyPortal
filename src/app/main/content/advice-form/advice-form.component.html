@@ -282,7 +282,7 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                 | translate}}</button>
             </div>
           </mat-step>
@@ -358,8 +358,8 @@
             </div>
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                 | translate}}</button>
             </div>
           </mat-step>
@@ -447,8 +447,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                 | translate}}</button>
             </div>
           </mat-step>
@@ -520,8 +520,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                 | translate}}</button>
             </div>
           </mat-step>
@@ -625,8 +625,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                 | translate}}</button>
             </div>
           </mat-step>
@@ -672,8 +672,8 @@
               </div>
             </div>
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                 | translate}}</button>
             </div>
           </mat-step>
@@ -747,8 +747,8 @@
             </div>
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                 | translate}}</button>
             </div>
           </mat-step>
@@ -783,7 +783,7 @@
             </div>
 
             <div style="float: right;">
-              <button mat-button (click)="addForm()">{{ 'Add_Edit_Form.STEP_7.DONE' | translate }}</button>
+              <button mat-button class="nextButton"  (click)="addForm()">{{ 'Add_Edit_Form.STEP_7.DONE' | translate }}</button>
             </div>
           </mat-step>
 

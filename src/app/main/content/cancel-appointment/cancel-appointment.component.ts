@@ -64,7 +64,7 @@ export class cancelAppointmentComponent implements OnInit {
       // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
       mainThis.isCanseld = true;
 
-    }, 'patch')
+    }, 'put')
 
 
   }

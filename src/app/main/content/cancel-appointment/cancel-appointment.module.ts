@@ -10,7 +10,7 @@ import { cancelAppointmentComponent } from './cancel-appointment.component';
 
 const routes = [
   {
-    path: 'cancel-appointment/:id',
+    path: 'cancel-appointment/:id/:token',
     component: cancelAppointmentComponent,
     canActivate: [AuthGuardService]
 

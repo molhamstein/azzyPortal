@@ -166,7 +166,7 @@
             <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
               <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>
               <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-                <input disabled matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" [(ngModel)]="form[score.value[0]]">
+                <input disabled matInput  matInput type="number" step="0.1" min="0" max="999" placeholder="{{ score.viewValue }}" [(ngModel)]="form[score.value[0]]">
                 <mat-icon matPrefix>{{ score.icon }}</mat-icon>
               </mat-form-field>
 
@@ -472,7 +472,7 @@
             <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
               <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>
               <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-                <input disabled matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" [(ngModel)]="form[score.value[1]]">
+                <input disabled matInput  matInput type="number" step="0.1" min="0" max="999" [(ngModel)]="form[score.value[1]]">
                 <mat-icon matPrefix>{{ score.icon }}</mat-icon>
               </mat-form-field>
 

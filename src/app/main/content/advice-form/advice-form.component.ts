@@ -48,8 +48,8 @@ export class AdviceFormComponent implements OnInit {
 
   hasPartner = false;
 
-  educationSpChecked=[true,false,false,false]
-  educationChecked=[true,false,false,false]
+  educationSpChecked = [true, false, false, false]
+  educationChecked = [true, false, false, false]
 
 
   scrollToUp() {
@@ -662,6 +662,7 @@ export class AdviceFormComponent implements OnInit {
       }
     });
 
+
     // this.dialogSerc.confirmationMessage("are you sure you wan't add the form","forms",this.sendArray,false,)
     let dialogRef = this.dialog.open(ConfirmAddFormComponent, {
       width: '250px',
@@ -670,6 +671,12 @@ export class AdviceFormComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result == true) {
         this.sendArray['timeZone'] = this.timezone()
+        if (this.mainServ.loginServ.getlang() == "fa")
+          this.sendArray['lang'] = "fa"
+        else
+          this.sendArray['lang'] = "en"
+
+
         this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
           if (this.mainServ.APIServ.getErrorCode() == 0) {
             this.dialogSerc.responseFormDialog(true, data)

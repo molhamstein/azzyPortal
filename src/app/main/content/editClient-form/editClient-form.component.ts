@@ -21,7 +21,7 @@ import { AppDirectionService } from '../../../app-direction.service';
 export class EditClientFormComponent implements OnInit {
   startDate = new Date(1993, 1, 1);
   form: FormGroup;
-  formData: {};
+  formStatus= "";
   formErrors: any;
   formGroup: FormGroup;
 
@@ -39,27 +39,26 @@ export class EditClientFormComponent implements OnInit {
   loder = false;
   id: string;
   token: string;
+
+
+  hasPartner = false;
+
+  changeMaritalStatus(event) {
+
+    if (event.value == "withPartner")
+      this.hasPartner = true
+    else
+      this.hasPartner = false
+  }
   maritalStatusList = [
     {
-      viewValue: 'Add_Edit_Form.STEP_0.MARRIED',
-      value: 'married'
-    },
-    // {
-    //   viewValue: 'Add_Edit_Form.STEP_0.SEPARETED',
-    //   value: 'separated'
-    // },
-    {
-      viewValue: 'Add_Edit_Form.STEP_0.DEVORCED',
-      value: 'divorced'
+      viewValue: 'Add_Edit_Form.STEP_0.WITHPARTNER',
+      value: 'withPartner'
     },
     {
-      viewValue: 'Add_Edit_Form.STEP_0.WIDOWED',
-      value: 'widowed'
-    },
-    {
-      viewValue: 'Add_Edit_Form.STEP_0.NEVER_MARRIED',
-      value: 'single'
-    },
+      viewValue: 'Add_Edit_Form.STEP_0.WITHOUTPARTNER',
+      value: 'withOutPartner'
+    }
   ];
   englishLevels = [
     {
@@ -282,26 +281,26 @@ export class EditClientFormComponent implements OnInit {
       value: ['militaryPlace', 'militaryPlaceSp'],
       icon: 'book',
       type: 'input',
-      width:30
+      width: 30
     },
     {
       viewValue: 'Add_Edit_Form.STEP_4.FROM',
       value: ['militaryDurationFrom', 'militaryDurationFromSp'],
       icon: 'book',
       type: 'date',
-      width:30      
+      width: 30
     }, {
       viewValue: 'Add_Edit_Form.STEP_4.TO',
       value: ['militaryDurationTo', 'militaryDurationToSp'],
       icon: 'book',
       type: 'date',
-      width:30      
+      width: 30
     }, {
       viewValue: 'Add_Edit_Form.STEP_4.EXEMPTIONREASON',
       value: ['exemptionReason', 'exemptionReasonSp'],
       icon: 'book',
       type: 'textarea',
-      width:97      
+      width: 97
     }
   ]
 
@@ -557,7 +556,7 @@ export class EditClientFormComponent implements OnInit {
         this._formBuilder.group({
           textBoxClient: [data['textBoxClient']],
           howKnow: [data['howKnow']],
-                    
+
         })
       ])
     });
@@ -575,7 +574,12 @@ export class EditClientFormComponent implements OnInit {
       this.mainServ.loaderSer.display(false);
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.setFormGroupe(data['getClientForm']);
-        // this.formData = data;
+        this.formStatus = data.status;
+        if (data['getClientForm']['maritalStatus'] == "withPartner")
+          this.hasPartner = true
+        else
+          this.hasPartner = false
+
         this.loder = true;
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
@@ -656,12 +660,13 @@ export class EditClientFormComponent implements OnInit {
           this.sendArray[key] = element[key];
       }
     });
-
+    if (this.formStatus == "more info")
+      this.sendArray['status'] = "unprocessed"
     this.dialogSer.confirmationMessage('Do you want to edit the form ', "forms/" + this.id, this.sendArray, false, function () {
       // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
       // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
-      mainThis.mainServ.globalServ.errorDialog("update","Form has be updated فرم به روز شده است")
-    }, 'patch',this.token)
+      mainThis.mainServ.globalServ.errorDialog("update", "Form has be updated فرم به روز شده است")
+    }, 'patch', this.token)
 
 
     // this.mainServ.APIServ.patch("forms/" + this.id, this.sendArray).subscribe((data: any) => {

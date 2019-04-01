@@ -228,6 +228,11 @@ export const locale = {
             'NOTAVAILABLE': 'Not Available',
             'CHOOSETIMEZONE': 'Choose Time Zone'
         },
+        "Cansel_Appointment_PAGE":{
+            "CANCEL": "Cancel",
+            "TITLE":"Click on The bottom to cancel your appointment",
+            "CANCELED":"Your Appointment is canceled"
+        },
         'Dialog': {
             'View_Appointment': {
                 'FROM': 'From',

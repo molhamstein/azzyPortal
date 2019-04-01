@@ -50,37 +50,37 @@
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsi" required>
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsi" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsi" required>
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsi" required>
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglish" required>
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglish" required>
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglish" required>
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglish" required>
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
               <!--<span fxFlex="30"></span>-->
 
               <mat-form-field fxFlex="24">
-                <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                <!--  <input autocomplete="off"  matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
                           placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required> -->
-                <input matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required>
+                 <input autocomplete="off"  matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required>
                 <mat-icon matSuffix>email</mat-icon>
 
                 <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
@@ -93,18 +93,18 @@
 
               <mat-form-field fxFlex="24">
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNo" required>
+                 <input autocomplete="off"  matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNo" required>
                 <mat-icon matSuffix>smartphone</mat-icon>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNo">
+                 <input autocomplete="off"  matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNo">
                 <mat-icon matSuffix>phone</mat-icon>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeID">
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeID">
                 <mat-icon matSuffix>video_call</mat-icon>
               </mat-form-field>
 
@@ -120,7 +120,7 @@
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
-                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus" required>
+                <mat-select (selectionChange)="changeMaritalStatus($event)" placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus" required>
                   <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
                     {{ status.viewValue | translate }}
                   </mat-option>
@@ -131,7 +131,7 @@
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
-                <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
+                 <input autocomplete="off"  matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
                   formControlName="numberOfChildren">
                 <mat-icon matSuffix>child_care</mat-icon>
               </mat-form-field>
@@ -160,28 +160,28 @@
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsiSp">
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}" formControlName="nameFarsiSp">
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp">
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}" formControlName="surnameFarsiSp">
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp">
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}" formControlName="nameEnglishSp">
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
 
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp">
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}" formControlName="surnameEnglishSp">
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -190,9 +190,9 @@
               <!--<span fxFlex="30"></span>-->
 
               <mat-form-field fxFlex="24">
-                <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                <!--  <input autocomplete="off"  matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
                           placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required> -->
-                <input matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="emailSp">
+                 <input autocomplete="off"  matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="emailSp">
                 <mat-icon matSuffix>email</mat-icon>
 
                 <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
@@ -205,18 +205,18 @@
 
               <mat-form-field fxFlex="24">
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp">
+                 <input autocomplete="off"  matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp">
                 <mat-icon matSuffix>smartphone</mat-icon>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
                 <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                <input matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNoSp">
+                 <input autocomplete="off"  matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNoSp">
                 <mat-icon matSuffix>phone</mat-icon>
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
-                <input matInput placeholder="{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeIDSp">
+                 <input autocomplete="off"  matInput placeholder="{{ 'Add_Edit_Form.STEP_0.SKYPE_ID' | translate }}" formControlName="skypeIDSp">
                 <mat-icon matSuffix>video_call</mat-icon>
               </mat-form-field>
 
@@ -230,23 +230,14 @@
               </mat-form-field>
 
               <mat-form-field fxFlex="24">
-                <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp">
-                  <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
-                    {{ status.viewValue | translate }}
-                  </mat-option>
-                </mat-select>
-
-                <mat-icon matSuffix>wc</mat-icon>
-                <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
-              </mat-form-field>
-
-              <mat-form-field fxFlex="24">
-                <input matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
+                 <input autocomplete="off"  matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
                   formControlName="numberOfChildrenSp">
                 <mat-icon matSuffix>child_care</mat-icon>
               </mat-form-field>
 
               <div fxFlex="24"></div>
+              <div fxFlex="24">
+              </div>
 
               <mat-form-field fxFlex="49">
                 <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsiSp"></textarea>
@@ -264,7 +255,7 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -298,7 +289,7 @@
               <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
                 <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>
                 <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-                  <input matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[0] }}">
+                   <input autocomplete="off"  matInput matInput type="number" step="0.1" min="0" max="999" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[0] }}">
                   <mat-icon matPrefix>{{ score.icon }}</mat-icon>
                 </mat-form-field>
 
@@ -328,7 +319,7 @@
               <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
                 <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>
                 <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-                  <input matInput type="number" min="0" max="999" pattern="^[0-9]{1,3}$" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[1] }}">
+                   <input autocomplete="off"  matInput  matInput type="number" step="0.1" min="0" max="999" placeholder="{{ score.viewValue }}" formControlName="{{ score.value[1] }}">
                   <mat-icon matPrefix>{{ score.icon }}</mat-icon>
                 </mat-form-field>
 
@@ -337,8 +328,8 @@
             </div>
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -365,7 +356,7 @@
               <span fxFlex="5" class="mat-title">{{level.label}}</span>
               <div fxFlex="15" *ngFor="let oneField of level.fields">
                 <mat-form-field *ngIf="oneField.isInput==true">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
                   <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                 </mat-form-field>
@@ -401,7 +392,7 @@
               <span fxFlex="5" class="mat-title">{{level.label}}</span>
               <div fxFlex="15" *ngFor="let oneField of level.fields">
                 <mat-form-field *ngIf="oneField.isInput==true">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
                   <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                 </mat-form-field>
@@ -421,8 +412,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -446,7 +437,7 @@
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div fxFlex="{{oneField.fxFlex}}" *ngFor="let oneField of workExperience">
                 <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==true">
-                  <input matInput type="number" placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
+                   <input autocomplete="off"  matInput type="number" placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
                   <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                 </mat-form-field>
@@ -472,7 +463,7 @@
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div fxFlex="{{oneField.fxFlex}}" *ngFor="let oneField of workExperience">
                 <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==true">
-                  <input matInput type="number" placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
+                   <input autocomplete="off"  matInput type="number" placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
                   <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                 </mat-form-field>
@@ -489,8 +480,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -525,7 +516,7 @@
 
               <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
                 <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                 </mat-form-field>
@@ -568,7 +559,7 @@
 
               <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
                 <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                 </mat-form-field>
@@ -591,8 +582,8 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -612,7 +603,7 @@
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div fxFlex="30" *ngFor="let oneField of healthFields">
                 <mat-form-field style="width: 100%">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                 </mat-form-field>
@@ -629,14 +620,14 @@
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div fxFlex="30" *ngFor="let oneField of healthFields">
                 <mat-form-field style="width: 100%">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
                 </mat-form-field>
               </div>
             </div>
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -657,7 +648,7 @@
 
               <div fxFlex="30" *ngFor="let oneField of australiaFields">
                 <mat-form-field style="width: 100%">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                 </mat-form-field>
@@ -688,7 +679,7 @@
 
               <div fxFlex="30" *ngFor="let oneField of australiaFields">
                 <mat-form-field style="width: 100%">
-                  <input matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
+                   <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                 </mat-form-field>
@@ -706,8 +697,8 @@
             </div>
 
             <div style="float: right;">
-              <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 

@@ -134,7 +134,7 @@
                   </mat-form-field>
 
                   <mat-form-field fxFlex="24">
-                    <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus"
+                    <mat-select (selectionChange)="changeMaritalStatus($event)" placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus"
                       required>
                       <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
                         {{ status.viewValue | translate }}
@@ -258,23 +258,14 @@
                     <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
                   </mat-form-field>
 
-                  <mat-form-field fxFlex="24">
-                    <mat-select placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatusSp">
-                      <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
-                        {{ status.viewValue | translate }}
-                      </mat-option>
-                    </mat-select>
-
-                    <mat-icon matSuffix>wc</mat-icon>
-                    <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
-                  </mat-form-field>
-
+                
                   <mat-form-field fxFlex="24">
                     <input autocomplete="off" matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
                       formControlName="numberOfChildrenSp">
                     <mat-icon matSuffix>child_care</mat-icon>
                   </mat-form-field>
 
+                  <div fxFlex="24"></div>
                   <div fxFlex="24"></div>
 
 
@@ -294,7 +285,7 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -370,8 +361,8 @@
                 </div>
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -457,8 +448,8 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -530,8 +521,8 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -637,8 +628,8 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -686,8 +677,8 @@
                   </div>
                 </div>
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -719,7 +710,7 @@
                   <!--<div fxFlex="30"></div>-->
                 </div>
 
-                <div class="pt-24 pb-24">
+                <div class="pt-24 pb-24" [ngClass]="{'hideMe': hasPartner!=true}">
                   <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>
                   <mat-radio-group formControlName="australiaVisaType">
                     <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">
@@ -762,8 +753,8 @@
                 </div>
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext (click)="scrollToUp()" type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -932,9 +923,9 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious type="button">{{ 'Add_Edit_Form.STEP_7.BACK' | translate }}</button>
+                  <button mat-button matStepperPrevious class="backButton" type="button">{{ 'Add_Edit_Form.STEP_7.BACK' | translate }}</button>
 
-                  <button mat-button (click)="editForm()" type="button">{{ 'Add_Edit_Form.STEP_7.EDIT' | translate }}</button>
+                  <button mat-button class="nextButton" (click)="editForm()" type="button">{{ 'Add_Edit_Form.STEP_7.EDIT' | translate }}</button>
                 </div>
               </mat-step>
 

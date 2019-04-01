@@ -231,6 +231,11 @@ export const locale = {
             'NOTAVAILABLE': 'نا موجود',
             'CHOOSETIMEZONE': 'انتخاب ساعت رسمی'
         },
+        "Cansel_Appointment_PAGE":{
+            "CANCEL": "کنسل",
+            "TITLE":"برای کنسل کردن وقت مشاوره روی این دکمه کلیک نمایید",
+            "CANCELED":"وقت مشاوره شما کنسل شد"
+        },
         'Dialog': {
             'View_Appointment': {
                 'FROM': 'از',
@@ -268,9 +273,9 @@ export const locale = {
             },
             'Cansel_Appointment': {
                 "TITLE": "حذف وقت مشاوره",
-                "NO": "خیر",
+                "CANCEL": "انصراف",
+                "DELETE": "کنسل وقت مشاوره",
                 'SHOWFORM': 'نمایش فرم',
-                "YES": "بلی",
                 "CONFIRM": "آیا می خواهید این وقت را حذف کنید؟"
             }
         },
