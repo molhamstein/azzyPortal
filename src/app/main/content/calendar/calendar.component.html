@@ -2,7 +2,6 @@
   .stripes {
     background-image: repeating-linear-gradient(45deg, #ccc, #ccc 30px, #dbdbdb 30px, #dbdbdb 60px);
   }
-
 </style>
 <div class="col-md-12">
   <!--<ng-template #customCellTemplate let-day="day" let-locale="locale">
@@ -48,15 +47,16 @@
 
           <div class="toolbar" fxLayout="row" fxLayoutAlign="start center">
 
-            <button mat-button class="mat-icon-button" mwlCalendarToday [(viewDate)]="viewDate" (viewDateChange)="selectedDay = {date:$event}"
-              aria-label="Today" matTooltip="Today">
+            <button mat-button class="mat-icon-button" mwlCalendarToday [(viewDate)]="viewDate"
+              (viewDateChange)="selectedDay = {date:$event}" aria-label="Today" matTooltip="Today">
               <mat-icon>today</mat-icon>
             </button>
             <button mat-button class="mat-icon-button" (click)="changeView('day')" aria-label="Day" matTooltip="Day">
               <mat-icon>view_day</mat-icon>
             </button>
 
-            <button mat-button class="mat-icon-button" (click)="changeView('month')" aria-label="Month" matTooltip="Month">
+            <button mat-button class="mat-icon-button" (click)="changeView('month')" aria-label="Month"
+              matTooltip="Month">
               <mat-icon>view_module</mat-icon>
             </button>
           </div>
@@ -84,6 +84,137 @@
         <mat-icon>add</mat-icon>
       </button>
     </div>
+
+    <ng-template #customCellTemplate let-day="day" let-locale="locale">
+      <div class="cal-cell-top">
+        <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">{{ day.badgeTotal }} </span>
+        <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
+      </div>
+
+      <!-- @todo show real data -->
+      <div class="cal-cell-consultants" *ngIf="day.badgeTotal == 1 ">
+          <table class="full-width">
+            <tbody>
+  
+              <tr>
+                <td>
+                  <h5 class="consultant-title">AG</h5>
+                </td>
+             
+                <td>
+                  <h5 class="consultant-reservation">
+                    <div style="background-color: #4EB052" class="cal-event ng-star-inserted"></div> 24
+                  </h5>
+                </td>
+             
+                <td>
+                  <div style="background-color: #DD5246" class="cal-event ng-star-inserted"></div>12
+                </td>
+                
+              </tr>
+              
+              <tr>
+                  <td>
+                    <h5 class="consultant-title">ER</h5>
+                  </td>
+               
+                  <td>
+                    <h5 class="consultant-reservation">
+                      <div style="background-color: #4EB052" class="cal-event ng-star-inserted"></div> 24
+                    </h5>
+                  </td>
+               
+                  <td>
+                    <div style="background-color: #DD5246" class="cal-event ng-star-inserted"></div>12
+                  </td>
+                  
+                </tr>
+                <tr>
+                    <td>
+                      <h5 class="consultant-title">ER</h5>
+                    </td>
+                 
+                    <td>
+                      <h5 class="consultant-reservation">
+                        <div style="background-color: #4EB052" class="cal-event ng-star-inserted"></div> 24
+                      </h5>
+                    </td>
+                 
+                    <td>
+                      <div style="background-color: #DD5246" class="cal-event ng-star-inserted"></div>12
+                    </td>
+                    
+                  </tr>
+                  <tr>
+                      <td>
+                        <h5 class="consultant-title">ER</h5>
+                      </td>
+                   
+                      <td>
+                        <h5 class="consultant-reservation">
+                          <div style="background-color: #4EB052" class="cal-event ng-star-inserted"></div> 24
+                        </h5>
+                      </td>
+                   
+                      <td>
+                        <div style="background-color: #DD5246" class="cal-event ng-star-inserted"></div>12
+                      </td>
+                      
+                    </tr>
+                    <tr>
+                        <td>
+                          <h5 class="consultant-title">ER</h5>
+                        </td>
+                     
+                        <td>
+                          <h5 class="consultant-reservation">
+                            <div style="background-color: #4EB052" class="cal-event ng-star-inserted"></div> 24
+                          </h5>
+                        </td>
+                     
+                        <td>
+                          <div style="background-color: #DD5246" class="cal-event ng-star-inserted"></div>12
+                        </td>
+                        
+                      </tr>
+                      <tr>
+                          <td>
+                            <h5 class="consultant-title">ER</h5>
+                          </td>
+                       
+                          <td>
+                            <h5 class="consultant-reservation">
+                              <div style="background-color: #4EB052" class="cal-event ng-star-inserted"></div> 24
+                            </h5>
+                          </td>
+                       
+                          <td>
+                            <div style="background-color: #DD5246" class="cal-event ng-star-inserted"></div>12
+                          </td>
+                          
+                        </tr>
+                        <tr>
+                            <td>
+                              <h5 class="consultant-title">ER</h5>
+                            </td>
+                         
+                            <td>
+                              <h5 class="consultant-reservation">
+                                <div style="background-color: #4EB052" class="cal-event ng-star-inserted"></div> 24
+                              </h5>
+                            </td>
+                         
+                            <td>
+                              <div style="background-color: #DD5246" class="cal-event ng-star-inserted"></div>12
+                            </td>
+                            
+                          </tr>
+            </tbody>
+          </table>
+  
+        </div>
+    </ng-template>
+
     <div class="content" fusePerfectScrollbar>
       <div [ngSwitch]="view">
         <!--<mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [cellTemplate]="customCellTemplate"
@@ -91,21 +222,24 @@
           (dayClicked)="dayClicked($event.day)" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
         </mwl-calendar-month-view>-->
         <div *ngIf="monthEvent.length > 0">
-          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent" [refresh]="refresh"
-            [openDayEventsTemplate]="tt" [eventTitleTemplate]="rr" (eventTimesChanged)="eventTimesChanged($event)"
-            (eventClicked)="handleEvent('Clicked', $event.event)" (dayClicked)="dayClicked($event.day)">
+          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent"
+            [refresh]="refresh" [openDayEventsTemplate]="tt" [eventTitleTemplate]="rr"
+            (eventTimesChanged)="eventTimesChanged($event)" (eventClicked)="handleEvent('Clicked', $event.event)"
+            (dayClicked)="dayClicked($event.day)" [cellTemplate]="customCellTemplate">
           </mwl-calendar-month-view>
         </div>
 
         <div *ngIf="monthEvent.length == 0">
-          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent" [refresh]="refresh"
-            [openDayEventsTemplate]="tt" [eventTitleTemplate]="rr" (eventTimesChanged)="eventTimesChanged($event)"
-            [activeDayIsOpen]="activeDayIsOpen" (eventClicked)="handleEvent('Clicked', $event.event)" (dayClicked)="dayClicked($event.day)">
+          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="monthEvent"
+            [refresh]="refresh" [openDayEventsTemplate]="tt" [eventTitleTemplate]="rr"
+            (eventTimesChanged)="eventTimesChanged($event)" [activeDayIsOpen]="activeDayIsOpen"
+            (eventClicked)="handleEvent('Clicked', $event.event)" (dayClicked)="dayClicked($event.day)">
           </mwl-calendar-month-view>
         </div>
+
         <div *ngIf="dayEvent.length > 0">
-          <mwl-calendar-day-view *ngSwitchCase="'day'" [tooltipPlacement]="'right'" [viewDate]="viewDate" [events]="dayEvent"
-            [refresh]="refresh" (eventClicked)="handleEvent('Clicked',
+          <mwl-calendar-day-view *ngSwitchCase="'day'" [tooltipPlacement]="'right'" [viewDate]="viewDate"
+            [events]="dayEvent" [refresh]="refresh" (eventClicked)="handleEvent('Clicked',
             $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
           </mwl-calendar-day-view>
         </div>

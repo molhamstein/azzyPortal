@@ -275,3 +275,16 @@
 .cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {
   line-height: 14px;
 }
+
+
+.cal-cell-consultants{
+  table{
+    text-align: center;
+    width:100%; 
+    
+    .cal-event{
+      position: relative;
+      top:1.5px;
+    }
+  }
+}
