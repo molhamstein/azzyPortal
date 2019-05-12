@@ -16,7 +16,7 @@
       <div style="width: 100%;">
         <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
           <mat-form-field fxFlex="24">
-            <input matInput placeholder="{{ 'User.ADDEDITUSER.EMAIL' | translate }}" formControlName="email" required>
+            <input autocomplete="off"  matInput placeholder="{{ 'User.ADDEDITUSER.EMAIL' | translate }}" formControlName="email" required>
             <mat-icon matSuffix>email</mat-icon>
             <mat-error *ngIf="addUserForm.hasError('email', 'email') && !addUserForm.hasError('required','email')">
               {{ 'Global.ERRORVALIDEMAIL' | translate }}
@@ -29,7 +29,7 @@
 
           <mat-form-field fxFlex="24">
 
-            <input matInput placeholder="{{ 'User.ADDEDITUSER.USERNAME' | translate }}" formControlName="username" required>
+            <input autocomplete="off"  matInput placeholder="{{ 'User.ADDEDITUSER.USERNAME' | translate }}" formControlName="username" required>
             <mat-icon matSuffix>people</mat-icon>
             <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
           </mat-form-field>
@@ -39,7 +39,7 @@
 
           <mat-form-field fxFlex="24">
 
-            <input matInput type="password" placeholder="{{ 'User.ADDEDITUSER.PASSWORD' | translate }}" formControlName="password" required>
+            <input autocomplete="off"  matInput type="password" placeholder="{{ 'User.ADDEDITUSER.PASSWORD' | translate }}" formControlName="password" required>
             <mat-icon matSuffix>remove_red_eye</mat-icon>
             <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
           </mat-form-field>

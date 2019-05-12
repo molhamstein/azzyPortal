@@ -671,6 +671,8 @@ export class AdviceFormComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result == true) {
         this.sendArray['timeZone'] = this.timezone()
+        this.sendArray['cityZone'] = this.locationZone()
+        
         if (this.mainServ.loginServ.getlang() == "fa")
           this.sendArray['lang'] = "fa"
         else
@@ -699,5 +701,11 @@ export class AdviceFormComponent implements OnInit {
     var hours = Math.floor(minutes / 60);
     var prefix = offset < 0 ? "+" : "-";
     return prefix + hours;
+  }
+
+  locationZone(){
+    var dateString =new Date().toString()
+    dateString=dateString.substr(dateString.indexOf("("),dateString.length);
+    return dateString;
   }
 }

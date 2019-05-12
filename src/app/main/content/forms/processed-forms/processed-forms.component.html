@@ -20,7 +20,7 @@
       </button>
       <mat-form-field>
 
-        <input matInput [ngModelOptions]="{standalone: true}"  (keyup.enter)="search()" [(ngModel)]="searchKey" placeholder="{{ 'Form.FORMS.SEARCH' | translate }}">
+        <input autocomplete="off"  matInput [ngModelOptions]="{standalone: true}"  (keyup.enter)="search()" [(ngModel)]="searchKey" placeholder="{{ 'Form.FORMS.SEARCH' | translate }}">
         <mat-icon matSuffix>search</mat-icon>
         <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>

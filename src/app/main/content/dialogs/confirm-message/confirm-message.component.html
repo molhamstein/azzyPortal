@@ -1,9 +1,39 @@
 <!--component html goes here -->
-<div mat-dialog-content>
-  <p>{{message}}</p>
-  <!--{{data | json}}-->
+<div mat-dialog-content class="confirmClass" [dir]="dir">
+  <p *ngIf="errorMesage!=''">{{errorMesage |translate }}</p>
+
+  <p *ngIf="typeConfirm=='defult'">{{message}}</p>
+  <p *ngIf="typeConfirm!='defult'">{{'Dialog.Confirm.'+message | translate}}</p>
+  <div *ngIf="typeConfirm=='bookAppointment'">
+    <div class="row">
+      <div class="col-sm-1">
+        <mat-icon matSuffix>calendar_today</mat-icon>
+      </div>
+      <div class="col-sm-10">
+        {{moreData.date}}
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <mat-icon matSuffix>access_time</mat-icon>
+      </div>
+      <div class="col-sm-10">
+        {{'Dialog.Confirm.From' | translate}} {{moreData.timeStart}} {{'Dialog.Confirm.To' | translate}}
+        {{moreData.timeEnd}} {{'Dialog.Confirm.At' | translate}} {{moreData.timePlace}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <mat-icon matSuffix>place</mat-icon>
+      </div>
+      <div class="col-sm-10">
+        {{moreData.location}}
+      </div>
+    </div>
+  </div>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No</button>
-  <button mat-button  (click)="onYesClick()">Yes</button>
+  <button mat-button (click)="onNoClick()">{{'Dialog.Confirm.No' | translate}}</button>
+  <button mat-button (click)="onYesClick()">{{'Dialog.Confirm.Yes' | translate}}</button>
 </div>

@@ -24,21 +24,21 @@
           <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>-->
         <mat-form-field fxFlex="100">
-          <input matInput [matDatepicker]="endDatePicker" (focus)="endDatePicker.open()" placeholder="{{ 'Dialog.Add_Slotes.DATE' | translate }}" name="end" formControlName="date">
+          <input autocomplete="off"  matInput [min]="minDate" [matDatepicker]="endDatePicker" (focus)="endDatePicker.open()" placeholder="{{ 'Dialog.Add_Slotes.DATE' | translate }}" name="end" formControlName="date">
           <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #endDatePicker ></mat-datepicker>
           <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>
         <mat-form-field fxFlex="50">
           <!--<input >-->
-          <input matInput [matTimepicker]="startPicker" placeholder="{{ 'Dialog.Add_Slotes.STARTTIME' | translate }}">
+          <input autocomplete="off"  matInput [matTimepicker]="startPicker" placeholder="{{ 'Dialog.Add_Slotes.STARTTIME' | translate }}">
           <mat-timepicker-toggle matSuffix [for]="startPicker"></mat-timepicker-toggle>
           <mat-timepicker #startPicker color="primary"></mat-timepicker>
         </mat-form-field>
 
         <mat-form-field fxFlex="50">
           <!--<input >-->
-          <input matInput [matTimepicker]="endPicker" placeholder="{{ 'Dialog.Add_Slotes.ENDTIME' | translate }}">
+          <input autocomplete="off"  matInput [matTimepicker]="endPicker" placeholder="{{ 'Dialog.Add_Slotes.ENDTIME' | translate }}">
           <mat-timepicker-toggle  matSuffix [for]="endPicker"></mat-timepicker-toggle>
           <mat-timepicker #endPicker color="primary"></mat-timepicker>
         </mat-form-field>
@@ -60,7 +60,7 @@
           <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>
         <mat-form-field class="w-100-p">
-          <input matInput name="location" formControlName="location" placeholder="{{ 'Dialog.Add_Slotes.LOCATION' | translate }}" required>
+          <input autocomplete="off"  matInput name="location" formControlName="location" placeholder="{{ 'Dialog.Add_Slotes.LOCATION' | translate }}" required>
           <mat-icon matSuffix>place</mat-icon>
           <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
         </mat-form-field>

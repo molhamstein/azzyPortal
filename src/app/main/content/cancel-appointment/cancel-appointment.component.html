@@ -1,11 +1,12 @@
 <div id="forms" class="page-layout simple fullwidth" fxLayout="column" fusePerfectScrollbar>
 
   <!-- HEADER -->
-  <div class="header mat-accent-bg p-24 h-100" fxLayout="row" fxLayoutAlign="start center">
+  <div class="header mat-accent-bg p-24 h-100 h-100-custom" fxLayout="row" fxLayoutAlign="start center">
     <div style="width: 100%;" fxLayout="column" fxLayoutAlign="center start" *ngIf="isCanseld==false">
       <label style="width: 100%;text-align: center">{{'Cansel_Appointment_PAGE.TITLE' | translate}}</label>
       <div class="h1 mt-16" style="margin: 0px auto;">
-        <button mat-button (click)="cansel()" cdkFocusInitial>{{'Cansel_Appointment_PAGE.CANCEL' | translate}}</button>
+        <button mat-button (click)="cansel(true)" cdkFocusInitial>{{'Cansel_Appointment_PAGE.CANCEL' | translate}}</button>
+        <button mat-button (click)="cansel(false)" cdkFocusInitial>{{'Cansel_Appointment_PAGE.CHANGE' | translate}}</button>
       </div>
     </div>
     <div style="width: 100%;" fxLayout="column" fxLayoutAlign="center start" *ngIf="isCanseld==true">

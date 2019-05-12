@@ -13,6 +13,7 @@ import { AbstractControl, FormBuilder, FormGroup, FormArray, Validators, FormCon
 import { TranslateService } from '@ngx-translate/core';
 import { AppDirectionService } from '../../../app-direction.service';
 
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-edit-form',

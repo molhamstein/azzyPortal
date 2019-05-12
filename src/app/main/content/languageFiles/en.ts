@@ -82,10 +82,10 @@ export const locale = {
             },
             'STEP_0': {
                 'LABEL': 'Info',
+                'FNAME': 'Farsi Name',
                 'SUBLABEL': 'Personal Information about Applicant and Spouse',
                 'ENAME': 'English Name',
                 'ESNAME': 'English Surname',
-                'FNAME': 'Farsi Name',
                 'FSNAME': 'Farsi Surname',
                 'EMAIL': 'Email',
                 'MOBILE': 'Mobile',
@@ -94,8 +94,8 @@ export const locale = {
                 'CHILDREN_NUM': 'Number of Children',
                 'BIRTH_DATE': 'Date of Birth',
                 'SKYPE_ID': 'Skype ID',
-                "WITHPARTNER":"With Partner",
-                "WITHOUTPARTNER":"With Out Partner",
+                "WITHPARTNER": "With Partner",
+                "WITHOUTPARTNER": "WithOut Partner",
                 'MARRIED': 'Married',
                 'SEPARETED': 'Separated',
                 'DEVORCED': 'Divorced',
@@ -105,11 +105,11 @@ export const locale = {
                 'EADDRESS': 'English Address',
             },
             'STEP_1': {
-                "Writing":"Writing",
-                "Listening":"Listening",
-                "Reading":"Reading",
-                "Speaking":"Speaking",
-                "Overall":"Overall",
+                "Writing": "Writing",
+                "Listening": "Listening",
+                "Reading": "Reading",
+                "Speaking": "Speaking",
+                "Overall": "Overall",
                 'LABEL': 'English',
                 'SUBLABEL': 'Please define the level of your English knowledge',
                 'ENGLISH_LEVEL': 'How familiar are you with English?',
@@ -120,10 +120,10 @@ export const locale = {
                 'EN_SCORE': 'Enter the IELTS / PTE / TOEFL score'
             },
             'STEP_2': {
-                "AssociateDegree":"Associate Degree",
-                "BachelorDegree":"Bachelor Degree",
-                "MasterDegree":"Master Degree",
-                "PHDDegree":"PHD Degree",
+                "AssociateDegree": "Associate Degree",
+                "BachelorDegree": "Bachelor Degree",
+                "MasterDegree": "Master Degree",
+                "PHDDegree": "PHD Degree",
                 'LABEL': 'Education',
                 'SUBLABEL': 'Please list your educational background',
                 'DEGREE': 'Degree',
@@ -214,13 +214,11 @@ export const locale = {
                 'SUBLABEL2': 'Please check all the data you have entered and click the Edit Button for modification.',
                 'LABEL': 'Confirm Your Information',
             }
-
-
         },
         'Calender': {
             'TITLE': 'Calendar',
             'VIEW': 'View',
-            'USE': 'Use',
+            'BOOK': 'book',
             'TIME': 'Time',
             'DATE': 'Date',
             'LOCATION': 'Location',
@@ -228,18 +226,29 @@ export const locale = {
             'NOTAVAILABLE': 'Not Available',
             'CHOOSETIMEZONE': 'Choose Time Zone'
         },
-        "Cansel_Appointment_PAGE":{
-            "CANCEL": "Cancel",
-            "TITLE":"Click on The bottom to cancel your appointment",
-            "CANCELED":"Your Appointment is canceled"
+        "Cansel_Appointment_PAGE": {
+            "CANCEL": "Cancel Appointment ",
+            "CHANGE": "Change Appointment ",
+            "TITLE": "You can cancel Or change your appointment",
+            "CANCELED": "Your Appointment is canceled"
         },
         'Dialog': {
+            "Confirm": {
+                "Do_you_want_to_book_the_appointment": "Do you want to book the appointment :",
+                "Do_you_want_to_delete_your_appointment": "Do you want to delete your appointment",
+                "Do_you_want_to_change_your_appointment": "Do you want to change your appointment",
+                "Yes": "Yes",
+                "No": "No",
+                "From": "From",
+                "At": "at",
+                "To": "To"
+            },
             'View_Appointment': {
                 'FROM': 'From',
                 'TO': 'To',
                 'LOCATION': 'Location',
-                'DONE': 'Done',
-                'USE': 'Use'
+                'NO': 'No',
+                'OK': 'Ok'
             },
             'Reset_Password': {
                 'TITLE': 'Reset Password',
@@ -248,10 +257,15 @@ export const locale = {
                 'OLDPASSWORD': 'Old Password',
             },
             'Set_Text_Box': {
-                'FEE':"Fee",
+                'FEE': "Fee",
                 'TITLE': 'Text Box Message',
                 'OK': 'Ok',
                 'MESSAGETOCLIENT': "Message to Client"
+            },
+            'Confirm_Add_Form': {
+                'Message': "Are you sure you want to submit the form?",
+                "Yes": "Yes",
+                "No": "No"
             },
             'Add_Slotes': {
                 'LOCATION': 'Location',
@@ -274,6 +288,10 @@ export const locale = {
                 "CANCEL": "Cancel",
                 "DELETE": "Delete Appointment",
                 "CONFIRM": "the appointment for "
+            },
+            'message': {
+                "UPDATEFORM": "your form has been updated",
+                "OK": "Ok"
             }
         },
         'AUTH': {
@@ -323,5 +341,8 @@ export const locale = {
             'ERRORFIELDREQUIRED': 'This field is required',
             'ERRORVALIDEMAIL': 'Please enter a valid email address'
         }
+    },
+    "errorCode": {
+        "403": "expierd date"
     }
 };

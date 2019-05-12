@@ -148,7 +148,7 @@
             </div>
 
 
-            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title [ngClass]="{'hideMe': hasPartner!=true}" style="font-weight: bold; margin-top: 20px;">
               <mat-icon>wc</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
                 {{ 'Add_Edit_Form.SPOUSE' | translate }}
@@ -156,7 +156,7 @@
             </mat-panel-title>
 
 
-            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
+            <div [ngClass]="{'hideMe': hasPartner!=true}" style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
 
               <mat-form-field fxFlex="24">
 
@@ -255,7 +255,7 @@
 
 
             <div style="float: right;">
-              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([0]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -297,7 +297,7 @@
 
             </div>
 
-            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title [ngClass]="{'hideMe': hasPartner!=true}" style="font-weight: bold; margin-top: 20px;">
               <mat-icon>wc</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
                 {{ 'Add_Edit_Form.SPOUSE' | translate }}
@@ -306,7 +306,7 @@
 
 
 
-            <div style="padding-top:10px;" fxLayout="column">
+            <div style="padding-top:10px;" fxLayout="column" [ngClass]="{'hideMe': hasPartner!=true}">
               <div class="pt-24 pb-24">
                 <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>
                 <mat-radio-group formControlName="goodEnglishSp">
@@ -329,7 +329,7 @@
 
             <div style="float: right;">
               <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([1]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -353,7 +353,8 @@
             <div *ngFor="let level of eduLevels" style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
               fxFlex>
 
-              <span fxFlex="5" class="mat-title">{{level.label}}</span>
+              <span fxFlex="15" style="font-size: 16px;margin: 0;" class="mat-title">{{level.label| translate}}</span>
+              
               <div fxFlex="15" *ngFor="let oneField of level.fields">
                 <mat-form-field *ngIf="oneField.isInput==true">
                    <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
@@ -377,7 +378,7 @@
 
 
 
-            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;"  [ngClass]="{'hideMe': hasPartner!=true}">
               <mat-icon>wc</mat-icon>
 
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
@@ -386,10 +387,10 @@
             </mat-panel-title>
 
 
-            <div *ngFor="let level of eduLevels" style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
+            <div *ngFor="let level of eduLevels" style="padding-top:10px;"  [ngClass]="{'hideMe': hasPartner!=true}" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
               fxFlex>
 
-              <span fxFlex="5" class="mat-title">{{level.label}}</span>
+              <span fxFlex="15" style="font-size: 16px;margin: 0;" class="mat-title">{{level.label| translate}}</span>
               <div fxFlex="15" *ngFor="let oneField of level.fields">
                 <mat-form-field *ngIf="oneField.isInput==true">
                    <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
@@ -413,7 +414,7 @@
 
             <div style="float: right;">
               <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([2]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -452,7 +453,7 @@
             </div>
 
 
-            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title [ngClass]="{'hideMe': hasPartner!=true}" style="font-weight: bold; margin-top: 20px;" >
               <mat-icon>wc</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
                 {{ 'Add_Edit_Form.SPOUSE' | translate }}
@@ -460,7 +461,7 @@
             </mat-panel-title>
 
 
-            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+            <div style="padding-top:10px;" [ngClass]="{'hideMe': hasPartner!=true}" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div fxFlex="{{oneField.fxFlex}}" *ngFor="let oneField of workExperience">
                 <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==true">
                    <input autocomplete="off"  matInput type="number" placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
@@ -481,7 +482,7 @@
 
             <div style="float: right;">
               <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([3]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -538,7 +539,7 @@
             </div>
 
 
-            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;" [ngClass]="{'hideMe': hasPartner!=true}">
               <mat-icon>wc</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
                 {{ 'Add_Edit_Form.SPOUSE' | translate }}
@@ -547,7 +548,7 @@
 
 
 
-            <div class="pt-24 pb-24">
+            <div class="pt-24 pb-24" [ngClass]="{'hideMe': hasPartner!=true}">
               <label>{{ 'Add_Edit_Form.STEP_4.STATUS' | translate }}</label>
               <mat-radio-group formControlName="militaryStatusSp">
                 <mat-radio-button class="mr-24 ml-24" *ngFor="let statu of militaryStatus" [value]="statu.value">
@@ -555,7 +556,7 @@
                 </mat-radio-button>
               </mat-radio-group>
             </div>
-            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+            <div style="padding-top:10px;" [ngClass]="{'hideMe': hasPartner!=true}"  fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
               <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
                 <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
@@ -583,7 +584,7 @@
 
             <div style="float: right;">
               <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([4]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -610,14 +611,14 @@
               </div>
             </div>
 
-            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;" [ngClass]="{'hideMe': hasPartner!=true}">
               <mat-icon>wc</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
                 {{ 'Add_Edit_Form.SPOUSE' | translate }}
               </mat-panel-description>
             </mat-panel-title>
 
-            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+            <div style="padding-top:10px;" [ngClass]="{'hideMe': hasPartner!=true}" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div fxFlex="30" *ngFor="let oneField of healthFields">
                 <mat-form-field style="width: 100%">
                    <input autocomplete="off"  matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
@@ -627,7 +628,7 @@
             </div>
             <div style="float: right;">
               <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([5]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 
@@ -667,7 +668,7 @@
 
 
 
-            <mat-panel-title style="font-weight: bold; margin-top: 20px;">
+            <mat-panel-title style="font-weight: bold; margin-top: 20px;" [ngClass]="{'hideMe': hasPartner!=true}">
               <mat-icon>wc</mat-icon>
               <mat-panel-description style="padding-left:5px;" fxFlex="grow" fxLayoutAlign="space-between center">
                 {{ 'Add_Edit_Form.SPOUSE' | translate }}
@@ -675,7 +676,7 @@
             </mat-panel-title>
 
 
-            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+            <div style="padding-top:10px;" [ngClass]="{'hideMe': hasPartner!=true}" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
               <div fxFlex="30" *ngFor="let oneField of australiaFields">
                 <mat-form-field style="width: 100%">
@@ -698,7 +699,7 @@
 
             <div style="float: right;">
               <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-              <button mat-button matStepperNext class="nextButton" type="button" [disabled]="formArray?.get([6]).invalid">{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
+              <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT' | translate}}</button>
             </div>
           </mat-step>
 

@@ -1,0 +1,8 @@
+<!--component html goes here -->
+<div mat-dialog-content>
+  <p>{{message | translate }}</p>
+  <!--{{data | json}}-->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">{{'Dialog.message.OK'|translate}}</button>
+</div>

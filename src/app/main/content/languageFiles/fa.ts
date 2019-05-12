@@ -90,8 +90,8 @@ export const locale = {
                 'CHILDREN_NUM': 'تعداد فرزندان',
                 'BIRTH_DATE': 'تاریخ تولد',
                 'SKYPE_ID': 'نام کاربری اسکایپ',
-                "WITHPARTNER":"با همسر",
-                "WITHOUTPARTNER":"بدون همسر",
+                "WITHPARTNER": "با همسر",
+                "WITHOUTPARTNER": "بدون همسر",
                 'MARRIED': 'متاهل',
                 'SEPARETED': ' متارکه کرده',
                 'DEVORCED': 'طلاق گرفته',
@@ -106,11 +106,11 @@ export const locale = {
                 'EADDRESS': 'نشانی منزل با حروف انگلیسی',
             },
             'STEP_1': {
-                "Writing":"نوشتن",
-                "Listening":"گوش دادن",
-                "Reading":"خواندن",
-                "Speaking":"صحبت کردن",
-                "Overall":"به طور کلی",
+                "Writing": "نوشتن",
+                "Listening": "گوش دادن",
+                "Reading": "خواندن",
+                "Speaking": "صحبت کردن",
+                "Overall": "به طور کلی",
                 'LABEL': 'سطح زبان انگلیسی',
                 'ENGLISH_LEVEL': 'با زبان انگلیسی چقدر آشنایی دارید؟',
                 'EXCELLENT': 'عالی',
@@ -147,7 +147,7 @@ export const locale = {
                 'YEAR': 'سال',
                 'SUBLABEL': 'لطفا سوابق کاری خود را مشخص نمایید',
                 'FIELDOfWork': 'زمینه کاری',
-                
+
                 "REDYPAID": "سالهای مرتبط با رشته تحصیلی و با دریافت دستمزد ",
                 "REDYNPAID": "سالهای مرتبط با رشته تحصیلی و بدون دریافت دستمزد",
                 "NREDYPAID": "سالهای غیر مرتبط با رشته تحصیلی و با دریافت دستمزد",
@@ -223,7 +223,7 @@ export const locale = {
         'Calender': {
             'TITLE': 'تقويم',
             'VIEW': 'نمایش',
-            'USE': 'انتخاب',
+            'BOOK': 'انتخاب',
             'TIME': 'زمان',
             'DATE': 'تاریخ',
             'LOCATION': 'انتخاب محل',
@@ -231,18 +231,28 @@ export const locale = {
             'NOTAVAILABLE': 'نا موجود',
             'CHOOSETIMEZONE': 'انتخاب ساعت رسمی'
         },
-        "Cansel_Appointment_PAGE":{
-            "CANCEL": "کنسل",
-            "TITLE":"برای کنسل کردن وقت مشاوره روی این دکمه کلیک نمایید",
-            "CANCELED":"وقت مشاوره شما کنسل شد"
+        "Cansel_Appointment_PAGE": {
+            "CANCEL": "حذف وقت",
+            "CHANGE": "تغییر وقت",
+            "TITLE": "میتوانید وقت خود را حذف نمایید یا تغییر دهید",
+            "CANCELED": "وقت مشاوره شما کنسل شد"
         },
         'Dialog': {
+            "Confirm": {
+                "Do_you_want_to_book_the_appointment": "آیا مایل هستید این وقت را انتخاب نمایید؟ :",
+                "Do_you_want_to_delete_your_appointment": "آیا مایل هستید وقت را حذف نمایید؟",               
+                "Yes": "بله",
+                "No": "نه",
+                'From': 'از',
+                "At": "در",
+                'To': 'تا'
+            },
             'View_Appointment': {
                 'FROM': 'از',
                 'TO': 'تا',
                 'LOCATION': 'محل',
-                'DONE': 'ارسال',
-                'USE': 'انتخاب'
+                'NO': 'نه',
+                'OK': 'تایید',
             },
             'Reset_Password': {
                 'TITLE': 'تغییر رمز',
@@ -250,8 +260,13 @@ export const locale = {
                 'NEWPASSWORD': 'رمز جدید',
                 'OLDPASSWORD': 'رمز قدیم',
             },
+            'Confirm_Add_Form': {
+                'Message': "آیا مطمئن هستید که می خواهید فرم را ارسال کنید؟",
+                "Yes": "بله",
+                "No": "نه"
+            },
             'Set_Text_Box': {
-                'FEE':"Fee",
+                'FEE': "Fee",
                 'TITLE': 'پیغام',
                 'OK': 'تایید',
                 'MESSAGETOCLIENT': "پیغام ارسالی به متقاضی"
@@ -277,6 +292,10 @@ export const locale = {
                 "DELETE": "کنسل وقت مشاوره",
                 'SHOWFORM': 'نمایش فرم',
                 "CONFIRM": "آیا می خواهید این وقت را حذف کنید؟"
+            },
+            'message': {
+                "UPDATEFORM": "your form has been updated",
+                'OK': 'تایید',
             }
         },
         'AUTH': {
@@ -326,5 +345,9 @@ export const locale = {
             'ERRORFIELDREQUIRED': 'درج اطلاعات در این محل الزامی است',
             'ERRORVALIDEMAIL': 'لطفا آدرس ایمیل معتبر وارد نمایید'
         }
+    }
+    ,
+    "errorCode": {
+        "403": "expierd date"
     }
 };

@@ -25,7 +25,7 @@ export class AddSlotesComponent {
     public dateTime: Date;
     picker;
     private exportTime = { hour: 7, minute: 15, format: 24 };
-    // startTime;
+    minDate=new Date();
     x = new Date()
     constructor(
         public dialogRef: MatDialogRef<AddSlotesComponent>,
@@ -163,8 +163,8 @@ export class AddSlotesComponent {
                 else
                     this.eventForm = new FormGroup({
                         date: new FormControl('', Validators.required),
-                        location: new FormControl('', Validators.required),
-                        consId: new FormControl('', Validators.required)
+                        location: new FormControl(data.location, Validators.required),
+                        consId: new FormControl(data.consId, Validators.required)
                     });
             }
             else if (this.mainServ.APIServ.getErrorCode() == 400) {

@@ -18,7 +18,7 @@
 
           <mat-form-field fxFlex="24">
 
-            <input matInput placeholder="{{ 'User.ADDEDITUSER.EMAIL' | translate }}" formControlName="email" required>
+            <input autocomplete="off"  matInput placeholder="{{ 'User.ADDEDITUSER.EMAIL' | translate }}" formControlName="email" required>
             <mat-icon matSuffix>email</mat-icon>
             <mat-error *ngIf="editUserForm.hasError('email', 'email') && !editUserForm.hasError('required','email')">
               {{ 'Global.ERRORVALIDEMAIL' | translate }}
@@ -29,7 +29,7 @@
 
           <mat-form-field fxFlex="24">
 
-            <input matInput placeholder="{{ 'User.ADDEDITUSER.USERNAME' | translate }}" formControlName="username" required>
+            <input autocomplete="off" matInput placeholder="{{ 'User.ADDEDITUSER.USERNAME' | translate }}" formControlName="username" required>
             <mat-icon matSuffix>people</mat-icon>
             <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
           </mat-form-field>

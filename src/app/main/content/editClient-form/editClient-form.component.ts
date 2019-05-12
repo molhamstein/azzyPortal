@@ -12,6 +12,7 @@ import { AbstractControl, FormBuilder, FormGroup, FormArray, Validators } from '
 import { TranslateService } from '@ngx-translate/core';
 import { AppDirectionService } from '../../../app-direction.service';
 
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-editClient-form',
@@ -562,6 +563,10 @@ export class EditClientFormComponent implements OnInit {
     });
   }
 
+  scrollToUp() {
+    $('*').animate({ scrollTop: 0 }, 'slow'); // Scroll individual element 100 pixels down
+
+  }
   ngOnInit() {
     // this.translate.use('en');
 
@@ -574,7 +579,7 @@ export class EditClientFormComponent implements OnInit {
       this.mainServ.loaderSer.display(false);
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.setFormGroupe(data['getClientForm']);
-        this.formStatus = data.status;
+        this.formStatus = data.getClientForm.status;
         if (data['getClientForm']['maritalStatus'] == "withPartner")
           this.hasPartner = true
         else
@@ -665,7 +670,8 @@ export class EditClientFormComponent implements OnInit {
     this.dialogSer.confirmationMessage('Do you want to edit the form ', "forms/" + this.id, this.sendArray, false, function () {
       // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
       // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
-      mainThis.mainServ.globalServ.errorDialog("update", "Form has be updated فرم به روز شده است")
+      // mainThis.mainServ.globalServ.errorDialog("update", "Form has be updated فرم به روز شده است")
+      mainThis.dialogSer.messageDialog("Dialog.message.UPDATEFORM")
     }, 'patch', this.token)
 
 

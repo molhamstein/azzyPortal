@@ -10,14 +10,16 @@
 // by fadi
 
 
-.nextButton{
+.nextButton {
   color: white !important;
   background-color: #2094c8;
 }
-.backButton{
+
+.backButton {
   color: white !important;
   background-color: #37abdf;
 }
+
 .hideMe {
   display: none !important;
 }
@@ -35,6 +37,10 @@
 [dir=rtl] .mr-8 {
   margin-left: 8px !important;
   margin-right: 0 !important;
+}
+
+[dir=rtl].confirmClass {
+  text-align: right;
 }
 
 .mat-step-icon .mat-icon {

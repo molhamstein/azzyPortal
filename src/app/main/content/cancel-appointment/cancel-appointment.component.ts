@@ -55,16 +55,24 @@ export class cancelAppointmentComponent implements OnInit {
 
   isCanseld = false;
 
-  cansel() {
+  cansel(isJustCancel) {
     var mainThis = this;
 
+    var message = "Do_you_want_to_delete_your_appointment"
+    if (isJustCancel == false)
+      var message = "Do_you_want_to_change_your_appointment"
 
-    this.dialogSer.confirmationMessage('Do you want to delete your appointment', "forms/cancelAp/" + this.id, {}, false, function () {
+    this.dialogSer.confirmationMessage(message, "forms/cancelAp/" + this.id, {}, false, function (data) {
       // mainThis.mainServ.globalServ.goTo(this.mainServ.getBackUrl())
       // mainThis.mainServ.globalServ.goTo(mainThis.mainServ.getBackUrl())
-      mainThis.isCanseld = true;
-
-    }, 'put')
+      if (isJustCancel) {
+        mainThis.isCanseld = true;
+      }
+      else {
+        console.log(data)
+        window.location.href = data.cancelAp.calandarLink //relative to domain
+      }
+    }, 'put', null, 'cancelAppointment')
 
 
   }

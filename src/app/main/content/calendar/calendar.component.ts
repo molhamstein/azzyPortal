@@ -73,6 +73,41 @@ export class CalendarComponent implements OnInit {
 
   }
 
+  getInfoEvent(day) {
+    var tempInfo = []
+    for (let index = 0; index < day.events.length; index++) {
+      const element = day.events[index];
+      var mainIndex = tempInfo.findIndex(p => p.consId == element.meta.consId)
+      if (mainIndex == -1) {
+        tempInfo.push({ "consId": element.meta.consId, "consName": element.meta.consName, "open": 0, "close": 0 })
+        mainIndex = tempInfo.length - 1
+        // tempInfo[element.meta.consId] = {}
+        // tempInfo[element.meta.consId]["consName"] = element.meta.consName;
+        // tempInfo[element.meta.consId]["open"] = 0;
+        // tempInfo[element.meta.consId]["close"] = 0;
+      }
+      if (element.meta.open)
+        tempInfo[mainIndex]["open"]++;
+      else
+        tempInfo[mainIndex]["close"]++;
+
+      if (index + 1 == day.events.length) {
+        return tempInfo;
+        //   for (const key in tempInfo) {
+        //     if (tempInfo.hasOwnProperty(key)) {
+        //       const element = tempInfo[key];
+        //       console.log(element);
+        //       secTemp.push(element)
+
+        //     }
+        //   }
+        //   return secTemp;
+      }
+
+    }
+
+  }
+
   title = 'app';
   view: string = 'month';
   viewDate: Date = new Date();
@@ -277,6 +312,7 @@ export class CalendarComponent implements OnInit {
         tempEvents.readCalander.forEach(cons => {
           index++;
           cons.slots.forEach(slot => {
+            slot.consName = cons['username'].substring(0, 2);
             if (slot.open)
               var x: CalendarEvent = {
                 start: new Date(slot.startDate),
@@ -331,13 +367,13 @@ export class CalendarComponent implements OnInit {
 
   isAddToMonthEvent(slot) {
     // if()
-    for (var index = 0; index < this.newEventsMonth[slot['start'].getDate()].length; index++) {
-      var element = this.newEventsMonth[slot['start'].getDate()][index];
-      // console.log(element.meta.consId);
-      if (element.meta.consId == slot.meta.consId) {
-        return false;
-      }
-    };
+    // for (var index = 0; index < this.newEventsMonth[slot['start'].getDate()].length; index++) {
+    //   var element = this.newEventsMonth[slot['start'].getDate()][index];
+    //   // console.log(element.meta.consId);
+    //   if (element.meta.consId == slot.meta.consId) {
+    //     return false;
+    //   }
+    // };
     return true;
   }
 

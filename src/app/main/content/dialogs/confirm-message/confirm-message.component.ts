@@ -18,6 +18,12 @@ export class ConfirmMessageComponent {
     type = "";
     withReload = true;
     token;
+    moreData={}
+    typeConfirm=""
+
+    dir="";
+
+    errorMesage="";
     constructor(
         public dialogRef: MatDialogRef<ConfirmMessageComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
@@ -30,8 +36,10 @@ export class ConfirmMessageComponent {
         this.type = data['type'];
         this.token = data['token'];
         this.withReload = data['withReload'];
+        this.moreData = data['moreData'];
+        this.typeConfirm = data['typeConfirm'];
         this.translationLoader.loadTranslations(english, persian);
-
+        this.dir=this.mainServ.getDir();
     }
 
 
@@ -57,8 +65,11 @@ export class ConfirmMessageComponent {
                     if (this.withReload)
                         this.mainServ.globalServ.reload();
                     else
-                        this.dialogRef.close(true);
+                        this.dialogRef.close(data);
 
+                }
+                else if(this.mainServ.APIServ.getErrorCode() == 403){
+                    this.errorMesage="errorCode.403"
                 }
             })
     }

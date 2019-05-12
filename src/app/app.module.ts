@@ -18,7 +18,7 @@ import { GlobalService } from './core/services/global.service';
 import { LoginService } from './core/services/login.service';
 import { CallApiService } from './core/services/call-api.service';
 import { MainService } from './core/services/main.service';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -42,9 +42,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { Angular5TimePickerModule } from 'angular5-time-picker';
-import {MomentTimezoneModule} from 'angular-moment-timezone';
+import { MomentTimezoneModule } from 'angular-moment-timezone';
 
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { MessageComponent } from './main/content/dialogs/message/message.component';
+import { MAT_DATE_LOCALE } from '@angular/material';
 
 
 
@@ -57,8 +59,8 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent, ResetPasswordComponent,ResponeFormComponent,ConfirmAddFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, ConfirmMessageComponent, ViewAppointmentComponent,
-        DeleteAppointmentComponent,AddApointmentComponent,viewEventComponent
+        AppComponent, ResetPasswordComponent, ResponeFormComponent, ConfirmAddFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, MessageComponent, ConfirmMessageComponent, ViewAppointmentComponent,
+        DeleteAppointmentComponent, AddApointmentComponent, viewEventComponent
     ],
     imports: [
         BrowserModule,
@@ -76,10 +78,12 @@ const appRoutes: Routes = [
         // OwlDateTimeModule,
         // OwlNativeDateTimeModule,
     ],
-    entryComponents: [ViewAppointmentComponent,ConfirmAddFormComponent,ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent, 
-    ConfirmMessageComponent,DeleteAppointmentComponent,AddApointmentComponent,viewEventComponent],
+    entryComponents: [ViewAppointmentComponent, ConfirmAddFormComponent, ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent,
+        ConfirmMessageComponent, MessageComponent, DeleteAppointmentComponent, AddApointmentComponent, viewEventComponent],
 
     providers: [
+        { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
+        { provide: LOCALE_ID, useValue: "en-GB" },
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         FuseSplashScreenService,
         FuseConfigService,

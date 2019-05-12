@@ -103,6 +103,13 @@ fuse-main {
   max-height: 115px !important;
 }
 
+
+.h-100-custom{
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+
+}
 .custom-modalbox {
   .mat-dialog-container {
     padding: 0;

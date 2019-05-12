@@ -1,123 +1,8 @@
-<div class="col-md-7">
-  <div id="calendar" dir="ltr" class="page-layout simple fullwidth" fusePerfectScrollbar style="width:80%;">
-
-    <!-- HEADER -->
-    <div class="header p-16 p-sm-24" [ngClass]="viewDate | date:'MMM'">
-
-      <div class="header-content" fxLayout="column" fxLayoutAlign="space-between">
-
-        <div class="header-top" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
-
-          <div class="logo mb-16 mb-sm-0" fxLayout="row" fxLayoutAlign="start center">
-
-            <mat-icon class="logo-icon">today</mat-icon>
-
-            <span class="logo-text">{{ 'Calender.TITLE' | translate}}</span>
-
-          </div>
-
-          <!-- TOOLBAR -->
-
-        </div>
-        <!-- / TOOLBAR -->
-
-        <!-- HEADER BOTTOM -->
-        <div class="header-bottom" fxLayout="row" fxLayoutAlign="center center">
-
-          <button mat-button class="mat-icon-button arrow" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()"
-            (viewDateChange)="selectedDay = {date:$event}" aria-label="Previous">
-            <mat-icon>chevron_left</mat-icon>
-          </button>
-
-          <div class="title" style="display: inline-block;">
-            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}
-          </div>
-
-          <button mat-button class="mat-icon-button arrow" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (click)="changeDayAnas()"
-            (viewDateChange)="selectedDay = {date:$event}" aria-label="Next">
-            <mat-icon>chevron_right</mat-icon>
-          </button>
-        </div>
-        <!-- / HEADER BOTTOM -->
-      </div>
-
-    </div>
-    <!-- / HEADER -->
-    <!-- <div class="cal-open-day-events" [@collapse]>
-        <ng-template [ngTemplateOutlet]="customTemplate || defaultTemplate" [ngTemplateOutletContext]="{
-            events: events,
-            eventClicked: eventClicked
-          }">
-        </ng-template>
-      </div> -->
-    <!-- <div class="row text-center col-md-8" style="float: left;">
-      <div class="col-md-4">
-        <div class="btn-group">
-          <div class="btn btn-primary" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="activeDayIsOpen = false">
-            Previous
-          </div>
-          <div class="btn btn-outline-secondary" mwlCalendarToday [(viewDate)]="viewDate">
-            Today
-          </div>
-          <div class="btn btn-primary" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="activeDayIsOpen = false">
-            Next
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
-      </div>
-      <div class="col-md-4">
-        <div class="btn-group">
-          <div class="btn btn-primary" (click)="view = 'month'" [class.active]="view === 'month'">
-            Month
-          </div>
-  
-          <div class="btn btn-primary" (click)="view = 'day'" [class.active]="view === 'day'">
-            Day
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div *ngIf="events.length > 0" [ngSwitch]="view" class="col-md-8" style="float: left;">
-      <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [cellTemplate]="customCellTemplate"
-        [openDayEventsTemplate]="tt" [eventTitleTemplate]="rr" (beforeViewRender)="beforeMonthViewRender($event)" [activeDayIsOpen]="activeDayIsOpen"
-        (dayClicked)="dayClicked($event.day)" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
-      </mwl-calendar-month-view>
-      <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
-        (eventTimesChanged)="eventTimesChanged($event)">
-      </mwl-calendar-day-view>
-    </div> -->
-    <div class="content" fusePerfectScrollbar>
-      <div [ngSwitch]="view">
-        <div *ngIf="events.length > 0">
-          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (dayClicked)="dayClicked($event.day)">
-          </mwl-calendar-month-view>
-        </div>
-        <div *ngIf="events.length == 0">
-          <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (dayClicked)="dayClicked($event.day)">
-          </mwl-calendar-month-view>
-        </div>
-        <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent()"
-          (eventTimesChanged)="eventTimesChanged($event)">
-        </mwl-calendar-day-view>
-      </div>
-    </div>
-
-    <!-- <div class="col-md-3 offset-md-1" style="float: left; text-align: left">
-      <h2>Consultants</h2>
-      <div *ngFor="let cons of colors">
-        <span style="width: 15px; height: 15px;border-radius: 50%;display: inline-block" class="badge-{{cons.cons}}"></span>
-        <h5 style="display: inline;"> {{cons.name}}</h5>
-      </div>
-    </div> -->
-  </div>
-</div>
-
-<div class="col-md-5" style="margin-top: 200px;">
+<div class="col-md-9" style="margin-top: 20px;">
 
   <mat-form-field style="width: 100%;">
-    <mat-select (selectionChange)="changeTimezone($event.value,$event.viewValue)" [(value)]="timezoneSelect" placeholder="{{ 'Calender.CHOOSETIMEZONE' | translate }}">
+    <mat-select (selectionChange)="changeTimezone($event.value)" [(value)]="timezoneSelect"
+      placeholder="{{ 'Calender.CHOOSETIMEZONE' | translate }}">
       <!--<ngx-mat-select-search [formControl]="bankFilterCtrl"></ngx-mat-select-search>-->
       <mat-option *ngFor="let oneTimeZone of timeZoneArray" [value]="oneTimeZone.value">
         {{ oneTimeZone.viewValue }}
@@ -125,25 +10,15 @@
     </mat-select>
     <mat-icon matSuffix>time</mat-icon>
   </mat-form-field>
-  <!--<mat-form-field style="width: 100%;">
-    <mat-select (selectionChange)="changeTimezone($event.value)" [(value)]="timezoneSelect" placeholder="{{ 'Calender.CHOOSETIMEZONE' | translate }}"
-      #singleSelect>
-      <ngx-mat-select-search [formControl]="bankFilterCtrl"></ngx-mat-select-search>
-      <mat-option *ngFor="let oneTimeZone of timeZoneArray | async" [value]="oneTimeZone.value">
-        {{ oneTimeZone.value }}
-      </mat-option>
-    </mat-select>
--->
 
-  <ngx-datatable class="material" [rows]="bodyevents" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'" [scrollbarH]="true"
-    [rowClass]="">
+
+  <ngx-datatable class="material" [rows]="bodyevents" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'"
+    [scrollbarH]="true" [rowClass]="">
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="date">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
         <span>{{'Calender.DATE' | translate}}</span>
       </ng-template>
-      <!--<ng-template let-row="row" let-value="value" ngx-datatable-cell-template style="background-color: aqua">
-        {{row.start | date:'yyyy/MM/dd'}}
-      </ng-template>-->
+
     </ngx-datatable-column>
     <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="bodyEnd">
       <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
@@ -161,36 +36,29 @@
         {{value}}
       </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="meta.open">
-      <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
-        <span>{{'Calender.AVAILABLE' | translate}}</span>
-      </ng-template>
-      <ng-template let-value="value" ngx-datatable-cell-template>
-        <mat-chip-list *ngIf="value">
-          <mat-chip color="accent" selected="true">{{'Calender.AVAILABLE' | translate}}</mat-chip>
-        </mat-chip-list>
-        <mat-chip-list *ngIf="!value">
-          <mat-chip color="warn" selected="true">{{'Calender.NOTAVAILABLE' | translate}}</mat-chip>
-        </mat-chip-list>
-      </ng-template>
-    </ngx-datatable-column>
 
-    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
+    <!-- <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
 
       <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="viewAppointment(row)">
-              <span>{{'Calender.VIEW' | translate}}</span>
-            </button>
-          <button mat-menu-item (click)="useAppointment(row)">
-              <span>{{'Calender.USE' | translate}}</span>
-            </button>
-        </mat-menu>
+        <button mat-raised-button  class="save-button mat-accent" (click)="viewAppointment(row)">
+          <span>{{'Calender.VIEW' | translate}}</span>
+        </button>
+      </ng-template>
+    </ngx-datatable-column> -->
+    <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        <button mat-raised-button  class="save-button mat-accent" (click)="useAppointment(row)">
+          <span>{{'Calender.BOOK' | translate}}</span>
+        </button>
 
       </ng-template>
     </ngx-datatable-column>
+
   </ngx-datatable>
+</div>
+<div class="col-md-3" style="margin-top: 40px;">
+  <mat-card>
+
+    <mat-calendar [selected]="selectedDate"  [minDate]="today" (selectedChange)="onSelect($event)"></mat-calendar>
+  </mat-card>
 </div>

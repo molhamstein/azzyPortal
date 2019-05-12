@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class MainService {
 
   // constructor(public APIServ:CallApiService,public loginServ:LoginService,public globalServ:GlobalService) { }
-  constructor(public loaderSer: LoaderServicesService,public APIServ: CallApiService, public loginServ: LoginService, public globalServ: GlobalService) { }
+  constructor(public loaderSer: LoaderServicesService, public APIServ: CallApiService, public loginServ: LoginService, public globalServ: GlobalService) { }
   private backUrl = "";
   private loader = false;
   getBackUrl() {
@@ -25,6 +25,15 @@ export class MainService {
 
   setLoader(loader) {
     this.loader = loader;
+  }
+
+  getDir() {
+    var lang = this.loginServ.getlang()
+
+    if (lang == "fa")
+      return "rtl"
+    else
+      return "ltr"
   }
 
 
