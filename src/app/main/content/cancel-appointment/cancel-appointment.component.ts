@@ -72,7 +72,7 @@ export class cancelAppointmentComponent implements OnInit {
         console.log(data)
         window.location.href = data.cancelAp.calandarLink //relative to domain
       }
-    }, 'put', null, 'cancelAppointment')
+    }, 'put', this.token, 'cancelAppointment')
 
 
   }

@@ -10724,7 +10724,7 @@ var cancelAppointmentComponent = (function () {
                 console.log(data);
                 window.location.href = data.cancelAp.calandarLink; //relative to domain
             }
-        }, 'put', null, 'cancelAppointment');
+        }, 'put', this.token, 'cancelAppointment');
     };
     cancelAppointmentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
@@ -11081,7 +11081,7 @@ var ClientCalendarComponent = (function () {
         // this.dialogSer.confirmationMessage('Do you want to book the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
         this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
             mainThis.mainServ.globalServ.reload();
-        }, "put", null, 'bookAppointment', { "date": appointment['date'], "timeStart": appointment['bodyStart'], "timeEnd": appointment['bodyEnd'], "timePlace": this.timePlace, "location": appointment['meta']['location'] });
+        }, "put", this.token, 'bookAppointment', { "date": appointment['date'], "timeStart": appointment['bodyStart'], "timeEnd": appointment['bodyEnd'], "timePlace": this.timePlace, "location": appointment['meta']['location'] });
     };
     ClientCalendarComponent.prototype.setTimeZone = function () {
         for (var index = 0; index < this.bodyevents.length; index++) {
