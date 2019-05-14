@@ -8217,7 +8217,7 @@ var CallApiService = (function () {
         var _this = this;
         if (token === void 0) { token = ""; }
         var auth = "";
-        if (token != "")
+        if (token != "" && token != null)
             auth = token;
         else if (this.loginSer.getToken() != null) {
             auth = this.loginSer.getToken();

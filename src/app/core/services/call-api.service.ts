@@ -123,7 +123,7 @@ export class CallApiService {
   put(url, data, token: string = "") {
 
     let auth = "";
-    if (token != "")
+    if (token != "" && token != null)
       auth = token
     else if (this.loginSer.getToken() != null) {
       auth = this.loginSer.getToken();
