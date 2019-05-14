@@ -11731,7 +11731,7 @@ var ConfirmMessageComponent = (function () {
                 }
             });
         else if (this.type == "put")
-            this.mainServ.APIServ.put(this.url, this.sendData).subscribe(function (data) {
+            this.mainServ.APIServ.put(this.url, this.sendData, this.token).subscribe(function (data) {
                 if (_this.mainServ.APIServ.getErrorCode() == 0) {
                     if (_this.withReload)
                         _this.mainServ.globalServ.reload();

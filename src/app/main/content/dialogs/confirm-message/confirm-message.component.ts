@@ -60,7 +60,7 @@ export class ConfirmMessageComponent {
                 }
             })
         else if (this.type == "put")
-            this.mainServ.APIServ.put(this.url, this.sendData).subscribe((data: any) => {
+            this.mainServ.APIServ.put(this.url, this.sendData, this.token).subscribe((data: any) => {
                 if (this.mainServ.APIServ.getErrorCode() == 0) {
                     if (this.withReload)
                         this.mainServ.globalServ.reload();
