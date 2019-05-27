@@ -220,6 +220,8 @@ export const locale = {
             'VIEW': 'View',
             'BOOK': 'book',
             'TIME': 'Time',
+            "Select_Appointment": "Select an appointment with your consultant",
+            "Placeholder_No_Appointment": "No free appointment in this day",
             'DATE': 'Date',
             'LOCATION': 'Location',
             'AVAILABLE': 'Available',

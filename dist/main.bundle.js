@@ -549,14 +549,14 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CalendarModule; });
 /* unused harmony export CalendarCommonModule */
 /* unused harmony export CalendarEventTitleFormatter */
 /* unused harmony export MOMENT */
 /* unused harmony export CalendarMomentDateFormatter */
 /* unused harmony export CalendarNativeDateFormatter */
 /* unused harmony export CalendarAngularDateFormatter */
-/* unused harmony export CalendarDateFormatter */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarDateFormatter; });
 /* unused harmony export CalendarUtils */
 /* unused harmony export CalendarMonthViewComponent */
 /* unused harmony export CalendarMonthModule */
@@ -10436,7 +10436,7 @@ var MyCalendarModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* RouterModule */].forChild(routes),
-                __WEBPACK_IMPORTED_MODULE_4__angular_calendar__["a" /* CalendarModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_4__angular_calendar__["b" /* CalendarModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_7__core_modules_material_module__["a" /* MaterialModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_forms__["k" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9_ngx_material_timepicker__["a" /* NgxMaterialTimepickerModule */].forRoot(),
@@ -10846,7 +10846,7 @@ var MyClientCalendarModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* RouterModule */].forChild(routes),
-                __WEBPACK_IMPORTED_MODULE_3__angular_calendar__["a" /* CalendarModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_3__angular_calendar__["b" /* CalendarModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_6__core_modules_material_module__["a" /* MaterialModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["k" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_7_ngx_material_timepicker__["a" /* NgxMaterialTimepickerModule */].forRoot(),
@@ -10873,7 +10873,7 @@ module.exports = ""
 /***/ "./src/app/main/content/client-calendar/client-calendar/client-calendar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-9\" style=\"margin-top: 20px;\">\r\n\r\n  <mat-form-field style=\"width: 100%;\">\r\n    <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n      placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n      <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n      <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n        {{ oneTimeZone.viewValue }}\r\n      </mat-option>\r\n    </mat-select>\r\n    <mat-icon matSuffix>time</mat-icon>\r\n  </mat-form-field>\r\n\r\n\r\n  <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\"\r\n    [scrollbarH]=\"true\" [rowClass]=\"\">\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"date\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.DATE' | translate}}</span>\r\n      </ng-template>\r\n\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"bodyEnd\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.TIME' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.bodyStart}} -- {{row.bodyEnd}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.LOCATION' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        {{value}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n\r\n    <!-- <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button  class=\"save-button mat-accent\" (click)=\"viewAppointment(row)\">\r\n          <span>{{'Calender.VIEW' | translate}}</span>\r\n        </button>\r\n      </ng-template>\r\n    </ngx-datatable-column> -->\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button  class=\"save-button mat-accent\" (click)=\"useAppointment(row)\">\r\n          <span>{{'Calender.BOOK' | translate}}</span>\r\n        </button>\r\n\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n\r\n  </ngx-datatable>\r\n</div>\r\n<div class=\"col-md-3\" style=\"margin-top: 40px;\">\r\n  <mat-card>\r\n\r\n    <mat-calendar [selected]=\"selectedDate\"  [minDate]=\"today\" (selectedChange)=\"onSelect($event)\"></mat-calendar>\r\n  </mat-card>\r\n</div>\r\n"
+module.exports = "<div style=\"position: absolute;padding-top: 30px;padding-left: 10px\">\r\n  <h1>{{'Calender.Select_Appointment' | translate}}</h1>\r\n</div>\r\n<div class=\"col-md-8\" style=\"margin-top: 100px;\">\r\n\r\n  <mat-form-field style=\"width: 100%;\">\r\n    <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n      placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n      <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n      <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n        {{ oneTimeZone.viewValue }}\r\n      </mat-option>\r\n    </mat-select>\r\n    <mat-icon matSuffix>time</mat-icon>\r\n  </mat-form-field>\r\n\r\n\r\n  <div style=\"padding-left: 10px\" *ngIf=\"bodyevents.length==0\">\r\n    <h1 style=\"text-align: center;\r\n    padding-top: 15%;\">{{'Calender.Placeholder_No_Appointment' | translate}}</h1>\r\n  </div>\r\n\r\n  <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\"\r\n    [scrollbarH]=\"true\" [rowClass]=\"\" *ngIf=\"bodyevents.length!=0\">\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"date\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.DATE' | translate}}</span>\r\n      </ng-template>\r\n\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"bodyEnd\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.TIME' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n        {{row.bodyStart}} -- {{row.bodyEnd}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n      <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n        <span>{{'Calender.LOCATION' | translate}}</span>\r\n      </ng-template>\r\n      <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n        {{value}}\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n\r\n    <!-- <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button  class=\"save-button mat-accent\" (click)=\"viewAppointment(row)\">\r\n          <span>{{'Calender.VIEW' | translate}}</span>\r\n        </button>\r\n      </ng-template>\r\n    </ngx-datatable-column> -->\r\n    <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button class=\"save-button mat-accent\" (click)=\"useAppointment(row)\">\r\n          <span>{{'Calender.BOOK' | translate}}</span>\r\n        </button>\r\n\r\n      </ng-template>\r\n    </ngx-datatable-column>\r\n\r\n  </ngx-datatable>\r\n</div>\r\n<div class=\"col-md-4\" style=\"margin-top: 40px;height: 550px;\">\r\n  <!-- <mat-card> -->\r\n  <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth custom-calender\" fusePerfectScrollbar>\r\n\r\n    <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n      <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n        <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n          <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <!-- <mat-icon class=\"logo-icon\">today</mat-icon> -->\r\n\r\n            <!-- <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span> -->\r\n\r\n          </div>\r\n\r\n          <!-- <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"mat-icon-button\" mwlCalendarToday [(viewDate)]=\"viewDate\"\r\n                (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Today\" matTooltip=\"Today\">\r\n                <mat-icon>today</mat-icon>\r\n              </button>\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('day')\" aria-label=\"Day\" matTooltip=\"Day\">\r\n                <mat-icon>view_day</mat-icon>\r\n              </button>\r\n\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('month')\" aria-label=\"Month\"\r\n              matTooltip=\"Month\">\r\n              <mat-icon>view_module</mat-icon>\r\n            </button>\r\n          </div> -->\r\n        </div>\r\n        <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\"\r\n            (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Previous\">\r\n            <mat-icon>chevron_left</mat-icon>\r\n          </button>\r\n\r\n          <div class=\"title\" style=\"display: inline-block;\">\r\n            {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n          </div>\r\n\r\n          <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\"\r\n            (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Next\">\r\n            <mat-icon>chevron_right</mat-icon>\r\n          </button>\r\n        </div>\r\n      </div>\r\n\r\n\r\n    </div>\r\n\r\n    <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n      <div class=\"cal-cell-top\" [ngClass]=\"{'first': isSelectedDay(day.date),'disabled':isOldDate(day.date)}\">\r\n        <!-- <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }} </span> -->\r\n        <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n        <div *ngIf=\"isHasConsDay(day.date)\" class=\"hasCons\"></div>\r\n      </div>\r\n      <!-- @todo show real data -->\r\n    </ng-template>\r\n\r\n    <div class=\"content\" fusePerfectScrollbar>\r\n      <div [ngSwitch]=\"view\">\r\n        <div>\r\n          <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n            [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n            (eventTimesChanged)=\"eventTimesChanged($event)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n            (dayClicked)=\"dayClicked($event.day)\" [cellTemplate]=\"customCellTemplate\">\r\n          </mwl-calendar-month-view>\r\n        </div>\r\n\r\n        <!-- <div *ngIf=\"monthEvent == null\">\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (dayClicked)=\"dayClicked($event.day)\">\r\n            </mwl-calendar-month-view>\r\n          </div> -->\r\n\r\n        <!-- <div *ngIf=\"dayEvent.length > 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [tooltipPlacement]=\"'right'\" [viewDate]=\"viewDate\"\r\n              [events]=\"dayEvent\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked',\r\n              $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div>\r\n          <div *ngIf=\"dayEvent.length == 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"dayEvent\" [refresh]=\"refresh\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div> -->\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- <mat-calendar #calendar [selected]=\"selectedDate\"  (monthSelected)=\"monthSelected\" [minDate]=\"today\" (selectedChange)=\"onSelect($event)\"></mat-calendar> -->\r\n  <!-- </mat-card> -->\r\n</div>\r\n"
 
 /***/ }),
 
@@ -10882,24 +10882,26 @@ module.exports = "<div class=\"col-md-9\" style=\"margin-top: 20px;\">\r\n\r\n  
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClientCalendarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dialogs_view_appointment_view_appointment_component__ = __webpack_require__("./src/app/main/content/dialogs/view-appointment/view-appointment.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__calendar_json_service__ = __webpack_require__("./src/app/main/content/calendar/json.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__("./node_modules/moment/moment.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_moment_timezone__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__custom_date_formatter_provider__ = __webpack_require__("./src/app/main/content/client-calendar/client-calendar/custom-date-formatter.provider.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_dialog_service_service__ = __webpack_require__("./src/app/core/services/dialog-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dialogs_view_appointment_view_appointment_component__ = __webpack_require__("./src/app/main/content/dialogs/view-appointment/view-appointment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_config_service__ = __webpack_require__("./src/app/core/services/config.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_main_service__ = __webpack_require__("./src/app/core/services/main.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_calendar__ = __webpack_require__("./src/app/angular-calendar/esm5/angular-calendar.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__calendar_json_service__ = __webpack_require__("./src/app/main/content/calendar/json.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment__ = __webpack_require__("./node_modules/moment/moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_moment_timezone__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__languageFiles_en__ = __webpack_require__("./src/app/main/content/languageFiles/en.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__languageFiles_fa__ = __webpack_require__("./src/app/main/content/languageFiles/fa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core__ = __webpack_require__("./node_modules/@ngx-translate/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__core_services_translation_loader_service__ = __webpack_require__("./src/app/core/services/translation-loader.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10916,6 +10918,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
  // add this 1 of 4
 
 
@@ -10925,16 +10929,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ClientCalendarComponent = (function () {
-    function ClientCalendarComponent(jsonServ, dialog, mainServ, route, translate, fuseConfig, translationLoader, dialogSer) {
+    function ClientCalendarComponent(jsonServ, dialog, mainServ, renderer, route, translate, fuseConfig, translationLoader, dialogSer) {
         this.jsonServ = jsonServ;
         this.dialog = dialog;
         this.mainServ = mainServ;
+        this.renderer = renderer;
         this.route = route;
         this.translate = translate;
         this.fuseConfig = fuseConfig;
         this.translationLoader = translationLoader;
         this.dialogSer = dialogSer;
-        this.refresh = new __WEBPACK_IMPORTED_MODULE_9_rxjs__["Subject"]();
+        this.refresh = new __WEBPACK_IMPORTED_MODULE_11_rxjs__["Subject"]();
         this.rows = [];
         this.filterType = "month";
         this.consultants = [];
@@ -10944,6 +10949,7 @@ var ClientCalendarComponent = (function () {
         this.activeDayIsOpen = false;
         this.events = [];
         this.bodyevents = [];
+        this.monthEvent = [];
         this.openEvents = [];
         this.flag = true;
         this.allEvents = [];
@@ -10955,10 +10961,15 @@ var ClientCalendarComponent = (function () {
         this.timePlace = "Tehran";
         this.timezoneSelect = "Asia/Tehran";
         this.today = new Date();
+        this.myFilter = function (d) {
+            var day = d.getDay();
+            // Prevent Saturday and Sunday from being selected.
+            return day !== 0 && day !== 6;
+        };
         this.viewDate = new Date();
-        this.jun = __WEBPACK_IMPORTED_MODULE_7_moment__("2015-5-2 4:30"); // creating obj.
+        this.jun = __WEBPACK_IMPORTED_MODULE_9_moment__("2015-5-2 4:30"); // creating obj.
         this.selectedDate = new Date();
-        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_11__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_12__languageFiles_fa__["a" /* locale */]);
+        this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_13__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_14__languageFiles_fa__["a" /* locale */]);
         this.fuseSettings = this.fuseConfig.settings;
         this.fuseSettings.optionsBtn = 'none';
         this.fuseSettings.layout.navigation = 'none';
@@ -10966,6 +10977,33 @@ var ClientCalendarComponent = (function () {
         this.fuseSettings.layout.footer = 'none';
         this.fuseConfig.setSettings(this.fuseSettings);
     }
+    ClientCalendarComponent.prototype.getCloserCons = function (cb) {
+        var _this = this;
+        this.mainServ.APIServ.get("consTimes/getCloserCons", this.token).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                if (data.CloserCons.startDate)
+                    _this.selectedDate = new Date(data.CloserCons.startDate);
+                cb();
+            }
+        });
+    };
+    ClientCalendarComponent.prototype.getConsInMonth = function (event) {
+        var _this = this;
+        if (event === void 0) { event = null; }
+        var startDate = new Date();
+        if (event == null)
+            startDate = new Date();
+        else
+            startDate = new Date(event);
+        this.mainServ.APIServ.get("consTimes/getConsInMonth?startDate=" + startDate + "&timezone=" + this.timezone(), this.token).subscribe(function (data) {
+            if (_this.mainServ.APIServ.getErrorCode() == 0) {
+                _this.monthEvent = [];
+                data.getConsInMonth.forEach(function (element) {
+                    _this.monthEvent.push(new Date(element["_id"].year + "/" + element["_id"].month + "/" + element["_id"].day));
+                });
+            }
+        });
+    };
     ClientCalendarComponent.prototype.buildTitle = function (cons, client, location, start, end) {
         var startMin = (new Date(start).getMinutes() < 10 ? '0' : '') + new Date(start).getMinutes();
         var endMin = (new Date(end).getMinutes() < 10 ? '0' : '') + new Date(end).getMinutes();
@@ -10974,10 +11012,36 @@ var ClientCalendarComponent = (function () {
     ClientCalendarComponent.prototype.checkSelectable = function (event) {
         return event.meta.open == true;
     };
+    ClientCalendarComponent.prototype.monthSelected = function (date) {
+        alert("Selected: " + date);
+    };
+    ClientCalendarComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        // Find all arrow buttons in the calendar
+        var buttons = document.querySelectorAll('mat-calendar mat-calendar-header button');
+        if (buttons) {
+            // Listen for click event
+            Array.from(buttons).forEach(function (button) {
+                _this.renderer.listen(button, "click", function () {
+                    alert('Arrow button clicked');
+                });
+            });
+        }
+    };
+    ClientCalendarComponent.prototype.dateClass = function () {
+        return function (date) {
+            if (date.getDate() === 1) {
+                return 'special-date';
+            }
+            else {
+                return;
+            }
+        };
+    };
     ClientCalendarComponent.prototype.toTimeZone = function (time, zone) {
         console.log(time);
         var format = 'YYYY-MM-DDTHH:mm:ss.SSSZ';
-        return __WEBPACK_IMPORTED_MODULE_7_moment__(time).tz(zone);
+        return __WEBPACK_IMPORTED_MODULE_9_moment__(time).tz(zone);
     };
     ClientCalendarComponent.prototype.changeDayAnas = function () {
         var _this = this;
@@ -11012,10 +11076,10 @@ var ClientCalendarComponent = (function () {
                     x['date'] = x['start'].getFullYear() + "-" + (x['start'].getMonth() + 1) + "-" + x['start'].getDate();
                     var dateStartString = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate()
                         + " " + x['start'].getHours() + ":" + x['start'].getMinutes();
-                    x['bodyStart'] = __WEBPACK_IMPORTED_MODULE_7_moment__(dateStartString).tz(_this.timezoneSelect).format('hh : mm');
+                    x['bodyStart'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateStartString).tz(_this.timezoneSelect).format('hh : mm');
                     var dateEndString = x['end'].getFullYear() + "-" + x['end'].getMonth() + "-" + x['end'].getDate()
                         + " " + x['end'].getHours() + ":" + x['end'].getMinutes();
-                    x['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_7_moment__(dateEndString).tz(_this.timezoneSelect).format('hh : mm');
+                    x['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateEndString).tz(_this.timezoneSelect).format('hh : mm');
                     _this.setTimeZone();
                     _this.bodyevents.push(x);
                 });
@@ -11027,28 +11091,55 @@ var ClientCalendarComponent = (function () {
                 _this.mainServ.globalServ.somthingError();
             }
         });
-        this.mainServ.loaderSer.display(false);
+        // this.mainServ.loaderSer.display(false);
     };
-    ClientCalendarComponent.prototype.onSelect = function (event) {
+    ClientCalendarComponent.prototype.dayClicked = function (event) {
+        if (this.isOldDate(event.date))
+            return;
         console.log(event);
-        this.selectedDate = event;
+        this.selectedDate = event.date;
         this.changeDayAnas();
+    };
+    ClientCalendarComponent.prototype.isSelectedDay = function (date) {
+        console.log(date);
+        if (date.toDateString() == this.selectedDate.toDateString())
+            return true;
+        return false;
+    };
+    ClientCalendarComponent.prototype.isHasConsDay = function (date) {
+        console.log(this.monthEvent);
+        for (var index = 0; index < this.monthEvent.length; index++) {
+            var element = this.monthEvent[index];
+            if (date.toDateString() == element.toDateString())
+                return true;
+            if (index + 1 == this.monthEvent.length)
+                return false;
+        }
+    };
+    ClientCalendarComponent.prototype.isOldDate = function (date) {
+        if (new Date().getTime() > new Date(date).getTime())
+            return true;
+        return false;
     };
     ClientCalendarComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._datePicker.selectedChange.subscribe(function (x) {
-            console.log(x);
-        });
+        // this._datePicker.selectedChange.subscribe(x => {
+        //   console.log(x);
+        // });
         this.jun.tz('Asia/Tehran').format('yyyy - MM - dd hh : mm : ss a z');
         console.log(this.jun);
-        console.log(__WEBPACK_IMPORTED_MODULE_7_moment__["tz"].names()); // for all time zone.
+        console.log(__WEBPACK_IMPORTED_MODULE_9_moment__["tz"].names()); // for all time zone.
         var id = this.route.snapshot.paramMap.get('id');
         this.token = this.route.snapshot.paramMap.get('token');
         this.mainServ.APIServ.get("forms/getClientForm/" + id, this.token).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 _this.form = data['getClientForm'];
                 _this.consId = _this.form['consId'];
-                _this.changeDayAnas();
+                var mainThis = _this;
+                _this.getCloserCons(function () {
+                    mainThis.changeDayAnas();
+                });
+                _this.getConsInMonth();
             }
             else if (_this.mainServ.APIServ.getErrorCode() == 400) {
             }
@@ -11062,7 +11153,7 @@ var ClientCalendarComponent = (function () {
     };
     ClientCalendarComponent.prototype.viewAppointment = function (appointment) {
         var _this = this;
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_1__dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */], {
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_2__dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */], {
             width: '500px',
             data: { 'appointment': appointment }
         });
@@ -11073,7 +11164,7 @@ var ClientCalendarComponent = (function () {
         });
     };
     ClientCalendarComponent.prototype.timezone = function () {
-        var timezone = __WEBPACK_IMPORTED_MODULE_7_moment__().tz(this.timezoneSelect).utcOffset();
+        var timezone = __WEBPACK_IMPORTED_MODULE_9_moment__().tz(this.timezoneSelect).utcOffset();
         return timezone / 60;
     };
     ClientCalendarComponent.prototype.useAppointment = function (appointment) {
@@ -11088,10 +11179,10 @@ var ClientCalendarComponent = (function () {
             var element = this.bodyevents[index];
             var dateStartString = element['start'].getFullYear() + "-" + element['start'].getMonth() + "-" + element['start'].getDate()
                 + " " + element['start'].getHours() + ":" + element['start'].getMinutes();
-            this.bodyevents[index]['bodyStart'] = __WEBPACK_IMPORTED_MODULE_7_moment__(dateStartString).tz(this.timezoneSelect).format('HH : mm');
+            this.bodyevents[index]['bodyStart'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateStartString).tz(this.timezoneSelect).format('HH : mm');
             var dateEndString = element['end'].getFullYear() + "-" + element['end'].getMonth() + "-" + element['end'].getDate()
                 + " " + element['end'].getHours() + ":" + element['end'].getMinutes();
-            element['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_7_moment__(dateEndString).tz(this.timezoneSelect).format('HH : mm');
+            element['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateEndString).tz(this.timezoneSelect).format('HH : mm');
         }
         ;
     };
@@ -11104,29 +11195,84 @@ var ClientCalendarComponent = (function () {
         this.changeDayAnas();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_10__angular_material__["f" /* MatCalendar */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_10__angular_material__["f" /* MatCalendar */])
-    ], ClientCalendarComponent.prototype, "_datePicker", void 0);
+        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["ViewChild"])('calendar'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_12__angular_material__["f" /* MatCalendar */])
+    ], ClientCalendarComponent.prototype, "calendar", void 0);
     ClientCalendarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["Component"])({
             selector: 'client-calendar',
             template: __webpack_require__("./src/app/main/content/client-calendar/client-calendar/client-calendar.component.html"),
             styles: [__webpack_require__("./src/app/main/content/client-calendar/client-calendar/client-calendar.component.css")],
+            providers: [
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_7__angular_calendar__["a" /* CalendarDateFormatter */],
+                    useClass: __WEBPACK_IMPORTED_MODULE_0__custom_date_formatter_provider__["a" /* CustomDateFormatter */]
+                }
+            ],
             styles: [
                 "\n    .cell-totals {\n      margin: 5px;\n      text-align: center;\n    }\n    .badge {\n      margin-right: 5px;\n    }\n    /deep/ .datatable-body-row.active .datatable-row-group {\n      color:white !important;\n\n  "
             ]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__calendar_json_service__["a" /* JsonService */],
-            __WEBPACK_IMPORTED_MODULE_10__angular_material__["k" /* MatDialog */],
-            __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__["a" /* MainService */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_13__ngx_translate_core__["b" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_2__core_services_config_service__["a" /* FuseConfigService */],
-            __WEBPACK_IMPORTED_MODULE_14__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
-            __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__calendar_json_service__["a" /* JsonService */],
+            __WEBPACK_IMPORTED_MODULE_12__angular_material__["k" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_5__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_core__["Renderer2"],
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core__["b" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_3__core_services_config_service__["a" /* FuseConfigService */],
+            __WEBPACK_IMPORTED_MODULE_16__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
+            __WEBPACK_IMPORTED_MODULE_1__core_services_dialog_service_service__["a" /* DialogServiceService */]])
     ], ClientCalendarComponent);
     return ClientCalendarComponent;
 }());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main/content/client-calendar/client-calendar/custom-date-formatter.provider.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomDateFormatter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular_calendar__ = __webpack_require__("./node_modules/angular-calendar/esm5/angular-calendar.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var CustomDateFormatter = (function (_super) {
+    __extends(CustomDateFormatter, _super);
+    function CustomDateFormatter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    // you can override any of the methods defined in the parent class
+    CustomDateFormatter.prototype.monthViewColumnHeader = function (_a) {
+        var date = _a.date, locale = _a.locale;
+        return new __WEBPACK_IMPORTED_MODULE_1__angular_common__["DatePipe"](locale).transform(date, 'EEE', locale);
+    };
+    CustomDateFormatter.prototype.monthViewTitle = function (_a) {
+        var date = _a.date, locale = _a.locale;
+        return new __WEBPACK_IMPORTED_MODULE_1__angular_common__["DatePipe"](locale).transform(date, 'MMM y', locale);
+    };
+    CustomDateFormatter.prototype.weekViewColumnHeader = function (_a) {
+        var date = _a.date, locale = _a.locale;
+        return new __WEBPACK_IMPORTED_MODULE_1__angular_common__["DatePipe"](locale).transform(date, 'EEE', locale);
+    };
+    CustomDateFormatter.prototype.dayViewHour = function (_a) {
+        var date = _a.date, locale = _a.locale;
+        return new __WEBPACK_IMPORTED_MODULE_1__angular_common__["DatePipe"](locale).transform(date, 'HH:mm', locale);
+    };
+    return CustomDateFormatter;
+}(__WEBPACK_IMPORTED_MODULE_0_angular_calendar__["a" /* CalendarDateFormatter */]));
 
 
 
@@ -15597,6 +15743,8 @@ var locale = {
             'VIEW': 'View',
             'BOOK': 'book',
             'TIME': 'Time',
+            "Select_Appointment": "Select an appointment with your consultant",
+            "Placeholder_No_Appointment": "No free appointment in this day",
             'DATE': 'Date',
             'LOCATION': 'Location',
             'AVAILABLE': 'Available',
@@ -15955,6 +16103,8 @@ var locale = {
             'VIEW': 'نمایش',
             'BOOK': 'انتخاب',
             'TIME': 'زمان',
+            "Select_Appointment": "لطفا وقت مورد نظر با مشاور مربوطه را انتخاب نمایید.",
+            "Placeholder_No_Appointment": "وقت خالی در این روز موجود نیست",
             'DATE': 'تاریخ',
             'LOCATION': 'انتخاب محل',
             'AVAILABLE': 'موجود',
@@ -17276,7 +17426,7 @@ var FuseMainModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_15__core_components_navigation_navigation_module__["a" /* FuseNavigationModule */],
                 __WEBPACK_IMPORTED_MODULE_20__core_components_shortcuts_shortcuts_module__["a" /* FuseShortcutsModule */],
                 __WEBPACK_IMPORTED_MODULE_21__core_components_search_bar_search_bar_module__["a" /* FuseSearchBarModule */],
-                __WEBPACK_IMPORTED_MODULE_22__angular_calendar__["a" /* CalendarModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_22__angular_calendar__["b" /* CalendarModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_23__content_calendar_calendar_module__["a" /* MyCalendarModule */],
                 __WEBPACK_IMPORTED_MODULE_25__content_sample_sample_module__["a" /* FuseSampleModule */],
                 __WEBPACK_IMPORTED_MODULE_24__content_advice_form_advice_form_module__["a" /* AdviceFormModule */],

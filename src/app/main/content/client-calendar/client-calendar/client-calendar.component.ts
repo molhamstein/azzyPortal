@@ -1,10 +1,13 @@
+import { CustomDateFormatter } from './custom-date-formatter.provider';
+import { DatePipe } from '@angular/common';
+import { DateFormatterParams } from './../../../../angular-calendar/modules/common/calendar-date-formatter.interface.d';
 import { DialogServiceService } from './../../../../core/services/dialog-service.service';
 import { ViewAppointmentComponent } from './../../dialogs/view-appointment/view-appointment.component';
 import { FuseConfigService } from './../../../../core/services/config.service';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from './../../../../core/services/main.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { CalendarMonthViewDay } from '../../../../angular-calendar';
+import { Component, OnInit, ViewChild, Renderer2, AfterViewInit } from '@angular/core';
+import { CalendarMonthViewDay, CalendarDateFormatter } from '../../../../angular-calendar';
 import { CalendarEvent } from '../../../../angular-calendar';
 import { colors } from '../../calendar/colors';
 import { JsonService } from '../../calendar/json.service';
@@ -39,6 +42,12 @@ import { FuseTranslationLoaderService } from '../../../../core/services/translat
   selector: 'client-calendar',
   templateUrl: './client-calendar.component.html',
   styleUrls: ['./client-calendar.component.css'],
+  providers: [
+    {
+      provide: CalendarDateFormatter,
+      useClass: CustomDateFormatter
+    }
+  ],
   styles: [
     `
     .cell-totals {
@@ -54,7 +63,7 @@ import { FuseTranslationLoaderService } from '../../../../core/services/translat
   `
   ]
 })
-export class ClientCalendarComponent implements OnInit {
+export class ClientCalendarComponent implements AfterViewInit, OnInit {
   refresh: Subject<any> = new Subject();
   rows = [];
   selected: any;
@@ -63,11 +72,13 @@ export class ClientCalendarComponent implements OnInit {
   fuseSettings
   filterType = "month";
   token;
-  @ViewChild(MatCalendar) _datePicker: MatCalendar<Date>
+  // @ViewChild(MatCalendar) _datePicker: MatCalendar<Date>
+  @ViewChild('calendar') calendar: MatCalendar<Date>;
 
   constructor(private jsonServ: JsonService,
     public dialog: MatDialog,
     private mainServ: MainService,
+    private renderer: Renderer2,
     private route: ActivatedRoute,
     private translate: TranslateService,
     private fuseConfig: FuseConfigService,
@@ -91,12 +102,35 @@ export class ClientCalendarComponent implements OnInit {
   activeDayIsOpen: boolean = false;
   events: CalendarEvent[] = [];
   bodyevents = [];
-
+  monthEvent = []
   openEvents: CalendarEvent[] = [];
   flag: boolean = true;
 
+  getCloserCons(cb) {
+    this.mainServ.APIServ.get("consTimes/getCloserCons", this.token).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        if (data.CloserCons.startDate)
+          this.selectedDate = new Date(data.CloserCons.startDate);
+        cb()
+      }
+    })
+  }
 
-
+  getConsInMonth(event = null) {
+    var startDate = new Date()
+    if (event == null)
+      startDate = new Date()
+    else
+      startDate = new Date(event)
+    this.mainServ.APIServ.get("consTimes/getConsInMonth?startDate=" + startDate + "&timezone=" + this.timezone(), this.token).subscribe((data: any) => {
+      if (this.mainServ.APIServ.getErrorCode() == 0) {
+        this.monthEvent = []
+        data.getConsInMonth.forEach(element => {
+          this.monthEvent.push(new Date(element["_id"].year + "/" + element["_id"].month + "/" + element["_id"].day))
+        });
+      }
+    })
+  }
 
 
   buildTitle(cons, client, location, start, end) {
@@ -128,6 +162,40 @@ export class ClientCalendarComponent implements OnInit {
 
   today = new Date();
 
+
+  monthSelected(date) {
+    alert(`Selected: ${date}`);
+  }
+
+  ngAfterViewInit() {
+    // Find all arrow buttons in the calendar
+    let buttons = document.querySelectorAll('mat-calendar mat-calendar-header button');
+
+    if (buttons) {
+      // Listen for click event
+      Array.from(buttons).forEach(button => {
+        this.renderer.listen(button, "click", () => {
+          alert('Arrow button clicked');
+        });
+      })
+    }
+  }
+
+  dateClass() {
+    return (date: Date): String => {
+      if (date.getDate() === 1) {
+        return 'special-date';
+      } else {
+        return;
+      }
+    };
+  }
+
+  myFilter = (d: Date): boolean => {
+    const day = d.getDay();
+    // Prevent Saturday and Sunday from being selected.
+    return day !== 0 && day !== 6;
+  }
 
   toTimeZone(time, zone) {
     console.log(time);
@@ -202,7 +270,7 @@ export class ClientCalendarComponent implements OnInit {
 
     });
 
-    this.mainServ.loaderSer.display(false);
+    // this.mainServ.loaderSer.display(false);
   }
 
   viewDate: Date = new Date();
@@ -211,16 +279,40 @@ export class ClientCalendarComponent implements OnInit {
   jun = moment("2015-5-2 4:30");// creating obj.
   selectedDate = new Date();
 
-  onSelect(event) {
+  dayClicked(event) {
+    if (this.isOldDate(event.date))
+      return;
     console.log(event);
-    this.selectedDate = event;
+    this.selectedDate = event.date;
     this.changeDayAnas();
   }
+  isSelectedDay(date) {
+    console.log(date)
+    if (date.toDateString() == this.selectedDate.toDateString())
+      return true;
+    return false
+  }
 
+  isHasConsDay(date) {
+    console.log(this.monthEvent)
+    for (let index = 0; index < this.monthEvent.length; index++) {
+      const element = this.monthEvent[index];
+      if (date.toDateString() == element.toDateString())
+        return true;
+      if (index + 1 == this.monthEvent.length)
+        return false;
+    }
+  }
+
+  isOldDate(date) {
+    if (new Date().getTime() > new Date(date).getTime())
+      return true
+    return false
+  }
   ngOnInit() {
-    this._datePicker.selectedChange.subscribe(x => {
-      console.log(x);
-    });
+    // this._datePicker.selectedChange.subscribe(x => {
+    //   console.log(x);
+    // });
     this.jun.tz('Asia/Tehran').format('yyyy - MM - dd hh : mm : ss a z');
     console.log(this.jun);
     console.log(moment.tz.names()); // for all time zone.
@@ -231,7 +323,11 @@ export class ClientCalendarComponent implements OnInit {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.form = data['getClientForm'];
         this.consId = this.form['consId'];
-        this.changeDayAnas()
+        var mainThis = this
+        this.getCloserCons(function () {
+          mainThis.changeDayAnas();
+        })
+        this.getConsInMonth();
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
 
@@ -269,7 +365,7 @@ export class ClientCalendarComponent implements OnInit {
     // this.dialogSer.confirmationMessage('Do you want to book the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
     this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
       mainThis.mainServ.globalServ.reload();
-    }, "put",this.token, 'bookAppointment', { "date": appointment['date'], "timeStart": appointment['bodyStart'], "timeEnd": appointment['bodyEnd'], "timePlace": this.timePlace, "location": appointment['meta']['location'] })
+    }, "put", this.token, 'bookAppointment', { "date": appointment['date'], "timeStart": appointment['bodyStart'], "timeEnd": appointment['bodyEnd'], "timePlace": this.timePlace, "location": appointment['meta']['location'] })
   }
 
   setTimeZone() {

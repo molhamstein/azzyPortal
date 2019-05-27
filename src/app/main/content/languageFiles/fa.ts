@@ -225,6 +225,8 @@ export const locale = {
             'VIEW': 'نمایش',
             'BOOK': 'انتخاب',
             'TIME': 'زمان',
+            "Select_Appointment": "لطفا وقت مورد نظر با مشاور مربوطه را انتخاب نمایید.",
+            "Placeholder_No_Appointment": "وقت خالی در این روز موجود نیست",
             'DATE': 'تاریخ',
             'LOCATION': 'انتخاب محل',
             'AVAILABLE': 'موجود',
@@ -240,7 +242,7 @@ export const locale = {
         'Dialog': {
             "Confirm": {
                 "Do_you_want_to_book_the_appointment": "آیا مایل هستید این وقت را انتخاب نمایید؟ :",
-                "Do_you_want_to_delete_your_appointment": "آیا مایل هستید وقت را حذف نمایید؟",               
+                "Do_you_want_to_delete_your_appointment": "آیا مایل هستید وقت را حذف نمایید؟",
                 "Yes": "بله",
                 "No": "نه",
                 'From': 'از',
