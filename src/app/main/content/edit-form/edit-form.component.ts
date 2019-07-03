@@ -41,6 +41,7 @@ export class EditFormComponent implements OnInit {
 
   hasPartner = false;
 
+  currency=""
   scrollToUp() {
 
     $('*').animate({ scrollTop: 0 }, 'slow'); // Scroll individual element 100 pixels down
@@ -415,6 +416,8 @@ export class EditFormComponent implements OnInit {
     }
   ]
 
+  currencies = ["IRR", "AUD"]
+
   extNotesFields = [
     // {
     //   viewValue: 'Add_Edit_Form.STEP_7.MAINAPPLICATION',
@@ -572,6 +575,7 @@ export class EditFormComponent implements OnInit {
 
 
   setFormGroupe(data) {
+    this.currency=data['currency']
     this.formGroup = this._formBuilder.group({
       formArray: this._formBuilder.array([
         this._formBuilder.group({
@@ -699,6 +703,7 @@ export class EditFormComponent implements OnInit {
           textBoxNotes: [data['textBoxNotes']],
           howKnow: [data['howKnow']],
           mainApplicant: [data['mainApplicant']],
+          currency: [data['currency']],
           // mainApplicantSp: [data['mainApplicantSp']],
           // dependant: [data['dependant']],
           // dependantSp: [data['dependantSp']],

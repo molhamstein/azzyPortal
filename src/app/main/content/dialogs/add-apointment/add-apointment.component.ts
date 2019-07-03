@@ -32,6 +32,8 @@ export class AddApointmentComponent {
     ) {
         this.translationLoader.loadTranslations(english, persian);
         this.appointment = data['appointment'];
+        console.log("this.appointment")
+        console.log(this.appointment)
     }
     myControl = new FormControl();
     options: string[] = ['One', 'Two', 'Three'];
@@ -78,5 +80,17 @@ export class AddApointmentComponent {
 
             }
         })
+    }
+
+    delete() {
+        this.mainServ.APIServ.delete("consTimes/" + this.appointment.meta.id).subscribe((data: any) => {
+            if (this.mainServ.APIServ.getErrorCode() == 0) {
+
+
+                this.dialogRef.close();
+
+            }
+        })
+
     }
 }

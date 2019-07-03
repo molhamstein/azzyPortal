@@ -688,7 +688,7 @@
               <!--<div fxFlex="30"></div>-->
             </div>
 
-            <div class="pt-24 pb-24">
+            <div class="pt-24 pb-24" [ngClass]="{'hideMe': hasPartner!=true}">
               <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>
               <mat-radio-group formControlName="australiaVisaTypeSp">
                 <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">

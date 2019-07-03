@@ -95,7 +95,7 @@ export const locale = {
                 'BIRTH_DATE': 'Date of Birth',
                 'SKYPE_ID': 'Skype ID',
                 "WITHPARTNER": "With Partner",
-                "WITHOUTPARTNER": "WithOut Partner",
+                "WITHOUTPARTNER": "Without Partner",
                 'MARRIED': 'Married',
                 'SEPARETED': 'Separated',
                 'DEVORCED': 'Divorced',
@@ -187,6 +187,7 @@ export const locale = {
                 'MAINAPPLICATION': 'Main Applicant',
                 'APPLICANT': 'Applicant',
                 'SPOUSE': 'Spouse',
+                "CURRENCY":"Currency",
                 'TOTALPOINTS': 'Total Points',
                 'DEPENDANT': 'Dependant',
                 'OCCUPATIONTOBEASSESSED': 'Occupation to be assessed',
@@ -282,6 +283,7 @@ export const locale = {
             'Add_Appointment': {
                 "TITLE": "Add Appointment",
                 "CANSEL": "Cancel",
+                "DELETE":"Delete",
                 "ADD": "Add"
             },
             'Cansel_Appointment': {

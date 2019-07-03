@@ -366,6 +366,11 @@ export class ShowFormComponent implements OnInit {
       viewValue: 'Add_Edit_Form.STEP_7.HOWKNOWUS',
       value: ['howKnow'],
       icon: 'note'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.CURRENCY',
+      value: ['currency'],
+      icon: 'euro_symbol'
     }
 
   ]

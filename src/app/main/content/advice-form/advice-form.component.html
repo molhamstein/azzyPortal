@@ -600,7 +600,7 @@
             <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
               fxFlex>
 
-              <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
+              <div *ngFor="let oneField of militaryFields" [ngClass]="{'hideMe': hasPartner!=true}" fxFlex="{{oneField.width}}">
                 <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
                   <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
                   <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
@@ -737,7 +737,7 @@
               <!--<div fxFlex="30"></div>-->
             </div>
 
-            <div class="pt-24 pb-24">
+            <div class="pt-24 pb-24" [ngClass]="{'hideMe': hasPartner!=true}">
               <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>
               <mat-radio-group formControlName="australiaVisaTypeSp">
                 <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">

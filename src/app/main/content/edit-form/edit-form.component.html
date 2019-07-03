@@ -30,8 +30,9 @@
         <div fxLayout="column" *ngIf="loder==true">
 
 
-          <form style="padding: 0px !important;" (keydown.enter)="$event.preventDefault()" class="mat-white-bg mat-elevation-z0 p-24"
-            fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" name="formGroup" [formGroup]="formGroup">
+          <form style="padding: 0px !important;" (keydown.enter)="$event.preventDefault()"
+            class="mat-white-bg mat-elevation-z0 p-24" fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto"
+            name="formGroup" [formGroup]="formGroup">
 
 
             <mat-horizontal-stepper formArrayName="formArray" [linear]="true">
@@ -48,8 +49,8 @@
                 </mat-panel-title>
 
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
 
                   <mat-form-field fxFlex="24">
 
@@ -89,11 +90,12 @@
                   <mat-form-field fxFlex="24">
                     <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
                           placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required> -->
-                    <input autocomplete="off" matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}"
-                      formControlName="email" required>
+                    <input autocomplete="off" matInput type="email"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required>
                     <mat-icon matSuffix>email</mat-icon>
 
-                    <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
+                    <mat-error
+                      *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
                       {{ 'Global.ERRORVALIDEMAIL' | translate }}
 
                     </mat-error>
@@ -104,15 +106,15 @@
 
                   <mat-form-field fxFlex="24">
                     <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                    <input autocomplete="off" matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}"
-                      formControlName="mobileNo" required>
+                    <input autocomplete="off" matInput type="tel"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNo" required>
                     <mat-icon matSuffix>smartphone</mat-icon>
                   </mat-form-field>
 
                   <mat-form-field fxFlex="24">
                     <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                    <input autocomplete="off" matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}"
-                      formControlName="lLandlinePhoneNo">
+                    <input autocomplete="off" matInput type="tel"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNo">
                     <mat-icon matSuffix>phone</mat-icon>
                   </mat-form-field>
 
@@ -125,7 +127,8 @@
 
                   <mat-form-field fxFlex="24">
                     <!-- <mat-icon matPrefix>today</mat-icon> -->
-                    <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker"
+                    <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()"
+                      [matDatepicker]="birthDatePicker"
                       placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}" formControlName="dateOfBirthPer"
                       required>
                     <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
@@ -134,8 +137,9 @@
                   </mat-form-field>
 
                   <mat-form-field fxFlex="24">
-                    <mat-select (selectionChange)="changeMaritalStatus($event)" placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}" formControlName="maritalStatus"
-                      required>
+                    <mat-select (selectionChange)="changeMaritalStatus($event)"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.MARITAL_STATUS' | translate }}"
+                      formControlName="maritalStatus" required>
                       <mat-option *ngFor="let status of maritalStatusList" [value]="status.value">
                         {{ status.viewValue | translate }}
                       </mat-option>
@@ -146,7 +150,8 @@
                   </mat-form-field>
 
                   <mat-form-field fxFlex="24">
-                    <input autocomplete="off" matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
+                    <input autocomplete="off" matInput type="number" min="0" max="30" pattern="[0-9]"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
                       formControlName="numberOfChildren">
                     <mat-icon matSuffix>child_care</mat-icon>
                   </mat-form-field>
@@ -156,11 +161,13 @@
 
 
                   <mat-form-field fxFlex="49">
-                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsi"></textarea>
+                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}"
+                      formControlName="residentialAddressFarsi"></textarea>
                     <mat-icon matSuffix>map</mat-icon>
                   </mat-form-field>
                   <mat-form-field fxFlex="49">
-                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglish"></textarea>
+                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}"
+                      formControlName="residentialAddressEnglish"></textarea>
                     <mat-icon matSuffix>map</mat-icon>
                   </mat-form-field>
                 </div>
@@ -175,8 +182,9 @@
                 </mat-panel-title>
 
 
-                <div [ngClass]="{'hideMe': hasPartner!=true}" [ngClass]="{'hideMe': hasPartner!=true}" style="padding-top:10px;"
-                  fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
+                <div [ngClass]="{'hideMe': hasPartner!=true}" [ngClass]="{'hideMe': hasPartner!=true}"
+                  style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex="1 0 auto">
 
                   <mat-form-field fxFlex="24">
 
@@ -216,11 +224,12 @@
                   <mat-form-field fxFlex="24">
                     <!-- <input matInput type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
                           placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="email" required> -->
-                    <input autocomplete="off" matInput type="email" placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}"
-                      formControlName="emailSp">
+                    <input autocomplete="off" matInput type="email"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.EMAIL' | translate }}" formControlName="emailSp">
                     <mat-icon matSuffix>email</mat-icon>
 
-                    <mat-error *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
+                    <mat-error
+                      *ngIf="formArray?.get([0,'email']).hasError('email') && !formArray?.get([0,'email']).hasError('required')">
                       {{ 'Global.ERRORVALIDEMAIL' | translate }}
                     </mat-error>
                     <mat-error *ngIf="formArray?.get([0,'email']).hasError('required')">
@@ -230,15 +239,15 @@
 
                   <mat-form-field fxFlex="24">
                     <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                    <input autocomplete="off" matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}"
-                      formControlName="mobileNoSp">
+                    <input autocomplete="off" matInput type="tel"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.MOBILE' | translate }}" formControlName="mobileNoSp">
                     <mat-icon matSuffix>smartphone</mat-icon>
                   </mat-form-field>
 
                   <mat-form-field fxFlex="24">
                     <!-- pattern="^(0|\+[1-9]{1,5})9[0-9]{9}$" -->
-                    <input autocomplete="off" matInput type="tel" placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}"
-                      formControlName="lLandlinePhoneNoSp">
+                    <input autocomplete="off" matInput type="tel"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.PHONE' | translate }}" formControlName="lLandlinePhoneNoSp">
                     <mat-icon matSuffix>phone</mat-icon>
                   </mat-form-field>
 
@@ -251,16 +260,18 @@
 
                   <mat-form-field fxFlex="24">
                     <input matInput [min]="minDateSp" [max]="maxDateSp" (focus)="birthDatePickerSp.open()"
-                      [matDatepicker]="birthDatePickerSp" placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
+                      [matDatepicker]="birthDatePickerSp"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}"
                       formControlName="dateOfBirthPerSp">
                     <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
                     <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
                     <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
                   </mat-form-field>
 
-                
+
                   <mat-form-field fxFlex="24">
-                    <input autocomplete="off" matInput type="number" min="0" max="30" pattern="[0-9]" placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
+                    <input autocomplete="off" matInput type="number" min="0" max="30" pattern="[0-9]"
+                      placeholder="{{ 'Add_Edit_Form.STEP_0.CHILDREN_NUM' | translate }}"
                       formControlName="numberOfChildrenSp">
                     <mat-icon matSuffix>child_care</mat-icon>
                   </mat-form-field>
@@ -270,11 +281,13 @@
 
 
                   <mat-form-field fxFlex="49">
-                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}" formControlName="residentialAddressFarsiSp"></textarea>
+                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FADDRESS' | translate }}"
+                      formControlName="residentialAddressFarsiSp"></textarea>
                     <mat-icon matSuffix>map</mat-icon>
                   </mat-form-field>
                   <mat-form-field fxFlex="49">
-                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}" formControlName="residentialAddressEnglishSp"></textarea>
+                    <textarea matInput placeholder="{{ 'Add_Edit_Form.STEP_0.EADDRESS' | translate }}"
+                      formControlName="residentialAddressEnglishSp"></textarea>
                     <mat-icon matSuffix>map</mat-icon>
                   </mat-form-field>
                 </div>
@@ -285,7 +298,7 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -317,11 +330,12 @@
                     </mat-radio-group>
                   </div>
                   <mat-divider></mat-divider>
-                  <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
+                  <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center"
+                    fxFlex="1 0 auto">
                     <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>
                     <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-                      <input autocomplete="off" matInput type="number" min="0" max="999" step="0.1" placeholder="{{ score.viewValue| translate  }}"
-                        formControlName="{{ score.value[0] }}">
+                      <input autocomplete="off" matInput type="number" min="0" max="999" step="0.1"
+                        placeholder="{{ score.viewValue| translate  }}" formControlName="{{ score.value[0] }}">
                       <mat-icon matPrefix>{{ score.icon }}</mat-icon>
                     </mat-form-field>
 
@@ -348,11 +362,12 @@
                     </mat-radio-group>
                   </div>
                   <mat-divider></mat-divider>
-                  <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center" fxFlex="1 0 auto">
+                  <div fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-between center"
+                    fxFlex="1 0 auto">
                     <label>{{ 'Add_Edit_Form.STEP_1.ENGLISH_LEVEL' | translate }}</label>
                     <mat-form-field fxFlex="12" floatPlaceholder="never" *ngFor="let score of englishScores">
-                      <input autocomplete="off" matInput type="number" min="0" max="999" step="0.1" placeholder="{{ score.viewValue| translate  }}"
-                        formControlName="{{ score.value[1] }}">
+                      <input autocomplete="off" matInput type="number" min="0" max="999" step="0.1"
+                        placeholder="{{ score.viewValue| translate  }}" formControlName="{{ score.value[1] }}">
                       <mat-icon matPrefix>{{ score.icon }}</mat-icon>
                     </mat-form-field>
 
@@ -361,8 +376,9 @@
                 </div>
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton"
+                    type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -384,10 +400,11 @@
                   </mat-panel-description>
                 </mat-panel-title>
 
-                <div *ngFor="let level of eduLevels" style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
-                  fxLayoutAlign.gt-md="space-around center" fxFlex>
+                <div *ngFor="let level of eduLevels" style="padding-top:10px;" fxLayout="column"
+                  fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
-                  <span fxFlex="15" style="font-size: 16px;margin: 0;" class="mat-title">{{level.label| translate}}</span>
+                  <span fxFlex="15" style="font-size: 16px;margin: 0;"
+                    class="mat-title">{{level.label| translate}}</span>
                   <div fxFlex="15" *ngFor="let oneField of level.fields">
                     <mat-form-field *ngIf="oneField.isInput==true">
                       <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}"
@@ -399,7 +416,8 @@
 
 
                     <mat-form-field *ngIf="oneField.isInput==false">
-                      <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
+                      <mat-select placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{oneField.value[0]}}">
                         <mat-option *ngFor="let year of years" [value]="year">
                           {{year}}
                         </mat-option>
@@ -424,7 +442,8 @@
                 <div [ngClass]="{'hideMe': hasPartner!=true}" *ngFor="let level of eduLevels" style="padding-top:10px;"
                   fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
-                  <span fxFlex="15" style="font-size: 16px;margin: 0;"  class="mat-title">{{level.label| translate}}</span>
+                  <span fxFlex="15" style="font-size: 16px;margin: 0;"
+                    class="mat-title">{{level.label| translate}}</span>
                   <div fxFlex="15" *ngFor="let oneField of level.fields">
                     <mat-form-field *ngIf="oneField.isInput==true">
                       <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}"
@@ -434,7 +453,8 @@
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.isInput==false">
-                      <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
+                      <mat-select placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{oneField.value[1]}}">
                         <mat-option *ngFor="let year of years" [value]="year">
                           {{year}}
                         </mat-option>
@@ -448,8 +468,9 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton"
+                    type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -471,19 +492,20 @@
 
 
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div fxFlex="{{oneField.fxFlex}}" *ngFor="let oneField of workExperience">
                     <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==true">
-                      <input autocomplete="off" matInput type="number" placeholder="{{ oneField.viewValue | translate }}"
-                        formControlName="{{oneField.value[0]}}">
+                      <input autocomplete="off" matInput type="number"
+                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
                       <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                     </mat-form-field>
 
 
                     <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==false">
-                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}"></textarea>
+                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{oneField.value[0]}}"></textarea>
                       <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                     </mat-form-field>
@@ -503,15 +525,16 @@
                   fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div fxFlex="{{oneField.fxFlex}}" *ngFor="let oneField of workExperience">
                     <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==true">
-                      <input autocomplete="off" matInput type="number" placeholder="{{ oneField.viewValue | translate }}"
-                        formControlName="{{oneField.value[1]}}">
+                      <input autocomplete="off" matInput type="number"
+                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}">
                       <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                     </mat-form-field>
 
 
                     <mat-form-field style="width: 100%" *ngIf="oneField.isNumber==false">
-                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[1]}}"></textarea>
+                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{oneField.value[1]}}"></textarea>
                       <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                     </mat-form-field>
@@ -521,8 +544,9 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton"
+                    type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -553,8 +577,8 @@
                     </mat-radio-button>
                   </mat-radio-group>
                 </div>
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
                     <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
                       <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}"
@@ -563,15 +587,17 @@
 
                     </mat-form-field>
                     <mat-form-field style="width: 100%" *ngIf="oneField.type=='textarea'">
-                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}"></textarea>
+                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[0] }}"></textarea>
                       <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                     </mat-form-field>
 
 
                     <mat-form-field style="width: 100%" *ngIf="oneField.type=='date'">
-                      <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker"
-                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
+                      <input matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()"
+                        [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[0] }}">
                       <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                       <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
 
@@ -598,8 +624,8 @@
                     </mat-radio-button>
                   </mat-radio-group>
                 </div>
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" [ngClass]="{'hideMe': hasPartner!=true}" fxLayout="column"
+                  fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
 
                   <div *ngFor="let oneField of militaryFields" fxFlex="{{oneField.width}}">
                     <mat-form-field style="width: 100%" *ngIf="oneField.type=='input'">
@@ -609,16 +635,17 @@
 
                     </mat-form-field>
                     <mat-form-field style="width: 100%" *ngIf="oneField.type=='textarea'">
-                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}"></textarea>
+                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[1] }}"></textarea>
                       <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                     </mat-form-field>
 
 
                     <mat-form-field style="width: 100%" *ngIf="oneField.type=='date'">
-                      <input autocomplete="off" matInput [min]="minDate" [max]="maxDate" (focus)="birthDatePicker.open()"
-                        [matDatepicker]="birthDatePicker" placeholder="{{ oneField.viewValue | translate }}"
-                        formControlName="{{ oneField.value[0] }}">
+                      <input autocomplete="off" matInput [min]="minDate" [max]="maxDate"
+                        (focus)="birthDatePicker.open()" [matDatepicker]="birthDatePicker"
+                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
                       <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
                       <mat-datepicker #birthDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
 
@@ -628,8 +655,9 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton"
+                    type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -647,8 +675,8 @@
                     {{ 'Add_Edit_Form.APPLICANT' | translate }}
                   </mat-panel-description>
                 </mat-panel-title>
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div fxFlex="30" *ngFor="let oneField of healthFields">
                     <mat-form-field style="width: 100%">
                       <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}"
@@ -677,8 +705,9 @@
                   </div>
                 </div>
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton"
+                    type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -696,8 +725,8 @@
                   </mat-panel-description>
                 </mat-panel-title>
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
 
                   <div fxFlex="30" *ngFor="let oneField of australiaFields">
                     <mat-form-field style="width: 100%">
@@ -743,7 +772,7 @@
                   <!--<div fxFlex="30"></div>-->
                 </div>
 
-                <div class="pt-24 pb-24">
+                <div class="pt-24 pb-24" [ngClass]="{'hideMe': hasPartner!=true}">
                   <label>{{ 'Add_Edit_Form.STEP_6.VISATYPE' | translate }}</label>
                   <mat-radio-group formControlName="australiaVisaTypeSp">
                     <mat-radio-button class="mr-24 ml-24" *ngFor="let type of visaType" [value]="type.value">
@@ -753,8 +782,9 @@
                 </div>
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious class="backButton" type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
-                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button" >{{'Add_Edit_Form.STEP_7.NEXT'
+                  <button mat-button matStepperPrevious class="backButton"
+                    type="button">{{'Add_Edit_Form.STEP_7.BACK' | translate}}</button>
+                  <button mat-button matStepperNext class="nextButton" (click)="scrollToUp()" type="button">{{'Add_Edit_Form.STEP_7.NEXT'
                     | translate}}</button>
                 </div>
               </mat-step>
@@ -766,20 +796,31 @@
                 </ng-template>
 
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
 
                   <div fxFlex="97" *ngFor="let oneField of notesFields">
                     <mat-form-field style="width: 100%">
-                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}"></textarea>
+                      <textarea matInput placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[0] }}"></textarea>
                       <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
 
                     </mat-form-field>
                   </div>
                   <mat-form-field fxFlex="97">
-                    <mat-select placeholder="{{ 'Add_Edit_Form.STEP_7.MAINAPPLICATION' | translate }}" formControlName="mainApplicant">
+                    <mat-select placeholder="{{ 'Add_Edit_Form.STEP_7.MAINAPPLICATION' | translate }}"
+                      formControlName="mainApplicant">
                       <mat-option *ngFor="let status of mainApplicantValue" [value]="status.value">
                         {{ status.viewValue | translate }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field fxFlex="97">
+                    <mat-select placeholder="{{ 'Add_Edit_Form.STEP_7.CURRENCY' | translate }}"
+                      formControlName="currency">
+                      <mat-option *ngFor="let oneCurrency of currencies" [value]="oneCurrency">
+                        {{ oneCurrency}}
                       </mat-option>
                     </mat-select>
                   </mat-form-field>
@@ -794,8 +835,8 @@
                 </mat-panel-title>
 
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div *ngFor="let oneField of extNotesFields" fxFlex="22">
                     <mat-form-field *ngIf="oneField.type=='input'" style="width: 100%">
                       <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}"
@@ -804,13 +845,14 @@
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='number'" style="width: 100%">
-                      <input autocomplete="off" type="number" matInput placeholder="{{ oneField.viewValue | translate }}"
-                        formControlName="{{ oneField.value[0] }}">
+                      <input autocomplete="off" type="number" matInput
+                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
                       <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='choose'" style="width: 100%">
-                      <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
+                      <mat-select placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[0] }}">
                         <mat-option *ngFor="let status of oneField.arrayValue" [value]="status.value">
                           <!--{{ status.viewValue | translate }}-->
                         </mat-option>
@@ -819,8 +861,8 @@
                   </div>
                 </div>
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div *ngFor="let oneField of pintsFields" fxFlex="22">
                     <mat-form-field *ngIf="oneField.type=='input'" style="width: 100%">
                       <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}"
@@ -829,13 +871,14 @@
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='number'" style="width: 100%">
-                      <input autocomplete="off" type="number" (keyup)="changeTotal($event)" matInput placeholder="{{ oneField.viewValue | translate }}"
-                        formControlName="{{ oneField.value[0] }}">
+                      <input autocomplete="off" type="number" (keyup)="changeTotal($event)" matInput
+                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
                       <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='choose'" style="width: 100%">
-                      <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[0] }}">
+                      <mat-select placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[0] }}">
                         <mat-option *ngFor="let status of oneField.arrayValue" [value]="status.value">
                           <!--{{ status.viewValue | translate }}-->
                         </mat-option>
@@ -844,7 +887,8 @@
                   </div>
                   <div fxFlex="22">
                     <mat-form-field style="width: 100%">
-                      <input disabled type="number" matInput placeholder="{{  'Add_Edit_Form.STEP_7.TOTALPOINTS'| translate }}"
+                      <input disabled type="number" matInput
+                        placeholder="{{  'Add_Edit_Form.STEP_7.TOTALPOINTS'| translate }}"
                         [ngModelOptions]="{standalone: true}" [(ngModel)]="total">
                       <!--<mat-icon matSuffix>{{ oneField.icon }}</mat-icon>-->
                     </mat-form-field>
@@ -873,13 +917,14 @@
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='number'" style="width: 100%">
-                      <input autocomplete="off" type="number" matInput placeholder="{{ oneField.viewValue | translate }}"
-                        formControlName="{{ oneField.value[1] }}">
+                      <input autocomplete="off" type="number" matInput
+                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
                       <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='choose'" style="width: 100%">
-                      <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
+                      <mat-select placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[1] }}">
                         <mat-option *ngFor="let status of oneField.arrayValue" [value]="status.value">
                           <!--{{ status.viewValue | translate }}-->
                         </mat-option>
@@ -888,8 +933,8 @@
                   </div>
                 </div>
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-                  fxFlex>
+                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                  fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div *ngFor="let oneField of pintsFields" fxFlex="22">
                     <mat-form-field *ngIf="oneField.type=='input'" style="width: 100%">
                       <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}"
@@ -898,13 +943,14 @@
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='number'" style="width: 100%">
-                      <input autocomplete="off" type="number" (keyup)="changeTotalSp($event)" matInput placeholder="{{ oneField.viewValue | translate }}"
-                        formControlName="{{ oneField.value[1] }}">
+                      <input autocomplete="off" type="number" (keyup)="changeTotalSp($event)" matInput
+                        placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
                       <mat-icon matSuffix>{{ oneField.icon }}</mat-icon>
                     </mat-form-field>
 
                     <mat-form-field *ngIf="oneField.type=='choose'" style="width: 100%">
-                      <mat-select placeholder="{{ oneField.viewValue | translate }}" formControlName="{{ oneField.value[1] }}">
+                      <mat-select placeholder="{{ oneField.viewValue | translate }}"
+                        formControlName="{{ oneField.value[1] }}">
                         <mat-option *ngFor="let status of oneField.arrayValue" [value]="status.value">
                           <!--{{ status.viewValue | translate }}-->
                         </mat-option>
@@ -913,7 +959,8 @@
                   </div>
                   <div fxFlex="22">
                     <mat-form-field style="width: 100%">
-                      <input disabled type="number" matInput placeholder="{{  'Add_Edit_Form.STEP_7.TOTALPOINTS'| translate }}"
+                      <input disabled type="number" matInput
+                        placeholder="{{  'Add_Edit_Form.STEP_7.TOTALPOINTS'| translate }}"
                         [ngModelOptions]="{standalone: true}" [(ngModel)]="totalSp">
                       <!--<mat-icon matSuffix>{{ oneField.icon }}</mat-icon>-->
                     </mat-form-field>
@@ -923,9 +970,11 @@
 
 
                 <div style="float: right;">
-                  <button mat-button matStepperPrevious class="backButton" type="button">{{ 'Add_Edit_Form.STEP_7.BACK' | translate }}</button>
+                  <button mat-button matStepperPrevious class="backButton"
+                    type="button">{{ 'Add_Edit_Form.STEP_7.BACK' | translate }}</button>
 
-                  <button mat-button class="nextButton" (click)="editForm()" type="button">{{ 'Add_Edit_Form.STEP_7.EDIT' | translate }}</button>
+                  <button mat-button class="nextButton" (click)="editForm()"
+                    type="button">{{ 'Add_Edit_Form.STEP_7.EDIT' | translate }}</button>
                 </div>
               </mat-step>
 
@@ -968,15 +1017,15 @@
           <form class="" [formGroup]="feeForm" #f="ngForm">
 
 
-            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-              fxFlex>
+            <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+              fxLayoutAlign.gt-md="space-around center" fxFlex>
 
               <div fxFlex="10">
                 <!--<label>{{i}}</label>-->
               </div>
 
 
-              <mat-form-field fxFlex="24">
+              <mat-form-field fxFlex="21">
 
                 <input autocomplete="off" matInput placeholder="{{ 'Add_Edit_Form.PAYMENTS.VALUE' | translate }}"
                   formControlName="value" type="number" required>
@@ -984,13 +1033,18 @@
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
 
-              <mat-form-field fxFlex="24">
+              <div fxFlex="6">
+                <label>{{currency}}</label>
+              </div>
+
+              <mat-form-field fxFlex="21">
 
                 <input autocomplete="off" matInput placeholder="{{ 'Add_Edit_Form.PAYMENTS.NOTE' | translate }}"
                   formControlName="title" required>
                 <mat-icon matSuffix>bookmark</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
+
 
 
               <button fxFlex="10" mat-button (click)="addPaid()" cdkFocusInitial [disabled]="feeForm.invalid">
@@ -1005,20 +1059,26 @@
           </form>
 
           <div *ngFor="let onePayment of allPayments;let i=index">
-            <div style="padding-top:10px;width: 100%" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-              fxFlex>
+            <div style="padding-top:10px;width: 100%" fxLayout="column" fxLayout.gt-md="row wrap"
+              fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div style="text-align: center" fxFlex="10">
                 <label class="circle">{{i+1}}</label>
               </div>
-              <mat-form-field fxFlex="24">
+              <mat-form-field fxFlex="21">
                 <input autocomplete="off" type="number" matInput [(ngModel)]="onePayment.value" [disabled]="true">
                 <mat-icon matSuffix>attach_money</mat-icon>
               </mat-form-field>
 
-              <mat-form-field fxFlex="24">
+              <div fxFlex="6">
+                <label>{{currency}}</label>
+              </div>
+
+
+              <mat-form-field fxFlex="21">
                 <input autocomplete="off" matInput [(ngModel)]="onePayment.title" [disabled]="true">
                 <mat-icon matSuffix>bookmark</mat-icon>
               </mat-form-field>
+
 
 
               <button fxFlex="10" mat-button (click)="delPaid(onePayment.id,i)" cdkFocusInitial>
@@ -1029,8 +1089,8 @@
           </div>
 
           <div *ngFor="let onePrePayment of preAllPayments;let i=index">
-            <div style="padding-top:10px;width: 100%" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center"
-              fxFlex>
+            <div style="padding-top:10px;width: 100%" fxLayout="column" fxLayout.gt-md="row wrap"
+              fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div style="text-align: center" fxFlex="10">
                 <label class="circle">{{i+1}}</label>
               </div>
@@ -1059,7 +1119,8 @@
 
           <hr class="myHr">
 
-          <div style="padding-top:10px;width: 100%" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center">
+          <div style="padding-top:10px;width: 100%" fxLayout="column" fxLayout.gt-md="row wrap"
+            fxLayoutAlign.gt-md="space-around center">
             <div fxFlex="10">
             </div>
             <div fxFlex="30">
@@ -1069,7 +1130,7 @@
             </div>
             <div fxFlex="30">
               <h1 style="font-weight: bold">
-                {{totalInstallments}}
+                {{totalInstallments}} {{currency}}
               </h1>
             </div>
           </div>

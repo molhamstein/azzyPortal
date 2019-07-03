@@ -3,6 +3,7 @@ import { ConfirmMessageComponent } from './../../main/content/dialogs/confirm-me
 import { MatDialog } from '@angular/material';
 import { Injectable } from '@angular/core';
 import { MessageComponent } from '../../main/content/dialogs/message/message.component';
+import { ResponseSelectSloteComponent } from '../../main/content/dialogs/respone-select-slote/response-select-slote.component';
 
 @Injectable()
 export class DialogServiceService {
@@ -49,6 +50,20 @@ export class DialogServiceService {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
       }
+    });
+  }
+
+  responseSelectSloteDialog(callback) {
+    let dialogRef = this.dialog.open(ResponseSelectSloteComponent, {
+      // width: '650px',
+      // panelClass: 'className',
+      data: {}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // if (result) {
+      callback()
+      // }
     });
   }
 }

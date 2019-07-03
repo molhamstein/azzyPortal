@@ -272,6 +272,7 @@ export class CalendarComponent implements OnInit {
   isAvailbleDate(items, houre, min, index) {
     let newItem;
     items.find(item => {
+      console.log(item)
       if (item.start.getHours() == houre && item.start.getMinutes() == min) {
         newItem = item;
       }
@@ -296,13 +297,21 @@ export class CalendarComponent implements OnInit {
     this.newEventsMonth = [];
     var index = 0
     if (this.view == "month") {
-      var firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
-      var lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+      var firstDate = new Date(date.getFullYear(), date.getMonth(), 1).toISOString();
+      var lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 1).toISOString();
     } else {
-      var firstDate = new Date(date);
-      var lastDate = new Date(date);
-      firstDate.setHours(0);
-      lastDate.setHours(23);
+      // var firstDate = new Date(date);
+      // var lastDate = new Date(date);
+      // firstDate.setHours(0);
+      // firstDate.setMinutes(0);
+
+      // lastDate.setHours(23);
+      // lastDate.setMinutes(59);
+
+      var firstDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0).toISOString();
+      var lastDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59).toISOString();
+
+
     }
     this.mainServ.APIServ.get("consTimes/readCalander?dateStart=" + firstDate + "&dateEnd=" + lastDate + "&ids=" + ids).subscribe((res: any) => {
       this.mainServ.loaderSer.display(false);
@@ -355,6 +364,7 @@ export class CalendarComponent implements OnInit {
               this.eventsForDay[index] = [];
             }
             this.eventsForDay[index].push(x);
+            // alert(this.view);
             if (this.view != "month") {
 
               this.preperData()

@@ -1,3 +1,4 @@
+import { ResponseSelectSloteComponent } from './main/content/dialogs/respone-select-slote/response-select-slote.component';
 import { viewEventComponent } from './main/content/dialogs/view-event/view-event.component';
 import { ConfirmAddFormComponent } from './main/content/dialogs/confirm-add-form/confirm-add-form.component';
 import { AddApointmentComponent } from './main/content/dialogs/add-apointment/add-apointment.component';
@@ -60,7 +61,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent, ResetPasswordComponent, ResponeFormComponent, ConfirmAddFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, MessageComponent, ConfirmMessageComponent, ViewAppointmentComponent,
+        AppComponent, ResetPasswordComponent, ResponeFormComponent, ConfirmAddFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, MessageComponent, ConfirmMessageComponent, ResponseSelectSloteComponent, ViewAppointmentComponent,
         DeleteAppointmentComponent, AddApointmentComponent, viewEventComponent
     ],
     imports: [
@@ -79,7 +80,7 @@ const appRoutes: Routes = [
         // OwlDateTimeModule,
         // OwlNativeDateTimeModule,
     ],
-    entryComponents: [ViewAppointmentComponent, ConfirmAddFormComponent, ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent,
+    entryComponents: [ViewAppointmentComponent, ResponseSelectSloteComponent, ConfirmAddFormComponent, ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent,
         ConfirmMessageComponent, MessageComponent, DeleteAppointmentComponent, AddApointmentComponent, viewEventComponent],
 
     providers: [

@@ -122,7 +122,11 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
       startDate = new Date()
     else
       startDate = new Date(event)
-    this.mainServ.APIServ.get("consTimes/getConsInMonth?startDate=" + startDate + "&timezone=" + this.timezone(), this.token).subscribe((data: any) => {
+
+    // startDate.setDate(1);
+    // startDate.setHours(1);
+    // startDate.setMinutes(1);
+    this.mainServ.APIServ.get("consTimes/getConsInMonth?startDate=" + startDate.toISOString() + "&timezone=" + this.timezone() + "&consId=" + this.consId, this.token).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.monthEvent = []
         data.getConsInMonth.forEach(element => {
@@ -364,7 +368,9 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     var mainThis = this;
     // this.dialogSer.confirmationMessage('Do you want to book the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
     this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
-      mainThis.mainServ.globalServ.reload();
+      mainThis.dialogSer.responseSelectSloteDialog(function () {
+        mainThis.mainServ.globalServ.reload();
+      })
     }, "put", this.token, 'bookAppointment', { "date": appointment['date'], "timeStart": appointment['bodyStart'], "timeEnd": appointment['bodyEnd'], "timePlace": this.timePlace, "location": appointment['meta']['location'] })
   }
 

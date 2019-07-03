@@ -189,6 +189,7 @@ export const locale = {
                 'TBNOTES': 'توضیحات داخلی در مورد متقاضی',
                 'MAINAPPLICATION': 'متقاضی اصلی پرونده',
                 'APPLICANT': 'متقاضی',
+                "CURRENCY": "واحد پول",
                 'SPOUSE': 'همسر',
                 'TOTALPOINTS': 'جمع امتیازات',
                 'DEPENDANT': 'متقاضی همراه',
@@ -286,6 +287,7 @@ export const locale = {
             'Add_Appointment': {
                 "TITLE": "ایجاد وقت مشاوره",
                 "CANSEL": "انصراف",
+                'DELETE': 'حذف',
                 "ADD": "ایجاد"
             },
             'Cansel_Appointment': {
