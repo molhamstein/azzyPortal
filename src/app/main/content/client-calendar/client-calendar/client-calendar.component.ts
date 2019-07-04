@@ -107,7 +107,7 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
   flag: boolean = true;
 
   getCloserCons(cb) {
-    this.mainServ.APIServ.get("consTimes/getCloserCons", this.token).subscribe((data: any) => {
+    this.mainServ.APIServ.get("consTimes/getCloserCons?consId=" + this.consId, this.token).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         if (data.CloserCons.startDate)
           this.selectedDate = new Date(data.CloserCons.startDate);
@@ -364,12 +364,15 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     var timezone = moment().tz(this.timezoneSelect).utcOffset()
     return timezone / 60
   }
+  appointmentIsSelected = false;
+
   useAppointment(appointment) {
+    // alert("SSS");
     var mainThis = this;
     // this.dialogSer.confirmationMessage('Do you want to book the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
     this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
       mainThis.dialogSer.responseSelectSloteDialog(function () {
-        mainThis.mainServ.globalServ.reload();
+        this.appointmentIsSelected = true;
       })
     }, "put", this.token, 'bookAppointment', { "date": appointment['date'], "timeStart": appointment['bodyStart'], "timeEnd": appointment['bodyEnd'], "timePlace": this.timePlace, "location": appointment['meta']['location'] })
   }

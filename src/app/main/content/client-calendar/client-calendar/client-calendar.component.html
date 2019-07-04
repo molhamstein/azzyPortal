@@ -1,7 +1,7 @@
-<div style="position: absolute;padding-top: 30px;padding-left: 10px">
+<div *ngIf="appointmentIsSelected==false" style="position: absolute;padding-top: 30px;padding-left: 10px">
   <h1>{{'Calender.Select_Appointment' | translate}}</h1>
 </div>
-<div class="col-md-8" style="margin-top: 100px;">
+<div *ngIf="appointmentIsSelected==false" class="col-md-8" style="margin-top: 100px;">
 
   <mat-form-field style="width: 100%;">
     <mat-select (selectionChange)="changeTimezone($event.value)" [(value)]="timezoneSelect"
@@ -64,7 +64,7 @@
 
   </ngx-datatable>
 </div>
-<div class="col-md-4" style="margin-top: 40px;height: 550px;">
+<div *ngIf="appointmentIsSelected==false" class="col-md-4" style="margin-top: 40px;height: 550px;">
   <!-- <mat-card> -->
   <div id="calendar" dir="ltr" class="page-layout simple fullwidth custom-calender" fusePerfectScrollbar>
 
@@ -164,3 +164,19 @@
   <!-- <mat-calendar #calendar [selected]="selectedDate"  (monthSelected)="monthSelected" [minDate]="today" (selectedChange)="onSelect($event)"></mat-calendar> -->
   <!-- </mat-card> -->
 </div>
+
+<div  *ngIf="appointmentIsSelected" id="forms" class="page-layout simple fullwidth" fxLayout="column" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header mat-accent-bg p-24 h-100 h-100-custom" fxLayout="row" fxLayoutAlign="start center">
+    <div style="width: 100%;" fxLayout="column" fxLayoutAlign="center start">
+      <label style="width: 100%;text-align: center">
+        You have successfully booked your appointment. A confirmation has been sent to you via email
+      </label>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <!-- / CONTENT -->
+
+  </div>
