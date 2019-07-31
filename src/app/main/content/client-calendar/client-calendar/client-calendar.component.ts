@@ -204,7 +204,7 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
   }
 
   toTimeZone(time, zone) {
-    console.log(time);
+    // console.log(time);
     var format = 'YYYY-MM-DDTHH:mm:ss.SSSZ';
     return moment(time).tz(zone)
   }
@@ -226,10 +226,10 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     tempTo.hours(23);
     tempTo.minutes(59);
 
-    console.log("from")
-    console.log(tempFrom.format())
-    console.log("to")
-    console.log(tempTo.format())
+    // console.log("from")
+    // console.log(tempFrom.format())
+    // console.log("to")
+    // console.log(tempTo.format())
 
 
 
@@ -288,19 +288,19 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
   dayClicked(event) {
     if (this.isOldDate(event.date))
       return;
-    console.log(event);
+    // console.log(event);
     this.selectedDate = event.date;
     this.changeDayAnas();
   }
   isSelectedDay(date) {
-    console.log(date)
+    // console.log(date)
     if (date.toDateString() == this.selectedDate.toDateString())
       return true;
     return false
   }
 
   isHasConsDay(date) {
-    console.log(this.monthEvent)
+    // console.log(this.monthEvent)
     for (let index = 0; index < this.monthEvent.length; index++) {
       const element = this.monthEvent[index];
       if (date.toDateString() == element.toDateString())
@@ -317,11 +317,11 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
   }
   ngOnInit() {
     // this._datePicker.selectedChange.subscribe(x => {
-    //   console.log(x);
+    //   // console.log(x);
     // });
     this.jun.tz('Asia/Tehran').format('yyyy - MM - dd hh : mm : ss a z');
-    console.log(this.jun);
-    console.log(moment.tz.names()); // for all time zone.
+    // console.log(this.jun);
+    // console.log(moment.tz.names()); // for all time zone.
 
     var id = this.route.snapshot.paramMap.get('id');
     this.token = this.route.snapshot.paramMap.get('token');
