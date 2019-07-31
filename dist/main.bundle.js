@@ -8124,8 +8124,8 @@ var CallApiService = (function () {
         this.http = http;
         this.loginSer = loginSer;
         // readonly baseUrl = "http://104.217.253.15:2999/api/"
-        this.baseUrl = "http://178.62.233.91:3000/api/";
-        // readonly baseUrl = "http://azzyimmigration.com:3000/api/"
+        // readonly baseUrl = "http://178.62.233.91:3000/api/"
+        this.baseUrl = "http://azzyimmigration.com:3000/api/";
         // readonly baseUrl = "http://localhost:3000/api/"
         this.errorCode = 0;
         this.code = "";
@@ -8185,6 +8185,8 @@ var CallApiService = (function () {
             auth = this.loginSer.getToken();
         }
         var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
+        console.log("data");
+        console.log(data);
         return this.http.post(this.baseUrl + url, data, _options).map(function (Response) {
             return Response;
         }).catch(function (Response) {
@@ -10724,7 +10726,7 @@ var cancelAppointmentComponent = (function () {
         });
     }
     cancelAppointmentComponent.prototype.ngOnInit = function () {
-        window.open('', '_self').close();
+        // window.open('', '_self').close()
         // this.translate.use('en');
         // this.appDirection.switchDir('ltr');
         // this.mainServ.loaderSer.display(true);
@@ -11014,8 +11016,9 @@ var ClientCalendarComponent = (function () {
         var _this = this;
         if (event === void 0) { event = null; }
         var startDate = new Date();
-        if (event == null)
+        if (event == null) {
             startDate = new Date();
+        }
         else
             startDate = new Date(event);
         // startDate.setDate(1);
@@ -16495,7 +16498,7 @@ var LockModule = (function () {
 /***/ "./src/app/main/content/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"login\" fxLayout=\"column\" fusePerfectScrollbar>\n\n  <div id=\"login-form-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n    <div id=\"login-form\" *fuseIfOnDom [@animate]=\"{value:'*',params:{duration:'300ms',y:'100px'}}\">\n\n      <div class=\"logo\">\n        <img src=\"assets/images/logos/azzy-grey.png\">\n      </div>\n\n      <div class=\"title\">{{'AUTH.Login.TITLE' | translate}}</div>\n      <label for=\"name\" style=\"color: red\">{{message}}</label>\n      <form name=\"loginForm\" [formGroup]=\"loginForm\" novalidate>\n\n        <mat-form-field>\n          <input matInput placeholder=\"{{'AUTH.Login.EMAIL' | translate}} \" (keyup)=\"message='';\"  formControlName=\"email\">\n          <mat-error *ngIf=\"loginFormErrors.email.required\">\n            Email is required\n          </mat-error>\n          <mat-error *ngIf=\"!loginFormErrors.email.required && loginFormErrors.email.email\">\n            Please enter a valid email address\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"password\" placeholder=\"{{'AUTH.Login.PASSWORD' | translate}} \" (keyup)=\"message='';\"  formControlName=\"password\">\n          <mat-error *ngIf=\"loginFormErrors.password.required\">\n            Password is required\n          </mat-error>\n        </mat-form-field>\n\n        <div class=\"remember-forgot-password\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"space-between center\">\n          <!--<mat-checkbox class=\"remember-me\" aria-label=\"Remember Me\">\n                        Remember Me\n                    </mat-checkbox>-->\n\n          <!--<a class=\"forgot-password\" [routerLink]=\"'/forgot-password'\">\n                        {{'AUTH.Login.FORGETPASSWORD' | translate}} \n                    </a>-->\n        </div>\n\n        <button mat-raised-button color=\"accent\" class=\"submit-button\" aria-label=\"LOG IN\" [disabled]=\"loginForm.invalid\" (click)=\"login()\">\n                     {{'AUTH.Login.LOGIN' | translate}}\n                </button>\n\n      </form>\n\n      <!--<div class=\"separator\">\n                <span class=\"text\">OR</span>\n            </div>-->\n\n      <!--<button mat-raised-button class=\"google\">\n                Log in with Google\n            </button>\n\n            <button mat-raised-button class=\"facebook\">\n                Log in with Facebook\n            </button>\n\n            <div class=\"register\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n                <span class=\"text\">Don't have an account?</span>\n                <a class=\"link\" [routerLink]=\"'/pages/auth/register'\">Create an account</a>\n            </div>-->\n\n    </div>\n\n  </div>\n\n\n  <div class=\"spinner-wrapper\" [style.display]=\"loader ? 'block' : (!loader ? 'none' : null)\">\n    <div class=\"spinner\">\n      <div class=\"inner\">\n        <div class=\"gap\"></div>\n        <div class=\"left\">\n          <div class=\"half-circle\"></div>\n        </div>\n        <div class=\"right\">\n          <div class=\"half-circle\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div id=\"login\" fxLayout=\"column\" fusePerfectScrollbar>\n\n  <div id=\"login-form-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n    <div id=\"login-form\" *fuseIfOnDom [@animate]=\"{value:'*',params:{duration:'300ms',y:'100px'}}\">\n\n      <div class=\"logo\">\n        <img src=\"assets/images/logos/azzy-grey.png\">\n      </div>\n      {{this.loginForm.value | json}}\n      <div class=\"title\">{{'AUTH.Login.TITLE' | translate}}</div>\n      <label for=\"name\" style=\"color: red\">{{message}}</label>\n      <form name=\"loginForm\" [formGroup]=\"loginForm\" novalidate>\n\n        <mat-form-field>\n          <input matInput placeholder=\"{{'AUTH.Login.EMAIL' | translate}} \" (keyup)=\"message='';\"\n            formControlName=\"email\">\n          <mat-error *ngIf=\"loginFormErrors.email.required\">\n            Email is required\n          </mat-error>\n          <mat-error *ngIf=\"!loginFormErrors.email.required && loginFormErrors.email.email\">\n            Please enter a valid email address\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"password\" placeholder=\"{{'AUTH.Login.PASSWORD' | translate}} \" (keyup)=\"message='';\"\n            formControlName=\"password\">\n          <mat-error *ngIf=\"loginFormErrors.password.required\">\n            Password is required\n          </mat-error>\n        </mat-form-field>\n\n        <div class=\"remember-forgot-password\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"space-between center\">\n          <!--<mat-checkbox class=\"remember-me\" aria-label=\"Remember Me\">\n                        Remember Me\n                    </mat-checkbox>-->\n\n          <!--<a class=\"forgot-password\" [routerLink]=\"'/forgot-password'\">\n                        {{'AUTH.Login.FORGETPASSWORD' | translate}} \n                    </a>-->\n        </div>\n\n        <button mat-raised-button color=\"accent\" class=\"submit-button\" aria-label=\"LOG IN\"\n          [disabled]=\"loginForm.invalid\" (click)=\"login()\">\n          {{'AUTH.Login.LOGIN' | translate}}\n        </button>\n\n      </form>\n\n      <!--<div class=\"separator\">\n                <span class=\"text\">OR</span>\n            </div>-->\n\n      <!--<button mat-raised-button class=\"google\">\n                Log in with Google\n            </button>\n\n            <button mat-raised-button class=\"facebook\">\n                Log in with Facebook\n            </button>\n\n            <div class=\"register\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n                <span class=\"text\">Don't have an account?</span>\n                <a class=\"link\" [routerLink]=\"'/pages/auth/register'\">Create an account</a>\n            </div>-->\n\n    </div>\n\n  </div>\n\n\n  <div class=\"spinner-wrapper\" [style.display]=\"loader ? 'block' : (!loader ? 'none' : null)\">\n    <div class=\"spinner\">\n      <div class=\"inner\">\n        <div class=\"gap\"></div>\n        <div class=\"left\">\n          <div class=\"half-circle\"></div>\n        </div>\n        <div class=\"right\">\n          <div class=\"half-circle\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 

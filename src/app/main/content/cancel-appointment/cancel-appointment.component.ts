@@ -44,7 +44,7 @@ export class cancelAppointmentComponent implements OnInit {
   token
   id
   ngOnInit() {
-    window.open('', '_self').close()
+    // window.open('', '_self').close()
     // this.translate.use('en');
 
     // this.appDirection.switchDir('ltr');

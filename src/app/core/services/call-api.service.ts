@@ -15,8 +15,8 @@ export class CallApiService {
   constructor(public http: HttpClient, private loginSer: LoginService) {
   }
   // readonly baseUrl = "http://104.217.253.15:2999/api/"
-  readonly baseUrl = "http://178.62.233.91:3000/api/"
-  // readonly baseUrl = "http://azzyimmigration.com:3000/api/"
+  // readonly baseUrl = "http://178.62.233.91:3000/api/"
+  readonly baseUrl = "http://azzyimmigration.com:3000/api/"
   // readonly baseUrl = "http://localhost:3000/api/"
   private errorCode = 0;
   private code = "";
@@ -81,7 +81,8 @@ export class CallApiService {
       auth = this.loginSer.getToken();
     }
     let _options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', "Authorization": auth }) };
-
+    console.log("data")
+    console.log(data)
     return this.http.post(this.baseUrl + url, data, _options).map((Response: Response) => {
       return Response;
     }).catch((Response: Response) => {

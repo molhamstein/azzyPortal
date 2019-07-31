@@ -118,8 +118,10 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
 
   getConsInMonth(event = null) {
     var startDate = new Date()
-    if (event == null)
+    if (event == null) {
       startDate = new Date()
+
+    }
     else
       startDate = new Date(event)
 
