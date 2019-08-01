@@ -1,8 +1,8 @@
 <div *ngIf="appointmentIsSelected==false" style="position: absolute;padding-top: 30px;padding-left: 10px">
   <h1>{{'Calender.Select_Appointment' | translate}}</h1>
 </div>
-<div *ngIf="appointmentIsSelected==false" class="row">
-  <div *ngIf="appointmentIsSelected==false" class="col-md-8 col-sm-11" style="
+<div *ngIf="appointmentIsSelected==false" class="mainContainer">
+  <div *ngIf="appointmentIsSelected==false" class="mainTable" style="
   margin: 0px auto;margin-top: 100px;">
 
     <mat-form-field style="width: 100%;">
@@ -24,13 +24,14 @@
 
     <ngx-datatable class="material" [rows]="bodyevents" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'"
       [scrollbarH]="true" [rowClass]="" *ngIf="bodyevents.length!=0">
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="date">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" [cellClass]="'hideColuumn'"
+        [headerClass]="'hideColuumn'" prop="date">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{'Calender.DATE' | translate}}</span>
         </ng-template>
 
       </ngx-datatable-column>
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="bodyEnd">
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" [width]="200" prop="bodyEnd">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{'Calender.TIME' | translate}}</span>
         </ng-template>
@@ -66,8 +67,20 @@
 
     </ngx-datatable>
   </div>
-  <div *ngIf="appointmentIsSelected==false" class="col-md-4 col-sm-8" style="margin: 0px auto;margin-top: 40px;height: 550px;">
+  <div *ngIf="appointmentIsSelected==false" class="mainCalender"
+    style="margin: 0px auto;margin-top: 40px;height: 550px;">
     <!-- <mat-card> -->
+    <mat-form-field style="width: 100%;">
+      <mat-select (selectionChange)="changeTimezone($event.value)" [(value)]="timezoneSelect"
+        placeholder="{{ 'Calender.CHOOSETIMEZONE' | translate }}">
+        <!--<ngx-mat-select-search [formControl]="bankFilterCtrl"></ngx-mat-select-search>-->
+        <mat-option *ngFor="let oneTimeZone of timeZoneArray" [value]="oneTimeZone.value">
+          {{ oneTimeZone.viewValue }}
+        </mat-option>
+      </mat-select>
+      <mat-icon matSuffix>time</mat-icon>
+    </mat-form-field>
+
     <div id="calendar" dir="ltr" class="page-layout simple fullwidth custom-calender" fusePerfectScrollbar>
 
       <div class="header p-16 p-sm-24" [ngClass]="viewDate | date:'MMM'">

@@ -165,3 +165,73 @@
 .custom-calender .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
   color: rgba(0, 0, 0, 0.87) !important;
 }
+
+
+.mainContainer {
+  width: 100%;
+}
+
+.mainContainer .mainTable {
+  padding: 0px 20px;
+  width: calc(100% - 430px);
+  float: left;
+}
+
+.mainContainer .mainCalender {
+  padding: 0px 20px;
+  width: 430px;
+  float: left;
+}
+
+// .mainContainer .mainTable .mat-form-field{
+
+// }
+
+.mainContainer .mainCalender mat-form-field {
+  display: none;
+}
+
+
+.mainContainer .mainCalender #calendar {
+  min-height: 0px;
+}
+
+.mainContainer .mainCalender #calendar.custom-calender .cal-month-view {
+  height: 400px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .hideColuumn {
+    display: none !important;
+  }
+
+  .mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mainContainer .mainTable {
+    padding: 0px 20px;
+    order: 2;
+    width: calc(100%);
+    float: none;
+  }
+
+  .mainContainer .mainCalender {
+    padding: 0px 20px;
+    margin-left: calc((100% - 430px) / 2) !important;
+    margin-top: 100px !important;
+    width: 430px;
+  }
+
+  .mainContainer .mainTable .mat-form-field {
+    display: none;
+  }
+
+  .mainContainer .mainCalender mat-form-field {
+    display: block;
+  }
+
+}
