@@ -237,7 +237,7 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
 
 
     this.bodyevents = [];
-    this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toUTCString() + "&dateEnd=" + new Date(tempTo.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toUTCString() + "&available=true", this.token).subscribe((data: any) => {
+    this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&dateEnd=" + new Date(tempTo.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&available=true", this.token).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         var tempEvents;
         data['readCalander'][0]['slots'].forEach(element => {

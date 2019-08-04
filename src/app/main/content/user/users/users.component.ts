@@ -114,6 +114,7 @@ export class usersComponent implements OnInit {
   }
 
   editPassword(userId) {
+    var self = this
     const dialogRef = this.dialog.open(ResetPasswordComponent, {
       width: '500px',
       data: { 'userId': userId }
@@ -121,6 +122,7 @@ export class usersComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
+        self.dialogServ.successDialog()
       }
     });
   }

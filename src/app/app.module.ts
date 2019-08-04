@@ -49,6 +49,7 @@ import { MomentTimezoneModule } from 'angular-moment-timezone';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MessageComponent } from './main/content/dialogs/message/message.component';
 import { MAT_DATE_LOCALE } from '@angular/material';
+import { SuccessMessageComponent } from './main/content/dialogs/success-message/success-message.component';
 
 
 
@@ -61,7 +62,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent, ResetPasswordComponent, ResponeFormComponent, ConfirmAddFormComponent, AddSlotesComponent, SetTextBoxAdminComponent, MessageComponent, ConfirmMessageComponent, ResponseSelectSloteComponent, ViewAppointmentComponent,
+        AppComponent, ResetPasswordComponent, ResponeFormComponent, ConfirmAddFormComponent, SuccessMessageComponent, AddSlotesComponent, SetTextBoxAdminComponent, MessageComponent, ConfirmMessageComponent, ResponseSelectSloteComponent, ViewAppointmentComponent,
         DeleteAppointmentComponent, AddApointmentComponent, viewEventComponent
     ],
     imports: [
@@ -81,7 +82,7 @@ const appRoutes: Routes = [
         // OwlNativeDateTimeModule,
     ],
     entryComponents: [ViewAppointmentComponent, ResponseSelectSloteComponent, ConfirmAddFormComponent, ResetPasswordComponent, AddSlotesComponent, ResponeFormComponent, SetTextBoxAdminComponent,
-        ConfirmMessageComponent, MessageComponent, DeleteAppointmentComponent, AddApointmentComponent, viewEventComponent],
+        ConfirmMessageComponent, MessageComponent, DeleteAppointmentComponent, AddApointmentComponent, viewEventComponent, SuccessMessageComponent],
 
     providers: [
         { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },

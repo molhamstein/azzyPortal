@@ -1,4 +1,4 @@
-<div *ngIf="appointmentIsSelected==false" style="position: absolute;padding-top: 30px;padding-left: 10px">
+<div *ngIf="appointmentIsSelected==false" class="titleSelect" style="">
   <h1>{{'Calender.Select_Appointment' | translate}}</h1>
 </div>
 <div *ngIf="appointmentIsSelected==false" class="mainContainer">
@@ -24,6 +24,16 @@
 
     <ngx-datatable class="material" [rows]="bodyevents" [columnMode]="'force'" [headerHeight]="48" [rowHeight]="'auto'"
       [scrollbarH]="true" [rowClass]="" *ngIf="bodyevents.length!=0">
+
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <button mat-raised-button class="save-button mat-accent" (click)="useAppointment(row)">
+            <span>{{'Calender.BOOK' | translate}}</span>
+          </button>
+
+        </ng-template>
+      </ngx-datatable-column>
+
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" [cellClass]="'hideColuumn'"
         [headerClass]="'hideColuumn'" prop="date">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
@@ -56,14 +66,7 @@
         </button>
       </ng-template>
     </ngx-datatable-column> -->
-      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
-        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          <button mat-raised-button class="save-button mat-accent" (click)="useAppointment(row)">
-            <span>{{'Calender.BOOK' | translate}}</span>
-          </button>
 
-        </ng-template>
-      </ngx-datatable-column>
 
     </ngx-datatable>
   </div>

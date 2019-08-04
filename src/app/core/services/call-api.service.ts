@@ -18,6 +18,7 @@ export class CallApiService {
   // readonly baseUrl = "http://178.62.233.91:3000/api/"
   readonly baseUrl = "http://azzyimmigration.com:3000/api/"
   // readonly baseUrl = "http://localhost:3000/api/"
+  // readonly baseUrl = "http://192.168.1.6:3000/api/"
   private errorCode = 0;
   private code = "";
 

@@ -270,6 +270,10 @@ export const locale = {
                 "Yes": "Yes",
                 "No": "No"
             },
+            'Success_Message': {
+                'Message': "Update Is Done",
+                "Ok": "Ok"
+            },
             'Add_Slotes': {
                 'LOCATION': 'Location',
                 'STARTTIME': 'Start Time',

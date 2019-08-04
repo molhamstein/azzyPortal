@@ -4343,6 +4343,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_angular_moment_timezone__ = __webpack_require__("./node_modules/angular-moment-timezone/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__ = __webpack_require__("./src/app/main/content/dialogs/message/message.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__main_content_dialogs_success_message_success_message_component__ = __webpack_require__("./src/app/main/content/dialogs/success-message/success-message.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4390,6 +4391,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [];
 var AppModule = (function () {
     function AppModule() {
@@ -4397,7 +4399,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_19__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_27__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_add_form_confirm_add_form_component__["a" /* ConfirmAddFormComponent */], __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_14__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_13__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_respone_select_slote_response_select_slote_component__["a" /* ResponseSelectSloteComponent */], __WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_add_form_confirm_add_form_component__["a" /* ConfirmAddFormComponent */], __WEBPACK_IMPORTED_MODULE_40__main_content_dialogs_success_message_success_message_component__["a" /* SuccessMessageComponent */], __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_14__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_13__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_respone_select_slote_response_select_slote_component__["a" /* ResponseSelectSloteComponent */], __WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */],
                 __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_event_view_event_component__["a" /* viewEventComponent */]
             ],
             imports: [
@@ -4417,7 +4419,7 @@ var AppModule = (function () {
                 // OwlNativeDateTimeModule,
             ],
             entryComponents: [__WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_respone_select_slote_response_select_slote_component__["a" /* ResponseSelectSloteComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_add_form_confirm_add_form_component__["a" /* ConfirmAddFormComponent */], __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_14__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_event_view_event_component__["a" /* viewEventComponent */]],
+                __WEBPACK_IMPORTED_MODULE_13__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_event_view_event_component__["a" /* viewEventComponent */], __WEBPACK_IMPORTED_MODULE_40__main_content_dialogs_success_message_success_message_component__["a" /* SuccessMessageComponent */]],
             providers: [
                 { provide: __WEBPACK_IMPORTED_MODULE_39__angular_material__["a" /* MAT_DATE_LOCALE */], useValue: 'en-GB' },
                 { provide: __WEBPACK_IMPORTED_MODULE_19__angular_core__["LOCALE_ID"], useValue: "en-GB" },
@@ -8081,8 +8083,6 @@ var AuthGuardService = (function () {
                 return true;
             }
         }
-        this.router.navigate(["/login"]);
-        return false;
     };
     AuthGuardService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
@@ -8127,6 +8127,7 @@ var CallApiService = (function () {
         // readonly baseUrl = "http://178.62.233.91:3000/api/"
         this.baseUrl = "http://azzyimmigration.com:3000/api/";
         // readonly baseUrl = "http://localhost:3000/api/"
+        // readonly baseUrl = "http://192.168.1.6:3000/api/"
         this.errorCode = 0;
         this.code = "";
     }
@@ -8406,6 +8407,7 @@ var FuseConfigService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_message_message_component__ = __webpack_require__("./src/app/main/content/dialogs/message/message.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_respone_select_slote_response_select_slote_component__ = __webpack_require__("./src/app/main/content/dialogs/respone-select-slote/response-select-slote.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_success_message_success_message_component__ = __webpack_require__("./src/app/main/content/dialogs/success-message/success-message.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8415,6 +8417,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -8473,6 +8476,17 @@ var DialogServiceService = (function () {
         dialogRef.afterClosed().subscribe(function (result) {
             // if (result) {
             callback();
+            // }
+        });
+    };
+    DialogServiceService.prototype.successDialog = function () {
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_success_message_success_message_component__["a" /* SuccessMessageComponent */], {
+            // width: '650px',
+            // panelClass: 'className',
+            data: {}
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            // if (result) {
             // }
         });
     };
@@ -10777,12 +10791,11 @@ var cancelAppointmentComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cancelAppointmentModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__ = __webpack_require__("./src/app/core/services/auth-guard-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__ = __webpack_require__("./src/app/main/content/cancel-appointment/cancel-appointment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_modules_shared_module__ = __webpack_require__("./src/app/core/modules/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cancel_appointment_component__ = __webpack_require__("./src/app/main/content/cancel-appointment/cancel-appointment.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10794,27 +10807,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var routes = [
     {
         path: 'cancel-appointment/:id/:token',
-        component: __WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__["a" /* cancelAppointmentComponent */],
-        canActivate: [__WEBPACK_IMPORTED_MODULE_0__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
+        component: __WEBPACK_IMPORTED_MODULE_4__cancel_appointment_component__["a" /* cancelAppointmentComponent */]
     },
 ];
 var cancelAppointmentModule = (function () {
     function cancelAppointmentModule() {
     }
     cancelAppointmentModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_4__core_modules_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* RouterModule */].forChild(routes)
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_3__core_modules_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* RouterModule */].forChild(routes)
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__["a" /* cancelAppointmentComponent */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_4__cancel_appointment_component__["a" /* cancelAppointmentComponent */]],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_5__cancel_appointment_component__["a" /* cancelAppointmentComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__cancel_appointment_component__["a" /* cancelAppointmentComponent */]
             ]
         })
     ], cancelAppointmentModule);
@@ -10890,14 +10901,14 @@ var MyClientCalendarModule = (function () {
 /***/ "./src/app/main/content/client-calendar/client-calendar/client-calendar.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  "
+module.exports = ""
 
 /***/ }),
 
 /***/ "./src/app/main/content/client-calendar/client-calendar/client-calendar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"appointmentIsSelected==false\" style=\"position: absolute;padding-top: 30px;padding-left: 10px\">\r\n  <h1>{{'Calender.Select_Appointment' | translate}}</h1>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected==false\" class=\"mainContainer\">\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainTable\" style=\"\r\n  margin: 0px auto;margin-top: 100px;\">\r\n\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n\r\n    <div style=\"padding-left: 10px\" *ngIf=\"bodyevents.length==0\">\r\n      <h1 style=\"text-align: center;\r\n    padding-top: 15%;\">{{'Calender.Placeholder_No_Appointment' | translate}}</h1>\r\n    </div>\r\n\r\n    <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\"\r\n      [scrollbarH]=\"true\" [rowClass]=\"\" *ngIf=\"bodyevents.length!=0\">\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [cellClass]=\"'hideColuumn'\"\r\n        [headerClass]=\"'hideColuumn'\" prop=\"date\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.DATE' | translate}}</span>\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [width]=\"200\" prop=\"bodyEnd\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.TIME' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n          {{row.bodyStart}} -- {{row.bodyEnd}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.LOCATION' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <!-- <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button  class=\"save-button mat-accent\" (click)=\"viewAppointment(row)\">\r\n          <span>{{'Calender.VIEW' | translate}}</span>\r\n        </button>\r\n      </ng-template>\r\n    </ngx-datatable-column> -->\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-raised-button class=\"save-button mat-accent\" (click)=\"useAppointment(row)\">\r\n            <span>{{'Calender.BOOK' | translate}}</span>\r\n          </button>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n    </ngx-datatable>\r\n  </div>\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainCalender\"\r\n    style=\"margin: 0px auto;margin-top: 40px;height: 550px;\">\r\n    <!-- <mat-card> -->\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n    <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth custom-calender\" fusePerfectScrollbar>\r\n\r\n      <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n        <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n          <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n            <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n              <!-- <mat-icon class=\"logo-icon\">today</mat-icon> -->\r\n\r\n              <!-- <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span> -->\r\n\r\n            </div>\r\n\r\n            <!-- <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"mat-icon-button\" mwlCalendarToday [(viewDate)]=\"viewDate\"\r\n                (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Today\" matTooltip=\"Today\">\r\n                <mat-icon>today</mat-icon>\r\n              </button>\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('day')\" aria-label=\"Day\" matTooltip=\"Day\">\r\n                <mat-icon>view_day</mat-icon>\r\n              </button>\r\n\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('month')\" aria-label=\"Month\"\r\n              matTooltip=\"Month\">\r\n              <mat-icon>view_module</mat-icon>\r\n            </button>\r\n          </div> -->\r\n          </div>\r\n          <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\"\r\n              [(viewDate)]=\"viewDate\" (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Previous\">\r\n              <mat-icon>chevron_left</mat-icon>\r\n            </button>\r\n\r\n            <div class=\"title\" style=\"display: inline-block;\">\r\n              {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n            </div>\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\"\r\n              (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Next\">\r\n              <mat-icon>chevron_right</mat-icon>\r\n            </button>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n        <div class=\"cal-cell-top\" [ngClass]=\"{'first': isSelectedDay(day.date),'disabled':isOldDate(day.date)}\">\r\n          <!-- <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }} </span> -->\r\n          <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n          <div *ngIf=\"isHasConsDay(day.date)\" class=\"hasCons\"></div>\r\n        </div>\r\n        <!-- @todo show real data -->\r\n      </ng-template>\r\n\r\n      <div class=\"content\" fusePerfectScrollbar>\r\n        <div [ngSwitch]=\"view\">\r\n          <div>\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n              (dayClicked)=\"dayClicked($event.day)\" [cellTemplate]=\"customCellTemplate\">\r\n            </mwl-calendar-month-view>\r\n          </div>\r\n\r\n          <!-- <div *ngIf=\"monthEvent == null\">\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (dayClicked)=\"dayClicked($event.day)\">\r\n            </mwl-calendar-month-view>\r\n          </div> -->\r\n\r\n          <!-- <div *ngIf=\"dayEvent.length > 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [tooltipPlacement]=\"'right'\" [viewDate]=\"viewDate\"\r\n              [events]=\"dayEvent\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked',\r\n              $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div>\r\n          <div *ngIf=\"dayEvent.length == 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"dayEvent\" [refresh]=\"refresh\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div> -->\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- <mat-calendar #calendar [selected]=\"selectedDate\"  (monthSelected)=\"monthSelected\" [minDate]=\"today\" (selectedChange)=\"onSelect($event)\"></mat-calendar> -->\r\n    <!-- </mat-card> -->\r\n  </div>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected\" id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\"\r\n  fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100 h-100-custom\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div style=\"width: 100%;\" fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <label style=\"width: 100%;text-align: center\">\r\n        You have successfully booked your appointment. A confirmation has been sent to you via email\r\n      </label>\r\n    </div>\r\n    <!-- / HEADER -->\r\n\r\n    <!-- CONTENT -->\r\n    <!-- / CONTENT -->\r\n\r\n  </div>\r\n"
+module.exports = "<div *ngIf=\"appointmentIsSelected==false\" class=\"titleSelect\" style=\"\">\r\n  <h1>{{'Calender.Select_Appointment' | translate}}</h1>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected==false\" class=\"mainContainer\">\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainTable\" style=\"\r\n  margin: 0px auto;margin-top: 100px;\">\r\n\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n\r\n    <div style=\"padding-left: 10px\" *ngIf=\"bodyevents.length==0\">\r\n      <h1 style=\"text-align: center;\r\n    padding-top: 15%;\">{{'Calender.Placeholder_No_Appointment' | translate}}</h1>\r\n    </div>\r\n\r\n    <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\"\r\n      [scrollbarH]=\"true\" [rowClass]=\"\" *ngIf=\"bodyevents.length!=0\">\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-raised-button class=\"save-button mat-accent\" (click)=\"useAppointment(row)\">\r\n            <span>{{'Calender.BOOK' | translate}}</span>\r\n          </button>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [cellClass]=\"'hideColuumn'\"\r\n        [headerClass]=\"'hideColuumn'\" prop=\"date\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.DATE' | translate}}</span>\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [width]=\"200\" prop=\"bodyEnd\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.TIME' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n          {{row.bodyStart}} -- {{row.bodyEnd}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.LOCATION' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <!-- <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button  class=\"save-button mat-accent\" (click)=\"viewAppointment(row)\">\r\n          <span>{{'Calender.VIEW' | translate}}</span>\r\n        </button>\r\n      </ng-template>\r\n    </ngx-datatable-column> -->\r\n\r\n\r\n    </ngx-datatable>\r\n  </div>\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainCalender\"\r\n    style=\"margin: 0px auto;margin-top: 40px;height: 550px;\">\r\n    <!-- <mat-card> -->\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n    <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth custom-calender\" fusePerfectScrollbar>\r\n\r\n      <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n        <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n          <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n            <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n              <!-- <mat-icon class=\"logo-icon\">today</mat-icon> -->\r\n\r\n              <!-- <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span> -->\r\n\r\n            </div>\r\n\r\n            <!-- <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"mat-icon-button\" mwlCalendarToday [(viewDate)]=\"viewDate\"\r\n                (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Today\" matTooltip=\"Today\">\r\n                <mat-icon>today</mat-icon>\r\n              </button>\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('day')\" aria-label=\"Day\" matTooltip=\"Day\">\r\n                <mat-icon>view_day</mat-icon>\r\n              </button>\r\n\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('month')\" aria-label=\"Month\"\r\n              matTooltip=\"Month\">\r\n              <mat-icon>view_module</mat-icon>\r\n            </button>\r\n          </div> -->\r\n          </div>\r\n          <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\"\r\n              [(viewDate)]=\"viewDate\" (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Previous\">\r\n              <mat-icon>chevron_left</mat-icon>\r\n            </button>\r\n\r\n            <div class=\"title\" style=\"display: inline-block;\">\r\n              {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n            </div>\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\"\r\n              (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Next\">\r\n              <mat-icon>chevron_right</mat-icon>\r\n            </button>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n        <div class=\"cal-cell-top\" [ngClass]=\"{'first': isSelectedDay(day.date),'disabled':isOldDate(day.date)}\">\r\n          <!-- <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }} </span> -->\r\n          <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n          <div *ngIf=\"isHasConsDay(day.date)\" class=\"hasCons\"></div>\r\n        </div>\r\n        <!-- @todo show real data -->\r\n      </ng-template>\r\n\r\n      <div class=\"content\" fusePerfectScrollbar>\r\n        <div [ngSwitch]=\"view\">\r\n          <div>\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n              (dayClicked)=\"dayClicked($event.day)\" [cellTemplate]=\"customCellTemplate\">\r\n            </mwl-calendar-month-view>\r\n          </div>\r\n\r\n          <!-- <div *ngIf=\"monthEvent == null\">\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (dayClicked)=\"dayClicked($event.day)\">\r\n            </mwl-calendar-month-view>\r\n          </div> -->\r\n\r\n          <!-- <div *ngIf=\"dayEvent.length > 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [tooltipPlacement]=\"'right'\" [viewDate]=\"viewDate\"\r\n              [events]=\"dayEvent\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked',\r\n              $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div>\r\n          <div *ngIf=\"dayEvent.length == 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"dayEvent\" [refresh]=\"refresh\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div> -->\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- <mat-calendar #calendar [selected]=\"selectedDate\"  (monthSelected)=\"monthSelected\" [minDate]=\"today\" (selectedChange)=\"onSelect($event)\"></mat-calendar> -->\r\n    <!-- </mat-card> -->\r\n  </div>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected\" id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\"\r\n  fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100 h-100-custom\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div style=\"width: 100%;\" fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <label style=\"width: 100%;text-align: center\">\r\n        You have successfully booked your appointment. A confirmation has been sent to you via email\r\n      </label>\r\n    </div>\r\n    <!-- / HEADER -->\r\n\r\n    <!-- CONTENT -->\r\n    <!-- / CONTENT -->\r\n\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -11092,7 +11103,7 @@ var ClientCalendarComponent = (function () {
         // console.log("to")
         // console.log(tempTo.format())
         this.bodyevents = [];
-        this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toUTCString() + "&dateEnd=" + new Date(tempTo.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toUTCString() + "&available=true", this.token).subscribe(function (data) {
+        this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&dateEnd=" + new Date(tempTo.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&available=true", this.token).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 var tempEvents;
                 data['readCalander'][0]['slots'].forEach(function (element) {
@@ -12139,7 +12150,7 @@ var MessageComponent = (function () {
 /***/ "./src/app/main/content/dialogs/reset-password/reset-password.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n\n<!--component html goes here -->\n<h1 mat-dialog-title> {{'Dialog.Reset_Password.TITLE' | translate}}</h1>\n<div mat-dialog-content>\n  <form class=\"\" [formGroup]=\"regiForm\">\n\n    <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n      <mat-form-field fxFlex=\"100\" style=\"width: 100%;\">\n\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.OLDPASSWORD' | translate}}\" formControlName=\"oldPassword\" type=\"password\">\n        <mat-icon matSuffix>remove_red_eye</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n      <mat-form-field fxFlex=\"100\">\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.NEWPASSWORD' | translate}}\" formControlName=\"newPassword\" type=\"password\">\n\n        <mat-icon matSuffix>remove_red_eye</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n    </div>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"update()\" cdkFocusInitial [disabled]=\"regiForm.invalid\">{{'Dialog.Reset_Password.RESET' | translate}}</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n\n<!--component html goes here -->\n<h1 mat-dialog-title> {{'Dialog.Reset_Password.TITLE' | translate}}</h1>\n<div mat-dialog-content>\n  <form class=\"\" [formGroup]=\"regiForm\">\n\n    <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n      <!-- <mat-form-field fxFlex=\"100\" style=\"width: 100%;\">\n\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.OLDPASSWORD' | translate}}\" formControlName=\"oldPassword\" type=\"password\">\n        <mat-icon matSuffix>remove_red_eye</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field> -->\n\n      <mat-form-field fxFlex=\"100\">\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.NEWPASSWORD' | translate}}\" formControlName=\"newPassword\" type=\"password\">\n\n        <mat-icon matSuffix>remove_red_eye</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n    </div>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"update()\" cdkFocusInitial [disabled]=\"regiForm.invalid\">{{'Dialog.Reset_Password.RESET' | translate}}</button>\n</div>\n"
 
 /***/ }),
 
@@ -12198,14 +12209,14 @@ var ResetPasswordComponent = (function () {
         // this.translate.use('en');
         this.regiForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["d" /* FormGroup */]({
             newPassword: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required),
-            oldPassword: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["l" /* Validators */].required)
         });
     };
     ResetPasswordComponent.prototype.update = function () {
         var _this = this;
-        this.mainServ.APIServ.patch("staffusers/change-password", this.regiForm.value).subscribe(function (data) {
+        this.regiForm.value.userId = this.userId;
+        this.mainServ.APIServ.post("staffusers/resetPassword", this.regiForm.value).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                _this.dialogRef.close();
+                _this.dialogRef.close(true);
             }
         });
     };
@@ -12470,6 +12481,60 @@ var SetTextBoxAdminComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
     ], SetTextBoxAdminComponent);
     return SetTextBoxAdminComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/success-message/success-message.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<div mat-dialog-content>\n  <p>{{'Dialog.Success_Message.Message' | translate}}</p>\n  <!--{{data | json}}-->\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onYesClick()\" cdkFocusInitial>{{'Dialog.Success_Message.Ok' | translate}}</button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/success-message/success-message.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/main/content/dialogs/success-message/success-message.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SuccessMessageComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SuccessMessageComponent = (function () {
+    function SuccessMessageComponent(dialogRef) {
+        this.dialogRef = dialogRef;
+    }
+    SuccessMessageComponent.prototype.onYesClick = function () {
+        this.dialogRef.close(true);
+    };
+    SuccessMessageComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'success-message',
+            template: __webpack_require__("./src/app/main/content/dialogs/success-message/success-message.component.html"),
+            styles: [__webpack_require__("./src/app/main/content/dialogs/success-message/success-message.component.scss")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_material__["m" /* MatDialogRef */]])
+    ], SuccessMessageComponent);
+    return SuccessMessageComponent;
 }());
 
 
@@ -15906,6 +15971,10 @@ var locale = {
                 "Yes": "Yes",
                 "No": "No"
             },
+            'Success_Message': {
+                'Message': "Update Is Done",
+                "Ok": "Ok"
+            },
             'Add_Slotes': {
                 'LOCATION': 'Location',
                 'STARTTIME': 'Start Time',
@@ -16237,6 +16306,7 @@ var locale = {
             "Confirm": {
                 "Do_you_want_to_book_the_appointment": "آیا مایل هستید این وقت را انتخاب نمایید؟ :",
                 "Do_you_want_to_delete_your_appointment": "آیا مایل هستید وقت را حذف نمایید؟",
+                "Do_you_want_to_change_your_appointment": "آیا مایل هستید وقت را تغییر وقت؟",
                 "Yes": "بله",
                 "No": "نه",
                 'From': 'از',
@@ -16498,7 +16568,7 @@ var LockModule = (function () {
 /***/ "./src/app/main/content/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"login\" fxLayout=\"column\" fusePerfectScrollbar>\n\n  <div id=\"login-form-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n    <div id=\"login-form\" *fuseIfOnDom [@animate]=\"{value:'*',params:{duration:'300ms',y:'100px'}}\">\n\n      <div class=\"logo\">\n        <img src=\"assets/images/logos/azzy-grey.png\">\n      </div>\n      {{this.loginForm.value | json}}\n      <div class=\"title\">{{'AUTH.Login.TITLE' | translate}}</div>\n      <label for=\"name\" style=\"color: red\">{{message}}</label>\n      <form name=\"loginForm\" [formGroup]=\"loginForm\" novalidate>\n\n        <mat-form-field>\n          <input matInput placeholder=\"{{'AUTH.Login.EMAIL' | translate}} \" (keyup)=\"message='';\"\n            formControlName=\"email\">\n          <mat-error *ngIf=\"loginFormErrors.email.required\">\n            Email is required\n          </mat-error>\n          <mat-error *ngIf=\"!loginFormErrors.email.required && loginFormErrors.email.email\">\n            Please enter a valid email address\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"password\" placeholder=\"{{'AUTH.Login.PASSWORD' | translate}} \" (keyup)=\"message='';\"\n            formControlName=\"password\">\n          <mat-error *ngIf=\"loginFormErrors.password.required\">\n            Password is required\n          </mat-error>\n        </mat-form-field>\n\n        <div class=\"remember-forgot-password\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"space-between center\">\n          <!--<mat-checkbox class=\"remember-me\" aria-label=\"Remember Me\">\n                        Remember Me\n                    </mat-checkbox>-->\n\n          <!--<a class=\"forgot-password\" [routerLink]=\"'/forgot-password'\">\n                        {{'AUTH.Login.FORGETPASSWORD' | translate}} \n                    </a>-->\n        </div>\n\n        <button mat-raised-button color=\"accent\" class=\"submit-button\" aria-label=\"LOG IN\"\n          [disabled]=\"loginForm.invalid\" (click)=\"login()\">\n          {{'AUTH.Login.LOGIN' | translate}}\n        </button>\n\n      </form>\n\n      <!--<div class=\"separator\">\n                <span class=\"text\">OR</span>\n            </div>-->\n\n      <!--<button mat-raised-button class=\"google\">\n                Log in with Google\n            </button>\n\n            <button mat-raised-button class=\"facebook\">\n                Log in with Facebook\n            </button>\n\n            <div class=\"register\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n                <span class=\"text\">Don't have an account?</span>\n                <a class=\"link\" [routerLink]=\"'/pages/auth/register'\">Create an account</a>\n            </div>-->\n\n    </div>\n\n  </div>\n\n\n  <div class=\"spinner-wrapper\" [style.display]=\"loader ? 'block' : (!loader ? 'none' : null)\">\n    <div class=\"spinner\">\n      <div class=\"inner\">\n        <div class=\"gap\"></div>\n        <div class=\"left\">\n          <div class=\"half-circle\"></div>\n        </div>\n        <div class=\"right\">\n          <div class=\"half-circle\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div id=\"login\" fxLayout=\"column\" fusePerfectScrollbar>\n\n  <div id=\"login-form-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n    <div id=\"login-form\" *fuseIfOnDom [@animate]=\"{value:'*',params:{duration:'300ms',y:'100px'}}\">\n\n      <div class=\"logo\">\n        <img src=\"assets/images/logos/azzy-grey.png\">\n      </div>\n\n      <div class=\"title\">{{'AUTH.Login.TITLE' | translate}}</div>\n      <label for=\"name\" style=\"color: red\">{{message}}</label>\n      <form name=\"loginForm\" [formGroup]=\"loginForm\" novalidate>\n\n        <mat-form-field>\n          <input matInput placeholder=\"{{'AUTH.Login.EMAIL' | translate}} \" (keyup)=\"message='';\"\n            formControlName=\"email\">\n          <mat-error *ngIf=\"loginFormErrors.email.required\">\n            Email is required\n          </mat-error>\n          <mat-error *ngIf=\"!loginFormErrors.email.required && loginFormErrors.email.email\">\n            Please enter a valid email address\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"password\" placeholder=\"{{'AUTH.Login.PASSWORD' | translate}} \" (keyup)=\"message='';\"\n            formControlName=\"password\">\n          <mat-error *ngIf=\"loginFormErrors.password.required\">\n            Password is required\n          </mat-error>\n        </mat-form-field>\n\n        <div class=\"remember-forgot-password\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"space-between center\">\n          <!--<mat-checkbox class=\"remember-me\" aria-label=\"Remember Me\">\n                        Remember Me\n                    </mat-checkbox>-->\n\n          <!--<a class=\"forgot-password\" [routerLink]=\"'/forgot-password'\">\n                        {{'AUTH.Login.FORGETPASSWORD' | translate}} \n                    </a>-->\n        </div>\n\n        <button mat-raised-button color=\"accent\" class=\"submit-button\" aria-label=\"LOG IN\"\n          [disabled]=\"loginForm.invalid\" (click)=\"login()\">\n          {{'AUTH.Login.LOGIN' | translate}}\n        </button>\n\n      </form>\n\n      <!--<div class=\"separator\">\n                <span class=\"text\">OR</span>\n            </div>-->\n\n      <!--<button mat-raised-button class=\"google\">\n                Log in with Google\n            </button>\n\n            <button mat-raised-button class=\"facebook\">\n                Log in with Facebook\n            </button>\n\n            <div class=\"register\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n                <span class=\"text\">Don't have an account?</span>\n                <a class=\"link\" [routerLink]=\"'/pages/auth/register'\">Create an account</a>\n            </div>-->\n\n    </div>\n\n  </div>\n\n\n  <div class=\"spinner-wrapper\" [style.display]=\"loader ? 'block' : (!loader ? 'none' : null)\">\n    <div class=\"spinner\">\n      <div class=\"inner\">\n        <div class=\"gap\"></div>\n        <div class=\"left\">\n          <div class=\"half-circle\"></div>\n        </div>\n        <div class=\"right\">\n          <div class=\"half-circle\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -17268,12 +17338,14 @@ var usersComponent = (function () {
         });
     };
     usersComponent.prototype.editPassword = function (userId) {
+        var self = this;
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], {
             width: '500px',
             data: { 'userId': userId }
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result) {
+                self.dialogServ.successDialog();
             }
         });
     };

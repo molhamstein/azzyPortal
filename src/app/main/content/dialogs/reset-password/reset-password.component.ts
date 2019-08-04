@@ -33,14 +33,15 @@ export class ResetPasswordComponent {
 
         this.regiForm = new FormGroup({
             newPassword: new FormControl('', Validators.required),
-            oldPassword: new FormControl('', Validators.required)
+            // oldPassword: new FormControl('', Validators.required)
         });
     }
 
     update() {
-        this.mainServ.APIServ.patch("staffusers/change-password", this.regiForm.value).subscribe((data: any) => {
+        this.regiForm.value.userId = this.userId
+        this.mainServ.APIServ.post("staffusers/resetPassword", this.regiForm.value).subscribe((data: any) => {
             if (this.mainServ.APIServ.getErrorCode() == 0) {
-                this.dialogRef.close();
+                this.dialogRef.close(true);
             }
         })
     }
