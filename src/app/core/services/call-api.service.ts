@@ -1,3 +1,4 @@
+import { CustomSnackBarComponent } from './../components/custom-snack-bar/custom-snack-bar.component';
 import { LoginService } from './login.service';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -5,6 +6,7 @@ import { Observable } from 'rxjs/Rx';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 @Injectable()
 export class CallApiService {
@@ -12,11 +14,11 @@ export class CallApiService {
 
 
 
-  constructor(public http: HttpClient, private loginSer: LoginService) {
+  constructor(public http: HttpClient, private loginSer: LoginService, private snackBar: MatSnackBar) {
   }
   // readonly baseUrl = "http://104.217.253.15:2999/api/"
-  // readonly baseUrl = "http://178.62.233.91:3000/api/"
-  readonly baseUrl = "http://azzyimmigration.com:3000/api/"
+  readonly baseUrl = "http://178.62.233.91:3000/api/"
+  // readonly baseUrl = "http://azzyimmigration.com:3000/api/"
   // readonly baseUrl = "http://localhost:3000/api/"
   // readonly baseUrl = "http://192.168.1.6:3000/api/"
   private errorCode = 0;
@@ -54,10 +56,17 @@ export class CallApiService {
     }).catch((response: Response) => {
       this.errorCode = response['error'].statusCode;
       this.code = response['error'].code
-      // console.log(response);
-      if (this.errorCode == 401 && response['error'].code == "AUTHORIZATION_REQUIRED")
+      console.log(response);
+      if (response['error']['error'].statusCode == 401) {
+        var configSuccess: MatSnackBarConfig = {
+          panelClass: 'style-success',
+          duration: 100000,
+        };
+        this.errorCode=401
+        this.snackBar.openFromComponent(CustomSnackBarComponent, configSuccess);
         // this.loginSer.logout()
-        return "E";
+      }
+      return "E";
     });
   }
 

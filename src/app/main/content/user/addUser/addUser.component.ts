@@ -23,6 +23,8 @@ export class addUserComponent implements OnInit {
   limit: number = 5;
   addUserForm;
   types;
+
+  hide = true;
   private primaryColor: string = "#127bdc";
   private secondryColor: string = "#127bdc";
   constructor(
@@ -37,7 +39,7 @@ export class addUserComponent implements OnInit {
 
   ngOnInit() {
     this.addUserForm = new FormGroup({
-      email: new FormControl('',  [Validators.required, Validators.email]),
+      email: new FormControl('', [Validators.required, Validators.email]),
       type: new FormControl('', Validators.required),
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),

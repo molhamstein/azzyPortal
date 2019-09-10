@@ -309,7 +309,9 @@ export const locale = {
                 'LOGIN': 'Login',
                 'EMAIL': 'Email',
                 'PASSWORD': 'Password'
-            }
+            },
+            "Your_Session_End":"your session has been end",
+            "Logout":"logout"
         },
         'User': {
             'USERS': {

@@ -51,7 +51,10 @@ export class FuseLoginComponent implements OnInit {
             email: ['', [Validators.required, Validators.email]],
             password: ['', Validators.required]
         });
-
+        if (this.mainServ.APIServ.getErrorCode() == 401) {
+            this.mainServ.loaderSer.display(false)
+            this.mainServ.APIServ.setErrorCode(0)
+        }
         this.loginForm.valueChanges.subscribe(() => {
             this.onLoginFormValuesChanged();
         });

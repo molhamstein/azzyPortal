@@ -310,7 +310,9 @@ export const locale = {
                 'LOGIN': 'ورود',
                 'EMAIL': 'ایمیل',
                 'PASSWORD': 'رمز'
-            }
+            },
+            "Your_Session_End": 'جلسه شما پایان یافته است',
+            "Logout": 'خروج'
         },
         'User': {
             'USERS': {

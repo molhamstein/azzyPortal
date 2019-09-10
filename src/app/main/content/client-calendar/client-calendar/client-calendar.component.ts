@@ -209,9 +209,28 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     return moment(time).tz(zone)
   }
   changeDayAnas() {
+    let self = this;
+    let monthSelected = (this.selectedDate.getMonth() + 1)
+    let yearSelected = this.selectedDate.getFullYear()
+    let daySelected = this.selectedDate.getDate()
+
+    let monthSelectedString = ""
+    let daySelectedString = ""
+    if (monthSelected < 10)
+      monthSelectedString = "0" + monthSelected
+    else
+      monthSelectedString = monthSelected.toString()
+    if (daySelected < 10)
+      daySelectedString = "0" + daySelected
+    else
+      daySelectedString = daySelected.toString()
+
     this.mainServ.loaderSer.display(true);
-    let tempFrom = this.toTimeZone(this.selectedDate.getFullYear() + "-" + (this.selectedDate.getMonth() + 1) + "-" + this.selectedDate.getDate(), this.timezoneSelect)
-    let tempTo = this.toTimeZone(this.selectedDate.getFullYear() + "-" + (this.selectedDate.getMonth() + 1) + "-" + this.selectedDate.getDate(), this.timezoneSelect)
+
+    let tempFrom = this.toTimeZone(yearSelected + "-" + monthSelectedString + "-" + daySelectedString, this.timezoneSelect)
+    // let tempFrom = moment()
+
+    let tempTo = this.toTimeZone(yearSelected + "-" + monthSelectedString + "-" + daySelectedString, this.timezoneSelect)
 
     tempFrom.month(this.selectedDate.getMonth());
     tempFrom.year(this.selectedDate.getFullYear());
@@ -225,7 +244,6 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     tempTo.date(this.selectedDate.getDate());
     tempTo.hours(23);
     tempTo.minutes(59);
-
     // console.log("from")
     // console.log(tempFrom.format())
     // console.log("to")
@@ -237,10 +255,12 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
 
 
     this.bodyevents = [];
-    this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&dateEnd=" + new Date(tempTo.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&available=true", this.token).subscribe((data: any) => {
+    this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.toDate()).toISOString() + "&dateEnd=" + new Date(tempTo.toDate()).toISOString() + "&available=true", this.token).subscribe((data: any) => {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         var tempEvents;
         data['readCalander'][0]['slots'].forEach(element => {
+          this.setTimeZone()
+
           var x: CalendarEvent = {
             start: new Date(element.startDate),
             end: new Date(element.endDate),
@@ -250,16 +270,15 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
 
           x['date'] = x['start'].getFullYear() + "-" + (x['start'].getMonth() + 1) + "-" + x['start'].getDate();
 
-          var dateStartString = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate()
-            + " " + x['start'].getHours() + ":" + x['start'].getMinutes();
+          var dateStartString = x['start'].getFullYear() + "-" + self.changeToTow(x['start'].getMonth()) + "-" + self.changeToTow(x['start'].getDate())
+            + " " + self.changeToTow(x['start'].getHours()) + ":" + self.changeToTow(x['start'].getMinutes());
           x['bodyStart'] = moment(dateStartString).tz(this.timezoneSelect).format('hh : mm');
 
 
-          var dateEndString = x['end'].getFullYear() + "-" + x['end'].getMonth() + "-" + x['end'].getDate()
-            + " " + x['end'].getHours() + ":" + x['end'].getMinutes();
+          var dateEndString = x['end'].getFullYear() + "-" + self.changeToTow(x['end'].getMonth()) + "-" + self.changeToTow(x['end'].getDate())
+            + " " + self.changeToTow(x['end'].getHours()) + ":" + self.changeToTow(x['end'].getMinutes());
           x['bodyEnd'] = moment(dateEndString).tz(this.timezoneSelect).format('hh : mm');
 
-          this.setTimeZone()
           this.bodyevents.push(x);
         });
 
@@ -277,6 +296,13 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     });
 
     // this.mainServ.loaderSer.display(false);
+  }
+
+  changeToTow(number) {
+    if (number < 10)
+      return "0" + number
+    else
+      return number
   }
 
   viewDate: Date = new Date();

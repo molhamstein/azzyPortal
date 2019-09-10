@@ -50,7 +50,7 @@ export class GlobalService {
     this.roles['adminstrator']["ReadForms"] = true
     this.roles['adminstrator']["WriteCalendar"] = true
     this.roles['adminstrator']["WriteForms"] = true
-    this.roles['adminstrator']["Open/BlockCalendar"] = false
+    this.roles['adminstrator']["Open/BlockCalendar"] = true
     this.roles['adminstrator']["UserDefinition"] = false
 
 

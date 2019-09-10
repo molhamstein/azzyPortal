@@ -4344,6 +4344,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__ = __webpack_require__("./src/app/main/content/dialogs/message/message.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__main_content_dialogs_success_message_success_message_component__ = __webpack_require__("./src/app/main/content/dialogs/success-message/success-message.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__core_components_custom_snack_bar_custom_snack_bar_component__ = __webpack_require__("./src/app/core/components/custom-snack-bar/custom-snack-bar.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4392,6 +4393,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [];
 var AppModule = (function () {
     function AppModule() {
@@ -4400,7 +4402,7 @@ var AppModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_19__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_27__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_add_form_confirm_add_form_component__["a" /* ConfirmAddFormComponent */], __WEBPACK_IMPORTED_MODULE_40__main_content_dialogs_success_message_success_message_component__["a" /* SuccessMessageComponent */], __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_14__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */], __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_13__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_respone_select_slote_response_select_slote_component__["a" /* ResponseSelectSloteComponent */], __WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_event_view_event_component__["a" /* viewEventComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_event_view_event_component__["a" /* viewEventComponent */], __WEBPACK_IMPORTED_MODULE_41__core_components_custom_snack_bar_custom_snack_bar_component__["a" /* CustomSnackBarComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__["BrowserModule"],
@@ -4419,7 +4421,7 @@ var AppModule = (function () {
                 // OwlNativeDateTimeModule,
             ],
             entryComponents: [__WEBPACK_IMPORTED_MODULE_10__main_content_dialogs_view_appointment_view_appointment_component__["a" /* ViewAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_0__main_content_dialogs_respone_select_slote_response_select_slote_component__["a" /* ResponseSelectSloteComponent */], __WEBPACK_IMPORTED_MODULE_2__main_content_dialogs_confirm_add_form_confirm_add_form_component__["a" /* ConfirmAddFormComponent */], __WEBPACK_IMPORTED_MODULE_6__main_content_dialogs_reset_password_reset_password_component__["a" /* ResetPasswordComponent */], __WEBPACK_IMPORTED_MODULE_8__main_content_dialogs_add_slotes_add_slotes_component__["a" /* AddSlotesComponent */], __WEBPACK_IMPORTED_MODULE_9__main_content_dialogs_respone_form_respone_form_component__["a" /* ResponeFormComponent */], __WEBPACK_IMPORTED_MODULE_14__main_content_dialogs_set_text_box_admin_set_text_box_admin_component__["a" /* SetTextBoxAdminComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_event_view_event_component__["a" /* viewEventComponent */], __WEBPACK_IMPORTED_MODULE_40__main_content_dialogs_success_message_success_message_component__["a" /* SuccessMessageComponent */]],
+                __WEBPACK_IMPORTED_MODULE_13__main_content_dialogs_confirm_message_confirm_message_component__["a" /* ConfirmMessageComponent */], __WEBPACK_IMPORTED_MODULE_38__main_content_dialogs_message_message_component__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_4__main_content_dialogs_delete_appointment_delete_appointment_component__["a" /* DeleteAppointmentComponent */], __WEBPACK_IMPORTED_MODULE_3__main_content_dialogs_add_apointment_add_apointment_component__["a" /* AddApointmentComponent */], __WEBPACK_IMPORTED_MODULE_1__main_content_dialogs_view_event_view_event_component__["a" /* viewEventComponent */], __WEBPACK_IMPORTED_MODULE_40__main_content_dialogs_success_message_success_message_component__["a" /* SuccessMessageComponent */], __WEBPACK_IMPORTED_MODULE_41__core_components_custom_snack_bar_custom_snack_bar_component__["a" /* CustomSnackBarComponent */]],
             providers: [
                 { provide: __WEBPACK_IMPORTED_MODULE_39__angular_material__["a" /* MAT_DATE_LOCALE */], useValue: 'en-GB' },
                 { provide: __WEBPACK_IMPORTED_MODULE_19__angular_core__["LOCALE_ID"], useValue: "en-GB" },
@@ -4827,7 +4829,7 @@ var FuseConfirmDialogComponent = (function () {
             template: __webpack_require__("./src/app/core/components/confirm-dialog/confirm-dialog.component.html"),
             styles: [__webpack_require__("./src/app/core/components/confirm-dialog/confirm-dialog.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatDialogRef */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MatDialogRef */]])
     ], FuseConfirmDialogComponent);
     return FuseConfirmDialogComponent;
 }());
@@ -4918,6 +4920,73 @@ var FuseCountdownComponent = (function () {
         __metadata("design:paramtypes", [])
     ], FuseCountdownComponent);
     return FuseCountdownComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/components/custom-snack-bar/custom-snack-bar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<span>\n  {{'AUTH.Your_Session_End'| translate}}\n</span>\n<button mat-button type=\"button\" (click)=\"logout()\">\n  {{'AUTH.Logout'| translate}}</button>\n"
+
+/***/ }),
+
+/***/ "./src/app/core/components/custom-snack-bar/custom-snack-bar.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = "p {\n  color: white; }\n"
+
+/***/ }),
+
+/***/ "./src/app/core/components/custom-snack-bar/custom-snack-bar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomSnackBarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var CustomSnackBarComponent = (function () {
+    function CustomSnackBarComponent(snackBarRef, data, router) {
+        this.snackBarRef = snackBarRef;
+        this.data = data;
+        this.router = router;
+    }
+    CustomSnackBarComponent.prototype.ngOnInit = function () {
+    };
+    CustomSnackBarComponent.prototype.logout = function () {
+        this.router.navigate(["login"]);
+        this.snackBarRef.dismiss();
+        // location.reload();
+        // this.mainSer.loginServ.logout();// .goTo('login')
+    };
+    CustomSnackBarComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-custom-snack-bar',
+            template: __webpack_require__("./src/app/core/components/custom-snack-bar/custom-snack-bar.component.html"),
+            styles: [__webpack_require__("./src/app/core/components/custom-snack-bar/custom-snack-bar.component.scss")]
+        }),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MAT_SNACK_BAR_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatSnackBarRef */], Object, __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */]])
+    ], CustomSnackBarComponent);
+    return CustomSnackBarComponent;
 }());
 
 
@@ -6596,7 +6665,7 @@ var FuseMatSidenavHelperDirective = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__fuse_mat_sidenav_helper_service__["a" /* FuseMatSidenavHelperService */],
             __WEBPACK_IMPORTED_MODULE_3__services_match_media_service__["a" /* FuseMatchMedia */],
             __WEBPACK_IMPORTED_MODULE_2__angular_flex_layout__["b" /* ObservableMedia */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSidenav */]])
+            __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSidenav */]])
     ], FuseMatSidenavHelperDirective);
     return FuseMatSidenavHelperDirective;
 }());
@@ -7614,72 +7683,72 @@ var MaterialModule = (function () {
     MaterialModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MatExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["o" /* MatFormFieldModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatIconModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatInputModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatListModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatStepperModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["M" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["o" /* MatExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatFormFieldModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["M" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["N" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["O" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["P" /* MatTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_cdk_table__["m" /* CdkTableModule */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MatExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatIconModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatInputModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatListModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatStepperModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["M" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["o" /* MatExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["M" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["N" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["O" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["P" /* MatTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_cdk_table__["m" /* CdkTableModule */]
             ]
         })
@@ -8100,11 +8169,13 @@ var AuthGuardService = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CallApiService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/_esm5/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_custom_snack_bar_custom_snack_bar_component__ = __webpack_require__("./src/app/core/components/custom-snack-bar/custom-snack-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_service__ = __webpack_require__("./src/app/core/services/login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/_esm5/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8119,13 +8190,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var CallApiService = (function () {
-    function CallApiService(http, loginSer) {
+    function CallApiService(http, loginSer, snackBar) {
         this.http = http;
         this.loginSer = loginSer;
+        this.snackBar = snackBar;
         // readonly baseUrl = "http://104.217.253.15:2999/api/"
-        // readonly baseUrl = "http://178.62.233.91:3000/api/"
-        this.baseUrl = "http://azzyimmigration.com:3000/api/";
+        this.baseUrl = "http://178.62.233.91:3000/api/";
+        // readonly baseUrl = "http://azzyimmigration.com:3000/api/"
         // readonly baseUrl = "http://localhost:3000/api/"
         // readonly baseUrl = "http://192.168.1.6:3000/api/"
         this.errorCode = 0;
@@ -8152,16 +8226,23 @@ var CallApiService = (function () {
         else if (this.loginSer.getToken() != null) {
             auth = this.loginSer.getToken();
         }
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
         return this.http.get(this.baseUrl + url, _options).map(function (Response) {
             return Response;
         }).catch(function (response) {
             _this.errorCode = response['error'].statusCode;
             _this.code = response['error'].code;
-            // console.log(response);
-            if (_this.errorCode == 401 && response['error'].code == "AUTHORIZATION_REQUIRED")
+            console.log(response);
+            if (response['error']['error'].statusCode == 401) {
+                var configSuccess = {
+                    panelClass: 'style-success',
+                    duration: 100000,
+                };
+                _this.errorCode = 401;
+                _this.snackBar.openFromComponent(__WEBPACK_IMPORTED_MODULE_0__components_custom_snack_bar_custom_snack_bar_component__["a" /* CustomSnackBarComponent */], configSuccess);
                 // this.loginSer.logout()
-                return "E";
+            }
+            return "E";
         });
     };
     CallApiService.prototype.handleError = function (error) {
@@ -8185,7 +8266,7 @@ var CallApiService = (function () {
         else if (this.loginSer.getToken() != null) {
             auth = this.loginSer.getToken();
         }
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
         console.log("data");
         console.log(data);
         return this.http.post(this.baseUrl + url, data, _options).map(function (Response) {
@@ -8198,7 +8279,7 @@ var CallApiService = (function () {
     };
     CallApiService.prototype.resetPassWord = function (url, data, token) {
         var _this = this;
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": token }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": token }) };
         return this.http.post(this.baseUrl + url, data, _options).map(function (Response) {
             return Response;
         }).catch(function (Response) {
@@ -8209,7 +8290,7 @@ var CallApiService = (function () {
     };
     CallApiService.prototype.activeAccount = function (url, token) {
         var _this = this;
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": token }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": token }) };
         return this.http.put(this.baseUrl + url, {}, _options).map(function (Response) {
             return Response;
         }).catch(function (Response) {
@@ -8227,7 +8308,7 @@ var CallApiService = (function () {
         else if (this.loginSer.getToken() != null) {
             auth = this.loginSer.getToken();
         }
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
         return this.http.put(this.baseUrl + url, data, _options).map(function (Response) {
             return Response;
         }).catch(function (Response) {
@@ -8245,7 +8326,7 @@ var CallApiService = (function () {
         else if (this.loginSer.getToken() != null) {
             auth = this.loginSer.getToken();
         }
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
         return this.http.patch(this.baseUrl + url, data, _options).map(function (Response) {
             return Response;
         }).catch(function (Response) {
@@ -8263,7 +8344,7 @@ var CallApiService = (function () {
         else if (this.loginSer.getToken() != null) {
             auth = this.loginSer.getToken();
         }
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json', "Authorization": auth }) };
         return this.http.delete(this.baseUrl + url, _options).map(function (Response) {
             return Response;
         }).catch(function (Response) {
@@ -8285,7 +8366,7 @@ var CallApiService = (function () {
         else if (this.loginSer.getToken() != null) {
             auth = this.loginSer.getToken();
         }
-        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ "Authorization": auth }) };
+        var _options = { headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ "Authorization": auth }) };
         return this.http.post(this.baseUrl + url, fd, _options).timeout(90000).map(function (Response) {
             return Response;
         }).catch(function (Response) {
@@ -8295,8 +8376,8 @@ var CallApiService = (function () {
         });
     };
     CallApiService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_0__login_service__["a" /* LoginService */]])
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1__login_service__["a" /* LoginService */], __WEBPACK_IMPORTED_MODULE_6__angular_material__["H" /* MatSnackBar */]])
     ], CallApiService);
     return CallApiService;
 }());
@@ -8492,7 +8573,7 @@ var DialogServiceService = (function () {
     };
     DialogServiceService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MatDialog */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MatDialog */]])
     ], DialogServiceService);
     return DialogServiceService;
 }());
@@ -8564,7 +8645,7 @@ var GlobalService = (function () {
         this.roles['adminstrator']["ReadForms"] = true;
         this.roles['adminstrator']["WriteCalendar"] = true;
         this.roles['adminstrator']["WriteForms"] = true;
-        this.roles['adminstrator']["Open/BlockCalendar"] = false;
+        this.roles['adminstrator']["Open/BlockCalendar"] = true;
         this.roles['adminstrator']["UserDefinition"] = false;
         this.roles['secretary'] = [];
         this.roles['secretary']["ReadCalendar"] = true;
@@ -8927,8 +9008,10 @@ var LoginService = (function () {
             this.router.navigateByUrl('/addAdvertising').then(function () { return _this.router.navigateByUrl('/'); });
             location.reload();
         }
-        else
-            location.reload();
+        else {
+            this.router.navigate(["login"]),
+                location.reload();
+        }
     };
     LoginService.prototype.setAvatar = function (newAvatar) {
         if (this.isRemember) {
@@ -9955,7 +10038,7 @@ var AdviceFormComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_5__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
             __WEBPACK_IMPORTED_MODULE_9__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_2__core_services_dialog_service_service__["a" /* DialogServiceService */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialog */],
             __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */]])
     ], AdviceFormComponent);
     return AdviceFormComponent;
@@ -10025,7 +10108,7 @@ module.exports = "<style>\r\n  .stripes {\r\n    background-image: repeating-lin
 /***/ "./src/app/main/content/calendar/calendar.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n.cal-month-view .cal-header {\n  text-align: center;\n  font-weight: bolder; }\n.cal-month-view .cal-cell-row:hover {\n  background-color: #fafafa; }\n.cal-month-view .cal-header .cal-cell {\n  padding: 5px 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: block;\n  white-space: nowrap; }\n.cal-month-view .cal-cell-row .cal-cell:hover,\n.cal-month-view .cal-cell.cal-has-events.cal-open {\n  background-color: #ededed; }\n.cal-month-view .cal-days {\n  border: 1px solid #e1e1e1;\n  border-bottom: 0; }\n.cal-month-view .cal-cell-top {\n  min-height: 78px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1; }\n.cal-month-view .cal-cell-row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n.cal-month-view .cal-cell {\n  float: left;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n.cal-month-view .cal-day-cell {\n  min-height: 100px; }\n.cal-month-view .cal-day-cell:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-month-view .cal-days .cal-cell-row {\n  border-bottom: 1px solid #e1e1e1; }\n.cal-month-view .cal-day-badge {\n  margin-top: 18px;\n  margin-left: 10px;\n  background-color: #b94a48;\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 1;\n  color: white;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  border-radius: 10px; }\n.cal-month-view .cal-day-number {\n  font-size: 1.2em;\n  font-weight: 400;\n  opacity: 0.5;\n  margin-top: 15px;\n  margin-right: 15px;\n  float: right;\n  margin-bottom: 10px; }\n.cal-month-view .cal-events {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin: 3px;\n  line-height: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n.cal-month-view .cal-event {\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  display: inline-block;\n  margin: 2px;\n  background-color: #1e90ff;\n  border-color: #D1E8FF;\n  color: #fff; }\n.cal-month-view .cal-event-title:link {\n  color: currentColor; }\n.cal-month-view .cal-day-cell.cal-in-month.cal-has-events {\n  cursor: pointer; }\n.cal-month-view .cal-day-cell.cal-out-month .cal-day-number {\n  opacity: 0.1;\n  cursor: default; }\n.cal-month-view .cal-day-cell.cal-weekend .cal-day-number {\n  color: darkred; }\n.cal-month-view .cal-day-cell.cal-today {\n  background-color: #e8fde7; }\n.cal-month-view .cal-day-cell.cal-today .cal-day-number {\n  font-size: 1.9em; }\n.cal-month-view .cal-day-cell.cal-drag-over {\n  background-color: #e0e0e0 !important; }\n.cal-month-view .cal-open-day-events {\n  padding: 15px;\n  color: white;\n  background-color: #555;\n  -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n          box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5); }\n.cal-month-view .cal-open-day-events .cal-event {\n  position: relative;\n  top: 2px; }\n.cal-month-view .cal-out-month .cal-day-badge,\n.cal-month-view .cal-out-month .cal-event {\n  opacity: 0.3; }\n.cal-week-view .cal-day-headers {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 3px;\n  border: 1px solid #e1e1e1;\n  margin-left: 2px;\n  margin-right: 2px; }\n.cal-week-view .cal-day-headers .cal-header {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n  padding: 5px; }\n.cal-week-view .cal-day-headers .cal-header:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-week-view .cal-day-headers .cal-header:hover,\n.cal-week-view .cal-day-headers .cal-drag-over {\n  background-color: #ededed; }\n.cal-week-view .cal-day-headers span {\n  font-weight: 400;\n  opacity: 0.5; }\n.cal-week-view .cal-events-row {\n  position: relative;\n  height: 33px; }\n.cal-week-view .cal-event-container {\n  display: inline-block;\n  position: absolute; }\n.cal-week-view .cal-event {\n  padding: 0 10px;\n  font-size: 12px;\n  margin-left: 2px;\n  margin-right: 2px;\n  height: 30px;\n  line-height: 30px;\n  background-color: #D1E8FF;\n  border: 1px solid #1e90ff;\n  color: #1e90ff; }\n.cal-week-view .cal-event-title:link {\n  color: currentColor; }\n.cal-week-view .cal-draggable {\n  cursor: move; }\n.cal-week-view .cal-starts-within-week .cal-event {\n  border-top-left-radius: 5px;\n  border-bottom-left-radius: 5px; }\n.cal-week-view .cal-ends-within-week .cal-event {\n  border-top-right-radius: 5px;\n  border-bottom-right-radius: 5px; }\n.cal-week-view .cal-header.cal-today {\n  background-color: #e8fde7; }\n.cal-week-view .cal-header.cal-weekend span {\n  color: #8b0000; }\n.cal-week-view .cal-event,\n.cal-week-view .cal-header {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n.cal-day-view {\n  /* stylelint-disable-next-line selector-type-no-unknown */ }\n.cal-day-view .cal-hour-rows {\n    width: 100%;\n    border: solid 1px #e1e1e1;\n    overflow-x: scroll;\n    position: relative; }\n.cal-day-view .cal-hour:nth-child(odd) {\n    background-color: #fafafa; }\n.cal-day-view mwl-calendar-day-view-hour-segment,\n  .cal-day-view .cal-hour-segment {\n    display: block; }\n.cal-day-view .cal-hour-segment::after {\n    content: '\\00a0'; }\n.cal-day-view .cal-hour:not(:last-child) .cal-hour-segment,\n  .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {\n    border-bottom: thin dashed #e1e1e1; }\n.cal-day-view .cal-time {\n    font-weight: bold;\n    padding-top: 5px;\n    width: 70px;\n    text-align: center; }\n.cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {\n    display: none; }\n.cal-day-view .cal-hour-segment:hover,\n  .cal-day-view .cal-drag-over .cal-hour-segment {\n    background-color: #ededed; }\n.cal-day-view .cal-event-container {\n    position: absolute; }\n.cal-day-view .cal-event {\n    padding: 5px;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    background-color: #D1E8FF;\n    border: 1px solid #1e90ff;\n    color: #1e90ff;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none; }\n.cal-day-view .cal-event-title:link {\n    color: currentColor; }\n.cal-day-view .cal-draggable {\n    cursor: move; }\n.cal-day-view .cal-starts-within-day .cal-event {\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px; }\n.cal-day-view .cal-ends-within-day .cal-event {\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px; }\n.cal-day-view .cal-all-day-event {\n    padding: 8px;\n    border: solid 1px; }\n.cal-tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  font-size: 11px;\n  word-wrap: break-word;\n  opacity: 0.9; }\n.cal-tooltip.cal-tooltip-top {\n  padding: 5px 0;\n  margin-top: -3px; }\n.cal-tooltip.cal-tooltip-top .cal-tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000; }\n.cal-tooltip.cal-tooltip-right {\n  padding: 0 5px;\n  margin-left: 3px; }\n.cal-tooltip.cal-tooltip-right .cal-tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000; }\n.cal-tooltip.cal-tooltip-bottom {\n  padding: 5px 0;\n  margin-top: 3px; }\n.cal-tooltip.cal-tooltip-bottom .cal-tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000; }\n.cal-tooltip.cal-tooltip-left {\n  padding: 0 5px;\n  margin-left: -3px; }\n.cal-tooltip.cal-tooltip-left .cal-tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000; }\n.cal-tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #fff;\n  text-align: center;\n  background-color: #000;\n  border-radius: 0.25rem; }\n.cal-tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid; }\n.cal-month-view .cal-header .cal-cell {\n  font-weight: 500; }\n@media screen and (min-width: 1280px) and (max-width: 1919px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 150px; } }\n@media screen and (min-width: 1920px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 200px; } }\n.cal-month-view .cal-day-cell.cal-open {\n  -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n          box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events {\n  background: #455A64;\n  -webkit-box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n          box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n.cal-month-view .cal-open-day-events > div {\n    padding: 0 16px;\n    margin: 8px 16px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: start;\n    background-color: white;\n    -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n    -webkit-transition: -webkit-box-shadow 300ms ease;\n    transition: -webkit-box-shadow 300ms ease;\n    transition: box-shadow 300ms ease;\n    transition: box-shadow 300ms ease, -webkit-box-shadow 300ms ease; }\n.cal-month-view .cal-open-day-events > div:first-of-type {\n      margin-top: 16px; }\n.cal-month-view .cal-open-day-events > div:last-of-type {\n      margin-bottom: 16px; }\n.cal-month-view .cal-open-day-events > div:hover {\n      -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events > div .cal-event {\n      top: 0;\n      margin: 0; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title .cal-event-title {\n        display: block;\n        padding: 21px 24px;\n        line-height: 1;\n        text-decoration: none;\n        color: black !important; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-week-view .cal-header > b {\n  font-weight: 500; }\n.cal-week-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-week-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      line-height: 1;\n      text-decoration: none;\n      color: black; }\n.cal-week-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-day-view .cal-time {\n  font-weight: 500; }\n.cal-day-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row; }\n.cal-day-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      height: 26px;\n      width: 300px;\n      max-width: 300px;\n      line-height: 26px;\n      text-decoration: none;\n      color: black; }\n.cal-day-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 4px; }\n#calendar {\n  background: #FFFFFF;\n  overflow-x: hidden;\n  overflow-y: auto; }\n#calendar .header {\n    height: 100px;\n    min-height: 100px;\n    max-height: 100px;\n    position: relative;\n    background-size: 100% auto;\n    background-position: 0 50%;\n    background-repeat: no-repeat;\n    background-color: #FAFAFA;\n    color: #FFFFFF; }\n@media screen and (max-width: 599px) {\n      #calendar .header {\n        height: 164px;\n        min-height: 164px;\n        max-height: 164px; } }\n#calendar .header:before {\n      content: '';\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      z-index: 1;\n      background: rgba(0, 0, 0, 0.45); }\n#calendar .header.Jan {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/january.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Feb {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/february.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Mar {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/march.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Apr {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/april.jpg\");\n      background-position: 0 48%; }\n#calendar .header.May {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/may.jpg\");\n      background-position: 0 47%; }\n#calendar .header.Jun {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/june.jpg\");\n      background-position: 0 48%; }\n#calendar .header.Jul {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/july.jpg\");\n      background-position: 0 3%; }\n#calendar .header.Aug {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/august.jpg\");\n      background-position: 0 61%; }\n#calendar .header.Sep {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/september.jpg\");\n      background-position: 0 58%; }\n#calendar .header.Oct {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/october.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Nov {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/november.jpg\");\n      background-position: 0 46%; }\n#calendar .header.Dec {\n      background-image: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/december.jpg\");\n      background-position: 0 43%; }\n#calendar .header .header-content {\n      height: 100%; }\n#calendar .header .header-content .header-top {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-top .logo .logo-icon {\n          margin-right: 16px; }\n#calendar .header .header-content .header-top .logo .logo-text {\n          font-size: 24px; }\n#calendar .header .header-content .header-bottom {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-bottom .title {\n          font-size: 20px;\n          min-width: 160px;\n          text-align: center;\n          font-weight: 500; }\n#calendar .header .add-event-button {\n      position: absolute;\n      right: 18px;\n      bottom: -32px;\n      z-index: 10; }\n#calendar .header mat-icon {\n      color: #FFFFFF; }\n#calendar .content {\n    padding: 24px; }\n.cal-day-view .cal-starts-within-day .cal-event {\n  width: -webkit-fit-content !important;\n  width: -moz-fit-content !important;\n  width: fit-content !important;\n  min-width: 200px; }\n.cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {\n  line-height: 14px; }\n.cal-cell-consultants table {\n  text-align: center;\n  width: 100%; }\n.cal-cell-consultants table .cal-event {\n    position: relative;\n    top: 1.5px; }\n"
+module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n.cal-month-view .cal-header {\n  text-align: center;\n  font-weight: bolder; }\n.cal-month-view .cal-cell-row:hover {\n  background-color: #fafafa; }\n.cal-month-view .cal-header .cal-cell {\n  padding: 5px 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: block;\n  white-space: nowrap; }\n.cal-month-view .cal-cell-row .cal-cell:hover,\n.cal-month-view .cal-cell.cal-has-events.cal-open {\n  background-color: #ededed; }\n.cal-month-view .cal-days {\n  border: 1px solid #e1e1e1;\n  border-bottom: 0; }\n.cal-month-view .cal-cell-top {\n  min-height: 78px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1; }\n.cal-month-view .cal-cell-row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n.cal-month-view .cal-cell {\n  float: left;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n.cal-month-view .cal-day-cell {\n  min-height: 100px; }\n.cal-month-view .cal-day-cell:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-month-view .cal-days .cal-cell-row {\n  border-bottom: 1px solid #e1e1e1; }\n.cal-month-view .cal-day-badge {\n  margin-top: 18px;\n  margin-left: 10px;\n  background-color: #b94a48;\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 1;\n  color: white;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  border-radius: 10px; }\n.cal-month-view .cal-day-number {\n  font-size: 1.2em;\n  font-weight: 400;\n  opacity: 0.5;\n  margin-top: 15px;\n  margin-right: 15px;\n  float: right;\n  margin-bottom: 10px; }\n.cal-month-view .cal-events {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin: 3px;\n  line-height: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n.cal-month-view .cal-event {\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  display: inline-block;\n  margin: 2px;\n  background-color: #1e90ff;\n  border-color: #D1E8FF;\n  color: #fff; }\n.cal-month-view .cal-event-title:link {\n  color: currentColor; }\n.cal-month-view .cal-day-cell.cal-in-month.cal-has-events {\n  cursor: pointer; }\n.cal-month-view .cal-day-cell.cal-out-month .cal-day-number {\n  opacity: 0.1;\n  cursor: default; }\n.cal-month-view .cal-day-cell.cal-weekend .cal-day-number {\n  color: darkred; }\n.cal-month-view .cal-day-cell.cal-today {\n  background-color: #e8fde7; }\n.cal-month-view .cal-day-cell.cal-today .cal-day-number {\n  font-size: 1.9em; }\n.cal-month-view .cal-day-cell.cal-drag-over {\n  background-color: #e0e0e0 !important; }\n.cal-month-view .cal-open-day-events {\n  padding: 15px;\n  color: white;\n  background-color: #555;\n  -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n          box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5); }\n.cal-month-view .cal-open-day-events .cal-event {\n  position: relative;\n  top: 2px; }\n.cal-month-view .cal-out-month .cal-day-badge,\n.cal-month-view .cal-out-month .cal-event {\n  opacity: 0.3; }\n.cal-week-view .cal-day-headers {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 3px;\n  border: 1px solid #e1e1e1;\n  margin-left: 2px;\n  margin-right: 2px; }\n.cal-week-view .cal-day-headers .cal-header {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  text-align: center;\n  padding: 5px; }\n.cal-week-view .cal-day-headers .cal-header:not(:last-child) {\n  border-right: 1px solid #e1e1e1; }\n.cal-week-view .cal-day-headers .cal-header:hover,\n.cal-week-view .cal-day-headers .cal-drag-over {\n  background-color: #ededed; }\n.cal-week-view .cal-day-headers span {\n  font-weight: 400;\n  opacity: 0.5; }\n.cal-week-view .cal-events-row {\n  position: relative;\n  height: 33px; }\n.cal-week-view .cal-event-container {\n  display: inline-block;\n  position: absolute; }\n.cal-week-view .cal-event {\n  padding: 0 10px;\n  font-size: 12px;\n  margin-left: 2px;\n  margin-right: 2px;\n  height: 30px;\n  line-height: 30px;\n  background-color: #D1E8FF;\n  border: 1px solid #1e90ff;\n  color: #1e90ff; }\n.cal-week-view .cal-event-title:link {\n  color: currentColor; }\n.cal-week-view .cal-draggable {\n  cursor: move; }\n.cal-week-view .cal-starts-within-week .cal-event {\n  border-top-left-radius: 5px;\n  border-bottom-left-radius: 5px; }\n.cal-week-view .cal-ends-within-week .cal-event {\n  border-top-right-radius: 5px;\n  border-bottom-right-radius: 5px; }\n.cal-week-view .cal-header.cal-today {\n  background-color: #e8fde7; }\n.cal-week-view .cal-header.cal-weekend span {\n  color: #8b0000; }\n.cal-week-view .cal-event,\n.cal-week-view .cal-header {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n.cal-day-view {\n  /* stylelint-disable-next-line selector-type-no-unknown */ }\n.cal-day-view .cal-hour-rows {\n    width: 100%;\n    border: solid 1px #e1e1e1;\n    overflow-x: scroll;\n    position: relative; }\n.cal-day-view .cal-hour:nth-child(odd) {\n    background-color: #fafafa; }\n.cal-day-view mwl-calendar-day-view-hour-segment,\n  .cal-day-view .cal-hour-segment {\n    display: block; }\n.cal-day-view .cal-hour-segment::after {\n    content: '\\00a0'; }\n.cal-day-view .cal-hour:not(:last-child) .cal-hour-segment,\n  .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {\n    border-bottom: thin dashed #e1e1e1; }\n.cal-day-view .cal-time {\n    font-weight: bold;\n    padding-top: 5px;\n    width: 70px;\n    text-align: center; }\n.cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {\n    display: none; }\n.cal-day-view .cal-hour-segment:hover,\n  .cal-day-view .cal-drag-over .cal-hour-segment {\n    background-color: #ededed; }\n.cal-day-view .cal-event-container {\n    position: absolute; }\n.cal-day-view .cal-event {\n    padding: 5px;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    background-color: #D1E8FF;\n    border: 1px solid #1e90ff;\n    color: #1e90ff;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none; }\n.cal-day-view .cal-event-title:link {\n    color: currentColor; }\n.cal-day-view .cal-draggable {\n    cursor: move; }\n.cal-day-view .cal-starts-within-day .cal-event {\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px; }\n.cal-day-view .cal-ends-within-day .cal-event {\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px; }\n.cal-day-view .cal-all-day-event {\n    padding: 8px;\n    border: solid 1px; }\n.cal-tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  font-size: 11px;\n  word-wrap: break-word;\n  opacity: 0.9; }\n.cal-tooltip.cal-tooltip-top {\n  padding: 5px 0;\n  margin-top: -3px; }\n.cal-tooltip.cal-tooltip-top .cal-tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000; }\n.cal-tooltip.cal-tooltip-right {\n  padding: 0 5px;\n  margin-left: 3px; }\n.cal-tooltip.cal-tooltip-right .cal-tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000; }\n.cal-tooltip.cal-tooltip-bottom {\n  padding: 5px 0;\n  margin-top: 3px; }\n.cal-tooltip.cal-tooltip-bottom .cal-tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000; }\n.cal-tooltip.cal-tooltip-left {\n  padding: 0 5px;\n  margin-left: -3px; }\n.cal-tooltip.cal-tooltip-left .cal-tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000; }\n.cal-tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #fff;\n  text-align: center;\n  background-color: #000;\n  border-radius: 0.25rem; }\n.cal-tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid; }\n.cal-month-view .cal-header .cal-cell {\n  font-weight: 500; }\n@media screen and (min-width: 1280px) and (max-width: 1919px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 150px; } }\n@media screen and (min-width: 1920px) {\n  .cal-month-view .cal-day-cell {\n    min-height: 200px; } }\n.cal-month-view .cal-day-cell.cal-open {\n  -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n          box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events {\n  background: #455A64;\n  -webkit-box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n          box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.54);\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n.cal-month-view .cal-open-day-events > div {\n    padding: 0 16px;\n    margin: 8px 16px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: start;\n    background-color: white;\n    -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n    -webkit-transition: -webkit-box-shadow 300ms ease;\n    transition: -webkit-box-shadow 300ms ease;\n    transition: box-shadow 300ms ease;\n    transition: box-shadow 300ms ease, -webkit-box-shadow 300ms ease; }\n.cal-month-view .cal-open-day-events > div:first-of-type {\n      margin-top: 16px; }\n.cal-month-view .cal-open-day-events > div:last-of-type {\n      margin-bottom: 16px; }\n.cal-month-view .cal-open-day-events > div:hover {\n      -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }\n.cal-month-view .cal-open-day-events > div .cal-event {\n      top: 0;\n      margin: 0; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-title .cal-event-title {\n        display: block;\n        padding: 21px 24px;\n        line-height: 1;\n        text-decoration: none;\n        color: black !important; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-month-view .cal-open-day-events > div mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-week-view .cal-header > b {\n  font-weight: 500; }\n.cal-week-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-week-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      line-height: 1;\n      text-decoration: none;\n      color: black; }\n.cal-week-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-week-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 8px; }\n.cal-day-view .cal-time {\n  font-weight: 500; }\n.cal-day-view .cal-event {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row; }\n.cal-day-view .cal-event mwl-calendar-event-title {\n    display: block;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0; }\n.cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {\n      display: block;\n      height: 26px;\n      width: 300px;\n      max-width: 300px;\n      line-height: 26px;\n      text-decoration: none;\n      color: black; }\n.cal-day-view .cal-event mwl-calendar-event-actions {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n.cal-day-view .cal-event mwl-calendar-event-actions .cal-event-actions .cal-event-action {\n        display: block;\n        line-height: 1;\n        padding: 4px; }\n#calendar {\n  background: #FFFFFF;\n  overflow-x: hidden;\n  overflow-y: auto; }\n#calendar .header {\n    height: 100px;\n    min-height: 100px;\n    max-height: 100px;\n    position: relative;\n    background-size: 100% auto;\n    background-position: 0 50%;\n    background-repeat: no-repeat;\n    background-color: #FAFAFA;\n    color: #FFFFFF; }\n@media screen and (max-width: 599px) {\n      #calendar .header {\n        height: 164px;\n        min-height: 164px;\n        max-height: 164px; } }\n#calendar .header:before {\n      content: '';\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      z-index: 1;\n      background: rgba(0, 0, 0, 0.45); }\n#calendar .header.Jan {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/january.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Feb {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/february.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Mar {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/march.jpg\");\n      background-position: 0 45%; }\n#calendar .header.Apr {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/april.jpg\");\n      background-position: 0 48%; }\n#calendar .header.May {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/may.jpg\");\n      background-position: 0 47%; }\n#calendar .header.Jun {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/june.jpg\");\n      background-position: 0 48%; }\n#calendar .header.Jul {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/july.jpg\");\n      background-position: 0 3%; }\n#calendar .header.Aug {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/august.jpg\");\n      background-position: 0 61%; }\n#calendar .header.Sep {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/september.jpg\");\n      background-position: 0 58%; }\n#calendar .header.Oct {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/october.jpg\");\n      background-position: 0 50%; }\n#calendar .header.Nov {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/november.jpg\");\n      background-position: 0 46%; }\n#calendar .header.Dec {\n      background-image: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/december.jpg\");\n      background-position: 0 43%; }\n#calendar .header .header-content {\n      height: 100%; }\n#calendar .header .header-content .header-top {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-top .logo .logo-icon {\n          margin-right: 16px; }\n#calendar .header .header-content .header-top .logo .logo-text {\n          font-size: 24px; }\n#calendar .header .header-content .header-bottom {\n        position: relative;\n        z-index: 2; }\n#calendar .header .header-content .header-bottom .title {\n          font-size: 20px;\n          min-width: 160px;\n          text-align: center;\n          font-weight: 500; }\n#calendar .header .add-event-button {\n      position: absolute;\n      right: 18px;\n      bottom: -32px;\n      z-index: 10; }\n#calendar .header mat-icon {\n      color: #FFFFFF; }\n#calendar .content {\n    padding: 24px; }\n.cal-day-view .cal-starts-within-day .cal-event {\n  width: -webkit-fit-content !important;\n  width: -moz-fit-content !important;\n  width: fit-content !important;\n  min-width: 200px; }\n.cal-day-view .cal-event mwl-calendar-event-title .cal-event-title {\n  line-height: 14px; }\n.cal-cell-consultants table {\n  text-align: center;\n  width: 100%; }\n.cal-cell-consultants table .cal-event {\n    position: relative;\n    top: 1.5px; }\n"
 
 /***/ }),
 
@@ -10411,7 +10494,7 @@ var CalendarComponent = (function () {
             ]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__json_service__["a" /* JsonService */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_material__["k" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["l" /* MatDialog */],
             __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_11__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
             __WEBPACK_IMPORTED_MODULE_12__core_services_call_api_service__["a" /* CallApiService */],
@@ -10577,7 +10660,7 @@ var FuseCalendarEventFormDialogComponent = (function () {
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */]])
     ], FuseCalendarEventFormDialogComponent);
     return FuseCalendarEventFormDialogComponent;
 }());
@@ -10908,7 +10991,7 @@ module.exports = ""
 /***/ "./src/app/main/content/client-calendar/client-calendar/client-calendar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"appointmentIsSelected==false\" class=\"titleSelect\" style=\"\">\r\n  <h1>{{'Calender.Select_Appointment' | translate}}</h1>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected==false\" class=\"mainContainer\">\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainTable\" style=\"\r\n  margin: 0px auto;margin-top: 100px;\">\r\n\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n\r\n    <div style=\"padding-left: 10px\" *ngIf=\"bodyevents.length==0\">\r\n      <h1 style=\"text-align: center;\r\n    padding-top: 15%;\">{{'Calender.Placeholder_No_Appointment' | translate}}</h1>\r\n    </div>\r\n\r\n    <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\"\r\n      [scrollbarH]=\"true\" [rowClass]=\"\" *ngIf=\"bodyevents.length!=0\">\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-raised-button class=\"save-button mat-accent\" (click)=\"useAppointment(row)\">\r\n            <span>{{'Calender.BOOK' | translate}}</span>\r\n          </button>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [cellClass]=\"'hideColuumn'\"\r\n        [headerClass]=\"'hideColuumn'\" prop=\"date\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.DATE' | translate}}</span>\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [width]=\"200\" prop=\"bodyEnd\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.TIME' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n          {{row.bodyStart}} -- {{row.bodyEnd}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.LOCATION' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <!-- <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button  class=\"save-button mat-accent\" (click)=\"viewAppointment(row)\">\r\n          <span>{{'Calender.VIEW' | translate}}</span>\r\n        </button>\r\n      </ng-template>\r\n    </ngx-datatable-column> -->\r\n\r\n\r\n    </ngx-datatable>\r\n  </div>\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainCalender\"\r\n    style=\"margin: 0px auto;margin-top: 40px;height: 550px;\">\r\n    <!-- <mat-card> -->\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n    <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth custom-calender\" fusePerfectScrollbar>\r\n\r\n      <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n        <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n          <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n            <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n              <!-- <mat-icon class=\"logo-icon\">today</mat-icon> -->\r\n\r\n              <!-- <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span> -->\r\n\r\n            </div>\r\n\r\n            <!-- <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"mat-icon-button\" mwlCalendarToday [(viewDate)]=\"viewDate\"\r\n                (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Today\" matTooltip=\"Today\">\r\n                <mat-icon>today</mat-icon>\r\n              </button>\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('day')\" aria-label=\"Day\" matTooltip=\"Day\">\r\n                <mat-icon>view_day</mat-icon>\r\n              </button>\r\n\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('month')\" aria-label=\"Month\"\r\n              matTooltip=\"Month\">\r\n              <mat-icon>view_module</mat-icon>\r\n            </button>\r\n          </div> -->\r\n          </div>\r\n          <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\"\r\n              [(viewDate)]=\"viewDate\" (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Previous\">\r\n              <mat-icon>chevron_left</mat-icon>\r\n            </button>\r\n\r\n            <div class=\"title\" style=\"display: inline-block;\">\r\n              {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n            </div>\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\"\r\n              (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Next\">\r\n              <mat-icon>chevron_right</mat-icon>\r\n            </button>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n        <div class=\"cal-cell-top\" [ngClass]=\"{'first': isSelectedDay(day.date),'disabled':isOldDate(day.date)}\">\r\n          <!-- <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }} </span> -->\r\n          <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n          <div *ngIf=\"isHasConsDay(day.date)\" class=\"hasCons\"></div>\r\n        </div>\r\n        <!-- @todo show real data -->\r\n      </ng-template>\r\n\r\n      <div class=\"content\" fusePerfectScrollbar>\r\n        <div [ngSwitch]=\"view\">\r\n          <div>\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n              (dayClicked)=\"dayClicked($event.day)\" [cellTemplate]=\"customCellTemplate\">\r\n            </mwl-calendar-month-view>\r\n          </div>\r\n\r\n          <!-- <div *ngIf=\"monthEvent == null\">\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (dayClicked)=\"dayClicked($event.day)\">\r\n            </mwl-calendar-month-view>\r\n          </div> -->\r\n\r\n          <!-- <div *ngIf=\"dayEvent.length > 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [tooltipPlacement]=\"'right'\" [viewDate]=\"viewDate\"\r\n              [events]=\"dayEvent\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked',\r\n              $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div>\r\n          <div *ngIf=\"dayEvent.length == 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"dayEvent\" [refresh]=\"refresh\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div> -->\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- <mat-calendar #calendar [selected]=\"selectedDate\"  (monthSelected)=\"monthSelected\" [minDate]=\"today\" (selectedChange)=\"onSelect($event)\"></mat-calendar> -->\r\n    <!-- </mat-card> -->\r\n  </div>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected\" id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\"\r\n  fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100 h-100-custom\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div style=\"width: 100%;\" fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <label style=\"width: 100%;text-align: center\">\r\n        You have successfully booked your appointment. A confirmation has been sent to you via email\r\n      </label>\r\n    </div>\r\n    <!-- / HEADER -->\r\n\r\n    <!-- CONTENT -->\r\n    <!-- / CONTENT -->\r\n\r\n  </div>\r\n"
+module.exports = "<div *ngIf=\"appointmentIsSelected==false\" class=\"titleSelect\" style=\"\">\r\n  <h1>{{'Calender.Select_Appointment' | translate}}</h1>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected==false\" class=\"mainContainer\">\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainTable\" style=\"\r\n  margin: 0px auto;margin-top: 100px;\">\r\n\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n\r\n    <div style=\"padding-left: 10px\" *ngIf=\"bodyevents.length==0\">\r\n      <h1 style=\"text-align: center;\r\n    padding-top: 15%;\">{{'Calender.Placeholder_No_Appointment' | translate}}</h1>\r\n    </div>\r\n\r\n\r\n    <ngx-datatable class=\"material\" [rows]=\"bodyevents\" [columnMode]=\"'force'\" [headerHeight]=\"48\" [rowHeight]=\"'auto'\"\r\n      [scrollbarH]=\"true\" [rowClass]=\"\" *ngIf=\"bodyevents.length!=0\">\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n          <button mat-raised-button class=\"save-button mat-accent\" (click)=\"useAppointment(row)\">\r\n            <span>{{'Calender.BOOK' | translate}}</span>\r\n          </button>\r\n\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [cellClass]=\"'hideColuumn'\"\r\n        [headerClass]=\"'hideColuumn'\" prop=\"date\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.DATE' | translate}}</span>\r\n        </ng-template>\r\n\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" [width]=\"200\" prop=\"bodyEnd\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.TIME' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template style=\"background-color: aqua\">\r\n          {{row.bodyStart}} -- {{row.bodyEnd}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n      <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"meta.location\">\r\n        <ng-template let-column=\"column\" ngx-datatable-header-template let-sort=\"sortFn\">\r\n          <span>{{'Calender.LOCATION' | translate}}</span>\r\n        </ng-template>\r\n        <ng-template let-value=\"value\" ngx-datatable-cell-template>\r\n          {{value}}\r\n        </ng-template>\r\n      </ngx-datatable-column>\r\n\r\n      <!-- <ngx-datatable-column [canAutoResize]=\"true\" [flexGrow]=\"1\" prop=\"\">\r\n\r\n      <ng-template let-row=\"row\" let-value=\"value\" ngx-datatable-cell-template>\r\n        <button mat-raised-button  class=\"save-button mat-accent\" (click)=\"viewAppointment(row)\">\r\n          <span>{{'Calender.VIEW' | translate}}</span>\r\n        </button>\r\n      </ng-template>\r\n    </ngx-datatable-column> -->\r\n\r\n\r\n    </ngx-datatable>\r\n  </div>\r\n  <div *ngIf=\"appointmentIsSelected==false\" class=\"mainCalender\"\r\n    style=\"margin: 0px auto;margin-top: 40px;height: 550px;\">\r\n    <!-- <mat-card> -->\r\n    <mat-form-field style=\"width: 100%;\">\r\n      <mat-select (selectionChange)=\"changeTimezone($event.value)\" [(value)]=\"timezoneSelect\"\r\n        placeholder=\"{{ 'Calender.CHOOSETIMEZONE' | translate }}\">\r\n        <!--<ngx-mat-select-search [formControl]=\"bankFilterCtrl\"></ngx-mat-select-search>-->\r\n        <mat-option *ngFor=\"let oneTimeZone of timeZoneArray\" [value]=\"oneTimeZone.value\">\r\n          {{ oneTimeZone.viewValue }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-icon matSuffix>time</mat-icon>\r\n    </mat-form-field>\r\n\r\n    <div id=\"calendar\" dir=\"ltr\" class=\"page-layout simple fullwidth custom-calender\" fusePerfectScrollbar>\r\n\r\n      <div class=\"header p-16 p-sm-24\" [ngClass]=\"viewDate | date:'MMM'\">\r\n\r\n        <div class=\"header-content\" fxLayout=\"column\" fxLayoutAlign=\"space-between\">\r\n\r\n          <div class=\"header-top\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayout.xs=\"column\">\r\n\r\n            <div class=\"logo mb-16 mb-sm-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n              <!-- <mat-icon class=\"logo-icon\">today</mat-icon> -->\r\n\r\n              <!-- <span class=\"logo-text\">{{ 'Calender.TITLE' | translate}}</span> -->\r\n\r\n            </div>\r\n\r\n            <!-- <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n\r\n            <button mat-button class=\"mat-icon-button\" mwlCalendarToday [(viewDate)]=\"viewDate\"\r\n                (viewDateChange)=\"selectedDay = {date:$event}\" aria-label=\"Today\" matTooltip=\"Today\">\r\n                <mat-icon>today</mat-icon>\r\n              </button>\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('day')\" aria-label=\"Day\" matTooltip=\"Day\">\r\n                <mat-icon>view_day</mat-icon>\r\n              </button>\r\n\r\n            <button mat-button class=\"mat-icon-button\" (click)=\"changeView('month')\" aria-label=\"Month\"\r\n              matTooltip=\"Month\">\r\n              <mat-icon>view_module</mat-icon>\r\n            </button>\r\n          </div> -->\r\n          </div>\r\n          <div class=\"header-bottom\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarPreviousView [view]=\"view\"\r\n              [(viewDate)]=\"viewDate\" (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Previous\">\r\n              <mat-icon>chevron_left</mat-icon>\r\n            </button>\r\n\r\n            <div class=\"title\" style=\"display: inline-block;\">\r\n              {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}\r\n            </div>\r\n\r\n            <button mat-button class=\"mat-icon-button arrow\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\"\r\n              (viewDateChange)=\"getConsInMonth($event)\" aria-label=\"Next\">\r\n              <mat-icon>chevron_right</mat-icon>\r\n            </button>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <ng-template #customCellTemplate let-day=\"day\" let-locale=\"locale\">\r\n        <div class=\"cal-cell-top\" [ngClass]=\"{'first': isSelectedDay(day.date),'disabled':isOldDate(day.date)}\">\r\n          <!-- <span class=\"cal-day-badge\" *ngIf=\"day.badgeTotal > 0\">{{ day.badgeTotal }} </span> -->\r\n          <span class=\"cal-day-number\">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>\r\n          <div *ngIf=\"isHasConsDay(day.date)\" class=\"hasCons\"></div>\r\n        </div>\r\n        <!-- @todo show real data -->\r\n      </ng-template>\r\n\r\n      <div class=\"content\" fusePerfectScrollbar>\r\n        <div [ngSwitch]=\"view\">\r\n          <div>\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n              (dayClicked)=\"dayClicked($event.day)\" [cellTemplate]=\"customCellTemplate\">\r\n            </mwl-calendar-month-view>\r\n          </div>\r\n\r\n          <!-- <div *ngIf=\"monthEvent == null\">\r\n            <mwl-calendar-month-view *ngSwitchCase=\"'month'\" [viewDate]=\"viewDate\" [events]=\"monthEvent\"\r\n              [refresh]=\"refresh\" [openDayEventsTemplate]=\"tt\" [eventTitleTemplate]=\"rr\"\r\n              (eventTimesChanged)=\"eventTimesChanged($event)\" [activeDayIsOpen]=\"activeDayIsOpen\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (dayClicked)=\"dayClicked($event.day)\">\r\n            </mwl-calendar-month-view>\r\n          </div> -->\r\n\r\n          <!-- <div *ngIf=\"dayEvent.length > 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [tooltipPlacement]=\"'right'\" [viewDate]=\"viewDate\"\r\n              [events]=\"dayEvent\" [refresh]=\"refresh\" (eventClicked)=\"handleEvent('Clicked',\r\n              $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div>\r\n          <div *ngIf=\"dayEvent.length == 0\">\r\n            <mwl-calendar-day-view *ngSwitchCase=\"'day'\" [viewDate]=\"viewDate\" [events]=\"dayEvent\" [refresh]=\"refresh\"\r\n              (eventClicked)=\"handleEvent('Clicked', $event.event)\" (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n            </mwl-calendar-day-view>\r\n          </div> -->\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- <mat-calendar #calendar [selected]=\"selectedDate\"  (monthSelected)=\"monthSelected\" [minDate]=\"today\" (selectedChange)=\"onSelect($event)\"></mat-calendar> -->\r\n    <!-- </mat-card> -->\r\n  </div>\r\n</div>\r\n<div *ngIf=\"appointmentIsSelected\" id=\"forms\" class=\"page-layout simple fullwidth\" fxLayout=\"column\"\r\n  fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100 h-100-custom\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n    <div style=\"width: 100%;\" fxLayout=\"column\" fxLayoutAlign=\"center start\">\r\n      <label style=\"width: 100%;text-align: center\">\r\n        You have successfully booked your appointment. A confirmation has been sent to you via email\r\n      </label>\r\n    </div>\r\n    <!-- / HEADER -->\r\n\r\n    <!-- CONTENT -->\r\n    <!-- / CONTENT -->\r\n\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -11085,9 +11168,24 @@ var ClientCalendarComponent = (function () {
     };
     ClientCalendarComponent.prototype.changeDayAnas = function () {
         var _this = this;
+        var self = this;
+        var monthSelected = (this.selectedDate.getMonth() + 1);
+        var yearSelected = this.selectedDate.getFullYear();
+        var daySelected = this.selectedDate.getDate();
+        var monthSelectedString = "";
+        var daySelectedString = "";
+        if (monthSelected < 10)
+            monthSelectedString = "0" + monthSelected;
+        else
+            monthSelectedString = monthSelected.toString();
+        if (daySelected < 10)
+            daySelectedString = "0" + daySelected;
+        else
+            daySelectedString = daySelected.toString();
         this.mainServ.loaderSer.display(true);
-        var tempFrom = this.toTimeZone(this.selectedDate.getFullYear() + "-" + (this.selectedDate.getMonth() + 1) + "-" + this.selectedDate.getDate(), this.timezoneSelect);
-        var tempTo = this.toTimeZone(this.selectedDate.getFullYear() + "-" + (this.selectedDate.getMonth() + 1) + "-" + this.selectedDate.getDate(), this.timezoneSelect);
+        var tempFrom = this.toTimeZone(yearSelected + "-" + monthSelectedString + "-" + daySelectedString, this.timezoneSelect);
+        // let tempFrom = moment()
+        var tempTo = this.toTimeZone(yearSelected + "-" + monthSelectedString + "-" + daySelectedString, this.timezoneSelect);
         tempFrom.month(this.selectedDate.getMonth());
         tempFrom.year(this.selectedDate.getFullYear());
         tempFrom.date(this.selectedDate.getDate());
@@ -11103,10 +11201,11 @@ var ClientCalendarComponent = (function () {
         // console.log("to")
         // console.log(tempTo.format())
         this.bodyevents = [];
-        this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&dateEnd=" + new Date(tempTo.format("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() + "&available=true", this.token).subscribe(function (data) {
+        this.mainServ.APIServ.get("consTimes/readCalander?ids=" + this.consId + "&dateStart=" + new Date(tempFrom.toDate()).toISOString() + "&dateEnd=" + new Date(tempTo.toDate()).toISOString() + "&available=true", this.token).subscribe(function (data) {
             if (_this.mainServ.APIServ.getErrorCode() == 0) {
                 var tempEvents;
                 data['readCalander'][0]['slots'].forEach(function (element) {
+                    _this.setTimeZone();
                     var x = {
                         start: new Date(element.startDate),
                         end: new Date(element.endDate),
@@ -11114,13 +11213,12 @@ var ClientCalendarComponent = (function () {
                         meta: element,
                     };
                     x['date'] = x['start'].getFullYear() + "-" + (x['start'].getMonth() + 1) + "-" + x['start'].getDate();
-                    var dateStartString = x['start'].getFullYear() + "-" + x['start'].getMonth() + "-" + x['start'].getDate()
-                        + " " + x['start'].getHours() + ":" + x['start'].getMinutes();
+                    var dateStartString = x['start'].getFullYear() + "-" + self.changeToTow(x['start'].getMonth()) + "-" + self.changeToTow(x['start'].getDate())
+                        + " " + self.changeToTow(x['start'].getHours()) + ":" + self.changeToTow(x['start'].getMinutes());
                     x['bodyStart'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateStartString).tz(_this.timezoneSelect).format('hh : mm');
-                    var dateEndString = x['end'].getFullYear() + "-" + x['end'].getMonth() + "-" + x['end'].getDate()
-                        + " " + x['end'].getHours() + ":" + x['end'].getMinutes();
+                    var dateEndString = x['end'].getFullYear() + "-" + self.changeToTow(x['end'].getMonth()) + "-" + self.changeToTow(x['end'].getDate())
+                        + " " + self.changeToTow(x['end'].getHours()) + ":" + self.changeToTow(x['end'].getMinutes());
                     x['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateEndString).tz(_this.timezoneSelect).format('hh : mm');
-                    _this.setTimeZone();
                     _this.bodyevents.push(x);
                 });
                 _this.mainServ.loaderSer.display(false);
@@ -11132,6 +11230,12 @@ var ClientCalendarComponent = (function () {
             }
         });
         // this.mainServ.loaderSer.display(false);
+    };
+    ClientCalendarComponent.prototype.changeToTow = function (number) {
+        if (number < 10)
+            return "0" + number;
+        else
+            return number;
     };
     ClientCalendarComponent.prototype.dayClicked = function (event) {
         if (this.isOldDate(event.date))
@@ -11239,7 +11343,7 @@ var ClientCalendarComponent = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["ViewChild"])('calendar'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_12__angular_material__["f" /* MatCalendar */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_12__angular_material__["g" /* MatCalendar */])
     ], ClientCalendarComponent.prototype, "calendar", void 0);
     ClientCalendarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["Component"])({
@@ -11257,7 +11361,7 @@ var ClientCalendarComponent = (function () {
             ]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__calendar_json_service__["a" /* JsonService */],
-            __WEBPACK_IMPORTED_MODULE_12__angular_material__["k" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_12__angular_material__["l" /* MatDialog */],
             __WEBPACK_IMPORTED_MODULE_5__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_6__angular_core__["Renderer2"],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */],
@@ -11562,7 +11666,7 @@ var AddApointmentComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/add-apointment/add-apointment.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_5__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
@@ -11766,7 +11870,7 @@ var AddSlotesComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/add-slotes/add-slotes.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
@@ -11832,7 +11936,7 @@ var ConfirmAddFormComponent = (function () {
             template: __webpack_require__("./src/app/main/content/dialogs/confirm-add-form/confirm-add-form.component.html"),
             styles: [__webpack_require__("./src/app/main/content/dialogs/confirm-add-form/confirm-add-form.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["m" /* MatDialogRef */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["n" /* MatDialogRef */],
             __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
     ], ConfirmAddFormComponent);
@@ -11952,7 +12056,7 @@ var ConfirmMessageComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/confirm-message/confirm-message.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_0__ngx_translate_core__["b" /* TranslateService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_0__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_1__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
             __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */]])
     ], ConfirmMessageComponent);
@@ -12051,7 +12155,7 @@ var DeleteAppointmentComponent = (function () {
         }),
         __param(2, Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__["a" /* MainService */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_1__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
@@ -12136,7 +12240,7 @@ var MessageComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/message/message.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_0__ngx_translate_core__["b" /* TranslateService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_0__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_1__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
             __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */]])
     ], MessageComponent);
@@ -12150,7 +12254,7 @@ var MessageComponent = (function () {
 /***/ "./src/app/main/content/dialogs/reset-password/reset-password.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n\n<!--component html goes here -->\n<h1 mat-dialog-title> {{'Dialog.Reset_Password.TITLE' | translate}}</h1>\n<div mat-dialog-content>\n  <form class=\"\" [formGroup]=\"regiForm\">\n\n    <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n      <!-- <mat-form-field fxFlex=\"100\" style=\"width: 100%;\">\n\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.OLDPASSWORD' | translate}}\" formControlName=\"oldPassword\" type=\"password\">\n        <mat-icon matSuffix>remove_red_eye</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field> -->\n\n      <mat-form-field fxFlex=\"100\">\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.NEWPASSWORD' | translate}}\" formControlName=\"newPassword\" type=\"password\">\n\n        <mat-icon matSuffix>remove_red_eye</mat-icon>\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n    </div>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"update()\" cdkFocusInitial [disabled]=\"regiForm.invalid\">{{'Dialog.Reset_Password.RESET' | translate}}</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n\n<!--component html goes here -->\n<h1 mat-dialog-title> {{'Dialog.Reset_Password.TITLE' | translate}}</h1>\n<div mat-dialog-content>\n  <form class=\"\" [formGroup]=\"regiForm\">\n\n    <div style=\"padding-top:5px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\n      <!-- <mat-form-field fxFlex=\"100\" style=\"width: 100%;\">\n\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.OLDPASSWORD' | translate}}\" formControlName=\"oldPassword\" type=\"password\">\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field> -->\n\n      <mat-form-field fxFlex=\"100\">\n        <input autocomplete=\"off\"  matInput placeholder=\"{{'Dialog.Reset_Password.NEWPASSWORD' | translate}}\" formControlName=\"newPassword\" [type]=\"hide ? 'password' : 'text'\">\n\n        <mat-icon class=\"hover\" matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>\n\n        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\n      </mat-form-field>\n\n    </div>\n  </form>\n</div>\n<div mat-dialog-actions>\n  <!--<button mat-button (click)=\"onNoClick()\">No</button>-->\n  <button mat-button (click)=\"update()\" cdkFocusInitial [disabled]=\"regiForm.invalid\">{{'Dialog.Reset_Password.RESET' | translate}}</button>\n</div>\n"
 
 /***/ }),
 
@@ -12202,6 +12306,7 @@ var ResetPasswordComponent = (function () {
         this._formBuilder = _formBuilder;
         this.translate = translate;
         this.translationLoader = translationLoader;
+        this.hide = true;
         this.userId = data['userId'];
         this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_6__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_7__languageFiles_fa__["a" /* locale */]);
     }
@@ -12229,7 +12334,7 @@ var ResetPasswordComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/reset-password/reset-password.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
@@ -12304,7 +12409,7 @@ var ResponeFormComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/respone-form/respone-form.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__["a" /* MainService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_1__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_0__angular_router__["d" /* Router */]])
     ], ResponeFormComponent);
     return ResponeFormComponent;
@@ -12365,7 +12470,7 @@ var ResponseSelectSloteComponent = (function () {
             template: __webpack_require__("./src/app/main/content/dialogs/respone-select-slote/response-select-slote.component.html"),
             styles: [__webpack_require__("./src/app/main/content/dialogs/respone-select-slote/response-select-slote.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["m" /* MatDialogRef */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["n" /* MatDialogRef */],
             __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
     ], ResponseSelectSloteComponent);
@@ -12475,7 +12580,7 @@ var SetTextBoxAdminComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/set-text-box-admin/set-text-box-admin.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */]])
@@ -12532,7 +12637,7 @@ var SuccessMessageComponent = (function () {
             template: __webpack_require__("./src/app/main/content/dialogs/success-message/success-message.component.html"),
             styles: [__webpack_require__("./src/app/main/content/dialogs/success-message/success-message.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_material__["m" /* MatDialogRef */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_material__["n" /* MatDialogRef */]])
     ], SuccessMessageComponent);
     return SuccessMessageComponent;
 }());
@@ -12609,7 +12714,7 @@ var ViewAppointmentComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/view-appointment/view-appointment.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["m" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_material__["n" /* MatDialogRef */], Object, __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_translation_loader_service__["a" /* FuseTranslationLoaderService */],
             __WEBPACK_IMPORTED_MODULE_2__core_services_main_service__["a" /* MainService */]])
     ], ViewAppointmentComponent);
@@ -12695,7 +12800,7 @@ var viewEventComponent = (function () {
             styles: [__webpack_require__("./src/app/main/content/dialogs/view-event/view-event.component.scss")]
         }),
         __param(1, Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_0__angular_material__["b" /* MAT_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_material__["m" /* MatDialogRef */], Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_material__["n" /* MatDialogRef */], Object])
     ], viewEventComponent);
     return viewEventComponent;
 }());
@@ -14654,7 +14759,7 @@ var ContractedFormsComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_1__core_services_config_service__["a" /* FuseConfigService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_dialog_service_service__["a" /* DialogServiceService */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MatDialog */]])
+            __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MatDialog */]])
     ], ContractedFormsComponent);
     return ContractedFormsComponent;
 }());
@@ -14980,7 +15085,7 @@ var ProcessedFormsComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_2__core_services_dialog_service_service__["a" /* DialogServiceService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_config_service__["a" /* FuseConfigService */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatDialog */]])
+            __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialog */]])
     ], ProcessedFormsComponent);
     return ProcessedFormsComponent;
 }());
@@ -15686,7 +15791,7 @@ var UnprocessedFormsComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_1__core_services_dialog_service_service__["a" /* DialogServiceService */],
             __WEBPACK_IMPORTED_MODULE_0__core_services_config_service__["a" /* FuseConfigService */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MatDialog */]])
+            __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MatDialog */]])
     ], UnprocessedFormsComponent);
     return UnprocessedFormsComponent;
 }());
@@ -16010,7 +16115,9 @@ var locale = {
                 'LOGIN': 'Login',
                 'EMAIL': 'Email',
                 'PASSWORD': 'Password'
-            }
+            },
+            "Your_Session_End": "your session has been end",
+            "Logout": "logout"
         },
         'User': {
             'USERS': {
@@ -16372,7 +16479,9 @@ var locale = {
                 'LOGIN': 'ورود',
                 'EMAIL': 'ایمیل',
                 'PASSWORD': 'رمز'
-            }
+            },
+            "Your_Session_End": 'جلسه شما پایان یافته است',
+            "Logout": 'خروج'
         },
         'User': {
             'USERS': {
@@ -16431,7 +16540,7 @@ module.exports = "<div id=\"lock\" fxLayout=\"column\" fusePerfectScrollbar>\n\n
 /***/ "./src/app/main/content/lock/lock.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n:host #lock {\n  width: 100%;\n  overflow: auto;\n  background: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/march.jpg\") no-repeat;\n  background-size: cover; }\n:host #lock #lock-form-wrapper {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 0 auto;\n            flex: 1 0 auto;\n    padding: 32px; }\n@media screen and (max-width: 599px) {\n      :host #lock #lock-form-wrapper {\n        padding: 16px; } }\n:host #lock #lock-form-wrapper #lock-form {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      width: 420px;\n      max-width: 420px;\n      padding: 48px 32px 32px 32px;\n      background: #FFFFFF;\n      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n@media screen and (max-width: 599px) {\n        :host #lock #lock-form-wrapper #lock-form {\n          padding: 24px;\n          width: 100%; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-flex: 1;\n            -ms-flex: 1 0 auto;\n                flex: 1 0 auto; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container {\n          position: relative;\n          margin-right: 16px; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container .avatar {\n            margin: 0; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container {\n              margin-right: 0; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container mat-icon {\n            position: absolute;\n            bottom: 0;\n            right: 0;\n            color: #f44336; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .title {\n          font-size: 20px;\n          margin-bottom: 8px; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .title {\n              margin-top: 16px;\n              text-align: center; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .subtitle {\n          color: rgba(0, 0, 0, 0.54); }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .subtitle {\n              text-align: center; } }\n:host #lock #lock-form-wrapper #lock-form form {\n        width: 100%;\n        margin: 32px 0 0 0; }\n:host #lock #lock-form-wrapper #lock-form form mat-form-field {\n          width: 100%; }\n:host #lock #lock-form-wrapper #lock-form form .submit-button {\n          width: 220px;\n          margin: 16px auto;\n          display: block; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form form .submit-button {\n              width: 90%; } }\n:host #lock #lock-form-wrapper #lock-form .message {\n        font-weight: 500;\n        text-align: center; }\n"
+module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n:host #lock {\n  width: 100%;\n  overflow: auto;\n  background: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/march.jpg\") no-repeat;\n  background-size: cover; }\n:host #lock #lock-form-wrapper {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 0 auto;\n            flex: 1 0 auto;\n    padding: 32px; }\n@media screen and (max-width: 599px) {\n      :host #lock #lock-form-wrapper {\n        padding: 16px; } }\n:host #lock #lock-form-wrapper #lock-form {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      width: 420px;\n      max-width: 420px;\n      padding: 48px 32px 32px 32px;\n      background: #FFFFFF;\n      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n@media screen and (max-width: 599px) {\n        :host #lock #lock-form-wrapper #lock-form {\n          padding: 24px;\n          width: 100%; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-flex: 1;\n            -ms-flex: 1 0 auto;\n                flex: 1 0 auto; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container {\n          position: relative;\n          margin-right: 16px; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container .avatar {\n            margin: 0; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container {\n              margin-right: 0; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .avatar-container mat-icon {\n            position: absolute;\n            bottom: 0;\n            right: 0;\n            color: #f44336; }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .title {\n          font-size: 20px;\n          margin-bottom: 8px; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .title {\n              margin-top: 16px;\n              text-align: center; } }\n:host #lock #lock-form-wrapper #lock-form .lock-form-header .subtitle {\n          color: rgba(0, 0, 0, 0.54); }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form .lock-form-header .subtitle {\n              text-align: center; } }\n:host #lock #lock-form-wrapper #lock-form form {\n        width: 100%;\n        margin: 32px 0 0 0; }\n:host #lock #lock-form-wrapper #lock-form form mat-form-field {\n          width: 100%; }\n:host #lock #lock-form-wrapper #lock-form form .submit-button {\n          width: 220px;\n          margin: 16px auto;\n          display: block; }\n@media screen and (max-width: 599px) {\n            :host #lock #lock-form-wrapper #lock-form form .submit-button {\n              width: 90%; } }\n:host #lock #lock-form-wrapper #lock-form .message {\n        font-weight: 500;\n        text-align: center; }\n"
 
 /***/ }),
 
@@ -16575,7 +16684,7 @@ module.exports = "<div id=\"login\" fxLayout=\"column\" fusePerfectScrollbar>\n\
 /***/ "./src/app/main/content/login/login.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n:host #login {\n  width: 100%;\n  overflow: auto;\n  background: url(\"http://azzyimmigration.com/panel/assets/images/backgrounds/march.jpg\") no-repeat;\n  background-size: cover; }\n:host #login #login-form-wrapper {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 0 auto;\n            flex: 1 0 auto;\n    padding: 32px; }\n@media screen and (max-width: 599px) {\n      :host #login #login-form-wrapper {\n        padding: 16px; } }\n:host #login #login-form-wrapper #login-form {\n      width: 384px;\n      max-width: 384px;\n      padding: 32px;\n      background: #FFFFFF;\n      text-align: center;\n      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n@media screen and (max-width: 599px) {\n        :host #login #login-form-wrapper #login-form {\n          padding: 24px;\n          width: 100%; } }\n:host #login #login-form-wrapper #login-form .logo {\n        width: 128px;\n        margin: 32px auto; }\n:host #login #login-form-wrapper #login-form .title {\n        font-size: 20px;\n        margin: 16px 0 32px 0; }\n:host #login #login-form-wrapper #login-form form {\n        width: 100%;\n        text-align: left; }\n:host #login #login-form-wrapper #login-form form mat-form-field {\n          width: 100%; }\n:host #login #login-form-wrapper #login-form form mat-checkbox {\n          margin: 0; }\n:host #login #login-form-wrapper #login-form form .remember-forgot-password {\n          font-size: 13px;\n          margin-top: 8px; }\n:host #login #login-form-wrapper #login-form form .remember-forgot-password .remember-me {\n            margin-bottom: 16px; }\n:host #login #login-form-wrapper #login-form form .remember-forgot-password .forgot-password {\n            font-size: 13px;\n            font-weight: 500;\n            margin-bottom: 16px; }\n:host #login #login-form-wrapper #login-form form .submit-button {\n          width: 220px;\n          margin: 16px auto;\n          display: block; }\n@media screen and (max-width: 599px) {\n            :host #login #login-form-wrapper #login-form form .submit-button {\n              width: 90%; } }\n:host #login #login-form-wrapper #login-form .register {\n        margin: 32px auto 24px auto;\n        font-weight: 500; }\n:host #login #login-form-wrapper #login-form .register .text {\n          margin-right: 8px; }\n:host #login #login-form-wrapper #login-form .separator {\n        font-size: 15px;\n        font-weight: 600;\n        margin: 24px auto;\n        position: relative;\n        overflow: hidden;\n        width: 100px;\n        color: rgba(0, 0, 0, 0.54); }\n:host #login #login-form-wrapper #login-form .separator .text {\n          display: -webkit-inline-box;\n          display: -ms-inline-flexbox;\n          display: inline-flex;\n          position: relative;\n          padding: 0 8px;\n          z-index: 9999; }\n:host #login #login-form-wrapper #login-form .separator .text:before, :host #login #login-form-wrapper #login-form .separator .text:after {\n            content: '';\n            display: block;\n            width: 30px;\n            position: absolute;\n            top: 10px;\n            border-top: 1px solid rgba(0, 0, 0, 0.12); }\n:host #login #login-form-wrapper #login-form .separator .text:before {\n            right: 100%; }\n:host #login #login-form-wrapper #login-form .separator .text:after {\n            left: 100%; }\n:host #login #login-form-wrapper #login-form button.google, :host #login #login-form-wrapper #login-form button.facebook {\n        width: 192px;\n        text-transform: none;\n        color: #FFFFFF;\n        font-size: 13px; }\n@media screen and (max-width: 599px) {\n        :host #login #login-form-wrapper #login-form button {\n          width: 80%; } }\n:host #login #login-form-wrapper #login-form button.google {\n        background-color: #D73D32;\n        margin-bottom: 8px; }\n:host #login #login-form-wrapper #login-form button.facebook {\n        background-color: #3f5c9a; }\n.spinner-wrapper {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  margin-top: 20%; }\n.spinner-wrapper .spinner {\n  position: absolute;\n  overflow: hidden;\n  left: 50%;\n  margin-left: -50px;\n  -webkit-animation: outer-rotate 2.91667s linear infinite;\n          animation: outer-rotate 2.91667s linear infinite; }\n.spinner-wrapper .spinner .inner {\n  width: 100px;\n  height: 100px;\n  position: relative;\n  -webkit-animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n          animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n.spinner-wrapper .spinner .inner .gap {\n  position: absolute;\n  left: 49px;\n  right: 49px;\n  top: 0;\n  bottom: 0;\n  border-top: 10px solid;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box; }\n.spinner-wrapper .spinner .inner .left,\n.spinner-wrapper .spinner .inner .right {\n  position: absolute;\n  top: 0;\n  height: 100px;\n  width: 50px;\n  overflow: hidden; }\n.spinner-wrapper .spinner .inner .left .half-circle,\n.spinner-wrapper .spinner .inner .right .half-circle {\n  position: absolute;\n  top: 0;\n  width: 100px;\n  height: 100px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border: 10px solid #4285F4;\n  border-bottom-color: transparent;\n  border-radius: 50%; }\n.spinner-wrapper .spinner .inner .left {\n  left: 0; }\n.spinner-wrapper .spinner .inner .left .half-circle {\n  left: 0;\n  border-right-color: transparent;\n  animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n.spinner-wrapper .spinner .inner .right {\n  right: 0; }\n.spinner-wrapper .spinner .inner .right .half-circle {\n  right: 0;\n  border-left-color: transparent;\n  animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n"
+module.exports = "/**\n * Applies styles for users in high contrast mode. Note that this only applies\n * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`\n * attribute, however Chrome handles high contrast differently.\n */\n/* Theme for the ripple elements.*/\n/** The mixins below are shared between mat-menu and mat-select */\n/**\n * This mixin adds the correct panel transform styles based\n * on the direction that the menu panel opens.\n */\n/* stylelint-disable material/no-prefixes */\n/* stylelint-enable */\n/**\n * This mixin contains shared option styles between the select and\n * autocomplete components.\n */\n:host #login {\n  width: 100%;\n  overflow: auto;\n  background: url(\"http://azzyimmigration.com/panel/#/assets/images/backgrounds/march.jpg\") no-repeat;\n  background-size: cover; }\n:host #login #login-form-wrapper {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 0 auto;\n            flex: 1 0 auto;\n    padding: 32px; }\n@media screen and (max-width: 599px) {\n      :host #login #login-form-wrapper {\n        padding: 16px; } }\n:host #login #login-form-wrapper #login-form {\n      width: 384px;\n      max-width: 384px;\n      padding: 32px;\n      background: #FFFFFF;\n      text-align: center;\n      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);\n              box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n@media screen and (max-width: 599px) {\n        :host #login #login-form-wrapper #login-form {\n          padding: 24px;\n          width: 100%; } }\n:host #login #login-form-wrapper #login-form .logo {\n        width: 128px;\n        margin: 32px auto; }\n:host #login #login-form-wrapper #login-form .title {\n        font-size: 20px;\n        margin: 16px 0 32px 0; }\n:host #login #login-form-wrapper #login-form form {\n        width: 100%;\n        text-align: left; }\n:host #login #login-form-wrapper #login-form form mat-form-field {\n          width: 100%; }\n:host #login #login-form-wrapper #login-form form mat-checkbox {\n          margin: 0; }\n:host #login #login-form-wrapper #login-form form .remember-forgot-password {\n          font-size: 13px;\n          margin-top: 8px; }\n:host #login #login-form-wrapper #login-form form .remember-forgot-password .remember-me {\n            margin-bottom: 16px; }\n:host #login #login-form-wrapper #login-form form .remember-forgot-password .forgot-password {\n            font-size: 13px;\n            font-weight: 500;\n            margin-bottom: 16px; }\n:host #login #login-form-wrapper #login-form form .submit-button {\n          width: 220px;\n          margin: 16px auto;\n          display: block; }\n@media screen and (max-width: 599px) {\n            :host #login #login-form-wrapper #login-form form .submit-button {\n              width: 90%; } }\n:host #login #login-form-wrapper #login-form .register {\n        margin: 32px auto 24px auto;\n        font-weight: 500; }\n:host #login #login-form-wrapper #login-form .register .text {\n          margin-right: 8px; }\n:host #login #login-form-wrapper #login-form .separator {\n        font-size: 15px;\n        font-weight: 600;\n        margin: 24px auto;\n        position: relative;\n        overflow: hidden;\n        width: 100px;\n        color: rgba(0, 0, 0, 0.54); }\n:host #login #login-form-wrapper #login-form .separator .text {\n          display: -webkit-inline-box;\n          display: -ms-inline-flexbox;\n          display: inline-flex;\n          position: relative;\n          padding: 0 8px;\n          z-index: 9999; }\n:host #login #login-form-wrapper #login-form .separator .text:before, :host #login #login-form-wrapper #login-form .separator .text:after {\n            content: '';\n            display: block;\n            width: 30px;\n            position: absolute;\n            top: 10px;\n            border-top: 1px solid rgba(0, 0, 0, 0.12); }\n:host #login #login-form-wrapper #login-form .separator .text:before {\n            right: 100%; }\n:host #login #login-form-wrapper #login-form .separator .text:after {\n            left: 100%; }\n:host #login #login-form-wrapper #login-form button.google, :host #login #login-form-wrapper #login-form button.facebook {\n        width: 192px;\n        text-transform: none;\n        color: #FFFFFF;\n        font-size: 13px; }\n@media screen and (max-width: 599px) {\n        :host #login #login-form-wrapper #login-form button {\n          width: 80%; } }\n:host #login #login-form-wrapper #login-form button.google {\n        background-color: #D73D32;\n        margin-bottom: 8px; }\n:host #login #login-form-wrapper #login-form button.facebook {\n        background-color: #3f5c9a; }\n.spinner-wrapper {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  margin-top: 20%; }\n.spinner-wrapper .spinner {\n  position: absolute;\n  overflow: hidden;\n  left: 50%;\n  margin-left: -50px;\n  -webkit-animation: outer-rotate 2.91667s linear infinite;\n          animation: outer-rotate 2.91667s linear infinite; }\n.spinner-wrapper .spinner .inner {\n  width: 100px;\n  height: 100px;\n  position: relative;\n  -webkit-animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n          animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n.spinner-wrapper .spinner .inner .gap {\n  position: absolute;\n  left: 49px;\n  right: 49px;\n  top: 0;\n  bottom: 0;\n  border-top: 10px solid;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box; }\n.spinner-wrapper .spinner .inner .left,\n.spinner-wrapper .spinner .inner .right {\n  position: absolute;\n  top: 0;\n  height: 100px;\n  width: 50px;\n  overflow: hidden; }\n.spinner-wrapper .spinner .inner .left .half-circle,\n.spinner-wrapper .spinner .inner .right .half-circle {\n  position: absolute;\n  top: 0;\n  width: 100px;\n  height: 100px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border: 10px solid #4285F4;\n  border-bottom-color: transparent;\n  border-radius: 50%; }\n.spinner-wrapper .spinner .inner .left {\n  left: 0; }\n.spinner-wrapper .spinner .inner .left .half-circle {\n  left: 0;\n  border-right-color: transparent;\n  animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n.spinner-wrapper .spinner .inner .right {\n  right: 0; }\n.spinner-wrapper .spinner .inner .right .half-circle {\n  right: 0;\n  border-left-color: transparent;\n  animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;\n  -webkit-animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n"
 
 /***/ }),
 
@@ -16639,6 +16748,10 @@ var FuseLoginComponent = (function () {
             email: ['', [__WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].email]],
             password: ['', __WEBPACK_IMPORTED_MODULE_8__angular_forms__["l" /* Validators */].required]
         });
+        if (this.mainServ.APIServ.getErrorCode() == 401) {
+            this.mainServ.loaderSer.display(false);
+            this.mainServ.APIServ.setErrorCode(0);
+        }
         this.loginForm.valueChanges.subscribe(function () {
             _this.onLoginFormValuesChanged();
         });
@@ -16889,7 +17002,7 @@ var FuseSampleModule = (function () {
 /***/ "./src/app/main/content/user/addUser/addUser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'User.ADDEDITUSER.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n    <form [formGroup]=\"addUserForm\">\r\n      <div style=\"width: 100%;\">\r\n        <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n          <mat-form-field fxFlex=\"24\">\r\n            <input autocomplete=\"off\"  matInput placeholder=\"{{ 'User.ADDEDITUSER.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n            <mat-icon matSuffix>email</mat-icon>\r\n            <mat-error *ngIf=\"addUserForm.hasError('email', 'email') && !addUserForm.hasError('required','email')\">\r\n              {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n            </mat-error>\r\n            <mat-error *ngIf=\"addUserForm.hasError('required','email')\">{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n\r\n\r\n\r\n          </mat-form-field>\r\n\r\n          <mat-form-field fxFlex=\"24\">\r\n\r\n            <input autocomplete=\"off\"  matInput placeholder=\"{{ 'User.ADDEDITUSER.USERNAME' | translate }}\" formControlName=\"username\" required>\r\n            <mat-icon matSuffix>people</mat-icon>\r\n            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n          </mat-form-field>\r\n\r\n\r\n\r\n\r\n          <mat-form-field fxFlex=\"24\">\r\n\r\n            <input autocomplete=\"off\"  matInput type=\"password\" placeholder=\"{{ 'User.ADDEDITUSER.PASSWORD' | translate }}\" formControlName=\"password\" required>\r\n            <mat-icon matSuffix>remove_red_eye</mat-icon>\r\n            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n          </mat-form-field>\r\n\r\n\r\n          <mat-form-field fxFlex=\"24\">\r\n            <mat-select formControlName=\"type\" placeholder=\"{{ 'User.ADDEDITUSER.TYPE' | translate }}\" required>\r\n              <mat-option *ngFor=\"let oneType of types\" [value]=\"oneType.value\">\r\n                {{ oneType.viewValue | translate}}\r\n              </mat-option>\r\n            </mat-select>\r\n            <mat-icon matSuffix>people</mat-icon>\r\n            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n          </mat-form-field>\r\n\r\n\r\n          <!--<div >-->\r\n\r\n          <div *ngIf=\"addUserForm.value.type=='consultant'\" fxFlex=\"32\">\r\n            <h3 style=\"float: left;\"> {{ 'User.ADDEDITUSER.PRIMARYCOLOR' | translate }}</h3>\r\n            <div style=\"width: 25px;height: 25px;border-radius: 50%;margin-left: 200px;\" [style.background-color]=\"primaryColor\" [cpPosition]=\"'bottom'\"\r\n              [cpPositionOffset]=\"'50%'\" [cpPositionRelativeToArrow]=\"true\" [(colorPicker)]=\"primaryColor\"></div>\r\n          </div>\r\n\r\n          <div fxFlex=\"32\" *ngIf=\"addUserForm.value.type=='consultant'\">\r\n            <h3 style=\"float: left;\"> {{ 'User.ADDEDITUSER.SECONDARYCOLOR' | translate }}</h3>\r\n            <div style=\"width: 25px;height: 25px;border-radius: 50%;margin-left: 200px;\" [style.background-color]=\"secondryColor\" [cpPosition]=\"'bottom'\"\r\n              [cpPositionOffset]=\"'50%'\" [cpPositionRelativeToArrow]=\"true\" [(colorPicker)]=\"secondryColor\"></div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div style=\"float: right;\">\r\n        <button mat-button (click)=\"add()\" cdkFocusInitial [disabled]=\"addUserForm.invalid\">{{'User.ADDEDITUSER.ADD' | translate}}</button>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div id=\"ngx-datatable\" class=\"page-layout simple fullwidth\" fusePerfectScrollbar>\r\n\r\n  <!-- HEADER -->\r\n  <div class=\"header mat-accent-bg p-24 h-100\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"row\" fxLayoutAlign.gt-xs=\"space-between center\">\r\n    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayout.gt-xs=\"column\" fxLayoutAlign.gt-xs=\"center start\">\r\n      <div class=\"h2 mt-16\">{{'User.ADDEDITUSER.TITLE' | translate }}</div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n  <!-- / HEADER -->\r\n\r\n  <!-- CONTENT -->\r\n  <div class=\"content p-24\">\r\n    <form [formGroup]=\"addUserForm\">\r\n      <div style=\"width: 100%;\">\r\n        <div style=\"padding-top:10px;\" fxLayout=\"column\" fxLayout.gt-md=\"row wrap\" fxLayoutAlign.gt-md=\"space-around center\" fxFlex>\r\n          <mat-form-field fxFlex=\"24\">\r\n            <input autocomplete=\"off\"  matInput placeholder=\"{{ 'User.ADDEDITUSER.EMAIL' | translate }}\" formControlName=\"email\" required>\r\n            <mat-icon matSuffix>email</mat-icon>\r\n            <mat-error *ngIf=\"addUserForm.hasError('email', 'email') && !addUserForm.hasError('required','email')\">\r\n              {{ 'Global.ERRORVALIDEMAIL' | translate }}\r\n            </mat-error>\r\n            <mat-error *ngIf=\"addUserForm.hasError('required','email')\">{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n\r\n\r\n\r\n          </mat-form-field>\r\n\r\n          <mat-form-field fxFlex=\"24\">\r\n\r\n            <input autocomplete=\"off\"  matInput placeholder=\"{{ 'User.ADDEDITUSER.USERNAME' | translate }}\" formControlName=\"username\" required>\r\n            <mat-icon matSuffix>people</mat-icon>\r\n            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n          </mat-form-field>\r\n\r\n\r\n\r\n\r\n          <mat-form-field fxFlex=\"24\">\r\n\r\n            <input autocomplete=\"off\"  matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"{{ 'User.ADDEDITUSER.PASSWORD' | translate }}\" formControlName=\"password\" required>\r\n            <mat-icon class=\"hover\" matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>\r\n            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n          </mat-form-field>\r\n\r\n\r\n          <mat-form-field fxFlex=\"24\">\r\n            <mat-select formControlName=\"type\" placeholder=\"{{ 'User.ADDEDITUSER.TYPE' | translate }}\" required>\r\n              <mat-option *ngFor=\"let oneType of types\" [value]=\"oneType.value\">\r\n                {{ oneType.viewValue | translate}}\r\n              </mat-option>\r\n            </mat-select>\r\n            <mat-icon matSuffix>people</mat-icon>\r\n            <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>\r\n          </mat-form-field>\r\n\r\n\r\n          <!--<div >-->\r\n\r\n          <div *ngIf=\"addUserForm.value.type=='consultant'\" fxFlex=\"32\">\r\n            <h3 style=\"float: left;\"> {{ 'User.ADDEDITUSER.PRIMARYCOLOR' | translate }}</h3>\r\n            <div style=\"width: 25px;height: 25px;border-radius: 50%;margin-left: 200px;\" [style.background-color]=\"primaryColor\" [cpPosition]=\"'bottom'\"\r\n              [cpPositionOffset]=\"'50%'\" [cpPositionRelativeToArrow]=\"true\" [(colorPicker)]=\"primaryColor\"></div>\r\n          </div>\r\n\r\n          <div fxFlex=\"32\" *ngIf=\"addUserForm.value.type=='consultant'\">\r\n            <h3 style=\"float: left;\"> {{ 'User.ADDEDITUSER.SECONDARYCOLOR' | translate }}</h3>\r\n            <div style=\"width: 25px;height: 25px;border-radius: 50%;margin-left: 200px;\" [style.background-color]=\"secondryColor\" [cpPosition]=\"'bottom'\"\r\n              [cpPositionOffset]=\"'50%'\" [cpPositionRelativeToArrow]=\"true\" [(colorPicker)]=\"secondryColor\"></div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div style=\"float: right;\">\r\n        <button mat-button (click)=\"add()\" cdkFocusInitial [disabled]=\"addUserForm.invalid\">{{'User.ADDEDITUSER.ADD' | translate}}</button>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -16938,6 +17051,7 @@ var addUserComponent = (function () {
         this.count = 0;
         this.offset = 0;
         this.limit = 5;
+        this.hide = true;
         this.primaryColor = "#127bdc";
         this.secondryColor = "#127bdc";
         this.translationLoader.loadTranslations(__WEBPACK_IMPORTED_MODULE_3__languageFiles_en__["a" /* locale */], __WEBPACK_IMPORTED_MODULE_4__languageFiles_fa__["a" /* locale */]);
@@ -17359,7 +17473,7 @@ var usersComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["b" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_3__core_services_main_service__["a" /* MainService */],
             __WEBPACK_IMPORTED_MODULE_1__core_services_dialog_service_service__["a" /* DialogServiceService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MatDialog */]])
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MatDialog */]])
     ], usersComponent);
     return usersComponent;
 }());

@@ -15,6 +15,8 @@ import { locale as persian } from '../../languageFiles/fa';
 export class ResetPasswordComponent {
     userId
     regiForm: FormGroup;
+
+    hide = true
     constructor(
         public dialogRef: MatDialogRef<ResetPasswordComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
