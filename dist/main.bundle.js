@@ -10546,6 +10546,11 @@ var routes = [{
         path: 'calendar',
         component: __WEBPACK_IMPORTED_MODULE_2__calendar_component__["a" /* CalendarComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_11__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
+    },
+    {
+        path: '',
+        component: __WEBPACK_IMPORTED_MODULE_2__calendar_component__["a" /* CalendarComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_11__core_services_auth_guard_service_service__["a" /* AuthGuardService */]]
     }];
 var MyCalendarModule = (function () {
     function MyCalendarModule() {

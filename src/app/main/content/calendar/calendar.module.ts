@@ -20,6 +20,12 @@ const routes = [{
   component: CalendarComponent,
   canActivate: [AuthGuardService]
 
+},
+{
+  path: '',
+  component: CalendarComponent,
+  canActivate: [AuthGuardService]
+
 }];
 
 @NgModule({
