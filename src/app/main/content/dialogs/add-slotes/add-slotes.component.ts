@@ -80,10 +80,10 @@ export class AddSlotesComponent {
                 location: new FormControl('', Validators.required),
                 consId: new FormControl('', Validators.required)
             });
-            this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe((data: any) => {
+            this.mainServ.APIServ.get("staffusers/getConsultant").subscribe((data: any) => {
                 if (this.mainServ.APIServ.getErrorCode() == 0) {
 
-                    this.consultant = data;
+                    this.consultant = data.getConsultant;
                     // this.loadingIndicator = false;
 
                 }

@@ -119,8 +119,8 @@ export class LoginService {
       this.router.navigateByUrl('/addAdvertising').then(() => this.router.navigateByUrl('/'));
       location.reload();
     } else {
-      this.router.navigate(["login"]),
-      location.reload();
+      this.router.navigate(["login"]);
+      // location.reload();
     }
   }
 

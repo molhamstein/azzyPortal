@@ -9009,8 +9009,8 @@ var LoginService = (function () {
             location.reload();
         }
         else {
-            this.router.navigate(["login"]),
-                location.reload();
+            this.router.navigate(["login"]);
+            // location.reload();
         }
     };
     LoginService.prototype.setAvatar = function (newAvatar) {
@@ -11794,9 +11794,9 @@ var AddSlotesComponent = (function () {
                 location: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required),
                 consId: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["l" /* Validators */].required)
             });
-            this.mainServ.APIServ.get("staffusers?filter={\"where\":{\"type\":\"consultant\"}}").subscribe(function (data) {
+            this.mainServ.APIServ.get("staffusers/getConsultant").subscribe(function (data) {
                 if (_this.mainServ.APIServ.getErrorCode() == 0) {
-                    _this.consultant = data;
+                    _this.consultant = data.getConsultant;
                     // this.loadingIndicator = false;
                 }
                 else if (_this.mainServ.APIServ.getErrorCode() == 400) {
