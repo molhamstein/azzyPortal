@@ -62,7 +62,6 @@ export class CalendarComponent implements OnInit {
     private callApiService: CallApiService,
     private mainServ: MainService) {
     this.translationLoader.loadTranslations(english, persian);
-
   }
   consultants = [];
   ngOnInit(): void {
@@ -242,7 +241,7 @@ export class CalendarComponent implements OnInit {
   changeDate(e) {
     this.selectedDay = { date: e };
     this.viewDate = e
-    this.getSlots(this.viewDate, []);
+    this.getSlots(this.viewDate, this.consultants);
   }
 
 

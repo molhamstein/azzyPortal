@@ -42,7 +42,6 @@ export class LoginService {
       this.userName = this.cookieService.get("userName");
       this.lang = this.cookieService.get("lang");
       this.bills = this.cookieService.get("bills");
-
     } else {
       this.userId = sessionStorage.getItem("userId");
       this.token = sessionStorage.getItem("token");
@@ -111,7 +110,7 @@ export class LoginService {
     }
 
 
-
+    this.init()
     if ("/myprofile/me" == this.router.url) {
       this.router.navigateByUrl('/myprofile/me').then(() => this.router.navigateByUrl('/'));
       location.reload();
@@ -188,10 +187,6 @@ export class LoginService {
     this.cookieService.set('token', data.id);
     this.cookieService.set('type', data.user.type);
     this.cookieService.set('userName', data.user.username);
-    if (data.user != null)
-      this.cookieService.set('dalalAvatar', data.user.avatar);
-    // }
-    // location.href="advertising";
     this.router.navigateByUrl('/').then(() => this.router.navigateByUrl('/'));
   }
 
@@ -200,6 +195,7 @@ export class LoginService {
   logoutCook() {
     this.cookieService.delete('userId');
     this.cookieService.delete('token');
+    this.cookieService.delete('type');
     this.cookieService.delete('userName');
 
   }

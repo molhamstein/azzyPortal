@@ -30,7 +30,7 @@ export class AuthGuardService implements CanLoad, CanActivate {
   ): Observable<boolean> | Promise<boolean> | boolean {
 
     let path = route.url[0]
-    
+
     if (this.mainServ.loginServ.isLogin()) {
       if (this.mainServ.globalServ.isAllowedPage(path) == false) {
         this.router.navigate(["/Permision"])
@@ -39,6 +39,11 @@ export class AuthGuardService implements CanLoad, CanActivate {
         return true;
       }
     }
-   
+    else {
+      this.router.navigate(["/login"]);
+      return false;
+
+    }
+
   }
 } 

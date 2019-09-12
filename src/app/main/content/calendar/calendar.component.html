@@ -92,7 +92,7 @@
         <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
       </div>
       <!-- @todo show real data -->
-      <div class="cal-cell-consultants" *ngIf="day.badgeTotal > 1 ">
+      <div class="cal-cell-consultants" *ngIf="day.badgeTotal >= 1 ">
         <table class="full-width">
           <tbody>
             <tr  *ngFor="let row of getInfoEvent(day)" >
