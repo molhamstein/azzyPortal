@@ -49,7 +49,8 @@ export class FuseLoginComponent implements OnInit {
         // this.translate.use('en');
         this.loginForm = this.formBuilder.group({
             email: ['', [Validators.required, Validators.email]],
-            password: ['', Validators.required]
+            password: ['', Validators.required],
+            ttl:[31536000000]
         });
         if (this.mainServ.APIServ.getErrorCode() == 401) {
             this.mainServ.loaderSer.display(false)

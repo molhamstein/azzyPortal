@@ -20,6 +20,7 @@ export class SetTextBoxAdminComponent {
     isWithID
     regiForm: FormGroup;
     clients
+    typeUser
     constructor(
         public dialogRef: MatDialogRef<SetTextBoxAdminComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
@@ -43,21 +44,31 @@ export class SetTextBoxAdminComponent {
                 consId: new FormControl('', Validators.required),
                 fee: new FormControl(0, Validators.required),
             });
-            this.mainServ.APIServ.get("staffusers/getConsultant").subscribe((data: any) => {
-                if (this.mainServ.APIServ.getErrorCode() == 0) {
+            this.typeUser = this.mainServ.loginServ.getType();
+            if (this.typeUser == "consultant") {
+                this.clients = [{ "type": this.typeUser, "username": this.mainServ.loginServ.getuserName(), "id": this.mainServ.loginServ.getUserId() }]
+                this.regiForm = new FormGroup({
+                    textBoxAdmin: new FormControl(this.text),
+                    consId: new FormControl(this.clients[0]["id"], Validators.required),
+                    fee: new FormControl(0, Validators.required),
+                });
+            } else {
+                this.mainServ.APIServ.get("staffusers/getConsultant").subscribe((data: any) => {
+                    if (this.mainServ.APIServ.getErrorCode() == 0) {
 
-                    this.clients = data['getConsultant'];
-                    // this.loadingIndicator = false;
+                        this.clients = data['getConsultant'];
+                        // this.loadingIndicator = false;
 
-                }
-                else if (this.mainServ.APIServ.getErrorCode() == 400) {
+                    }
+                    else if (this.mainServ.APIServ.getErrorCode() == 400) {
 
-                }
-                else {
-                    this.mainServ.globalServ.somthingError();
-                }
+                    }
+                    else {
+                        this.mainServ.globalServ.somthingError();
+                    }
 
-            });
+                });
+            }
         }
         else {
             this.regiForm = new FormGroup({

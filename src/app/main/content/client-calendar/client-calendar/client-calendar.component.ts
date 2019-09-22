@@ -159,7 +159,7 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
   timeZoneArray = [
     { "viewValue": "Tehran", "value": "Asia/Tehran" },
     { "viewValue": "Sydney", "value": "Australia/Sydney" },
-    { "viewValue": "London", "value": "UTC" },
+    { "viewValue": "GMT", "value": "UTC" },
   ]
 
 
