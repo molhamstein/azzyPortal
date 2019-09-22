@@ -58,6 +58,7 @@ export class DialogServiceService {
     let dialogRef = this.dialog.open(ResponseSelectSloteComponent, {
       // width: '650px',
       // panelClass: 'className',
+      disableClose: true, 
       data: {}
     });
 

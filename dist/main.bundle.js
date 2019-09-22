@@ -8556,6 +8556,7 @@ var DialogServiceService = (function () {
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_5__main_content_dialogs_respone_select_slote_response_select_slote_component__["a" /* ResponseSelectSloteComponent */], {
             // width: '650px',
             // panelClass: 'className',
+            disableClose: true,
             data: {}
         });
         dialogRef.afterClosed().subscribe(function (result) {
@@ -11331,11 +11332,52 @@ var ClientCalendarComponent = (function () {
     ClientCalendarComponent.prototype.setTimeZone = function () {
         for (var index = 0; index < this.bodyevents.length; index++) {
             var element = this.bodyevents[index];
-            var dateStartString = element['start'].getFullYear() + "-" + element['start'].getMonth() + "-" + element['start'].getDate()
-                + " " + element['start'].getHours() + ":" + element['start'].getMinutes();
+            var monthSelected = (element['start'].getMonth() + 1);
+            var daySelected = element['start'].getDate();
+            var yearSelected = element['start'].getFullYear();
+            var houreSelected = element['start'].getHours();
+            var minuteSelected = element['start'].getMinutes();
+            var startMonthSelectedString = "";
+            var startDaySelectedString = "";
+            var startHoureSelectedString = "";
+            var startMinuteSelectedString = "";
+            if (monthSelected < 10)
+                startMonthSelectedString = "0" + monthSelected;
+            else
+                startMonthSelectedString = monthSelected.toString();
+            if (daySelected < 10)
+                startDaySelectedString = "0" + daySelected;
+            else
+                startDaySelectedString = daySelected.toString();
+            if (houreSelected < 10)
+                startHoureSelectedString = "0" + houreSelected;
+            else
+                startHoureSelectedString = houreSelected.toString();
+            if (minuteSelected < 10)
+                startMinuteSelectedString = "0" + minuteSelected;
+            else
+                startMinuteSelectedString = minuteSelected.toString();
+            var dateStartString = yearSelected + "-" + startMonthSelectedString + "-" + startDaySelectedString + " " + startHoureSelectedString + ":" + startMinuteSelectedString;
+            // element['start'].getFullYear() + "-" + + "-" +
+            //   + " " + 
+            console.log("dateStartString");
+            console.log(dateStartString);
             this.bodyevents[index]['bodyStart'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateStartString).tz(this.timezoneSelect).format('HH : mm');
-            var dateEndString = element['end'].getFullYear() + "-" + element['end'].getMonth() + "-" + element['end'].getDate()
-                + " " + element['end'].getHours() + ":" + element['end'].getMinutes();
+            var endHoureSelected = element['end'].getHours();
+            var endMinuteSelected = element['end'].getMinutes();
+            var endHoureSelectedString = "";
+            var endMinuteSelectedString = "";
+            if (endHoureSelected < 10)
+                endHoureSelectedString = "0" + endHoureSelected;
+            else
+                endHoureSelectedString = houreSelected.toString();
+            if (endMinuteSelected < 10)
+                endMinuteSelectedString = "0" + endMinuteSelected;
+            else
+                endMinuteSelectedString = endMinuteSelected.toString();
+            var dateEndString = yearSelected + "-" + startMonthSelectedString + "-" + startDaySelectedString + " " + endHoureSelectedString + ":" + endMinuteSelectedString;
+            // var dateEndString = element['end'].getFullYear() + "-" + element['end'].getMonth() + "-" + element['end'].getDate()
+            // + " " + element['end'].getHours() + ":" + element['end'].getMinutes();
             element['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateEndString).tz(this.timezoneSelect).format('HH : mm');
         }
         ;
@@ -12429,7 +12471,7 @@ var ResponeFormComponent = (function () {
 /***/ "./src/app/main/content/dialogs/respone-select-slote/response-select-slote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<div mat-dialog-content>\n  <p>You have successfully booked your appointment. A confirmation has been sent to you via email</p>\n  <p style=\"text-align: right;float: right;\">وقت شما با موفقیت ثبت شد. یک ایمیل تائیدیه برای شما ارسال شد</p>\n  <!--{{data | json}}-->\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">OK</button>\n  <!-- <button mat-button (click)=\"onYesClick()\" cdkFocusInitial>{{'Dialog.Confirm_Add_Form.Yes' | translate}}</button> -->\n</div>\n"
+module.exports = "<!--component html goes here -->\n<!--component html goes here -->\n<div mat-dialog-content>\n  <p>You have successfully booked your appointment. A confirmation has been sent to you via email</p>\n  <p style=\"text-align: right;float: right;\">وقت شما با موفقیت ثبت شد. یک ایمیل تائیدیه برای شما ارسال شد</p>\n  <!--{{data | json}}-->\n</div>\n"
 
 /***/ }),
 

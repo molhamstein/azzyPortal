@@ -398,7 +398,7 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     // alert("SSS");
     var mainThis = this;
     // this.dialogSer.confirmationMessage('Do you want to book the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
-    this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
+  this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
       mainThis.dialogSer.responseSelectSloteDialog(function () {
         this.appointmentIsSelected = true;
       })
@@ -409,13 +409,59 @@ export class ClientCalendarComponent implements AfterViewInit, OnInit {
     for (var index = 0; index < this.bodyevents.length; index++) {
       var element = this.bodyevents[index];
 
-      var dateStartString = element['start'].getFullYear() + "-" + element['start'].getMonth() + "-" + element['start'].getDate()
-        + " " + element['start'].getHours() + ":" + element['start'].getMinutes();
+
+      let monthSelected = (element['start'].getMonth() + 1)
+      let daySelected = element['start'].getDate()
+      let yearSelected = element['start'].getFullYear()
+      let houreSelected = element['start'].getHours()
+      let minuteSelected = element['start'].getMinutes()
+      let startMonthSelectedString = ""
+      let startDaySelectedString = ""
+      let startHoureSelectedString = ""
+      let startMinuteSelectedString = ""
+      if (monthSelected < 10)
+        startMonthSelectedString = "0" + monthSelected
+      else
+        startMonthSelectedString = monthSelected.toString()
+      if (daySelected < 10)
+        startDaySelectedString = "0" + daySelected
+      else
+        startDaySelectedString = daySelected.toString()
+      if (houreSelected < 10)
+        startHoureSelectedString = "0" + houreSelected
+      else
+        startHoureSelectedString = houreSelected.toString()
+      if (minuteSelected < 10)
+        startMinuteSelectedString = "0" + minuteSelected
+      else
+        startMinuteSelectedString = minuteSelected.toString()
+
+
+      var dateStartString = yearSelected + "-" + startMonthSelectedString + "-" + startDaySelectedString + " " + startHoureSelectedString + ":" + startMinuteSelectedString;
+      // element['start'].getFullYear() + "-" + + "-" +
+      //   + " " + 
+      console.log("dateStartString")
+      console.log(dateStartString)
       this.bodyevents[index]['bodyStart'] = moment(dateStartString).tz(this.timezoneSelect).format('HH : mm');
 
 
-      var dateEndString = element['end'].getFullYear() + "-" + element['end'].getMonth() + "-" + element['end'].getDate()
-        + " " + element['end'].getHours() + ":" + element['end'].getMinutes();
+      let endHoureSelected = element['end'].getHours()
+      let endMinuteSelected = element['end'].getMinutes()
+      let endHoureSelectedString = ""
+      let endMinuteSelectedString = ""
+      if (endHoureSelected < 10)
+        endHoureSelectedString = "0" + endHoureSelected
+      else
+        endHoureSelectedString = houreSelected.toString()
+      if (endMinuteSelected < 10)
+        endMinuteSelectedString = "0" + endMinuteSelected
+      else
+        endMinuteSelectedString = endMinuteSelected.toString()
+
+      var dateEndString = yearSelected + "-" + startMonthSelectedString + "-" + startDaySelectedString + " " + endHoureSelectedString + ":" + endMinuteSelectedString;
+
+      // var dateEndString = element['end'].getFullYear() + "-" + element['end'].getMonth() + "-" + element['end'].getDate()
+        // + " " + element['end'].getHours() + ":" + element['end'].getMinutes();
       element['bodyEnd'] = moment(dateEndString).tz(this.timezoneSelect).format('HH : mm');
 
     };
