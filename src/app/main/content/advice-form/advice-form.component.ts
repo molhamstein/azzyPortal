@@ -16,6 +16,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { AppDirectionService } from '../../../app-direction.service';
 
 import * as $ from "jquery";
+import * as moment from 'moment'; // add this 1 of 4
+
+import 'moment-timezone';
 
 @Component({
   selector: 'app-advice-form',
@@ -670,9 +673,7 @@ export class AdviceFormComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result == true) {
-        this.sendArray['timeZone'] = this.timezone()
-        this.sendArray['cityZone'] = this.locationZone()
-        
+        this.sendArray['city'] = this.locationZone()
         if (this.mainServ.loginServ.getlang() == "fa")
           this.sendArray['lang'] = "fa"
         else
@@ -703,9 +704,7 @@ export class AdviceFormComponent implements OnInit {
     return prefix + hours;
   }
 
-  locationZone(){
-    var dateString =new Date().toString()
-    dateString=dateString.substr(dateString.indexOf("("),dateString.length);
-    return dateString;
+  locationZone() {
+    return moment.tz.guess()
   }
 }

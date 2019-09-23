@@ -8202,9 +8202,9 @@ var CallApiService = (function () {
         this.loginSer = loginSer;
         this.snackBar = snackBar;
         // readonly baseUrl = "http://104.217.253.15:2999/api/"
-        this.baseUrl = "http://178.62.233.91:3000/api/";
+        // readonly baseUrl = "http://178.62.233.91:3000/api/"
         // readonly baseUrl = "http://azzyimmigration.com:3000/api/"
-        // readonly baseUrl = "http://localhost:3000/api/"
+        this.baseUrl = "http://localhost:3000/api/";
         // readonly baseUrl = "http://192.168.1.6:3000/api/"
         this.errorCode = 0;
         this.code = "";
@@ -9384,6 +9384,10 @@ module.exports = ""
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_direction_service__ = __webpack_require__("./src/app/app-direction.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_moment__ = __webpack_require__("./node_modules/moment/moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_moment_timezone__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9405,6 +9409,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+ // add this 1 of 4
 
 var AdviceFormComponent = (function () {
     function AdviceFormComponent(translate, appDirection, fuseConfig, translationLoader, _formBuilder, dialogSerc, dialog, mainServ) {
@@ -9995,8 +10001,7 @@ var AdviceFormComponent = (function () {
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result == true) {
-                _this.sendArray['timeZone'] = _this.timezone();
-                _this.sendArray['cityZone'] = _this.locationZone();
+                _this.sendArray['city'] = _this.locationZone();
                 if (_this.mainServ.loginServ.getlang() == "fa")
                     _this.sendArray['lang'] = "fa";
                 else
@@ -10025,9 +10030,7 @@ var AdviceFormComponent = (function () {
         return prefix + hours;
     };
     AdviceFormComponent.prototype.locationZone = function () {
-        var dateString = new Date().toString();
-        dateString = dateString.substr(dateString.indexOf("("), dateString.length);
-        return dateString;
+        return __WEBPACK_IMPORTED_MODULE_13_moment__["tz"].guess();
     };
     AdviceFormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
@@ -11323,15 +11326,19 @@ var ClientCalendarComponent = (function () {
         // alert("SSS");
         var mainThis = this;
         // this.dialogSer.confirmationMessage('Do you want to book the appointment in a date ' + appointment['date'] + " from " + appointment['bodyStart'] + " o\'clock  to " + appointment['bodyEnd'] + " at " + this.timePlace + " time." + 'in ' + appointment['meta']['location'], "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
-        this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "cityZone": this.timePlace, "timeZone": this.timezone() }, false, function () {
+        this.dialogSer.confirmationMessage('Do_you_want_to_book_the_appointment', "forms/selectAp/" + this.form['id'], { 'apId': appointment['meta']['id'], "city": this.timezoneSelect, "timeZone": this.timezone() }, false, function () {
             mainThis.dialogSer.responseSelectSloteDialog(function () {
                 this.appointmentIsSelected = true;
             });
         }, "put", this.token, 'bookAppointment', { "date": appointment['date'], "timeStart": appointment['bodyStart'], "timeEnd": appointment['bodyEnd'], "timePlace": this.timePlace, "location": appointment['meta']['location'] });
     };
     ClientCalendarComponent.prototype.setTimeZone = function () {
+        console.log("this.bodyevents.length");
+        console.log(this.bodyevents.length);
         for (var index = 0; index < this.bodyevents.length; index++) {
             var element = this.bodyevents[index];
+            // console.log("element['start']")
+            // console.log(element['start'])
             var monthSelected = (element['start'].getMonth() + 1);
             var daySelected = element['start'].getDate();
             var yearSelected = element['start'].getFullYear();
@@ -11358,27 +11365,34 @@ var ClientCalendarComponent = (function () {
             else
                 startMinuteSelectedString = minuteSelected.toString();
             var dateStartString = yearSelected + "-" + startMonthSelectedString + "-" + startDaySelectedString + " " + startHoureSelectedString + ":" + startMinuteSelectedString;
-            // element['start'].getFullYear() + "-" + + "-" +
-            //   + " " + 
-            console.log("dateStartString");
-            console.log(dateStartString);
             this.bodyevents[index]['bodyStart'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateStartString).tz(this.timezoneSelect).format('HH : mm');
             var endHoureSelected = element['end'].getHours();
             var endMinuteSelected = element['end'].getMinutes();
             var endHoureSelectedString = "";
             var endMinuteSelectedString = "";
+            console.log("endHoureSelected");
+            console.log(endHoureSelected);
+            console.log("endMinuteSelected");
+            console.log(endMinuteSelected);
             if (endHoureSelected < 10)
                 endHoureSelectedString = "0" + endHoureSelected;
             else
-                endHoureSelectedString = houreSelected.toString();
+                endHoureSelectedString = endHoureSelected.toString();
             if (endMinuteSelected < 10)
                 endMinuteSelectedString = "0" + endMinuteSelected;
             else
                 endMinuteSelectedString = endMinuteSelected.toString();
+            console.log("endHoureSelectedString");
+            console.log(endHoureSelectedString);
+            console.log("endMinuteSelectedString");
+            console.log(endMinuteSelectedString);
             var dateEndString = yearSelected + "-" + startMonthSelectedString + "-" + startDaySelectedString + " " + endHoureSelectedString + ":" + endMinuteSelectedString;
-            // var dateEndString = element['end'].getFullYear() + "-" + element['end'].getMonth() + "-" + element['end'].getDate()
-            // + " " + element['end'].getHours() + ":" + element['end'].getMinutes();
-            element['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateEndString).tz(this.timezoneSelect).format('HH : mm');
+            this.bodyevents[index]['bodyEnd'] = __WEBPACK_IMPORTED_MODULE_9_moment__(dateEndString).tz(this.timezoneSelect).format('HH : mm');
+            console.log("dateEndString");
+            console.log(dateEndString);
+            // console.log("dateEndString")
+            // console.log(dateEndString)
+            console.log("---------------------------------");
         }
         ;
     };
@@ -11999,7 +12013,7 @@ var ConfirmAddFormComponent = (function () {
 /***/ "./src/app/main/content/dialogs/confirm-message/confirm-message.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<div mat-dialog-content class=\"confirmClass\" [dir]=\"dir\">\n  <p *ngIf=\"errorMesage!=''\">{{errorMesage |translate }}</p>\n\n  <p *ngIf=\"typeConfirm=='defult'\">{{message}}</p>\n  <p *ngIf=\"typeConfirm!='defult'\">{{'Dialog.Confirm.'+message | translate}}</p>\n  <div *ngIf=\"typeConfirm=='bookAppointment'\">\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <mat-icon matSuffix>calendar_today</mat-icon>\n      </div>\n      <div class=\"col-sm-10\">\n        {{moreData.date}}\n      </div>\n\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <mat-icon matSuffix>access_time</mat-icon>\n      </div>\n      <div class=\"col-sm-10\">\n        {{'Dialog.Confirm.From' | translate}} {{moreData.timeStart}} {{'Dialog.Confirm.To' | translate}}\n        {{moreData.timeEnd}} {{'Dialog.Confirm.At' | translate}} {{moreData.timePlace}}\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <mat-icon matSuffix>place</mat-icon>\n      </div>\n      <div class=\"col-sm-10\">\n        {{moreData.location}}\n      </div>\n    </div>\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">{{'Dialog.Confirm.No' | translate}}</button>\n  <button mat-button (click)=\"onYesClick()\">{{'Dialog.Confirm.Yes' | translate}}</button>\n</div>\n"
+module.exports = "<!--component html goes here -->\n<div mat-dialog-content class=\"confirmClass\" [dir]=\"dir\">\n  <p *ngIf=\"errorMesage!=''\">{{errorMesage |translate }}</p>\n\n  <p *ngIf=\"typeConfirm=='defult'\">{{message}}</p>\n  <p *ngIf=\"typeConfirm!='defult'\">{{'Dialog.Confirm.'+message | translate}}</p>\n  <div *ngIf=\"typeConfirm=='bookAppointment'\">\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <mat-icon matSuffix>calendar_today</mat-icon>\n      </div>\n      <div class=\"col-sm-10\">\n        {{moreData.date}}\n      </div>\n\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <mat-icon matSuffix>access_time</mat-icon>\n      </div>\n      <div class=\"col-sm-10\">\n        {{'Dialog.Confirm.From' | translate}} <span dir=\"ltr\">{{moreData.timeStart}} </span> {{'Dialog.Confirm.To' | translate}}\n       <span dir=\"ltr\"> {{moreData.timeEnd}} </span>{{'Dialog.Confirm.At' | translate}} {{moreData.timePlace}}\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <mat-icon matSuffix>place</mat-icon>\n      </div>\n      <div class=\"col-sm-10\">\n        {{moreData.location}}\n      </div>\n    </div>\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">{{'Dialog.Confirm.No' | translate}}</button>\n  <button mat-button (click)=\"onYesClick()\">{{'Dialog.Confirm.Yes' | translate}}</button>\n</div>\n"
 
 /***/ }),
 
