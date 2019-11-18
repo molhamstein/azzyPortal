@@ -102,7 +102,8 @@ export class ContractedFormsComponent implements OnInit {
           },
           "order": "dateOfArr DESC",
           "limit": limit,
-          "skip": offset * limit
+          "skip": offset * limit,
+          "include": "consultant"
         }
 
 

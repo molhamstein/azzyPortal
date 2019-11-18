@@ -63,7 +63,8 @@ export class ProcessedFormsComponent implements OnInit {
           },
           "order": "dateOfArr DESC",
           "limit": limit,
-          "skip": offset * limit
+          "skip": offset * limit,
+          "include": "consultant"
         }
 
     this.mainServ.APIServ.get("forms?filter=" + JSON.stringify(filter)).subscribe((data: any) => {
@@ -97,7 +98,6 @@ export class ProcessedFormsComponent implements OnInit {
 
 
   onPage(event) {
-    console.log('Page Event', event);
     this.mainServ.loaderSer.display(true);
 
     this.offset = event.offset;

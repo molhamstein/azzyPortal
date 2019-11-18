@@ -79,6 +79,13 @@
 
       </ngx-datatable-column>
 
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="consultant.username">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'Form.PROCESSED_FORMS.CONSULTANT' | translate }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+
+
 
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="Status">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">

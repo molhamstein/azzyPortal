@@ -32,8 +32,6 @@ export class AddApointmentComponent {
     ) {
         this.translationLoader.loadTranslations(english, persian);
         this.appointment = data['appointment'];
-        console.log("this.appointment")
-        console.log(this.appointment)
     }
     myControl = new FormControl();
     options: string[] = ['One', 'Two', 'Three'];
@@ -62,8 +60,7 @@ export class AddApointmentComponent {
 
     private _filter(value: string): string[] {
         const filterValue = value.toLowerCase();
-
-        return this.options.filter(option => option['nameFarsi'].toLowerCase().includes(filterValue));
+        return this.options.filter(option => option['nameEnglish'].toLowerCase().includes(filterValue));
     }
 
     close() {

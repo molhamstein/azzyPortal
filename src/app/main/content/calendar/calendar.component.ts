@@ -95,7 +95,7 @@ export class CalendarComponent implements OnInit {
         //   for (const key in tempInfo) {
         //     if (tempInfo.hasOwnProperty(key)) {
         //       const element = tempInfo[key];
-        //       console.log(element);
+        //       
         //       secTemp.push(element)
 
         //     }
@@ -221,12 +221,10 @@ export class CalendarComponent implements OnInit {
 
     if (slote.open == false) {
       if (slote.forms == null) {
-        console.log("slote")
-        console.log(slote)
+
         return "";
       } else {
-        console.log("true slote")
-        console.log(slote)
+
         return cons.username + ' - ' + "with " + slote.forms.nameEnglish + " " + slote.forms.surnameEnglish + ': ' + new Date(slote.startDate).getHours() + ':' + startMin + ' - ' + new Date(slote.endDate).getHours() + ':' + endMin + ' (' + slote.location + ')';
       }
     } else {
@@ -271,7 +269,6 @@ export class CalendarComponent implements OnInit {
   isAvailbleDate(items, houre, min, index) {
     let newItem;
     items.find(item => {
-      console.log(item)
       if (item.start.getHours() == houre && item.start.getMinutes() == min) {
         newItem = item;
       }
@@ -346,11 +343,10 @@ export class CalendarComponent implements OnInit {
                 tempX['color'] = { primary: cons.primarycolor, secondary: cons.secondarycolor };
               this.monthEvent.push(tempX);
             }
-            console.log("this.monthEvent")
-            console.log(this.monthEvent)
+            
+            
 
-            // console.log("this.newEventsMonth");
-            // console.log(this.newEventsMonth);
+
             if (this.newEventsMonth[x['start'].getDate()] == null)
               this.newEventsMonth[x['start'].getDate()] = []
             this.newEventsMonth[x['start'].getDate()].push(x);
@@ -378,7 +374,7 @@ export class CalendarComponent implements OnInit {
     // if()
     // for (var index = 0; index < this.newEventsMonth[slot['start'].getDate()].length; index++) {
     //   var element = this.newEventsMonth[slot['start'].getDate()][index];
-    //   // console.log(element.meta.consId);
+    //   
     //   if (element.meta.consId == slot.meta.consId) {
     //     return false;
     //   }
