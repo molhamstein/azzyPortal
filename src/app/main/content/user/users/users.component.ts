@@ -9,11 +9,11 @@ import { locale as persian } from '../../languageFiles/fa';
 import { FuseTranslationLoaderService } from '../../../../core/services/translation-loader.service';
 import { TranslateService } from '@ngx-translate/core';
 
-import * as moment from 'moment'; // add this 1 of 4
+// import * as moment from 'moment'; // add this 1 of 4
 
-import 'moment-timezone';
+// import 'moment-timezone';
 
-
+var moment = require('moment-timezone');
 
 @Component({
   selector: 'app-users',
