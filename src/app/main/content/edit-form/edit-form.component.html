@@ -933,7 +933,7 @@
                   </div>
                 </div>
 
-                <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
+                <div  [ngClass]="{'hideMe': hasPartner!=true}" style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap"
                   fxLayoutAlign.gt-md="space-around center" fxFlex>
                   <div *ngFor="let oneField of pintsFields" fxFlex="22">
                     <mat-form-field *ngIf="oneField.type=='input'" style="width: 100%">

@@ -13,9 +13,10 @@ import { colors } from '../../calendar/colors';
 import { JsonService } from '../../calendar/json.service';
 import * as cloneDeep from 'lodash/cloneDeep';
 
-import * as moment from 'moment'; // add this 1 of 4
+// import * as moment from 'moment'; // add this 1 of 4
+import moment from 'moment-timezone';
 
-import 'moment-timezone';
+// import 'moment-timezone';
 
 import {
   startOfDay,

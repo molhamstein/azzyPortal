@@ -67,6 +67,11 @@
         </ng-template>
       </ngx-datatable-column>
 
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="mobileNo">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'Form.UNPROCESSED_FORMS.PHONE_NUMBER' | translate }}</span>
+        </ng-template>
+      </ngx-datatable-column>
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="nameEnglish">
         <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
           <span>{{ 'Form.UNPROCESSED_FORMS.CLIENT_NAME' | translate }}</span>
@@ -97,6 +102,13 @@
           </mat-chip-list>
           <mat-chip-list *ngIf="row.status=='not eligible'">
             <mat-chip style="background-color:#ff6363" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+          
+          <mat-chip-list *ngIf="row.status=='follow up'">
+            <mat-chip style="background-color:#6f00af" selected="true">{{row.status}}</mat-chip>
+          </mat-chip-list>
+          <mat-chip-list *ngIf="row.status=='lost lead'">
+            <mat-chip style="background-color:#fa804f" selected="true">{{row.status}}</mat-chip>
           </mat-chip-list>
 
           <mat-chip-list *ngIf="row.status=='contracts'">
@@ -147,6 +159,15 @@
               <span>{{'Form.PROCESSED_FORMS.UNPROCESSED' | translate}}</span>
             </button>
 
+            <button *ngIf="row.status!='lost lead' && isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('lost lead',1,row.id,row.nameEnglish , row.textBoxAdmin )">
+              <mat-icon>cancel</mat-icon>
+              <span>{{'Form.PROCESSED_FORMS.LOSTLEAD' | translate}}</span>
+            </button>
+
+            <button *ngIf="row.status!='follow up' && isAllowed('WriteForms')" mat-menu-item (click)="changeStatus('follow up',4,row.id,row.nameEnglish , row.textBoxAdmin )">
+              <!-- <mat-icon>cancel</mat-icon> -->
+              <span>{{'Form.PROCESSED_FORMS.FOLLOWUP' | translate}}</span>
+            </button>
             <button mat-menu-item *ngIf="isAllowed('WriteForms')" (click)="goTo('edit',row.id)">
               <mat-icon>edit</mat-icon>
               <span>{{'Form.UNPROCESSED_FORMS.EDIT' | translate}}</span>

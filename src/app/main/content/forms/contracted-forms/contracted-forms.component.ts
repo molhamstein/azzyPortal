@@ -20,7 +20,7 @@ export class ContractedFormsComponent implements OnInit {
   rows = [];
   count: number = 0;
   offset: number = 0;
-  limit: number = 5;
+  limit: number = 10;
 
   isSearchMode = false;
 
@@ -80,6 +80,7 @@ export class ContractedFormsComponent implements OnInit {
     var filter;
     if (this.isSearchMode == false)
       filter = {
+        "include": "consultant",
         "where": { "status": "contracts" },
         "order": "dateOfArr DESC",
         "limit": limit,
@@ -98,12 +99,14 @@ export class ContractedFormsComponent implements OnInit {
               { "nameEnglishSp": { "like": this.searchKey, options: "i" } },
               { "nameFarsiSp": { "like": this.searchKey, options: "i" } },
               { "surnameEnglishSp": { "like": this.searchKey, options: "i" } },
-              { "surnameFarsiSp": { "like": this.searchKey, options: "i" } }]
+              { "surnameFarsiSp": { "like": this.searchKey, options: "i" } },
+              { "mobileNo": {  "like": this.searchKey, options: "i" } },
+              { "mobileNoSp": {  "like": this.searchKey, options: "i" } },]
           },
           "order": "dateOfArr DESC",
           "limit": limit,
           "skip": offset * limit,
-          "include": "consultant"
+          "include":[ "consultant","consTimes"]
         }
 
 
@@ -166,7 +169,9 @@ export class ContractedFormsComponent implements OnInit {
           { "nameEnglishSp": { "like": this.searchKey, options: "i" } },
           { "nameFarsiSp": { "like": this.searchKey, options: "i" } },
           { "surnameEnglishSp": { "like": this.searchKey, options: "i" } },
-          { "surnameFarsiSp": { "like": this.searchKey, options: "i" } }
+          { "surnameFarsiSp": { "like": this.searchKey, options: "i" } },
+          { "mobileNo": {  "like": this.searchKey, options: "i" } },
+          { "mobileNoSp": {  "like": this.searchKey, options: "i" } },
         ]
       }
 
@@ -205,7 +210,7 @@ export class ContractedFormsComponent implements OnInit {
 
   changeStatus(newStatus, urlIndex, id, name, text) {
     var mainThis = this;
-    var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts']
+    var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts','forms/changeStatusToFollowUp']
     if (urlIndex != 0) {
 
       var isWithID = newStatus == "consultation" ? true : false;

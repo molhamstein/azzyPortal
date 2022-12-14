@@ -24,7 +24,7 @@ export class viewEventComponent {
     constructor(
         public dialogRef: MatDialogRef<viewEventComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
-        // private mainServ: MainService,
+        private mainServ: MainService,
         // private _formBuilder: FormBuilder,
         // private translate: TranslateService,
         // private translationLoader: FuseTranslationLoaderService,
@@ -63,5 +63,10 @@ export class viewEventComponent {
         this.dialogRef.close();
     }
     save() {
+    }
+    moveToForm(id){
+        if(id)
+       { this.close()
+        this.mainServ.globalServ.goTo('show-form/' + id)}
     }
 }

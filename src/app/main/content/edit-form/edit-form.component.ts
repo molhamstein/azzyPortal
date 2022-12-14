@@ -511,6 +511,12 @@ export class EditFormComponent implements OnInit {
       icon: 'note',
       type: 'number'
     },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.PFAGE',
+      value: ['pointsForAge', 'pointsForAge'],
+      icon: 'note',
+      type: 'number'
+    },
 
 
   ]
@@ -730,6 +736,7 @@ export class EditFormComponent implements OnInit {
           pointsFromStateSponsorshipSp: [data['pointsFromStateSponsorshipSp']],
           pointsFromFamilySponsorship: [data['pointsFromFamilySponsorship']],
           pointsFromFamilySponsorshipSp: [data['pointsFromFamilySponsorshipSp']],
+          pointsForAge:[data['pointsForAge']],
           totalPoints: [data['totalPoints']],
           totalPointsSp: [data['totalPointsSp']]
         })
@@ -818,7 +825,8 @@ export class EditFormComponent implements OnInit {
       this.formGroup.value['formArray'][7]['pointsFromEnglishTestSp'] +
       this.formGroup.value['formArray'][7]['pointsFromNAATITestSp'] +
       this.formGroup.value['formArray'][7]['pointsFromStateSponsorshipSp'] +
-      this.formGroup.value['formArray'][7]['pointsFromFamilySponsorshipSp']
+      this.formGroup.value['formArray'][7]['pointsFromFamilySponsorshipSp'] +
+      this.formGroup.value['formArray'][7]['pointsForAge']
   }
 
   editForm() {

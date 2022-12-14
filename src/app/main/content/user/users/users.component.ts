@@ -24,7 +24,7 @@ export class usersComponent implements OnInit {
   rows = [];
   count: number = 0;
   offset: number = 0;
-  limit: number = 5;
+  limit: number = 10;
 
   constructor(private translationLoader: FuseTranslationLoaderService
     , private translateService: TranslateService

@@ -12,6 +12,7 @@ export const locale = {
                 'SUBMISSION_DATE': 'Submission Date',
                 'CLIENT_NAME': 'Client Name',
                 'CLIENT_NUMBER': 'Client Number',
+                'PHONE_NUMBER': 'Phone Number',
                 'STATUS': 'Status',
                 'SHOW_FORM': 'Show Form',
                 'PROCESS': 'Process',
@@ -22,7 +23,9 @@ export const locale = {
                 'MORE_INFO': 'More Info',
                 'REJECT': 'Reject',
                 'CONSULTATION': 'Consultation',
-                'CONTRACT': 'Contract'
+                'CONTRACT': 'Contract',
+                'LOSTLEAD':'Lost Lead',
+                'FOLLOWUP':'Follow Up'
             },
             'PROCESSED_FORMS': {
                 'TITLE': 'Processed Forms',
@@ -33,6 +36,7 @@ export const locale = {
                 'PROCESS_DATE': 'Date of Processing',
                 'CLIENT_NAME': 'Client Name',
                 'CLIENT_NUMBER': 'Client Number',
+                'PHONE_NUMBER': 'Phone Number',
                 'STATUS': 'Status',
                 'EMAIL': "Email",
                 'UNPROCESSED': 'Unprocessed',
@@ -44,12 +48,15 @@ export const locale = {
                 'NOTELIGIBLE': 'Not Eligible',
                 'REJECT': 'Reject',
                 'CONSULTATION': 'Consultation',
-                'CONTRACT': 'Contract'
+                'CONTRACT': 'Contract',
+                'LOSTLEAD':'Lost Lead',
+                'FOLLOWUP':'Follow Up'
             },
             'CONTRACTED_FORMS': {
                 'SUBMISSION_DATE': 'Submission Date',
                 'CLIENT_NAME': 'Client Name',
                 'CLIENT_NUMBER': 'Client Number',
+                'PHONE_NUMBER': 'Phone Number',
                 'STATUS': 'Status',
                 'TITLE': 'Contracted Forms',
                 'SHOW_FORM': 'Show Form',
@@ -63,6 +70,8 @@ export const locale = {
                 'CONSULTATION': 'Consultation',
                 'CONTRACT': 'Contract',
                 'UNPROCESSED': 'Unprocessed',
+                'LOSTLEAD':'Lost Lead',
+                'FOLLOWUP':'Follow Up'
             }
         },
         'Add_Edit_Form': {
@@ -202,9 +211,16 @@ export const locale = {
                 'PFNAATI': 'Points from NAATI Test',
                 'PFSTATE': 'Points from State Sponsorship',
                 'PFFAMILY': 'Points from Family Sponsorship',
+                'PFAGE': 'Points For Age',
                 'TOTALPOINT': 'Total Points',
                 'ANYINFO': 'Any useful information you want to add?',
                 'HOWKNOWUS': 'How did you know about us?',
+                'HAVEASSESSED': 'Have you been assessed before?',
+                'WASTHERESULT': 'Was the result Positive or Negative?',
+                'YES': 'Yes',
+                'NO': 'No',
+                'POSITIVE':'Positive',
+                'NEGATIVE':'Negative',
                 'DONE': "Done",
                 'EDIT': "Edit",
                 'BACK': "Back",

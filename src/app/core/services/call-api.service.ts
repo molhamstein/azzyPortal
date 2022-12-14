@@ -18,6 +18,8 @@ export class CallApiService {
   }
   // readonly baseUrl = "http://104.217.253.15:2999/api/"
   readonly baseUrl = "http://178.62.233.91:3000/api/"
+    // readonly baseUrl = "https://f9de-46-53-15-116.eu.ngrok.io/api/"
+
   // readonly baseUrl = "http://azzyimmigration.com:3000/api/"
   // readonly baseUrl = "http://localhost:3000/api/"
   // readonly baseUrl = "http://192.168.1.6:3000/api/"
@@ -49,7 +51,7 @@ export class CallApiService {
     else if (this.loginSer.getToken() != null) {
       auth = this.loginSer.getToken();
     }
-    let _options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', "Authorization": auth }) };
+    let _options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', "Authorization": auth ,'ngrok-skip-browser-warning':'test'}) };
 
     return this.http.get(this.baseUrl + url, _options).map((Response: Response) => {
       return Response;

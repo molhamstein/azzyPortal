@@ -16,9 +16,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { AppDirectionService } from '../../../app-direction.service';
 
 import * as $ from "jquery";
-import * as moment from 'moment'; // add this 1 of 4
+// import * as moment from 'moment'; // add this 1 of 4
+import moment from 'moment-timezone';
 
-import 'moment-timezone';
+// import 'moment-timezone';
 
 @Component({
   selector: 'app-advice-form',
@@ -36,7 +37,7 @@ export class AdviceFormComponent implements OnInit {
   // worksFormArray: FormArray;
   // worksSpouseFormArray: FormArray;
 
-
+  showResult:boolean = false;
   fuseSettings: any;
   isNonLinear = false;
   isNonEditable = false;
@@ -53,7 +54,7 @@ export class AdviceFormComponent implements OnInit {
 
   educationSpChecked = [true, false, false, false]
   educationChecked = [true, false, false, false]
-
+  educationDisabled =[false, false, false,false]
 
   scrollToUp() {
 
@@ -78,6 +79,26 @@ export class AdviceFormComponent implements OnInit {
       value: 'withOutPartner'
     }
   ];
+  yesNoOptions = [
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.YES',
+      value: 'Yes'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.NO',
+      value: 'No'
+    },
+  ]
+  posOrNegOptions = [
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.POSITIVE',
+      value: 'Positive'
+    },
+    {
+      viewValue: 'Add_Edit_Form.STEP_7.NEGATIVE',
+      value: 'Negative'
+    },
+  ]
   englishLevels = [
     {
       viewValue: 'Add_Edit_Form.STEP_1.EXCELLENT',
@@ -588,10 +609,23 @@ export class AdviceFormComponent implements OnInit {
         this._formBuilder.group({
           textBoxClient: [''],
           howKnow: [''],
-
+          assessedBefore:this._formBuilder.group({
+            assessed:[''],
+            result:['']
+          })
         })
       ])
     });
+     this.formArray.valueChanges.subscribe(v=>{
+      if(v[7].assessedBefore.assessed ==='Yes'){
+        this.showResult = true
+        
+      }
+      else{
+        this.showResult= false
+      }
+    })
+    
 
     // this.degreesFormArray = this.formArray.get([2, 'degrees']) as FormArray;
     // this.degreesSpouseFormArray = this.formArray.get([2, 'degreesSpouse']) as FormArray;
@@ -673,6 +707,8 @@ export class AdviceFormComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result == true) {
+        console.log(this.sendArray);
+        
         this.sendArray['city'] = this.locationZone()
         if (this.mainServ.loginServ.getlang() == "fa")
           this.sendArray['lang'] = "fa"
@@ -707,4 +743,33 @@ export class AdviceFormComponent implements OnInit {
   locationZone() {
     return moment.tz.guess()
   }
+  
+  setRequiredFields(i){
+    if(this.educationChecked[3] == true){
+      this.changeMasterDegreeStatus()
+      this.checkLowDegreeStatus(i)
+    }
+    else if(this.educationChecked[2] == true){
+      this.educationDisabled[2] = false
+      this.checkLowDegreeStatus(i)
+    }
+  }
+
+  changeMasterDegreeStatus(){
+    this.educationChecked[2]= true
+    this.educationDisabled[2]= true
+  }
+
+  checkLowDegreeStatus(i){
+    if(this.educationChecked[0] == false && i == 0){
+      this.educationChecked[1] = true
+    }
+    else if(this.educationChecked[1] == false && i == 1){      
+      this.educationChecked[0] = true
+    }
+    else if(this.educationChecked[1] == false && this.educationChecked[0] == false){
+      this.educationChecked[0] = true
+    }
+  }
+
 }

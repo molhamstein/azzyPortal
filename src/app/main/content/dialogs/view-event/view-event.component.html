@@ -3,7 +3,7 @@
 
 <h1 mat-dialog-title> Appointments in {{events[0].start | date: 'dd/MM/yyyy'}}</h1>
 <div mat-dialog-content>
- <div class="card"  *ngFor="let oneEvent of events ">
+ <div class="card"  *ngFor="let oneEvent of events " (click)="moveToForm(oneEvent.meta.forms.id)">
   <span class="color" [ngStyle]="{'background-color':oneEvent.color.primary }"></span>
   <label class="title">{{oneEvent.title}}</label>
  </div>

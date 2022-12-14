@@ -73,6 +73,7 @@ export class CalendarComponent implements OnInit {
   }
 
   getInfoEvent(day) {
+    
     var tempInfo = []
     for (let index = 0; index < day.events.length; index++) {
       const element = day.events[index];
@@ -137,7 +138,16 @@ export class CalendarComponent implements OnInit {
           this.openAddApo(event);
         }
       }
+      else {
+        this.openAddApo(event);
+      }
   }
+  
+//   moveToForm(id){
+//     if(id){
+//       this.mainServ.globalServ.goTo('show-form/' + id)
+//     }
+// }
 
 
   openAddApo(data) {
@@ -175,6 +185,7 @@ export class CalendarComponent implements OnInit {
     // this.openEvents = [];
     this.selectedDay = { 'date': date }
     this.viewDate = date;
+    
     // events.forEach(element => {
     //   this.openEvents.push(element);
     // });
@@ -190,6 +201,7 @@ export class CalendarComponent implements OnInit {
     //   }
     // }
     if (this.newEventsMonth[date.getDate()] != null || this.newEventsMonth[date.getDate()].length != 0) {
+      
       this.dialogRef = this.dialog.open(viewEventComponent, {
         // panelClass: 'event-form-dialog',
         width: '600px',

@@ -180,7 +180,7 @@
               <mat-form-field fxFlex="24">
 
                 <input autocomplete="off" matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FNAME' | translate }}"
-                  formControlName="nameFarsiSp">
+                  formControlName="nameFarsiSp" [required]="hasPartner">
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -188,7 +188,7 @@
               <mat-form-field fxFlex="24">
 
                 <input autocomplete="off" matInput placeholder="{{ 'Add_Edit_Form.STEP_0.FSNAME' | translate }}"
-                  formControlName="surnameFarsiSp">
+                  formControlName="surnameFarsiSp"  [required]="hasPartner">
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -196,7 +196,7 @@
               <mat-form-field fxFlex="24">
 
                 <input autocomplete="off" matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ENAME' | translate }}"
-                  formControlName="nameEnglishSp">
+                  formControlName="nameEnglishSp"  [required]="hasPartner">
                 <mat-icon matSuffix>person</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -204,7 +204,7 @@
               <mat-form-field fxFlex="24">
 
                 <input autocomplete="off" matInput placeholder="{{ 'Add_Edit_Form.STEP_0.ESNAME' | translate }}"
-                  formControlName="surnameEnglishSp">
+                  formControlName="surnameEnglishSp"  [required]="hasPartner">
                 <mat-icon matSuffix>people</mat-icon>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
               </mat-form-field>
@@ -248,7 +248,7 @@
 
               <mat-form-field fxFlex="24">
                 <input matInput [min]="minDateSp" [max]="maxDateSp" (focus)="birthDatePickerSp.open()" [matDatepicker]="birthDatePickerSp"
-                  placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}" formControlName="dateOfBirthPerSp">
+                  placeholder="{{ 'Add_Edit_Form.STEP_0.BIRTH_DATE' | translate }}" formControlName="dateOfBirthPerSp"  [required]="hasPartner">
                 <mat-datepicker-toggle matSuffix [for]="birthDatePickerSp"></mat-datepicker-toggle>
                 <mat-datepicker #birthDatePickerSp startView="year" [startAt]="startDate"></mat-datepicker>
                 <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
@@ -384,12 +384,14 @@
             <div *ngFor="let level of eduLevels;let i = index" style="padding-top:10px;" fxLayout="column"
               fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
               <div fxFlex="15" style="height: 67px;padding: 21px 0px;">
-                <mat-checkbox class="example-margin" [ngModelOptions]="{standalone: true}" [(ngModel)]="educationChecked[i]"></mat-checkbox>
+                <mat-checkbox class="example-margin"  [ngModelOptions]="{standalone: true}" (change)="setRequiredFields(i)" 
+                [(ngModel)]="educationChecked[i]" [disabled]="educationDisabled[i]"></mat-checkbox>
                 <span style="font-size: 16px;margin: 0px  10px;" class="mat-title">{{level.label| translate}}</span>
               </div>
               <div fxFlex="15" *ngFor="let oneField of level.fields">
                 <mat-form-field [ngClass]="{'hideMe': educationChecked[i]!=true}" *ngIf="oneField.isInput==true">
-                  <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}">
+                  <input autocomplete="off" matInput placeholder="{{ oneField.viewValue | translate }}" formControlName="{{oneField.value[0]}}"
+                  [required]="educationChecked[i]==true">
                   <mat-icon matSuffix>{{oneField.icon}}</mat-icon>
 
                 </mat-form-field>
@@ -778,6 +780,28 @@
                   <mat-icon matSuffix>note</mat-icon>
 
                 </mat-form-field>
+                <ng-container  formGroupName="assessedBefore">
+                <div class="pt-24 pb-24">
+                  <label>{{ 'Add_Edit_Form.STEP_7.HAVEASSESSED' | translate }}</label>
+                  <mat-radio-group formControlName="assessed">
+                    <mat-radio-button class="mr-24 ml-24" *ngFor="let option of yesNoOptions" [value]="option.value">
+                      {{ option.viewValue | translate }}
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <mat-divider></mat-divider>
+                
+                <div class="pt-24 pb-24" *ngIf="showResult">
+                  <label>{{ 'Add_Edit_Form.STEP_7.WASTHERESULT' | translate }}</label>
+                  <mat-radio-group formControlName="result">
+                    <mat-radio-button class="mr-24 ml-24" *ngFor="let option of posOrNegOptions" [value]="option.value">
+                      {{ option.viewValue | translate }}
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </ng-container>
+                <mat-divider></mat-divider>
+
 
               </div>
             </div>

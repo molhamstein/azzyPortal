@@ -12,6 +12,7 @@ export const locale = {
                 'SUBMISSION_DATE': 'تاریخ ارسال',
                 'CLIENT_NAME': 'نام مشتری',
                 'CLIENT_NUMBER': 'شماره مشتری',
+                'PHONE_NUMBER':'شماره تلفن',
                 'STATUS': 'وضعیت',
                 'SHOW_FORM': 'نمایش فرم',
                 'PROCESS': 'فرم فرآیند',
@@ -22,7 +23,9 @@ export const locale = {
                 'MORE_INFO': 'اطلاعات بیشتر',
                 'REJECT': 'مردود',
                 'CONSULTATION': 'مشاوره',
-                'CONTRACT': 'قرارداد'
+                'CONTRACT': 'قرارداد',
+                'LOSTLEAD':'سرب گم شده',
+                'FOLLOWUP':'پیگیری'
             },
             'PROCESSED_FORMS': {
                 'TITLE': 'فرم های پردازش شده',
@@ -32,6 +35,7 @@ export const locale = {
                 'PROCESS_DATE': 'تاریخ پردازش',
                 'CLIENT_NAME': 'نام مشتری',
                 'CLIENT_NUMBER': 'شماره مشتری',
+                'PHONE_NUMBER':'شماره تلفن',
                 'STATUS': 'وضعیت',
                 'EMAIL': 'ایمیل',
                 'UNPROCESSED': 'پردازش نشده',
@@ -44,12 +48,15 @@ export const locale = {
                 'REJECT': 'مردود',
                 'CONSULTANT': 'مشاور',
                 'CONSULTATION': 'مشاوره',
-                'CONTRACT': 'قرارداد'
+                'CONTRACT': 'قرارداد',
+                'LOSTLEAD':'سرب گم شده',
+                'FOLLOWUP':'پیگیری'
             },
             'CONTRACTED_FORMS': {
                 'SUBMISSION_DATE': 'تاریخ ارسال',
                 'CLIENT_NAME': 'نام مشتری',
                 'CLIENT_NUMBER': 'شماره مشتری',
+                'PHONE_NUMBER':'شماره تلفن',
                 'STATUS': 'وضعیت',
                 'TITLE': 'قراردادها',
                 'SHOW_FORM': 'نمایش فرم',
@@ -63,6 +70,8 @@ export const locale = {
                 'CONTRACT': 'قرارداد',
                 'CONSULTATION': 'مشاوره',
                 'UNPROCESSED': 'بررسی نشده',
+                'LOSTLEAD':'سرب گم شده',
+                'FOLLOWUP':'پیگیری'
             }
         },
         'Add_Edit_Form': {
@@ -205,9 +214,16 @@ export const locale = {
                 'PFNAATI': 'امتیاز امتحان ناتی',
                 'PFSTATE': 'امتیاز اسپانسور ایالتی',
                 'PFFAMILY': 'امتیاز اسپانسور فامیلی',
+                'PFAGE': 'امتیاز برای سن',
                 'TOTALPOINT': 'جمع کل امتیازات',
                 'ANYINFO': 'آیا مطلب مهم دیگری هست که اضافه کنید؟',
                 'HOWKNOWUS': 'با دفتر ما از چه طریقی آشنا شده اید؟',
+                'HAVEASSESSED': 'آیا قبلا ارزیابی شده اید؟',
+                'WASTHERESULT': 'نتیجه مثبت بود یا منفی؟',
+                'YES': 'بله',
+                'NO': 'نه',
+                'POSITIVE':'مثبت',
+                'NEGATIVE':'منفی',
                 'DONE': "ارسال",
                 'EDIT': "ویرایش",
                 'BACK': "قبلی",
