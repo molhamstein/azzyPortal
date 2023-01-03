@@ -18,7 +18,8 @@ import * as cloneDeep from 'lodash/cloneDeep';
 
 // import 'moment-timezone';
 
-var moment = require('moment-timezone');
+// var moment = require('moment-timezone');
+import * as moment from 'moment-timezone';
 
 import {
   startOfDay,
@@ -31,7 +32,7 @@ import {
   addHours
 } from 'date-fns';
 import { TimeSlots } from '../../calendar/TimeSlots'
-import { Subject } from 'rxjs';
+// import { Subject } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MatDialog, MatCalendar } from '@angular/material';
 import { locale as english } from '../../languageFiles/en';
@@ -39,6 +40,7 @@ import { locale as persian } from '../../languageFiles/fa';
 
 import { TranslateService } from '@ngx-translate/core';
 import { FuseTranslationLoaderService } from '../../../../core/services/translation-loader.service';
+import { Subject } from 'rxjs';
 
 
 @Component({
@@ -62,7 +64,7 @@ import { FuseTranslationLoaderService } from '../../../../core/services/translat
     }
     /deep/ .datatable-body-row.active .datatable-row-group {
       color:white !important;
-
+    }
   `
   ]
 })

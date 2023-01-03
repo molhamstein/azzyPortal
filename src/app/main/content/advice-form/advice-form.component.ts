@@ -18,7 +18,9 @@ import { AppDirectionService } from '../../../app-direction.service';
 import * as $ from "jquery";
 // import * as moment from 'moment'; // add this 1 of 4
 // import moment from 'moment-timezone';
-var moment = require('moment-timezone');
+// var moment = require('moment-timezone');
+import * as moment from 'moment-timezone';
+
 // import 'moment-timezone';
 
 @Component({

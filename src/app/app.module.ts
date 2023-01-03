@@ -44,7 +44,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { Angular5TimePickerModule } from 'angular5-time-picker';
-import { MomentTimezoneModule } from 'angular-moment-timezone';
 
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MessageComponent } from './main/content/dialogs/message/message.component';
@@ -78,7 +77,6 @@ const appRoutes: Routes = [
         FuseMainModule,
         MatDialogModule,
         ColorPickerModule,
-        MomentTimezoneModule
         // OwlDateTimeModule,
         // OwlNativeDateTimeModule,
     ],

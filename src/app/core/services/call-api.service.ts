@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
-import 'rxjs/Rx';
+// import 'rxjs/Rx';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 @Injectable()

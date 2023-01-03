@@ -8,10 +8,12 @@ import { locale as english } from '../../languageFiles/en';
 import { locale as persian } from '../../languageFiles/fa';
 
 // import * as moment from 'moment'; // add this 1 of 4
-// import moment from 'moment-timezone';
+// import moment from 'moment-timezone'; 
+
 
 // import 'moment-timezone';
-var moment = require('moment-timezone');
+// var moment = require('moment-timezone');
+import * as moment from 'moment-timezone';
 
 @Component({
     selector: 'add-slotes',
