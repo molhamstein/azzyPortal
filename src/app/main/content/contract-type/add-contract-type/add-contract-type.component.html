@@ -1,0 +1,34 @@
+<div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
+
+  <div class="header mat-accent-bg p-24 h-100" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
+      <div class="h2 mt-16">{{'Contract_Type.ADD_EDIT_CONTRACT_TYPE.TITLE' | translate }}</div>
+    </div>
+  </div>
+
+  <div class="content p-24">
+    <form [formGroup]="addContractTypeForm">
+      <div style="width: 100%;">
+        <div style="padding-top:10px;" fxLayout="column" fxLayout.gt-md="row wrap" fxLayoutAlign.gt-md="space-around center" fxFlex>
+          <mat-form-field fxFlex="24">
+            <input autocomplete="off"  matInput placeholder="{{ 'Contract_Type.ADD_EDIT_CONTRACT_TYPE.NAME' | translate }}" formControlName="title" required>
+            <mat-icon matSuffix>title</mat-icon>
+            <mat-error *ngIf="addContractTypeForm.hasError('required','title')">{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
+          </mat-form-field>
+          <div style="margin-bottom: 35px;"></div>
+          <div  fxFlex="24">
+            <button type="button"  mat-raised-button (click)="fileInput.click()">Choose File</button>
+            <input hidden (change)="onFileSelected()" #fileInput   type="file" id="file">
+          </div>
+          <p>{{ fileInputName }}</p>
+            
+
+        </div>
+      </div>
+
+      <div style="float: right;">
+        <button mat-button (click)="add()" cdkFocusInitial [disabled]="addContractTypeForm.invalid">{{'Contract_Type.ADD_EDIT_CONTRACT_TYPE.ADD' | translate}}</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -176,7 +176,6 @@ export class UnprocessedFormsComponent implements OnInit {
       if (this.mainServ.APIServ.getErrorCode() == 0) {
         this.count = data['count'];
         this.mainServ.loaderSer.display(false);
-
         this.setPage(this.offset, this.limit);
       }
       else if (this.mainServ.APIServ.getErrorCode() == 400) {
@@ -225,7 +224,14 @@ export class UnprocessedFormsComponent implements OnInit {
     var urlsArray = ['forms/changeStatusToUnproc', 'forms/changeStatusToProc', 'forms/changeStatusToConsultation', 'forms/changeStatusToContracts','forms/changeStatusToFollowUp']
     var mainThis = this;
     if (urlIndex != 0) {
+      if(newStatus === 'follow up') {
+        this.dialogSer.confirmationMessage('Do you want to change ' + name + '\'s form to ' + newStatus, urlsArray[urlIndex], {formId: id}, false, function () {
+          mainThis.inisilaize()
+        }, 'put')
+      } else {
       var isWithID = newStatus == "consultation" ? true : false;
+      var isContract = newStatus === "contracts" ? true : false;
+
       var tempText = ""
       if (text == null)
         tempText = "";
@@ -233,7 +239,7 @@ export class UnprocessedFormsComponent implements OnInit {
         tempText = text
       const dialogRef = this.dialog.open(SetTextBoxAdminComponent, {
         width: '500px',
-        data: { 'textBoxMessage': tempText, 'isWithID': isWithID }
+        data: { 'textBoxMessage': tempText, 'isWithID': isWithID, 'isContract': isContract }
       });
 
       dialogRef.afterClosed().subscribe(result => {
@@ -247,6 +253,7 @@ export class UnprocessedFormsComponent implements OnInit {
           }, 'put')
         }
       });
+    }
     }
     else {
       var result = {};

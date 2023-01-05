@@ -17,12 +17,14 @@ export class CallApiService {
   constructor(public http: HttpClient, private loginSer: LoginService, private snackBar: MatSnackBar) {
   }
   // readonly baseUrl = "http://104.217.253.15:2999/api/"
-  readonly baseUrl = "http://178.62.233.91:3000/api/"
+  // readonly baseUrl = "http://178.62.233.91:3000/api/"
     // readonly baseUrl = "https://f9de-46-53-15-116.eu.ngrok.io/api/"
 
   // readonly baseUrl = "http://azzyimmigration.com:3000/api/"
   // readonly baseUrl = "http://localhost:3000/api/"
   // readonly baseUrl = "http://192.168.1.6:3000/api/"
+  readonly baseUrl = "https://8d95-46-53-40-213.eu.ngrok.io/api/"
+
   private errorCode = 0;
   private code = "";
 
@@ -93,8 +95,25 @@ export class CallApiService {
       auth = this.loginSer.getToken();
     }
     let _options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', "Authorization": auth }) };
-    console.log("data")
-    console.log(data)
+    return this.http.post(this.baseUrl + url, data, _options).map((Response: Response) => {
+      return Response;
+    }).catch((Response: Response) => {
+      this.errorCode = Response.status;
+      this.code = Response['error'].error.code;
+      return "E";
+    });
+  }
+
+  
+
+  fileUpload(url, data, token: string = "") {
+    let auth = "";
+    if (token != "")
+      auth = token
+    else if (this.loginSer.getToken() != null) {
+      auth = this.loginSer.getToken();
+    }
+    let _options = { headers: new HttpHeaders({ "Authorization": auth }) };
     return this.http.post(this.baseUrl + url, data, _options).map((Response: Response) => {
       return Response;
     }).catch((Response: Response) => {

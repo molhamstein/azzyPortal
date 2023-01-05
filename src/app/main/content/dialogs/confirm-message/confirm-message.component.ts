@@ -72,6 +72,19 @@ export class ConfirmMessageComponent {
                     this.errorMesage="errorCode.403"
                 }
             })
+        else if (this.type == "delete")
+            this.mainServ.APIServ.delete(this.url, this.token).subscribe((data: any) => {
+                if (this.mainServ.APIServ.getErrorCode() == 0) {
+                    if (this.withReload)
+                        this.mainServ.globalServ.reload();
+                    else
+                        this.dialogRef.close(data);
+
+                }
+                else if(this.mainServ.APIServ.getErrorCode() == 403){
+                    this.errorMesage="errorCode.403"
+                }
+            })
     }
     ngOnInit() {
         // this.translate.use('en');

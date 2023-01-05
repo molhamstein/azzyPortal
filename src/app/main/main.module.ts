@@ -30,6 +30,7 @@ import { AdviceFormModule } from './content/advice-form/advice-form.module';
 import { FuseSampleModule } from './content/sample/sample.module';
 import { AzzyFormsModule } from './content/forms/forms.module';
 import { MyClientCalendarModule } from './content/client-calendar/client-calendar.module';
+import { AzzyContractTypeModule } from './content/contract-type/contract-type.module';
 
 @NgModule({
     declarations: [
@@ -60,6 +61,7 @@ import { MyClientCalendarModule } from './content/client-calendar/client-calenda
         EditClientFormModule,
         AzzyFormsModule,
         AzzyUserModule,
+        AzzyContractTypeModule,
         MyClientCalendarModule,
         LoginModule,
         LockModule

@@ -32,6 +32,7 @@ export class ShowFormComponent implements OnInit {
         footer: 'none'
       }
     });
+    
 
   }
   form: any = {};

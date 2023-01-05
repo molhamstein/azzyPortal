@@ -35,6 +35,8 @@ export class GlobalService {
     this.roles['manager']["Open/BlockCalendar"] = true
     this.roles['manager']["UserDefinition"] = true
     this.roles['manager']["export"] = true
+    this.roles['manager']["contractTypes"] = true
+    this.roles['manager']["writeContractTypes"] = true
 
 
     this.roles['consultant'] = []
@@ -44,6 +46,9 @@ export class GlobalService {
     this.roles['consultant']["WriteForms"] = true
     this.roles['consultant']["Open/BlockCalendar"] = true
     this.roles['consultant']["UserDefinition"] = false
+    this.roles['consultant']["contractTypes"] = true
+    this.roles['consultant']["writeContractTypes"] = true
+
 
     this.roles['adminstrator'] = []
     this.roles['adminstrator']["ReadCalendar"] = true
@@ -52,6 +57,8 @@ export class GlobalService {
     this.roles['adminstrator']["WriteForms"] = true
     this.roles['adminstrator']["Open/BlockCalendar"] = true
     this.roles['adminstrator']["UserDefinition"] = false
+    this.roles['adminstrator']["contractTypes"] = true
+    this.roles['adminstrator']["writeContractTypes"] = true
 
 
     this.roles['secretary'] = []
@@ -61,6 +68,8 @@ export class GlobalService {
     this.roles['secretary']["WriteForms"] = false
     this.roles['secretary']["Open/BlockCalendar"] = false
     this.roles['secretary']["UserDefinition"] = false
+    this.roles['secretary']["contractTypes"] = false
+    this.roles['secretary']["writeContractTypes"] = false
 
 
     this.roles['reception'] = [];
@@ -70,6 +79,8 @@ export class GlobalService {
     this.roles['reception']["WriteForms"] = false
     this.roles['reception']["Open/BlockCalendar"] = false
     this.roles['reception']["UserDefinition"] = false
+    this.roles['reception']["contractTypes"] = false
+    this.roles['reception']["writeContractTypes"] = false
 
     this.pagesRole['manager'] = []
     this.pagesRole['manager']['processed'] = true
@@ -81,6 +92,9 @@ export class GlobalService {
     this.pagesRole['manager']['addUser'] = true
     this.pagesRole['manager']['editUser'] = true
     this.pagesRole['manager']['calendar'] = true
+    this.pagesRole['manager']['contract-type'] = true
+    this.pagesRole['manager']['add-contract-type'] = true
+    this.pagesRole['manager']['edit-contract-type'] = true
 
 
     this.pagesRole['adminstrator'] = []
@@ -93,6 +107,9 @@ export class GlobalService {
     this.pagesRole['adminstrator']['addUser'] = false
     this.pagesRole['adminstrator']['editUser'] = false
     this.pagesRole['adminstrator']['calendar'] = true
+    this.pagesRole['adminstrator']['contract-type'] = true
+    this.pagesRole['adminstrator']['add-contract-type'] = true
+    this.pagesRole['adminstrator']['edit-contract-type'] = true
 
 
     this.pagesRole['consultant'] = []
@@ -105,6 +122,9 @@ export class GlobalService {
     this.pagesRole['consultant']['addUser'] = false
     this.pagesRole['consultant']['editUser'] = false
     this.pagesRole['consultant']['calendar'] = true
+    this.pagesRole['consultant']['contract-type'] = true
+    this.pagesRole['consultant']['add-contract-type'] = true
+    this.pagesRole['consultant']['edit-contract-type'] = true
 
 
 
@@ -118,6 +138,9 @@ export class GlobalService {
     this.pagesRole['reception']['addUser'] = false
     this.pagesRole['reception']['editUser'] = false
     this.pagesRole['reception']['calendar'] = true
+    this.pagesRole['reception']['contract-type'] = false
+    this.pagesRole['reception']['add-contract-type'] = false
+    this.pagesRole['reception']['edit-contract-type'] = false
 
 
 
@@ -131,6 +154,9 @@ export class GlobalService {
     this.pagesRole['secretary']['addUser'] = false
     this.pagesRole['secretary']['editUser'] = false
     this.pagesRole['secretary']['calendar'] = true
+    this.pagesRole['secretary']['contract-type'] = false
+    this.pagesRole['secretary']['add-contract-type'] = false
+    this.pagesRole['secretary']['edit-contract-type'] = false
 
 
 

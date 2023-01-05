@@ -612,8 +612,8 @@ export class AdviceFormComponent implements OnInit {
           textBoxClient: [''],
           howKnow: [''],
           assessedBefore:this._formBuilder.group({
-            assessed:[''],
-            result:['']
+            assessed:[null],
+            result:[null]
           })
         })
       ])
@@ -718,6 +718,10 @@ export class AdviceFormComponent implements OnInit {
           this.sendArray['lang'] = "en"
 
 
+          if(this.sendArray['assessedBefore'].assessed === null ||
+            this.sendArray['assessedBefore'].result === null) {
+              this.sendArray["assessedBefore"] = null;
+          }
         this.mainServ.APIServ.post("forms", this.sendArray).subscribe((data: any) => {
           if (this.mainServ.APIServ.getErrorCode() == 0) {
             this.dialogSerc.responseFormDialog(true, data)

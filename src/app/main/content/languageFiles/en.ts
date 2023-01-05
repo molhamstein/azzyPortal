@@ -23,6 +23,7 @@ export const locale = {
                 'MORE_INFO': 'More Info',
                 'REJECT': 'Reject',
                 'CONSULTATION': 'Consultation',
+                'APPOINTMENT': 'Appointment date',
                 'CONTRACT': 'Contract',
                 'LOSTLEAD':'Lost Lead',
                 'FOLLOWUP':'Follow Up'
@@ -48,6 +49,7 @@ export const locale = {
                 'NOTELIGIBLE': 'Not Eligible',
                 'REJECT': 'Reject',
                 'CONSULTATION': 'Consultation',
+                'APPOINTMENT': 'Appointment date',
                 'CONTRACT': 'Contract',
                 'LOSTLEAD':'Lost Lead',
                 'FOLLOWUP':'Follow Up'
@@ -69,6 +71,7 @@ export const locale = {
                 'REJECT': 'Reject',
                 'CONSULTATION': 'Consultation',
                 'CONTRACT': 'Contract',
+                'CONTRACT_TYPE': 'Contract Type',
                 'UNPROCESSED': 'Unprocessed',
                 'LOSTLEAD':'Lost Lead',
                 'FOLLOWUP':'Follow Up'
@@ -357,6 +360,22 @@ export const locale = {
                 'ADD': 'Add',
                 'EDIT': 'Edit',
                 'PASSWORD': 'Password'
+            }
+        },
+        'Contract_Type': {
+            'CONTRACT_TYPE': {
+                'TITLE': 'Contract Type',
+                'NAME': 'Title',
+                'FILE': 'File',
+                'EDIT': 'Edit',
+                'REMOVE': 'Delete'
+            },
+            'ADD_EDIT_CONTRACT_TYPE': {
+                'TITLE': 'Add Contract Type',
+                'TITLE_EDIT': 'Edit Contract Type',
+                'NAME': 'Title',
+                'ADD': 'Add',
+                'EDIT': 'Edit',
             }
         },
         'Nav': {

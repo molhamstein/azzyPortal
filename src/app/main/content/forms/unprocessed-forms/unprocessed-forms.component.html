@@ -121,6 +121,16 @@
         </ng-template>
       </ngx-datatable-column>
 
+      
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="consTimes.startDate">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'Form.PROCESSED_FORMS.APPOINTMENT' | translate }}</span>
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | date: 'hh:mm dd/MM/yyyy'}}
+        </ng-template>
+      </ngx-datatable-column>
+
       <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
 
         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>

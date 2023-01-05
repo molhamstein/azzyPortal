@@ -21,6 +21,8 @@ export class SetTextBoxAdminComponent {
     regiForm: FormGroup;
     clients
     typeUser
+    isContract
+    contractTypes
     constructor(
         public dialogRef: MatDialogRef<SetTextBoxAdminComponent>,
         @Inject(MAT_DIALOG_DATA) public data,
@@ -32,8 +34,8 @@ export class SetTextBoxAdminComponent {
     ) {
         this.text = data['textBoxMessage'];
         this.isWithID = data['isWithID'];
+        this.isContract = data['isContract'];
         this.translationLoader.loadTranslations(english, persian);
-
     }
     ngOnInit() {
         // this.translate.use('en');
@@ -69,8 +71,17 @@ export class SetTextBoxAdminComponent {
 
                 });
             }
-        }
-        else {
+        } else if(this.isContract) {
+            this.regiForm = new FormGroup({
+                textBoxAdmin: new FormControl(this.text),
+                contractId: new FormControl('', Validators.required)
+            });
+            this.mainServ.APIServ.get("contractypes/getContractsTypes").subscribe((data: any) => {
+                if (this.mainServ.APIServ.getErrorCode() == 0) {
+                  this.contractTypes = data;
+                }
+              });
+        } else {
             this.regiForm = new FormGroup({
                 textBoxAdmin: new FormControl(this.text)
             });

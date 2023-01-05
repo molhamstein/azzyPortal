@@ -23,25 +23,34 @@
         </mat-error>
       </mat-form-field>-->
       <mat-form-field fxFlex="100" style="width: 100%;">
-
         <textarea matInput placeholder="{{ 'Dialog.Set_Text_Box.MESSAGETOCLIENT' | translate }}"  formControlName="textBoxAdmin"></textarea>
         <mat-icon matSuffix>person</mat-icon>
         <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>
+
       <mat-form-field fxFlex="100" *ngIf="isWithID">
         <mat-select formControlName="consId" required>
           <mat-option *ngFor="let oneClient of clients" [value]="oneClient.id">
             {{ oneClient.username }}
           </mat-option>
         </mat-select>
-
         <mat-icon matSuffix>wc</mat-icon>
         <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>
-      <mat-form-field fxFlex="100" *ngIf="isWithID" style="width: 100%;">
 
+      <mat-form-field fxFlex="100" *ngIf="isWithID" style="width: 100%;">
         <input autocomplete="off"  type="number" matInput placeholder="{{ 'Dialog.Set_Text_Box.FEE' | translate }}"  formControlName="fee">
         <mat-icon matSuffix>attach_money</mat-icon>
+        <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="100" *ngIf="isContract">
+        <mat-select placeholder="select contract type"  formControlName="contractId" required>
+          <mat-option *ngFor="let oneContractTypes of contractTypes" [value]="oneContractTypes.id">
+            {{ oneContractTypes.title }}
+          </mat-option>
+        </mat-select>
+        <mat-icon matSuffix>gavel</mat-icon>
         <mat-error>{{ 'Global.ERRORFIELDREQUIRED' | translate }}</mat-error>
       </mat-form-field>
 

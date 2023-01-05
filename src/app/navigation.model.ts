@@ -60,7 +60,15 @@ export class NavigationModel {
                         'role': 'ReadForms'
 
 
-                    }
+                    },
+                    {
+                        'id': 'Contract_Type',
+                        'title': 'Contract_Type.CONTRACT_TYPE.TITLE',
+                        'type': 'item',
+                        'icon': 'supervised_user_circle',
+                        'url': '/contract-type',
+                        'role': 'contractTypes'
+                    },
 
                 ]
             },

@@ -1,0 +1,61 @@
+<div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
+
+  <div class="header mat-accent-bg p-24 h-100" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row"
+    fxLayoutAlign.gt-xs="space-between center">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
+      <div class="h2 mt-16">{{'Contract_Type.CONTRACT_TYPE.TITLE' | translate }}</div>
+    </div>
+
+
+  </div>
+  <div class="content p-24">
+    <div style="width: 100%;height: 45px;">
+      <button mat-button style="float: right;background-color: #37abe0;color: white;" type="button" (click)="addUser()">Add
+        Contract Type</button>
+    </div>
+
+    <ngx-datatable class="material vertical-scroll" [rows]="rows" [columnMode]="'force'" [headerHeight]="50"
+      [rowHeight]="50" [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [externalPaging]="false"
+      >
+
+
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="title">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'Contract_Type.CONTRACT_TYPE.NAME' | translate }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
+        <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+          <span>{{ 'Contract_Type.CONTRACT_TYPE.FILE' | translate }}</span>
+        </ng-template>
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <button  mat-icon-button (click)="downloadCont(row.templateId)">
+            <mat-icon>cloud_download</mat-icon>
+          </button>
+        </ng-template>
+      </ngx-datatable-column>
+
+
+
+      
+      <ngx-datatable-column [canAutoResize]="true" [flexGrow]="1" prop="">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button *ngIf="isAllowed('writeContractTypes')" mat-menu-item (click)="goTo('edit',row.id)">
+              <mat-icon>edit</mat-icon>
+              <span>{{'Contract_Type.CONTRACT_TYPE.EDIT' | translate}}</span>
+            </button>
+            <button *ngIf="isAllowed('writeContractTypes')" mat-menu-item (click)="removeContractType(row.id, row.title)">
+              <mat-icon>remove</mat-icon>
+              <span>{{'Contract_Type.CONTRACT_TYPE.REMOVE' | translate}}</span>
+            </button>
+          </mat-menu>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+ 
