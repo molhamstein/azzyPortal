@@ -23,6 +23,7 @@ export const locale = {
                 'MORE_INFO': 'اطلاعات بیشتر',
                 'REJECT': 'مردود',
                 'CONSULTATION': 'مشاوره',
+                'APPOINTMENT': 'وقت مشاوره',
                 'CONTRACT': 'قرارداد',
                 'LOSTLEAD':'سرب گم شده',
                 'FOLLOWUP':'پیگیری'
@@ -48,6 +49,7 @@ export const locale = {
                 'REJECT': 'مردود',
                 'CONSULTANT': 'مشاور',
                 'CONSULTATION': 'مشاوره',
+                'APPOINTMENT': 'وقت مشاوره',
                 'CONTRACT': 'قرارداد',
                 'LOSTLEAD':'سرب گم شده',
                 'FOLLOWUP':'پیگیری'
@@ -68,6 +70,7 @@ export const locale = {
                 'MORE_INFO': 'اطلاعات بیشتر',
                 'REJECT': 'مردود',
                 'CONTRACT': 'قرارداد',
+                'CONTRACT_TYPE': 'Contract Type',
                 'CONSULTATION': 'مشاوره',
                 'UNPROCESSED': 'بررسی نشده',
                 'LOSTLEAD':'سرب گم شده',
@@ -358,6 +361,22 @@ export const locale = {
                 'ADD': 'ایجاد',
                 'EDIT': 'ویرایش',
                 'PASSWORD': 'رمز'
+            }
+        },
+        'Contract_Type': {
+            'CONTRACT_TYPE': {
+                'TITLE': 'نوع قرارداد',
+                'NAME': 'عنوان',
+                'FILE': 'پرونده',
+                'EDIT': 'ویرایش',
+                'REMOVE': 'حذف'
+            },
+            'ADD_EDIT_CONTRACT_TYPE': {
+                'TITLE': 'نوع جدید قرارداد',
+                'TITLE_EDIT': 'تغییر نوع قرارداد',
+                'NAME': 'عنوان',
+                'ADD': 'ایجاد',
+                'EDIT': 'تغییر',
             }
         },
         'Nav': {
